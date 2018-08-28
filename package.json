@@ -2,7 +2,7 @@
   "name": "speccer",
   "version": "0.0.0",
   "description": "A JavaScript app to show specs on html elements",
-  "main": "dist/stepper.js",
+  "main": "dist/speccer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf ./dist && webpack --mode production"

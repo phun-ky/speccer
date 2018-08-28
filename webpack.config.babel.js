@@ -37,7 +37,7 @@ export default {
   },
   mode: 'production',
   entry: {
-    stepper: path.join(__dirname, 'src', 'stepper.js')
+    speccer: path.join(__dirname, 'src', 'speccer.js')
   },
   resolve: {
     extensions: ['.js'],
