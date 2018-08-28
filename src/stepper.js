@@ -1,4 +1,4 @@
-import './stepper.styl';
+import './speccer.styl';
 
 const getElementCSSStyle = el => (window.getComputedStyle ? getComputedStyle(el, null) : el.currentStyle);
 const getDesiredCSSStyles = style => {
