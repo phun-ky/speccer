@@ -1,6 +1,6 @@
 {
   "name": "speccer",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A JavaScript app to show specs on html elements",
   "main": "dist/speccer.js",
   "scripts": {
