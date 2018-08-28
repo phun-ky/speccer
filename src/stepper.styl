@@ -1,0 +1,117 @@
+.speccer
+  font-family "Menlo for Powerline", "Menlo Regular for Powerline", "DejaVu Sans Mono", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important
+  justify-content center
+  align-items center
+  z-index 10
+  position absolute
+  display flex
+  font-size 12px
+  line-height 12px
+  box-sizing border-box
+  transition all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1)
+
+.speccer:hover
+  border 1px solid #333333
+
+.speccer-isSpecced:hover ~ .speccer.margin
+  background-color rgba(255, 247, 111, 1)
+
+.speccer-isSpecced:hover ~ .speccer.padding
+  background-color rgba(219, 111, 255, 1)
+  color white
+
+.speccer.margin,
+.speccer.marginTop,
+.speccer.marginRight,
+.speccer.marginBottom,
+.speccer.marginLeft
+  background-color rgba(255, 247, 111, 0.4)
+  color #333333
+
+.speccer.padding,
+.speccer.paddingTop,
+.speccer.paddingRight,
+.speccer.paddingBottom,
+.speccer.paddingLeft
+  background-color rgba(219, 111, 255, 0.4)
+  color #ff3aa8
+
+.speccer.marginTop:after,
+.speccer.marginBottom:after
+  content ""
+  position absolute
+  height 100%
+  border-top 1px solid #333333;
+  border-bottom 1px solid #333333;
+  width 9px
+  left 40%
+
+.speccer.marginTop:before,
+.speccer.marginBottom:before
+  content ""
+  position absolute
+  height 100%
+  border-left 1px solid #333333;
+  margin-left 4px
+  width 0px
+  left 40%
+
+.speccer.marginRight:after,
+.speccer.marginLeft:after
+  content ""
+  position absolute
+  height 9px
+  border-right 1px solid #ff3aa8;
+  border-left 1px solid #ff3aa8;
+  width 100%
+  top 10%
+
+.speccer.marginRight:before,
+.speccer.marginLeft:before
+  content ""
+  position absolute
+  height 0px
+  border-top 1px solid #ff3aa8;
+  margin-top 4px
+  width 100%
+  top 10%
+
+.speccer.paddingTop:after,
+.speccer.paddingBottom:after
+  content ""
+  position absolute
+  height 100%
+  border-top 1px solid #ff3aa8;
+  border-bottom 1px solid #ff3aa8;
+  width 9px
+  left 40%
+
+.speccer.paddingTop:before,
+.speccer.paddingBottom:before
+  content ""
+  position absolute
+  height 100%
+  border-left 1px solid #ff3aa8;
+  margin-left 4px
+  width 0px
+  left 40%
+
+.speccer.paddingRight:after,
+.speccer.paddingLeft:after
+  content ""
+  position absolute
+  height 9px
+  border-right 1px solid #ff3aa8;
+  border-left 1px solid #ff3aa8;
+  width 100%
+  top 10%
+
+.speccer.paddingRight:before,
+.speccer.paddingLeft:before
+  content ""
+  position absolute
+  height 0px
+  border-top 1px solid #ff3aa8;
+  margin-top 4px
+  width 100%
+  top 10%

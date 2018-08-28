@@ -1,0 +1,29 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "classes": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "amd": true,
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "no-undef": 2,
+    "global-strict": 0,
+    "no-underscore-dangle": 0,
+    "no-console": 1,
+    "no-unused-vars": 1,
+    "no-unreachable": 1,
+    "no-alert": 0
+  },
+  "extends": [
+    "eslint:recommended",
+    "prettier"
+  ]
+}
