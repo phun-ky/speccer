@@ -1,5 +1,38 @@
 import './speccer.styl';
 
+// CustomEvent poly from MDN: https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent#Polyfill
+(function() {
+  if (typeof window.CustomEvent === 'function') return false;
+
+  function CustomEvent(event, params) {
+    params = params || { bubbles: false, cancelable: false, detail: undefined };
+    var evt = document.createEvent('CustomEvent');
+    evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+    return evt;
+  }
+
+  CustomEvent.prototype = window.Event.prototype;
+
+  window.CustomEvent = CustomEvent;
+})();
+
+// throttle with RAF
+const throttle = (type, name, obj) => {
+  obj = obj || window;
+  var running = false;
+  var func = function() {
+    if (running) {
+      return;
+    }
+    running = true;
+    requestAnimationFrame(function() {
+      obj.dispatchEvent(new CustomEvent(name));
+      running = false;
+    });
+  };
+  obj.addEventListener(type, func);
+};
+
 const getElementCSSStyle = el => (window.getComputedStyle ? getComputedStyle(el, null) : el.currentStyle);
 const getDesiredCSSStyles = style => {
   const {
@@ -33,7 +66,7 @@ const createSpeccerNode = (text = '', tag = 'span') => {
   newTag.classList.add('speccer');
   return newTag;
 };
-const elementsToBeSpecced = document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)');
+
 const addStyleToElement = (el, style) => {
   Object.assign(el.style, style);
 };
@@ -222,4 +255,25 @@ const specElement = elementToBeSpecced => {
     elementToBeSpecced.insertAdjacentElement('afterend', speccerPaddingLeftElement);
   }
 };
-elementsToBeSpecced.forEach(specElement);
+
+const speccer = () => {
+  [].forEach.call(document.querySelectorAll('.speccer'), function(e) {
+    e.parentNode.removeChild(e);
+  });
+  const elementsToBeSpecced = document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)');
+  elementsToBeSpecced.forEach(specElement);
+};
+
+export default speccer;
+
+throttle('resize', 'speccer-onResize');
+
+window.addEventListener('speccer-onResize', () => {
+  speccer();
+});
+
+document.onreadystatechange = () => {
+  if (document.readyState === 'interactive') {
+    speccer();
+  }
+};
