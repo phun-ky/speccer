@@ -272,8 +272,9 @@ window.addEventListener('speccer-onResize', () => {
   speccer();
 });
 
-document.onreadystatechange = () => {
-  if (document.readyState === 'interactive') {
-    speccer();
-  }
-};
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', speccer);
+} else {
+  // `DOMContentLoaded` already fired
+  speccer();
+}
