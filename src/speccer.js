@@ -127,7 +127,7 @@ const specElement = elementToBeSpecced => {
         normalizeCSSValue(
           speccerElement.rect.x -
             elementToBeSpecced.parentElement.getBoundingClientRect().x +
-            (parseInt(speccerElement.rect.width, 10) - parseInt(speccerElement.style.paddingRight, 10))
+            parseInt(speccerElement.rect.width, 10)
         ) + 'px',
       top: normalizeCSSValue(speccerElement.rect.y - elementToBeSpecced.parentElement.getBoundingClientRect().y) + 'px'
     });
