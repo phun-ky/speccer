@@ -37,7 +37,8 @@ export default {
   },
   mode: 'production',
   entry: {
-    speccer: path.join(__dirname, 'src', 'speccer.js')
+    speccer: path.join(__dirname, 'src', 'speccer.js'),
+    anatomy: path.join(__dirname, 'src', 'anatomy.js')
   },
   resolve: {
     extensions: ['.js'],
