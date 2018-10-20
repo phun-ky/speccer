@@ -1,0 +1,83 @@
+.dissection
+  height 1.5rem
+  width 1.5rem
+  display flex
+  position absolute
+  border-radius 100%
+  background-color #d4397a
+  color white
+  font-weight 600
+  align-items center
+  justify-content center
+  line-height 150%
+  font-size 16px
+  z-index 20
+
+.dissection:after
+  content ""
+  position absolute
+  height 36px
+  top 100%
+  width 1px
+  background-color #d4397a
+  z-index 10
+
+.dissection.outline.left:after
+  height 1px
+  width 1.5rem
+  top 50%
+  left 100%
+
+.dissection.outline.right:after
+  height 1px
+  width 1.5rem
+  top 50%
+  right 100%
+
+.dissection.outline.top:after
+  height 1.5rem
+  width 1px
+  top 100%
+  right 50%
+
+.dissection.outline.bottom:after
+  height 36px
+  width 1px
+  top -36px
+  right 50%
+
+.dissection.button-center:after
+  content ""
+  position absolute
+  height 36px
+  top 100%
+  width 1px
+  background-color #d4397a
+  z-index 10
+
+.dissection.button-outline:after
+  content ""
+  position absolute
+  width 48px
+  right 100%
+  height 1px
+  background-color #d4397a
+  z-index 10
+
+.dissection.button-icon:after
+  content ""
+  position absolute
+  width 42px
+  left 100%
+  height 1px
+  background-color #d4397a
+  z-index 10
+
+.dissection.button-icon:before
+  content ""
+  position absolute
+  height 1.5rem
+  left calc(100% + 42px)
+  width 1.5rem
+  border 1px solid #d4397a
+  z-index 10
