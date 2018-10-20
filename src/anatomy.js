@@ -154,27 +154,10 @@ const dissectElement = (e, dissectIndex) => {
           left: r.left - i.left + r.width / 2 - d.width / 2 + 'px',
           bottom: r.top - i.top - 48 + 'px'
         });
-      }
-    } else if (dissectionArea.indexOf('group') !== -1) {
-      if (dissectionArea.indexOf('left') !== -1) {
-        addStyleToElement(c, {
-          left: r.left - i.left - 48 + 'px',
-          top: r.top - i.top + r.height / 2 - d.height / 2 + 'px'
-        });
-      } else if (dissectionArea.indexOf('right') !== -1) {
-        addStyleToElement(c, {
-          right: r.left - i.left - 48 + 'px',
-          top: r.top - i.top + r.height / 2 - d.height / 2 + 'px'
-        });
-      } else if (dissectionArea.indexOf('top') !== -1) {
+      } else {
         addStyleToElement(c, {
           left: r.left - i.left + r.width / 2 - d.width / 2 + 'px',
           top: r.top - i.top - 48 + 'px'
-        });
-      } else if (dissectionArea.indexOf('bottom') !== -1) {
-        addStyleToElement(c, {
-          left: r.left - i.left + r.width / 2 - d.width / 2 + 'px',
-          bottom: r.top - i.top - 48 + 'px'
         });
       }
     } else {
