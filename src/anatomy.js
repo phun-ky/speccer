@@ -1,3 +1,6 @@
+import './anatomy.styl';
+export default anatomy;
+
 // CustomEvent poly from MDN: https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent#Polyfill
 (function() {
   if (typeof window.CustomEvent === 'function') return false;
@@ -13,11 +16,6 @@
 
   window.CustomEvent = CustomEvent;
 })();
-
-function findAncestor(el, cls) {
-  while ((el = el.parentElement) && !el.classList.contains(cls));
-  return el;
-}
 
 // throttle with RAF
 const throttle = (type, name, obj) => {
@@ -115,15 +113,70 @@ const dissectElement = (e, dissectIndex) => {
   } else {
     var r = e.getBoundingClientRect();
     var i = e.parentElement.getBoundingClientRect();
-    var region = e.getAttribute('data-anatomy');
-    var c = createDissectionNode(o[dissectIndex], region);
+    var dissectionArea = e.getAttribute('data-anatomy');
+    var c = createDissectionNode(o[dissectIndex], dissectionArea);
     e.insertAdjacentElement('afterend', c);
     var d = c.getBoundingClientRect();
-    if (region.indexOf('left') !== -1) {
-      addStyleToElement(c, {
-        left: r.left - i.left - 48 + 'px',
-        top: r.top - i.top + r.height / 2 - d.height / 2 + 'px'
-      });
+    // if (dissectionArea.indexOf(' ') !== -1) {
+    //   var dissectionAreas = dissectionArea.split(' ');
+    //   dissectionAreas.forEach(area => {
+    //     if (area === 'left') {
+    //       addStyleToElement(c, {
+    //         left: r.left - i.left - 48 + 'px',
+    //         top: r.top - i.top + r.height / 2 - d.height / 2 + 'px'
+    //       });
+    //     } else {
+    //       addStyleToElement(c, {
+    //         left: r.left - i.left + r.width / 2 - d.width / 2 + 'px',
+    //         top: r.top - i.top - 48 + 'px'
+    //       });
+    //     }
+    //   });
+    // }
+    if (dissectionArea.indexOf('outline') !== -1) {
+      if (dissectionArea.indexOf('left') !== -1) {
+        addStyleToElement(c, {
+          left: r.left - i.left - 48 + 'px',
+          top: r.top - i.top + r.height / 2 - d.height / 2 + 'px'
+        });
+      } else if (dissectionArea.indexOf('right') !== -1) {
+        addStyleToElement(c, {
+          right: r.left - i.left - 48 + 'px',
+          top: r.top - i.top + r.height / 2 - d.height / 2 + 'px'
+        });
+      } else if (dissectionArea.indexOf('top') !== -1) {
+        addStyleToElement(c, {
+          left: r.left - i.left + r.width / 2 - d.width / 2 + 'px',
+          top: r.top - i.top - 48 + 'px'
+        });
+      } else if (dissectionArea.indexOf('bottom') !== -1) {
+        addStyleToElement(c, {
+          left: r.left - i.left + r.width / 2 - d.width / 2 + 'px',
+          bottom: r.top - i.top - 48 + 'px'
+        });
+      }
+    } else if (dissectionArea.indexOf('group') !== -1) {
+      if (dissectionArea.indexOf('left') !== -1) {
+        addStyleToElement(c, {
+          left: r.left - i.left - 48 + 'px',
+          top: r.top - i.top + r.height / 2 - d.height / 2 + 'px'
+        });
+      } else if (dissectionArea.indexOf('right') !== -1) {
+        addStyleToElement(c, {
+          right: r.left - i.left - 48 + 'px',
+          top: r.top - i.top + r.height / 2 - d.height / 2 + 'px'
+        });
+      } else if (dissectionArea.indexOf('top') !== -1) {
+        addStyleToElement(c, {
+          left: r.left - i.left + r.width / 2 - d.width / 2 + 'px',
+          top: r.top - i.top - 48 + 'px'
+        });
+      } else if (dissectionArea.indexOf('bottom') !== -1) {
+        addStyleToElement(c, {
+          left: r.left - i.left + r.width / 2 - d.width / 2 + 'px',
+          bottom: r.top - i.top - 48 + 'px'
+        });
+      }
     } else {
       addStyleToElement(c, {
         left: r.left - i.left + r.width / 2 - d.width / 2 + 'px',
@@ -137,11 +190,11 @@ const anatomy = () => {
   [].forEach.call(document.querySelectorAll('.anatomy'), function(e) {
     e.parentNode.removeChild(e);
   });
-  const elementsToBeDissected = document.querySelectorAll('[data-anatomy]');
-  elementsToBeDissected.forEach(dissectElement);
+  document.querySelectorAll('[data-anatomy-section]').forEach(section => {
+    const elementsToBeDissected = section.querySelectorAll('[data-anatomy]');
+    elementsToBeDissected.forEach(dissectElement);
+  });
 };
-
-export default anatomy;
 
 throttle('resize', 'anatomy-onResize');
 
