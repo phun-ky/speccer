@@ -170,7 +170,7 @@ const dissectElement = (e, dissectIndex) => {
 };
 
 const anatomy = () => {
-  [].forEach.call(document.querySelectorAll('.anatomy'), function(e) {
+  [].forEach.call(document.querySelectorAll('.dissection'), function(e) {
     e.parentNode.removeChild(e);
   });
   document.querySelectorAll('[data-anatomy-section]').forEach(section => {
