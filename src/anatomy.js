@@ -71,43 +71,37 @@ const addStyleToElement = (e, t) => {
 };
 
 const dissectElement = (elementToDissect, dissectIndex) => {
-  var rectOfDissectedElement = elementToDissect.getBoundingClientRect();
-  var rectOfDissectedElementParent = elementToDissect.parentElement.getBoundingClientRect();
-
-  var adjustedElementTop = rectOfDissectedElement.top - rectOfDissectedElementParent.top;
-  var adjustedElementLeft = rectOfDissectedElement.left - rectOfDissectedElementParent.left;
+  const rectOfDissectedElement = elementToDissect.getBoundingClientRect();
 
   if (!elementToDissect.getAttribute('data-anatomy')) {
     regions.forEach((t, n) => {
-      var dissectionNode = createDissectionNode(o[n], t.type);
+      const dissectionNode = createDissectionNode(o[n], t.type);
       elementToDissect.insertAdjacentElement('afterend', dissectionNode);
 
-      var rectOfDissectionNode = dissectionNode.getBoundingClientRect();
+      const rectOfDissectionNode = dissectionNode.getBoundingClientRect();
 
       if ('button-center' == t.type) {
         addStyleToElement(dissectionNode, {
-          left: adjustedElementLeft + rectOfDissectedElement.width / 2 - rectOfDissectionNode.width / 2 + 'px',
-          top: adjustedElementTop - 48 + 'px'
+          left: elementToDissect.offsetLeft + rectOfDissectedElement.width / 2 - rectOfDissectionNode.width / 2 + 'px',
+          top: elementToDissect.offsetTop - rectOfDissectionNode.height - 48 + rectOfDissectedElement.height / 2 + 'px'
         });
-      }
-      if ('button-outline' == t.type) {
+      } else if ('button-outline' == t.type) {
         addStyleToElement(dissectionNode, {
-          left: adjustedElementLeft + rectOfDissectedElement.width + 48 + 'px',
-          top: adjustedElementTop + rectOfDissectedElement.height / 2 - rectOfDissectionNode.height / 2 + 'px'
+          left: elementToDissect.offsetLeft + rectOfDissectedElement.width + 48 + 'px',
+          top: elementToDissect.offsetTop + rectOfDissectedElement.height / 2 - rectOfDissectionNode.height / 2 + 'px'
         });
-      }
-      if ('button-icon' == t.type) {
+      } else if ('button-icon' == t.type) {
         addStyleToElement(dissectionNode, {
-          left: adjustedElementLeft - 48 + 'px',
-          top: adjustedElementTop + rectOfDissectedElement.height / 2 - rectOfDissectionNode.height / 2 + 'px'
+          left: elementToDissect.offsetLeft - rectOfDissectionNode.width - 48 + 18 + 'px',
+          top: elementToDissect.offsetTop + rectOfDissectedElement.height / 2 - rectOfDissectionNode.height / 2 + 'px'
         });
       }
     });
   } else {
-    var dissectionArea = elementToDissect.getAttribute('data-anatomy');
-    var dissectionNode = createDissectionNode(o[dissectIndex], dissectionArea);
+    const dissectionArea = elementToDissect.getAttribute('data-anatomy');
+    const dissectionNode = createDissectionNode(o[dissectIndex], dissectionArea);
     elementToDissect.insertAdjacentElement('afterend', dissectionNode);
-    var rectOfDissectionNode = dissectionNode.getBoundingClientRect();
+    const rectOfDissectionNode = dissectionNode.getBoundingClientRect();
 
     if (dissectionArea.indexOf('outline') !== -1) {
       if (dissectionArea.indexOf('left') !== -1) {
@@ -117,7 +111,7 @@ const dissectElement = (elementToDissect, dissectIndex) => {
         });
       } else if (dissectionArea.indexOf('right') !== -1) {
         addStyleToElement(dissectionNode, {
-          left: elementToDissect.offsetLeft + rectOfDissectionNode.width + 48 + 'px',
+          left: elementToDissect.offsetLeft + rectOfDissectedElement.width + 48 + 'px',
           top: elementToDissect.offsetTop + rectOfDissectedElement.height / 2 - rectOfDissectionNode.height / 2 + 'px'
         });
       } else if (dissectionArea.indexOf('top') !== -1) {
@@ -128,23 +122,18 @@ const dissectElement = (elementToDissect, dissectIndex) => {
       } else if (dissectionArea.indexOf('bottom') !== -1) {
         addStyleToElement(dissectionNode, {
           left: elementToDissect.offsetLeft + rectOfDissectedElement.width / 2 - rectOfDissectionNode.width / 2 + 'px',
-          top: elementToDissect.offsetTop + 48 + 'px'
+          top: elementToDissect.offsetTop + rectOfDissectedElement.height + 48 + 'px'
         });
       } else {
         addStyleToElement(dissectionNode, {
           left: elementToDissect.offsetLeft + rectOfDissectedElement.width / 2 - rectOfDissectionNode.width / 2 + 'px',
-          top: adjustedElementTop - 48 + 'px'
+          top: elementToDissect.offsetTop - rectOfDissectionNode.height - 48 + 'px'
         });
       }
     } else {
       addStyleToElement(dissectionNode, {
-        left:
-          rectOfDissectedElement.left -
-          rectOfDissectedElementParent.left +
-          rectOfDissectedElement.width / 2 -
-          rectOfDissectionNode.width / 2 +
-          'px',
-        top: adjustedElementTop - 48 + 'px'
+        left: elementToDissect.offsetLeft + rectOfDissectedElement.width / 2 - rectOfDissectionNode.width / 2 + 'px',
+        top: elementToDissect.offsetTop - rectOfDissectionNode.height - 48 + 'px'
       });
     }
   }
