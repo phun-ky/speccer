@@ -1,5 +1,7 @@
 import './speccer.styl';
 
+export default speccer;
+
 // CustomEvent poly from MDN: https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent#Polyfill
 (function() {
   if (typeof window.CustomEvent === 'function') return false;
@@ -67,6 +69,20 @@ const createSpeccerNode = (text = '', tag = 'span') => {
   return newTag;
 };
 
+const createMeasureNode = (text = '', area = '', tag = 'span') => {
+  const newTag = document.createElement(tag);
+  // const textContent = document.createTextNode(text);
+  // newTag.appendChild(textContent);
+  newTag.setAttribute('title', text + 'px');
+  newTag.setAttribute('data-measure', text + 'px');
+  newTag.classList.add('speccer');
+  newTag.classList.add('measure');
+  if (area !== '') {
+    newTag.classList.add(area);
+  }
+  return newTag;
+};
+
 const addStyleToElement = (el, style) => {
   Object.assign(el.style, style);
 };
@@ -75,6 +91,22 @@ const getCSSValue = cssValue => parseInt(cssValue, 10);
 const normalizeCSSValue = cssValue => {
   const value = parseFloat(cssValue);
   return (value >= 0 && value < 1) || (value <= 0 && value > -1) ? 0 : value;
+};
+
+const measureElement = elementToBeMeasured => {
+  const rectOfMeasuredElement = elementToBeMeasured.getBoundingClientRect();
+  if (elementToBeMeasured.getAttribute('data-speccer-measure') === '') {
+    return;
+  } else if (elementToBeMeasured.getAttribute('data-speccer-measure') === 'width') {
+    const measureNode = createMeasureNode(rectOfMeasuredElement.width, 'width');
+    elementToBeMeasured.insertAdjacentElement('afterend', measureNode);
+    const rectOfMeasureNode = measureNode.getBoundingClientRect();
+    addStyleToElement(measureNode, {
+      left: elementToBeMeasured.offsetLeft + 'px',
+      top: elementToBeMeasured.offsetTop - rectOfMeasureNode.height + 1 + 'px',
+      width: rectOfMeasuredElement.width + 'px'
+    });
+  }
 };
 
 const specElement = elementToBeSpecced => {
@@ -262,9 +294,9 @@ const speccer = () => {
   });
   const elementsToBeSpecced = document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)');
   elementsToBeSpecced.forEach(specElement);
+  const elementsToBeMeasured = document.querySelectorAll('[data-speccer-measure]');
+  elementsToBeMeasured.forEach(measureElement);
 };
-
-export default speccer;
 
 throttle('resize', 'speccer-onResize');
 

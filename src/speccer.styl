@@ -115,3 +115,14 @@
   margin-top 4px
   width 100%
   top 10%
+
+.speccer.measure.width
+  color red
+  border 1px solid red
+  border-bottom none
+  height 8px
+
+.speccer.measure.width:after
+  content attr(data-measure)
+  position absolute
+  top calc(-100% - 10px)
