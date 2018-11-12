@@ -74,11 +74,18 @@ const createMeasureNode = (text = '', area = '', tag = 'span') => {
   // const textContent = document.createTextNode(text);
   // newTag.appendChild(textContent);
   newTag.setAttribute('title', text + 'px');
-  newTag.setAttribute('data-measure', text + 'px');
+  newTag.setAttribute('data-measure', parseInt(text, 10) + 'px');
   newTag.classList.add('speccer');
   newTag.classList.add('measure');
   if (area !== '') {
-    newTag.classList.add(area);
+    if (area.indexOf(' ') !== -1) {
+      var ts = area.split(' ');
+      ts.forEach(v => {
+        newTag.classList.add(v);
+      });
+    } else {
+      newTag.classList.add(area);
+    }
   }
   return newTag;
 };
@@ -95,17 +102,49 @@ const normalizeCSSValue = cssValue => {
 
 const measureElement = elementToBeMeasured => {
   const rectOfMeasuredElement = elementToBeMeasured.getBoundingClientRect();
-  if (elementToBeMeasured.getAttribute('data-speccer-measure') === '') {
+  const measureArea = elementToBeMeasured.getAttribute('data-speccer-measure');
+  if (measureArea === '') {
     return;
-  } else if (elementToBeMeasured.getAttribute('data-speccer-measure') === 'width') {
-    const measureNode = createMeasureNode(rectOfMeasuredElement.width, 'width');
-    elementToBeMeasured.insertAdjacentElement('afterend', measureNode);
-    const rectOfMeasureNode = measureNode.getBoundingClientRect();
-    addStyleToElement(measureNode, {
-      left: elementToBeMeasured.offsetLeft + 'px',
-      top: elementToBeMeasured.offsetTop - rectOfMeasureNode.height + 1 + 'px',
-      width: rectOfMeasuredElement.width + 'px'
-    });
+  } else {
+    if (measureArea.indexOf('width') !== -1) {
+      if (measureArea.indexOf('bottom') !== -1) {
+        const measureNode = createMeasureNode(rectOfMeasuredElement.width, 'width bottom');
+        elementToBeMeasured.insertAdjacentElement('afterend', measureNode);
+        addStyleToElement(measureNode, {
+          left: elementToBeMeasured.offsetLeft + 'px',
+          top: elementToBeMeasured.offsetTop + rectOfMeasuredElement.height + 1 + 'px',
+          width: rectOfMeasuredElement.width + 'px'
+        });
+      } else {
+        const measureNode = createMeasureNode(rectOfMeasuredElement.width, 'width top');
+        elementToBeMeasured.insertAdjacentElement('afterend', measureNode);
+        const rectOfMeasureNode = measureNode.getBoundingClientRect();
+        addStyleToElement(measureNode, {
+          left: elementToBeMeasured.offsetLeft + 'px',
+          top: elementToBeMeasured.offsetTop - rectOfMeasureNode.height + 1 + 'px',
+          width: rectOfMeasuredElement.width + 'px'
+        });
+      }
+    } else if (measureArea.indexOf('height') !== -1) {
+      if (measureArea.indexOf('right') !== -1) {
+        const measureNode = createMeasureNode(rectOfMeasuredElement.height, 'height right');
+        elementToBeMeasured.insertAdjacentElement('afterend', measureNode);
+        addStyleToElement(measureNode, {
+          left: elementToBeMeasured.offsetLeft + rectOfMeasuredElement.width + 'px',
+          top: elementToBeMeasured.offsetTop + 'px',
+          height: rectOfMeasuredElement.height + 'px'
+        });
+      } else {
+        const measureNode = createMeasureNode(rectOfMeasuredElement.height, 'height top');
+        elementToBeMeasured.insertAdjacentElement('afterend', measureNode);
+        const rectOfMeasureNode = measureNode.getBoundingClientRect();
+        addStyleToElement(measureNode, {
+          left: elementToBeMeasured.offsetLeft - rectOfMeasureNode.width + 'px',
+          top: elementToBeMeasured.offsetTop + 'px',
+          height: rectOfMeasuredElement.height + 'px'
+        });
+      }
+    }
   }
 };
 

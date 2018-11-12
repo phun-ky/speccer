@@ -126,3 +126,38 @@
   content attr(data-measure)
   position absolute
   top calc(-100% - 10px)
+
+.speccer.measure.width.bottom
+  color red
+  border 1px solid red
+  border-top none
+
+.speccer.measure.width.bottom:after
+  content attr(data-measure)
+  position absolute
+  top calc(100% + 5px)
+
+.speccer.measure.height
+  color red
+  border 1px solid red
+  border-right none
+  width 8px
+
+.speccer.measure.height:after
+  content attr(data-measure)
+  position absolute
+  top 50%
+  left calc(-100% - 25px)
+  transform translateY(-50%) rotate(-90deg)
+
+.speccer.measure.height.right
+  color red
+  border 1px solid red
+  border-left none
+
+.speccer.measure.height.right:after
+  content attr(data-measure)
+  position absolute
+  top 50%
+  left calc(100%)
+  transform translateY(-50%) rotate(90deg)
