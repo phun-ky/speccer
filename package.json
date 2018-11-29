@@ -1,8 +1,8 @@
 {
   "name": "speccer",
   "version": "1.4.2",
-  "description": "A JavaScript app to show specs on html elements",
-  "main": "dist/speccer.js",
+  "description": "A script to show specifications on html elements in your styleguide",
+  "main": "speccer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf ./dist && webpack --mode production"

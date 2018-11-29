@@ -6,8 +6,8 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 export default {
   target: 'web',
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: '[name].js'
+    path: __dirname,
+    filename: 'speccer.js'
   },
   optimization: {
     minimize: true,
@@ -36,14 +36,12 @@ export default {
     fs: 'empty'
   },
   mode: 'production',
-  entry: {
-    speccer: path.join(__dirname, 'src', 'speccer.js'),
-    anatomy: path.join(__dirname, 'src', 'anatomy.js')
-  },
+  entry: path.join(__dirname, 'src', 'index.js'),
   resolve: {
     extensions: ['.js'],
     alias: {
-      src: path.join(__dirname, 'src')
+      src: path.join(__dirname, 'src'),
+      lib: path.join(__dirname, 'src', 'lib')
     }
   },
   module: {
@@ -106,7 +104,7 @@ export default {
       minimize: true
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css'
+      filename: 'speccer.css'
     })
   ]
 };
