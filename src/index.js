@@ -18,6 +18,8 @@ const regions = [
   }
 ];
 
+const avoidTheseTags = ['TR', 'TH', 'TD', 'TBODY', 'THEAD', 'TFOOT'];
+
 const createDissectionNode = (e = '', t, n = 'span') => {
   const r = document.createElement(n);
   const o = document.createTextNode(e);
@@ -42,7 +44,11 @@ const dissectElement = (elementToDissect, dissectIndex) => {
   if (!elementToDissect.getAttribute('data-anatomy')) {
     regions.forEach((t, n) => {
       const dissectionNode = createDissectionNode(o[n], t.type);
-      elementToDissect.insertAdjacentElement('afterend', dissectionNode);
+      if (avoidTheseTags.indexOf(elementToDissect.nodeName) >= 0) {
+        elementToDissect.closest('table').insertAdjacentElement('afterend', dissectionNode);
+      } else {
+        elementToDissect.insertAdjacentElement('afterend', dissectionNode);
+      }
 
       const rectOfDissectionNode = dissectionNode.getBoundingClientRect();
 
@@ -66,7 +72,12 @@ const dissectElement = (elementToDissect, dissectIndex) => {
   } else {
     const dissectionArea = elementToDissect.getAttribute('data-anatomy');
     const dissectionNode = createDissectionNode(o[dissectIndex], dissectionArea);
-    elementToDissect.insertAdjacentElement('afterend', dissectionNode);
+
+    if (avoidTheseTags.indexOf(elementToDissect.nodeName) >= 0) {
+      elementToDissect.closest('table').insertAdjacentElement('afterend', dissectionNode);
+    } else {
+      elementToDissect.insertAdjacentElement('afterend', dissectionNode);
+    }
     const rectOfDissectionNode = dissectionNode.getBoundingClientRect();
 
     if (dissectionArea.indexOf('outline') !== -1) {
@@ -178,7 +189,12 @@ const measureElement = elementToBeMeasured => {
     if (measureArea.indexOf('width') !== -1) {
       if (measureArea.indexOf('bottom') !== -1) {
         const measureNode = createMeasureNode(rectOfMeasuredElement.width, 'width bottom');
-        elementToBeMeasured.insertAdjacentElement('afterend', measureNode);
+        if (avoidTheseTags.indexOf(elementToBeMeasured.nodeName) >= 0) {
+          elementToBeMeasured.closest('table').insertAdjacentElement('afterend', measureNode);
+        } else {
+          elementToBeMeasured.insertAdjacentElement('afterend', measureNode);
+        }
+
         addStyleToElement(measureNode, {
           left: elementToBeMeasured.offsetLeft + 'px',
           top: elementToBeMeasured.offsetTop + rectOfMeasuredElement.height + 1 + 'px',
@@ -186,7 +202,11 @@ const measureElement = elementToBeMeasured => {
         });
       } else {
         const measureNode = createMeasureNode(rectOfMeasuredElement.width, 'width top');
-        elementToBeMeasured.insertAdjacentElement('afterend', measureNode);
+        if (avoidTheseTags.indexOf(elementToBeMeasured.nodeName) >= 0) {
+          elementToBeMeasured.closest('table').insertAdjacentElement('afterend', measureNode);
+        } else {
+          elementToBeMeasured.insertAdjacentElement('afterend', measureNode);
+        }
         const rectOfMeasureNode = measureNode.getBoundingClientRect();
         addStyleToElement(measureNode, {
           left: elementToBeMeasured.offsetLeft + 'px',
@@ -197,7 +217,11 @@ const measureElement = elementToBeMeasured => {
     } else if (measureArea.indexOf('height') !== -1) {
       if (measureArea.indexOf('right') !== -1) {
         const measureNode = createMeasureNode(rectOfMeasuredElement.height, 'height right');
-        elementToBeMeasured.insertAdjacentElement('afterend', measureNode);
+        if (avoidTheseTags.indexOf(elementToBeMeasured.nodeName) >= 0) {
+          elementToBeMeasured.closest('table').insertAdjacentElement('afterend', measureNode);
+        } else {
+          elementToBeMeasured.insertAdjacentElement('afterend', measureNode);
+        }
         addStyleToElement(measureNode, {
           left: elementToBeMeasured.offsetLeft + rectOfMeasuredElement.width + 'px',
           top: elementToBeMeasured.offsetTop + 'px',
@@ -205,7 +229,11 @@ const measureElement = elementToBeMeasured => {
         });
       } else {
         const measureNode = createMeasureNode(rectOfMeasuredElement.height, 'height top');
-        elementToBeMeasured.insertAdjacentElement('afterend', measureNode);
+        if (avoidTheseTags.indexOf(elementToBeMeasured.nodeName) >= 0) {
+          elementToBeMeasured.closest('table').insertAdjacentElement('afterend', measureNode);
+        } else {
+          elementToBeMeasured.insertAdjacentElement('afterend', measureNode);
+        }
         const rectOfMeasureNode = measureNode.getBoundingClientRect();
         addStyleToElement(measureNode, {
           left: elementToBeMeasured.offsetLeft - rectOfMeasureNode.width + 'px',
@@ -251,7 +279,11 @@ const specElement = elementToBeSpecced => {
         ) + 'px'
     });
 
-    elementToBeSpecced.insertAdjacentElement('afterend', speccerMarginTopElement);
+    if (avoidTheseTags.indexOf(elementToBeSpecced.nodeName) >= 0) {
+      elementToBeSpecced.closest('table').insertAdjacentElement('afterend', speccerMarginTopElement);
+    } else {
+      elementToBeSpecced.insertAdjacentElement('afterend', speccerMarginTopElement);
+    }
   }
 
   if (speccerElement.style['marginRight'] !== '0px') {
@@ -272,7 +304,11 @@ const specElement = elementToBeSpecced => {
       top: normalizeCSSValue(speccerElement.rect.y - elementToBeSpecced.parentElement.getBoundingClientRect().y) + 'px'
     });
 
-    elementToBeSpecced.insertAdjacentElement('afterend', speccerMarginRightElement);
+    if (avoidTheseTags.indexOf(elementToBeSpecced.nodeName) >= 0) {
+      elementToBeSpecced.closest('table').insertAdjacentElement('afterend', speccerMarginRightElement);
+    } else {
+      elementToBeSpecced.insertAdjacentElement('afterend', speccerMarginRightElement);
+    }
   }
 
   if (speccerElement.style['marginBottom'] !== '0px') {
@@ -294,7 +330,11 @@ const specElement = elementToBeSpecced => {
         ) + 'px'
     });
 
-    elementToBeSpecced.insertAdjacentElement('afterend', speccerMarginBottomElement);
+    if (avoidTheseTags.indexOf(elementToBeSpecced.nodeName) >= 0) {
+      elementToBeSpecced.closest('table').insertAdjacentElement('afterend', speccerMarginBottomElement);
+    } else {
+      elementToBeSpecced.insertAdjacentElement('afterend', speccerMarginBottomElement);
+    }
   }
 
   if (speccerElement.style['marginLeft'] !== '0px') {
@@ -315,7 +355,11 @@ const specElement = elementToBeSpecced => {
       top: normalizeCSSValue(speccerElement.rect.y - elementToBeSpecced.parentElement.getBoundingClientRect().y) + 'px'
     });
 
-    elementToBeSpecced.insertAdjacentElement('afterend', speccerMarginLeftElement);
+    if (avoidTheseTags.indexOf(elementToBeSpecced.nodeName) >= 0) {
+      elementToBeSpecced.closest('table').insertAdjacentElement('afterend', speccerMarginLeftElement);
+    } else {
+      elementToBeSpecced.insertAdjacentElement('afterend', speccerMarginLeftElement);
+    }
   }
 
   if (speccerElement.style['paddingTop'] !== '0px') {
@@ -332,7 +376,11 @@ const specElement = elementToBeSpecced => {
       top: normalizeCSSValue(speccerElement.rect.y - elementToBeSpecced.parentElement.getBoundingClientRect().y) + 'px'
     });
 
-    elementToBeSpecced.insertAdjacentElement('afterend', speccerPaddingBottomElement);
+    if (avoidTheseTags.indexOf(elementToBeSpecced.nodeName) >= 0) {
+      elementToBeSpecced.closest('table').insertAdjacentElement('afterend', speccerPaddingBottomElement);
+    } else {
+      elementToBeSpecced.insertAdjacentElement('afterend', speccerPaddingBottomElement);
+    }
   }
 
   if (speccerElement.style['paddingBottom'] !== '0px') {
@@ -354,7 +402,11 @@ const specElement = elementToBeSpecced => {
         ) + 'px'
     });
 
-    elementToBeSpecced.insertAdjacentElement('afterend', speccerPaddingBottomElement);
+    if (avoidTheseTags.indexOf(elementToBeSpecced.nodeName) >= 0) {
+      elementToBeSpecced.closest('table').insertAdjacentElement('afterend', speccerPaddingBottomElement);
+    } else {
+      elementToBeSpecced.insertAdjacentElement('afterend', speccerPaddingBottomElement);
+    }
   }
 
   if (speccerElement.style['paddingRight'] !== '0px') {
@@ -375,7 +427,11 @@ const specElement = elementToBeSpecced => {
       top: normalizeCSSValue(speccerElement.rect.y - elementToBeSpecced.parentElement.getBoundingClientRect().y) + 'px'
     });
 
-    elementToBeSpecced.insertAdjacentElement('afterend', speccerPaddingRightElement);
+    if (avoidTheseTags.indexOf(elementToBeSpecced.nodeName) >= 0) {
+      elementToBeSpecced.closest('table').insertAdjacentElement('afterend', speccerPaddingRightElement);
+    } else {
+      elementToBeSpecced.insertAdjacentElement('afterend', speccerPaddingRightElement);
+    }
   }
 
   if (speccerElement.style['paddingLeft'] !== '0px') {
@@ -392,7 +448,11 @@ const specElement = elementToBeSpecced => {
       top: normalizeCSSValue(speccerElement.rect.y - elementToBeSpecced.parentElement.getBoundingClientRect().y) + 'px'
     });
 
-    elementToBeSpecced.insertAdjacentElement('afterend', speccerPaddingLeftElement);
+    if (avoidTheseTags.indexOf(elementToBeSpecced.nodeName) >= 0) {
+      elementToBeSpecced.closest('table').insertAdjacentElement('afterend', speccerPaddingLeftElement);
+    } else {
+      elementToBeSpecced.insertAdjacentElement('afterend', speccerPaddingLeftElement);
+    }
   }
 };
 
