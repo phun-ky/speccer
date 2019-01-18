@@ -72,45 +72,80 @@ const dissectElement = (elementToDissect, dissectIndex) => {
   } else {
     const dissectionArea = elementToDissect.getAttribute('data-anatomy');
     const dissectionNode = createDissectionNode(o[dissectIndex], dissectionArea);
+    let tableCorrectionTop = 0;
 
-    if (avoidTheseTags.indexOf(elementToDissect.nodeName) >= 0) {
+    const tableCorrection = avoidTheseTags.indexOf(elementToDissect.nodeName) >= 0;
+
+    if (tableCorrection) {
       elementToDissect.closest('table').insertAdjacentElement('afterend', dissectionNode);
+      tableCorrectionTop = elementToDissect.closest('table').getBoundingClientRect().top;
     } else {
       elementToDissect.insertAdjacentElement('afterend', dissectionNode);
     }
+
     const rectOfDissectionNode = dissectionNode.getBoundingClientRect();
+
+    let outlineLeftLeft = elementToDissect.offsetLeft - rectOfDissectionNode.width - 48 + 'px';
+    let outlineLeftTop =
+      (tableCorrection ? rectOfDissectedElement.top - tableCorrectionTop : elementToDissect.offsetTop) +
+      rectOfDissectedElement.height / 2 -
+      rectOfDissectionNode.height / 2 +
+      'px';
+
+    let outlineRightLeft = elementToDissect.offsetLeft + rectOfDissectedElement.width + 48 + 'px';
+    let outlineRightTop =
+      (tableCorrection ? rectOfDissectedElement.top - tableCorrectionTop : elementToDissect.offsetTop) +
+      rectOfDissectedElement.height / 2 -
+      rectOfDissectionNode.height / 2 +
+      'px';
+
+    let outlineTopLeft =
+      elementToDissect.offsetLeft + rectOfDissectedElement.width / 2 - rectOfDissectionNode.width / 2 + 'px';
+    let outlineTopTop =
+      (tableCorrection ? rectOfDissectedElement.top - tableCorrectionTop : elementToDissect.offsetTop) -
+      rectOfDissectionNode.height -
+      48 +
+      'px';
+
+    let outlineBottomleft =
+      elementToDissect.offsetLeft + rectOfDissectedElement.width / 2 - rectOfDissectionNode.width / 2 + 'px';
+    let outlineBottomTop =
+      (tableCorrection ? rectOfDissectedElement.top - tableCorrectionTop : elementToDissect.offsetTop) +
+      rectOfDissectedElement.height +
+      48 +
+      'px';
 
     if (dissectionArea.indexOf('outline') !== -1) {
       if (dissectionArea.indexOf('left') !== -1) {
         addStyleToElement(dissectionNode, {
-          left: elementToDissect.offsetLeft - rectOfDissectionNode.width - 48 + 'px',
-          top: elementToDissect.offsetTop + rectOfDissectedElement.height / 2 - rectOfDissectionNode.height / 2 + 'px'
+          left: outlineLeftLeft,
+          top: outlineLeftTop
         });
       } else if (dissectionArea.indexOf('right') !== -1) {
         addStyleToElement(dissectionNode, {
-          left: elementToDissect.offsetLeft + rectOfDissectedElement.width + 48 + 'px',
-          top: elementToDissect.offsetTop + rectOfDissectedElement.height / 2 - rectOfDissectionNode.height / 2 + 'px'
+          left: outlineRightLeft,
+          top: outlineRightTop
         });
       } else if (dissectionArea.indexOf('top') !== -1) {
         addStyleToElement(dissectionNode, {
-          left: elementToDissect.offsetLeft + rectOfDissectedElement.width / 2 - rectOfDissectionNode.width / 2 + 'px',
-          top: elementToDissect.offsetTop - rectOfDissectionNode.height - 48 + 'px'
+          left: outlineTopLeft,
+          top: outlineTopTop
         });
       } else if (dissectionArea.indexOf('bottom') !== -1) {
         addStyleToElement(dissectionNode, {
-          left: elementToDissect.offsetLeft + rectOfDissectedElement.width / 2 - rectOfDissectionNode.width / 2 + 'px',
-          top: elementToDissect.offsetTop + rectOfDissectedElement.height + 48 + 'px'
+          left: outlineBottomleft,
+          top: outlineBottomTop
         });
       } else {
         addStyleToElement(dissectionNode, {
-          left: elementToDissect.offsetLeft + rectOfDissectedElement.width / 2 - rectOfDissectionNode.width / 2 + 'px',
-          top: elementToDissect.offsetTop - rectOfDissectionNode.height - 48 + 'px'
+          left: outlineLeftLeft,
+          top: outlineLeftTop
         });
       }
     } else {
       addStyleToElement(dissectionNode, {
-        left: elementToDissect.offsetLeft + rectOfDissectedElement.width / 2 - rectOfDissectionNode.width / 2 + 'px',
-        top: elementToDissect.offsetTop - rectOfDissectionNode.height - 48 + 'px'
+        left: outlineLeftLeft,
+        top: outlineLeftTop
       });
     }
   }
