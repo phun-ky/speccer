@@ -5,7 +5,8 @@
   "main": "speccer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf ./dist && webpack --mode production"
+    "build": "rimraf ./dist && webpack --mode production",
+    "commit": "npx git-cz"
   },
   "repository": {
     "type": "git",
