@@ -73,26 +73,40 @@ const dissectElement = (elementToDissect, dissectIndex) => {
     const dissectionArea = elementToDissect.getAttribute('data-anatomy');
     const dissectionNode = createDissectionNode(o[dissectIndex], dissectionArea);
     let tableCorrectionTop = 0;
+    let tableCorrectionLeft = 0;
 
     const tableCorrection = avoidTheseTags.indexOf(elementToDissect.nodeName) >= 0;
 
     if (tableCorrection) {
-      elementToDissect.closest('table').insertAdjacentElement('afterend', dissectionNode);
-      tableCorrectionTop = elementToDissect.closest('table').getBoundingClientRect().top;
+      const table = elementToDissect.closest('table');
+      const tableStyle = window.getComputedStyle(table.parentElement);
+
+      table.insertAdjacentElement('afterend', dissectionNode);
+      tableCorrectionTop = table.getBoundingClientRect().top - parseInt(tableStyle.getPropertyValue('padding-top'), 10);
+      tableCorrectionLeft =
+        table.getBoundingClientRect().left - parseInt(tableStyle.getPropertyValue('padding-left'), 10);
     } else {
       elementToDissect.insertAdjacentElement('afterend', dissectionNode);
     }
 
     const rectOfDissectionNode = dissectionNode.getBoundingClientRect();
 
-    let outlineLeftLeft = elementToDissect.offsetLeft - rectOfDissectionNode.width - 48 + 'px';
+    let outlineLeftLeft =
+      (tableCorrection ? rectOfDissectedElement.left - tableCorrectionLeft : elementToDissect.offsetLeft) -
+      rectOfDissectionNode.width -
+      48 +
+      'px';
     let outlineLeftTop =
       (tableCorrection ? rectOfDissectedElement.top - tableCorrectionTop : elementToDissect.offsetTop) +
       rectOfDissectedElement.height / 2 -
       rectOfDissectionNode.height / 2 +
       'px';
 
-    let outlineRightLeft = elementToDissect.offsetLeft + rectOfDissectedElement.width + 48 + 'px';
+    let outlineRightLeft =
+      (tableCorrection ? rectOfDissectedElement.left - tableCorrectionLeft : elementToDissect.offsetLeft) +
+      rectOfDissectedElement.width +
+      48 +
+      'px';
     let outlineRightTop =
       (tableCorrection ? rectOfDissectedElement.top - tableCorrectionTop : elementToDissect.offsetTop) +
       rectOfDissectedElement.height / 2 -
@@ -100,7 +114,10 @@ const dissectElement = (elementToDissect, dissectIndex) => {
       'px';
 
     let outlineTopLeft =
-      elementToDissect.offsetLeft + rectOfDissectedElement.width / 2 - rectOfDissectionNode.width / 2 + 'px';
+      (tableCorrection ? rectOfDissectedElement.left - tableCorrectionLeft : elementToDissect.offsetLeft) +
+      rectOfDissectedElement.width / 2 -
+      rectOfDissectionNode.width / 2 +
+      'px';
     let outlineTopTop =
       (tableCorrection ? rectOfDissectedElement.top - tableCorrectionTop : elementToDissect.offsetTop) -
       rectOfDissectionNode.height -
@@ -108,7 +125,10 @@ const dissectElement = (elementToDissect, dissectIndex) => {
       'px';
 
     let outlineBottomleft =
-      elementToDissect.offsetLeft + rectOfDissectedElement.width / 2 - rectOfDissectionNode.width / 2 + 'px';
+      (tableCorrection ? rectOfDissectedElement.left - tableCorrectionLeft : elementToDissect.offsetLeft) +
+      rectOfDissectedElement.width / 2 -
+      rectOfDissectionNode.width / 2 +
+      'px';
     let outlineBottomTop =
       (tableCorrection ? rectOfDissectedElement.top - tableCorrectionTop : elementToDissect.offsetTop) +
       rectOfDissectedElement.height +
