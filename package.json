@@ -1,6 +1,6 @@
 {
   "name": "speccer",
-  "version": "2.1.2",
+  "version": "3.0.0-0",
   "description": "A script to show specifications on html elements in your styleguide",
   "main": "speccer.js",
   "scripts": {
