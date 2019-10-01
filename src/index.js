@@ -5,7 +5,6 @@ import './anatomy.styl';
 import './speccer.styl';
 
 const o = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
-
 const regions = [
   {
     type: 'button-center'
@@ -17,14 +16,14 @@ const regions = [
     type: 'button-icon'
   }
 ];
-
 const avoidTheseTags = ['TR', 'TH', 'TD', 'TBODY', 'THEAD', 'TFOOT'];
-
 const createDissectionNode = (e = '', t, n = 'span') => {
   const r = document.createElement(n);
   const o = document.createTextNode(e);
   r.classList.add('dissection');
-  r.appendChild(o);
+  if (t.indexOf('full') === -1) {
+    r.appendChild(o);
+  }
   if (t) {
     if (t.indexOf(' ') !== -1) {
       var ts = t.split(' ');
@@ -37,10 +36,8 @@ const createDissectionNode = (e = '', t, n = 'span') => {
   }
   return r;
 };
-
 const dissectElement = (elementToDissect, dissectIndex) => {
   const rectOfDissectedElement = elementToDissect.getBoundingClientRect();
-
   if (!elementToDissect.getAttribute('data-anatomy')) {
     regions.forEach((t, n) => {
       const dissectionNode = createDissectionNode(o[n], t.type);
@@ -49,9 +46,7 @@ const dissectElement = (elementToDissect, dissectIndex) => {
       } else {
         elementToDissect.insertAdjacentElement('afterend', dissectionNode);
       }
-
       const rectOfDissectionNode = dissectionNode.getBoundingClientRect();
-
       if ('button-center' == t.type) {
         addStyleToElement(dissectionNode, {
           left: elementToDissect.offsetLeft + rectOfDissectedElement.width / 2 - rectOfDissectionNode.width / 2 + 'px',
@@ -72,15 +67,13 @@ const dissectElement = (elementToDissect, dissectIndex) => {
   } else {
     const dissectionArea = elementToDissect.getAttribute('data-anatomy');
     const dissectionNode = createDissectionNode(o[dissectIndex], dissectionArea);
+    const rectOfDissectedElement = elementToDissect.getBoundingClientRect();
     let tableCorrectionTop = 0;
     let tableCorrectionLeft = 0;
-
     const tableCorrection = avoidTheseTags.indexOf(elementToDissect.nodeName) >= 0;
-
     if (tableCorrection) {
       const table = elementToDissect.closest('table');
       const tableStyle = window.getComputedStyle(table.parentElement);
-
       table.insertAdjacentElement('afterend', dissectionNode);
       tableCorrectionTop = table.getBoundingClientRect().top - parseInt(tableStyle.getPropertyValue('padding-top'), 10);
       tableCorrectionLeft =
@@ -88,9 +81,7 @@ const dissectElement = (elementToDissect, dissectIndex) => {
     } else {
       elementToDissect.insertAdjacentElement('afterend', dissectionNode);
     }
-
     const rectOfDissectionNode = dissectionNode.getBoundingClientRect();
-
     let outlineLeftLeft =
       (tableCorrection ? rectOfDissectedElement.left - tableCorrectionLeft : elementToDissect.offsetLeft) -
       rectOfDissectionNode.width -
@@ -101,7 +92,6 @@ const dissectElement = (elementToDissect, dissectIndex) => {
       rectOfDissectedElement.height / 2 -
       rectOfDissectionNode.height / 2 +
       'px';
-
     let outlineRightLeft =
       (tableCorrection ? rectOfDissectedElement.left - tableCorrectionLeft : elementToDissect.offsetLeft) +
       rectOfDissectedElement.width +
@@ -112,7 +102,6 @@ const dissectElement = (elementToDissect, dissectIndex) => {
       rectOfDissectedElement.height / 2 -
       rectOfDissectionNode.height / 2 +
       'px';
-
     let outlineTopLeft =
       (tableCorrection ? rectOfDissectedElement.left - tableCorrectionLeft : elementToDissect.offsetLeft) +
       rectOfDissectedElement.width / 2 -
@@ -123,7 +112,6 @@ const dissectElement = (elementToDissect, dissectIndex) => {
       rectOfDissectionNode.height -
       48 +
       'px';
-
     let outlineBottomleft =
       (tableCorrection ? rectOfDissectedElement.left - tableCorrectionLeft : elementToDissect.offsetLeft) +
       rectOfDissectedElement.width / 2 -
@@ -134,27 +122,79 @@ const dissectElement = (elementToDissect, dissectIndex) => {
       rectOfDissectedElement.height +
       48 +
       'px';
-
     if (dissectionArea.indexOf('outline') !== -1) {
       if (dissectionArea.indexOf('left') !== -1) {
-        addStyleToElement(dissectionNode, {
-          left: outlineLeftLeft,
-          top: outlineLeftTop
-        });
+        if (dissectionArea.indexOf('full') !== -1) {
+          addStyleToElement(dissectionNode, {
+            left: elementToDissect.offsetLeft - 8 + 'px',
+            top: elementToDissect.offsetTop + 'px',
+            height: rectOfDissectedElement.height + 'px'
+          });
+        } else {
+          addStyleToElement(dissectionNode, {
+            left: outlineLeftLeft,
+            top: outlineLeftTop
+          });
+        }
       } else if (dissectionArea.indexOf('right') !== -1) {
-        addStyleToElement(dissectionNode, {
-          left: outlineRightLeft,
-          top: outlineRightTop
-        });
+        if (dissectionArea.indexOf('full') !== -1) {
+          addStyleToElement(dissectionNode, {
+            left: elementToDissect.offsetLeft + rectOfDissectedElement.width + 'px',
+            top: elementToDissect.offsetTop + 'px',
+            height: rectOfDissectedElement.height + 'px'
+          });
+        } else {
+          addStyleToElement(dissectionNode, {
+            left: outlineRightLeft,
+            top: outlineRightTop
+          });
+        }
       } else if (dissectionArea.indexOf('top') !== -1) {
-        addStyleToElement(dissectionNode, {
-          left: outlineTopLeft,
-          top: outlineTopTop
-        });
+        if (dissectionArea.indexOf('full') !== -1) {
+          addStyleToElement(dissectionNode, {
+            bottom: elementToDissect.offsetTop + rectOfDissectedElement.height + 'px',
+            left: elementToDissect.offsetLeft + 'px',
+            width: rectOfDissectedElement.width + 'px'
+          });
+        } else {
+          addStyleToElement(dissectionNode, {
+            left: outlineTopLeft,
+            top: outlineTopTop
+          });
+        }
       } else if (dissectionArea.indexOf('bottom') !== -1) {
+        if (dissectionArea.indexOf('full') !== -1) {
+          addStyleToElement(dissectionNode, {
+            top: elementToDissect.offsetTop + rectOfDissectedElement.width + 'px',
+            left: elementToDissect.offsetLeft + 'px',
+            width: rectOfDissectedElement.width + 'px'
+          });
+        } else {
+          addStyleToElement(dissectionNode, {
+            left: outlineBottomleft,
+            top: outlineBottomTop
+          });
+        }
+      } else {
+        if (dissectionArea.indexOf('full') !== -1) {
+          addStyleToElement(dissectionNode, {
+            left: elementToDissect.offsetLeft + rectOfDissectedElement.width + 'px',
+            top: elementToDissect.offsetTop + 'px',
+            height: rectOfDissectedElement.height + 'px'
+          });
+        } else {
+          addStyleToElement(dissectionNode, {
+            left: outlineLeftLeft,
+            top: outlineLeftTop
+          });
+        }
+      }
+    } else {
+      if (dissectionArea.indexOf('full') !== -1) {
         addStyleToElement(dissectionNode, {
-          left: outlineBottomleft,
-          top: outlineBottomTop
+          left: elementToDissect.offsetLeft + rectOfDissectedElement.width + 'px',
+          top: elementToDissect.offsetTop + 'px',
+          height: rectOfDissectedElement.height + 'px'
         });
       } else {
         addStyleToElement(dissectionNode, {
@@ -162,15 +202,9 @@ const dissectElement = (elementToDissect, dissectIndex) => {
           top: outlineLeftTop
         });
       }
-    } else {
-      addStyleToElement(dissectionNode, {
-        left: outlineLeftLeft,
-        top: outlineLeftTop
-      });
     }
   }
 };
-
 const anatomy = () => {
   [].forEach.call(document.querySelectorAll('.dissection'), function(e) {
     e.parentNode.removeChild(e);
@@ -180,7 +214,6 @@ const anatomy = () => {
     elementsToBeDissected.forEach(dissectElement);
   });
 };
-
 const getDesiredCSSStyles = style => {
   const {
     marginTop,
@@ -192,7 +225,6 @@ const getDesiredCSSStyles = style => {
     paddingLeft,
     paddingRight
   } = style;
-
   return {
     marginTop,
     marginBottom,
@@ -204,7 +236,6 @@ const getDesiredCSSStyles = style => {
     paddingRight
   };
 };
-
 const createSpeccerNode = (text = '', tag = 'span') => {
   const newTag = document.createElement(tag);
   const textContent = document.createTextNode(text);
@@ -213,7 +244,6 @@ const createSpeccerNode = (text = '', tag = 'span') => {
   newTag.classList.add('speccer');
   return newTag;
 };
-
 const createMeasureNode = (text = '', area = '', tag = 'span') => {
   const newTag = document.createElement(tag);
   // const textContent = document.createTextNode(text);
@@ -234,7 +264,6 @@ const createMeasureNode = (text = '', area = '', tag = 'span') => {
   }
   return newTag;
 };
-
 const measureElement = elementToBeMeasured => {
   const rectOfMeasuredElement = elementToBeMeasured.getBoundingClientRect();
   const measureArea = elementToBeMeasured.getAttribute('data-speccer-measure');
@@ -249,7 +278,6 @@ const measureElement = elementToBeMeasured => {
         } else {
           elementToBeMeasured.insertAdjacentElement('afterend', measureNode);
         }
-
         addStyleToElement(measureNode, {
           left: elementToBeMeasured.offsetLeft + 'px',
           top: elementToBeMeasured.offsetTop + rectOfMeasuredElement.height + 1 + 'px',
@@ -299,11 +327,9 @@ const measureElement = elementToBeMeasured => {
     }
   }
 };
-
 const specElement = elementToBeSpecced => {
   const speccerElement = {};
   const elementCSSStyle = getElementCSSStyle(elementToBeSpecced);
-
   if (elementCSSStyle.display === 'none' || elementCSSStyle.visibility === 'hidden') {
     return;
   }
@@ -314,13 +340,10 @@ const specElement = elementToBeSpecced => {
   }
   speccerElement.style = getDesiredCSSStyles(elementCSSStyle);
   speccerElement.rect = elementToBeSpecced.getBoundingClientRect();
-
   if (speccerElement.style['marginTop'] !== '0px') {
     const speccerMarginTopElement = createSpeccerNode(getCSSValue(speccerElement.style.marginTop));
-
     speccerMarginTopElement.classList.add('margin');
     speccerMarginTopElement.classList.add('marginTop');
-
     addStyleToElement(speccerMarginTopElement, {
       height: speccerElement.style.marginTop,
       width: speccerElement.rect.width + 'px',
@@ -333,20 +356,16 @@ const specElement = elementToBeSpecced => {
             parseInt(speccerElement.style.marginTop, 10)
         ) + 'px'
     });
-
     if (avoidTheseTags.indexOf(elementToBeSpecced.nodeName) >= 0) {
       elementToBeSpecced.closest('table').insertAdjacentElement('afterend', speccerMarginTopElement);
     } else {
       elementToBeSpecced.insertAdjacentElement('afterend', speccerMarginTopElement);
     }
   }
-
   if (speccerElement.style['marginRight'] !== '0px') {
     const speccerMarginRightElement = createSpeccerNode(getCSSValue(speccerElement.style.marginRight));
-
     speccerMarginRightElement.classList.add('margin');
     speccerMarginRightElement.classList.add('marginRight');
-
     addStyleToElement(speccerMarginRightElement, {
       height: speccerElement.rect.height + 'px',
       width: speccerElement.style.marginRight,
@@ -358,20 +377,16 @@ const specElement = elementToBeSpecced => {
         ) + 'px',
       top: normalizeCSSValue(speccerElement.rect.y - elementToBeSpecced.parentElement.getBoundingClientRect().y) + 'px'
     });
-
     if (avoidTheseTags.indexOf(elementToBeSpecced.nodeName) >= 0) {
       elementToBeSpecced.closest('table').insertAdjacentElement('afterend', speccerMarginRightElement);
     } else {
       elementToBeSpecced.insertAdjacentElement('afterend', speccerMarginRightElement);
     }
   }
-
   if (speccerElement.style['marginBottom'] !== '0px') {
     const speccerMarginBottomElement = createSpeccerNode(getCSSValue(speccerElement.style.marginBottom));
-
     speccerMarginBottomElement.classList.add('margin');
     speccerMarginBottomElement.classList.add('marginBottom');
-
     addStyleToElement(speccerMarginBottomElement, {
       height: speccerElement.style.marginBottom,
       width: speccerElement.rect.width + 'px',
@@ -384,20 +399,16 @@ const specElement = elementToBeSpecced => {
             parseInt(speccerElement.rect.height, 10)
         ) + 'px'
     });
-
     if (avoidTheseTags.indexOf(elementToBeSpecced.nodeName) >= 0) {
       elementToBeSpecced.closest('table').insertAdjacentElement('afterend', speccerMarginBottomElement);
     } else {
       elementToBeSpecced.insertAdjacentElement('afterend', speccerMarginBottomElement);
     }
   }
-
   if (speccerElement.style['marginLeft'] !== '0px') {
     const speccerMarginLeftElement = createSpeccerNode(getCSSValue(speccerElement.style.marginLeft));
-
     speccerMarginLeftElement.classList.add('margin');
     speccerMarginLeftElement.classList.add('marginLeft');
-
     addStyleToElement(speccerMarginLeftElement, {
       height: speccerElement.rect.height + 'px',
       width: speccerElement.style.marginLeft,
@@ -409,20 +420,16 @@ const specElement = elementToBeSpecced => {
         ) + 'px',
       top: normalizeCSSValue(speccerElement.rect.y - elementToBeSpecced.parentElement.getBoundingClientRect().y) + 'px'
     });
-
     if (avoidTheseTags.indexOf(elementToBeSpecced.nodeName) >= 0) {
       elementToBeSpecced.closest('table').insertAdjacentElement('afterend', speccerMarginLeftElement);
     } else {
       elementToBeSpecced.insertAdjacentElement('afterend', speccerMarginLeftElement);
     }
   }
-
   if (speccerElement.style['paddingTop'] !== '0px') {
     const speccerPaddingBottomElement = createSpeccerNode(getCSSValue(speccerElement.style.paddingTop));
-
     speccerPaddingBottomElement.classList.add('padding');
     speccerPaddingBottomElement.classList.add('paddingTop');
-
     addStyleToElement(speccerPaddingBottomElement, {
       height: speccerElement.style.paddingTop,
       width: speccerElement.rect.width + 'px',
@@ -430,20 +437,16 @@ const specElement = elementToBeSpecced => {
         normalizeCSSValue(speccerElement.rect.x - elementToBeSpecced.parentElement.getBoundingClientRect().x) + 'px',
       top: normalizeCSSValue(speccerElement.rect.y - elementToBeSpecced.parentElement.getBoundingClientRect().y) + 'px'
     });
-
     if (avoidTheseTags.indexOf(elementToBeSpecced.nodeName) >= 0) {
       elementToBeSpecced.closest('table').insertAdjacentElement('afterend', speccerPaddingBottomElement);
     } else {
       elementToBeSpecced.insertAdjacentElement('afterend', speccerPaddingBottomElement);
     }
   }
-
   if (speccerElement.style['paddingBottom'] !== '0px') {
     const speccerPaddingBottomElement = createSpeccerNode(getCSSValue(speccerElement.style.paddingBottom));
-
     speccerPaddingBottomElement.classList.add('padding');
     speccerPaddingBottomElement.classList.add('paddingBottom');
-
     addStyleToElement(speccerPaddingBottomElement, {
       height: speccerElement.style.paddingBottom,
       width: speccerElement.rect.width + 'px',
@@ -456,20 +459,16 @@ const specElement = elementToBeSpecced => {
             (parseInt(speccerElement.rect.height, 10) - parseInt(speccerElement.style.paddingBottom, 10))
         ) + 'px'
     });
-
     if (avoidTheseTags.indexOf(elementToBeSpecced.nodeName) >= 0) {
       elementToBeSpecced.closest('table').insertAdjacentElement('afterend', speccerPaddingBottomElement);
     } else {
       elementToBeSpecced.insertAdjacentElement('afterend', speccerPaddingBottomElement);
     }
   }
-
   if (speccerElement.style['paddingRight'] !== '0px') {
     const speccerPaddingRightElement = createSpeccerNode(getCSSValue(speccerElement.style.paddingRight));
-
     speccerPaddingRightElement.classList.add('padding');
     speccerPaddingRightElement.classList.add('paddingRight');
-
     addStyleToElement(speccerPaddingRightElement, {
       height: speccerElement.rect.height + 'px',
       width: speccerElement.style.paddingRight,
@@ -481,20 +480,16 @@ const specElement = elementToBeSpecced => {
         ) + 'px',
       top: normalizeCSSValue(speccerElement.rect.y - elementToBeSpecced.parentElement.getBoundingClientRect().y) + 'px'
     });
-
     if (avoidTheseTags.indexOf(elementToBeSpecced.nodeName) >= 0) {
       elementToBeSpecced.closest('table').insertAdjacentElement('afterend', speccerPaddingRightElement);
     } else {
       elementToBeSpecced.insertAdjacentElement('afterend', speccerPaddingRightElement);
     }
   }
-
   if (speccerElement.style['paddingLeft'] !== '0px') {
     const speccerPaddingLeftElement = createSpeccerNode(getCSSValue(speccerElement.style.paddingLeft));
-
     speccerPaddingLeftElement.classList.add('padding');
     speccerPaddingLeftElement.classList.add('paddingLeft');
-
     addStyleToElement(speccerPaddingLeftElement, {
       height: speccerElement.rect.height + 'px',
       width: speccerElement.style.paddingLeft,
@@ -502,7 +497,6 @@ const specElement = elementToBeSpecced => {
         normalizeCSSValue(speccerElement.rect.x - elementToBeSpecced.parentElement.getBoundingClientRect().x) + 'px',
       top: normalizeCSSValue(speccerElement.rect.y - elementToBeSpecced.parentElement.getBoundingClientRect().y) + 'px'
     });
-
     if (avoidTheseTags.indexOf(elementToBeSpecced.nodeName) >= 0) {
       elementToBeSpecced.closest('table').insertAdjacentElement('afterend', speccerPaddingLeftElement);
     } else {
@@ -510,7 +504,6 @@ const specElement = elementToBeSpecced => {
     }
   }
 };
-
 const speccer = () => {
   [].forEach.call(document.querySelectorAll('.speccer'), function(e) {
     e.parentNode.removeChild(e);
@@ -520,18 +513,14 @@ const speccer = () => {
   const elementsToBeMeasured = document.querySelectorAll('[data-speccer-measure]');
   elementsToBeMeasured.forEach(measureElement);
 };
-
 throttle('resize', 'speccer-onResize');
 throttle('resize', 'anatomy-onResize');
-
 window.addEventListener('speccer-onResize', () => {
   speccer();
 });
-
 window.addEventListener('anatomy-onResize', () => {
   anatomy();
 });
-
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', anatomy);
   document.addEventListener('DOMContentLoaded', speccer);
