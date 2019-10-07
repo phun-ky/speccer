@@ -15,7 +15,7 @@ See demo here: https://codepen.io/phun-ky/pen/xaOrYX
 Place these `script` and `link` tags in your web page:
 
 ```html
-<link rel="stylesheet" href="../path/to/speccer.css">
+<link rel="stylesheet" href="../path/to/speccer.css" />
 <script src="../path/to/speccer.js"></script>
 ```
 
@@ -53,7 +53,7 @@ In your component examples, use the following attribute. Remember to use the `da
 
 ```html
 <div data-anatomy-section>
-  <div data-anatomy="outline [left|right|top|bottom]" class="..."></div>
+  <div data-anatomy="outline [full] [left|right|top|bottom]" class="..."></div>
 </div>
 ```
 

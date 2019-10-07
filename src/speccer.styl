@@ -1,5 +1,183 @@
+.dissection
+  height 1.5rem
+  width 1.5rem
+  display flex
+  position absolute
+  border-radius 100%
+  background-color #d4397a
+  color #fff
+  font-weight 600
+  align-items center
+  justify-content center
+  line-height 150%
+  font-size 16px
+  z-index 20
+  &.full
+    counter-increment type
+    content counter(type, upper-alpha)
+  &:after
+    content ""
+    position absolute
+    height 48px
+    top 100%
+    width 1px
+    background-color #d4397a
+    z-index 10
+  &.outline
+    &.left
+      &:after
+        height 1px
+        width 48px
+        top 50%
+        left 100%
+    &.right
+      &:after
+        height 1px
+        width 48px
+        top 50%
+        right 100%
+    &.full
+      border-radius 0
+      background-color transparent
+      color red
+      border 1px solid #d4397a
+      &.right
+        border-left none
+        &:after
+          left calc(8px + 48px)
+        &:before
+          left 100%
+      &.left
+        border-right none
+        &:after
+          left calc(-8px - 48px)
+        &:before
+          right 100%
+      &.top
+        border-bottom none
+        &:after
+          top calc(-8px - 48px)
+        &:before
+          bottom 100%
+      &.bottom
+        border-top none
+        &:after
+          top calc(8px + 48px)
+        &:before
+          top 100%
+    &.bottom
+      &:after
+        height 48px
+        width 1px
+        top calc(-100% - 24px)
+        right 50%
+  &.button-center
+    &:after
+      content ""
+      position absolute
+      height 48px
+      top 100%
+      width 1px
+      background-color #d4397a
+      z-index 10
+  &.button-outline
+    &:after
+      right 100%
+  &.button-icon
+    &:after
+      left 100%
+    &:before
+      content ""
+      position absolute
+      height 1.5rem
+      left calc(100% + 48px)
+      width 1.5rem
+      border 1px solid #d4397a
+      z-index 10
+
+.dissection.outline.top:after,
+.dissection.outline:after
+  height 48px
+  width 1px
+  top 100%
+  right 50%
+
+[data-anatomy-section]
+  counter-reset type
+
+.dissection.outline.full.right,
+.dissection.outline.full.left
+  width 8px
+
+.dissection.outline.full.top,
+.dissection.outline.full.bottom
+  height 8px
+
+.dissection.outline.full.right:after,
+.dissection.outline.full.left:after,
+.dissection.outline.full.top:after,
+.dissection.outline.full.bottom:after
+  content counter(type, upper-alpha)
+  height 1.5rem
+  width 1.5rem
+  display flex
+  position absolute
+  border-radius 100%
+  background-color #d4397a
+  color #fff
+  font-weight 600
+  align-items center
+  justify-content center
+  line-height 150%
+  font-size 16px
+  z-index 20
+
+.dissection.outline.full.right:after,
+.dissection.outline.full.left:after
+  top 50%
+  transform translateY(-50%)
+
+.dissection.outline.full.top:after,
+.dissection.outline.full.bottom:after
+  left 50%
+  transform translateX(-50%)
+
+.dissection.outline.full.right:before,
+.dissection.outline.full.left:before,
+.dissection.outline.full.top:before,
+.dissection.outline.full.bottom:before
+  content ""
+  position absolute
+  background-color #d4397a
+  z-index 20
+  display block
+
+.dissection.outline.full.right:before,
+.dissection.outline.full.left:before
+  top 50%
+  transform translateY(-50%)
+  height 1px
+  width 49px
+
+.dissection.outline.full.top:before,
+.dissection.outline.full.bottom:before
+  left 50%
+  transform translateX(-50%)
+  width 1px
+  height 49px
+
+.dissection.button-icon:after,
+.dissection.button-outline:after
+  content ""
+  position absolute
+  width 48px
+  top 50%
+  height 1px
+  background-color #d4397a
+  z-index 10
+
 .speccer
-  font-family "Menlo for Powerline", "Menlo Regular for Powerline", "DejaVu Sans Mono", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important
+  font-family "Menlo for Powerline", "Menlo Regular for Powerline", "DejaVu Sans Mono", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important
   justify-content center
   align-items center
   z-index 10
@@ -8,156 +186,150 @@
   font-size 12px
   line-height 12px
   box-sizing border-box
-  transition all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1)
+  transition all .2s cubic-bezier(.4, 0, .2, 1)
+  &:hover
+    border 1px solid #333
+  &.measure
+    &.width
+      color red
+      border 1px solid red
+      border-bottom none
+      height 8px
+      &:after
+        content attr(data-measure)
+        position absolute
+        top calc(-100% - 10px)
+      &.bottom
+        color red
+        border 1px solid red
+        border-top none
+        &:after
+          content attr(data-measure)
+          position absolute
+          top calc(100% + 5px)
+    &.height
+      color red
+      border 1px solid red
+      border-right none
+      width 8px
+      &:after
+        content attr(data-measure)
+        position absolute
+        top 50%
+        left calc(-100% - 25px)
+        transform translateY(-50%) rotate(-90deg)
+      &.right
+        color red
+        border 1px solid red
+        border-left none
+        &:after
+          content attr(data-measure)
+          position absolute
+          top 50%
+          left 100%
+          transform translateY(-50%) rotate(90deg)
 
-.speccer:hover
-  border 1px solid #333333
-
-.speccer-isSpecced:hover ~ .speccer.margin
-  background-color rgba(255, 247, 111, 1)
-
-.speccer-isSpecced:hover ~ .speccer.padding
-  background-color rgba(219, 111, 255, 1)
-  color white
+.speccer-isSpecced
+  &:hover
+    & ~ .speccer
+      &.margin
+        background-color #fff76f
+      &.padding
+        background-color #db6fff
+        color #fff
 
 .speccer.margin,
-.speccer.marginTop,
-.speccer.marginRight,
 .speccer.marginBottom,
-.speccer.marginLeft
-  background-color rgba(255, 247, 111, 0.4)
-  color #333333
+.speccer.marginLeft,
+.speccer.marginRight,
+.speccer.marginTop
+  background-color rgba(255, 247, 111, .4)
+  color #333
 
 .speccer.padding,
-.speccer.paddingTop,
-.speccer.paddingRight,
 .speccer.paddingBottom,
-.speccer.paddingLeft
-  background-color rgba(219, 111, 255, 0.4)
+.speccer.paddingLeft,
+.speccer.paddingRight,
+.speccer.paddingTop
+  background-color rgba(219, 111, 255, .4)
   color #ff3aa8
 
-.speccer.marginTop:after,
-.speccer.marginBottom:after
+.speccer.marginBottom:after,
+.speccer.marginTop:after
   content ""
   position absolute
   height 100%
-  border-top 1px solid #333333;
-  border-bottom 1px solid #333333;
+  border-top 1px solid #333
+  border-bottom 1px solid #333
   width 9px
   left 40%
 
-.speccer.marginTop:before,
-.speccer.marginBottom:before
+.speccer.marginBottom:before,
+.speccer.marginTop:before
   content ""
   position absolute
   height 100%
-  border-left 1px solid #333333;
+  border-left 1px solid #333
   margin-left 4px
-  width 0px
+  width 0
   left 40%
 
-.speccer.marginRight:after,
-.speccer.marginLeft:after
+.speccer.marginLeft:after,
+.speccer.marginRight:after
   content ""
   position absolute
   height 9px
-  border-right 1px solid #ff3aa8;
-  border-left 1px solid #ff3aa8;
+  border-right 1px solid #ff3aa8
+  border-left 1px solid #ff3aa8
   width 100%
   top 10%
 
-.speccer.marginRight:before,
-.speccer.marginLeft:before
+.speccer.marginLeft:before,
+.speccer.marginRight:before
   content ""
   position absolute
-  height 0px
-  border-top 1px solid #ff3aa8;
+  height 0
+  border-top 1px solid #ff3aa8
   margin-top 4px
   width 100%
   top 10%
 
-.speccer.paddingTop:after,
-.speccer.paddingBottom:after
+.speccer.paddingBottom:after,
+.speccer.paddingTop:after
   content ""
   position absolute
   height 100%
-  border-top 1px solid #ff3aa8;
-  border-bottom 1px solid #ff3aa8;
+  border-top 1px solid #ff3aa8
+  border-bottom 1px solid #ff3aa8
   width 9px
   left 40%
 
-.speccer.paddingTop:before,
-.speccer.paddingBottom:before
+.speccer.paddingBottom:before,
+.speccer.paddingTop:before
   content ""
   position absolute
   height 100%
-  border-left 1px solid #ff3aa8;
+  border-left 1px solid #ff3aa8
   margin-left 4px
-  width 0px
+  width 0
   left 40%
 
-.speccer.paddingRight:after,
-.speccer.paddingLeft:after
+.speccer.paddingLeft:after,
+.speccer.paddingRight:after
   content ""
   position absolute
   height 9px
-  border-right 1px solid #ff3aa8;
-  border-left 1px solid #ff3aa8;
+  border-right 1px solid #ff3aa8
+  border-left 1px solid #ff3aa8
   width 100%
   top 10%
 
-.speccer.paddingRight:before,
-.speccer.paddingLeft:before
+.speccer.paddingLeft:before,
+.speccer.paddingRight:before
   content ""
   position absolute
-  height 0px
-  border-top 1px solid #ff3aa8;
+  height 0
+  border-top 1px solid #ff3aa8
   margin-top 4px
   width 100%
   top 10%
-
-.speccer.measure.width
-  color red
-  border 1px solid red
-  border-bottom none
-  height 8px
-
-.speccer.measure.width:after
-  content attr(data-measure)
-  position absolute
-  top calc(-100% - 10px)
-
-.speccer.measure.width.bottom
-  color red
-  border 1px solid red
-  border-top none
-
-.speccer.measure.width.bottom:after
-  content attr(data-measure)
-  position absolute
-  top calc(100% + 5px)
-
-.speccer.measure.height
-  color red
-  border 1px solid red
-  border-right none
-  width 8px
-
-.speccer.measure.height:after
-  content attr(data-measure)
-  position absolute
-  top 50%
-  left calc(-100% - 25px)
-  transform translateY(-50%) rotate(-90deg)
-
-.speccer.measure.height.right
-  color red
-  border 1px solid red
-  border-left none
-
-.speccer.measure.height.right:after
-  content attr(data-measure)
-  position absolute
-  top 50%
-  left calc(100%)
-  transform translateY(-50%) rotate(90deg)
