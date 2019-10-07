@@ -4,7 +4,7 @@
 
 Speccer was created to make it easier to document components in a style guide.
 
-    $ npm i speccer
+    $ npm i @phun-ky/speccer
 
 See demo here: https://codepen.io/phun-ky/pen/xaOrYX
 
