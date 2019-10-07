@@ -1,6 +1,6 @@
 {
   "name": "@phun-ky/speccer",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A script to show specifications on html elements in your styleguide",
   "main": "speccer.js",
   "publishConfig": {
