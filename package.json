@@ -1,8 +1,11 @@
 {
-  "name": "speccer",
+  "name": "@phun-ky/speccer",
   "version": "4.0.0-0",
   "description": "A script to show specifications on html elements in your styleguide",
   "main": "speccer.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf ./dist && webpack --mode production",
