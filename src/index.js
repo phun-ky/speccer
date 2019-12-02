@@ -601,6 +601,6 @@ if (speccerScript.hasAttribute('data-manual')) {
   }
 }
 
-if (!speccerScript.hasAttribute('data-manual') || !speccerScript.hasAttribute('data-lazy')) {
+if (!speccerScript.hasAttribute('data-manual') && !speccerScript.hasAttribute('data-lazy')) {
   activateOnResize();
 }
