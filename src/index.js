@@ -206,9 +206,7 @@ const dissectElement = (elementToDissect, dissectIndex) => {
   }
 };
 const anatomy = () => {
-  [].forEach.call(document.querySelectorAll('.dissection'), function(e) {
-    e.parentNode.removeChild(e);
-  });
+  removeSpeccerElements('.dissection');
   document.querySelectorAll('[data-anatomy-section]').forEach(section => {
     const elementsToBeDissected = section.querySelectorAll('[data-anatomy]');
     elementsToBeDissected.forEach(dissectElement);
@@ -505,27 +503,95 @@ const specElement = elementToBeSpecced => {
   }
 };
 const speccer = () => {
-  [].forEach.call(document.querySelectorAll('.speccer'), function(e) {
-    e.parentNode.removeChild(e);
-  });
+  removeSpeccerElements('.speccer');
   const elementsToBeSpecced = document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)');
   elementsToBeSpecced.forEach(specElement);
   const elementsToBeMeasured = document.querySelectorAll('[data-speccer-measure]');
   elementsToBeMeasured.forEach(measureElement);
 };
-throttle('resize', 'speccer-onResize');
-throttle('resize', 'anatomy-onResize');
-window.addEventListener('speccer-onResize', () => {
-  speccer();
-});
-window.addEventListener('anatomy-onResize', () => {
+
+const activateOnResize = () => {
+  throttle('resize', 'speccer-onResize');
+  throttle('resize', 'anatomy-onResize');
+  window.addEventListener('speccer-onResize', () => {
+    speccer();
+  });
+  window.addEventListener('anatomy-onResize', () => {
+    anatomy();
+  });
+};
+
+const speccerScript = document.currentScript;
+
+const removeSpeccerElements = (selector, el = document) => {
+  [].forEach.call(el.querySelectorAll(selector), function(e) {
+    e.parentNode.removeChild(e);
+  });
+};
+
+if (speccerScript.hasAttribute('data-manual')) {
+  window.speccer = speccer;
+  window.anatomy = anatomy;
+} else if (speccerScript.hasAttribute('data-instant')) {
   anatomy();
-});
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', anatomy);
-  document.addEventListener('DOMContentLoaded', speccer);
+  speccer();
+} else if (speccerScript.hasAttribute('data-dom')) {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', anatomy);
+    document.addEventListener('DOMContentLoaded', speccer);
+  } else {
+    // `DOMContentLoaded` already fired
+    anatomy();
+    speccer();
+  }
+} else if (speccerScript.hasAttribute('data-lazy')) {
+  let specElementObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        specElement(entry.target);
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: '0px 0px 0px 0px' }
+  );
+  document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)').forEach(el => {
+    specElementObserver.observe(el);
+  });
+  let measureElementObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        measureElement(entry.target);
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: '0px 0px 0px 0px' }
+  );
+  document.querySelectorAll('[data-speccer-measure]').forEach(el => {
+    measureElementObserver.observe(el);
+  });
+  let dissectElementObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        entry.target.querySelectorAll('[data-anatomy]').forEach(dissectElement);
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: '0px 0px 0px 0px' }
+  );
+  document.querySelectorAll('[data-anatomy-section]').forEach(section => {
+    dissectElementObserver.observe(section);
+  });
 } else {
-  // `DOMContentLoaded` already fired
-  anatomy();
-  speccer();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', anatomy);
+    document.addEventListener('DOMContentLoaded', speccer);
+  } else {
+    // `DOMContentLoaded` already fired
+    anatomy();
+    speccer();
+  }
+}
+
+if (!speccerScript.hasAttribute('data-manual') || !speccerScript.hasAttribute('data-lazy')) {
+  activateOnResize();
 }

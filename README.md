@@ -58,3 +58,20 @@ In your component examples, use the following attribute. Remember to use the `da
 ```
 
 This will place a pin to the outline of the element. Default is `top`.
+
+## Advanced usage
+
+If you want to control speccer a bit more, you have some options. Apply one of these attributes to the script element for different types of initialization:
+
+```html
+<script src="../speccer.js" data-<manual|instant|dom|lazy></script>
+```
+
+| Tag            | Description                                                                            |
+| -------------- | -------------------------------------------------------------------------------------- |
+| `data-manual`  | Makes `window.speccer` and `window.anatomy` available to be used when you feel like it |
+| `data-instant` | fires off `anatomy()` and `speccer` right away                                         |
+| `data-dom`     | Waits for `DOMContentLoaded`                                                           |
+| `data-lazy`    | Lazy loads `anatomy()` and `speccer()` per specced element                             |
+
+If no attribute is applied, it will default to `data-dom`, as in, it will initialize when `DOMContentLoaded` is fired.
