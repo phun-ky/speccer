@@ -206,6 +206,7 @@ const dissectElement = (elementToDissect, dissectIndex) => {
   }
 };
 const anatomy = () => {
+  console.info('[@phun-ky/speccer]: Running anatomy()');
   removeSpeccerElements('.dissection');
   document.querySelectorAll('[data-anatomy-section]').forEach(section => {
     const elementsToBeDissected = section.querySelectorAll('[data-anatomy]');
@@ -503,6 +504,7 @@ const specElement = elementToBeSpecced => {
   }
 };
 const speccer = () => {
+  console.info('[@phun-ky/speccer]: Running speccer()');
   removeSpeccerElements('.speccer');
   const elementsToBeSpecced = document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)');
   elementsToBeSpecced.forEach(specElement);
@@ -514,9 +516,11 @@ const activateOnResize = () => {
   throttle('resize', 'speccer-onResize');
   throttle('resize', 'anatomy-onResize');
   window.addEventListener('speccer-onResize', () => {
+    console.info('[@phun-ky/speccer]: Event speccer-onResize triggered');
     speccer();
   });
   window.addEventListener('anatomy-onResize', () => {
+    console.info('[@phun-ky/speccer]: Event anatomy-onResize triggered');
     anatomy();
   });
 };
@@ -530,12 +534,14 @@ const removeSpeccerElements = (selector, el = document) => {
 };
 
 if (speccerScript.hasAttribute('data-manual')) {
+  console.info('[@phun-ky/speccer]: Initialized with: data-manual');
   window.speccer = speccer;
   window.anatomy = anatomy;
 } else if (speccerScript.hasAttribute('data-instant')) {
   anatomy();
   speccer();
 } else if (speccerScript.hasAttribute('data-dom')) {
+  console.info('[@phun-ky/speccer]: Initialized with: data-dom');
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', anatomy);
     document.addEventListener('DOMContentLoaded', speccer);
@@ -545,43 +551,46 @@ if (speccerScript.hasAttribute('data-manual')) {
     speccer();
   }
 } else if (speccerScript.hasAttribute('data-lazy')) {
-  let specElementObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach(entry => {
+  console.info('[@phun-ky/speccer]: Initialized with: data-lazy');
+  let specElementObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio > 0) {
         specElement(entry.target);
         observer.unobserve(entry.target);
-      });
-    },
-    { rootMargin: '0px 0px 0px 0px' }
-  );
+      }
+    });
+  });
   document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)').forEach(el => {
     specElementObserver.observe(el);
   });
-  let measureElementObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach(entry => {
+  let measureElementObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio > 0) {
         measureElement(entry.target);
         observer.unobserve(entry.target);
-      });
-    },
-    { rootMargin: '0px 0px 0px 0px' }
-  );
+      }
+    });
+  });
   document.querySelectorAll('[data-speccer-measure]').forEach(el => {
     measureElementObserver.observe(el);
   });
-  let dissectElementObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach(entry => {
-        entry.target.querySelectorAll('[data-anatomy]').forEach(dissectElement);
+  let dissectElementObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      const targets = entry.target.querySelectorAll('[data-anatomy]');
+      if (entry.intersectionRatio > 0) {
+        targets.forEach(dissectElement);
         observer.unobserve(entry.target);
-      });
-    },
-    { rootMargin: '0px 0px 0px 0px' }
-  );
-  document.querySelectorAll('[data-anatomy-section]').forEach(section => {
-    dissectElementObserver.observe(section);
+      }
+    });
   });
+
+  const observeAnatomySections = section => {
+    dissectElementObserver.observe(section);
+  };
+
+  document.querySelectorAll('[data-anatomy-section]').forEach(observeAnatomySections);
 } else {
+  console.info('[@phun-ky/speccer]: Initialized with nothing, falling back to data-dom');
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', anatomy);
     document.addEventListener('DOMContentLoaded', speccer);
