@@ -173,7 +173,7 @@ const dissectElement = (elementToDissect, dissectIndex) => {
           });
         } else if (dissectionArea.indexOf('enclose') !== -1) {
           addStyleToElement(dissectionNode, {
-            bottom: elementToDissect.offsetTop + -1 + 'px',
+            top: elementToDissect.offsetTop + -1 + 'px',
             left: elementToDissect.offsetLeft + -1 + 'px',
             height: rectOfDissectedElement.height + 'px',
             width: rectOfDissectedElement.width + 'px'
