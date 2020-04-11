@@ -1,3 +1,4 @@
+/* eslint no-console: 0 */
 import 'lib/poly';
 import throttle from 'lib/throttle';
 import { addStyleToElement, getCSSValue, getElementCSSStyle, normalizeCSSValue } from './lib/style';
@@ -21,7 +22,7 @@ const createDissectionNode = (e = '', t, n = 'span') => {
   const r = document.createElement(n);
   const o = document.createTextNode(e);
   r.classList.add('dissection');
-  if (t.indexOf('full') === -1) {
+  if (t.indexOf('full') === -1 && t.indexOf('enclose') === -1) {
     r.appendChild(o);
   }
   if (t) {
@@ -127,8 +128,15 @@ const dissectElement = (elementToDissect, dissectIndex) => {
         if (dissectionArea.indexOf('full') !== -1) {
           addStyleToElement(dissectionNode, {
             left: elementToDissect.offsetLeft - 8 + 'px',
-            top: elementToDissect.offsetTop + 'px',
+            top: elementToDissect.offsetTop + -1 + 'px',
             height: rectOfDissectedElement.height + 'px'
+          });
+        } else if (dissectionArea.indexOf('enclose') !== -1) {
+          addStyleToElement(dissectionNode, {
+            left: elementToDissect.offsetLeft - 1 + 'px',
+            top: elementToDissect.offsetTop + -1 + 'px',
+            height: rectOfDissectedElement.height + 'px',
+            width: rectOfDissectedElement.width + 'px'
           });
         } else {
           addStyleToElement(dissectionNode, {
@@ -140,8 +148,15 @@ const dissectElement = (elementToDissect, dissectIndex) => {
         if (dissectionArea.indexOf('full') !== -1) {
           addStyleToElement(dissectionNode, {
             left: elementToDissect.offsetLeft + rectOfDissectedElement.width + 'px',
-            top: elementToDissect.offsetTop + 'px',
+            top: elementToDissect.offsetTop + -1 + 'px',
             height: rectOfDissectedElement.height + 'px'
+          });
+        } else if (dissectionArea.indexOf('enclose') !== -1) {
+          addStyleToElement(dissectionNode, {
+            left: elementToDissect.offsetLeft + -1 + 'px',
+            top: elementToDissect.offsetTop + -1 + 'px',
+            height: rectOfDissectedElement.height + 'px',
+            width: rectOfDissectedElement.width + 'px'
           });
         } else {
           addStyleToElement(dissectionNode, {
@@ -153,7 +168,14 @@ const dissectElement = (elementToDissect, dissectIndex) => {
         if (dissectionArea.indexOf('full') !== -1) {
           addStyleToElement(dissectionNode, {
             bottom: elementToDissect.offsetTop + rectOfDissectedElement.height + 'px',
-            left: elementToDissect.offsetLeft + 'px',
+            left: elementToDissect.offsetLeft + -1 + 'px',
+            width: rectOfDissectedElement.width + 'px'
+          });
+        } else if (dissectionArea.indexOf('enclose') !== -1) {
+          addStyleToElement(dissectionNode, {
+            bottom: elementToDissect.offsetTop + -1 + 'px',
+            left: elementToDissect.offsetLeft + -1 + 'px',
+            height: rectOfDissectedElement.height + 'px',
             width: rectOfDissectedElement.width + 'px'
           });
         } else {
@@ -165,8 +187,15 @@ const dissectElement = (elementToDissect, dissectIndex) => {
       } else if (dissectionArea.indexOf('bottom') !== -1) {
         if (dissectionArea.indexOf('full') !== -1) {
           addStyleToElement(dissectionNode, {
-            top: elementToDissect.offsetTop + rectOfDissectedElement.width + 'px',
-            left: elementToDissect.offsetLeft + 'px',
+            top: elementToDissect.offsetTop + rectOfDissectedElement.height + 'px',
+            left: elementToDissect.offsetLeft + -1 + 'px',
+            width: rectOfDissectedElement.width + 'px'
+          });
+        } else if (dissectionArea.indexOf('enclose') !== -1) {
+          addStyleToElement(dissectionNode, {
+            top: elementToDissect.offsetTop + -1 + 'px',
+            left: elementToDissect.offsetLeft + -1 + 'px',
+            height: rectOfDissectedElement.height + 'px',
             width: rectOfDissectedElement.width + 'px'
           });
         } else {
@@ -182,6 +211,13 @@ const dissectElement = (elementToDissect, dissectIndex) => {
             top: elementToDissect.offsetTop + 'px',
             height: rectOfDissectedElement.height + 'px'
           });
+        } else if (dissectionArea.indexOf('enclose') !== -1) {
+          addStyleToElement(dissectionNode, {
+            left: elementToDissect.offsetLeft + rectOfDissectedElement.width + 'px',
+            top: elementToDissect.offsetTop + -1 + 'px',
+            height: rectOfDissectedElement.height + 'px',
+            width: rectOfDissectedElement.width + 'px'
+          });
         } else {
           addStyleToElement(dissectionNode, {
             left: outlineLeftLeft,
@@ -192,9 +228,16 @@ const dissectElement = (elementToDissect, dissectIndex) => {
     } else {
       if (dissectionArea.indexOf('full') !== -1) {
         addStyleToElement(dissectionNode, {
-          left: elementToDissect.offsetLeft + rectOfDissectedElement.width + 'px',
-          top: elementToDissect.offsetTop + 'px',
+          left: elementToDissect.offsetLeft - 8 + 'px',
+          top: elementToDissect.offsetTop + -1 + 'px',
           height: rectOfDissectedElement.height + 'px'
+        });
+      } else if (dissectionArea.indexOf('enclose') !== -1) {
+        addStyleToElement(dissectionNode, {
+          left: elementToDissect.offsetLeft - 1 + 'px',
+          top: elementToDissect.offsetTop + -1 + 'px',
+          height: rectOfDissectedElement.height + 'px',
+          width: rectOfDissectedElement.width + 'px'
         });
       } else {
         addStyleToElement(dissectionNode, {

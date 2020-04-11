@@ -53,7 +53,7 @@ In your component examples, use the following attribute. Remember to use the `da
 
 ```html
 <div data-anatomy-section>
-  <div data-anatomy="outline [full] [left|right|top|bottom]" class="..."></div>
+  <div data-anatomy="outline [full|bottom] [left|right|top|bottom]" class="..."></div>
 </div>
 ```
 
