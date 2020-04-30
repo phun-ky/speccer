@@ -13,10 +13,6 @@
   font-size 16px
   z-index 20
   box-sizing: content-box;
-  &.full,
-  &.enclose
-    counter-increment type
-    content counter(type, upper-alpha)
   &:after
     content ""
     position absolute
@@ -152,7 +148,7 @@
 .dissection.outline.full.left:after,
 .dissection.outline.full.top:after,
 .dissection.outline.full.bottom:after
-  content counter(type, upper-alpha)
+  content attr(data-dissection-counter)
   height 1.5rem
   width 1.5rem
   display flex
@@ -213,7 +209,7 @@
 .dissection.outline.enclose.left:after,
 .dissection.outline.enclose.top:after,
 .dissection.outline.enclose.bottom:after
-  content counter(type, upper-alpha)
+  content attr(data-dissection-counter)
   height 1.5rem
   width 1.5rem
   display flex

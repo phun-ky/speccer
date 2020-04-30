@@ -24,6 +24,8 @@ const createDissectionNode = (e = '', t, n = 'span') => {
   r.classList.add('dissection');
   if (t.indexOf('full') === -1 && t.indexOf('enclose') === -1) {
     r.appendChild(o);
+  } else if (t.indexOf('full') !== -1 || t.indexOf('enclose') !== -1) {
+    r.setAttribute('data-dissection-counter', e);
   }
   if (t) {
     if (t.indexOf(' ') !== -1) {
