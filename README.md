@@ -12,7 +12,16 @@ See demo here: https://codepen.io/phun-ky/pen/xaOrYX
 
 ## Usage
 
-Place these `script` and `link` tags in your web page:
+Either import and run the required functions:
+
+```javascript
+import { anatomy, speccer, removeSpeccerElements, activateOnResize } from '@phun-ky/speccer';
+
+// do stuff
+anatomy();
+```
+
+Or place these `script` and `link` tags in your web page:
 
 ```html
 <link rel="stylesheet" href="../path/to/speccer.css" />
