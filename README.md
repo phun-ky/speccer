@@ -15,7 +15,7 @@ See demo here: https://codepen.io/phun-ky/pen/xaOrYX
 Either import and run the required functions:
 
 ```javascript
-import { anatomy, speccer, removeSpeccerElements, activateOnResize } from '@phun-ky/speccer';
+import { anatomy, speccer, removeSpeccerElements, activateOnResize } from '@phun-ky/speccer/src/index.js';
 
 // do stuff
 anatomy();
