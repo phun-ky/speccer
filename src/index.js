@@ -579,7 +579,7 @@ export const removeSpeccerElements = (selector, el = document) => {
 
 const speccerScript = document.currentScript;
 
-if (speccerScript) {
+if (speccerScript.getAttribute('src').indexOf('speccer.js') !== -1) {
   if (speccerScript.hasAttribute('data-manual')) {
     console.info('[@phun-ky/speccer]: Initialized with: data-manual');
     window.speccer = speccer;
