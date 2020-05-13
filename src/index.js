@@ -1,6 +1,6 @@
 /* eslint no-console: 0 */
-import 'lib/poly';
-import throttle from 'lib/throttle';
+import './lib/poly';
+import throttle from './lib/throttle';
 import { addStyleToElement, getCSSValue, getElementCSSStyle, normalizeCSSValue } from './lib/style';
 import './anatomy.styl';
 import './speccer.styl';
