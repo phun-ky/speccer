@@ -578,7 +578,6 @@ export const removeSpeccerElements = (selector, el = document) => {
 };
 
 const speccerScript = document.currentScript;
-console.log(speccerScript, speccerScript.getAttribute('src'));
 
 if (speccerScript.getAttribute('src').indexOf('speccer.js') !== -1) {
   if (speccerScript.hasAttribute('data-manual')) {
