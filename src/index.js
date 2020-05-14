@@ -579,76 +579,78 @@ export const removeSpeccerElements = (selector, el = document) => {
 
 const speccerScript = document.currentScript;
 
-if (speccerScript.getAttribute('src').indexOf('speccer.js') !== -1) {
-  if (speccerScript.hasAttribute('data-manual')) {
-    console.info('[@phun-ky/speccer]: Initialized with: data-manual');
-    window.speccer = speccer;
-    window.anatomy = anatomy;
-  } else if (speccerScript.hasAttribute('data-instant')) {
-    anatomy();
-    speccer();
-  } else if (speccerScript.hasAttribute('data-dom')) {
-    console.info('[@phun-ky/speccer]: Initialized with: data-dom');
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', anatomy);
-      document.addEventListener('DOMContentLoaded', speccer);
-    } else {
-      // `DOMContentLoaded` already fired
+if (speccerScript) {
+  if (speccerScript.getAttribute('src').indexOf('speccer.js') !== -1) {
+    if (speccerScript.hasAttribute('data-manual')) {
+      console.info('[@phun-ky/speccer]: Initialized with: data-manual');
+      window.speccer = speccer;
+      window.anatomy = anatomy;
+    } else if (speccerScript.hasAttribute('data-instant')) {
       anatomy();
       speccer();
-    }
-  } else if (speccerScript.hasAttribute('data-lazy')) {
-    console.info('[@phun-ky/speccer]: Initialized with: data-lazy');
-    let specElementObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.intersectionRatio > 0) {
-          specElement(entry.target);
-          observer.unobserve(entry.target);
-        }
+    } else if (speccerScript.hasAttribute('data-dom')) {
+      console.info('[@phun-ky/speccer]: Initialized with: data-dom');
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', anatomy);
+        document.addEventListener('DOMContentLoaded', speccer);
+      } else {
+        // `DOMContentLoaded` already fired
+        anatomy();
+        speccer();
+      }
+    } else if (speccerScript.hasAttribute('data-lazy')) {
+      console.info('[@phun-ky/speccer]: Initialized with: data-lazy');
+      let specElementObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.intersectionRatio > 0) {
+            specElement(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
       });
-    });
-    document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)').forEach(el => {
-      specElementObserver.observe(el);
-    });
-    let measureElementObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.intersectionRatio > 0) {
-          measureElement(entry.target);
-          observer.unobserve(entry.target);
-        }
+      document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)').forEach(el => {
+        specElementObserver.observe(el);
       });
-    });
-    document.querySelectorAll('[data-speccer-measure]').forEach(el => {
-      measureElementObserver.observe(el);
-    });
-    let dissectElementObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        const targets = entry.target.querySelectorAll('[data-anatomy]');
-        if (entry.intersectionRatio > 0) {
-          targets.forEach(dissectElement);
-          observer.unobserve(entry.target);
-        }
+      let measureElementObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.intersectionRatio > 0) {
+            measureElement(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
       });
-    });
+      document.querySelectorAll('[data-speccer-measure]').forEach(el => {
+        measureElementObserver.observe(el);
+      });
+      let dissectElementObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          const targets = entry.target.querySelectorAll('[data-anatomy]');
+          if (entry.intersectionRatio > 0) {
+            targets.forEach(dissectElement);
+            observer.unobserve(entry.target);
+          }
+        });
+      });
 
-    const observeAnatomySections = section => {
-      dissectElementObserver.observe(section);
-    };
+      const observeAnatomySections = section => {
+        dissectElementObserver.observe(section);
+      };
 
-    document.querySelectorAll('[data-anatomy-section]').forEach(observeAnatomySections);
-  } else {
-    console.info('[@phun-ky/speccer]: Initialized with nothing, falling back to data-dom');
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', anatomy);
-      document.addEventListener('DOMContentLoaded', speccer);
+      document.querySelectorAll('[data-anatomy-section]').forEach(observeAnatomySections);
     } else {
-      // `DOMContentLoaded` already fired
-      anatomy();
-      speccer();
+      console.info('[@phun-ky/speccer]: Initialized with nothing, falling back to data-dom');
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', anatomy);
+        document.addEventListener('DOMContentLoaded', speccer);
+      } else {
+        // `DOMContentLoaded` already fired
+        anatomy();
+        speccer();
+      }
     }
-  }
 
-  if (!speccerScript.hasAttribute('data-manual') && !speccerScript.hasAttribute('data-lazy')) {
-    activateOnResize();
+    if (!speccerScript.hasAttribute('data-manual') && !speccerScript.hasAttribute('data-lazy')) {
+      activateOnResize();
+    }
   }
 }
