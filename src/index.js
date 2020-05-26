@@ -561,14 +561,20 @@ export const speccer = () => {
 export const activateOnResize = () => {
   throttle('resize', 'speccer-onResize');
   throttle('resize', 'anatomy-onResize');
-  window.addEventListener('speccer-onResize', () => {
+
+  const speccerEventFunc = () => {
     console.info('[@phun-ky/speccer]: Event speccer-onResize triggered');
     speccer();
-  });
-  window.addEventListener('anatomy-onResize', () => {
+  };
+
+  const anatomyEventFunc = () => {
     console.info('[@phun-ky/speccer]: Event anatomy-onResize triggered');
     anatomy();
-  });
+  };
+  window.removeEventListener('speccer-onResize', speccerEventFunc);
+  window.removeEventListener('anatomy-onResize', anatomyEventFunc);
+  window.addEventListener('speccer-onResize', speccerEventFunc);
+  window.addEventListener('anatomy-onResize', anatomyEventFunc);
 };
 
 export const removeSpeccerElements = (selector, el = document) => {

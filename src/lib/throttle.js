@@ -12,6 +12,7 @@ const throttle = (type, name, obj) => {
       running = false;
     });
   };
+  obj.removeEventListener(type, func);
   obj.addEventListener(type, func);
 };
 
