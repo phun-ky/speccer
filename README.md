@@ -15,7 +15,7 @@ See demo here: https://codepen.io/phun-ky/pen/xaOrYX
 Either import and run the required functions:
 
 ```javascript
-import { anatomy, speccer, removeSpeccerElements, activateOnResize } from '@phun-ky/speccer/src/index.js';
+import { anatomy, speccer, activateOnResize } from '@phun-ky/speccer/src/index.js';
 
 // do stuff
 anatomy();
@@ -29,6 +29,50 @@ Or place these `script` and `link` tags in your web page:
 ```
 
 And then follow the steps below to display the specifications you want :)
+
+**_NOTE_** The activateOnResize function is using a throttled event for the [Window: resize event](https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event), this might give you some issues in an SPA.
+
+If you use React, you can use an effect like this:
+
+```javascript
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+
+import debounce from './lib/debounce';
+import '@phun-ky/speccer/speccer.css';
+
+const Component = () => {
+  let speccerEventFunc;
+
+  useEffect(() => {
+    import('@phun-ky/speccer/src/index.js').then(speccerScript => {
+      console.info('[@phun-ky/speccer]: Activated speccer ');
+
+      const { anatomy, speccer } = speccerScript;
+      anatomy();
+      speccer();
+
+      speccerEventFunc = debounce(function() {
+        console.info('[@phun-ky/speccer]: Event resize triggered');
+        speccer();
+        anatomy();
+      }, 300);
+
+      window.addEventListener('resize', speccerEventFunc);
+    });
+  });
+
+  useEffect(() => {
+    return () => {
+      window.removeEventListener('resize', speccerEventFunc);
+    };
+  }, []);
+
+  return <div />;
+};
+
+export default Component;
+```
 
 ### Element spacing
 
