@@ -128,3 +128,49 @@ If you want to control speccer a bit more, you have some options. Apply one of t
 | `data-lazy`    | Lazy loads `anatomy()` and `speccer()` per specced element                             |
 
 If no attribute is applied, it will default to `data-dom`, as in, it will initialize when `DOMContentLoaded` is fired.
+
+### Lazy
+
+If you're importing speccer instead of with a script tag, you can use the following approach to apply lazy loading:
+
+```javascript
+import { specElement, measureElement, dissectElement } from '@phun-ky/speccer';
+
+let specElementObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+      specElement(entry.target);
+      observer.unobserve(entry.target);
+    }
+  });
+});
+document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)').forEach(el => {
+  specElementObserver.observe(el);
+});
+let measureElementObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+      measureElement(entry.target);
+      observer.unobserve(entry.target);
+    }
+  });
+});
+document.querySelectorAll('[data-speccer-measure]').forEach(el => {
+  measureElementObserver.observe(el);
+});
+let dissectElementObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    const targets = entry.target.querySelectorAll('[data-anatomy]');
+    if (entry.intersectionRatio > 0) {
+      targets.forEach(dissectElement);
+      observer.unobserve(entry.target);
+    }
+  });
+});
+
+const observeAnatomySections = section => {
+  dissectElementObserver.observe(section);
+};
+
+document.querySelectorAll('[data-anatomy-section]').forEach(observeAnatomySections);
+```

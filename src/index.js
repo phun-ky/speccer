@@ -39,7 +39,7 @@ const createDissectionNode = (e = '', t, n = 'span') => {
   }
   return r;
 };
-const dissectElement = (elementToDissect, dissectIndex) => {
+export const dissectElement = (elementToDissect, dissectIndex) => {
   const rectOfDissectedElement = elementToDissect.getBoundingClientRect();
   if (!elementToDissect.getAttribute('data-anatomy')) {
     regions.forEach((t, n) => {
@@ -309,7 +309,7 @@ const createMeasureNode = (text = '', area = '', tag = 'span') => {
   }
   return newTag;
 };
-const measureElement = elementToBeMeasured => {
+export const measureElement = elementToBeMeasured => {
   const rectOfMeasuredElement = elementToBeMeasured.getBoundingClientRect();
   const measureArea = elementToBeMeasured.getAttribute('data-speccer-measure');
   if (measureArea === '') {
@@ -372,7 +372,7 @@ const measureElement = elementToBeMeasured => {
     }
   }
 };
-const specElement = elementToBeSpecced => {
+export const specElement = elementToBeSpecced => {
   const speccerElement = {};
   const elementCSSStyle = getElementCSSStyle(elementToBeSpecced);
   if (elementCSSStyle.display === 'none' || elementCSSStyle.visibility === 'hidden') {
