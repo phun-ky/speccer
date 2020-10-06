@@ -85,3 +85,274 @@
   width 1.5rem
   border 1px solid #d4397a
   z-index 99999
+
+
+.dissection
+  height 1.5rem
+  width 1.5rem
+  display flex
+  position absolute
+  border-radius 100%
+  background-color #d4397a
+  color #fff
+  font-weight 600
+  align-items center
+  justify-content center
+  line-height 150%
+  font-size 16px
+  z-index 100000
+  box-sizing: content-box;
+  &:after
+    content ""
+    position absolute
+    height 48px
+    top 100%
+    width 1px
+    background-color #d4397a
+    z-index 99999
+  &.outline
+    &.left
+      &:after
+        height 1px
+        width 48px
+        top 50%
+        left 100%
+    &.right
+      &:after
+        height 1px
+        width 48px
+        top 50%
+        right 100%
+    &.enclose
+      border-radius 0
+      background-color transparent
+      color red
+      border 1px solid #d4397a
+      &.right
+        &:after
+          left calc(100% + 49px)
+          right auto
+        &:before
+          left 100%
+          right auto
+      &.left
+        &:after
+          left calc(-1px - 48px)
+          right auto
+        &:before
+          right 100%
+          left auto
+      &.top
+        &:after
+          top calc(-1px - 48px)
+          bottom auto
+        &:before
+          bottom 100%
+          top auto
+      &.bottom
+        &:after
+          top calc(100% + 49px)
+          bottom auto
+        &:before
+          top 100%
+          bottom auto
+    &.full
+      border-radius 0
+      background-color transparent
+      color red
+      border 1px solid #d4397a
+      &.right
+        border-left none
+        &:after
+          left calc(8px + 48px)
+        &:before
+          left 100%
+      &.left
+        border-right none
+        &:after
+          left calc(-8px - 48px)
+        &:before
+          right 100%
+      &.top
+        border-bottom none
+        &:after
+          top calc(-8px - 48px)
+        &:before
+          bottom 100%
+      &.bottom
+        border-top none
+        &:after
+          top calc(8px + 48px)
+        &:before
+          top 100%
+    &.bottom
+      &:after
+        height 48px
+        width 1px
+        top calc(-100% - 24px)
+        right 50%
+  &.button-center
+    &:after
+      content ""
+      position absolute
+      height 48px
+      top 100%
+      width 1px
+      background-color #d4397a
+      z-index 99999
+  &.button-outline
+    &:after
+      right 100%
+  &.button-icon
+    &:after
+      left 100%
+    &:before
+      content ""
+      position absolute
+      height 1.5rem
+      left calc(100% + 48px)
+      width 1.5rem
+      border 1px solid #d4397a
+      z-index 99999
+
+.dissection.outline.top:after,
+.dissection.outline:after
+  height 48px
+  width 1px
+  top 100%
+  right 50%
+
+[data-anatomy-section]
+  counter-reset type
+
+.dissection.outline.full.right,
+.dissection.outline.full.left
+  width 8px
+
+.dissection.outline.full.top,
+.dissection.outline.full.bottom
+  height 8px
+
+.dissection.outline.full.right:after,
+.dissection.outline.full.left:after,
+.dissection.outline.full.top:after,
+.dissection.outline.full.bottom:after
+  content attr(data-dissection-counter)
+  height 1.5rem
+  width 1.5rem
+  display flex
+  position absolute
+  border-radius 100%
+  background-color #d4397a
+  color #fff
+  font-weight 600
+  align-items center
+  justify-content center
+  line-height 150%
+  font-size 16px
+  z-index 100000
+
+.dissection.outline.full.right:after,
+.dissection.outline.full.left:after
+  top 50%
+  transform translateY(-50%)
+
+.dissection.outline.full.top:after,
+.dissection.outline.full.bottom:after
+  left 50%
+  transform translateX(-50%)
+
+.dissection.outline.full.right:before,
+.dissection.outline.full.left:before,
+.dissection.outline.full.top:before,
+.dissection.outline.full.bottom:before
+  content ""
+  position absolute
+  background-color #d4397a
+  z-index 100000
+  display block
+
+.dissection.outline.full.right:before,
+.dissection.outline.full.left:before
+  top 50%
+  transform translateY(-50%)
+  height 1px
+  width 49px
+
+.dissection.outline.full.top:before,
+.dissection.outline.full.bottom:before
+  left 50%
+  transform translateX(-50%)
+  width 1px
+  height 49px
+
+.dissection.outline.enclose.right,
+.dissection.outline.enclose.left
+  width 8px
+
+.dissection.outline.enclose.top,
+.dissection.outline.enclose.bottom
+  height 8px
+
+.dissection.outline.enclose.right:after,
+.dissection.outline.enclose.left:after,
+.dissection.outline.enclose.top:after,
+.dissection.outline.enclose.bottom:after
+  content attr(data-dissection-counter)
+  height 1.5rem
+  width 1.5rem
+  display flex
+  position absolute
+  border-radius 100%
+  background-color #d4397a
+  color #fff
+  font-weight 600
+  align-items center
+  justify-content center
+  line-height 150%
+  font-size 16px
+  z-index 100000
+
+.dissection.outline.enclose.right:after,
+.dissection.outline.enclose.left:after
+  top 50%
+  transform translateY(-50%)
+
+.dissection.outline.enclose.top:after,
+.dissection.outline.enclose.bottom:after
+  left 50%
+  transform translateX(-50%)
+
+.dissection.outline.enclose.right:before,
+.dissection.outline.enclose.left:before,
+.dissection.outline.enclose.top:before,
+.dissection.outline.enclose.bottom:before
+  content ""
+  position absolute
+  background-color #d4397a
+  z-index 100000
+  display block
+
+.dissection.outline.enclose.right:before,
+.dissection.outline.enclose.left:before
+  top 50%
+  transform translateY(-50%)
+  height 1px
+  width 49px
+
+.dissection.outline.enclose.top:before,
+.dissection.outline.enclose.bottom:before
+  left 50%
+  transform translateX(-50%)
+  width 1px
+  height 49px
+
+.dissection.button-icon:after,
+.dissection.button-outline:after
+  content ""
+  position absolute
+  width 48px
+  top 50%
+  height 1px
+  background-color #d4397a
+  z-index 99999

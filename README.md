@@ -112,6 +112,18 @@ In your component examples, use the following attribute. Remember to use the `da
 
 This will place a pin to the outline of the element. Default is `top`.
 
+### Element typogpraphy
+
+![Image of speccer](./typography.png)
+
+In your component examples, use the following attribute.
+
+```html
+<div data-speccer-typography="[left|right|top|bottom]" class="...">Some text</div>
+```
+
+This will place a box to display typography information. Default is `left`.
+
 ## Advanced usage
 
 If you want to control speccer a bit more, you have some options. Apply one of these attributes to the script element for different types of initialization:

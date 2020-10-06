@@ -281,6 +281,25 @@ const getDesiredCSSStyles = style => {
     paddingRight
   };
 };
+
+const createTypographySpeccerNode = (html, area) => {
+  const newTag = document.createElement('div');
+  newTag.innerHTML = html;
+  newTag.classList.add('speccer');
+  newTag.classList.add('typography');
+  if (area !== '') {
+    if (area.indexOf(' ') !== -1) {
+      var ts = area.split(' ');
+      ts.forEach(v => {
+        newTag.classList.add(v);
+      });
+    } else {
+      newTag.classList.add(area);
+    }
+  }
+  return newTag;
+};
+
 const createSpeccerNode = (text = '', tag = 'span') => {
   const newTag = document.createElement(tag);
   const textContent = document.createTextNode(text);
@@ -372,6 +391,143 @@ export const measureElement = elementToBeMeasured => {
     }
   }
 };
+
+const getDesiredTypographyCSSStyles = style => {
+  const { lineHeight, letterSpacing, fontFamily, fontSize, fontStyle, fontVariationSettings, fontWeight } = style;
+  return {
+    lineHeight,
+    letterSpacing,
+    fontFamily,
+    fontSize,
+    fontStyle,
+    fontVariationSettings,
+    fontWeight
+  };
+};
+
+const specTypographyElement = elementToBeSpecced => {
+  const typographySpecArea = elementToBeSpecced.getAttribute('data-speccer-typography');
+  const elementCSSStyle = getElementCSSStyle(elementToBeSpecced);
+  if (elementCSSStyle.display === 'none' || elementCSSStyle.visibility === 'hidden') {
+    return;
+  }
+  elementToBeSpecced.classList.add('speccer-isSpecced');
+  const parentElementCSSStyle = getElementCSSStyle(elementToBeSpecced.parentElement);
+  if (parentElementCSSStyle.position === 'static') {
+    elementToBeSpecced.parentElement.style.position = 'relative';
+  }
+  const desiredStyles = getDesiredTypographyCSSStyles(elementCSSStyle);
+  const rectOfSpeccedElement = elementToBeSpecced.getBoundingClientRect();
+
+  const html =
+    `
+    ` +
+    `font-styles: {` +
+    `<ul class="speccer-styles">` +
+    `  <li><span class="property">font-family:</span> ${desiredStyles['fontFamily']};</li>` +
+    `  <li><span class="property">font-size:</span> ${desiredStyles['fontSize']} / ${parseInt(
+      desiredStyles['fontSize'],
+      10
+    ) / 16}rem;</li>` +
+    `  <li><span class="property">font-weight:</span> ${desiredStyles['fontWeight']};</li>` +
+    `  <li><span class="property">font-variation-settings:</span> ${desiredStyles['fontVariationSettings']};</li>` +
+    `  <li><span class="property">line-height:</span> ${desiredStyles['lineHeight']} / ${parseInt(
+      desiredStyles['lineHeight'],
+      10
+    ) / 16}rem;</li>` +
+    `  <li><span class="property">letter-spacing:</span> ${desiredStyles['letterSpacing']};</li>` +
+    `  <li><span class="property">font-style:</span> ${desiredStyles['fontStyle']};</li>` +
+    `</ul>` +
+    `}`;
+  const speccerNode = createTypographySpeccerNode(html, typographySpecArea);
+
+  let tableCorrectionTop = 0;
+  let tableCorrectionLeft = 0;
+  const tableCorrection = avoidTheseTags.indexOf(elementToBeSpecced.nodeName) >= 0;
+  if (tableCorrection) {
+    const table = elementToBeSpecced.parentElement;
+    const tableStyle = window.getComputedStyle(table.parentElement);
+    table.insertAdjacentElement('afterend', speccerNode);
+    tableCorrectionTop = table.getBoundingClientRect().top - parseInt(tableStyle.getPropertyValue('padding-top'), 10);
+    tableCorrectionLeft =
+      table.getBoundingClientRect().left - parseInt(tableStyle.getPropertyValue('padding-left'), 10);
+  } else {
+    elementToBeSpecced.insertAdjacentElement('afterend', speccerNode);
+  }
+
+  const rectOfSpeccerNode = speccerNode.getBoundingClientRect();
+
+  let outlineLeftLeft =
+    (tableCorrection ? rectOfSpeccerNode.left - tableCorrectionLeft : elementToBeSpecced.offsetLeft) -
+    rectOfSpeccerNode.width -
+    48 +
+    'px';
+
+  let outlineLeftTop =
+    parseFloat(
+      (tableCorrection ? rectOfSpeccerNode.top - tableCorrectionTop : elementToBeSpecced.offsetTop) -
+        rectOfSpeccerNode.height / 2 +
+        rectOfSpeccedElement.height / 2
+    ).toFixed(3) + 'px';
+  let outlineRightLeft =
+    (tableCorrection ? rectOfSpeccerNode.left - tableCorrectionLeft : elementToBeSpecced.offsetLeft) +
+    rectOfSpeccedElement.width +
+    48 +
+    'px';
+
+  let outlineRightTop =
+    parseFloat(
+      (tableCorrection ? rectOfSpeccerNode.top - tableCorrectionTop : elementToBeSpecced.offsetTop) -
+        rectOfSpeccerNode.height / 2 +
+        rectOfSpeccedElement.height / 2
+    ).toFixed(3) + 'px';
+  let outlineTopLeft =
+    parseFloat(
+      (tableCorrection ? rectOfSpeccerNode.left - tableCorrectionLeft : elementToBeSpecced.offsetLeft) -
+        rectOfSpeccerNode.width / 2 +
+        rectOfSpeccedElement.width / 2
+    ).toFixed(3) + 'px';
+  let outlineTopTop =
+    (tableCorrection ? rectOfSpeccerNode.top - tableCorrectionTop : elementToBeSpecced.offsetTop) -
+    rectOfSpeccerNode.height -
+    48 +
+    'px';
+  let outlineBottomleft =
+    parseFloat(
+      (tableCorrection ? rectOfSpeccerNode.left - tableCorrectionLeft : elementToBeSpecced.offsetLeft) -
+        rectOfSpeccerNode.width / 2 +
+        rectOfSpeccedElement.width / 2
+    ).toFixed(3) + 'px';
+  let outlineBottomTop =
+    (tableCorrection ? rectOfSpeccerNode.top - tableCorrectionTop : elementToBeSpecced.offsetTop) +
+    rectOfSpeccedElement.height +
+    48 +
+    'px';
+
+  let position = {
+    left: outlineLeftLeft,
+    top: outlineLeftTop
+  };
+  if (typographySpecArea.indexOf('right') !== -1) {
+    position = {
+      left: outlineRightLeft,
+      top: outlineRightTop
+    };
+  } else if (typographySpecArea.indexOf('top') !== -1) {
+    position = {
+      left: outlineTopLeft,
+      top: outlineTopTop
+    };
+  } else if (typographySpecArea.indexOf('bottom') !== -1) {
+    position = {
+      left: outlineBottomleft,
+      top: outlineBottomTop
+    };
+  }
+
+  addStyleToElement(speccerNode, position);
+};
+
 export const specElement = elementToBeSpecced => {
   const speccerElement = {};
   const elementCSSStyle = getElementCSSStyle(elementToBeSpecced);
@@ -556,6 +712,8 @@ export const speccer = () => {
   elementsToBeSpecced.forEach(specElement);
   const elementsToBeMeasured = document.querySelectorAll('[data-speccer-measure]');
   elementsToBeMeasured.forEach(measureElement);
+  const elementsToBeTypographySpecced = document.querySelectorAll('[data-speccer-typography]');
+  elementsToBeTypographySpecced.forEach(specTypographyElement);
 };
 
 export const activateOnResize = () => {
@@ -584,9 +742,14 @@ export const removeSpeccerElements = (selector, el = document) => {
 };
 
 const speccerScript = document.currentScript;
+console.log(speccerScript);
 
 if (speccerScript) {
-  if (speccerScript.getAttribute('src').indexOf('speccer.js') !== -1) {
+  if (
+    speccerScript.getAttribute('src').indexOf('speccer.js') !== -1 ||
+    // for codepen
+    speccerScript.getAttribute('src').indexOf('JaXpOK.js') !== -1
+  ) {
     if (speccerScript.hasAttribute('data-manual')) {
       console.info('[@phun-ky/speccer]: Initialized with: data-manual');
       window.speccer = speccer;

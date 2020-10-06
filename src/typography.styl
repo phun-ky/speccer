@@ -1,0 +1,86 @@
+.speccer.typography
+  background-color #ffffff
+  color #57575b
+  font-size 12px
+  padding 8px 24px
+  max-width none
+  width auto
+  display block
+  text-align left
+  line-height 140%
+  border 1px solid #e227b3
+  min-width 320px
+
+  &:hover
+    border 1px solid #e227b3
+
+  &:after
+    content ""
+    position absolute
+    display block
+    background-color #e227b3
+    left 100%
+    top 50%
+    transform translateY(-50%)
+    height 1px
+    width 48px
+
+  &.left
+    &:after
+      left 100%
+      top 50%
+      transform translateY(-50%)
+      height 1px
+      width 48px
+  &.right
+    &:after
+      left auto
+      right 100%
+      top 50%
+      transform translateY(-50%)
+      height 1px
+      width 48px
+  &.top
+    &:after
+      left 50%
+      right auto
+      top 100%
+      transform translateX(-50%)
+      height 48px
+      width 1px
+  &.bottom
+    &:after
+      left 50%
+      right auto
+      top auto
+      bottom 100%
+      transform translateX(-50%)
+      height 48px
+      width 1px
+
+  & .speccer-styles
+    list-style none
+    width 100%
+    padding 0
+    margin 0
+    line-height 140%
+    padding-left 1rem
+    font-size 12px
+
+    & .property
+      font-weight normal
+      color #3f85f2
+      text-align left
+      padding 0
+      font-size 12px
+      margin 0
+
+    & > li
+      font-weight normal
+      color #e227b3
+      text-align left
+      padding 0
+      font-size 12px
+      margin 0
+      list-style none
+      border none
