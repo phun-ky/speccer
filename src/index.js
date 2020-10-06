@@ -405,7 +405,7 @@ const getDesiredTypographyCSSStyles = style => {
   };
 };
 
-const specTypographyElement = elementToBeSpecced => {
+export const specTypographyElement = elementToBeSpecced => {
   const typographySpecArea = elementToBeSpecced.getAttribute('data-speccer-typography');
   const elementCSSStyle = getElementCSSStyle(elementToBeSpecced);
   if (elementCSSStyle.display === 'none' || elementCSSStyle.visibility === 'hidden') {
