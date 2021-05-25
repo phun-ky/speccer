@@ -2,8 +2,6 @@
 import './lib/poly';
 import throttle from './lib/throttle';
 import { addStyleToElement, getCSSValue, getElementCSSStyle, normalizeCSSValue } from './lib/style';
-import './anatomy.styl';
-import './speccer.styl';
 
 const o = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
 const regions = [
@@ -422,8 +420,8 @@ export const specTypographyElement = elementToBeSpecced => {
   const html =
     `
     ` +
-    `font-styles: {` +
-    `<ul class="speccer-styles">` +
+    'font-styles: {' +
+    '<ul class="speccer-styles">' +
     `  <li><span class="property">font-family:</span> ${desiredStyles['fontFamily']};</li>` +
     `  <li><span class="property">font-size:</span> ${desiredStyles['fontSize']} / ${parseInt(
       desiredStyles['fontSize'],
@@ -437,8 +435,8 @@ export const specTypographyElement = elementToBeSpecced => {
     ) / 16}rem;</li>` +
     `  <li><span class="property">letter-spacing:</span> ${desiredStyles['letterSpacing']};</li>` +
     `  <li><span class="property">font-style:</span> ${desiredStyles['fontStyle']};</li>` +
-    `</ul>` +
-    `}`;
+    '</ul>' +
+    '}';
   const speccerNode = createTypographySpeccerNode(html, typographySpecArea);
 
   let tableCorrectionTop = 0;

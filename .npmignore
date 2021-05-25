@@ -50,3 +50,4 @@ package-lock.json
 .browserslistrc
 .babelrc
 .editorconfig
+rollup.config.js
