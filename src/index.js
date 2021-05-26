@@ -1,34 +1,28 @@
 /* eslint no-console:0 */
 'use strict';
 
-import * as Node from './lib/node';
-import * as Spec from './spec';
-import * as Dissect from './dissect';
-import * as Measure from './measure';
-import * as Typography from './typography';
-import * as Browser from './browser';
+import * as node from './lib/node';
+import * as spec from './spec';
+import * as dissect from './dissect';
+import * as measure from './measure';
+import * as typography from './typography';
+import * as browser from './browser';
 
-export const anatomy = () => {
-  console.info('[@phun-ky/speccer]: Running anatomy()');
-  Node.removeAll('.dissection');
-  document.querySelectorAll('[data-anatomy-section]').forEach(section => {
-    const elementsToBeDissected = section.querySelectorAll('[data-anatomy]');
-    elementsToBeDissected.forEach(Dissect.element);
-  });
+const speccer = () => {
+  node.removeAll('.speccer');
+  node.removeAll('.dissection');
+
+  const _els_to_be_specced = document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)');
+  const _els_to_be_measured = document.querySelectorAll('[data-speccer-measure]');
+  const _els_to_be_typography_specced = document.querySelectorAll('[data-speccer-typography]');
+  const _els_to_be_dissected = document.querySelectorAll('[data-anatomy-section] [data-anatomy]');
+
+  _els_to_be_specced.forEach(spec.element);
+  _els_to_be_measured.forEach(measure.element);
+  _els_to_be_typography_specced.forEach(typography.element);
+  _els_to_be_dissected.forEach(dissect.element);
 };
 
-export const speccer = () => {
-  console.info('[@phun-ky/speccer]: Running speccer()');
+export default speccer;
 
-  Node.removeAll('.speccer');
-
-  const elementsToBeSpecced = document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)');
-  const elementsToBeMeasured = document.querySelectorAll('[data-speccer-measure]');
-  const elementsToBeTypographySpecced = document.querySelectorAll('[data-speccer-typography]');
-
-  elementsToBeSpecced.forEach(Spec.element);
-  elementsToBeMeasured.forEach(Measure.element);
-  elementsToBeTypographySpecced.forEach(Typography.element);
-};
-
-Browser.activate(speccer, anatomy);
+browser.activate(speccer);

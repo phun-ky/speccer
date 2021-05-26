@@ -9,11 +9,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "rollup": "rollup -c",
+    "rollup:dev": "npm run clean && rollup -c -w",
     "clean": "rm -rf ./speccer.css ./speccer.min.css ./speccer.js",
     "build": "npm run clean && npm run rollup && npm run stylus && npm run postcss",
     "stylus": "rm -rf ./speccer.css && stylus ./src/index.styl -o ./speccer.css",
     "postcss": "rm -rf ./speccer.min.css && postcss ./speccer.css -o  speccer.min.css",
-    "dev": "npm run clean && rollup -c -w",
+    "dev": "node ./scripts/watcher.js",
     "commit": "npx git-cz"
   },
   "repository": {
@@ -62,7 +63,13 @@
     "prettier-eslint": "^9.0.1",
     "regenerator-runtime": "^0.13.7",
     "rollup": "^2.39.0",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "async": "^3.2.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "node-watch": "^0.7.1",
+    "open": "^8.0.2",
+    "reload": "^3.1.1"
   },
   "dependencies": {
     "eslint-plugin-jsx-a11y": "^6.4.1",

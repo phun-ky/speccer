@@ -1,29 +1,25 @@
 /* eslint no-console:0 */
 'use strict';
 
-import * as Resize from './lib/resize';
-import * as Spec from './spec';
-import * as Measure from './measure';
-import * as Dissect from './dissect';
+import * as resize from './lib/resize';
+import * as spec from './spec';
+import * as measure from './measure';
+import * as dissect from './dissect';
 
-export const dom = (speccer, anatomy) => {
-  console.info('[@phun-ky/speccer]: Initialized with: data-dom');
+export const dom = speccer => {
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', anatomy);
     document.addEventListener('DOMContentLoaded', speccer);
   } else {
     // `DOMContentLoaded` already fired
-    anatomy();
     speccer();
   }
 };
 
 export const lazy = () => {
-  console.info('[@phun-ky/speccer]: Initialized with: data-lazy');
   let _spec_observer = new IntersectionObserver((els, observer) => {
     els.forEach(el => {
       if (el.intersectionRatio > 0) {
-        Spec.element(el.target);
+        spec.element(el.target);
         observer.unobserve(el.target);
       }
     });
@@ -34,7 +30,7 @@ export const lazy = () => {
   let _measure_observer = new IntersectionObserver((els, observer) => {
     els.forEach(el => {
       if (el.intersectionRatio > 0) {
-        Measure.element(el.target);
+        measure.element(el.target);
         observer.unobserve(el.target);
       }
     });
@@ -46,7 +42,7 @@ export const lazy = () => {
     els.forEach(el => {
       const targets = el.target.querySelectorAll('[data-anatomy]');
       if (el.intersectionRatio > 0) {
-        targets.forEach(Dissect.element);
+        targets.forEach(dissect.element);
         observer.unobserve(el.target);
       }
     });
@@ -57,18 +53,11 @@ export const lazy = () => {
   });
 };
 
-export const instant = (speccer, anatomy) => {
-  anatomy();
-  speccer();
-};
-
-export const manual = (speccer, anatomy) => {
-  console.info('[@phun-ky/speccer]: Initialized with: data-manual');
+export const manual = speccer => {
   window.speccer = speccer;
-  window.anatomy = anatomy;
 };
 
-export const activate = (speccer, anatomy) => {
+export const activate = speccer => {
   const _script = document.currentScript;
 
   if (_script) {
@@ -79,19 +68,19 @@ export const activate = (speccer, anatomy) => {
       _speccer_script_src.indexOf('JaXpOK.js') !== -1
     ) {
       if (_script.hasAttribute('data-manual')) {
-        manual(speccer, anatomy);
+        manual(speccer);
       } else if (_script.hasAttribute('data-instant')) {
-        instant(speccer, anatomy);
+        speccer();
       } else if (_script.hasAttribute('data-dom')) {
-        dom(speccer, anatomy);
+        dom(speccer);
       } else if (_script.hasAttribute('data-lazy')) {
         lazy();
       } else {
-        dom(speccer, anatomy);
+        dom(speccer);
       }
 
       if (!_script.hasAttribute('data-manual') && !_script.hasAttribute('data-lazy')) {
-        Resize.activate();
+        resize.activate(speccer);
       }
     }
   }

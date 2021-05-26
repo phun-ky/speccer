@@ -5,26 +5,30 @@ export const set = (el, cls, avoid = 'noop') => {
   if (!el) return;
   if (!cls || (cls && cls.length === 0)) return;
   cls
+    .trim()
     .split(' ')
     .filter(cl => cl !== avoid)
     .forEach(cl => el.classList.add(cl));
 };
 
-export const toggle = (el, cls) => {
+export const toggle = (el, cls, avoid = 'noop') => {
   if (!el) return;
   if (!cls || (cls && cls.length === 0)) return;
-  cls.split(' ').forEach(cl => el.classList.toggle(cl));
+  cls
+    .trim()
+    .split(' ')
+    .filter(cl => cl !== avoid)
+    .forEach(cl => el.classList.toggle(cl));
 };
 
 export const remove = (el, cls, avoid = 'noop') => {
   if (!el) return;
   if (!cls || (cls && cls.length === 0)) return;
-
-  cls.split(' ').forEach(cl => {
-    if (cl !== avoid) {
-      el.classList.remove(cl);
-    }
-  });
+  cls
+    .trim()
+    .split(' ')
+    .filter(cl => cl !== avoid)
+    .forEach(cl => el.classList.remove(cl));
 };
 
 export const cx = (cls, cls_obj) =>

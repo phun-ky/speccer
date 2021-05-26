@@ -39,8 +39,8 @@ export default [
           '@babel/transform-async-to-generator'
         ],
         exclude: ['node_modules/**']
-      }),
-      terser()
+      })
+      // terser()
     ]
   }
 ];

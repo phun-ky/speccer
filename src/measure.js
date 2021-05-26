@@ -1,83 +1,87 @@
 /* eslint no-console:0 */
 'use strict';
 
-import * as ClassNames from './lib/classnames';
-import * as Styles from './lib/styles';
+import * as classnames from './lib/classnames';
+import * as styles from './lib/styles';
+import * as node from './lib/node';
 
 import { SPECCER_TAGS_TO_AVOID } from './lib/constants';
 
 const create = (text = '', area = '', tag = 'span') => {
-  const newTag = document.createElement(tag);
-  newTag.setAttribute('title', text + 'px');
-  newTag.setAttribute('data-measure', parseInt(text, 10) + 'px');
+  const _el = document.createElement(tag);
+  _el.setAttribute('title', text + 'px');
+  _el.setAttribute('data-measure', parseInt(text, 10) + 'px');
 
-  ClassNames.set(`speccer measure ${area}`);
+  classnames.set(_el, `speccer measure ${area}`);
 
-  return newTag;
+  return _el;
 };
 
-export const element = elementToBeMeasured => {
-  if (!elementToBeMeasured) return;
+export const element = el => {
+  if (!el) return;
 
-  const rectOfMeasuredElement = elementToBeMeasured.getBoundingClientRect();
-  const measureArea = elementToBeMeasured.getAttribute('data-speccer-measure');
+  const _el_rect = el.getBoundingClientRect();
+  const _area = el.getAttribute('data-speccer-measure');
 
-  if (measureArea === '') {
+  if (_area === '') {
     return;
   }
 
-  if (measureArea.indexOf('width') !== -1) {
-    if (measureArea.indexOf('bottom') !== -1) {
-      const measureNode = create(rectOfMeasuredElement.width, 'width bottom');
-      if (SPECCER_TAGS_TO_AVOID.indexOf(elementToBeMeasured.nodeName) >= 0) {
-        Node.after(elementToBeMeasured.closest('table'), measureNode);
+  const _el_offset_top = el.offsetTop;
+  const _el_offset_left = el.offsetLeft;
+
+  if (_area.indexOf('width') !== -1) {
+    if (_area.indexOf('bottom') !== -1) {
+      const _measure_node = create(_el_rect.width, 'width bottom');
+      if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
+        node.after(el.closest('table'), _measure_node);
       } else {
-        Node.after(elementToBeMeasured, measureNode);
+        node.after(el, _measure_node);
       }
-      Styles.add(measureNode, {
-        left: elementToBeMeasured.offsetLeft + 'px',
-        top: elementToBeMeasured.offsetTop + rectOfMeasuredElement.height + 1 + 'px',
-        width: rectOfMeasuredElement.width + 'px'
+      styles.add(_measure_node, {
+        left: _el_offset_left + 'px',
+        top: _el_offset_top + _el_rect.height + 1 + 'px',
+        width: _el_rect.width + 'px'
       });
     } else {
-      const measureNode = create(rectOfMeasuredElement.width, 'width top');
-      if (SPECCER_TAGS_TO_AVOID.indexOf(elementToBeMeasured.nodeName) >= 0) {
-        Node.after(elementToBeMeasured.closest('table'), measureNode);
+      const _measure_node = create(_el_rect.width, 'width top');
+      if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
+        node.after(el.closest('table'), _measure_node);
       } else {
-        Node.after(elementToBeMeasured, measureNode);
+        node.after(el, _measure_node);
       }
-      const rectOfMeasureNode = measureNode.getBoundingClientRect();
-      Styles.add(measureNode, {
-        left: elementToBeMeasured.offsetLeft + 'px',
-        top: elementToBeMeasured.offsetTop - rectOfMeasureNode.height + 1 + 'px',
-        width: rectOfMeasuredElement.width + 'px'
+      const _measure_node_rect = _measure_node.getBoundingClientRect();
+      styles.add(_measure_node, {
+        left: _el_offset_left + 'px',
+        top: _el_offset_top - _measure_node_rect.height + 1 + 'px',
+        width: _el_rect.width + 'px'
       });
     }
-  } else if (measureArea.indexOf('height') !== -1) {
-    if (measureArea.indexOf('right') !== -1) {
-      const measureNode = create(rectOfMeasuredElement.height, 'height right');
-      if (SPECCER_TAGS_TO_AVOID.indexOf(elementToBeMeasured.nodeName) >= 0) {
-        Node.after(elementToBeMeasured.closest('table'), measureNode);
+  } else if (_area.indexOf('height') !== -1) {
+    if (_area.indexOf('right') !== -1) {
+      const _measure_node = create(_el_rect.height, 'height right');
+      if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
+        node.after(el.closest('table'), _measure_node);
       } else {
-        Node.after(elementToBeMeasured, measureNode);
+        node.after(el, _measure_node);
       }
-      Styles.add(measureNode, {
-        left: elementToBeMeasured.offsetLeft + rectOfMeasuredElement.width + 'px',
-        top: elementToBeMeasured.offsetTop + 'px',
-        height: rectOfMeasuredElement.height + 'px'
+      styles.add(_measure_node, {
+        left: _el_offset_left + _el_rect.width + 'px',
+        top: _el_offset_top + 'px',
+        height: _el_rect.height + 'px'
       });
     } else {
-      const measureNode = create(rectOfMeasuredElement.height, 'height top');
-      if (SPECCER_TAGS_TO_AVOID.indexOf(elementToBeMeasured.nodeName) >= 0) {
-        Node.after(elementToBeMeasured.closest('table'), measureNode);
+      const _measure_node = create(_el_rect.height, 'height top');
+      if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
+        node.after(el.closest('table'), _measure_node);
       } else {
-        Node.after(elementToBeMeasured, measureNode);
+        node.after(el, _measure_node);
       }
-      const rectOfMeasureNode = measureNode.getBoundingClientRect();
-      Styles.add(measureNode, {
-        left: elementToBeMeasured.offsetLeft - rectOfMeasureNode.width + 'px',
-        top: elementToBeMeasured.offsetTop + 'px',
-        height: rectOfMeasuredElement.height + 'px'
+      const _measure_node_rect = _measure_node.getBoundingClientRect();
+      styles.add(_measure_node, {
+        left: _el_offset_left - _measure_node_rect.width + 'px',
+        top: _el_offset_top + 'px',
+        height: _el_rect.height + 'px'
       });
     }
   }

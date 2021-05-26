@@ -1,11 +1,11 @@
 /* eslint no-console:0 */
 'use strict';
 
-export const getNumberValue = cssValue => parseInt(cssValue, 10);
+export const getNumberValue = value => parseInt(value, 10);
 
-export const normalizeNumberValue = cssValue => {
-  const value = parseFloat(cssValue);
-  return (value >= 0 && value < 1) || (value <= 0 && value > -1) ? 0 : value;
+export const normalizeNumberValue = value => {
+  const _value = parseFloat(value);
+  return (_value >= 0 && _value < 1) || (_value <= 0 && _value > -1) ? 0 : _value;
 };
 
 export const getSpacing = style => {

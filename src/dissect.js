@@ -1,215 +1,204 @@
 /* eslint no-console:0 */
 'use strict';
-import * as Styles from './lib/styles';
+import * as styles from './lib/styles';
+import * as node from './lib/node';
+import * as classnames from './lib/classnames';
 import { SPECCER_LITERALS, SPECCER_TAGS_TO_AVOID } from './lib/constants';
 
 export const create = (e = '', t, n = 'span') => {
-  const r = document.createElement(n);
+  const _el = document.createElement(n);
   const o = document.createTextNode(e);
-  r.classList.add('dissection');
   if (t.indexOf('full') === -1 && t.indexOf('enclose') === -1) {
-    r.appendChild(o);
+    _el.appendChild(o);
   } else if (t.indexOf('full') !== -1 || t.indexOf('enclose') !== -1) {
-    r.setAttribute('data-dissection-counter', e);
+    _el.setAttribute('data-dissection-counter', e);
   }
-  if (t) {
-    if (t.indexOf(' ') !== -1) {
-      var ts = t.split(' ');
-      ts.forEach(v => {
-        r.classList.add(v);
-      });
-    } else {
-      r.classList.add(t);
-    }
-  }
-  return r;
+  classnames.set(_el, `dissection ${t}`);
+  return _el;
 };
 
-export const element = (elementToDissect, dissectIndex) => {
-  const rectOfDissectedElement = elementToDissect.getBoundingClientRect();
-  const dissectionArea = elementToDissect.getAttribute('data-anatomy');
-  const dissectionNode = create(SPECCER_LITERALS[dissectIndex], dissectionArea);
-  const tableCorrection = SPECCER_TAGS_TO_AVOID.indexOf(elementToDissect.nodeName) >= 0;
+export const element = (el, dissectIndex) => {
+  const _el_rect = el.getBoundingClientRect();
+  const _area = el.getAttribute('data-anatomy');
+  const _dissection_node = create(SPECCER_LITERALS[dissectIndex], _area);
+  const _is_table_correction_needed = SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0;
 
-  let tableCorrectionTop = 0;
-  let tableCorrectionLeft = 0;
+  let _table_top = 0;
+  let _table_left = 0;
 
-  if (tableCorrection) {
-    const table = elementToDissect.closest('table');
-    const tableStyle = window.getComputedStyle(table.parentElement);
-    Node.after(table, dissectionNode);
-    tableCorrectionTop = table.getBoundingClientRect().top - parseInt(tableStyle.getPropertyValue('padding-top'), 10);
-    tableCorrectionLeft =
-      table.getBoundingClientRect().left - parseInt(tableStyle.getPropertyValue('padding-left'), 10);
+  if (_is_table_correction_needed) {
+    const table = el.closest('table');
+    const tableStyle = styles.get(table.parentElement);
+    node.after(table, _dissection_node);
+    const _table_rect = table.getBoundingClientRect();
+    _table_top = _table_rect.top - parseInt(tableStyle.getPropertyValue('padding-top'), 10);
+    _table_left = _table_rect.left - parseInt(tableStyle.getPropertyValue('padding-left'), 10);
   } else {
-    Node.after(elementToDissect, dissectionNode);
+    node.after(el, _dissection_node);
   }
 
-  const rectOfDissectionNode = dissectionNode.getBoundingClientRect();
-  let outlineLeftLeft =
-    (tableCorrection ? rectOfDissectedElement.left - tableCorrectionLeft : elementToDissect.offsetLeft) -
-    rectOfDissectionNode.width -
+  const _el_offset_left = el.offsetLeft;
+  const _el_offset_top = el.offsetTop;
+
+  const _dissection_node_rect = _dissection_node.getBoundingClientRect();
+  let _outline_left_position_left =
+    (_is_table_correction_needed ? _el_rect.left - _table_left : _el_offset_left) -
+    _dissection_node_rect.width -
     48 +
     'px';
-  let outlineLeftTop =
-    (tableCorrection ? rectOfDissectedElement.top - tableCorrectionTop : elementToDissect.offsetTop) +
-    rectOfDissectedElement.height / 2 -
-    rectOfDissectionNode.height / 2 +
+  let _outline_left_position_top =
+    (_is_table_correction_needed ? _el_rect.top - _table_top : _el_offset_top) +
+    _el_rect.height / 2 -
+    _dissection_node_rect.height / 2 +
     'px';
-  let outlineRightLeft =
-    (tableCorrection ? rectOfDissectedElement.left - tableCorrectionLeft : elementToDissect.offsetLeft) +
-    rectOfDissectedElement.width +
+  let _outline_right_position_left =
+    (_is_table_correction_needed ? _el_rect.left - _table_left : _el_offset_left) + _el_rect.width + 48 + 'px';
+  let _outline_right_position_top =
+    (_is_table_correction_needed ? _el_rect.top - _table_top : _el_offset_top) +
+    _el_rect.height / 2 -
+    _dissection_node_rect.height / 2 +
+    'px';
+  let _outline_top_position_left =
+    (_is_table_correction_needed ? _el_rect.left - _table_left : _el_offset_left) +
+    _el_rect.width / 2 -
+    _dissection_node_rect.width / 2 +
+    'px';
+  let _outline_top_position_top =
+    (_is_table_correction_needed ? _el_rect.top - _table_top : _el_offset_top) -
+    _dissection_node_rect.height -
     48 +
     'px';
-  let outlineRightTop =
-    (tableCorrection ? rectOfDissectedElement.top - tableCorrectionTop : elementToDissect.offsetTop) +
-    rectOfDissectedElement.height / 2 -
-    rectOfDissectionNode.height / 2 +
+  let _outline_bottom_position_left =
+    (_is_table_correction_needed ? _el_rect.left - _table_left : _el_offset_left) +
+    _el_rect.width / 2 -
+    _dissection_node_rect.width / 2 +
     'px';
-  let outlineTopLeft =
-    (tableCorrection ? rectOfDissectedElement.left - tableCorrectionLeft : elementToDissect.offsetLeft) +
-    rectOfDissectedElement.width / 2 -
-    rectOfDissectionNode.width / 2 +
-    'px';
-  let outlineTopTop =
-    (tableCorrection ? rectOfDissectedElement.top - tableCorrectionTop : elementToDissect.offsetTop) -
-    rectOfDissectionNode.height -
-    48 +
-    'px';
-  let outlineBottomleft =
-    (tableCorrection ? rectOfDissectedElement.left - tableCorrectionLeft : elementToDissect.offsetLeft) +
-    rectOfDissectedElement.width / 2 -
-    rectOfDissectionNode.width / 2 +
-    'px';
-  let outlineBottomTop =
-    (tableCorrection ? rectOfDissectedElement.top - tableCorrectionTop : elementToDissect.offsetTop) +
-    rectOfDissectedElement.height +
-    48 +
-    'px';
+  let _outline_bottom_position_top =
+    (_is_table_correction_needed ? _el_rect.top - _table_top : _el_offset_top) + _el_rect.height + 48 + 'px';
 
   let _dissection_node_styles = {};
-  if (dissectionArea.indexOf('outline') !== -1) {
-    if (dissectionArea.indexOf('left') !== -1) {
-      if (dissectionArea.indexOf('full') !== -1) {
+  if (_area.indexOf('outline') !== -1) {
+    if (_area.indexOf('left') !== -1) {
+      if (_area.indexOf('full') !== -1) {
         _dissection_node_styles = {
-          left: elementToDissect.offsetLeft - 8 + 'px',
-          top: elementToDissect.offsetTop + -1 + 'px',
-          height: rectOfDissectedElement.height + 'px'
+          left: _el_offset_left - 8 + 'px',
+          top: _el_offset_top + -1 + 'px',
+          height: _el_rect.height + 'px'
         };
-      } else if (dissectionArea.indexOf('enclose') !== -1) {
+      } else if (_area.indexOf('enclose') !== -1) {
         _dissection_node_styles = {
-          left: elementToDissect.offsetLeft - 1 + 'px',
-          top: elementToDissect.offsetTop + -1 + 'px',
-          height: rectOfDissectedElement.height + 'px',
-          width: rectOfDissectedElement.width + 'px'
+          left: _el_offset_left - 1 + 'px',
+          top: _el_offset_top + -1 + 'px',
+          height: _el_rect.height + 'px',
+          width: _el_rect.width + 'px'
         };
       } else {
         _dissection_node_styles = {
-          left: outlineLeftLeft,
-          top: outlineLeftTop
+          left: _outline_left_position_left,
+          top: _outline_left_position_top
         };
       }
-    } else if (dissectionArea.indexOf('right') !== -1) {
-      if (dissectionArea.indexOf('full') !== -1) {
+    } else if (_area.indexOf('right') !== -1) {
+      if (_area.indexOf('full') !== -1) {
         _dissection_node_styles = {
-          left: elementToDissect.offsetLeft + rectOfDissectedElement.width + 'px',
-          top: elementToDissect.offsetTop + -1 + 'px',
-          height: rectOfDissectedElement.height + 'px'
+          left: _el_offset_left + _el_rect.width + 'px',
+          top: _el_offset_top + -1 + 'px',
+          height: _el_rect.height + 'px'
         };
-      } else if (dissectionArea.indexOf('enclose') !== -1) {
+      } else if (_area.indexOf('enclose') !== -1) {
         _dissection_node_styles = {
-          left: elementToDissect.offsetLeft + -1 + 'px',
-          top: elementToDissect.offsetTop + -1 + 'px',
-          height: rectOfDissectedElement.height + 'px',
-          width: rectOfDissectedElement.width + 'px'
+          left: _el_offset_left + -1 + 'px',
+          top: _el_offset_top + -1 + 'px',
+          height: _el_rect.height + 'px',
+          width: _el_rect.width + 'px'
         };
       } else {
         _dissection_node_styles = {
-          left: outlineRightLeft,
-          top: outlineRightTop
+          left: _outline_right_position_left,
+          top: _outline_right_position_top
         };
       }
-    } else if (dissectionArea.indexOf('top') !== -1) {
-      if (dissectionArea.indexOf('full') !== -1) {
+    } else if (_area.indexOf('top') !== -1) {
+      if (_area.indexOf('full') !== -1) {
         _dissection_node_styles = {
-          bottom: elementToDissect.offsetTop + rectOfDissectedElement.height + 'px',
-          left: elementToDissect.offsetLeft + -1 + 'px',
-          width: rectOfDissectedElement.width + 'px'
+          bottom: _el_offset_top + _el_rect.height + 'px',
+          left: _el_offset_left + -1 + 'px',
+          width: _el_rect.width + 'px'
         };
-      } else if (dissectionArea.indexOf('enclose') !== -1) {
+      } else if (_area.indexOf('enclose') !== -1) {
         _dissection_node_styles = {
-          top: elementToDissect.offsetTop + -1 + 'px',
-          left: elementToDissect.offsetLeft + -1 + 'px',
-          height: rectOfDissectedElement.height + 'px',
-          width: rectOfDissectedElement.width + 'px'
+          top: _el_offset_top + -1 + 'px',
+          left: _el_offset_left + -1 + 'px',
+          height: _el_rect.height + 'px',
+          width: _el_rect.width + 'px'
         };
       } else {
         _dissection_node_styles = {
-          left: outlineTopLeft,
-          top: outlineTopTop
+          left: _outline_top_position_left,
+          top: _outline_top_position_top
         };
       }
-    } else if (dissectionArea.indexOf('bottom') !== -1) {
-      if (dissectionArea.indexOf('full') !== -1) {
+    } else if (_area.indexOf('bottom') !== -1) {
+      if (_area.indexOf('full') !== -1) {
         _dissection_node_styles = {
-          top: elementToDissect.offsetTop + rectOfDissectedElement.height + 'px',
-          left: elementToDissect.offsetLeft + -1 + 'px',
-          width: rectOfDissectedElement.width + 'px'
+          top: _el_offset_top + _el_rect.height + 'px',
+          left: _el_offset_left + -1 + 'px',
+          width: _el_rect.width + 'px'
         };
-      } else if (dissectionArea.indexOf('enclose') !== -1) {
+      } else if (_area.indexOf('enclose') !== -1) {
         _dissection_node_styles = {
-          top: elementToDissect.offsetTop + -1 + 'px',
-          left: elementToDissect.offsetLeft + -1 + 'px',
-          height: rectOfDissectedElement.height + 'px',
-          width: rectOfDissectedElement.width + 'px'
+          top: _el_offset_top + -1 + 'px',
+          left: _el_offset_left + -1 + 'px',
+          height: _el_rect.height + 'px',
+          width: _el_rect.width + 'px'
         };
       } else {
         _dissection_node_styles = {
-          left: outlineBottomleft,
-          top: outlineBottomTop
+          left: _outline_bottom_position_left,
+          top: _outline_bottom_position_top
         };
       }
     } else {
-      if (dissectionArea.indexOf('full') !== -1) {
+      if (_area.indexOf('full') !== -1) {
         _dissection_node_styles = {
-          left: elementToDissect.offsetLeft + rectOfDissectedElement.width + 'px',
-          top: elementToDissect.offsetTop + 'px',
-          height: rectOfDissectedElement.height + 'px'
+          left: _el_offset_left + _el_rect.width + 'px',
+          top: _el_offset_top + 'px',
+          height: _el_rect.height + 'px'
         };
-      } else if (dissectionArea.indexOf('enclose') !== -1) {
+      } else if (_area.indexOf('enclose') !== -1) {
         _dissection_node_styles = {
-          left: elementToDissect.offsetLeft + rectOfDissectedElement.width + 'px',
-          top: elementToDissect.offsetTop + -1 + 'px',
-          height: rectOfDissectedElement.height + 'px',
-          width: rectOfDissectedElement.width + 'px'
+          left: _el_offset_left + _el_rect.width + 'px',
+          top: _el_offset_top + -1 + 'px',
+          height: _el_rect.height + 'px',
+          width: _el_rect.width + 'px'
         };
       } else {
         _dissection_node_styles = {
-          left: outlineLeftLeft,
-          top: outlineLeftTop
+          left: _outline_left_position_left,
+          top: _outline_left_position_top
         };
       }
     }
   } else {
-    if (dissectionArea.indexOf('full') !== -1) {
+    if (_area.indexOf('full') !== -1) {
       _dissection_node_styles = {
-        left: elementToDissect.offsetLeft - 8 + 'px',
-        top: elementToDissect.offsetTop + -1 + 'px',
-        height: rectOfDissectedElement.height + 'px'
+        left: _el_offset_left - 8 + 'px',
+        top: _el_offset_top + -1 + 'px',
+        height: _el_rect.height + 'px'
       };
-    } else if (dissectionArea.indexOf('enclose') !== -1) {
+    } else if (_area.indexOf('enclose') !== -1) {
       _dissection_node_styles = {
-        left: elementToDissect.offsetLeft - 1 + 'px',
-        top: elementToDissect.offsetTop + -1 + 'px',
-        height: rectOfDissectedElement.height + 'px',
-        width: rectOfDissectedElement.width + 'px'
+        left: _el_offset_left - 1 + 'px',
+        top: _el_offset_top + -1 + 'px',
+        height: _el_rect.height + 'px',
+        width: _el_rect.width + 'px'
       };
     } else {
       _dissection_node_styles = {
-        left: outlineLeftLeft,
-        top: outlineLeftTop
+        left: _outline_left_position_left,
+        top: _outline_left_position_top
       };
     }
   }
-  Styles.add(dissectionNode, _dissection_node_styles);
+  styles.add(_dissection_node, _dissection_node_styles);
 };

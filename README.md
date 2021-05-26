@@ -15,10 +15,10 @@ See demo here: https://codepen.io/phun-ky/pen/xaOrYX
 Either import and run the required functions:
 
 ```javascript
-import { anatomy, speccer, activateOnResize } from '@phun-ky/speccer/src/index.js';
+import { speccer } from '@phun-ky/speccer/src/index.js';
 
 // do stuff
-anatomy();
+speccer();
 ```
 
 Or place these `script` and `link` tags in your web page:
@@ -29,8 +29,6 @@ Or place these `script` and `link` tags in your web page:
 ```
 
 And then follow the steps below to display the specifications you want :)
-
-**_NOTE_** The activateOnResize function is using a throttled event for the [Window: resize event](https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event), this might give you some issues in an SPA.
 
 If you use React, you can use an effect like this:
 
@@ -48,14 +46,12 @@ const Component = () => {
     import('@phun-ky/speccer/src/index.js').then(speccerScript => {
       console.info('[@phun-ky/speccer]: Activated speccer ');
 
-      const { anatomy, speccer } = speccerScript;
-      anatomy();
+      const { speccer } = speccerScript;
       speccer();
 
-      speccerEventFunc = debounce(function() {
+      speccerEventFunc = debounce(function () {
         console.info('[@phun-ky/speccer]: Event resize triggered');
         speccer();
-        anatomy();
       }, 300);
 
       window.addEventListener('resize', speccerEventFunc);
@@ -132,12 +128,12 @@ If you want to control speccer a bit more, you have some options. Apply one of t
 <script src="../speccer.js" data-<manual|instant|dom|lazy></script>
 ```
 
-| Tag            | Description                                                                            |
-| -------------- | -------------------------------------------------------------------------------------- |
-| `data-manual`  | Makes `window.speccer` and `window.anatomy` available to be used when you feel like it |
-| `data-instant` | fires off `anatomy()` and `speccer` right away                                         |
-| `data-dom`     | Waits for `DOMContentLoaded`                                                           |
-| `data-lazy`    | Lazy loads `anatomy()` and `speccer()` per specced element                             |
+| Tag            | Description                                                         |
+| -------------- | ------------------------------------------------------------------- |
+| `data-manual`  | Makes `window.speccer()` available to be used when you feel like it |
+| `data-instant` | fires off `speccer()` right away                                    |
+| `data-dom`     | Waits for `DOMContentLoaded`                                        |
+| `data-lazy`    | Lazy loads `speccer()` per specced element                          |
 
 If no attribute is applied, it will default to `data-dom`, as in, it will initialize when `DOMContentLoaded` is fired.
 
@@ -146,43 +142,19 @@ If no attribute is applied, it will default to `data-dom`, as in, it will initia
 If you're importing speccer instead of with a script tag, you can use the following approach to apply lazy loading:
 
 ```javascript
-import { specElement, measureElement, dissectElement } from '@phun-ky/speccer';
+import * as Dissect from '@phun-ky/speccer/src/dissect.js';
 
-let specElementObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.intersectionRatio > 0) {
-      specElement(entry.target);
-      observer.unobserve(entry.target);
-    }
-  });
-});
-document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)').forEach(el => {
-  specElementObserver.observe(el);
-});
-let measureElementObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.intersectionRatio > 0) {
-      measureElement(entry.target);
-      observer.unobserve(entry.target);
-    }
-  });
-});
-document.querySelectorAll('[data-speccer-measure]').forEach(el => {
-  measureElementObserver.observe(el);
-});
 let dissectElementObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     const targets = entry.target.querySelectorAll('[data-anatomy]');
     if (entry.intersectionRatio > 0) {
-      targets.forEach(dissectElement);
+      targets.forEach(Dissect.element);
       observer.unobserve(entry.target);
     }
   });
 });
 
-const observeAnatomySections = section => {
-  dissectElementObserver.observe(section);
-};
-
-document.querySelectorAll('[data-anatomy-section]').forEach(observeAnatomySections);
+document.querySelectorAll('[data-anatomy-section]').forEach(el => {
+  dissectElementObserver.observe(el);
+});
 ```
