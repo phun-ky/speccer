@@ -1,6 +1,6 @@
 /* eslint no-console:0 */
 'use strict';
-import * as Styles from './lib/style';
+import * as Styles from './lib/styles';
 import { SPECCER_LITERALS, SPECCER_TAGS_TO_AVOID } from './lib/constants';
 
 export const create = (e = '', t, n = 'span') => {

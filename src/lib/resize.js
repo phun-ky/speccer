@@ -1,7 +1,7 @@
 /* eslint no-console:0 */
 'use strict';
 
-import throttle from './lib/throttle';
+import throttle from './throttle';
 
 export const activate = (speccer, anatomy) => {
   throttle('resize', 'speccer-onResize');

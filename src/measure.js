@@ -2,7 +2,7 @@
 'use strict';
 
 import * as ClassNames from './lib/classnames';
-import * as Styles from './lib/style';
+import * as Styles from './lib/styles';
 
 import { SPECCER_TAGS_TO_AVOID } from './lib/constants';
 

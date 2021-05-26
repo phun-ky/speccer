@@ -3,7 +3,7 @@
 
 import * as ClassNames from './lib/classnames';
 import * as Number from './lib/number';
-import * as Styles from './lib/style';
+import * as Styles from './lib/styles';
 import * as Css from './lib/css';
 import { SPECCER_TAGS_TO_AVOID } from './lib/constants';
 

@@ -4,7 +4,7 @@
 import * as ClassNames from './lib/classnames';
 import * as Css from './lib/css';
 import * as Node from './lib/node';
-import * as Styles from './lib/style';
+import * as Styles from './lib/styles';
 import { SPECCER_TAGS_TO_AVOID } from './lib/constants';
 
 export const create = (text = '', tag = 'span') => {
