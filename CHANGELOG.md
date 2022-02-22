@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/phun-ky/speccer/compare/v4.3.2...v5.0.0) (2022-02-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* 🧨 Speccer is not supporting older browsers any more, to cut down on
+maintenance. Babel is now removed, but you can still polyfill or use
+babel for your own needs if you import the source files instead of the
+build files.
+
+### Tasks
+
+* 🤖 Remove babel, do not support older browsers anymore ([9ed11c0](https://github.com/phun-ky/speccer/commit/9ed11c06da3d1ac1b80d4cbbc6859146c596cd6f))
+
 ### [4.3.2](https://github.com/phun-ky/speccer/compare/v4.3.1...v4.3.2) (2022-02-22)
 
 
