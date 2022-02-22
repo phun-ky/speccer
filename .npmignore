@@ -47,7 +47,10 @@ package-lock.json
 .gitignore
 .npmignore
 .eslintrc
+.eslintignore
 .browserslistrc
 .babelrc
 .editorconfig
 rollup.config.js
+scripts
+dev
