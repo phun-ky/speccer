@@ -27,43 +27,43 @@
     "types": [
       {
         "type": "chore",
-        "section": "Build process or auxiliary tool changes"
-      },
-      {
-        "type": "ci",
-        "section": "CI related changes"
+        "section": "Tasks",
+        "hidden": true
       },
       {
         "type": "docs",
-        "section": "Documentation only changes"
+        "section": "Documentation"
       },
       {
         "type": "feat",
-        "section": "A new feature"
+        "section": "Feature"
       },
       {
         "type": "fix",
-        "section": "A bug fix"
+        "section": "Bug"
       },
       {
         "type": "perf",
-        "section": "A code change that improves performance"
+        "section": "Performance change"
       },
       {
         "type": "refactor",
-        "section": "A code change that neither fixes a bug or adds a feature"
+        "section": "Refactoring"
       },
       {
         "type": "release",
-        "section": "Create a release commit"
+        "section": "Create a release commit",
+        "hidden": true
       },
       {
         "type": "style",
-        "section": "Markup, white-space, formatting, missing semi-colons..."
+        "section": "Markup, white-space, formatting, missing semi-colons...",
+        "hidden": true
       },
       {
         "type": "test",
-        "section": "Adding missing tests"
+        "section": "Adding missing tests",
+        "hidden": true
       }
     ]
   },
