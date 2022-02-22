@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.3.2](https://github.com/phun-ky/speccer/compare/v4.3.1...v4.3.2) (2022-02-22)
+
+
+### Bug
+
+* And supply the minified version.. ([8cfb69a](https://github.com/phun-ky/speccer/commit/8cfb69a5dc86f1e9c9ccea3f890781a3961a0a7f))
+
 ### [4.3.1](https://github.com/phun-ky/speccer/compare/v4.3.0...v4.3.1) (2022-02-22)
 
 
