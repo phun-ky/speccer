@@ -10,6 +10,7 @@ export default [
       name: 'speccer',
       file: './speccer.js',
       format: 'umd',
+      exports: 'named',
       assetFileNames: '[name][extname]',
       globals: {
         '@babel/runtime/regenerator': 'regeneratorRuntime',
