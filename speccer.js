@@ -2,10 +2,11 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.speccer = factory());
-}(this, (function () { 'use strict';
+})(this, (function () { 'use strict';
 
   const after = (el, newSibling) => el.insertAdjacentElement('afterend', newSibling);
-  const removeAll = (selector, el = document) => {
+  const removeAll = function (selector) {
+    let el = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : document;
     [].forEach.call(el.querySelectorAll(selector), function (e) {
       e.remove();
     });
@@ -140,9 +141,9 @@
     // This is a polyfill for %IteratorPrototype% for environments that
     // don't natively support it.
     var IteratorPrototype = {};
-    IteratorPrototype[iteratorSymbol] = function () {
+    define(IteratorPrototype, iteratorSymbol, function () {
       return this;
-    };
+    });
 
     var getProto = Object.getPrototypeOf;
     var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
@@ -156,8 +157,9 @@
 
     var Gp = GeneratorFunctionPrototype.prototype =
       Generator.prototype = Object.create(IteratorPrototype);
-    GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
-    GeneratorFunctionPrototype.constructor = GeneratorFunction;
+    GeneratorFunction.prototype = GeneratorFunctionPrototype;
+    define(Gp, "constructor", GeneratorFunctionPrototype);
+    define(GeneratorFunctionPrototype, "constructor", GeneratorFunction);
     GeneratorFunction.displayName = define(
       GeneratorFunctionPrototype,
       toStringTagSymbol,
@@ -271,9 +273,9 @@
     }
 
     defineIteratorMethods(AsyncIterator.prototype);
-    AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
       return this;
-    };
+    });
     exports.AsyncIterator = AsyncIterator;
 
     // Note that simple async functions are implemented on top of
@@ -466,13 +468,13 @@
     // iterator prototype chain incorrectly implement this, causing the Generator
     // object to not be returned from this call. This ensures that doesn't happen.
     // See https://github.com/facebook/regenerator/issues/274 for more details.
-    Gp[iteratorSymbol] = function() {
+    define(Gp, iteratorSymbol, function() {
       return this;
-    };
+    });
 
-    Gp.toString = function() {
+    define(Gp, "toString", function() {
       return "[object Generator]";
-    };
+    });
 
     function pushTryEntry(locs) {
       var entry = { tryLoc: locs[0] };
@@ -791,14 +793,19 @@
   } catch (accidentalStrictMode) {
     // This module should not be running in strict mode, so the above
     // assignment should always work unless something is misconfigured. Just
-    // in case runtime.js accidentally runs in strict mode, we can escape
+    // in case runtime.js accidentally runs in strict mode, in modern engines
+    // we can explicitly access globalThis. In older engines we can escape
     // strict mode using a global Function call. This could conceivably fail
     // if a Content Security Policy forbids using Function, but in that case
     // the proper solution is to fix the accidental strict mode problem. If
     // you've misconfigured your bundler to force strict mode and applied a
     // CSP to forbid Function, and you're not willing to fix either of those
     // problems, please detail your unique predicament in a GitHub issue.
-    Function("r", "regeneratorRuntime = r")(runtime);
+    if (typeof globalThis === "object") {
+      globalThis.regeneratorRuntime = runtime;
+    } else {
+      Function("r", "regeneratorRuntime = r")(runtime);
+    }
   }
   });
 
@@ -806,7 +813,8 @@
 
   /* eslint no-console:0 */
 
-  const set = (el, cls, avoid = 'noop') => {
+  const set = function (el, cls) {
+    let avoid = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'noop';
     if (!el) return;
     if (!cls || cls && cls.length === 0) return;
     cls.trim().split(' ').filter(cl => cl !== avoid).forEach(cl => el.classList.add(cl));
@@ -957,7 +965,10 @@
   const SPECCER_TAGS_TO_AVOID = ['TR', 'TH', 'TD', 'TBODY', 'THEAD', 'TFOOT'];
 
   /* eslint no-console:0 */
-  const create$3 = (text = '', tag = 'span') => {
+  const create$3 = function () {
+    let text = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    let tag = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'span';
+
     const _el = document.createElement(tag);
 
     const textContent = document.createTextNode(text);
@@ -1152,7 +1163,11 @@
   }();
 
   /* eslint no-console:0 */
-  const create$2 = (e = '', t, n = 'span') => {
+  const create$2 = function () {
+    let e = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    let t = arguments.length > 1 ? arguments[1] : undefined;
+    let n = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'span';
+
     const _el = document.createElement(n);
 
     const o = document.createTextNode(e);
@@ -1343,7 +1358,11 @@
 
   /* eslint no-console:0 */
 
-  const create$1 = (text = '', area = '', tag = 'span') => {
+  const create$1 = function () {
+    let text = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    let area = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+    let tag = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'span';
+
     const _el = document.createElement(tag);
 
     _el.setAttribute('title', text + 'px');
@@ -1658,4 +1677,4 @@
 
   return speccer;
 
-})));
+}));
