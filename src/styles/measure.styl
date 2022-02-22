@@ -1,0 +1,85 @@
+.ph.speccer.measure
+  &.width
+    color red
+    border 1px solid red
+    border-bottom none
+    height 8px
+
+
+.ph.speccer.measure
+  &.width
+    &::after
+      content attr(data-measure)
+      position absolute
+      top calc(-100% - 10px)
+
+
+.ph.speccer.measure
+  &.width
+    &.bottom
+      color red
+      border 1px solid red
+      border-top none
+
+
+.ph.speccer.measure
+  &.width
+    &.bottom
+      &::after
+        content attr(data-measure)
+        position absolute
+        top calc(100% + 5px)
+
+
+.ph.speccer.measure
+  &.width
+    &.top
+      color red
+      border 1px solid red
+      border-bottom none
+
+
+.ph.speccer.measure
+  &.width
+    &.top
+      &::after
+        content attr(data-measure)
+        position absolute
+        bottom calc(100% + 5px)
+
+
+.ph.speccer.measure
+  &.height
+    color red
+    border 1px solid red
+    border-right none
+    width 8px
+
+
+.ph.speccer.measure
+  &.height
+    &::after
+      content attr(data-measure)
+      position absolute
+      top 50%
+      left calc(-100% - 25px)
+      transform translateY(-50%) rotate(-90deg)
+
+
+.ph.speccer.measure
+  &.height
+    &.right
+      color red
+      border 1px solid red
+      border-left none
+
+
+.ph.speccer.measure
+  &.height
+    &.right
+      &::after
+        content attr(data-measure)
+        position absolute
+        top 50%
+        left 100%
+        transform translateY(-50%) rotate(90deg)

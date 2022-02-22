@@ -1,0 +1,142 @@
+.ph.speccer.spacing
+  &:hover
+    border 1px solid $ph-speccer-color-border-dark
+
+
+.ph.speccer.spacing
+  &.is-specced
+    &:hover
+      & ~ .speccer
+        &.margin
+          background-color $ph-speccer-color-margin
+        &.padding
+          background-color $ph-speccer-color-padding
+          color $ph-speccer-color-text-light
+
+
+.ph.speccer.spacing
+  &.margin
+    background-color rgba($ph-speccer-color-margin, .4)
+    color $ph-speccer-color-text-dark
+
+
+.ph.speccer.spacing
+  &.padding
+    background-color rgba($ph-speccer-color-padding, .4)
+    color $ph-speccer-color-text-pink
+
+
+.ph.speccer.spacing
+  &.margin
+    &.bottom,
+    &.top
+      &:after
+        content ""
+        position absolute
+        height 100%
+        border-top 1px solid $ph-speccer-color-border-dark
+        border-bottom 1px solid $ph-speccer-color-border-dark
+        width 9px
+        left 40%
+
+
+.ph.speccer.spacing
+  &.margin
+    &.bottom,
+    &.top
+      &:before
+        content ""
+        position absolute
+        height 100%
+        border-left 1px solid $ph-speccer-color-border-dark
+        margin-left 4px
+        width 0
+        left 40%
+
+
+.ph.speccer.spacing
+  &.margin
+    &.left,
+    &.right
+      &:after
+        content ""
+        position absolute
+        height 9px
+        border-right 1px solid $ph-speccer-color-border-pink
+        border-left 1px solid $ph-speccer-color-border-pink
+        width 100%
+        top 10%
+
+
+.ph.speccer.spacing
+  &.margin
+    &.left,
+    &.right
+      &:before
+        content ""
+        position absolute
+        height 0
+        border-top 1px solid $ph-speccer-color-border-pink
+        margin-top 4px
+        width 100%
+        top 10%
+
+
+.ph.speccer.spacing
+  &.padding
+    &.bottom,
+    &.top
+      &:after
+        content ""
+        position absolute
+        height 100%
+        border-top 1px solid $ph-speccer-color-border-pink
+        border-bottom 1px solid $ph-speccer-color-border-pink
+        width 9px
+        left 40%
+
+
+.ph.speccer.spacing
+  &.padding
+    &.bottom,
+    &.top
+      &:before
+        content ""
+        position absolute
+        height 100%
+        border-left 1px solid $ph-speccer-color-border-pink
+        margin-left 4px
+        width 0
+        left 40%
+
+
+.ph.speccer.spacing
+  &.padding
+    &.left,
+    &.right
+      &:after
+        content ""
+        position absolute
+        height 9px
+        border-right 1px solid $ph-speccer-color-border-pink
+        border-left 1px solid $ph-speccer-color-border-pink
+        width 100%
+        top 10%
+
+
+.ph.speccer.spacing
+  &.padding
+    &.left,
+    &.right
+      &:before
+        content ""
+        position absolute
+        height 0
+        border-top 1px solid $ph-speccer-color-border-pink
+        margin-top 4px
+        width 100%
+        top 10%
+
+
+@require './typography.styl'
+@require './measure.styl'

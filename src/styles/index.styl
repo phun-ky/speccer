@@ -1,0 +1,26 @@
+$ph-speccer-color-padding = rgb(219, 111, 255);
+$ph-speccer-color-margin = rgb(255, 247, 111);
+$ph-speccer-color-text-light = rgb(255, 255, 255);
+$ph-speccer-color-text-dark = rgb(51, 51, 51);
+$ph-speccer-color-border-dark = rgb(51, 51, 51);
+$ph-speccer-color-text-pink = rgb(255, 58, 168);
+$ph-speccer-color-border-pink = rgb(255, 58, 168);
+$ph-speccer-depth-opacity-400 = 0.4;
+
+
+.ph.speccer,
+.ph.speccer::after,
+.ph.speccer::before
+  font-family "Menlo for Powerline", "Menlo Regular for Powerline", "DejaVu Sans Mono", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important
+  justify-content center
+  align-items center
+  z-index 99999
+  position absolute
+  display flex
+  font-size 12px
+  box-sizing border-box
+  transition all 0.2s ease-in
+  line-height 12px
+
+@require './anatomy.styl'
+@require './spacing.styl'
