@@ -24,8 +24,11 @@ const speccer = () => {
 };
 
 export const spacing = __spacing;
+
 export const dissect = __dissect;
+
 export const measure = __measure;
+
 export const typography = __typography;
 
 export default speccer;

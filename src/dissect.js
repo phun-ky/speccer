@@ -8,12 +8,15 @@ import { SPECCER_LITERALS, SPECCER_TAGS_TO_AVOID } from './lib/constants';
 export const create = (e = '', t, n = 'span') => {
   const _el = document.createElement(n);
   const o = document.createTextNode(e);
+
   if (t.indexOf('full') === -1 && t.indexOf('enclose') === -1) {
     _el.appendChild(o);
   } else if (t.indexOf('full') !== -1 || t.indexOf('enclose') !== -1) {
     _el.setAttribute('data-dissection-counter', e);
   }
+
   classnames.set(_el, `ph speccer dissection ${t}`);
+
   return _el;
 };
 
@@ -29,8 +32,11 @@ export const element = (el, dissectIndex) => {
   if (_is_table_correction_needed) {
     const table = el.closest('table');
     const tableStyle = styles.get(table.parentElement);
+
     node.after(table, _dissection_node);
+
     const _table_rect = table.getBoundingClientRect();
+
     _table_top = _table_rect.top - parseInt(tableStyle.getPropertyValue('padding-top'), 10);
     _table_left = _table_rect.left - parseInt(tableStyle.getPropertyValue('padding-left'), 10);
   } else {
@@ -39,44 +45,44 @@ export const element = (el, dissectIndex) => {
 
   const _el_offset_left = el.offsetLeft;
   const _el_offset_top = el.offsetTop;
-
   const _dissection_node_rect = _dissection_node.getBoundingClientRect();
-  let _outline_left_position_left =
+  const _outline_left_position_left =
     (_is_table_correction_needed ? _el_rect.left - _table_left : _el_offset_left) -
     _dissection_node_rect.width -
     48 +
     'px';
-  let _outline_left_position_top =
+  const _outline_left_position_top =
     (_is_table_correction_needed ? _el_rect.top - _table_top : _el_offset_top) +
     _el_rect.height / 2 -
     _dissection_node_rect.height / 2 +
     'px';
-  let _outline_right_position_left =
+  const _outline_right_position_left =
     (_is_table_correction_needed ? _el_rect.left - _table_left : _el_offset_left) + _el_rect.width + 48 + 'px';
-  let _outline_right_position_top =
+  const _outline_right_position_top =
     (_is_table_correction_needed ? _el_rect.top - _table_top : _el_offset_top) +
     _el_rect.height / 2 -
     _dissection_node_rect.height / 2 +
     'px';
-  let _outline_top_position_left =
+  const _outline_top_position_left =
     (_is_table_correction_needed ? _el_rect.left - _table_left : _el_offset_left) +
     _el_rect.width / 2 -
     _dissection_node_rect.width / 2 +
     'px';
-  let _outline_top_position_top =
+  const _outline_top_position_top =
     (_is_table_correction_needed ? _el_rect.top - _table_top : _el_offset_top) -
     _dissection_node_rect.height -
     48 +
     'px';
-  let _outline_bottom_position_left =
+  const _outline_bottom_position_left =
     (_is_table_correction_needed ? _el_rect.left - _table_left : _el_offset_left) +
     _el_rect.width / 2 -
     _dissection_node_rect.width / 2 +
     'px';
-  let _outline_bottom_position_top =
+  const _outline_bottom_position_top =
     (_is_table_correction_needed ? _el_rect.top - _table_top : _el_offset_top) + _el_rect.height + 48 + 'px';
 
   let _dissection_node_styles = {};
+
   if (_area.indexOf('outline') !== -1) {
     if (_area.indexOf('left') !== -1) {
       if (_area.indexOf('full') !== -1) {
@@ -200,5 +206,6 @@ export const element = (el, dissectIndex) => {
       };
     }
   }
+
   styles.add(_dissection_node, _dissection_node_styles);
 };

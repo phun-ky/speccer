@@ -10,13 +10,15 @@ import { SPECCER_TAGS_TO_AVOID } from './lib/constants';
 
 export const create = (html, area) => {
   const _el = document.createElement('div');
+
   _el.innerHTML = html;
 
   classnames.set(_el, `ph speccer typography ${area}`);
+
   return _el;
 };
 
-export const element = async el => {
+export const element = async (el) => {
   const _area = el.getAttribute('data-speccer-typography');
   const _el_style = await styles.get(el);
 
@@ -25,6 +27,7 @@ export const element = async el => {
   }
 
   el.classList.add('is-specced');
+
   const _parent_style = styles.get(el.parentElement);
 
   if (_parent_style.position === 'static') {
@@ -35,7 +38,6 @@ export const element = async el => {
 
   const _styles = css.getTypography(_el_style);
   const _el_rect = el.getBoundingClientRect();
-
   const html =
     `
     ` +
@@ -58,10 +60,13 @@ export const element = async el => {
 
   let tableCorrectionTop = 0;
   let tableCorrectionLeft = 0;
+
   const tableCorrection = SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0;
+
   if (tableCorrection) {
     const table = el.parentElement;
     const tableStyle = window.getComputedStyle(table.parentElement);
+
     node.after(table, speccerNode);
     tableCorrectionTop = table.getBoundingClientRect().top - parseInt(tableStyle.getPropertyValue('padding-top'), 10);
     tableCorrectionLeft =
@@ -71,52 +76,50 @@ export const element = async el => {
   }
 
   const rectOfSpeccerNode = speccerNode.getBoundingClientRect();
-
-  let outlineLeftLeft =
+  const outlineLeftLeft =
     (tableCorrection ? rectOfSpeccerNode.left - tableCorrectionLeft : el.offsetLeft) -
     rectOfSpeccerNode.width -
     48 +
     'px';
-
-  let outlineLeftTop =
+  const outlineLeftTop =
     number.to3Decimals(
       (tableCorrection ? rectOfSpeccerNode.top - tableCorrectionTop : el.offsetTop) -
         rectOfSpeccerNode.height / 2 +
         _el_rect.height / 2
     ) + 'px';
-  let outlineRightLeft =
+  const outlineRightLeft =
     (tableCorrection ? rectOfSpeccerNode.left - tableCorrectionLeft : el.offsetLeft) + _el_rect.width + 48 + 'px';
-
-  let outlineRightTop =
+  const outlineRightTop =
     number.to3Decimals(
       (tableCorrection ? rectOfSpeccerNode.top - tableCorrectionTop : el.offsetTop) -
         rectOfSpeccerNode.height / 2 +
         _el_rect.height / 2
     ) + 'px';
-  let outlineTopLeft =
+  const outlineTopLeft =
     number.to3Decimals(
       (tableCorrection ? rectOfSpeccerNode.left - tableCorrectionLeft : el.offsetLeft) -
         rectOfSpeccerNode.width / 2 +
         _el_rect.width / 2
     ) + 'px';
-  let outlineTopTop =
+  const outlineTopTop =
     (tableCorrection ? rectOfSpeccerNode.top - tableCorrectionTop : el.offsetTop) -
     rectOfSpeccerNode.height -
     48 +
     'px';
-  let outlineBottomleft =
+  const outlineBottomleft =
     number.to3Decimals(
       (tableCorrection ? rectOfSpeccerNode.left - tableCorrectionLeft : el.offsetLeft) -
         rectOfSpeccerNode.width / 2 +
         _el_rect.width / 2
     ) + 'px';
-  let outlineBottomTop =
+  const outlineBottomTop =
     (tableCorrection ? rectOfSpeccerNode.top - tableCorrectionTop : el.offsetTop) + _el_rect.height + 48 + 'px';
 
   let position = {
     left: outlineLeftLeft,
     top: outlineLeftTop
   };
+
   if (_area.indexOf('right') !== -1) {
     position = {
       left: outlineRightLeft,

@@ -6,7 +6,7 @@ import * as spec from './spec';
 import * as measure from './measure';
 import * as dissect from './dissect';
 
-export const dom = speccer => {
+export const dom = (speccer) => {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', speccer);
   } else {
@@ -16,31 +16,36 @@ export const dom = speccer => {
 };
 
 export const lazy = () => {
-  let _spec_observer = new IntersectionObserver((els, observer) => {
-    els.forEach(el => {
+  const _spec_observer = new IntersectionObserver((els, observer) => {
+    els.forEach((el) => {
       if (el.intersectionRatio > 0) {
         spec.element(el.target);
         observer.unobserve(el.target);
       }
     });
   });
-  document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)').forEach(el => {
+
+  document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)').forEach((el) => {
     _spec_observer.observe(el);
   });
-  let _measure_observer = new IntersectionObserver((els, observer) => {
-    els.forEach(el => {
+
+  const _measure_observer = new IntersectionObserver((els, observer) => {
+    els.forEach((el) => {
       if (el.intersectionRatio > 0) {
         measure.element(el.target);
         observer.unobserve(el.target);
       }
     });
   });
-  document.querySelectorAll('[data-speccer-measure]').forEach(el => {
+
+  document.querySelectorAll('[data-speccer-measure]').forEach((el) => {
     _measure_observer.observe(el);
   });
-  let _dissect_observer = new IntersectionObserver((els, observer) => {
-    els.forEach(el => {
+
+  const _dissect_observer = new IntersectionObserver((els, observer) => {
+    els.forEach((el) => {
       const targets = el.target.querySelectorAll('[data-anatomy]');
+
       if (el.intersectionRatio > 0) {
         targets.forEach(dissect.element);
         observer.unobserve(el.target);
@@ -48,20 +53,21 @@ export const lazy = () => {
     });
   });
 
-  document.querySelectorAll('[data-anatomy-section]').forEach(el => {
+  document.querySelectorAll('[data-anatomy-section]').forEach((el) => {
     _dissect_observer.observe(el);
   });
 };
 
-export const manual = speccer => {
+export const manual = (speccer) => {
   window.speccer = speccer;
 };
 
-export const activate = speccer => {
+export const activate = (speccer) => {
   const _script = document.currentScript;
 
   if (_script) {
     const _speccer_script_src = _script.getAttribute('src');
+
     if (
       _speccer_script_src.indexOf('speccer.js') !== -1 ||
       // for codepen
