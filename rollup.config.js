@@ -4,7 +4,6 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
 
 export default [
-  // browser-friendly UMD build
   {
     input: 'src/index.js',
     output: {
@@ -39,8 +38,8 @@ export default [
           '@babel/transform-async-to-generator'
         ],
         exclude: ['node_modules/**']
-      })
-      // terser()
+      }),
+      terser()
     ]
   }
 ];
