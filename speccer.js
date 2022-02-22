@@ -11,65 +11,6 @@
     });
   };
 
-  /* eslint no-console:0 */
-
-  const set = (el, cls, avoid = 'noop') => {
-    if (!el) return;
-    if (!cls || cls && cls.length === 0) return;
-    cls.trim().split(' ').filter(cl => cl !== avoid).forEach(cl => el.classList.add(cl));
-  };
-
-  /* eslint no-console:0 */
-
-  const getNumberValue = value => parseInt(value, 10);
-  const normalizeNumberValue = value => {
-    const _value = parseFloat(value);
-
-    return _value >= 0 && _value < 1 || _value <= 0 && _value > -1 ? 0 : _value;
-  };
-  const getSpacing = style => {
-    const {
-      marginTop,
-      marginBottom,
-      marginLeft,
-      marginRight,
-      paddingTop,
-      paddingBottom,
-      paddingLeft,
-      paddingRight
-    } = style;
-    return {
-      marginTop,
-      marginBottom,
-      marginLeft,
-      marginRight,
-      paddingTop,
-      paddingBottom,
-      paddingLeft,
-      paddingRight
-    };
-  };
-  const getTypography = style => {
-    const {
-      lineHeight,
-      letterSpacing,
-      fontFamily,
-      fontSize,
-      fontStyle,
-      fontVariationSettings,
-      fontWeight
-    } = style;
-    return {
-      lineHeight,
-      letterSpacing,
-      fontFamily,
-      fontSize,
-      fontStyle,
-      fontVariationSettings,
-      fontWeight
-    };
-  };
-
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
     try {
       var info = gen[key](arg);
@@ -865,6 +806,65 @@
 
   /* eslint no-console:0 */
 
+  const set = (el, cls, avoid = 'noop') => {
+    if (!el) return;
+    if (!cls || cls && cls.length === 0) return;
+    cls.trim().split(' ').filter(cl => cl !== avoid).forEach(cl => el.classList.add(cl));
+  };
+
+  /* eslint no-console:0 */
+
+  const getNumberValue = value => parseInt(value, 10);
+  const normalizeNumberValue = value => {
+    const _value = parseFloat(value);
+
+    return _value >= 0 && _value < 1 || _value <= 0 && _value > -1 ? 0 : _value;
+  };
+  const getSpacing = style => {
+    const {
+      marginTop,
+      marginBottom,
+      marginLeft,
+      marginRight,
+      paddingTop,
+      paddingBottom,
+      paddingLeft,
+      paddingRight
+    } = style;
+    return {
+      marginTop,
+      marginBottom,
+      marginLeft,
+      marginRight,
+      paddingTop,
+      paddingBottom,
+      paddingLeft,
+      paddingRight
+    };
+  };
+  const getTypography = style => {
+    const {
+      lineHeight,
+      letterSpacing,
+      fontFamily,
+      fontSize,
+      fontStyle,
+      fontVariationSettings,
+      fontWeight
+    } = style;
+    return {
+      lineHeight,
+      letterSpacing,
+      fontFamily,
+      fontSize,
+      fontStyle,
+      fontVariationSettings,
+      fontWeight
+    };
+  };
+
+  /* eslint no-console:0 */
+
   const waitForFrame = () => new Promise(requestAnimationFrame);
 
   const debounce = function (func, wait, immediate) {
@@ -966,176 +966,190 @@
 
     _el.setAttribute('title', text + 'px');
 
-    _el.classList.add('speccer');
-
+    set(_el, 'ph speccer spacing');
     return _el;
   };
-  const element$3 = el => {
-    const _speccer_el = {};
+  const element$3 = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee(el) {
+      var _speccer_el, _el_style, _parent_el_style, _speccer_margin_top_el, _speccer_margin_right_el, _speccer_margin_bottom_el, _speccer_margin_left_el, _speccer_padding_top_el, _speccer_padding_bottom_el, _speccer_padding_right_el, _speccer_padding_left_el;
 
-    const _el_style = get(el);
+      return regenerator.wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            _speccer_el = {};
+            _context.next = 3;
+            return get(el);
 
-    if (_el_style.display === 'none' || _el_style.visibility === 'hidden') {
-      return;
-    }
+          case 3:
+            _el_style = _context.sent;
 
-    el.classList.add('speccer-isSpecced');
+            if (!(_el_style.display === 'none' || _el_style.visibility === 'hidden')) {
+              _context.next = 6;
+              break;
+            }
 
-    const _parent_el_style = get(el.parentElement);
+            return _context.abrupt("return");
 
-    if (_parent_el_style.position === 'static') {
-      window.requestAnimationFrame(() => {
-        el.parentElement.style.position = 'relative';
-      });
-    }
+          case 6:
+            el.classList.add('is-specced');
+            _parent_el_style = get(el.parentElement);
 
-    _speccer_el.style = getSpacing(_el_style);
-    _speccer_el.rect = el.getBoundingClientRect();
+            if (_parent_el_style.position === 'static') {
+              window.requestAnimationFrame(() => {
+                el.parentElement.style.position = 'relative';
+              });
+            }
 
-    if (_speccer_el.style['marginTop'] !== '0px') {
-      const _speccer_margin_top_el = create$3(getNumberValue(_speccer_el.style.marginTop));
+            _speccer_el.styles = getSpacing(_el_style);
+            _speccer_el.rect = el.getBoundingClientRect();
 
-      set(_speccer_margin_top_el, 'margin marginTop');
-      add(_speccer_margin_top_el, {
-        height: _speccer_el.style.marginTop,
-        width: _speccer_el.rect.width + 'px',
-        left: normalizeNumberValue(_speccer_el.rect.x - el.parentElement.getBoundingClientRect().x) + 'px',
-        top: normalizeNumberValue(_speccer_el.rect.y - el.parentElement.getBoundingClientRect().y - parseInt(_speccer_el.style.marginTop, 10)) + 'px'
-      });
+            if (_speccer_el.styles['marginTop'] !== '0px') {
+              _speccer_margin_top_el = create$3(getNumberValue(_speccer_el.styles.marginTop));
+              set(_speccer_margin_top_el, 'margin top');
+              add(_speccer_margin_top_el, {
+                height: _speccer_el.styles.marginTop,
+                width: _speccer_el.rect.width + 'px',
+                left: normalizeNumberValue(_speccer_el.rect.x - el.parentElement.getBoundingClientRect().x) + 'px',
+                top: normalizeNumberValue(_speccer_el.rect.y - el.parentElement.getBoundingClientRect().y - parseInt(_speccer_el.styles.marginTop, 10)) + 'px'
+              });
 
-      if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
-        after(el.closest('table'), _speccer_margin_top_el);
-      } else {
-        after(el, _speccer_margin_top_el);
-      }
-    }
+              if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
+                after(el.closest('table'), _speccer_margin_top_el);
+              } else {
+                after(el, _speccer_margin_top_el);
+              }
+            }
 
-    if (_speccer_el.style['marginRight'] !== '0px') {
-      const _speccer_margin_right_el = create$3(getNumberValue(_speccer_el.style.marginRight));
+            if (_speccer_el.styles['marginRight'] !== '0px') {
+              _speccer_margin_right_el = create$3(getNumberValue(_speccer_el.styles.marginRight));
+              set(_speccer_margin_right_el, 'margin right');
+              add(_speccer_margin_right_el, {
+                height: _speccer_el.rect.height + 'px',
+                width: _speccer_el.styles.marginRight,
+                left: normalizeNumberValue(_speccer_el.rect.x - el.parentElement.getBoundingClientRect().x + parseInt(_speccer_el.rect.width, 10)) + 'px',
+                top: normalizeNumberValue(_speccer_el.rect.y - el.parentElement.getBoundingClientRect().y) + 'px'
+              });
 
-      set(_speccer_margin_right_el, 'margin marginRight');
-      add(_speccer_margin_right_el, {
-        height: _speccer_el.rect.height + 'px',
-        width: _speccer_el.style.marginRight,
-        left: normalizeNumberValue(_speccer_el.rect.x - el.parentElement.getBoundingClientRect().x + parseInt(_speccer_el.rect.width, 10)) + 'px',
-        top: normalizeNumberValue(_speccer_el.rect.y - el.parentElement.getBoundingClientRect().y) + 'px'
-      });
+              if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
+                after(el.closest('table'), _speccer_margin_right_el);
+              } else {
+                after(el, _speccer_margin_right_el);
+              }
+            }
 
-      if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
-        after(el.closest('table'), _speccer_margin_right_el);
-      } else {
-        after(el, _speccer_margin_right_el);
-      }
-    }
+            if (_speccer_el.styles['marginBottom'] !== '0px') {
+              _speccer_margin_bottom_el = create$3(getNumberValue(_speccer_el.styles.marginBottom));
+              set(_speccer_margin_bottom_el, 'margin bottom');
+              add(_speccer_margin_bottom_el, {
+                height: _speccer_el.styles.marginBottom,
+                width: _speccer_el.rect.width + 'px',
+                left: normalizeNumberValue(_speccer_el.rect.x - el.parentElement.getBoundingClientRect().x) + 'px',
+                top: normalizeNumberValue(_speccer_el.rect.y - el.parentElement.getBoundingClientRect().y + parseInt(_speccer_el.rect.height, 10)) + 'px'
+              });
 
-    if (_speccer_el.style['marginBottom'] !== '0px') {
-      const _speccer_margin_bottom_el = create$3(getNumberValue(_speccer_el.style.marginBottom));
+              if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
+                after(el.closest('table'), _speccer_margin_bottom_el);
+              } else {
+                after(el, _speccer_margin_bottom_el);
+              }
+            }
 
-      set(_speccer_margin_bottom_el, 'margin marginBottom');
-      add(_speccer_margin_bottom_el, {
-        height: _speccer_el.style.marginBottom,
-        width: _speccer_el.rect.width + 'px',
-        left: normalizeNumberValue(_speccer_el.rect.x - el.parentElement.getBoundingClientRect().x) + 'px',
-        top: normalizeNumberValue(_speccer_el.rect.y - el.parentElement.getBoundingClientRect().y + parseInt(_speccer_el.rect.height, 10)) + 'px'
-      });
+            if (_speccer_el.styles['marginLeft'] !== '0px') {
+              _speccer_margin_left_el = create$3(getNumberValue(_speccer_el.styles.marginLeft));
+              set(_speccer_margin_left_el, 'margin left');
+              add(_speccer_margin_left_el, {
+                height: _speccer_el.rect.height + 'px',
+                width: _speccer_el.styles.marginLeft,
+                left: normalizeNumberValue(_speccer_el.rect.x - el.parentElement.getBoundingClientRect().x - parseInt(_speccer_el.styles.marginLeft, 10)) + 'px',
+                top: normalizeNumberValue(_speccer_el.rect.y - el.parentElement.getBoundingClientRect().y) + 'px'
+              });
 
-      if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
-        after(el.closest('table'), _speccer_margin_bottom_el);
-      } else {
-        after(el, _speccer_margin_bottom_el);
-      }
-    }
+              if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
+                after(el.closest('table'), _speccer_margin_left_el);
+              } else {
+                after(el, _speccer_margin_left_el);
+              }
+            }
 
-    if (_speccer_el.style['marginLeft'] !== '0px') {
-      const _speccer_margin_left_el = create$3(getNumberValue(_speccer_el.style.marginLeft));
+            if (_speccer_el.styles['paddingTop'] !== '0px') {
+              _speccer_padding_top_el = create$3(getNumberValue(_speccer_el.styles.paddingTop));
+              set(_speccer_padding_top_el, 'padding top');
+              add(_speccer_padding_top_el, {
+                height: _speccer_el.styles.paddingTop,
+                width: _speccer_el.rect.width + 'px',
+                left: normalizeNumberValue(_speccer_el.rect.x - el.parentElement.getBoundingClientRect().x) + 'px',
+                top: normalizeNumberValue(_speccer_el.rect.y - el.parentElement.getBoundingClientRect().y) + 'px'
+              });
 
-      set(_speccer_margin_left_el, 'margin marginLeft');
-      add(_speccer_margin_left_el, {
-        height: _speccer_el.rect.height + 'px',
-        width: _speccer_el.style.marginLeft,
-        left: normalizeNumberValue(_speccer_el.rect.x - el.parentElement.getBoundingClientRect().x - parseInt(_speccer_el.style.marginLeft, 10)) + 'px',
-        top: normalizeNumberValue(_speccer_el.rect.y - el.parentElement.getBoundingClientRect().y) + 'px'
-      });
+              if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
+                after(el.closest('table'), _speccer_padding_top_el);
+              } else {
+                after(el, _speccer_padding_top_el);
+              }
+            }
 
-      if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
-        after(el.closest('table'), _speccer_margin_left_el);
-      } else {
-        after(el, _speccer_margin_left_el);
-      }
-    }
+            if (_speccer_el.styles['paddingBottom'] !== '0px') {
+              _speccer_padding_bottom_el = create$3(getNumberValue(_speccer_el.styles.paddingBottom));
+              set(_speccer_padding_bottom_el, 'padding bottom');
+              add(_speccer_padding_bottom_el, {
+                height: _speccer_el.styles.paddingBottom,
+                width: _speccer_el.rect.width + 'px',
+                left: normalizeNumberValue(_speccer_el.rect.x - el.parentElement.getBoundingClientRect().x) + 'px',
+                top: normalizeNumberValue(_speccer_el.rect.y - el.parentElement.getBoundingClientRect().y + (parseInt(_speccer_el.rect.height, 10) - parseInt(_speccer_el.styles.paddingBottom, 10))) + 'px'
+              });
 
-    if (_speccer_el.style['paddingTop'] !== '0px') {
-      const _speccer_padding_top_el = create$3(getNumberValue(_speccer_el.style.paddingTop));
+              if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
+                after(el.closest('table'), _speccer_padding_bottom_el);
+              } else {
+                after(el, _speccer_padding_bottom_el);
+              }
+            }
 
-      set(_speccer_padding_top_el, 'padding paddingTop');
-      add(_speccer_padding_top_el, {
-        height: _speccer_el.style.paddingTop,
-        width: _speccer_el.rect.width + 'px',
-        left: normalizeNumberValue(_speccer_el.rect.x - el.parentElement.getBoundingClientRect().x) + 'px',
-        top: normalizeNumberValue(_speccer_el.rect.y - el.parentElement.getBoundingClientRect().y) + 'px'
-      });
+            if (_speccer_el.styles['paddingRight'] !== '0px') {
+              _speccer_padding_right_el = create$3(getNumberValue(_speccer_el.styles.paddingRight));
+              set(_speccer_padding_right_el, 'padding right');
+              add(_speccer_padding_right_el, {
+                height: _speccer_el.rect.height + 'px',
+                width: _speccer_el.styles.paddingRight,
+                left: normalizeNumberValue(_speccer_el.rect.x - el.parentElement.getBoundingClientRect().x + (parseInt(_speccer_el.rect.width, 10) - parseInt(_speccer_el.styles.paddingRight, 10))) + 'px',
+                top: normalizeNumberValue(_speccer_el.rect.y - el.parentElement.getBoundingClientRect().y) + 'px'
+              });
 
-      if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
-        after(el.closest('table'), _speccer_padding_top_el);
-      } else {
-        after(el, _speccer_padding_top_el);
-      }
-    }
+              if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
+                after(el.closest('table'), _speccer_padding_right_el);
+              } else {
+                after(el, _speccer_padding_right_el);
+              }
+            }
 
-    if (_speccer_el.style['paddingBottom'] !== '0px') {
-      const _speccer_padding_bottom_el = create$3(getNumberValue(_speccer_el.style.paddingBottom));
+            if (_speccer_el.styles['paddingLeft'] !== '0px') {
+              _speccer_padding_left_el = create$3(getNumberValue(_speccer_el.styles.paddingLeft));
+              set(_speccer_padding_left_el, 'padding left');
+              add(_speccer_padding_left_el, {
+                height: _speccer_el.rect.height + 'px',
+                width: _speccer_el.styles.paddingLeft,
+                left: normalizeNumberValue(_speccer_el.rect.x - el.parentElement.getBoundingClientRect().x) + 'px',
+                top: normalizeNumberValue(_speccer_el.rect.y - el.parentElement.getBoundingClientRect().y) + 'px'
+              });
 
-      set(_speccer_padding_bottom_el, 'padding paddingBottom');
-      add(_speccer_padding_bottom_el, {
-        height: _speccer_el.style.paddingBottom,
-        width: _speccer_el.rect.width + 'px',
-        left: normalizeNumberValue(_speccer_el.rect.x - el.parentElement.getBoundingClientRect().x) + 'px',
-        top: normalizeNumberValue(_speccer_el.rect.y - el.parentElement.getBoundingClientRect().y + (parseInt(_speccer_el.rect.height, 10) - parseInt(_speccer_el.style.paddingBottom, 10))) + 'px'
-      });
+              if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
+                after(el.closest('table'), _speccer_padding_left_el);
+              } else {
+                after(el, _speccer_padding_left_el);
+              }
+            }
 
-      if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
-        after(el.closest('table'), _speccer_padding_bottom_el);
-      } else {
-        after(el, _speccer_padding_bottom_el);
-      }
-    }
+          case 19:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
 
-    if (_speccer_el.style['paddingRight'] !== '0px') {
-      const _speccer_padding_right_el = create$3(getNumberValue(_speccer_el.style.paddingRight));
-
-      set(_speccer_padding_right_el, 'padding paddingRight');
-      add(_speccer_padding_right_el, {
-        height: _speccer_el.rect.height + 'px',
-        width: _speccer_el.style.paddingRight,
-        left: normalizeNumberValue(_speccer_el.rect.x - el.parentElement.getBoundingClientRect().x + (parseInt(_speccer_el.rect.width, 10) - parseInt(_speccer_el.style.paddingRight, 10))) + 'px',
-        top: normalizeNumberValue(_speccer_el.rect.y - el.parentElement.getBoundingClientRect().y) + 'px'
-      });
-
-      if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
-        after(el.closest('table'), _speccer_padding_right_el);
-      } else {
-        after(el, _speccer_padding_right_el);
-      }
-    }
-
-    if (_speccer_el.style['paddingLeft'] !== '0px') {
-      const _speccer_padding_left_el = create$3(getNumberValue(_speccer_el.style.paddingLeft));
-
-      set(_speccer_padding_left_el, 'padding paddingLeft');
-      add(_speccer_padding_left_el, {
-        height: _speccer_el.rect.height + 'px',
-        width: _speccer_el.style.paddingLeft,
-        left: normalizeNumberValue(_speccer_el.rect.x - el.parentElement.getBoundingClientRect().x) + 'px',
-        top: normalizeNumberValue(_speccer_el.rect.y - el.parentElement.getBoundingClientRect().y) + 'px'
-      });
-
-      if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
-        after(el.closest('table'), _speccer_padding_left_el);
-      } else {
-        after(el, _speccer_padding_left_el);
-      }
-    }
-  };
+    return function element(_x) {
+      return _ref.apply(this, arguments);
+    };
+  }();
 
   /* eslint no-console:0 */
   const create$2 = (e = '', t, n = 'span') => {
@@ -1149,7 +1163,7 @@
       _el.setAttribute('data-dissection-counter', e);
     }
 
-    set(_el, `dissection ${t}`);
+    set(_el, `ph speccer dissection ${t}`);
     return _el;
   };
   const element$2 = (el, dissectIndex) => {
@@ -1244,7 +1258,7 @@
       } else if (_area.indexOf('top') !== -1) {
         if (_area.indexOf('full') !== -1) {
           _dissection_node_styles = {
-            bottom: _el_offset_top + _el_rect.height + 'px',
+            top: _el_offset_top + -8 + 'px',
             left: _el_offset_left + -1 + 'px',
             width: _el_rect.width + 'px'
           };
@@ -1336,7 +1350,7 @@
 
     _el.setAttribute('data-measure', parseInt(text, 10) + 'px');
 
-    set(_el, `speccer measure ${area}`);
+    set(_el, `ph speccer measure ${area}`);
     return _el;
   };
 
@@ -1430,7 +1444,7 @@
     const _el = document.createElement('div');
 
     _el.innerHTML = html;
-    set(_el, `speccer typography ${area}`);
+    set(_el, `ph speccer typography ${area}`);
     return _el;
   };
   const element = /*#__PURE__*/function () {
@@ -1455,7 +1469,7 @@
             return _context.abrupt("return");
 
           case 6:
-            el.classList.add('speccer-isSpecced');
+            el.classList.add('is-specced');
             _parent_style = get(el.parentElement);
 
             if (_parent_style.position === 'static') {
@@ -1533,8 +1547,8 @@
     const speccerEventFunc = debounce(() => {
       speccer();
     }, 300);
-    window.removeEventListener('speccer-onResize', speccerEventFunc);
-    window.addEventListener('speccer-onResize', speccerEventFunc);
+    window.removeEventListener('resize', speccerEventFunc);
+    window.addEventListener('resize', speccerEventFunc);
   };
 
   /* eslint no-console:0 */
