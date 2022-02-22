@@ -8,6 +8,6 @@ export const activate = speccer => {
     speccer();
   }, 300);
 
-  window.removeEventListener('speccer-onResize', speccerEventFunc);
-  window.addEventListener('speccer-onResize', speccerEventFunc);
+  window.removeEventListener('resize', speccerEventFunc);
+  window.addEventListener('resize', speccerEventFunc);
 };

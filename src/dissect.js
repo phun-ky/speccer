@@ -121,7 +121,7 @@ export const element = (el, dissectIndex) => {
     } else if (_area.indexOf('top') !== -1) {
       if (_area.indexOf('full') !== -1) {
         _dissection_node_styles = {
-          bottom: _el_offset_top + _el_rect.height + 'px',
+          top: _el_offset_top + -8 + 'px',
           left: _el_offset_left + -1 + 'px',
           width: _el_rect.width + 'px'
         };
