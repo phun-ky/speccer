@@ -23,7 +23,49 @@
     "scripts": {
       "prerelease": "npm run build",
       "posttag": "git push --follow-tags origin master && npm publish"
-    }
+    },
+    "types": [
+      {
+        "type": "chore",
+        "section": "Build process or auxiliary tool changes"
+      },
+      {
+        "type": "ci",
+        "section": "CI related changes"
+      },
+      {
+        "type": "docs",
+        "section": "Documentation only changes"
+      },
+      {
+        "type": "feat",
+        "section": "A new feature"
+      },
+      {
+        "type": "fix",
+        "section": "A bug fix"
+      },
+      {
+        "type": "perf",
+        "section": "A code change that improves performance"
+      },
+      {
+        "type": "refactor",
+        "section": "A code change that neither fixes a bug or adds a feature"
+      },
+      {
+        "type": "release",
+        "section": "Create a release commit"
+      },
+      {
+        "type": "style",
+        "section": "Markup, white-space, formatting, missing semi-colons..."
+      },
+      {
+        "type": "test",
+        "section": "Adding missing tests"
+      }
+    ]
   },
   "repository": {
     "type": "git",
