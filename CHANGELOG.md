@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.3.0](https://github.com/phun-ky/speccer/compare/v4.2.1...v4.3.0) (2022-02-22)
+
+
+### Feature
+
+* 🎸 Expose API a bit more ([093b465](https://github.com/phun-ky/speccer/commit/093b465653c32ec77fec6bb1d9d9e3adfd59809f))
+
+
+### Documentation
+
+* ✏️ Move images into assets ([2291b31](https://github.com/phun-ky/speccer/commit/2291b31d768a16f202f2ffed453cfc22f3027e67))
+* ✏️ Update documentation ([ec0807e](https://github.com/phun-ky/speccer/commit/ec0807e8c5d9c7eeaa807b80d7c432bee24d59d4))
+
 ### [4.2.1](https://github.com/phun-ky/speccer/compare/v4.2.0...v4.2.1) (2022-02-22)
 
 ## [4.2.0](https://github.com/phun-ky/speccer/compare/v4.1.0...v4.2.0) (2022-02-22)
