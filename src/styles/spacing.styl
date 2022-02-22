@@ -1,41 +1,44 @@
 .ph.speccer.spacing
+  pointer-events auto
+  transition none
+  border var(--ph-speccer-line-width) solid transparent
   &:hover
-    border 1px solid $ph-speccer-color-border-dark
+    border var(--ph-speccer-line-width) solid var(--ph-speccer-color-text-dark)
 
 
-.ph.speccer.spacing
-  &.is-specced
-    &:hover
-      & ~ .speccer
-        &.margin
-          background-color $ph-speccer-color-margin
-        &.padding
-          background-color $ph-speccer-color-padding
-          color $ph-speccer-color-text-light
+.is-specced
+  &:hover
+    & ~ .ph.speccer.spacing
+      &.margin
+        background-color var(--ph-speccer-color-margin-hover)
+      &.padding
+        background-color var(--ph-speccer-color-padding-hover)
+        color var(--ph-speccer-color-text-light)
 
 
 .ph.speccer.spacing
   &.margin
-    background-color rgba($ph-speccer-color-margin, .4)
-    color $ph-speccer-color-text-dark
+    background-color var(--ph-speccer-color-margin)
+    color var(--ph-speccer-color-text-dark)
 
 
 .ph.speccer.spacing
   &.padding
-    background-color rgba($ph-speccer-color-padding, .4)
-    color $ph-speccer-color-text-pink
+    background-color var(--ph-speccer-color-padding)
+    color var(--ph-speccer-spacing-color)
 
 
 .ph.speccer.spacing
   &.margin
     &.bottom,
     &.top
-      &:after
+      &::after
+        transition none
         content ""
         position absolute
         height 100%
-        border-top 1px solid $ph-speccer-color-border-dark
-        border-bottom 1px solid $ph-speccer-color-border-dark
+        border-top var(--ph-speccer-line-width) solid var(--ph-speccer-color-text-dark)
+        border-bottom var(--ph-speccer-line-width) solid var(--ph-speccer-color-text-dark)
         width 9px
         left 40%
 
@@ -44,11 +47,12 @@
   &.margin
     &.bottom,
     &.top
-      &:before
+      &::before
+        transition none
         content ""
         position absolute
         height 100%
-        border-left 1px solid $ph-speccer-color-border-dark
+        border-left var(--ph-speccer-line-width) solid var(--ph-speccer-color-text-dark)
         margin-left 4px
         width 0
         left 40%
@@ -58,12 +62,13 @@
   &.margin
     &.left,
     &.right
-      &:after
+      &::after
+        transition none
         content ""
         position absolute
         height 9px
-        border-right 1px solid $ph-speccer-color-border-pink
-        border-left 1px solid $ph-speccer-color-border-pink
+        border-right var(--ph-speccer-line-width) solid var(--ph-speccer-color-text-dark)
+        border-left var(--ph-speccer-line-width) solid var(--ph-speccer-color-text-dark)
         width 100%
         top 10%
 
@@ -72,11 +77,12 @@
   &.margin
     &.left,
     &.right
-      &:before
+      &::before
+        transition none
         content ""
         position absolute
         height 0
-        border-top 1px solid $ph-speccer-color-border-pink
+        border-top var(--ph-speccer-line-width) solid var(--ph-speccer-color-text-dark)
         margin-top 4px
         width 100%
         top 10%
@@ -86,12 +92,13 @@
   &.padding
     &.bottom,
     &.top
-      &:after
+      &::after
+        transition none
         content ""
         position absolute
         height 100%
-        border-top 1px solid $ph-speccer-color-border-pink
-        border-bottom 1px solid $ph-speccer-color-border-pink
+        border-top var(--ph-speccer-line-width) solid var(--ph-speccer-spacing-color)
+        border-bottom var(--ph-speccer-line-width) solid var(--ph-speccer-spacing-color)
         width 9px
         left 40%
 
@@ -100,11 +107,12 @@
   &.padding
     &.bottom,
     &.top
-      &:before
+      &::before
+        transition none
         content ""
         position absolute
         height 100%
-        border-left 1px solid $ph-speccer-color-border-pink
+        border-left var(--ph-speccer-line-width) solid var(--ph-speccer-spacing-color)
         margin-left 4px
         width 0
         left 40%
@@ -114,12 +122,13 @@
   &.padding
     &.left,
     &.right
-      &:after
+      &::after
+        transition none
         content ""
         position absolute
         height 9px
-        border-right 1px solid $ph-speccer-color-border-pink
-        border-left 1px solid $ph-speccer-color-border-pink
+        border-right var(--ph-speccer-line-width) solid var(--ph-speccer-spacing-color)
+        border-left var(--ph-speccer-line-width) solid var(--ph-speccer-spacing-color)
         width 100%
         top 10%
 
@@ -128,11 +137,12 @@
   &.padding
     &.left,
     &.right
-      &:before
+      &::before
+        transition none
         content ""
         position absolute
         height 0
-        border-top 1px solid $ph-speccer-color-border-pink
+        border-top var(--ph-speccer-line-width) solid var(--ph-speccer-spacing-color)
         margin-top 4px
         width 100%
         top 10%

@@ -71,7 +71,7 @@ export const element = el => {
         height: _el_rect.height + 'px'
       });
     } else {
-      const _measure_node = create(_el_rect.height, 'height top');
+      const _measure_node = create(_el_rect.height, 'height left');
       if (SPECCER_TAGS_TO_AVOID.indexOf(el.nodeName) >= 0) {
         node.after(el.closest('table'), _measure_node);
       } else {

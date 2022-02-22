@@ -1,9 +1,9 @@
 .ph.speccer.measure
   &.width
-    color red
-    border 1px solid red
+    color var(--ph-speccer-measure-color)
+    border var(--ph-speccer-line-width) solid var(--ph-speccer-measure-color)
     border-bottom none
-    height 8px
+    height var(--ph-speccer-measure-size)
 
 
 .ph.speccer.measure
@@ -17,8 +17,8 @@
 .ph.speccer.measure
   &.width
     &.bottom
-      color red
-      border 1px solid red
+      color var(--ph-speccer-measure-color)
+      border var(--ph-speccer-line-width) solid var(--ph-speccer-measure-color)
       border-top none
 
 
@@ -34,8 +34,8 @@
 .ph.speccer.measure
   &.width
     &.top
-      color red
-      border 1px solid red
+      color var(--ph-speccer-measure-color)
+      border var(--ph-speccer-line-width) solid var(--ph-speccer-measure-color)
       border-bottom none
 
 
@@ -50,28 +50,31 @@
 
 .ph.speccer.measure
   &.height
-    color red
-    border 1px solid red
-    border-right none
-    width 8px
+    &.left
+      color var(--ph-speccer-measure-color)
+      border var(--ph-speccer-line-width) solid var(--ph-speccer-measure-color)
+      border-right none
+      width var(--ph-speccer-measure-size)
 
 
 .ph.speccer.measure
   &.height
-    &::after
-      content attr(data-measure)
-      position absolute
-      top 50%
-      left calc(-100% - 25px)
-      transform translateY(-50%) rotate(-90deg)
+    &.left
+      &::after
+        content attr(data-measure)
+        position absolute
+        top 50%
+        left calc(-100% - 20px - var(--ph-speccer-line-width))
+        transform translateY(-50%) rotate(-90deg)
 
 
 .ph.speccer.measure
   &.height
     &.right
-      color red
-      border 1px solid red
+      color var(--ph-speccer-measure-color)
+      border var(--ph-speccer-line-width) solid var(--ph-speccer-measure-color)
       border-left none
+      width var(--ph-speccer-measure-size)
 
 
 .ph.speccer.measure
@@ -81,5 +84,5 @@
         content attr(data-measure)
         position absolute
         top 50%
-        left 100%
+        left calc(100% - var(--ph-speccer-measure-size))
         transform translateY(-50%) rotate(90deg)
