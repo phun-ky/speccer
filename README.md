@@ -10,7 +10,7 @@ Speccer was created to make it easier to document components in a design system.
 
 See demo here: https://codepen.io/phun-ky/pen/xaOrYX
 
-![Image of speccer](./speccer.png)
+![Image of speccer](./assets/speccer.png)
 
 ---
 
@@ -76,7 +76,7 @@ export default Component;
 
 ### Element spacing
 
-![Image of speccer](./spacing.png)
+![Image of speccer](./assets/spacing.png)
 
 In your component examples, use the following attribute:
 
@@ -88,7 +88,7 @@ This will display the element <em>and all of it's children</em> padding and marg
 
 ### Element dimensions
 
-![Image of speccer](./measure.png)
+![Image of speccer](./assets/measure.png)
 
 In your component examples, use the following attribute:
 
@@ -100,7 +100,7 @@ Where `height` and `width` comes with placement flags. Default for `height` is `
 
 ### Highlight the anatomy of an element
 
-![Image of speccer](./anatomy.png)
+![Image of speccer](./assets/anatomy.png)
 
 In your component examples, use the following attribute. Remember to use the `data-anatomy-section` as an attribute on a parent element to scope the marking.
 
@@ -114,7 +114,7 @@ This will place a pin to the outline of the element. Default is `top`.
 
 ### Element typogpraphy
 
-![Image of speccer](./typography.png)
+![Image of speccer](./assets/typography.png)
 
 In your component examples, use the following attribute.
 
