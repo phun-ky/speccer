@@ -1,8 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.speccer = factory());
-})(this, (function () { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+  typeof define === 'function' && define.amd ? define(['exports'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.speccer = {}));
+})(this, (function (exports) { 'use strict';
 
   const after = (el, newSibling) => el.insertAdjacentElement('afterend', newSibling);
   const removeAll = function (selector) {
@@ -1162,6 +1162,12 @@
     };
   }();
 
+  var __spacing = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    create: create$3,
+    element: element$3
+  });
+
   /* eslint no-console:0 */
   const create$2 = function () {
     let e = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
@@ -1356,6 +1362,12 @@
     add(_dissection_node, _dissection_node_styles);
   };
 
+  var __dissect = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    create: create$2,
+    element: element$2
+  });
+
   /* eslint no-console:0 */
 
   const create$1 = function () {
@@ -1453,6 +1465,11 @@
       }
     }
   };
+
+  var __measure = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    element: element$1
+  });
 
   /* eslint no-console:0 */
 
@@ -1561,6 +1578,12 @@
     };
   }();
 
+  var __typography = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    create: create,
+    element: element
+  });
+
   /* eslint no-console:0 */
   const activate$1 = speccer => {
     const speccerEventFunc = debounce(() => {
@@ -1655,6 +1678,7 @@
 
   const speccer = () => {
     removeAll('.speccer');
+
     removeAll('.dissection');
 
     const _els_to_be_specced = document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)');
@@ -1673,8 +1697,20 @@
 
     _els_to_be_dissected.forEach(element$2);
   };
+
+  const spacing = __spacing;
+  const dissect = __dissect;
+  const measure = __measure;
+  const typography = __typography;
+
   activate(speccer);
 
-  return speccer;
+  exports["default"] = speccer;
+  exports.dissect = dissect;
+  exports.measure = measure;
+  exports.spacing = spacing;
+  exports.typography = typography;
+
+  Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
