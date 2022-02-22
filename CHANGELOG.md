@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.3.1](https://github.com/phun-ky/speccer/compare/v4.3.0...v4.3.1) (2022-02-22)
+
+
+### Bug
+
+* Use named exports ([7a4535e](https://github.com/phun-ky/speccer/commit/7a4535e65c04b33365258323376d6710fcb813c3))
+
 ## [4.3.0](https://github.com/phun-ky/speccer/compare/v4.2.1...v4.3.0) (2022-02-22)
 
 
