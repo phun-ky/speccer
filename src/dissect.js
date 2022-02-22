@@ -13,7 +13,7 @@ export const create = (e = '', t, n = 'span') => {
   } else if (t.indexOf('full') !== -1 || t.indexOf('enclose') !== -1) {
     _el.setAttribute('data-dissection-counter', e);
   }
-  classnames.set(_el, `dissection ${t}`);
+  classnames.set(_el, `ph speccer dissection ${t}`);
   return _el;
 };
 

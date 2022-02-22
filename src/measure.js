@@ -12,7 +12,7 @@ const create = (text = '', area = '', tag = 'span') => {
   _el.setAttribute('title', text + 'px');
   _el.setAttribute('data-measure', parseInt(text, 10) + 'px');
 
-  classnames.set(_el, `speccer measure ${area}`);
+  classnames.set(_el, `ph speccer measure ${area}`);
 
   return _el;
 };

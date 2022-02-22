@@ -12,7 +12,7 @@ export const create = (html, area) => {
   const _el = document.createElement('div');
   _el.innerHTML = html;
 
-  classnames.set(_el, `speccer typography ${area}`);
+  classnames.set(_el, `ph speccer typography ${area}`);
   return _el;
 };
 
@@ -24,7 +24,7 @@ export const element = async el => {
     return;
   }
 
-  el.classList.add('speccer-isSpecced');
+  el.classList.add('is-specced');
   const _parent_style = styles.get(el.parentElement);
 
   if (_parent_style.position === 'static') {

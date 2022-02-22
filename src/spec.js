@@ -12,7 +12,7 @@ export const create = (text = '', tag = 'span') => {
   const textContent = document.createTextNode(text);
   _el.appendChild(textContent);
   _el.setAttribute('title', text + 'px');
-  _el.classList.add('speccer');
+  classnames.set(_el, 'ph speccer spacing');
   return _el;
 };
 
