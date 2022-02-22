@@ -16,7 +16,13 @@
     "stylus": "rm -rf ./speccer.css && stylus ./src/styles/index.styl -o ./speccer.css",
     "postcss": "rm -rf ./speccer.min.css && postcss ./speccer.css -o  speccer.min.css",
     "dev": "node ./scripts/server.js",
-    "commit": "npx git-cz"
+    "commit": "npx git-cz",
+    "release": "npx standard-version"
+  },
+  "standard-version": {
+    "scripts": {
+      "prerelease": "npm run build"
+    }
   },
   "repository": {
     "type": "git",
