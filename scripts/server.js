@@ -8,20 +8,22 @@ bs.watch('./dev/*.html').on('change', bs.reload);
 
 bs.watch('./src/**/*.styl', function (event) {
   if (event === 'change') {
-    spawn('npm', ['run', 'styles'], { stdio: 'inherit' }).on('exit', function (error) {
+    spawn('npm', ['run', 'build'], { stdio: 'inherit' }).on('exit', function (error) {
       if (error) {
         console.error(error);
       }
+
       bs.reload(['*.css']);
     });
   }
 });
-bs.watch('./src/**/*.js', function (event) {
+bs.watch('./src/**/*.ts', function (event) {
   if (event === 'change') {
-    spawn('npm', ['run', 'rollup'], { stdio: 'inherit' }).on('exit', function (error) {
+    spawn('npm', ['run', 'build'], { stdio: 'inherit' }).on('exit', function (error) {
       if (error) {
         console.error(error);
       }
+
       bs.reload(['*.js']);
     });
   }

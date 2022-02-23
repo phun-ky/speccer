@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "rollup": "rollup -c",
     "rollup:dev": "npm run clean && rollup -c -w",
-    "clean": "rm -rf ./speccer.css ./speccer.min.css ./speccer.js",
+    "clean": "rm -rf dist/ dts/ ./speccer.css ./speccer.min.css ./speccer.js",
     "build": "npm run clean && npm run rollup && npm run stylus && npm run postcss",
     "styles": "npm run stylus && npm run postcss",
     "stylus": "rm -rf ./speccer.css && stylus ./src/styles/index.styl -o ./speccer.css",
