@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.0.1](https://github.com/phun-ky/speccer/compare/v6.0.0...v6.0.1) (2022-02-23)
+
+
+### Performance change
+
+* ⚡️ Reduce size of npm package ([3a1615d](https://github.com/phun-ky/speccer/commit/3a1615d7a96375a731c3d1d9b02d428697ce0b97))
+
 ## [6.0.0](https://github.com/phun-ky/speccer/compare/v5.0.0...v6.0.0) (2022-02-23)
 
 
