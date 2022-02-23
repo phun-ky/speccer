@@ -23,6 +23,11 @@
   --ph-speccer-line-width-negative: -1px;
   --ph-speccer-measure-size: 8px;
 }
+body.ph {
+  margin: 12px;
+  padding: 12px;
+  box-sizing: border-box;
+}
 .ph.speccer,
 .ph.speccer::after,
 .ph.speccer::before {
@@ -334,13 +339,6 @@
 .ph.speccer.spacing:hover {
   border: var(--ph-speccer-line-width) solid var(--ph-speccer-color-text-dark);
 }
-.is-specced:hover ~ .ph.speccer.spacing.margin {
-  background-color: var(--ph-speccer-color-margin-hover);
-}
-.is-specced:hover ~ .ph.speccer.spacing.padding {
-  background-color: var(--ph-speccer-color-padding-hover);
-  color: var(--ph-speccer-color-text-light);
-}
 .ph.speccer.spacing.margin {
   background-color: var(--ph-speccer-color-margin);
   color: var(--ph-speccer-color-text-dark);
@@ -440,15 +438,14 @@
 .ph.speccer.typography {
   background-color: var(--ph-speccer-typography-background-color);
   color: var(--ph-speccer-typography-color-text);
-  font-size: 12px;
-  padding: 8px 24px;
+  font-size: 10px;
+  padding: 8px;
   max-width: none;
   width: auto;
   display: block;
   text-align: left;
   line-height: 140%;
   border: var(--ph-speccer-line-width) solid var(--ph-speccer-pin-color);
-  min-width: 320px;
 }
 .ph.speccer.typography:hover {
   border: var(--ph-speccer-line-width) solid var(--ph-speccer-pin-color);
@@ -462,14 +459,14 @@
   top: 50%;
   transform: translateY(-50%);
   height: var(--ph-speccer-line-width);
-  width: 48px;
+  width: var(--ph-speccer-pin-space);
 }
 .ph.speccer.typography.left:after {
   left: 100%;
   top: 50%;
   transform: translateY(-50%);
   height: var(--ph-speccer-line-width);
-  width: 48px;
+  width: var(--ph-speccer-pin-space);
 }
 .ph.speccer.typography.right:after {
   left: auto;
@@ -477,14 +474,14 @@
   top: 50%;
   transform: translateY(-50%);
   height: var(--ph-speccer-line-width);
-  width: 48px;
+  width: var(--ph-speccer-pin-space);
 }
 .ph.speccer.typography.top:after {
   left: 50%;
   right: auto;
   top: 100%;
   transform: translateX(-50%);
-  height: 48px;
+  height: var(--ph-speccer-pin-space);
   width: var(--ph-speccer-line-width);
 }
 .ph.speccer.typography.bottom:after {
@@ -493,7 +490,7 @@
   top: auto;
   bottom: 100%;
   transform: translateX(-50%);
-  height: 48px;
+  height: var(--ph-speccer-pin-space);
   width: var(--ph-speccer-line-width);
 }
 .ph.speccer.typography .speccer-styles {
@@ -502,15 +499,15 @@
   padding: 0;
   margin: 0;
   line-height: 140%;
-  padding-left: 1rem;
-  font-size: 12px;
+  padding-left: 8px;
+  font-size: 10px;
 }
 .ph.speccer.typography .speccer-styles .property {
   font-weight: normal;
   color: var(--ph-speccer-typography-color-property);
   text-align: left;
   padding: 0;
-  font-size: 12px;
+  font-size: 10px;
   margin: 0;
 }
 .ph.speccer.typography .speccer-styles > li {
@@ -518,7 +515,7 @@
   color: var(--ph-speccer-typography-color-value);
   text-align: left;
   padding: 0;
-  font-size: 12px;
+  font-size: 10px;
   margin: 0;
   list-style: none;
   border: none;
