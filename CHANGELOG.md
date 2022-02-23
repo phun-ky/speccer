@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0](https://github.com/phun-ky/speccer/compare/v5.0.0...v6.0.0) (2022-02-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* 🧨 The script is now converted to TypeScript. The internal API has changed,
+but now the usage. I've set this as a breaking change to reflect the
+size of the change. There has also been some internal optimizations
+regarding positioning of the speccer elements
+
+### Refactoring
+
+* 💡 Converted to TypeScript ([ab90bae](https://github.com/phun-ky/speccer/commit/ab90bae5794235ffd13d250500caca98b0a818b5))
+
+
+### Feature
+
+* 🎸 Add source map ([de3812d](https://github.com/phun-ky/speccer/commit/de3812dc4a28d274aabfb16cf088f78cf07b2b7e))
+
 ## [5.0.0](https://github.com/phun-ky/speccer/compare/v4.3.2...v5.0.0) (2022-02-22)
 
 
