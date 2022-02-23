@@ -1,8 +1,8 @@
 # speccer
 
-![npm version](https://img.shields.io/npm/v/@phun-ky/speccer) ![issues](https://img.shields.io/github/issues/phun-ky/speccer) ![license](https://img.shields.io/npm/l/@phun-ky/speccer) ![size](https://img.shields.io/bundlephobia/min/@phun-ky/speccer)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](http://makeapullrequest.com) [![SemVer 2.0](https://img.shields.io/badge/SemVer-2.0-green.svg)](http://semver.org/spec/v2.0.0.html) ![npm version](https://img.shields.io/npm/v/@phun-ky/speccer) ![issues](https://img.shields.io/github/issues/phun-ky/speccer) ![license](https://img.shields.io/npm/l/@phun-ky/speccer) ![size](https://img.shields.io/bundlephobia/min/@phun-ky/speccer)
 
-> A script to show specifications on components in your design system documentation
+> A zero dependency package to show specifications on components in your design system documentation
 
 Speccer was created to make it easier to document components in a design system.
 
@@ -149,7 +149,7 @@ If you're importing speccer instead of with a script tag, you can use the follow
 import { dissect } from '@phun-ky/speccer';
 
 let dissectElementObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     const targets = entry.target.querySelectorAll('[data-anatomy]');
     if (entry.intersectionRatio > 0) {
       targets.forEach(dissect.element);
@@ -158,7 +158,7 @@ let dissectElementObserver = new IntersectionObserver((entries, observer) => {
   });
 });
 
-document.querySelectorAll('[data-anatomy-section]').forEach(el => {
+document.querySelectorAll('[data-anatomy-section]').forEach((el) => {
   dissectElementObserver.observe(el);
 });
 ```
