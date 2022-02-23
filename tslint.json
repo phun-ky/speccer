@@ -1,0 +1,23 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended"],
+  "jsRules": {},
+  "rules": {
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "member-ordering": false,
+    "await-promise": false,
+    "interface-name": false,
+    "quotemark": false,
+    "curly": false,
+    "member-access": [true, "no-public"],
+    "semicolon": false,
+    "no-trailing-whitespace": false,
+    "no-console": false,
+    "jsx-alignment": false,
+    "jsx-wrap-multiline": false,
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false
+  },
+  "rulesDirectory": []
+}

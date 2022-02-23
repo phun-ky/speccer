@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es2021",
+    "lib": ["ES2021", "dom"],
+    "sourceMap": true,
+    "declaration": true,
+    "declarationDir": "dts",
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "baseUrl": "src/",
+    "typeRoots": ["./node_modules/@types"],
+    "resolveJsonModule": true,
+    "types": ["jest", "node", "./node_modules/network-information-types"]
+  },
+  "exclude": ["node_modules", "build", "dist", "./speccer.js", "scripts", "tests"]
+}

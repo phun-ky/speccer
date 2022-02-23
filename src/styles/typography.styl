@@ -1,15 +1,14 @@
 .ph.speccer.typography
   background-color var(--ph-speccer-typography-background-color)
   color var(--ph-speccer-typography-color-text)
-  font-size 12px
-  padding 8px 24px
+  font-size 10px
+  padding 8px
   max-width none
   width auto
   display block
   text-align left
   line-height 140%
   border var(--ph-speccer-line-width) solid var(--ph-speccer-pin-color)
-  min-width 320px
 
   &:hover
     border var(--ph-speccer-line-width) solid var(--ph-speccer-pin-color)
@@ -23,7 +22,7 @@
     top 50%
     transform translateY(-50%)
     height var(--ph-speccer-line-width)
-    width 48px
+    width var(--ph-speccer-pin-space)
 
   &.left
     &:after
@@ -31,7 +30,7 @@
       top 50%
       transform translateY(-50%)
       height var(--ph-speccer-line-width)
-      width 48px
+      width var(--ph-speccer-pin-space)
   &.right
     &:after
       left auto
@@ -39,14 +38,14 @@
       top 50%
       transform translateY(-50%)
       height var(--ph-speccer-line-width)
-      width 48px
+      width var(--ph-speccer-pin-space)
   &.top
     &:after
       left 50%
       right auto
       top 100%
       transform translateX(-50%)
-      height 48px
+      height var(--ph-speccer-pin-space)
       width var(--ph-speccer-line-width)
   &.bottom
     &:after
@@ -55,7 +54,7 @@
       top auto
       bottom 100%
       transform translateX(-50%)
-      height 48px
+      height var(--ph-speccer-pin-space)
       width var(--ph-speccer-line-width)
 
   & .speccer-styles
@@ -64,15 +63,15 @@
     padding 0
     margin 0
     line-height 140%
-    padding-left 1rem
-    font-size 12px
+    padding-left 8px
+    font-size 10px
 
     & .property
       font-weight normal
       color var(--ph-speccer-typography-color-property)
       text-align left
       padding 0
-      font-size 12px
+      font-size 10px
       margin 0
 
     & > li
@@ -80,7 +79,7 @@
       color var(--ph-speccer-typography-color-value)
       text-align left
       padding 0
-      font-size 12px
+      font-size 10px
       margin 0
       list-style none
       border none
