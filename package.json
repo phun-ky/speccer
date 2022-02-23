@@ -19,6 +19,12 @@
     "commit": "npx git-cz",
     "release": "npx standard-version"
   },
+  "files": [
+    "/speccer.js",
+    "/speccer.js.map",
+    "/speccer.min.css",
+    "/speccer.css"
+  ],
   "standard-version": {
     "scripts": {
       "prerelease": "npm run build",
