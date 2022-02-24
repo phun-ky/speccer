@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.0.2](https://github.com/phun-ky/speccer/compare/v6.0.1...v6.0.2) (2022-02-24)
+
+
+### Bug
+
+* 🐛 Fix positioning bug ([bbb3b80](https://github.com/phun-ky/speccer/commit/bbb3b8056bfdf6b59d38a5917d49b62c3055a287))
+
 ### [6.0.1](https://github.com/phun-ky/speccer/compare/v6.0.0...v6.0.1) (2022-02-23)
 
 
