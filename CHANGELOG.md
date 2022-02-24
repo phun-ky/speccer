@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.0.5](https://github.com/phun-ky/speccer/compare/v6.0.4...v6.0.5) (2022-02-24)
+
+
+### Bug
+
+* 🐛 Use correct number sequences with dissection of elements ([0caacff](https://github.com/phun-ky/speccer/commit/0caacffcac6c242d77470c574760955ac458aea2)), closes [#15](https://github.com/phun-ky/speccer/issues/15)
+
 ### [6.0.4](https://github.com/phun-ky/speccer/compare/v6.0.3...v6.0.4) (2022-02-24)
 
 
