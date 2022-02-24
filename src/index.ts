@@ -20,7 +20,9 @@ export const typography = __typography;
 const speccer = () => {
   __node.removeAll('.speccer');
 
-  const _els_to_be_specced = document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)');
+  const _els_to_be_specced = document.querySelectorAll(
+    '[data-speccer],[data-speccer] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)'
+  );
   const _els_to_be_measured = document.querySelectorAll('[data-speccer-measure]');
   const _els_to_be_typography_specced = document.querySelectorAll('[data-speccer-typography]');
   const _els_to_be_dissected = document.querySelectorAll('[data-anatomy-section] [data-anatomy]');

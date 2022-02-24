@@ -1,9 +1,9 @@
 import * as css from '../../lib/css';
 import * as styles from '../../lib/styles';
 
-export const template = async (el: HTMLElement): Promise<string> => {
-  const _el_styles = await styles.get(el);
-  const _styles = css.getTypography(_el_styles);
+export const template = async (targetEl: HTMLElement): Promise<string> => {
+  const _target_styles = await styles.get(targetEl);
+  const _styles = css.getTypography(_target_styles);
 
   return (
     `

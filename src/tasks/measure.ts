@@ -3,7 +3,6 @@
 
 import * as classnames from '../lib/classnames';
 import * as styles from '../lib/styles';
-import { get_body_correction } from '../lib/position';
 
 const create = (text: string | number = '', area: string | null = '', tag = 'span') => {
   const _el = document.createElement(tag);
@@ -26,9 +25,9 @@ export const element = (el: HTMLElement) => {
     return;
   }
 
-  const _body_correction = get_body_correction();
-  const _el_offset_top = el.offsetTop + _body_correction.top;
-  const _el_offset_left = el.offsetLeft + _body_correction.left;
+  const _target_rect = el.getBoundingClientRect();
+  const _el_offset_top = _target_rect.top + window.pageYOffset;
+  const _el_offset_left = _target_rect.left + window.pageXOffset;
 
   if (_area.indexOf('width') !== -1) {
     if (_area.indexOf('bottom') !== -1) {

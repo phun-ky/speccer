@@ -40,7 +40,7 @@ export const element = async (el: HTMLElement, dissectIndex: number) => {
 
   document.body.appendChild(_dissection_el);
 
-  const _dissection_styles = helpers.styles(_area, el, _dissection_el);
+  const _dissection_styles = await helpers.styles(_area, el, _dissection_el);
 
   styles.add(_dissection_el, _dissection_styles);
 };

@@ -4,7 +4,7 @@
 import * as classnames from '../lib/classnames';
 import * as css from '../lib/css';
 import * as styles from '../lib/styles';
-import { get_body_correction } from '../lib/position';
+import { offset } from '../lib/position';
 import { SpeccerElType } from '../types/speccer';
 
 export const create = (text: string | number = '', tag = 'span') => {
@@ -18,22 +18,20 @@ export const create = (text: string | number = '', tag = 'span') => {
   return _el;
 };
 
-export const element = async (el: HTMLElement) => {
+export const element = async (targetEl: HTMLElement) => {
   const _speccer_el: SpeccerElType = {};
-  const _el_style = await styles.get(el);
+  const _el_style = await styles.get(targetEl);
 
-  if (_el_style.display === 'none' || _el_style.visibility === 'hidden' || !el.parentElement) {
+  if (_el_style.display === 'none' || _el_style.visibility === 'hidden' || !targetEl.parentElement) {
     return;
   }
 
-  el.classList.add('is-specced');
+  targetEl.classList.add('is-specced');
 
   _speccer_el.styles = css.getSpacing(_el_style);
 
-  const _target_rect = el.getBoundingClientRect();
-  const _body_correction = get_body_correction();
-  const _el_offset_top = el.offsetTop + _body_correction.top;
-  const _el_offset_left = el.offsetLeft + _body_correction.left;
+  const _target_rect = targetEl.getBoundingClientRect();
+  const _el_offset = await offset(targetEl);
 
   if (_speccer_el.styles['marginTop'] !== '0px') {
     const _speccer_margin_top_el = create(css.getNumberValue(_speccer_el.styles.marginTop));
@@ -44,9 +42,8 @@ export const element = async (el: HTMLElement) => {
     styles.add(_speccer_margin_top_el, {
       height: _speccer_el.styles.marginTop,
       width: _target_rect.width + 'px',
-      transform: el.style.transform,
-      left: _el_offset_left + 'px',
-      top: _el_offset_top - parseInt(_speccer_el.styles.marginTop, 10) + 'px'
+      left: _el_offset.left + 'px',
+      top: _el_offset.top - parseInt(_speccer_el.styles.marginTop, 10) + 'px'
     });
   }
 
@@ -58,9 +55,8 @@ export const element = async (el: HTMLElement) => {
     styles.add(_speccer_margin_right_el, {
       height: _target_rect.height + 'px',
       width: _speccer_el.styles.marginRight,
-      transform: el.style.transform,
-      left: _el_offset_left + parseInt(_target_rect.width + '', 10) + 'px',
-      top: _el_offset_top + 'px'
+      left: _el_offset.left + parseInt(_target_rect.width + '', 10) + 'px',
+      top: _el_offset.top + 'px'
     });
 
     document.body.appendChild(_speccer_margin_right_el);
@@ -74,9 +70,8 @@ export const element = async (el: HTMLElement) => {
     styles.add(_speccer_margin_bottom_el, {
       height: _speccer_el.styles.marginBottom,
       width: _target_rect.width + 'px',
-      transform: el.style.transform,
-      left: _el_offset_left + 'px',
-      top: _el_offset_top + parseInt(_target_rect.height + '', 10) + 'px'
+      left: _el_offset.left + 'px',
+      top: _el_offset.top + parseInt(_target_rect.height + '', 10) + 'px'
     });
 
     document.body.appendChild(_speccer_margin_bottom_el);
@@ -90,9 +85,8 @@ export const element = async (el: HTMLElement) => {
     styles.add(_speccer_margin_left_el, {
       height: _target_rect.height + 'px',
       width: _speccer_el.styles.marginLeft,
-      transform: el.style.transform,
-      left: _el_offset_left - parseInt(_speccer_el.styles.marginLeft, 10) + 'px',
-      top: _el_offset_top + 'px'
+      left: _el_offset.left - parseInt(_speccer_el.styles.marginLeft, 10) + 'px',
+      top: _el_offset.top + 'px'
     });
 
     document.body.appendChild(_speccer_margin_left_el);
@@ -106,9 +100,8 @@ export const element = async (el: HTMLElement) => {
     styles.add(_speccer_padding_top_el, {
       height: _speccer_el.styles.paddingTop,
       width: _target_rect.width + 'px',
-      transform: el.style.transform,
-      left: _el_offset_left + 'px',
-      top: _el_offset_top + 'px'
+      left: _el_offset.left + 'px',
+      top: _el_offset.top + 'px'
     });
 
     document.body.appendChild(_speccer_padding_top_el);
@@ -122,10 +115,9 @@ export const element = async (el: HTMLElement) => {
     styles.add(_speccer_padding_bottom_el, {
       height: _speccer_el.styles.paddingBottom,
       width: _target_rect.width + 'px',
-      transform: el.style.transform,
-      left: _el_offset_left + 'px',
+      left: _el_offset.left + 'px',
       top:
-        _el_offset_top +
+        _el_offset.top +
         (parseInt(_target_rect.height + '', 10) - parseInt(_speccer_el.styles.paddingBottom, 10)) +
         'px'
     });
@@ -141,12 +133,11 @@ export const element = async (el: HTMLElement) => {
     styles.add(_speccer_padding_right_el, {
       height: _target_rect.height + 'px',
       width: _speccer_el.styles.paddingRight,
-      transform: el.style.transform,
       left:
-        _el_offset_left +
+        _el_offset.left +
         (parseInt(_target_rect.width + '', 10) - parseInt(_speccer_el.styles.paddingRight, 10)) +
         'px',
-      top: _el_offset_top + 'px'
+      top: _el_offset.top + 'px'
     });
 
     document.body.appendChild(_speccer_padding_right_el);
@@ -160,9 +151,8 @@ export const element = async (el: HTMLElement) => {
     styles.add(_speccer_padding_left_el, {
       height: _target_rect.height + 'px',
       width: _speccer_el.styles.paddingLeft,
-      transform: el.style.transform,
-      left: _el_offset_left + 'px',
-      top: _el_offset_top + 'px'
+      left: _el_offset.left + 'px',
+      top: _el_offset.top + 'px'
     });
 
     document.body.appendChild(_speccer_padding_left_el);

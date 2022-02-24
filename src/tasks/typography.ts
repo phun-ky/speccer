@@ -39,7 +39,7 @@ export const element = async (el: HTMLElement) => {
 
   document.body.appendChild(_speccer_el);
 
-  const _position = helpers.position(_area, el, _speccer_el);
+  const _position = await helpers.position(_area, el, _speccer_el);
 
   styles.add(_speccer_el, _position);
 };
