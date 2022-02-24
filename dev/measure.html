@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="ph" lang="en">
   <head>
-    <title>@phun-ky/speccer | anatomy</title>
+    <title>@phun-ky/speccer</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Language" content="no" />
     <meta name="robots" content="none" />
@@ -14,60 +14,23 @@
       data-anatomy-section
       class="ph container"
       style="
+        position: relative;
         padding: 5rem;
         display: grid;
-        grid-template-columns: repeat(5, 160px);
-        grid-template-rows: repeat(1, 160px);
+        grid-template-columns: repeat(4, 160px);
+        grid-template-rows: repeat(2, 160px);
         grid-auto-flow: dense;
         grid-gap: 2rem 2rem;
       "
     >
-      <div data-anatomy="outline top" class="ph box"></div>
-      <div data-anatomy="outline full right" class="ph box"></div>
-      <div data-anatomy="outline enclose bottom" class="ph box"></div>
-      <div data-anatomy="outline left" class="ph box"></div>
-    </div>
-    <div
-      data-anatomy-section
-      class="ph container"
-      style="
-        padding: 5rem;
-        display: grid;
-        grid-template-columns: repeat(5, 160px);
-        grid-template-rows: repeat(1, 160px);
-        grid-auto-flow: dense;
-        grid-gap: 2rem 2rem;
-      "
-    >
-      <div data-anatomy="outline top" class="ph box"></div>
-      <div data-anatomy="outline full right" class="ph box"></div>
-      <div data-anatomy="outline enclose bottom" class="ph box"></div>
-      <div data-anatomy="outline left" class="ph box"></div>
-    </div>
-    <div
-      data-anatomy-section
-      class="ph container"
-      style="
-        padding: 5rem;
-        display: grid;
-        grid-template-columns: repeat(5, 160px);
-        grid-template-rows: repeat(3, 160px);
-        grid-auto-flow: dense;
-        grid-gap: 2rem 2rem;
-      "
-    >
-      <div data-anatomy="outline subtle top" class="ph box"></div>
-      <div data-anatomy="outline subtle right" class="ph box"></div>
-      <div data-anatomy="outline subtle bottom" class="ph box"></div>
-      <div data-anatomy="outline subtle left" class="ph box"></div>
-      <div data-anatomy="outline subtle full left" class="ph box"></div>
-      <div data-anatomy="outline subtle full right" class="ph box"></div>
-      <div data-anatomy="outline subtle full top" class="ph box"></div>
-      <div data-anatomy="outline subtle full bottom" class="ph box"></div>
-      <div data-anatomy="outline subtle enclose bottom" class="ph box"></div>
-      <div data-anatomy="outline subtle enclose left" class="ph box"></div>
-      <div data-anatomy="outline subtle enclose top" class="ph box"></div>
-      <div data-anatomy="outline subtle enclose right" class="ph box"></div>
+      <div data-speccer-measure="width top" class="ph box"></div>
+      <div data-speccer-measure="height right" style="grid-row: span 2" class="ph box"></div>
+      <div data-speccer-measure="width bottom" class="ph box"></div>
+      <div data-speccer-measure="height left" class="ph box"></div>
+      <div data-speccer-measure="width subtle top" class="ph box"></div>
+      <div data-speccer-measure="height subtle right" style="grid-row: span 2" class="ph box"></div>
+      <div data-speccer-measure="width subtle bottom" class="ph box"></div>
+      <div data-speccer-measure="height subtle left" class="ph box"></div>
     </div>
 
     <link async href="/speccer.css" rel="stylesheet" type="text/css" />

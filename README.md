@@ -98,6 +98,18 @@ In your component examples, use the following attribute:
 
 Where `height` and `width` comes with placement flags. Default for `height` is `left`, default for `width` is `top`.
 
+#### Subtle
+
+![Image of subtle option for measure](./assets/subtle-measure.png)
+
+You can also give a more subtle touch to the measure elements.
+
+```html
+<div data-speccer-measure="height left subtle" class="..."></div>
+```
+
+This will give a dashed border.
+
 ### Highlight the anatomy of an element
 
 ![Image of speccer](./assets/anatomy.png)
@@ -111,6 +123,20 @@ In your component examples, use the following attribute. Remember to use the `da
 ```
 
 This will place a pin to the outline of the element. Default is `top`.
+
+#### Subtle
+
+![Image of subtle option for anatomy](./assets/subtle.png)
+
+You can also give a more subtle touch to the anatomy elements.
+
+```html
+<div data-anatomy-section>
+  <div data-anatomy="outline top subtle" class="..."></div>
+</div>
+```
+
+This will give a dashed border, and a more subtle pin style.
 
 ### Element typogpraphy
 
@@ -165,7 +191,7 @@ document.querySelectorAll('[data-anatomy-section]').forEach((el) => {
 
 ## Customization
 
-You can use the provided CSS variables to customize the look and feel, to a point.
+You can use the provided CSS variables to customize the look and feel. If more control is needed, you can use CSS overrides :)
 
 ```css
 .ph.speccer {

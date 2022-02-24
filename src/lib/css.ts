@@ -25,28 +25,6 @@ export const getClassNameFromCSSProperty = (property: string) => {
   return '';
 };
 
-export const getClassNameFromMeasureArea = (area: string) => {
-  if (area.indexOf('width') !== -1) {
-    if (area.indexOf('top') !== -1) {
-      return 'width top';
-    } else if (area.indexOf('bottom') !== -1) {
-      return 'width bottom';
-    } else {
-      return 'width bottom';
-    }
-  } else if (area.indexOf('height') !== -1) {
-    if (area.indexOf('right') !== -1) {
-      return 'height right';
-    } else if (area.indexOf('left') !== -1) {
-      return 'height left';
-    } else {
-      return 'height left';
-    }
-  }
-
-  return '';
-};
-
 export const getSpacing = (style: SpacingCSSPropertiesType): SpacingCSSPropertiesType => {
   const { marginTop, marginBottom, marginLeft, marginRight, paddingTop, paddingBottom, paddingLeft, paddingRight } =
     style;

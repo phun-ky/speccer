@@ -3,7 +3,6 @@
 
 import * as classnames from '../lib/classnames';
 import * as styles from '../lib/styles';
-import * as css from '../lib/css';
 import { waitForFrame } from '../lib/debounce';
 
 const create = (text: string | number = '', area: string | null = '', tag = 'span') => {
@@ -37,11 +36,10 @@ export const element = async (targetEl: HTMLElement) => {
   const _target_rect = targetEl.getBoundingClientRect();
   const _el_offset_top = _target_rect.top + window.pageYOffset;
   const _el_offset_left = _target_rect.left + window.pageXOffset;
-  const _class_name = css.getClassNameFromMeasureArea(_area);
 
   if (_area.indexOf('width') !== -1) {
     if (_area.indexOf('bottom') !== -1) {
-      const _measure_el = create(_target_rect.width, _class_name);
+      const _measure_el = create(_target_rect.width, _area);
 
       document.body.appendChild(_measure_el);
 
@@ -51,7 +49,7 @@ export const element = async (targetEl: HTMLElement) => {
         width: _target_rect.width + 'px'
       });
     } else {
-      const _measure_el = create(_target_rect.width, _class_name);
+      const _measure_el = create(_target_rect.width, _area);
 
       document.body.appendChild(_measure_el);
 
@@ -65,7 +63,7 @@ export const element = async (targetEl: HTMLElement) => {
     }
   } else if (_area.indexOf('height') !== -1) {
     if (_area.indexOf('right') !== -1) {
-      const _measure_el = create(_target_rect.height, _class_name);
+      const _measure_el = create(_target_rect.height, _area);
 
       document.body.appendChild(_measure_el);
 
@@ -75,7 +73,7 @@ export const element = async (targetEl: HTMLElement) => {
         height: _target_rect.height + 'px'
       });
     } else {
-      const _measure_el = create(_target_rect.height, _class_name);
+      const _measure_el = create(_target_rect.height, _area);
 
       document.body.appendChild(_measure_el);
 

@@ -86,3 +86,20 @@
         top 50%
         left calc(100% - var(--ph-speccer-measure-size))
         transform translateY(-50%) rotate(90deg)
+
+
+.ph.speccer.measure.subtle.width.top,
+.ph.speccer.measure.subtle.width.bottom,
+.ph.speccer.measure.subtle.height.right,
+.ph.speccer.measure.subtle.height.left
+  border-style dashed
+
+.ph.speccer.measure.subtle
+  &.width.top
+    border-bottom none
+  &.width.bottom
+    border-top none
+  &.height.right
+    border-left none
+  &.height.left
+    border-right none
