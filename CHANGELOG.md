@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.0.4](https://github.com/phun-ky/speccer/compare/v6.0.3...v6.0.4) (2022-02-24)
+
+
+### Refactoring
+
+* 💡 A tad refactor ([f5bbc5e](https://github.com/phun-ky/speccer/commit/f5bbc5e6b89ed88703ab3111f32c13b46c555a90))
+
 ### [6.0.3](https://github.com/phun-ky/speccer/compare/v6.0.2...v6.0.3) (2022-02-24)
 
 
