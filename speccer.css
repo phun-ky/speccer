@@ -23,11 +23,6 @@
   --ph-speccer-line-width-negative: -1px;
   --ph-speccer-measure-size: 8px;
 }
-body.ph {
-  margin: 12px;
-  padding: 12px;
-  box-sizing: border-box;
-}
 .ph.speccer,
 .ph.speccer::after,
 .ph.speccer::before {
