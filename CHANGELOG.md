@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.0.3](https://github.com/phun-ky/speccer/compare/v6.0.2...v6.0.3) (2022-02-24)
+
+
+### Bug
+
+* CSS files ommited ([10b3c62](https://github.com/phun-ky/speccer/commit/10b3c629b8fb1207eac6f6335d78242c7d3af069))
+
 ### [6.0.2](https://github.com/phun-ky/speccer/compare/v6.0.1...v6.0.2) (2022-02-24)
 
 
