@@ -22,24 +22,24 @@ export const create = (html: string, area: string | null) => {
   return _el;
 };
 
-export const element = async (el: HTMLElement) => {
-  if (!el) return;
+export const element = async (targetEl: HTMLElement) => {
+  if (!targetEl) return;
 
-  const _area: string | null = el.getAttribute('data-speccer-typography');
-  const _el_style = await styles.get(el);
+  const _area: string | null = targetEl.getAttribute('data-speccer-typography');
+  const _target_styles = await styles.get(targetEl);
 
-  if (_el_style.display === 'none' || _el_style.visibility === 'hidden' || !el.parentElement) {
+  if (_target_styles.display === 'none' || _target_styles.opacity === '0' || _target_styles.visibility === 'hidden') {
     return;
   }
 
-  el.classList.add('is-specced');
+  targetEl.classList.add('is-specced');
 
-  const _html = await helpers.template(el);
+  const _html = await helpers.template(targetEl);
   const _speccer_el = create(_html, _area);
 
   document.body.appendChild(_speccer_el);
 
-  const _position = await helpers.position(_area, el, _speccer_el);
+  const _position = await helpers.position(_area, targetEl, _speccer_el);
 
   styles.add(_speccer_el, _position);
 };

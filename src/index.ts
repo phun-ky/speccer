@@ -2,12 +2,12 @@
 'use strict';
 
 import './interfaces/global';
-import * as __node from './lib/node';
+import * as node from './lib/node';
 import * as __spacing from './tasks/spec';
 import * as __dissect from './tasks/dissect';
 import * as __measure from './tasks/measure';
 import * as __typography from './tasks/typography';
-import * as __browser from './browser';
+import * as browser from './browser';
 
 export const spacing = __spacing;
 
@@ -18,7 +18,7 @@ export const measure = __measure;
 export const typography = __typography;
 
 const speccer = () => {
-  __node.removeAll('.speccer');
+  node.removeAll('.speccer');
 
   const _els_to_be_specced = document.querySelectorAll(
     '[data-speccer],[data-speccer] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)'
@@ -35,4 +35,4 @@ const speccer = () => {
 
 export default speccer;
 
-__browser.activate(speccer);
+browser.activate(speccer);

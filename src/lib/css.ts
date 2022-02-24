@@ -11,6 +11,42 @@ export const normalizeNumberValue = (value: string | number): number => {
   return (_value >= 0 && _value < 1) || (_value <= 0 && _value > -1) ? 0 : _value;
 };
 
+export const getClassNameFromCSSProperty = (property: string) => {
+  if (property.indexOf('Top') !== -1) {
+    return property.replace('Top', ' top');
+  } else if (property.indexOf('Right') !== -1) {
+    return property.replace('Right', ' right');
+  } else if (property.indexOf('Bottom') !== -1) {
+    return property.replace('Bottom', ' bottom');
+  } else if (property.indexOf('Left') !== -1) {
+    return property.replace('Left', ' left');
+  }
+
+  return '';
+};
+
+export const getClassNameFromMeasureArea = (area: string) => {
+  if (area.indexOf('width') !== -1) {
+    if (area.indexOf('top') !== -1) {
+      return 'width top';
+    } else if (area.indexOf('bottom') !== -1) {
+      return 'width bottom';
+    } else {
+      return 'width bottom';
+    }
+  } else if (area.indexOf('height') !== -1) {
+    if (area.indexOf('right') !== -1) {
+      return 'height right';
+    } else if (area.indexOf('left') !== -1) {
+      return 'height left';
+    } else {
+      return 'height left';
+    }
+  }
+
+  return '';
+};
+
 export const getSpacing = (style: SpacingCSSPropertiesType): SpacingCSSPropertiesType => {
   const { marginTop, marginBottom, marginLeft, marginRight, paddingTop, paddingBottom, paddingLeft, paddingRight } =
     style;
