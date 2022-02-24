@@ -29,18 +29,26 @@ export const create = (textContent = '', area: string, n = 'span') => {
   return _el;
 };
 
-export const element = async (el: HTMLElement, dissectIndex: number) => {
-  if (!el) return;
+export const element = (sectionEl: HTMLElement) => {
+  if (!sectionEl) return;
 
-  const _area: string | null = el.getAttribute('data-anatomy') || '';
+  const _dissection_els = sectionEl.querySelectorAll('[data-anatomy]');
 
-  if (!_area || _area === '') return;
+  if (_dissection_els) {
+    _dissection_els.forEach(async (targetEl: HTMLElement, targetIndex) => {
+      if (!targetEl) return;
 
-  const _dissection_el = create(SPECCER_LITERALS[dissectIndex], _area);
+      const _area: string | null = targetEl.getAttribute('data-anatomy') || '';
 
-  document.body.appendChild(_dissection_el);
+      if (!_area || _area === '') return;
 
-  const _dissection_styles = await helpers.styles(_area, el, _dissection_el);
+      const _dissection_el = create(SPECCER_LITERALS[targetIndex], _area);
 
-  styles.add(_dissection_el, _dissection_styles);
+      document.body.appendChild(_dissection_el);
+
+      const _dissection_styles = await helpers.styles(_area, targetEl, _dissection_el);
+
+      styles.add(_dissection_el, _dissection_styles);
+    });
+  }
 };
