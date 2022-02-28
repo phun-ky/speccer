@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.1.0](https://github.com/phun-ky/speccer/compare/v6.0.5...v6.1.0) (2022-02-28)
+
+
+### Feature
+
+* Add subtle option to measure and anatomy ([43e9c8c](https://github.com/phun-ky/speccer/commit/43e9c8cc08fea2db6a167fae4ec3bf7cc31cbaac))
+
 ### [6.0.5](https://github.com/phun-ky/speccer/compare/v6.0.4...v6.0.5) (2022-02-24)
 
 
