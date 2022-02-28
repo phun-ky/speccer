@@ -111,6 +111,16 @@
         counter-increment: box;
         content: counter(box);
       }
+
+      #ph-speccer-svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 3;
+      }
     </style>
     <script data-manual src="/speccer.js" type="text/javascript"></script>
     <script>
@@ -142,5 +152,15 @@
       window.removeEventListener('resize', speccerEventFunc);
       window.addEventListener('resize', speccerEventFunc);
     </script>
+    <svg id="ph-speccer-svg" class="ph">
+      <path
+        class="ph path original"
+        id="ph-speccer-path"
+        stroke-width="1"
+        fill="none"
+        stroke="red"
+        style="stroke: currentColor"
+      />
+    </svg>
   </body>
 </html>

@@ -38,6 +38,9 @@
   box-sizing: border-box;
   line-height: 12px;
 }
+svg.ph .ph.path {
+  color: var(--ph-speccer-color-contrast, #ff3aa8);
+}
 .ph.speccer.dissection {
   font-family: sans-serif;
   height: var(--ph-speccer-pin-size);

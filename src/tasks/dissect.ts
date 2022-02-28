@@ -2,6 +2,7 @@
 'use strict';
 
 import * as styles from '../lib/styles';
+import { DrawLine } from '../lib/classes';
 import * as classnames from '../lib/classnames';
 import { DissectAreaEnum } from '../enums/area';
 import * as helpers from '../helpers/dissect';
@@ -49,6 +50,14 @@ export const element = (sectionEl: HTMLElement) => {
       const _dissection_styles = await helpers.styles(_area, targetEl, _dissection_el);
 
       styles.add(_dissection_el, _dissection_styles);
+
+      if (_area.indexOf('full') === -1 && _area.indexOf('enclose') === -1) {
+        setTimeout(() => {
+          const _d = new DrawLine();
+
+          _d.connect(targetEl, _dissection_el);
+        }, 1000);
+      }
     });
   }
 };
