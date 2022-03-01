@@ -27,9 +27,11 @@ export const lazy = () => {
     });
   });
 
-  document.querySelectorAll('[data-speccer],[data-speccer] *:not(td)').forEach((el) => {
-    _spec_observer.observe(el);
-  });
+  document
+    .querySelectorAll('[data-speccer],[data-speccer] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)')
+    .forEach((el) => {
+      _spec_observer.observe(el);
+    });
 
   const _measure_observer = new IntersectionObserver((els, observer) => {
     els.forEach((el) => {
