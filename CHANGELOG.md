@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.2.0](https://github.com/phun-ky/speccer/compare/v6.1.0...v6.2.0) (2022-03-01)
+
+
+### Bug
+
+* 🐛 Use correct method to dissect elements ([24035bd](https://github.com/phun-ky/speccer/commit/24035bdecc0df8e85649092302ed54ae661b695b))
+* 🐛 Use correct tags to avoid for browser activation ([bf359d1](https://github.com/phun-ky/speccer/commit/bf359d1ab16e5198c3714948eadf17458c22ef33))
+
+
+### Feature
+
+* 🎸 Expose browser modes ([a650ef0](https://github.com/phun-ky/speccer/commit/a650ef0920a7a9a2c61f6984543bd28b2a9fe2fd))
+
 ## [6.1.0](https://github.com/phun-ky/speccer/compare/v6.0.5...v6.1.0) (2022-02-28)
 
 
