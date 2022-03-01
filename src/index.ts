@@ -17,6 +17,8 @@ export const measure = __measure;
 
 export const typography = __typography;
 
+export const modes = browser;
+
 const speccer = () => {
   node.removeAll('.speccer');
 
