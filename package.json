@@ -27,7 +27,7 @@
   ],
   "standard-version": {
     "scripts": {
-      "prerelease": "npm run build",
+      "prerelease": "npm run build && git add .",
       "posttag": "git push --follow-tags origin master && npm publish"
     },
     "types": [
