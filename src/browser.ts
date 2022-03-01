@@ -48,10 +48,8 @@ export const lazy = () => {
 
   const _dissect_observer = new IntersectionObserver((els, observer) => {
     els.forEach((el) => {
-      const targets = el.target.querySelectorAll('[data-anatomy]');
-
       if (el.intersectionRatio > 0) {
-        targets.forEach(dissect.element);
+        dissect.element(el.target as HTMLElement);
         observer.unobserve(el.target);
       }
     });
