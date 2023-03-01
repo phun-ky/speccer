@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.2.2](https://github.com/phun-ky/speccer/compare/v6.2.1...v6.2.2) (2023-03-01)
+
+
+### Bug
+
+* 🐛 Add files when releasing ([7364c4c](https://github.com/phun-ky/speccer/commit/7364c4c163472575726e6a90ff6c858e03902bfc))
+
+
+### Documentation
+
+* ✏️ Add documentation regarding dark mode ([0b46ca7](https://github.com/phun-ky/speccer/commit/0b46ca7624ed9986dd1ce3b242f09f10c0518fd3))
+
+
+### Refactoring
+
+* 💡 Refactor ([5460139](https://github.com/phun-ky/speccer/commit/54601393d1c74f7557f4d4363440b523726b1570))
+
 ### [6.2.1](https://github.com/phun-ky/speccer/compare/v6.2.0...v6.2.1) (2022-03-01)
 
 ## [6.2.0](https://github.com/phun-ky/speccer/compare/v6.1.0...v6.2.0) (2022-03-01)
