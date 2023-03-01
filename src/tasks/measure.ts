@@ -5,7 +5,11 @@ import * as classnames from '../lib/classnames';
 import * as styles from '../lib/styles';
 import { waitForFrame } from '../lib/debounce';
 
-const create = (text: string | number = '', area: string | null = '', tag = 'span') => {
+const create = (
+  text: string | number = '',
+  area: string | null = '',
+  tag = 'span'
+) => {
   const _el = document.createElement(tag);
 
   _el.setAttribute('title', text + 'px');
@@ -27,7 +31,11 @@ export const element = async (targetEl: HTMLElement) => {
 
   const _target_styles = await styles.get(targetEl);
 
-  if (_target_styles.display === 'none' || _target_styles.opacity === '0' || _target_styles.visibility === 'hidden') {
+  if (
+    _target_styles.display === 'none' ||
+    _target_styles.opacity === '0' ||
+    _target_styles.visibility === 'hidden'
+  ) {
     return;
   }
 

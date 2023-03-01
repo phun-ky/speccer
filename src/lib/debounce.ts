@@ -1,14 +1,18 @@
-/* eslint no-console:0 */
+/* eslint @typescript-eslint/no-explicit-any: ["error", { "fixToUnknown": true }] */
 'use strict';
+
+import { DebounceAnyFunctionType } from 'types/debounce';
 
 export const waitForFrame = () => new Promise(requestAnimationFrame);
 
-const debounce = function (func: Function, wait: number, immediate?: boolean): Function {
+const debounce = function (
+  func: DebounceAnyFunctionType,
+  wait: number,
+  immediate?: boolean
+): DebounceAnyFunctionType {
   let timeout: null | ReturnType<typeof setTimeout>;
 
-  return function (this: any) {
-    const context = this;
-    const args = arguments;
+  return function (context: unknown, ...args: unknown[]) {
     const later = function () {
       timeout = null;
 

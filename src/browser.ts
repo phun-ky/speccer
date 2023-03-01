@@ -1,12 +1,15 @@
 /* eslint no-console:0 */
 'use strict';
 
+import { SpeccerFunctionType } from 'types/speccer';
+
 import * as resize from './lib/resize';
+
 import * as spec from './tasks/spec';
 import * as measure from './tasks/measure';
 import * as dissect from './tasks/dissect';
 
-export const dom = (speccer: Function) => {
+export const dom = (speccer: SpeccerFunctionType) => {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
       speccer();
@@ -28,7 +31,9 @@ export const lazy = () => {
   });
 
   document
-    .querySelectorAll('[data-speccer],[data-speccer] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)')
+    .querySelectorAll(
+      '[data-speccer],[data-speccer] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)'
+    )
     .forEach((el) => {
       _spec_observer.observe(el);
     });
@@ -60,11 +65,11 @@ export const lazy = () => {
   });
 };
 
-export const manual = (speccer: Function) => {
+export const manual = (speccer: SpeccerFunctionType) => {
   window.speccer = speccer;
 };
 
-export const activate = (speccer: Function) => {
+export const activate = (speccer: SpeccerFunctionType) => {
   const _script = document.currentScript;
 
   if (_script) {
@@ -88,7 +93,10 @@ export const activate = (speccer: Function) => {
         dom(speccer);
       }
 
-      if (!_script.hasAttribute('data-manual') && !_script.hasAttribute('data-lazy')) {
+      if (
+        !_script.hasAttribute('data-manual') &&
+        !_script.hasAttribute('data-lazy')
+      ) {
         resize.activate(speccer);
       }
     }
