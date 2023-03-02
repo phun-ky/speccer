@@ -140,7 +140,7 @@ This will give a dashed border, and a more subtle pin style.
 
 ### Element typogpraphy
 
-![Image of speccer](./assets/typography.png)
+![Image of typography speccer](./assets/typography.png)
 
 In your component examples, use the following attribute.
 
@@ -191,7 +191,9 @@ document.querySelectorAll('[data-anatomy-section]').forEach((el) => {
 
 ## Customization
 
-You can use the provided CSS variables to customize the look and feel. If more control is needed, you can use CSS overrides :)
+![Image of speccer dark mode](./assets/darkmode.png)
+
+Allthough the styling works nicely with dark mode, you can use the provided CSS variables to customize the look and feel. If more control is needed, you can use CSS overrides :)
 
 ```css
 .ph.speccer {

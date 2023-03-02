@@ -27,7 +27,7 @@ export default [
   },
   {
     input: './dts/index.d.ts',
-    output: [{ file: './dts/index.d.ts', format: 'es' }],
+    output: [{ file: './index.d.ts', format: 'es' }],
     plugins: [dts()]
   }
 ];

@@ -1,7 +1,9 @@
 /* eslint no-console:0 */
 'use strict';
 
-export const set = (el: HTMLElement, attrs: {}) => {
+import { AttributesMapInterface } from 'interfaces/attributes';
+
+export const set = (el: HTMLElement, attrs?: AttributesMapInterface) => {
   if (!el) return;
 
   if (!attrs) return;
@@ -9,7 +11,7 @@ export const set = (el: HTMLElement, attrs: {}) => {
   Object.keys(attrs).forEach((key) => el.setAttribute(key, attrs[key]));
 };
 
-export const remove = (el: HTMLElement, attrs: {}) => {
+export const remove = (el: HTMLElement, attrs?: AttributesMapInterface) => {
   if (!el) return;
 
   if (!attrs) return;

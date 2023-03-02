@@ -56,7 +56,6 @@ svg.ph .ph.path {
   line-height: 150%;
   font-size: 16px;
   z-index: 100000;
-  box-sizing: content-box;
 }
 .ph.speccer.dissection::after {
   content: "";

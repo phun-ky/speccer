@@ -2,7 +2,12 @@ import * as styles from '../../lib/styles';
 import { offset } from '../../lib/position';
 import { waitForFrame } from '../../lib/debounce';
 
-export const position = async (property: string, value: number, spacingEl: HTMLElement, targetEl: HTMLElement) => {
+export const position = async (
+  property: string,
+  value: number,
+  spacingEl: HTMLElement,
+  targetEl: HTMLElement
+) => {
   await waitForFrame();
 
   const _target_rect = targetEl.getBoundingClientRect();
@@ -58,7 +63,10 @@ export const position = async (property: string, value: number, spacingEl: HTMLE
       height: `${value}px`,
       width: _target_rect.width + 'px',
       left: _target_offset.left + 'px',
-      top: _target_offset.top + (parseInt(_target_rect.height + '', 10) - value) + 'px'
+      top:
+        _target_offset.top +
+        (parseInt(_target_rect.height + '', 10) - value) +
+        'px'
     });
   }
 
@@ -66,7 +74,10 @@ export const position = async (property: string, value: number, spacingEl: HTMLE
     styles.add(spacingEl, {
       height: _target_rect.height + 'px',
       width: `${value}px`,
-      left: _target_offset.left + (parseInt(_target_rect.width + '', 10) - value) + 'px',
+      left:
+        _target_offset.left +
+        (parseInt(_target_rect.width + '', 10) - value) +
+        'px',
       top: _target_offset.top + 'px'
     });
   }

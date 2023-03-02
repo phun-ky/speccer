@@ -1,9 +1,10 @@
-/* eslint no-console:0 */
 'use strict';
+
+import { SpeccerFunctionType } from 'types/speccer';
 
 import debounce from './debounce';
 
-export const activate = (speccer: Function) => {
+export const activate = (speccer: SpeccerFunctionType) => {
   const speccerEventFunc = () =>
     debounce(() => {
       speccer();

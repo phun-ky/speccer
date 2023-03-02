@@ -18,7 +18,10 @@ export const add = async (el: HTMLElement, styles: [] | object) => {
   await waitForFrame();
 
   if (Array.isArray(styles)) {
-    styles.forEach((style: { key: string; value: string }) => (el.style[style.key] = style.value));
+    styles.forEach(
+      (style: { key: string; value: string }) =>
+        (el.style[style.key] = style.value)
+    );
   } else {
     Object.keys(styles).forEach((key) => (el.style[key] = styles[key]));
   }
