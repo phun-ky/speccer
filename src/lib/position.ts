@@ -1,4 +1,4 @@
-import { waitForFrame } from './debounce';
+import { waitForFrame } from './wait';
 
 import { PositionPropertiesType, PositionInputType } from '../types/position';
 import { GetRecPropertiesInterface } from 'interfaces/position';

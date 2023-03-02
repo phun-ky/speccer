@@ -1,6 +1,6 @@
 /* eslint no-console:0 */
 'use strict';
-import { waitForFrame } from './debounce';
+import { waitForFrame } from './wait';
 
 export const add = async (el: HTMLElement, styles: [] | object) => {
   if (

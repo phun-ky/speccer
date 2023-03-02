@@ -1,6 +1,6 @@
 import * as styles from '../../lib/styles';
 import { offset } from '../../lib/position';
-import { waitForFrame } from '../../lib/debounce';
+import { waitForFrame } from '../../lib/wait';
 
 export const position = async (
   property: string,

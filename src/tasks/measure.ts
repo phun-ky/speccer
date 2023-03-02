@@ -3,7 +3,7 @@
 
 import * as classnames from '../lib/classnames';
 import * as styles from '../lib/styles';
-import { waitForFrame } from '../lib/debounce';
+import { waitForFrame } from '../lib/wait';
 
 const create = (
   text: string | number = '',
