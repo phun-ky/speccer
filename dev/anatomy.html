@@ -19,13 +19,32 @@
         grid-template-columns: repeat(5, 160px);
         grid-template-rows: repeat(1, 160px);
         grid-auto-flow: dense;
+        grid-gap: 7rem 7rem;
+      "
+    >
+      <div data-anatomy="outline top curve" class="ph box"></div>
+      <div data-anatomy="outline right curve" class="ph box"></div>
+      <div data-anatomy="outline bottom curve" class="ph box"></div>
+      <div data-anatomy="outline left curve" class="ph box"></div>
+    </div>
+    <div
+      data-anatomy-section
+      class="ph container"
+      style="
+        padding: 5rem;
+        display: grid;
+        grid-template-columns: repeat(5, 160px);
+        grid-template-rows: repeat(1, 160px);
+        grid-auto-flow: dense;
         grid-gap: 2rem 2rem;
       "
     >
-      <div data-anatomy="outline top" class="ph box"></div>
-      <div data-anatomy="outline full right" class="ph box"></div>
-      <div data-anatomy="outline enclose bottom" class="ph box"></div>
-      <div data-anatomy="outline left" class="ph box"></div>
+      <div data-anatomy="outline" class="ph box"></div>
+      <div data-anatomy="outline full" class="ph box"></div>
+      <div data-anatomy="outline enclose" class="ph box"></div>
+      <div data-anatomy="outline subtle" class="ph box"></div>
+      <div data-anatomy="outline subtle full" class="ph box"></div>
+      <div data-anatomy="outline subtle enclose" class="ph box"></div>
     </div>
     <div
       data-anatomy-section
@@ -152,14 +171,18 @@
       window.removeEventListener('resize', speccerEventFunc);
       window.addEventListener('resize', speccerEventFunc);
     </script>
-    <svg id="ph-speccer-svg" class="ph">
+    <svg
+      class="ph"
+      viewBox="0 0"
+      id="ph-speccer-svg"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         class="ph path original"
         id="ph-speccer-path"
-        stroke-width="1"
         fill="none"
-        stroke="red"
-        style="stroke: currentColor"
+        stroke-width="1"
+        stroke="currentColor"
       />
     </svg>
   </body>
