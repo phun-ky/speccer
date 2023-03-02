@@ -16,7 +16,7 @@
     "styles": "npm run stylus && npm run postcss",
     "stylus": "rm -rf ./speccer.css && stylus ./src/styles/index.styl -o ./speccer.css",
     "postcss": "rm -rf ./speccer.min.css && postcss ./speccer.css -o  speccer.min.css",
-    "dev": "npx browser-sync start --server --files \"dev/*.html\" --index \"dev/index.html\" --serveStatic \"/dev/*.html\"",
+    "dev": "npx browser-sync start --server --files \"dev/*.html\" \"*.css\" --index \"dev/index.html\" --serveStatic \"/dev/*.html\"",
     "commit": "npx git-cz",
     "release": "npx standard-version"
   },
