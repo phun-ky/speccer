@@ -24,14 +24,28 @@ export const coords = {
 };
 
 export const xy = {
-  center: (rect: DOMRect) => ({ x: coords.center_x(rect), y: coords.center_y(rect) }),
+  center: (rect: DOMRect) => ({
+    x: coords.center_x(rect),
+    y: coords.center_y(rect)
+  }),
   top: (rect: DOMRect) => ({ x: coords.center_x(rect), y: coords.top(rect) }),
-  right: (rect: DOMRect) => ({ x: coords.right(rect), y: coords.center_y(rect) }),
-  bottom: (rect: DOMRect) => ({ x: coords.center_x(rect), y: coords.bottom(rect) }),
+  right: (rect: DOMRect) => ({
+    x: coords.right(rect),
+    y: coords.center_y(rect)
+  }),
+  bottom: (rect: DOMRect) => ({
+    x: coords.center_x(rect),
+    y: coords.bottom(rect)
+  }),
   left: (rect: DOMRect) => ({ x: coords.left(rect), y: coords.center_y(rect) })
 };
 
-export const get_coords_pair_from_objects = (el1: HTMLElement, el2: HTMLElement, pos1 = 'center', pos2 = 'center') => {
+export const get_coords_pair_from_objects = (
+  el1: HTMLElement,
+  el2: HTMLElement,
+  pos1 = 'center',
+  pos2 = 'center'
+) => {
   if (!el1 || !el2) {
     throw 'No element given';
   }

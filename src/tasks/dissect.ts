@@ -7,6 +7,8 @@ import * as classnames from '../lib/classnames';
 import { DissectAreaEnum } from '../enums/area';
 import * as helpers from '../helpers/dissect';
 import { SPECCER_LITERALS } from '../lib/constants';
+import { useSVG } from 'lib/area';
+import { waitFor } from 'lib/wait';
 
 export const create = (textContent = '', area: string, n = 'span') => {
   const _el = document.createElement(n);
@@ -46,35 +48,38 @@ export const element = (sectionEl: HTMLElement) => {
 
   if (_dissection_els) {
     _dissection_els.forEach(async (targetEl: HTMLElement, targetIndex) => {
-      if (!targetEl) return;
+      if (!targetEl) return Promise.resolve();
 
-      const _area: string | null = targetEl.getAttribute('data-anatomy') || '';
+      const _areas_string: string | null =
+        targetEl.getAttribute('data-anatomy') || '';
 
       if (
-        !_area ||
-        _area === '' ||
-        _area.indexOf(DissectAreaEnum.Outline) === -1
+        !_areas_string ||
+        _areas_string === '' ||
+        _areas_string.indexOf(DissectAreaEnum.Outline) === -1
       )
         return;
 
-      const _dissection_el = create(SPECCER_LITERALS[targetIndex], _area);
+      const _dissection_el = create(
+        SPECCER_LITERALS[targetIndex],
+        _areas_string
+      );
 
       document.body.appendChild(_dissection_el);
 
       const _dissection_styles = await helpers.styles(
-        _area,
+        _areas_string,
         targetEl,
-        _dissection_el
+        _dissection_el,
+        useSVG(_areas_string)
       );
 
-      styles.add(_dissection_el, _dissection_styles);
+      await styles.add(_dissection_el, _dissection_styles);
 
-      if (_area.indexOf('full') === -1 && _area.indexOf('enclose') === -1) {
-        setTimeout(() => {
-          const _d = new DrawLine();
+      await waitFor(500);
 
-          _d.connect(targetEl, _dissection_el);
-        }, 1000);
+      if (useSVG(_areas_string)) {
+        new DrawLine(targetEl, _dissection_el);
       }
     });
   }

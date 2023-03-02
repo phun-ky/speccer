@@ -16,4 +16,5 @@ export enum DissectAreaEnum {
   Right = 'right',
   Bottom = 'bottom',
   Top = 'top',
+  Curve = 'curve',
 }
