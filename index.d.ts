@@ -2,6 +2,7 @@ import { SpeccerFunctionType } from 'types/speccer';
 
 declare global {
     interface Window {
+        DrawLine: any;
         speccer: any;
     }
 }

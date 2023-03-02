@@ -23,19 +23,24 @@
   --ph-speccer-line-width-negative: -1px;
   --ph-speccer-measure-size: 8px;
 }
+svg.ph,
 .ph.speccer,
 .ph.speccer::after,
 .ph.speccer::before {
+  pointer-events: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+.ph.speccer:not(path),
+.ph.speccer::after:not(path),
+.ph.speccer::before:not(path) {
   font-family: var(--ph-speccer-font-family) !important;
   justify-content: center;
   align-items: center;
   z-index: 99999;
   position: absolute;
-  pointer-events: none;
-  user-select: none;
   display: flex;
   font-size: 12px;
-  box-sizing: border-box;
   line-height: 12px;
 }
 svg.ph .ph.path {
@@ -66,6 +71,9 @@ svg.ph .ph.path {
   background-color: var(--ph-speccer-pin-color);
   z-index: 99999;
 }
+.ph.speccer.dissection.curve::after {
+  content: none !important;
+}
 .ph.speccer.dissection.outline::after,
 .ph.speccer.dissection.outline.top::after {
   height: var(--ph-speccer-pin-space);
@@ -78,11 +86,13 @@ svg.ph .ph.path {
   width: var(--ph-speccer-pin-space);
   top: 50%;
   left: 100%;
+  right: auto;
 }
 .ph.speccer.dissection.outline.right::after {
   height: var(--ph-speccer-line-width);
   width: var(--ph-speccer-pin-space);
   top: 50%;
+  left: auto;
   right: 100%;
 }
 .ph.speccer.dissection.outline.bottom::after {
@@ -117,6 +127,14 @@ svg.ph .ph.path {
   background-color: transparent;
   color: var(--ph-speccer-measure-color);
   border: var(--ph-speccer-line-width) solid var(--ph-speccer-pin-color);
+}
+.ph.speccer.dissection.outline.enclose::after {
+  top: calc(var(--ph-speccer-line-width-negative) - var(--ph-speccer-pin-size) - var(--ph-speccer-pin-space));
+  bottom: auto;
+}
+.ph.speccer.dissection.outline.enclose::before {
+  bottom: 100%;
+  top: auto;
 }
 .ph.speccer.dissection.outline.enclose.right::after {
   left: calc(100% + calc(var(--ph-speccer-pin-space) + var(--ph-speccer-line-width)));
@@ -155,8 +173,16 @@ svg.ph .ph.path {
   background-color: transparent;
   color: var(--ph-speccer-measure-color);
   border: var(--ph-speccer-line-width) solid var(--ph-speccer-pin-color);
+  border-bottom: none;
+}
+.ph.speccer.dissection.outline.full::after {
+  top: calc(-8px - var(--ph-speccer-pin-space));
+}
+.ph.speccer.dissection.outline.full::before {
+  bottom: 100%;
 }
 .ph.speccer.dissection.outline.full.right {
+  border: var(--ph-speccer-line-width) solid var(--ph-speccer-pin-color);
   border-left: none;
 }
 .ph.speccer.dissection.outline.full.right::after {
@@ -164,8 +190,10 @@ svg.ph .ph.path {
 }
 .ph.speccer.dissection.outline.full.right::before {
   left: 100%;
+  right: auto;
 }
 .ph.speccer.dissection.outline.full.left {
+  border: var(--ph-speccer-line-width) solid var(--ph-speccer-pin-color);
   border-right: none;
 }
 .ph.speccer.dissection.outline.full.left::after {
@@ -173,8 +201,10 @@ svg.ph .ph.path {
 }
 .ph.speccer.dissection.outline.full.left::before {
   right: 100%;
+  left: auto;
 }
 .ph.speccer.dissection.outline.full.top {
+  border: var(--ph-speccer-line-width) solid var(--ph-speccer-pin-color);
   border-bottom: none;
 }
 .ph.speccer.dissection.outline.full.top::after {
@@ -184,6 +214,7 @@ svg.ph .ph.path {
   bottom: 100%;
 }
 .ph.speccer.dissection.outline.full.bottom {
+  border: var(--ph-speccer-line-width) solid var(--ph-speccer-pin-color);
   border-top: none;
 }
 .ph.speccer.dissection.outline.full.bottom::after {
@@ -212,10 +243,12 @@ svg.ph .ph.path {
 .ph.speccer.dissection.outline.full.left {
   width: 8px;
 }
+.ph.speccer.dissection.outline.full,
 .ph.speccer.dissection.outline.full.top,
 .ph.speccer.dissection.outline.full.bottom {
   height: 8px;
 }
+.ph.speccer.dissection.outline.full::after,
 .ph.speccer.dissection.outline.full.right::after,
 .ph.speccer.dissection.outline.full.left::after,
 .ph.speccer.dissection.outline.full.top::after,
@@ -239,11 +272,13 @@ svg.ph .ph.path {
   top: 50%;
   transform: translateY(-50%);
 }
+.ph.speccer.dissection.outline.full::after,
 .ph.speccer.dissection.outline.full.top::after,
 .ph.speccer.dissection.outline.full.bottom::after {
   left: 50%;
   transform: translateX(-50%);
 }
+.ph.speccer.dissection.outline.full::before,
 .ph.speccer.dissection.outline.full.right::before,
 .ph.speccer.dissection.outline.full.left::before,
 .ph.speccer.dissection.outline.full.top::before,
@@ -261,6 +296,7 @@ svg.ph .ph.path {
   height: var(--ph-speccer-line-width);
   width: calc(var(--ph-speccer-pin-space) + var(--ph-speccer-line-width));
 }
+.ph.speccer.dissection.outline.full::before,
 .ph.speccer.dissection.outline.full.top::before,
 .ph.speccer.dissection.outline.full.bottom::before {
   left: 50%;
@@ -272,10 +308,12 @@ svg.ph .ph.path {
 .ph.speccer.dissection.outline.enclose.left {
   width: 8px;
 }
+.ph.speccer.dissection.outline.enclose,
 .ph.speccer.dissection.outline.enclose.top,
 .ph.speccer.dissection.outline.enclose.bottom {
   height: 8px;
 }
+.ph.speccer.dissection.outline.enclose::after,
 .ph.speccer.dissection.outline.enclose.right::after,
 .ph.speccer.dissection.outline.enclose.left::after,
 .ph.speccer.dissection.outline.enclose.top::after,
@@ -299,11 +337,13 @@ svg.ph .ph.path {
   top: 50%;
   transform: translateY(-50%);
 }
+.ph.speccer.dissection.outline.enclose::after,
 .ph.speccer.dissection.outline.enclose.top::after,
 .ph.speccer.dissection.outline.enclose.bottom::after {
   left: 50%;
   transform: translateX(-50%);
 }
+.ph.speccer.dissection.outline.enclose::before,
 .ph.speccer.dissection.outline.enclose.right::before,
 .ph.speccer.dissection.outline.enclose.left::before,
 .ph.speccer.dissection.outline.enclose.top::before,
@@ -321,6 +361,7 @@ svg.ph .ph.path {
   height: var(--ph-speccer-line-width);
   width: calc(var(--ph-speccer-pin-space) + var(--ph-speccer-line-width));
 }
+.ph.speccer.dissection.outline.enclose::before,
 .ph.speccer.dissection.outline.enclose.top::before,
 .ph.speccer.dissection.outline.enclose.bottom::before {
   left: 50%;
@@ -346,21 +387,24 @@ svg.ph .ph.path {
   border-top: var(--ph-speccer-line-width) dashed var(--ph-speccer-pin-color);
 }
 .ph.speccer.dissection.outline.full.subtle {
-  border-width: var(--ph-speccer-line-width);
-  border-style: dashed;
-  border-color: var(--ph-speccer-pin-color);
+  border: var(--ph-speccer-line-width) dashed var(--ph-speccer-pin-color);
   background-color: transparent;
+  border-bottom: none;
 }
 .ph.speccer.dissection.outline.full.subtle.top {
+  border: var(--ph-speccer-line-width) dashed var(--ph-speccer-pin-color);
   border-bottom: none;
 }
 .ph.speccer.dissection.outline.full.subtle.bottom {
+  border: var(--ph-speccer-line-width) dashed var(--ph-speccer-pin-color);
   border-top: none;
 }
 .ph.speccer.dissection.outline.full.subtle.right {
+  border: var(--ph-speccer-line-width) dashed var(--ph-speccer-pin-color);
   border-left: none;
 }
 .ph.speccer.dissection.outline.full.subtle.left {
+  border: var(--ph-speccer-line-width) dashed var(--ph-speccer-pin-color);
   border-right: none;
 }
 .ph.speccer.dissection.outline.full.subtle::after {
