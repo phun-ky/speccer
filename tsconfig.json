@@ -4,7 +4,7 @@
     "lib": ["ES2021", "dom"],
     "sourceMap": true,
     "declaration": true,
-    "declarationDir": "dts",
+    "declarationDir": "./dts",
     "moduleResolution": "node",
     "rootDir": "src",
     "noImplicitReturns": true,
@@ -17,5 +17,13 @@
     "resolveJsonModule": true,
     "types": ["jest", "node", "./node_modules/network-information-types"]
   },
-  "exclude": ["node_modules", "build", "dist", "./speccer.js", "scripts", "tests"]
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "./speccer.js",
+    "scripts",
+    "tests",
+    "dts"
+  ]
 }

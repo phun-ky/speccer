@@ -17,13 +17,22 @@ export const create = (textContent = '', area: string, n = 'span') => {
     _extra_class_names[area] = true;
   }
 
-  if (area.indexOf(DissectAreaEnum.Full) === -1 && area.indexOf(DissectAreaEnum.Enclose) === -1) {
+  if (
+    area.indexOf(DissectAreaEnum.Full) === -1 &&
+    area.indexOf(DissectAreaEnum.Enclose) === -1
+  ) {
     _el.appendChild(_text_node);
-  } else if (area.indexOf(DissectAreaEnum.Full) !== -1 || area.indexOf(DissectAreaEnum.Enclose) !== -1) {
+  } else if (
+    area.indexOf(DissectAreaEnum.Full) !== -1 ||
+    area.indexOf(DissectAreaEnum.Enclose) !== -1
+  ) {
     _el.setAttribute('data-dissection-counter', textContent);
   }
 
-  const _class_names = classnames.cx('ph speccer dissection', _extra_class_names);
+  const _class_names = classnames.cx(
+    'ph speccer dissection',
+    _extra_class_names
+  );
 
   classnames.set(_el, _class_names);
 
@@ -41,13 +50,22 @@ export const element = (sectionEl: HTMLElement) => {
 
       const _area: string | null = targetEl.getAttribute('data-anatomy') || '';
 
-      if (!_area || _area === '') return;
+      if (
+        !_area ||
+        _area === '' ||
+        _area.indexOf(DissectAreaEnum.Outline) === -1
+      )
+        return;
 
       const _dissection_el = create(SPECCER_LITERALS[targetIndex], _area);
 
       document.body.appendChild(_dissection_el);
 
-      const _dissection_styles = await helpers.styles(_area, targetEl, _dissection_el);
+      const _dissection_styles = await helpers.styles(
+        _area,
+        targetEl,
+        _dissection_el
+      );
 
       styles.add(_dissection_el, _dissection_styles);
 

@@ -13,7 +13,10 @@ export const create = (html: string, area: string | null) => {
     _extra_class_names[area] = true;
   }
 
-  const _class_names = classnames.cx('ph speccer typography', _extra_class_names);
+  const _class_names = classnames.cx(
+    'ph speccer typography',
+    _extra_class_names
+  );
 
   _el.innerHTML = html;
 
@@ -28,7 +31,11 @@ export const element = async (targetEl: HTMLElement) => {
   const _area: string | null = targetEl.getAttribute('data-speccer-typography');
   const _target_styles = await styles.get(targetEl);
 
-  if (_target_styles.display === 'none' || _target_styles.opacity === '0' || _target_styles.visibility === 'hidden') {
+  if (
+    _target_styles.display === 'none' ||
+    _target_styles.opacity === '0' ||
+    _target_styles.visibility === 'hidden'
+  ) {
     return;
   }
 

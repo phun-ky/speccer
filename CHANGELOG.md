@@ -2,6 +2,51 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.2.5](https://github.com/phun-ky/speccer/compare/v6.2.4...v6.2.5) (2023-03-01)
+
+### [6.2.4](https://github.com/phun-ky/speccer/compare/v6.2.3...v6.2.4) (2023-03-01)
+
+### [6.2.3](https://github.com/phun-ky/speccer/compare/v6.2.2...v6.2.3) (2023-03-01)
+
+### [6.2.2](https://github.com/phun-ky/speccer/compare/v6.2.1...v6.2.2) (2023-03-01)
+
+
+### Bug
+
+* 🐛 Add files when releasing ([7364c4c](https://github.com/phun-ky/speccer/commit/7364c4c163472575726e6a90ff6c858e03902bfc))
+
+
+### Documentation
+
+* ✏️ Add documentation regarding dark mode ([0b46ca7](https://github.com/phun-ky/speccer/commit/0b46ca7624ed9986dd1ce3b242f09f10c0518fd3))
+
+
+### Refactoring
+
+* 💡 Refactor ([5460139](https://github.com/phun-ky/speccer/commit/54601393d1c74f7557f4d4363440b523726b1570))
+
+### [6.2.1](https://github.com/phun-ky/speccer/compare/v6.2.0...v6.2.1) (2022-03-01)
+
+## [6.2.0](https://github.com/phun-ky/speccer/compare/v6.1.0...v6.2.0) (2022-03-01)
+
+
+### Bug
+
+* 🐛 Use correct method to dissect elements ([24035bd](https://github.com/phun-ky/speccer/commit/24035bdecc0df8e85649092302ed54ae661b695b))
+* 🐛 Use correct tags to avoid for browser activation ([bf359d1](https://github.com/phun-ky/speccer/commit/bf359d1ab16e5198c3714948eadf17458c22ef33))
+
+
+### Feature
+
+* 🎸 Expose browser modes ([a650ef0](https://github.com/phun-ky/speccer/commit/a650ef0920a7a9a2c61f6984543bd28b2a9fe2fd))
+
+## [6.1.0](https://github.com/phun-ky/speccer/compare/v6.0.5...v6.1.0) (2022-02-28)
+
+
+### Feature
+
+* Add subtle option to measure and anatomy ([43e9c8c](https://github.com/phun-ky/speccer/commit/43e9c8cc08fea2db6a167fae4ec3bf7cc31cbaac))
+
 ### [6.0.5](https://github.com/phun-ky/speccer/compare/v6.0.4...v6.0.5) (2022-02-24)
 
 

@@ -4,7 +4,10 @@ import * as styles from '../../lib/styles';
 export const template = async (targetEl: HTMLElement): Promise<string> => {
   const _target_styles = await styles.get(targetEl);
   const _styles = css.getTypography(_target_styles);
-  const _line_height = _styles['lineHeight'] !== 'normal' ? parseInt(_styles['lineHeight'], 10) / 16 + 'rem' : 'normal';
+  const _line_height =
+    _styles['lineHeight'] !== 'normal'
+      ? parseInt(_styles['lineHeight'], 10) / 16 + 'rem'
+      : 'normal';
 
   return (
     `
