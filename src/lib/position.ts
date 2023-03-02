@@ -70,12 +70,21 @@ export const getRec = async (
   const _source_width = _source_rect.width;
 
   return {
+    absolute: (): PositionPropertiesType => {
+      return {
+        top: _target_offset.top,
+        left: _target_offset.left,
+        height: _target_height,
+        width: _target_width
+      };
+    },
     toTop: ({
       center = false,
-      sourceHeight = _source_height
+      sourceHeight = _source_height,
+      modifier = 0
     }: PositionInputType = {}): PositionPropertiesType => {
       return {
-        top: _target_offset.top - sourceHeight,
+        top: _target_offset.top - (sourceHeight + modifier),
         left: center ? _target_offset_center.left : _target_offset.left,
         height: _target_height,
         width: _target_width
@@ -107,10 +116,11 @@ export const getRec = async (
     },
     fromBottom: ({
       center = false,
-      targetHeight = _target_height
+      targetHeight = _target_height,
+      modifier = 0
     }: PositionInputType = {}): PositionPropertiesType => {
       return {
-        top: _target_offset.top + targetHeight,
+        top: _target_offset.top + targetHeight + modifier,
         left: center ? _target_offset_center.left : _target_offset.left,
         height: _target_height,
         width: _target_width
@@ -157,11 +167,12 @@ export const getRec = async (
 
     fromRight: ({
       center = false,
-      targetWidth = _target_width
+      targetWidth = _target_width,
+      modifier = 0
     }: PositionInputType = {}): PositionPropertiesType => {
       return {
         top: center ? _target_offset_center.top : _target_offset.top,
-        left: _target_offset.left + targetWidth,
+        left: _target_offset.left + targetWidth + modifier,
         height: _target_height,
         width: _target_width
       };
