@@ -1,8 +1,41 @@
 /* eslint no-console:0 */
 'use strict';
 
-// https://stackoverflow.com/a/9614122/460422
-export const angle = (cx: number, cy: number, ex: number, ey: number) => {
+import { waitForFrame } from './wait';
+
+/**
+ * Returns the angle between two sets of coordinates
+ *
+ * See {@link https://stackoverflow.com/a/9614122/460422}
+ * @param cx {number}
+ * @param cy {number}
+ * @param ex {number}
+ * @param ey {number}
+ * @param [normalize=true] {bool} If the angle output should be normalized to return value between 0° and 360°
+ * @returns {number} The angle of the given coordinates
+ */
+export const angle = (
+  cx: number,
+  cy: number,
+  ex: number,
+  ey: number,
+  normalize = true
+) => {
+  if (!cx || !cy || !ex || !ey) {
+    throw new SyntaxError('Missing input for `angle`');
+  }
+
+  if (
+    typeof cx !== 'number' ||
+    typeof cy !== 'number' ||
+    typeof ex !== 'number' ||
+    typeof ey !== 'number'
+  ) {
+    throw new TypeError(
+      `Parameters for \`angle\` does not have required type. Requires number! Got: ${typeof cx} ${typeof cy} ${typeof ex} ${typeof ey}`
+    );
+  }
+
   const dy = ey - cy;
   const dx = ex - cx;
 
@@ -10,7 +43,8 @@ export const angle = (cx: number, cy: number, ex: number, ey: number) => {
 
   theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
 
-  //if (theta < 0) theta = 360 + theta; // range [0, 360)
+  if (normalize && theta < 0) theta = 360 + theta; // range [0, 360)
+
   return theta;
 };
 
