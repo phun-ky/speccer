@@ -26,7 +26,8 @@
   z-index 99999
 
 
-.ph.speccer.dissection.curve::after
+.ph.speccer.dissection.svg::after,
+.ph.speccer.dissection.curly::after
   content none !important
 
 .ph.speccer.dissection.outline::after,
@@ -118,7 +119,7 @@
         &::before
           top 100%
           bottom auto
-    &.full
+    &.full:not(.curly)
       border-radius 0
       background-color transparent
       color var(--ph-speccer-measure-color)
@@ -179,68 +180,84 @@
 
 .ph.speccer.dissection.outline.full.right,
 .ph.speccer.dissection.outline.full.left
-  width 8px
+  &:not(.curly)
+    width 8px
 
 .ph.speccer.dissection.outline.full,
 .ph.speccer.dissection.outline.full.top,
 .ph.speccer.dissection.outline.full.bottom
-  height 8px
+  &:not(.curly)
+    height 8px
 
-.ph.speccer.dissection.outline.full::after,
-.ph.speccer.dissection.outline.full.right::after,
-.ph.speccer.dissection.outline.full.left::after,
-.ph.speccer.dissection.outline.full.top::after,
-.ph.speccer.dissection.outline.full.bottom::after
-  content attr(data-dissection-counter)
-  height var(--ph-speccer-pin-size)
-  width var(--ph-speccer-pin-size)
-  display flex
-  position absolute
-  border-radius 100%
-  background-color var(--ph-speccer-pin-color)
-  color var(--ph-speccer-color-text-light)
-  align-items center
-  justify-content center
-  line-height 150%
-  font-size 16px
-  z-index 100000
+.ph.speccer.dissection.outline.full,
+.ph.speccer.dissection.outline.full.right,
+.ph.speccer.dissection.outline.full.left,
+.ph.speccer.dissection.outline.full.top,
+.ph.speccer.dissection.outline.full.bottom
+  &:not(.curly)
+    &::after
+      content attr(data-dissection-counter)
+      height var(--ph-speccer-pin-size)
+      width var(--ph-speccer-pin-size)
+      display flex
+      position absolute
+      border-radius 100%
+      background-color var(--ph-speccer-pin-color)
+      color var(--ph-speccer-color-text-light)
+      align-items center
+      justify-content center
+      line-height 150%
+      font-size 16px
+      z-index 100000
 
-.ph.speccer.dissection.outline.full.right::after,
-.ph.speccer.dissection.outline.full.left::after
-  top 50%
-  transform translateY(-50%)
+.ph.speccer.dissection.outline.full.right,
+.ph.speccer.dissection.outline.full.left
+  &:not(.curly)
+    &::after
+      top 50%
+      transform translateY(-50%)
 
-.ph.speccer.dissection.outline.full::after,
-.ph.speccer.dissection.outline.full.top::after,
-.ph.speccer.dissection.outline.full.bottom::after
-  left 50%
-  transform translateX(-50%)
+.ph.speccer.dissection.outline.full,
+.ph.speccer.dissection.outline.full.top,
+.ph.speccer.dissection.outline.full.bottom
+  &:not(.curly)
+    &::after
+      left 50%
+      transform translateX(-50%)
 
-.ph.speccer.dissection.outline.full::before,
-.ph.speccer.dissection.outline.full.right::before,
-.ph.speccer.dissection.outline.full.left::before,
-.ph.speccer.dissection.outline.full.top::before,
-.ph.speccer.dissection.outline.full.bottom::before
-  content ""
-  position absolute
-  background-color var(--ph-speccer-pin-color)
-  z-index 100000
-  display block
+.ph.speccer.dissection.outline.full,
+.ph.speccer.dissection.outline.full.right,
+.ph.speccer.dissection.outline.full.left,
+.ph.speccer.dissection.outline.full.top,
+.ph.speccer.dissection.outline.full.bottom
+  &:not(.curly)
+    &::before
+      content ""
+      position absolute
+      background-color var(--ph-speccer-pin-color)
+      z-index 100000
+      display block
 
-.ph.speccer.dissection.outline.full.right::before,
-.ph.speccer.dissection.outline.full.left::before
-  top 50%
-  transform translateY(-50%)
-  height var(--ph-speccer-line-width)
-  width calc(var(--ph-speccer-pin-space) + var(--ph-speccer-line-width))
+.ph.speccer.dissection.outline.full.right,
+.ph.speccer.dissection.outline.full.left
+  &:not(.curly)
+    &::before
+      top 50%
+      transform translateY(-50%)
+      height var(--ph-speccer-line-width)
+      width calc(var(--ph-speccer-pin-space) + var(--ph-speccer-line-width))
 
-.ph.speccer.dissection.outline.full::before,
-.ph.speccer.dissection.outline.full.top::before,
-.ph.speccer.dissection.outline.full.bottom::before
-  left 50%
-  transform translateX(-50%)
-  width var(--ph-speccer-line-width)
-  height calc(var(--ph-speccer-pin-space) + var(--ph-speccer-line-width))
+.ph.speccer.dissection.outline.full,
+.ph.speccer.dissection.outline.full.top,
+.ph.speccer.dissection.outline.full.bottom
+  &:not(.curly)
+    &::before
+      left 50%
+      transform translateX(-50%)
+      width var(--ph-speccer-line-width)
+      height calc(var(--ph-speccer-pin-space) + var(--ph-speccer-line-width))
+
+
 
 .ph.speccer.dissection.outline.enclose.right,
 .ph.speccer.dissection.outline.enclose.left
@@ -325,7 +342,7 @@
       background-color transparent
       border-top var(--ph-speccer-line-width) dashed var(--ph-speccer-pin-color)
 
-.ph.speccer.dissection.outline.full.subtle
+.ph.speccer.dissection.outline.full.subtle:not(.curly)
   border var(--ph-speccer-line-width) dashed var(--ph-speccer-pin-color)
   background-color transparent
   border-bottom none

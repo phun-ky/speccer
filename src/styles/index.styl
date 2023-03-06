@@ -58,20 +58,26 @@ svg.ph,
   box-sizing border-box
 
 
-.ph.speccer,
+.ph.speccer:not(path),
 .ph.speccer::after,
 .ph.speccer::before
-  &:not(path)
-    font-family var(--ph-speccer-font-family) !important
-    justify-content center
-    align-items center
-    z-index 99999
-    position absolute
-    display flex
-    font-size 12px
-    line-height 12px
+  font-family var(--ph-speccer-font-family) !important
+  justify-content center
+  align-items center
+  z-index 99999
+  position absolute
+  display flex
+  font-size 12px
+  line-height 12px
 
-
+#ph-speccer-svg
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  pointer-events none
+  z-index 3
 
 svg.ph .ph.path
   color var(--ph-speccer-color-contrast,$ph-speccer-color-contrast )

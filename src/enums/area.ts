@@ -16,5 +16,15 @@ export enum DissectAreaEnum {
   Right = 'right',
   Bottom = 'bottom',
   Top = 'top',
-  Curve = 'curve',
+  SVG = 'svg',
+  Curly = 'curly',
+}
+
+export enum MeasureAreaEnum {
+  Width = 'width',
+  Height = 'height',
+  Left = 'left',
+  Right = 'right',
+  Bottom = 'bottom',
+  Top = 'top',
 }
