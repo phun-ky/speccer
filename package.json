@@ -29,7 +29,7 @@
   "standard-version": {
     "scripts": {
       "prerelease": "npm run build && git add .",
-      "posttag": "git push --follow-tags origin master"
+      "posttag": "git push --follow-tags origin main"
     },
     "types": [
       {
