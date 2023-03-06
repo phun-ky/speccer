@@ -3,8 +3,6 @@
 
 import { DebounceAnyFunctionType } from 'types/debounce';
 
-export const waitForFrame = () => new Promise(requestAnimationFrame);
-
 const debounce = function (
   func: DebounceAnyFunctionType,
   wait: number,

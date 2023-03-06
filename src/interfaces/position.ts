@@ -2,6 +2,8 @@ import { PositionInputType, PositionPropertiesType } from 'types/position';
 
 export interface GetRecPropertiesInterface {
   // eslint-disable-next-line no-unused-vars
+  absolute: (inp?: PositionInputType) => PositionPropertiesType;
+  // eslint-disable-next-line no-unused-vars
   toTop: (inp?: PositionInputType) => PositionPropertiesType;
   // eslint-disable-next-line no-unused-vars
   fromTop: (inp?: PositionInputType) => PositionPropertiesType;
