@@ -2,7 +2,8 @@ import { SpeccerFunctionType } from 'types/speccer';
 
 declare global {
     interface Window {
-        DrawLine: any;
+        DrawSVGCurlyBracket: any;
+        DrawSVGLine: any;
         speccer: any;
     }
 }
