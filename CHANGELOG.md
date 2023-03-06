@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.3.0](https://github.com/phun-ky/speccer/compare/v6.2.5...v6.3.0) (2023-03-06)
+
+
+### Refactoring
+
+* 💡 Add docs to `angle` and add option to normalize ([609e3c3](https://github.com/phun-ky/speccer/commit/609e3c305ecc9122e87cf7593decaa03804e3922))
+* 💡 Finish refactor of position ([f838bc7](https://github.com/phun-ky/speccer/commit/f838bc77bb353faa5a450cee9216ee84293a88eb))
+* 💡 Move waitFor* to separate file ([7d4bae4](https://github.com/phun-ky/speccer/commit/7d4bae4362f8ec8919695444ac7d29f223743416))
+
+
+### Feature
+
+* 🎸 Add new helper constants ([70d6e82](https://github.com/phun-ky/speccer/commit/70d6e822290a39601957610df7f83bd9fabc78b9))
+* 🎸 Add support to use bezier curves/svg ([d457edf](https://github.com/phun-ky/speccer/commit/d457edfa83982243fdc89a8e2d93b0fa36e14f2e)), closes [#18](https://github.com/phun-ky/speccer/issues/18)
+* 🎸 Finalize SVG feature ([0c9dff4](https://github.com/phun-ky/speccer/commit/0c9dff4c604e71874069a2d3462c8dfe621042a9)), closes [#18](https://github.com/phun-ky/speccer/issues/18)
+
+
+### Bug
+
+* 🐛 Fix bug with position and refactor ([cce426a](https://github.com/phun-ky/speccer/commit/cce426adcce0d5742893bde0311d4961a92f364f))
+* 🐛 Some issues with borders and positioning ([ae3323b](https://github.com/phun-ky/speccer/commit/ae3323b77c0e676b457ac2ace217d6a83c4f4f99))
+
+
+### Documentation
+
+* ✏️ Add docs about curly brackets ([4f72c2c](https://github.com/phun-ky/speccer/commit/4f72c2c543a6f96078b72da78c622f2623939417))
+
 ### [6.2.5](https://github.com/phun-ky/speccer/compare/v6.2.4...v6.2.5) (2023-03-01)
 
 ### [6.2.4](https://github.com/phun-ky/speccer/compare/v6.2.3...v6.2.4) (2023-03-01)
