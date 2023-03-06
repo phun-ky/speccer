@@ -9,10 +9,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "rollup": "rollup -c",
-    "prerollup:dev": "npm run clean && npm run stylus && npm run postcss ",
+    "prerollup:dev": "npm run clean && npm run styles",
     "rollup:dev": "rollup -c -w",
     "clean": "rm -rf dist/ dts/ ./speccer.css ./speccer.min.css ./speccer.js",
-    "build": "npm run clean && npm run rollup && npm run stylus && npm run postcss",
+    "build": "npm run clean && npm run rollup && npm run styles",
     "styles": "npm run stylus && npm run postcss",
     "stylus": "rm -rf ./speccer.css && stylus ./src/styles/index.styl -o ./speccer.css",
     "postcss": "rm -rf ./speccer.min.css && postcss ./speccer.css -o  speccer.min.css",
