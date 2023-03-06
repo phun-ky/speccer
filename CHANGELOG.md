@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.3.2](https://github.com/phun-ky/speccer/compare/v6.3.1...v6.3.2) (2023-03-06)
+
 ### [6.3.1](https://github.com/phun-ky/speccer/compare/v6.3.0...v6.3.1) (2023-03-06)
 
 
