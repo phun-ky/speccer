@@ -1,18 +1,37 @@
-# speccer
+# @phun-ky/speccer
+
+![Image of speccer](./assets/speccer.png)
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](http://makeapullrequest.com) [![SemVer 2.0](https://img.shields.io/badge/SemVer-2.0-green.svg)](http://semver.org/spec/v2.0.0.html) ![npm version](https://img.shields.io/npm/v/@phun-ky/speccer) ![issues](https://img.shields.io/github/issues/phun-ky/speccer) ![license](https://img.shields.io/npm/l/@phun-ky/speccer) ![size](https://img.shields.io/bundlephobia/min/@phun-ky/speccer)
 
 > A zero dependency package to show specifications on components in your design system documentation
 
+- [@phun-ky/speccer](#phun-kyspeccer)
+  - [About](#about)
+  - [Usage](#usage)
+    - [ESM](#esm)
+    - [Script](#script)
+    - [React](#react)
+    - [Element spacing](#element-spacing)
+    - [Element dimensions](#element-dimensions)
+      - [Subtle measure](#subtle-measure)
+    - [Highlight the anatomy of an element](#highlight-the-anatomy-of-an-element)
+      - [Subtle anatomy](#subtle-anatomy)
+    - [Curly brackets](#curly-brackets)
+    - [Element typogpraphy](#element-typogpraphy)
+  - [Advanced usage](#advanced-usage)
+    - [Lazy](#lazy)
+  - [Customization](#customization)
+
+## About
+
 Speccer was created to make it easier to document components in a design system.
 
-    $ npm i @phun-ky/speccer
+```zsh
+npm i @phun-ky/speccer
+```
 
-See demo here: https://codepen.io/phun-ky/pen/xaOrYX
-
-![Image of speccer](./assets/speccer.png)
-
----
+See demo here: <https://codepen.io/phun-ky/pen/xaOrYX>
 
 ## Usage
 
@@ -84,7 +103,7 @@ In your component examples, use the following attribute:
 <div data-speccer class="..."></div>
 ```
 
-This will display the element <em>and all of it's children</em> padding and margin.
+This will display the element _and all of it's children_ padding and margin.
 
 ### Element dimensions
 
@@ -93,12 +112,15 @@ This will display the element <em>and all of it's children</em> padding and marg
 In your component examples, use the following attribute:
 
 ```html
-<div data-speccer-measure="[height right|left] | [width top|bottom]" class="..."></div>
+<div
+  data-speccer-measure="[height right|left] | [width top|bottom]"
+  class="..."
+></div>
 ```
 
 Where `height` and `width` comes with placement flags. Default for `height` is `left`, default for `width` is `top`.
 
-#### Subtle
+#### Subtle measure
 
 ![Image of subtle option for measure](./assets/subtle-measure.png)
 
@@ -118,13 +140,16 @@ In your component examples, use the following attribute. Remember to use the `da
 
 ```html
 <div data-anatomy-section>
-  <div data-anatomy="outline [full|enclose] [left|right|top|bottom]" class="..."></div>
+  <div
+    data-anatomy="outline [full|enclose][curly] [left|right|top|bottom]"
+    class="..."
+  ></div>
 </div>
 ```
 
 This will place a pin to the outline of the element. Default is `top`.
 
-#### Subtle
+#### Subtle anatomy
 
 ![Image of subtle option for anatomy](./assets/subtle.png)
 
@@ -136,6 +161,31 @@ You can also give a more subtle touch to the anatomy elements.
 </div>
 ```
 
+### Curly brackets
+
+You can use curly brackets with the `curly` tag in `data-anatomy` along side `outline full` to provide a more sleek look to the style.
+
+**_NOTE!_** Only works with `outline full`
+
+The curly brackets are made with SVG paths, and it is required to have the following snippet on your page for it to render:
+
+```html
+<svg
+  class="ph"
+  viewBox="0 0"
+  id="ph-speccer-svg"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    class="ph path original"
+    id="ph-speccer-path"
+    fill="none"
+    stroke-width="1"
+    stroke="currentColor"
+  />
+</svg>
+```
+
 This will give a dashed border, and a more subtle pin style.
 
 ### Element typogpraphy
@@ -145,7 +195,9 @@ This will give a dashed border, and a more subtle pin style.
 In your component examples, use the following attribute.
 
 ```html
-<div data-speccer-typography="[left|right|top|bottom]" class="...">Some text</div>
+<div data-speccer-typography="[left|right|top|bottom]" class="...">
+  Some text
+</div>
 ```
 
 This will place a box to display typography information. Default is `left`.
@@ -212,7 +264,8 @@ Allthough the styling works nicely with dark mode, you can use the provided CSS 
   --ph-speccer-typography-color-text: #57575b;
   --ph-speccer-typography-color-value: var(--ph-speccer-color-contrast);
   --ph-speccer-depth-opacity-400: 0.4;
-  --ph-speccer-font-family: 'Menlo for Powerline', 'Menlo Regular for Powerline', 'DejaVu Sans Mono', Consolas, Monaco,
+  --ph-speccer-font-family: 'Menlo for Powerline',
+    'Menlo Regular for Powerline', 'DejaVu Sans Mono', Consolas, Monaco,
     'Andale Mono', 'Ubuntu Mono', monospace;
   --ph-speccer-font-size: 12px;
   --ph-speccer-line-height: 12px;
