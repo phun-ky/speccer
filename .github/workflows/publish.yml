@@ -1,0 +1,46 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Publish
+
+# Controls when the workflow will run
+on:
+  pull_request:
+    types: [closed]
+    branches: [ "main" ]
+    paths:
+      - 'packages/**'
+  workflow_dispatch:
+jobs:
+  publish:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Checkout all branches and tags
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.5.2
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: | # Install and link dependencies
+          npm i
+      - name: "Release" # Interesting step
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@users.noreply.github.com"
+          npm run release
+  notify:
+    name: Notify failed build
+    needs: publish
+    if: failure() && github.event.pull_request == null
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jayqi/failed-build-issue-action@v1
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+
