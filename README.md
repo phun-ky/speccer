@@ -4,7 +4,6 @@
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](http://makeapullrequest.com) [![SemVer 2.0](https://img.shields.io/badge/SemVer-2.0-green.svg)](http://semver.org/spec/v2.0.0.html) ![npm version](https://img.shields.io/npm/v/@phun-ky/speccer) ![issues](https://img.shields.io/github/issues/phun-ky/speccer) ![license](https://img.shields.io/npm/l/@phun-ky/speccer) ![size](https://img.shields.io/bundlephobia/min/@phun-ky/speccer) ![npm](https://img.shields.io/npm/dm/%40phun-ky/speccer) ![GitHub Repo stars](https://img.shields.io/github/stars/phun-ky/speccer)
 
-
 > A zero dependency package to show specifications on components in your design system documentation
 
 - [@phun-ky/speccer](#phun-kyspeccer)
@@ -13,6 +12,9 @@
     - [ESM](#esm)
     - [Script](#script)
     - [React](#react)
+  - [Advanced usage](#advanced-usage)
+    - [Lazy](#lazy)
+  - [Features](#features)
     - [Element spacing](#element-spacing)
     - [Element dimensions](#element-dimensions)
       - [Subtle measure](#subtle-measure)
@@ -20,8 +22,6 @@
       - [Subtle anatomy](#subtle-anatomy)
     - [Curly brackets](#curly-brackets)
     - [Element typogpraphy](#element-typogpraphy)
-  - [Advanced usage](#advanced-usage)
-    - [Lazy](#lazy)
   - [Customization](#customization)
 
 ## About
@@ -93,6 +93,47 @@ const Component = () => {
 
 export default Component;
 ```
+
+## Advanced usage
+
+If you want to control speccer a bit more, you have some options. Apply one of these attributes to the script element for different types of initialization:
+
+```html
+<script src="../speccer.js" data-<manual|instant|dom|lazy></script>
+```
+
+| Tag            | Description                                                         |
+| -------------- | ------------------------------------------------------------------- |
+| `data-manual`  | Makes `window.speccer()` available to be used when you feel like it |
+| `data-instant` | fires off `speccer()` right away                                    |
+| `data-dom`     | Waits for `DOMContentLoaded`                                        |
+| `data-lazy`    | Lazy loads `speccer()` per specced element                          |
+
+If no attribute is applied, it will default to `data-dom`, as in, it will initialize when `DOMContentLoaded` is fired.
+
+### Lazy
+
+If you're importing speccer instead of with a script tag, you can use the following approach to apply lazy loading:
+
+```javascript
+import { dissect } from '@phun-ky/speccer';
+
+let dissectElementObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    const targets = entry.target.querySelectorAll('[data-anatomy]');
+    if (entry.intersectionRatio > 0) {
+      targets.forEach(dissect.element);
+      observer.unobserve(entry.target);
+    }
+  });
+});
+
+document.querySelectorAll('[data-anatomy-section]').forEach((el) => {
+  dissectElementObserver.observe(el);
+});
+```
+
+## Features
 
 ### Element spacing
 
@@ -166,7 +207,8 @@ You can also give a more subtle touch to the anatomy elements.
 
 You can use curly brackets with the `curly` tag in `data-anatomy` along side `outline full` to provide a more sleek look to the style.
 
-**_NOTE!_** Only works with `outline full`
+> [!NOTE]  
+> Only works with `outline full`
 
 The curly brackets are made with SVG paths, and it is required to have the following snippet on your page for it to render:
 
@@ -202,45 +244,6 @@ In your component examples, use the following attribute.
 ```
 
 This will place a box to display typography information. Default is `left`.
-
-## Advanced usage
-
-If you want to control speccer a bit more, you have some options. Apply one of these attributes to the script element for different types of initialization:
-
-```html
-<script src="../speccer.js" data-<manual|instant|dom|lazy></script>
-```
-
-| Tag            | Description                                                         |
-| -------------- | ------------------------------------------------------------------- |
-| `data-manual`  | Makes `window.speccer()` available to be used when you feel like it |
-| `data-instant` | fires off `speccer()` right away                                    |
-| `data-dom`     | Waits for `DOMContentLoaded`                                        |
-| `data-lazy`    | Lazy loads `speccer()` per specced element                          |
-
-If no attribute is applied, it will default to `data-dom`, as in, it will initialize when `DOMContentLoaded` is fired.
-
-### Lazy
-
-If you're importing speccer instead of with a script tag, you can use the following approach to apply lazy loading:
-
-```javascript
-import { dissect } from '@phun-ky/speccer';
-
-let dissectElementObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    const targets = entry.target.querySelectorAll('[data-anatomy]');
-    if (entry.intersectionRatio > 0) {
-      targets.forEach(dissect.element);
-      observer.unobserve(entry.target);
-    }
-  });
-});
-
-document.querySelectorAll('[data-anatomy-section]').forEach((el) => {
-  dissectElementObserver.observe(el);
-});
-```
 
 ## Customization
 
