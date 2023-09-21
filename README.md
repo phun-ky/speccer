@@ -1,6 +1,6 @@
 # @phun-ky/speccer
 
-![Image of speccer](./assets/speccer.png)
+![Image of speccer](./public/speccer.png)
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](http://makeapullrequest.com) [![SemVer 2.0](https://img.shields.io/badge/SemVer-2.0-green.svg)](http://semver.org/spec/v2.0.0.html) ![npm version](https://img.shields.io/npm/v/@phun-ky/speccer) ![issues](https://img.shields.io/github/issues/phun-ky/speccer) ![license](https://img.shields.io/npm/l/@phun-ky/speccer) ![size](https://img.shields.io/bundlephobia/min/@phun-ky/speccer) ![npm](https://img.shields.io/npm/dm/%40phun-ky/speccer) ![GitHub Repo stars](https://img.shields.io/github/stars/phun-ky/speccer)
 
@@ -22,6 +22,7 @@
       - [Subtle anatomy](#subtle-anatomy)
     - [Curly brackets](#curly-brackets)
     - [Element typogpraphy](#element-typogpraphy)
+    - [Mark elements](#mark-elements)
   - [Customization](#customization)
 
 ## About
@@ -137,7 +138,7 @@ document.querySelectorAll('[data-anatomy-section]').forEach((el) => {
 
 ### Element spacing
 
-![Image of speccer](./assets/spacing.png)
+![Image of speccer](./public/spacing.png)
 
 In your component examples, use the following attribute:
 
@@ -149,7 +150,7 @@ This will display the element _and all of it's children_ padding and margin.
 
 ### Element dimensions
 
-![Image of speccer](./assets/measure.png)
+![Image of speccer](./public/measure.png)
 
 In your component examples, use the following attribute:
 
@@ -164,7 +165,7 @@ Where `height` and `width` comes with placement flags. Default for `height` is `
 
 #### Subtle measure
 
-![Image of subtle option for measure](./assets/subtle-measure.png)
+![Image of subtle option for measure](./public/subtle-measure.png)
 
 You can also give a more subtle touch to the measure elements.
 
@@ -176,7 +177,7 @@ This will give a dashed border.
 
 ### Highlight the anatomy of an element
 
-![Image of speccer](./assets/anatomy.png)
+![Image of speccer](./public/anatomy.png)
 
 In your component examples, use the following attribute. Remember to use the `data-anatomy-section` as an attribute on a parent element to scope the marking.
 
@@ -193,7 +194,7 @@ This will place a pin to the outline of the element. Default is `top`.
 
 #### Subtle anatomy
 
-![Image of subtle option for anatomy](./assets/subtle.png)
+![Image of subtle option for anatomy](./public/subtle.png)
 
 You can also give a more subtle touch to the anatomy elements.
 
@@ -233,7 +234,7 @@ This will give a dashed border, and a more subtle pin style.
 
 ### Element typogpraphy
 
-![Image of typography speccer](./assets/typography.png)
+![Image of typography speccer](./public/typography.png)
 
 In your component examples, use the following attribute.
 
@@ -245,9 +246,21 @@ In your component examples, use the following attribute.
 
 This will place a box to display typography information. Default is `left`.
 
+### Mark elements
+
+![Alt text](./public/mark.png)
+
+This will mark the given elements.
+
+In your component examples, use the following attribute.
+
+```html
+<div data-speccer-mark …>…</div>
+```
+
 ## Customization
 
-![Image of speccer dark mode](./assets/darkmode.png)
+![Image of speccer dark mode](./public/darkmode.png)
 
 Allthough the styling works nicely with dark mode, you can use the provided CSS variables to customize the look and feel. If more control is needed, you can use CSS overrides :)
 

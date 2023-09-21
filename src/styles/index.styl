@@ -5,6 +5,8 @@ $ph-speccer-color-margin-hover = rgb(255, 247, 111);
 $ph-speccer-color-text-light = rgb(255, 255, 255);
 $ph-speccer-color-text-dark = rgb(51,51,51);
 $ph-speccer-color-contrast = rgb(255, 58, 168);
+$ph-speccer-mark-background-color = rgba(255, 58, 168, 0.2);
+$ph-speccer-mark-border-color = rgb(255, 58, 168);
 $ph-speccer-spacing-color = $ph-speccer-color-contrast;
 $ph-speccer-measure-color = rgb(255,0,0);
 $ph-speccer-pin-color = $ph-speccer-color-contrast;
@@ -31,6 +33,8 @@ $ph-speccer-measure-size = 8px
   --ph-speccer-color-text-light: $ph-speccer-color-text-light;
   --ph-speccer-color-text-dark: $ph-speccer-color-text-dark;
   --ph-speccer-color-contrast: $ph-speccer-color-contrast;
+  --ph-speccer-mark-background-color $ph-speccer-mark-background-color;
+  --ph-speccer-mark-border-color $ph-speccer-mark-border-color;
   --ph-speccer-spacing-color: var(--ph-speccer-color-contrast);
   --ph-speccer-measure-color: $ph-speccer-measure-color;
   --ph-speccer-pin-color: var(--ph-speccer-color-contrast);
@@ -84,3 +88,4 @@ svg.ph .ph.path
 
 @require './anatomy.styl'
 @require './spacing.styl'
+@require './mark.styl'
