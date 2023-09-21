@@ -6,6 +6,9 @@
     "release": true,
     "tokenRef": "GH_TOKEN"
   },
+  "npm": {
+    "publish": true
+  },
   "plugins": {
     "@release-it/conventional-changelog": {
       "preset": {
