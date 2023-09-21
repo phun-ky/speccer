@@ -1,6 +1,8 @@
-export type DissectStylesOptionsType = {
-  isCurly?: boolean;
-};
+export type DissectStylesOptionsType =
+  | Record<string, never>
+  | {
+      isCurly?: boolean;
+    };
 
 export type CurlyBezierPathOptions = {
   pos1: string;

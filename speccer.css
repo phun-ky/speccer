@@ -6,6 +6,8 @@
   --ph-speccer-color-text-light: #fff;
   --ph-speccer-color-text-dark: #333;
   --ph-speccer-color-contrast: #ff3aa8;
+  --ph-speccer-mark-background-color: rgba(255,58,168,0.2);
+  --ph-speccer-mark-border-color: #ff3aa8;
   --ph-speccer-spacing-color: var(--ph-speccer-color-contrast);
   --ph-speccer-measure-color: #f00;
   --ph-speccer-pin-color: var(--ph-speccer-color-contrast);
@@ -724,4 +726,11 @@ svg.ph .ph.path {
 }
 .ph.speccer.measure.subtle.height.left {
   border-right: none;
+}
+.ph.speccer.mark {
+  background-color: var(--ph-speccer-mark-background-color);
+  border-color: var(--ph-speccer-mark-border-color);
+  border-width: 1px;
+  border-style: solid;
+  position: absolute;
 }

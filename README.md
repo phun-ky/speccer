@@ -22,6 +22,7 @@
       - [Subtle anatomy](#subtle-anatomy)
     - [Curly brackets](#curly-brackets)
     - [Element typogpraphy](#element-typogpraphy)
+    - [Mark elements](#mark-elements)
   - [Customization](#customization)
 
 ## About
@@ -244,6 +245,18 @@ In your component examples, use the following attribute.
 ```
 
 This will place a box to display typography information. Default is `left`.
+
+### Mark elements
+
+![Alt text](./assets/mark.png)
+
+This will mark the given elements.
+
+In your component examples, use the following attribute.
+
+```html
+<div data-speccer-mark …>…</div>
+```
 
 ## Customization
 

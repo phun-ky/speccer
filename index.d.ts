@@ -8,30 +8,40 @@ declare global {
     }
 }
 
-declare const create$2: (text?: string | number, tag?: string) => HTMLElement;
-declare const element$3: (targetEl: HTMLElement) => Promise<void>;
+declare const create$3: (text?: string | number, tag?: string) => HTMLElement;
+declare const element$4: (targetEl: HTMLElement) => Promise<void>;
 
 declare namespace __spacing {
+  export {
+    create$3 as create,
+    element$4 as element,
+  };
+}
+
+declare const create$2: (textContent: string | undefined, area: string, n?: string) => HTMLElement;
+declare const element$3: (sectionEl: HTMLElement) => void;
+
+declare namespace __dissect {
   export {
     create$2 as create,
     element$3 as element,
   };
 }
 
-declare const create$1: (textContent: string | undefined, area: string, n?: string) => HTMLElement;
-declare const element$2: (sectionEl: HTMLElement) => void;
+declare const element$2: (targetEl: HTMLElement) => Promise<void>;
 
-declare namespace __dissect {
+declare namespace __measure {
   export {
-    create$1 as create,
     element$2 as element,
   };
 }
 
-declare const element$1: (targetEl: HTMLElement) => Promise<void>;
+declare const create$1: (n?: string) => HTMLElement;
+declare const element$1: (elementToMark: HTMLElement) => Promise<void>;
 
-declare namespace __measure {
+declare namespace __mark {
   export {
+    create$1 as create,
     element$1 as element,
   };
 }
@@ -69,8 +79,9 @@ declare namespace browser {
 declare const spacing: typeof __spacing;
 declare const dissect: typeof __dissect;
 declare const measure: typeof __measure;
+declare const mark: typeof __mark;
 declare const typography: typeof __typography;
 declare const modes: typeof browser;
 declare const speccer: () => void;
 
-export { speccer as default, dissect, measure, modes, spacing, typography };
+export { speccer as default, dissect, mark, measure, modes, spacing, typography };

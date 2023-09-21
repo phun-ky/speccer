@@ -13,9 +13,9 @@ export const styles = async (
   area: string,
   targetEl: HTMLElement,
   dissectionEl: HTMLElement,
-  options: DissectStylesOptionsType
+  options?: DissectStylesOptionsType
 ) => {
-  const { isCurly } = options;
+  const { isCurly = false } = options || {};
   const SPECCER_PIN_SPACE = css.pinSpace(dissectionEl);
   const SPECCER_MEASURE_SIZE = css.measureSize(dissectionEl);
   const _positional_styles = await position.getRec(dissectionEl, targetEl);
