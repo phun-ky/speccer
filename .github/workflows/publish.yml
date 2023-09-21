@@ -7,8 +7,6 @@ on:
   pull_request:
     types: [closed]
     branches: [ "main" ]
-    paths:
-      - 'packages/**'
   workflow_dispatch:
 jobs:
   publish:
