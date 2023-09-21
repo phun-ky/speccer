@@ -13,7 +13,49 @@
   "plugins": {
     "@release-it/conventional-changelog": {
       "preset": {
-        "name": "conventionalcommits"
+        "name": "conventionalcommits",
+        "types": [
+          {
+            "type": "chore",
+            "section": "Tasks",
+            "hidden": true
+          },
+          {
+            "type": "docs",
+            "section": "Documentation"
+          },
+          {
+            "type": "feat",
+            "section": "Feature"
+          },
+          {
+            "type": "fix",
+            "section": "Bug"
+          },
+          {
+            "type": "perf",
+            "section": "Performance change"
+          },
+          {
+            "type": "refactor",
+            "section": "Refactoring"
+          },
+          {
+            "type": "release",
+            "section": "Create a release commit",
+            "hidden": true
+          },
+          {
+            "type": "style",
+            "section": "Markup, white-space, formatting, missing semi-colons...",
+            "hidden": true
+          },
+          {
+            "type": "test",
+            "section": "Adding missing tests",
+            "hidden": true
+          }
+        ]
       },
       "infile": "CHANGELOG.md"
     }
