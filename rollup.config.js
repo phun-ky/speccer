@@ -6,7 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 
 export default [
   {
-    input: 'src/index.ts',
+    input: 'src/main.ts',
     output: {
       name: 'speccer',
       file: './speccer.js',
@@ -26,8 +26,8 @@ export default [
     ]
   },
   {
-    input: './dts/index.d.ts',
-    output: [{ file: './index.d.ts', format: 'es' }],
+    input: './dts/main.d.ts',
+    output: [{ file: './main.d.ts', format: 'es' }],
     plugins: [dts()]
   }
 ];

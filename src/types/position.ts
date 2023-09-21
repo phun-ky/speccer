@@ -1,3 +1,6 @@
+/**
+ * Type definition for position properties.
+ */
 export type PositionPropertiesType = {
   top: number;
   left: number;
@@ -5,13 +8,16 @@ export type PositionPropertiesType = {
   width: number;
 };
 
+/**
+ * Type definition for input parameters related to positioning.
+ */
 export type PositionInputType =
   | Record<string, never>
   | {
-      center?: boolean;
-      sourceHeight?: number;
-      sourceWidth?: number;
-      targetHeight?: number;
-      targetWidth?: number;
-      modifier?: number;
+      center?: boolean; // Indicates whether to center the position.
+      sourceHeight?: number; // Height of the source element.
+      sourceWidth?: number; // Width of the source element.
+      targetHeight?: number; // Height of the target element.
+      targetWidth?: number; // Width of the target element.
+      modifier?: number; // A modifier value for positioning.
     };
