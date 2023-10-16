@@ -63,7 +63,7 @@
   "homepage": "https://github.com/phun-ky/speccer#readme",
   "devDependencies": {
     "@release-it/conventional-changelog": "^7.0.1",
-    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^11.2.0",
     "@testing-library/dom": "^7.29.4",
     "@testing-library/jest-dom": "^5.11.9",
