@@ -34,6 +34,7 @@ jobs:
           npm run release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
   notify:
     name: Notify failed build
     needs: publish
