@@ -14,10 +14,12 @@ import { getCoordsPairFromObjects } from './get-coords-pair-from-objects';
  * @returns Coordinates for the Bezier curve.
  *
  * @example
+ * ```ts
  * const coordinates = createBezierCurveCoordinates(
  *   { x1: 0, x2: 100, y1: 0, y2: 100 },
  *   { direct: true, firstSet: true, direction: 'west' }
  * );
+ * ```
  */
 export const createBezierCurveCoordinates = (
   coords: CreateCoordinatesForCurveCoordParamType,
@@ -80,12 +82,14 @@ export const createBezierCurveCoordinates = (
  * @returns The SVG path string for the curved line.
  *
  * @example
+ * ```ts
  * const svgPath = getCurlySVGPath(startElement, stopElement, {
  *   pos1: 'top',
  *   pos2: 'bottom',
  *   firstSet: true,
  *   direction: 'south',
  * });
+ * ```
  */
 export const getCurlySVGPath = async (
   startEl: HTMLElement,
@@ -146,10 +150,12 @@ export const getCurlySVGPath = async (
  * @returns The SVG path string for the straight line.
  *
  * @example
+ * ```ts
  * const svgPath = getSVGPath(startElement, stopElement, {
  *   pos1: 'left',
  *   pos2: 'right',
  * });
+ * ```
  */
 export const getSVGPath = async (
   startEl: HTMLElement,
@@ -182,7 +188,9 @@ export const getSVGPath = async (
  * @returns Positions for creating an SVG path.
  *
  * @example
+ * ```ts
  * const positions = getPositionsForSVGPath('east');
+ * ```
  */
 export const getPositionsForSVGPath = (direction: string) => {
   let pos1: string;
@@ -218,7 +226,9 @@ export const getPositionsForSVGPath = (direction: string) => {
  * @returns Positions for creating an SVG path for a curved line.
  *
  * @example
+ * ```ts
  * const positions = getPositionsForCurlySVGPath('west');
+ * ```
  */
 export const getPositionsForCurlySVGPath = (direction: string) => {
   let path1pos1: string;

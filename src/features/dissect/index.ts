@@ -3,7 +3,7 @@
 
 import { DissectAreaEnum } from '../../types/enums/area';
 
-import * as classnames from '../../utils/classnames';
+import { set as setClassNames, cx } from '../../utils/classnames';
 import { SPECCER_LITERALS } from '../../utils/constants';
 import { add } from '../../utils/styles';
 import { isCurly, isEncloseArea, isFullArea, useSVG } from '../../utils/area';
@@ -12,7 +12,25 @@ import { DrawSVGCurlyBracket } from '../../utils/classes/DrawSVGCurlyBracket';
 
 import { styles } from './utils/styles';
 
-export const create = (textContent = '', area: string, n = 'span') => {
+/**
+ * Create a dissected element with optional text content, area description, and element type.
+ *
+ * @param {string} textContent - The text content to add to the element.
+ * @param {string} area - The area description for styling.
+ * @param {string} n - The element type.
+ * @returns {HTMLElement} - The created dissected element.
+ *
+ * @example
+ * ```ts
+ * const dissectedElement = create('A', 'outline top', 'div');
+ * document.body.appendChild(dissectedElement);
+ * ```
+ */
+export const create = (
+  textContent = '',
+  area: string,
+  n = 'span'
+): HTMLElement => {
   const _el = document.createElement(n);
   const _text_node = document.createTextNode(textContent);
   const _extra_class_names = {};
@@ -30,18 +48,27 @@ export const create = (textContent = '', area: string, n = 'span') => {
     _el.setAttribute('data-dissection-counter', textContent);
   }
 
-  const _class_names = classnames.cx(
-    'ph speccer dissection',
-    _extra_class_names
-  );
+  const _class_names = cx('ph speccer dissection', _extra_class_names);
 
-  classnames.set(_el, _class_names);
+  setClassNames(_el, _class_names);
 
   return _el;
 };
 
-export const element = (sectionEl: HTMLElement) => {
-  if (!sectionEl) return;
+/**
+ * Create dissected elements based on the section element and its data-anatomy attributes.
+ *
+ * @param {HTMLElement} sectionEl - The section element containing dissected elements.
+ * @returns {Promise<void>} - A promise that resolves after creating dissected elements.
+ *
+ * @example
+ * ```ts
+ * const sectionElement = document.getElementById('section');
+ * element(sectionElement);
+ * ```
+ */
+export const element = (sectionEl: HTMLElement): Promise<void> => {
+  if (!sectionEl) return Promise.resolve();
 
   const _dissection_els = sectionEl.querySelectorAll('[data-anatomy]');
 
@@ -58,11 +85,11 @@ export const element = (sectionEl: HTMLElement) => {
         _areas_string === '' ||
         _areas_string.indexOf(DissectAreaEnum.Outline) === -1
       )
-        return;
+        return Promise.resolve();
 
       /**
        * If we're running out of literals to use,
-       * make a new one with uppercase and lower case pairs
+       * make a new one with uppercase and lowercase pairs
        */
       let _literal_to_use = SPECCER_LITERALS[targetIndex];
 
@@ -95,4 +122,6 @@ export const element = (sectionEl: HTMLElement) => {
       }
     });
   }
+
+  return Promise.resolve();
 };

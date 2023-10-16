@@ -10,6 +10,7 @@ import { waitForFrame } from './wait';
  * @returns {Promise<void>} - A Promise that resolves after styles are applied.
  *
  * @example
+ * ```ts
  * // Apply styles as an object
  * const element = document.getElementById('my-element');
  * await add(element, { color: 'red', fontSize: '16px' });
@@ -20,6 +21,7 @@ import { waitForFrame } from './wait';
  *   { key: 'backgroundColor', value: 'yellow' }
  * ];
  * await add(element, styles);
+ * ```
  */
 export const add = async (
   el: HTMLElement,
@@ -56,10 +58,12 @@ export const add = async (
  * @returns {Promise<CSSStyleDeclaration>} - A Promise that resolves with the computed CSS styles.
  *
  * @example
+ * ```ts
  * // Get computed styles of an element
  * const element = document.getElementById('my-element');
  * const computedStyles = await get(element);
  * console.log(computedStyles.color); // Logs the color property value
+ * ```
  */
 export const get = async (el: HTMLElement): Promise<CSSStyleDeclaration> => {
   await waitForFrame();

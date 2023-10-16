@@ -11,10 +11,12 @@ import { getCoordsPairFromObjects } from './get-coords-pair-from-objects';
  * @param {boolean} [options.crude=false] - If the direction should be calculated crudely (NSEW).
  * @returns {Promise<string>} - The calculated direction.
  * @example
+ * ```ts
  * // Get the direction of one element relative to another
  * const startElement = document.getElementById('startElement');
  * const stopElement = document.getElementById('stopElement');
  * const direction = await direction_of_element({ start: startElement, stop: stopElement });
+ * ```
  */
 export const direction_of_element = async ({
   start,

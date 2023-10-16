@@ -9,8 +9,10 @@
  * @returns {string} - The formatted number as a string.
  *
  * @example
+ * ```ts
  * // Convert a number to a string with 2 decimal places
  * const formattedNumber = decimal(12.3456, 2); // "12.34"
+ * ```
  */
 export const decimal = (number: string | number, decimals = 3): string =>
   parseFloat(number + '').toFixed(decimals);

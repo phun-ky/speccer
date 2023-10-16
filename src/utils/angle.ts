@@ -10,8 +10,10 @@
  * @throws {TypeError} Parameters for `angle` do not have the required type.
  * @returns {number} The angle between the given coordinates.
  * @example
+ * ```ts
  * // Calculate the angle between two points
  * const angleValue = angle(0, 0, 3, 4);
+ * ```
  */
 export const angle = (
   cx: number,

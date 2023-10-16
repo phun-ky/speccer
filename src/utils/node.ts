@@ -6,6 +6,7 @@
  * @returns {Element|null}
  *
  * @example
+ * ```ts
  * // Insert an element after another element
  * const referenceElement = document.getElementById('reference-element');
  * const newElement = document.createElement('div');
@@ -24,8 +25,10 @@ export const after = (
  * @returns {void}
  *
  * @example
+ * ```ts
  * // Remove all elements with a specific class from the document
  * removeAll('.my-class');
+ * ```
  */
 export const removeAll = (selector: string, el: Document = document): void => {
   [].forEach.call(el.querySelectorAll(selector), function (e: HTMLElement) {

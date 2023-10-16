@@ -7,8 +7,10 @@ import { DissectAreaEnum, MeasureAreaEnum } from 'types/enums/area';
  * @returns An array of area strings.
  *
  * @example
+ * ```ts
  * const areas = getAreasFromString('left right top');
  * // areas: ['left', 'right', 'top']
+ * ```
  */
 export const getAreasFromString = (areaString: string): string[] =>
   areaString.split(' ');
