@@ -12,6 +12,7 @@ import { DebounceAnyFunctionType } from 'types/debounce';
  * @returns {DebounceAnyFunctionType} - The debounced function.
  *
  * @example
+ * ```ts
  * // Create a debounced function
  * const debouncedFn = debounce((value) => {
  *   console.log(value);
@@ -20,6 +21,7 @@ import { DebounceAnyFunctionType } from 'types/debounce';
  * // Call the debounced function
  * debouncedFn('Hello'); // This will not trigger immediate execution
  * debouncedFn('World'); // This will trigger immediate execution
+ * ```
  */
 const debounce = (
   func: DebounceAnyFunctionType,

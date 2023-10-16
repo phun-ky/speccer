@@ -1,29 +1,32 @@
 # @phun-ky/speccer
 
-![Image of speccer](./public/speccer.png)
+![logo](./public/logo-speccer-colored-dark.svg)
+
+> A zero dependency package to highlight elements
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](http://makeapullrequest.com) [![SemVer 2.0](https://img.shields.io/badge/SemVer-2.0-green.svg)](http://semver.org/spec/v2.0.0.html) ![npm version](https://img.shields.io/npm/v/@phun-ky/speccer) ![issues](https://img.shields.io/github/issues/phun-ky/speccer) ![license](https://img.shields.io/npm/l/@phun-ky/speccer) ![size](https://img.shields.io/bundlephobia/min/@phun-ky/speccer) ![npm](https://img.shields.io/npm/dm/%40phun-ky/speccer) ![GitHub Repo stars](https://img.shields.io/github/stars/phun-ky/speccer)
 
-> A zero dependency package to show specifications on components in your design system documentation
+![Image of speccer](./public/speccer.png)
 
-- [@phun-ky/speccer](#phun-kyspeccer)
-  - [About](#about)
-  - [Usage](#usage)
-    - [ESM](#esm)
-    - [Script](#script)
-    - [React](#react)
-  - [Advanced usage](#advanced-usage)
-    - [Lazy](#lazy)
-  - [Features](#features)
-    - [Element spacing](#element-spacing)
-    - [Element dimensions](#element-dimensions)
-      - [Subtle measure](#subtle-measure)
-    - [Highlight the anatomy of an element](#highlight-the-anatomy-of-an-element)
-      - [Subtle anatomy](#subtle-anatomy)
-    - [Curly brackets](#curly-brackets)
-    - [Element typogpraphy](#element-typogpraphy)
-    - [Mark elements](#mark-elements)
-  - [Customization](#customization)
+1. [@phun-ky/speccer](#phun-kyspeccer)
+   1. [About](#about)
+   2. [API](#api)
+   3. [Usage](#usage)
+      1. [ESM](#esm)
+      2. [Script](#script)
+      3. [React](#react)
+   4. [Advanced usage](#advanced-usage)
+      1. [Lazy](#lazy)
+   5. [Features](#features)
+      1. [Element spacing](#element-spacing)
+      2. [Element dimensions](#element-dimensions)
+         1. [Subtle measure](#subtle-measure)
+      3. [Highlight the anatomy of an element](#highlight-the-anatomy-of-an-element)
+         1. [Subtle anatomy](#subtle-anatomy)
+      4. [Curly brackets](#curly-brackets)
+      5. [Element typogpraphy](#element-typogpraphy)
+      6. [Mark elements](#mark-elements)
+   6. [Customization](#customization)
 
 ## About
 
@@ -34,6 +37,10 @@ npm i @phun-ky/speccer
 ```
 
 See demo here: <https://codepen.io/phun-ky/pen/xaOrYX>
+
+## API
+
+Go [here](api/README.md) to read the full API documentation.
 
 ## Usage
 

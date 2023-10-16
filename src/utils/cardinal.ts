@@ -11,8 +11,10 @@
  * @throws {RangeError} Parameter cannot be lower than 0.
  * @returns {string} - The cardinal direction.
  * @example
+ * ```ts
  * // Get the cardinal direction for an angle in degrees
  * const direction = cardinal_direction(45);
+ * ```
  */
 export const cardinal_direction = (degrees: number): string => {
   if (degrees > 360) throw new RangeError('Parameter cannot exceed 360');
@@ -50,8 +52,10 @@ export const cardinal_direction = (degrees: number): string => {
  * @throws {RangeError} Parameter cannot be lower than 0.
  * @returns {string} - The cardinal direction (NSEW).
  * @example
+ * ```ts
  * // Get the cardinal direction (crude) for an angle in degrees
  * const direction = cardinal_direction_crude(45);
+ * ```
  */
 export const cardinal_direction_crude = (degrees: number): string => {
   if (degrees > 360) throw new RangeError('Parameter cannot exceed 360');

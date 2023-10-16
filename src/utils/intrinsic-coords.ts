@@ -10,9 +10,11 @@ import { xy } from './xy';
  * @throws {Error} The position given is not the required type.
  * @returns {Promise<{ x: number, y: number }>} - An object containing the coordinates.
  * @example
+ * ```ts
  * // Get intrinsic coordinates for an element
  * const element = document.getElementById('example');
  * const coordinates = await intrinsic_coords(element, 'top-left');
+ * ```
  */
 export const intrinsic_coords = async (
   el: HTMLElement,

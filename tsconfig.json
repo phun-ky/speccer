@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es2021",
+    "target": "es2022",
     "lib": ["ES2021", "dom"],
     "sourceMap": true,
     "declaration": true,
+    "declarationMap": true,
     "declarationDir": "./dts",
     "moduleResolution": "node",
     "rootDir": "src",

@@ -12,8 +12,10 @@ import { GetRecPropertiesInterface } from 'types/interfaces/position';
  * @returns {number} - The horizontal center position.
  *
  * @example
+ * ```ts
  * // Calculate the horizontal center of two elements
  * const center = get_horizontal_center_of_els(0, startRect, targetRect);
+ * ```
  */
 export const get_horizontal_center_of_els = (
   modifier: number,
@@ -30,8 +32,10 @@ export const get_horizontal_center_of_els = (
  * @returns {number} - The vertical center position.
  *
  * @example
+ * ```ts
  * // Calculate the vertical center of two elements
  * const center = get_vertical_center_of_els(0, startRect, targetRect);
+ * ```
  */
 export const get_vertical_center_of_els = (
   modifier: number,
@@ -46,8 +50,10 @@ export const get_vertical_center_of_els = (
  * @returns {Promise<PositionPropertiesType>} - A promise that resolves to the offset properties.
  *
  * @example
+ * ```ts
  * // Get the offset properties of an element
  * const offsetProps = await offset(targetElement);
+ * ```
  */
 export const offset = async (
   targetEl: HTMLElement
@@ -55,8 +61,8 @@ export const offset = async (
   await waitForFrame();
 
   const _target_rect = targetEl.getBoundingClientRect();
-  const _el_offset_top = _target_rect.top + window.pageYOffset;
-  const _el_offset_left = _target_rect.left + window.pageXOffset;
+  const _el_offset_top = _target_rect.top + window.scrollY;
+  const _el_offset_left = _target_rect.left + window.scrollX;
 
   return {
     height: _target_rect.height,
@@ -74,8 +80,10 @@ export const offset = async (
  * @returns {Promise<PositionPropertiesType>} - A promise that resolves to the offset properties.
  *
  * @example
+ * ```ts
  * // Get the offset properties of an element with its center aligned to another element
  * const offsetProps = await offsetWithCenter(sourceElement, targetElement);
+ * ```
  */
 export const offsetWithCenter = async (
   sourceEl: HTMLElement,
@@ -85,8 +93,8 @@ export const offsetWithCenter = async (
 
   const _source_rect = sourceEl.getBoundingClientRect();
   const _target_rect = targetEl.getBoundingClientRect();
-  const _el_offset_top = _target_rect.top + window.pageYOffset;
-  const _el_offset_left = _target_rect.left + window.pageXOffset;
+  const _el_offset_top = _target_rect.top + window.scrollY;
+  const _el_offset_left = _target_rect.left + window.scrollX;
 
   return {
     height: _target_rect.height,
@@ -108,6 +116,7 @@ export const offsetWithCenter = async (
  * @returns {Promise<GetRecPropertiesInterface>} - A promise that resolves to an object with positioning functions.
  *
  * @example
+ * ```ts
  * // Get positioning properties between two elements
  * const recProps = await getRec(sourceElement, targetElement);
  *
@@ -116,6 +125,7 @@ export const offsetWithCenter = async (
  *
  * // Get the position properties with the source element above the target element
  * const aboveProps = recProps.toTop();
+ * ```
  */
 export const getRec = async (
   sourceEl: HTMLElement,

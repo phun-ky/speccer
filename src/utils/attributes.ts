@@ -10,11 +10,13 @@ import { AttributesMapInterface } from '../types/interfaces/attributes';
  * @param attrs - The attributes to set as a key-value mapping.
  *
  * @example
+ * ```ts
  * const element = document.getElementById('myElement');
  * setAttributes(element, {
  *   'class': 'active',
  *   'data-value': '123',
  * });
+ * ```
  */
 export const setAttributes = (
   el: HTMLElement,
@@ -34,8 +36,10 @@ export const setAttributes = (
  * @param attrs - The attributes to remove as a key-value mapping.
  *
  * @example
+ * ```ts
  * const element = document.getElementById('myElement');
  * removeAttributes(element, ['class', 'data-value']);
+ * ```
  */
 export const removeAttributes = (el: HTMLElement, attrs?: string[]) => {
   if (!el) return;

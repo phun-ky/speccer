@@ -10,6 +10,7 @@ import debounce from './debounce';
  * @param {SpeccerFunctionType} speccer - The function to trigger when the window is resized.
  *
  * @example
+ * ```ts
  * // Define a function to be triggered on window resize
  * const mySpeccer = () => {
  *   // Your logic here
@@ -18,6 +19,7 @@ import debounce from './debounce';
  *
  * // Activate the debounced event listener
  * activate(mySpeccer);
+ * ```
  */
 export const activate = (speccer: SpeccerFunctionType): void => {
   /**

@@ -1,11 +1,23 @@
 /* eslint no-console:0 */
 'use strict';
 
-import * as styles from '../../utils/styles';
+import { add as addStyles } from '../../utils/styles';
 import { cx, set } from '../../utils/classnames';
 import { getRec } from '../../utils/position';
 
-export const create = (n = 'span') => {
+/**
+ * Create a marker element with an optional element type.
+ *
+ * @param {string} n - The element type.
+ * @returns {HTMLElement} - The created marker element.
+ *
+ * @example
+ * ```typescript
+ * const marker = create('div');
+ * document.body.appendChild(marker);
+ * ```
+ */
+export const create = (n = 'span'): HTMLElement => {
   const markElement = document.createElement(n);
   const classNames = cx('ph speccer mark');
 
@@ -14,7 +26,19 @@ export const create = (n = 'span') => {
   return markElement;
 };
 
-export const element = async (elementToMark: HTMLElement) => {
+/**
+ * Create a marker element and add it to the body with styles matching a specified element.
+ *
+ * @param {HTMLElement} elementToMark - The target element to match styles with.
+ * @returns {Promise<void>} - A promise that resolves after creating and styling the marker element.
+ *
+ * @example
+ * ```typescript
+ * const elementToMark = document.getElementById('target');
+ * element(elementToMark);
+ * ```
+ */
+export const element = async (elementToMark: HTMLElement): Promise<void> => {
   if (!elementToMark) return Promise.resolve();
 
   const markElement = create();
@@ -30,5 +54,5 @@ export const element = async (elementToMark: HTMLElement) => {
     width: `${width}px`
   };
 
-  await styles.add(markElement, markStyles);
+  await addStyles(markElement, markStyles);
 };

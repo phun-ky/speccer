@@ -3,13 +3,24 @@
 
 import { SpeccerFunctionType } from 'types/speccer';
 
-import * as resize from '../utils/resize';
+import { activate as resizeActivate } from '../utils/resize';
 
-import * as spec from '../features/spacing';
-import * as measure from '../features/measure';
-import * as dissect from '../features/dissect';
+import { element as specElement } from '../features/spacing';
+import { element as measureElement } from '../features/measure';
+import { element as dissectElement } from '../features/dissect';
 
-export const dom = (speccer: SpeccerFunctionType) => {
+/**
+ * A function to initialize speccer when the DOM is ready.
+ *
+ * @param {SpeccerFunctionType} speccer - The speccer function to execute.
+ *
+ * @example
+ * ```ts
+ * // Usage example:
+ * // dom(mySpeccer);
+ * ```
+ */
+export const dom = (speccer: SpeccerFunctionType): void => {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
       speccer();
@@ -20,11 +31,20 @@ export const dom = (speccer: SpeccerFunctionType) => {
   }
 };
 
-export const lazy = () => {
+/**
+ * A function to initialize lazy speccer functionality.
+ *
+ * @example
+ * ```ts
+ * // Usage example:
+ * // lazy();
+ * ```
+ */
+export const lazy = (): void => {
   const _spec_observer = new IntersectionObserver((els, observer) => {
     els.forEach((el: IntersectionObserverEntry) => {
       if (el.intersectionRatio > 0) {
-        spec.element(el.target as HTMLElement);
+        specElement(el.target as HTMLElement);
         observer.unobserve(el.target);
       }
     });
@@ -41,7 +61,7 @@ export const lazy = () => {
   const _measure_observer = new IntersectionObserver((els, observer) => {
     els.forEach((el) => {
       if (el.intersectionRatio > 0) {
-        measure.element(el.target as HTMLElement);
+        measureElement(el.target as HTMLElement);
         observer.unobserve(el.target);
       }
     });
@@ -54,7 +74,7 @@ export const lazy = () => {
   const _dissect_observer = new IntersectionObserver((els, observer) => {
     els.forEach((el) => {
       if (el.intersectionRatio > 0) {
-        dissect.element(el.target as HTMLElement);
+        dissectElement(el.target as HTMLElement);
         observer.unobserve(el.target);
       }
     });
@@ -65,11 +85,33 @@ export const lazy = () => {
   });
 };
 
-export const manual = (speccer: SpeccerFunctionType) => {
+/**
+ * A function to manually activate speccer.
+ *
+ * @param {SpeccerFunctionType} speccer - The speccer function to execute.
+ *
+ * @example
+ * ```ts
+ * // Usage example:
+ * // manual(mySpeccer);
+ * ```
+ */
+export const manual = (speccer: SpeccerFunctionType): void => {
   window.speccer = speccer;
 };
 
-export const activate = (speccer: SpeccerFunctionType) => {
+/**
+ * A function to activate speccer based on script attributes.
+ *
+ * @param {SpeccerFunctionType} speccer - The speccer function to execute.
+ *
+ * @example
+ * ```ts
+ * // Usage example:
+ * // activate(mySpeccer);
+ * ```
+ */
+export const activate = (speccer: SpeccerFunctionType): void => {
   const _script = document.currentScript;
 
   if (_script) {
@@ -97,7 +139,7 @@ export const activate = (speccer: SpeccerFunctionType) => {
         !_script.hasAttribute('data-manual') &&
         !_script.hasAttribute('data-lazy')
       ) {
-        resize.activate(speccer);
+        resizeActivate(speccer);
       }
     }
   }

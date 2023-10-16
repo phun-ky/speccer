@@ -10,10 +10,12 @@ import { intrinsic_coords } from './intrinsic-coords';
  * @throws {Error} No element given.
  * @returns {Promise<{ x1: number, y1: number, x2: number, y2: number }>} - An object containing the coordinates.
  * @example
+ * ```ts
  * // Get coordinates for two elements
  * const element1 = document.getElementById('element1');
  * const element2 = document.getElementById('element2');
  * const coordinates = await get_coords_pair_from_objects(element1, element2);
+ * ```
  */
 export const getCoordsPairFromObjects = async (
   el1: HTMLElement,

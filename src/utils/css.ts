@@ -17,9 +17,11 @@ import {
  * @returns {number} - The parsed integer value.
  *
  * @example
+ * ```ts
  * // Parse a string value into an integer
  * const intValue = getNumberValue("42");
  * console.log(intValue); // Example output: 42
+ * ```
  */
 export const getNumberValue = (value: string): number => parseInt(value, 10);
 
@@ -31,9 +33,11 @@ export const getNumberValue = (value: string): number => parseInt(value, 10);
  * @returns {number} - The normalized number value.
  *
  * @example
+ * ```ts
  * // Normalize a value to ensure it's a valid number
  * const normalizedValue = normalizeNumberValue("0.5");
  * console.log(normalizedValue); // Example output: 0.5
+ * ```
  */
 export const normalizeNumberValue = (value: string | number): number => {
   const _value = parseFloat(value + '');
@@ -50,9 +54,11 @@ export const normalizeNumberValue = (value: string | number): number => {
  * @returns {string} - The corresponding class name.
  *
  * @example
+ * ```ts
  * // Convert a CSS property name to a class name
  * const className = getClassNameFromCSSProperty("marginTop");
  * console.log(className); // Example output: "margin top"
+ * ```
  */
 export const getClassNameFromCSSProperty = (property: string): string => {
   if (property.indexOf('Top') !== -1) {
@@ -75,12 +81,14 @@ export const getClassNameFromCSSProperty = (property: string): string => {
  * @returns {SpacingCSSPropertiesType} - The extracted spacing-related properties.
  *
  * @example
+ * ```ts
  * // Extract spacing-related properties from a style object
  * const spacing = getSpacing({
  *   marginTop: "10px",
  *   marginLeft: "20px",
  * });
  * console.log(spacing); // Example output: { marginTop: "10px", marginLeft: "20px" }
+ * ```
  */
 export const getSpacing = (
   style: SpacingCSSPropertiesType
@@ -115,12 +123,14 @@ export const getSpacing = (
  * @returns {TypographyCSSPropertiesType} - The extracted typography-related properties.
  *
  * @example
+ * ```ts
  * // Extract typography-related properties from a style object
  * const typography = getTypography({
  *   fontSize: "16px",
  *   fontWeight: "bold",
  * });
  * console.log(typography); // Example output: { fontSize: "16px", fontWeight: "bold" }
+ * ```
  */
 export const getTypography = (
   style: TypographyCSSPropertiesType
@@ -153,9 +163,11 @@ export const getTypography = (
  * @returns {number} - The parsed value of the CSS property or a default value.
  *
  * @example
+ * ```ts
  * // Get the value of a custom CSS property from an element
  * const value = pinSpace(document.body);
  * console.log(value); // Example output: 10
+ * ```
  */
 export const pinSpace = (el: HTMLElement): number =>
   getNumberValue(
@@ -169,9 +181,11 @@ export const pinSpace = (el: HTMLElement): number =>
  * @returns {number} - The parsed value of the CSS property or a default value.
  *
  * @example
+ * ```ts
  * // Get the value of a custom CSS property from an element
  * const value = measureSize(document.body);
  * console.log(value); // Example output: 20
+ * ```
  */
 export const measureSize = (el: HTMLElement): number =>
   getNumberValue(
@@ -185,9 +199,11 @@ export const measureSize = (el: HTMLElement): number =>
  * @returns {number} - The parsed value of the CSS property or a default value.
  *
  * @example
+ * ```ts
  * // Get the value of a custom CSS property from an element
  * const value = lineWidth(document.body);
  * console.log(value); // Example output: 1.5
+ * ```
  */
 export const lineWidth = (el: HTMLElement): number =>
   getNumberValue(

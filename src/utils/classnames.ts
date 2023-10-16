@@ -11,9 +11,11 @@ import { ClassNamesObjectMapInterface } from 'types/interfaces/classnames';
  * @param {string} [avoid='noop'] - Classes to avoid adding.
  * @returns {void}
  * @example
+ * ```ts
  * // Add classes to an HTML element
  * const element = document.getElementById('example');
  * set(element, 'class1 class2');
+ * ```
  */
 export const set = (el: HTMLElement, cls: string, avoid = 'noop') => {
   if (!el) return;
@@ -35,9 +37,11 @@ export const set = (el: HTMLElement, cls: string, avoid = 'noop') => {
  * @param {string} [avoid='noop'] - Classes to avoid toggling.
  * @returns {void}
  * @example
+ * ```ts
  * // Toggle classes on an HTML element
  * const element = document.getElementById('example');
  * toggle(element, 'class1 class2');
+ * ```
  */
 export const toggle = (el: HTMLElement, cls: string, avoid = 'noop') => {
   if (!el) return;
@@ -59,9 +63,11 @@ export const toggle = (el: HTMLElement, cls: string, avoid = 'noop') => {
  * @param {string} [avoid='noop'] - Classes to avoid removing.
  * @returns {void}
  * @example
+ * ```ts
  * // Remove classes from an HTML element
  * const element = document.getElementById('example');
  * remove(element, 'class1 class2');
+ * ```
  */
 export const remove = (el: HTMLElement, cls: string, avoid = 'noop') => {
   if (!el) return;
@@ -82,9 +88,11 @@ export const remove = (el: HTMLElement, cls: string, avoid = 'noop') => {
  * @param {ClassNamesObjectMapInterface} cls_obj - A mapping of class names to boolean values.
  * @returns {string} - A space-separated string of CSS class names.
  * @example
+ * ```ts
  * // Generate CSS classes from a string and an object
  * const classNames = cx('class1', { class2: true, class3: false });
  * console.log(classNames); // Example output: 'class1 class2'
+ * ```
  */
 export const cx = (
   cls: string,
