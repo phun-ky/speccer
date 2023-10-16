@@ -1,3 +1,17 @@
+
+
+## [6.4.0](https://github.com/phun-ky/speccer/compare/v6.3.2...v6.4.0) (2023-10-16)
+
+
+### Features
+
+* 🎸 Add mark feature ([b21435c](https://github.com/phun-ky/speccer/commit/b21435c0c81ba6c139d7dbf3e2b5007e9d23f448)), closes [#22](https://github.com/phun-ky/speccer/issues/22)
+
+
+### Bug Fixes
+
+* 🐛 Make sure we publish to npm ([6a76f76](https://github.com/phun-ky/speccer/commit/6a76f7689cabbf337155bf4dea668fa93ac697f1)), closes [#45](https://github.com/phun-ky/speccer/issues/45)
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
