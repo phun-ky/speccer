@@ -8,19 +8,30 @@
 
 ▸ **create**(`n?`): `HTMLElement`
 
+Create a marker element with an optional element type.
+
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `n` | `string` | `'span'` |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `n` | `string` | `'span'` | The element type. |
 
 #### Returns
 
 `HTMLElement`
 
+- The created marker element.
+
+**`Example`**
+
+```typescript
+const marker = create('div');
+document.body.appendChild(marker);
+```
+
 #### Defined in
 
-[features/mark/index.ts:8](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L8)
+[features/mark/index.ts:20](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L20)
 
 ___
 
@@ -28,16 +39,27 @@ ___
 
 ▸ **element**(`elementToMark`): `Promise`<`void`\>
 
+Create a marker element and add it to the body with styles matching a specified element.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `elementToMark` | `HTMLElement` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `elementToMark` | `HTMLElement` | The target element to match styles with. |
 
 #### Returns
 
 `Promise`<`void`\>
 
+- A promise that resolves after creating and styling the marker element.
+
+**`Example`**
+
+```typescript
+const elementToMark = document.getElementById('target');
+element(elementToMark);
+```
+
 #### Defined in
 
-[features/mark/index.ts:17](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L17)
+[features/mark/index.ts:41](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L41)

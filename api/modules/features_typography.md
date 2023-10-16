@@ -6,22 +6,35 @@
 
 ### create
 
-▸ **create**(`html`, `area`): `HTMLDivElement`
+▸ **create**(`html`, `area`): `HTMLElement`
+
+Create a DOM element with provided HTML and optional CSS class names.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `html` | `string` |
-| `area` | ``null`` \| `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `html` | `string` | The HTML content to be set in the created element. |
+| `area` | ``null`` \| `string` | The optional CSS class names to add. |
 
 #### Returns
 
-`HTMLDivElement`
+`HTMLElement`
+
+- The created DOM element.
+
+**`Example`**
+
+```ts
+const htmlContent = '<p>This is some HTML content.</p>';
+const cssClass = 'custom-class';
+const createdElement = create(htmlContent, cssClass);
+document.body.appendChild(createdElement);
+```
 
 #### Defined in
 
-[features/typography/index.ts:9](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L9)
+[features/typography/index.ts:24](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L24)
 
 ___
 
@@ -29,16 +42,29 @@ ___
 
 ▸ **element**(`targetEl`): `Promise`<`void`\>
 
+Create a specced typography element for a given target element.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `targetEl` | `HTMLElement` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `targetEl` | `HTMLElement` | The target element to specc typography for. |
 
 #### Returns
 
 `Promise`<`void`\>
 
+- A promise that resolves once typography element is created and positioned.
+
+**`Example`**
+
+```ts
+const targetElement = document.querySelector('.target');
+if (targetElement) {
+  element(targetElement);
+}
+```
+
 #### Defined in
 
-[features/typography/index.ts:29](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L29)
+[features/typography/index.ts:55](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L55)

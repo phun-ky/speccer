@@ -1,3 +1,51 @@
+
+
+## [7.0.0](https://github.com/phun-ky/speccer/compare/v6.3.2...v7.0.0) (2023-10-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* Renamed `src/index.ts` to `src/main.ts`
+
+### Tasks
+
+* 🤖 Add correct types of commits to preset ([5fd6e4a](https://github.com/phun-ky/speccer/commit/5fd6e4a1b555e32437300638f2c0c91c171e6cea))
+* 🤖 Add github actions ([1942f8d](https://github.com/phun-ky/speccer/commit/1942f8d49ebf0e4086ed9d30e7d9f162ee8d3eb1)), closes [#30](https://github.com/phun-ky/speccer/issues/30)
+* 🤖 Adjust tsconfig ([7d1c89e](https://github.com/phun-ky/speccer/commit/7d1c89e9a689c4cdd2b3eb40702162968aa1ac11))
+* 🤖 build ([28a21f2](https://github.com/phun-ky/speccer/commit/28a21f2d913ee31c4503afcdfa176e8f180b0e15))
+* 🤖 bump rollup-plugin-typescript2 from 0.31.2 to 0.35.0 ([9412bec](https://github.com/phun-ky/speccer/commit/9412beca0b5e2cb45731e989cb8897ff6525c706))
+* 🤖 bump stylus from 0.56.0 to 0.60.0 ([0351289](https://github.com/phun-ky/speccer/commit/03512897870349a1bd707771cf098a2d7100ebf1))
+* 🤖 bump tough-cookie from 4.1.2 to 4.1.3 ([e6438c0](https://github.com/phun-ky/speccer/commit/e6438c001622ec774fd189e3ba9a442455810b92))
+* 🤖 Do not hide chores ([1794e18](https://github.com/phun-ky/speccer/commit/1794e18bc70ca9b27a20d0ef836f761da35b6066))
+* 🤖 Remove old `index.d.ts` file ([b30fa69](https://github.com/phun-ky/speccer/commit/b30fa69a4c9b1659bf109c7a702f25a5323d9f65))
+* 🤖 Use `release-it` instead of `standard-version` ([0e44c3d](https://github.com/phun-ky/speccer/commit/0e44c3d89978987c6eeed9f97bcd661227b9e2c4)), closes [#41](https://github.com/phun-ky/speccer/issues/41)
+
+
+### Documentation
+
+* ✏️ Add API documentation ([a4598c5](https://github.com/phun-ky/speccer/commit/a4598c5260695b2b48511a5b92e25be42e02d485))
+* ✏️ Update `README.md` ([1b1f48b](https://github.com/phun-ky/speccer/commit/1b1f48b6d5135ac360ed0405de30737dafaeb201)), closes [#39](https://github.com/phun-ky/speccer/issues/39)
+
+
+### Feature
+
+* 🎸 Add logos ([771812a](https://github.com/phun-ky/speccer/commit/771812a6d27f325341860ab55c0e24b3e5af9c13))
+* 🎸 Add mark feature ([b21435c](https://github.com/phun-ky/speccer/commit/b21435c0c81ba6c139d7dbf3e2b5007e9d23f448)), closes [#22](https://github.com/phun-ky/speccer/issues/22)
+
+
+### Bug
+
+* 🐛 Fix release ([dc7803a](https://github.com/phun-ky/speccer/commit/dc7803a73b3ce136b5c6dc218bbe7b031f7eb888))
+* 🐛 Make sure we publish to npm ([6a76f76](https://github.com/phun-ky/speccer/commit/6a76f7689cabbf337155bf4dea668fa93ac697f1)), closes [#45](https://github.com/phun-ky/speccer/issues/45)
+* 🐛 skipChecks for npm publish ([0c22c31](https://github.com/phun-ky/speccer/commit/0c22c31fe292a1d896e5843e245cbd78bfb2a790))
+
+
+### Refactoring
+
+* 💡 Add more inline documentation and updated some ([71d6809](https://github.com/phun-ky/speccer/commit/71d6809d63ce2e32fb15980ca2d8223c538bfa97))
+* 💡 Adjust folder structure to a more meaningful way ([42597fa](https://github.com/phun-ky/speccer/commit/42597fa8a74941d1e40cfd8ab904fbafd1354a81)), closes [#48](https://github.com/phun-ky/speccer/issues/48)
+* 💡 Make sure we release on every change ([ce4a627](https://github.com/phun-ky/speccer/commit/ce4a627f93a87ce3888c7b9b48b57207a76bdb0b)), closes [#43](https://github.com/phun-ky/speccer/issues/43)
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.

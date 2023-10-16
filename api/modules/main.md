@@ -13,7 +13,7 @@
 | Name | Type |
 | :------ | :------ |
 | `create` | (`textContent`: `string`, `area`: `string`, `n`: `string`) => `HTMLElement` |
-| `element` | (`sectionEl`: `HTMLElement`) => `void` |
+| `element` | (`sectionEl`: `HTMLElement`) => `Promise`<`void`\> |
 
 #### Defined in
 
@@ -99,7 +99,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `create` | (`html`: `string`, `area`: ``null`` \| `string`) => `HTMLDivElement` |
+| `create` | (`html`: `string`, `area`: ``null`` \| `string`) => `HTMLElement` |
 | `element` | (`targetEl`: `HTMLElement`) => `Promise`<`void`\> |
 
 #### Defined in
