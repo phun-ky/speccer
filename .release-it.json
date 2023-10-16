@@ -21,8 +21,7 @@
         "types": [
           {
             "type": "chore",
-            "section": "Tasks",
-            "hidden": true
+            "section": "Tasks"
           },
           {
             "type": "docs",
