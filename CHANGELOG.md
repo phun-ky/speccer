@@ -1,5 +1,13 @@
 # Changelog
 
+## [8.0.3](https://github.com/phun-ky/speccer/compare/v8.0.2...v8.0.3) (2023-10-17)
+
+
+### Bug
+
+* 🐛 Only remove scoped elements ([6b1bb8a](https://github.com/phun-ky/speccer/commit/6b1bb8a5a30a02f0d61d2b0601e4e12acb133195))
+* 🐛 Set max-width on typography box ([166b5be](https://github.com/phun-ky/speccer/commit/166b5be0146d9219d90e3f226bf2a8eb0a4f6110))
+
 ## [8.0.2](https://github.com/phun-ky/speccer/compare/v8.0.1...v8.0.2) (2023-10-17)
 
 
