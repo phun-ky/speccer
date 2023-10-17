@@ -55,7 +55,7 @@ export const modes = {
 };
 
 const speccer = () => {
-  removeAll('.speccer');
+  removeAll('.ph-speccer.speccer');
 
   const elsToBeSpecced = document.querySelectorAll(
     '[data-speccer],[data-speccer] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)'
