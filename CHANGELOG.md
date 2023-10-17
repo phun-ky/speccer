@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.0.1](https://github.com/phun-ky/speccer/compare/v8.0.0...v8.0.1) (2023-10-17)
+
+
+### Tasks
+
+* 🤖 bump eslint-plugin-import from 2.26.0 to 2.28.1 ([5e7d8eb](https://github.com/phun-ky/speccer/commit/5e7d8ebe0d2ba52d930d522cf7df91d4c97d660b))
+
 ## [8.0.0](https://github.com/phun-ky/speccer/compare/v6.3.2...v8.0.0) (2023-10-17)
 
 
