@@ -227,13 +227,13 @@ The curly brackets are made with SVG paths, and it is required to have the follo
 
 ```html
 <svg
-  class="ph"
+  class="ph-speccer"
   viewBox="0 0"
   id="ph-speccer-svg"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
-    class="ph path original"
+    class="ph-speccer path original"
     id="ph-speccer-path"
     fill="none"
     stroke-width="1"
@@ -277,7 +277,7 @@ In your component examples, use the following attribute.
 Allthough the styling works nicely with dark mode, you can use the provided CSS variables to customize the look and feel. If more control is needed, you can use CSS overrides :)
 
 ```css
-.ph.speccer {
+.ph-speccer.speccer {
   --ph-speccer-color-padding: rgba(219, 111, 255, 0.4);
   --ph-speccer-color-padding-hover: #db6fff;
   --ph-speccer-color-margin: rgba(255, 247, 111, 0.4);

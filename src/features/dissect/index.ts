@@ -48,7 +48,7 @@ export const create = (
     _el.setAttribute('data-dissection-counter', textContent);
   }
 
-  const _class_names = cx('ph speccer dissection', _extra_class_names);
+  const _class_names = cx('ph-speccer speccer dissection', _extra_class_names);
 
   setClassNames(_el, _class_names);
 

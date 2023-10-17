@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="application-name" content="@phun-ky/speccer" />
     <style type="text/css">
-      .ph.speccer {
+      .ph-speccer.speccer {
         --ph-speccer-color-padding: rgba(219, 111, 255, 0.4);
         --ph-speccer-color-padding-hover: #db6fff;
         --ph-speccer-color-margin: rgba(255, 247, 111, 0.4);
@@ -25,8 +25,9 @@
         --ph-speccer-typography-color-text: #57575b;
         --ph-speccer-typography-color-value: var(--ph-speccer-color-contrast);
         --ph-speccer-depth-opacity-400: 0.4;
-        --ph-speccer-font-family: 'Menlo for Powerline', 'Menlo Regular for Powerline', 'DejaVu Sans Mono', Consolas,
-          Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        --ph-speccer-font-family: 'Menlo for Powerline',
+          'Menlo Regular for Powerline', 'DejaVu Sans Mono', Consolas, Monaco,
+          'Andale Mono', 'Ubuntu Mono', monospace;
         --ph-speccer-font-size: 12px;
         --ph-speccer-line-height: 12px;
         --ph-speccer-pin-size: 24px;
@@ -52,22 +53,50 @@
       "
     >
       <div data-speccer-measure="width top" class="ph box"></div>
-      <div data-speccer-measure="height right" style="grid-row: span 2" class="ph box"></div>
+      <div
+        data-speccer-measure="height right"
+        style="grid-row: span 2"
+        class="ph box"
+      ></div>
       <div data-speccer-measure="width bottom" class="ph box"></div>
       <div data-speccer-measure="height left" class="ph box"></div>
       <div data-anatomy="outline top" class="ph box"></div>
       <div data-anatomy="outline right" class="ph box"></div>
-      <div data-anatomy="outline bottom" style="grid-column: span 3" class="ph box"></div>
+      <div
+        data-anatomy="outline bottom"
+        style="grid-column: span 3"
+        class="ph box"
+      ></div>
       <div data-anatomy="outline full top" class="ph box"></div>
-      <div data-anatomy="outline full right" style="grid-row: span 2" class="ph box"></div>
+      <div
+        data-anatomy="outline full right"
+        style="grid-row: span 2"
+        class="ph box"
+      ></div>
       <div data-anatomy="outline full left" class="ph box"></div>
-      <div data-anatomy="outline enclose top" style="grid-column: span 2" class="ph box"></div>
+      <div
+        data-anatomy="outline enclose top"
+        style="grid-column: span 2"
+        class="ph box"
+      ></div>
       <div data-anatomy="outline enclose right" class="ph box"></div>
       <div data-anatomy="outline enclose left" class="ph box"></div>
       <div data-speccer class="ph box"></div>
-      <div data-speccer class="ph box" style="padding: 0; margin: 2rem; transform: translate(-2rem, -2rem)"></div>
-      <div data-speccer-typography="bottom" style="font-family: Open Sans; font-size: 50px" class="ph box"></div>
-      <div data-speccer-typography="right" style="grid-column: span 2" class="ph box"></div>
+      <div
+        data-speccer
+        class="ph box"
+        style="padding: 0; margin: 2rem; transform: translate(-2rem, -2rem)"
+      ></div>
+      <div
+        data-speccer-typography="bottom"
+        style="font-family: Open Sans; font-size: 50px"
+        class="ph box"
+      ></div>
+      <div
+        data-speccer-typography="right"
+        style="grid-column: span 2"
+        class="ph box"
+      ></div>
     </div>
 
     <link async href="/speccer.css" rel="stylesheet" type="text/css" />
@@ -126,7 +155,8 @@
         border-radius: 12px;
         background-image: linear-gradient(125deg, #33373d 20%, #26282c 100%);
         border: none;
-        box-shadow: -8px -8px 16px rgba(192, 194, 202, 0.1), 8px 8px 16px rgba(0, 0, 0, 0.2);
+        box-shadow: -8px -8px 16px rgba(192, 194, 202, 0.1),
+          8px 8px 16px rgba(0, 0, 0, 0.2);
       }
     </style>
     <script data-manual src="/speccer.js" type="text/javascript"></script>

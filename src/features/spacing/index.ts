@@ -32,7 +32,7 @@ export const create = (
 
   _el.appendChild(_text_content);
   _el.setAttribute('title', text + 'px');
-  setClassNames(_el, 'ph speccer spacing');
+  setClassNames(_el, 'ph-speccer speccer spacing');
 
   return _el;
 };
