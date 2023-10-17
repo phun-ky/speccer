@@ -1,5 +1,18 @@
 # Changelog
 
+## [8.0.2](https://github.com/phun-ky/speccer/compare/v8.0.1...v8.0.2) (2023-10-17)
+
+
+### Tasks
+
+* 🤖 bump postcss from 8.4.17 to 8.4.31 ([fab645f](https://github.com/phun-ky/speccer/commit/fab645f11ab3cfdb75d5cc956f13c5d8c0a11a15))
+
+
+### Bug
+
+* 🐛 Onlu publish on actual change ([ba07d7c](https://github.com/phun-ky/speccer/commit/ba07d7c766684f4771d58ca95e2557f185d70d7f))
+* 🐛 Use better css scope ([b187ecf](https://github.com/phun-ky/speccer/commit/b187ecf1d8000efc926935de73b59b6b140db705))
+
 ## [8.0.1](https://github.com/phun-ky/speccer/compare/v8.0.0...v8.0.1) (2023-10-17)
 
 
