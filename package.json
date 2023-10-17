@@ -25,7 +25,8 @@
     "/speccer.js",
     "/speccer.js.map",
     "/speccer.min.css",
-    "/speccer.css"
+    "/speccer.css",
+    "/speccer.d.ts"
   ],
   "repository": {
     "type": "git",
