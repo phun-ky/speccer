@@ -1,6 +1,6 @@
 # @phun-ky/speccer
 
-![logo](./public/logo-speccer-colored-dark.svg)
+![logo](./public/logo-speccer-colored-package.svg)
 
 > A zero dependency package to highlight elements
 
@@ -24,13 +24,13 @@
       3. [Highlight the anatomy of an element](#highlight-the-anatomy-of-an-element)
          1. [Subtle anatomy](#subtle-anatomy)
       4. [Curly brackets](#curly-brackets)
-      5. [Element typogpraphy](#element-typogpraphy)
+      5. [Element typography](#element-typography)
       6. [Mark elements](#mark-elements)
    6. [Customization](#customization)
 
 ## About
 
-Speccer was created to make it easier to document components in a design system.
+Speccer was originally created to make it easier to document components in a design system, but you can use it to whatever you like, if you are in the need to highlight any element!
 
 ```zsh
 npm i @phun-ky/speccer
@@ -239,7 +239,7 @@ The curly brackets are made with SVG paths, and it is required to have the follo
 
 This will give a dashed border, and a more subtle pin style.
 
-### Element typogpraphy
+### Element typography
 
 ![Image of typography speccer](./public/typography.png)
 
