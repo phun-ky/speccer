@@ -27,7 +27,7 @@ export default [
   },
   {
     input: './dts/main.d.ts',
-    output: [{ file: './main.d.ts', format: 'es' }],
+    output: [{ file: './speccer.d.ts', format: 'es' }],
     plugins: [dts()]
   }
 ];

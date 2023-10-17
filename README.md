@@ -1,6 +1,6 @@
 # @phun-ky/speccer
 
-![logo](./public/logo-speccer-colored-dark.svg)
+![logo](./public/logo-speccer-colored-package.svg)
 
 > A zero dependency package to highlight elements
 
@@ -12,9 +12,10 @@
    1. [About](#about)
    2. [API](#api)
    3. [Usage](#usage)
-      1. [ESM](#esm)
-      2. [Script](#script)
-      3. [React](#react)
+      1. [Typescript](#typescript)
+      2. [ESM](#esm)
+      3. [Script](#script)
+      4. [React](#react)
    4. [Advanced usage](#advanced-usage)
       1. [Lazy](#lazy)
    5. [Features](#features)
@@ -24,15 +25,15 @@
       3. [Highlight the anatomy of an element](#highlight-the-anatomy-of-an-element)
          1. [Subtle anatomy](#subtle-anatomy)
       4. [Curly brackets](#curly-brackets)
-      5. [Element typogpraphy](#element-typogpraphy)
+      5. [Element typography](#element-typography)
       6. [Mark elements](#mark-elements)
    6. [Customization](#customization)
 
 ## About
 
-Speccer was created to make it easier to document components in a design system.
+Speccer was originally created to make it easier to document components in a design system, but you can use it to whatever you like, if you are in the need to highlight any element!
 
-```zsh
+```shell-session
 npm i @phun-ky/speccer
 ```
 
@@ -40,9 +41,13 @@ See demo here: <https://codepen.io/phun-ky/pen/xaOrYX>
 
 ## API
 
-Go [here](api/README.md) to read the full API documentation.
+Go [here](https://github.com/phun-ky/speccer/blob/main/api/README.md) to read the full API documentation.
 
 ## Usage
+
+### Typescript
+
+Types can be found in `@phun-ky/speccer/speccer.d.ts`.
 
 ### ESM
 
@@ -239,7 +244,7 @@ The curly brackets are made with SVG paths, and it is required to have the follo
 
 This will give a dashed border, and a more subtle pin style.
 
-### Element typogpraphy
+### Element typography
 
 ![Image of typography speccer](./public/typography.png)
 
