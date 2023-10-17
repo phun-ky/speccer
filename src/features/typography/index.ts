@@ -29,7 +29,7 @@ export const create = (html: string, area: string | null): HTMLElement => {
     _extra_class_names[area] = true;
   }
 
-  const _class_names = cx('ph speccer typography', _extra_class_names);
+  const _class_names = cx('ph-speccer speccer typography', _extra_class_names);
 
   _el.innerHTML = html;
 

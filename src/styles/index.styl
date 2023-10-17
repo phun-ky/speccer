@@ -25,7 +25,7 @@ $ph-speccer-line-width-negative = -1px
 $ph-speccer-measure-size = 8px
 
 
-.ph.speccer
+.ph-speccer.speccer
   --ph-speccer-color-padding: $ph-speccer-color-padding;
   --ph-speccer-color-padding-hover: $ph-speccer-color-padding-hover;
   --ph-speccer-color-margin: $ph-speccer-color-margin;
@@ -53,18 +53,18 @@ $ph-speccer-measure-size = 8px
   --ph-speccer-measure-size: $ph-speccer-measure-size;
 
 
-svg.ph,
-.ph.speccer,
-.ph.speccer::after,
-.ph.speccer::before
+svg.ph-speccer,
+.ph-speccer.speccer,
+.ph-speccer.speccer::after,
+.ph-speccer.speccer::before
   pointer-events none
   user-select none
   box-sizing border-box
 
 
-.ph.speccer:not(path),
-.ph.speccer::after,
-.ph.speccer::before
+.ph-speccer.speccer:not(path),
+.ph-speccer.speccer::after,
+.ph-speccer.speccer::before
   font-family var(--ph-speccer-font-family) !important
   justify-content center
   align-items center
@@ -83,7 +83,7 @@ svg.ph,
   pointer-events none
   z-index 3
 
-svg.ph .ph.path
+svg.ph-speccer .ph-speccer.path
   color var(--ph-speccer-color-contrast,$ph-speccer-color-contrast )
 
 @require './anatomy.styl'

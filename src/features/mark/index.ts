@@ -19,7 +19,7 @@ import { getRec } from '../../utils/position';
  */
 export const create = (n = 'span'): HTMLElement => {
   const markElement = document.createElement(n);
-  const classNames = cx('ph speccer mark');
+  const classNames = cx('ph-speccer speccer mark');
 
   set(markElement, classNames);
 
