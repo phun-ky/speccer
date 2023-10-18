@@ -19,12 +19,14 @@
     "types": ["jest", "node", "./node_modules/network-information-types"]
   },
   "exclude": [
+    "jest.config.ts",
     "node_modules",
     "build",
     "dist",
     "./speccer.js",
     "scripts",
     "tests",
+    "__tests__",
     "dts"
   ]
 }

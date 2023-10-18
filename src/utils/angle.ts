@@ -22,7 +22,12 @@ export const angle = (
   ey: number,
   normalize = true
 ): number => {
-  if (!cx || !cy || !ex || !ey) {
+  if (
+    typeof cx == 'undefined' ||
+    typeof cy == 'undefined' ||
+    typeof ex == 'undefined' ||
+    typeof ey == 'undefined'
+  ) {
     throw new SyntaxError('Missing input for `angle`');
   }
 
