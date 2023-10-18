@@ -3,6 +3,7 @@
   "version": "8.0.4",
   "description": "A script to annotate, show spacing specs and to display typography information in documentation/website on HTML elements",
   "main": "speccer.js",
+  "types": "speccer.d.ts",
   "publishConfig": {
     "access": "public"
   },
