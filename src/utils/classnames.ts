@@ -1,7 +1,10 @@
 /* eslint no-console:0 */
 'use strict';
 
-import { ClassNamesObjectMapInterface } from 'types/interfaces/classnames';
+import {
+  ClassNamesFirstArgType,
+  ClassNamesSecondArgType
+} from 'types/interfaces/classnames';
 
 /**
  * Add CSS classes to an HTML element.
@@ -82,11 +85,16 @@ export const remove = (el: HTMLElement, cls: string, avoid = 'noop') => {
 };
 
 /**
- * Generate CSS classes from a string and an object.
+ * Combines class names and optional properties object into a single string of class names.
  *
- * @param {string} cls - Additional CSS classes as a string.
- * @param {ClassNamesObjectMapInterface} cls_obj - A mapping of class names to boolean values.
- * @returns {string} - A space-separated string of CSS class names.
+ * The `cx` function takes two parameters: `cls` and `cls_obj`.
+ * The `cls` parameter can be either a string representing class names or an object with
+ * properties set to `true` or `false`. The `cls_obj` parameter is an optional object with
+ *  properties set to `true` or `false`, allowing for conditional inclusion of class names.
+ *
+ * @param {ClassNamesFirstArgType} cls - The class names as a string or an object with properties set to true or false.
+ * @param {ClassNamesObjectMapInterface} cls_obj - An optional object with properties set to true or false to conditionally include class names.
+ * @returns {string} - Returns a single string containing the combined class names.
  * @example
  * ```ts
  * // Generate CSS classes from a string and an object
@@ -95,8 +103,8 @@ export const remove = (el: HTMLElement, cls: string, avoid = 'noop') => {
  * ```
  */
 export const cx = (
-  cls: string,
-  cls_obj?: ClassNamesObjectMapInterface
+  cls: ClassNamesFirstArgType,
+  cls_obj?: ClassNamesSecondArgType
 ): string => {
   if (!cls) return '';
 
@@ -106,7 +114,7 @@ export const cx = (
       .join(' ')}`.trim();
   }
 
-  return `${cls} ${
+  return `${(cls as string).trim()} ${
     cls_obj
       ? Object.keys(cls_obj)
         .filter((classname) => cls_obj[classname])
