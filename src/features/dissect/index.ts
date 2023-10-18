@@ -115,7 +115,7 @@ export const element = (sectionEl: HTMLElement): Promise<void> => {
 
       await add(_dissection_el, _dissection_styles);
 
-      if (useSVG(_areas_string)) {
+      if (useSVG(_areas_string) && !isCurly(_areas_string)) {
         new DrawSVGLine(targetEl, _dissection_el);
       } else if (isCurly(_areas_string)) {
         new DrawSVGCurlyBracket(targetEl, _dissection_el);
