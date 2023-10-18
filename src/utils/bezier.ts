@@ -124,8 +124,8 @@ export const getCurlySVGPath = async (
     {
       x1: x1 + x1modifier,
       x2: x2 + x2modifier,
-      y1: y1 + y1modifier,
-      y2: y2 + y2modifier
+      y1: y1 + y1modifier + document.documentElement.scrollTop,
+      y2: y2 + y2modifier + document.documentElement.scrollTop
     },
     {
       direct: true,

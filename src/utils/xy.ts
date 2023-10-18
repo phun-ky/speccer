@@ -68,6 +68,22 @@ export const xy = {
     y: coords.bottom(rect)
   }),
   /**
+   * Get the x and y coordinates of the left of a DOMRect.
+   * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
+   * @returns {{ x: number, y: number }} The x and y coordinates of the left.
+   * @example
+   * ```ts
+   * const rect = element.getBoundingClientRect();
+   * const leftCoordinates = xy.left(rect);
+   * // leftCoordinates.x and leftCoordinates.y will contain the coordinates
+   * ```
+   */
+  left: (rect: DOMRect) => ({ x: coords.left(rect), y: coords.center_y(rect) }),
+  'right-top': (rect: DOMRect) => ({
+    x: coords.right(rect),
+    y: coords.top(rect)
+  }),
+  /**
    * Get the x and y coordinates of the right bottom of a DOMRect.
    * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
    * @returns {{ x: number, y: number }} The x and y coordinates of the right bottom.

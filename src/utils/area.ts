@@ -118,10 +118,7 @@ export const isWidthArea = (areaString: string): boolean => {
  * @returns `true` if any SVG-related area is present, otherwise `false`.
  */
 export const useSVG = (areaString: string): boolean =>
-  areaString.includes(DissectAreaEnum.SVG) ||
-  areaString.includes(DissectAreaEnum.Curly) ||
-  areaString.includes(DissectAreaEnum.Full) ||
-  areaString.includes(DissectAreaEnum.Enclose);
+  areaString.includes(DissectAreaEnum.SVG);
 
 /**
  * Checks if the provided areaString contains 'curly' and 'full' areas.

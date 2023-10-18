@@ -3,6 +3,7 @@
 import { uniqueID } from '../id';
 import { getPositionsForSVGPath, getSVGPath } from '../bezier';
 import { direction_of_element } from '../direction-of-element';
+import { add as addStyle } from '../styles';
 
 /**
  * Class representing a DrawSVGLine instance.
@@ -54,6 +55,10 @@ export class DrawSVGLine {
       );
     }
 
+    addStyle(this.#canvas, {
+      height: `${document.body.scrollHeight}px`
+    });
+
     this.connect();
   }
 
@@ -77,12 +82,12 @@ export class DrawSVGLine {
     const _id = uniqueID();
     const _path_el_id = `ph_draw_path-path-${_id}`;
     const _new_path = path.cloneNode(false) as SVGPathElement;
+    const dataStartElID = this.startElement.getAttribute('id') || uniqueID();
+
+    this.startElement.setAttribute('id', dataStartElID);
 
     _new_path.setAttribute('id', _path_el_id);
-    _new_path.setAttribute(
-      'data-start-el',
-      this.startElement.getAttribute('id') || 'no-id-found'
-    );
+    _new_path.setAttribute('data-start-el', dataStartElID);
     _new_path.classList.remove('original');
     _new_path.classList.add('speccer');
 

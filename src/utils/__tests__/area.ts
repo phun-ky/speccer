@@ -90,7 +90,7 @@ describe('area', () => {
   describe('useSVG', () => {
     it('should return true if SVG-related areas are in the area string', () => {
       expect(useSVG('svg')).toBe(true);
-      expect(useSVG('full curly')).toBe(true);
+      expect(useSVG('full curly')).toBe(false);
       expect(useSVG('left right')).toBe(false);
     });
   });
