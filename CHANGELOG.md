@@ -1,5 +1,24 @@
 # Changelog
 
+## [8.0.5](https://github.com/phun-ky/speccer/compare/v8.0.4...v8.0.5) (2023-10-18)
+
+
+### Tasks
+
+* 🤖 Add resets on dev file ([28463ed](https://github.com/phun-ky/speccer/commit/28463ed57decfe6d37e267cd81426083bc331ea9))
+* 🤖 Add types to `package.json` ([a6d5a3f](https://github.com/phun-ky/speccer/commit/a6d5a3f5828b88dd47ecf6f31b1083f65f0fc870))
+* 🤖 build ([a5c0543](https://github.com/phun-ky/speccer/commit/a5c054359fe820e638e39ffdf15e36a61c9da974))
+
+
+### Bug
+
+* 🐛 Add margin and padding reset for all speccer elements ([85e5371](https://github.com/phun-ky/speccer/commit/85e5371257555d69799fe135dc98bf0f68ce3329))
+* 🐛 Add missing xy coord function ([b697203](https://github.com/phun-ky/speccer/commit/b69720359aff31df1a1992591cd2702f9d517da1))
+* 🐛 Adjust for scroll position for curly brackets ([a986494](https://github.com/phun-ky/speccer/commit/a9864946961686dcbb7d7bb78b70f0e99a5ef439))
+* 🐛 Fix curly brackets ([430dc4a](https://github.com/phun-ky/speccer/commit/430dc4ae605276ca2e1a50880260f7dc3c200693))
+* 🐛 Set correct height on svg canvas ([11c00cb](https://github.com/phun-ky/speccer/commit/11c00cbe08513686f5bd4143b63e439a9aa8129e))
+* 🐛 Set missing id ([242f91d](https://github.com/phun-ky/speccer/commit/242f91db7ea8fb36bf582a5f72134e56b57304f4))
+
 ## [8.0.4](https://github.com/phun-ky/speccer/compare/v8.0.3...v8.0.4) (2023-10-18)
 
 

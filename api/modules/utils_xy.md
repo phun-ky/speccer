@@ -19,12 +19,14 @@ Object containing functions to retrieve specific x and y coordinates from a DOMR
 | `bottom-left` | (`rect`: `DOMRect`) => { `x`: `number` ; `y`: `number`  } |
 | `bottom-right` | (`rect`: `DOMRect`) => { `x`: `number` ; `y`: `number`  } |
 | `center` | (`rect`: `DOMRect`) => { `x`: `number` ; `y`: `number`  } |
+| `left` | (`rect`: `DOMRect`) => { `x`: `number` ; `y`: `number`  } |
 | `left-bottom` | (`rect`: `DOMRect`) => { `x`: `number` ; `y`: `number`  } |
 | `left-center` | (`rect`: `DOMRect`) => { `x`: `number` ; `y`: `number`  } |
 | `left-top` | (`rect`: `DOMRect`) => { `x`: `number` ; `y`: `number`  } |
 | `right` | (`rect`: `DOMRect`) => { `x`: `number` ; `y`: `number`  } |
 | `right-bottom` | (`rect`: `DOMRect`) => { `x`: `number` ; `y`: `number`  } |
 | `right-center` | (`rect`: `DOMRect`) => { `x`: `number` ; `y`: `number`  } |
+| `right-top` | (`rect`: `DOMRect`) => { `x`: `number` ; `y`: `number`  } |
 | `top` | (`rect`: `DOMRect`) => { `x`: `number` ; `y`: `number`  } |
 | `top-center` | (`rect`: `DOMRect`) => { `x`: `number` ; `y`: `number`  } |
 | `top-left` | (`rect`: `DOMRect`) => { `x`: `number` ; `y`: `number`  } |

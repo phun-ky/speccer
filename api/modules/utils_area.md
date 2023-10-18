@@ -79,7 +79,7 @@ Checks if the provided areaString contains 'curly' and 'full' areas.
 
 #### Defined in
 
-[utils/area.ts:132](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L132)
+[utils/area.ts:129](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L129)
 
 ___
 

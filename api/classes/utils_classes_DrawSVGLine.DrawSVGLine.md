@@ -23,7 +23,7 @@ Creates a new DrawSVGLine instance.
 
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:22](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L22)
+[utils/classes/DrawSVGLine.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L23)
 
 ## Properties
 
@@ -33,7 +33,7 @@ Creates a new DrawSVGLine instance.
 
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:11](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L11)
+[utils/classes/DrawSVGLine.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L12)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L12)
+[utils/classes/DrawSVGLine.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L13)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L15)
+[utils/classes/DrawSVGLine.ts:16](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L16)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L13)
+[utils/classes/DrawSVGLine.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L14)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L14)
+[utils/classes/DrawSVGLine.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L15)
 
 ## Methods
 
@@ -100,7 +100,7 @@ Will throw an error if required elements are missing or not in the DOM.
 
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:32](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L32)
+[utils/classes/DrawSVGLine.ts:33](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L33)
 
 ___
 
@@ -116,7 +116,7 @@ Connects and draws the line.
 
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:63](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L63)
+[utils/classes/DrawSVGLine.ts:68](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L68)
 
 ___
 
@@ -142,4 +142,4 @@ Will throw an error if no path is provided.
 
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:72](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L72)
+[utils/classes/DrawSVGLine.ts:77](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L77)

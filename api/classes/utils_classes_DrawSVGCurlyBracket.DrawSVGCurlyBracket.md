@@ -23,7 +23,7 @@ Creates a new DrawSVGCurlyBracket instance.
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L23)
+[utils/classes/DrawSVGCurlyBracket.ts:24](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L24)
 
 ## Properties
 
@@ -33,7 +33,7 @@ Creates a new DrawSVGCurlyBracket instance.
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:11](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L11)
+[utils/classes/DrawSVGCurlyBracket.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L12)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L12)
+[utils/classes/DrawSVGCurlyBracket.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L13)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L15)
+[utils/classes/DrawSVGCurlyBracket.ts:16](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L16)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:16](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L16)
+[utils/classes/DrawSVGCurlyBracket.ts:17](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L17)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L13)
+[utils/classes/DrawSVGCurlyBracket.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L14)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L14)
+[utils/classes/DrawSVGCurlyBracket.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L15)
 
 ## Methods
 
@@ -111,7 +111,7 @@ Will throw an error if no path is provided.
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:74](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L74)
+[utils/classes/DrawSVGCurlyBracket.ts:79](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L79)
 
 ___
 
@@ -138,7 +138,7 @@ Will throw an error if required elements are missing or not in the DOM.
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:33](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L33)
+[utils/classes/DrawSVGCurlyBracket.ts:34](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L34)
 
 ___
 
@@ -154,7 +154,7 @@ Connects and draws the curly bracket.
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:64](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L64)
+[utils/classes/DrawSVGCurlyBracket.ts:69](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L69)
 
 ___
 
@@ -180,4 +180,4 @@ Will throw an error if no path is provided.
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:99](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L99)
+[utils/classes/DrawSVGCurlyBracket.ts:103](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L103)
