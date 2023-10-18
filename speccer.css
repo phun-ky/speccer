@@ -32,6 +32,8 @@ svg.ph-speccer,
   pointer-events: none;
   user-select: none;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 .ph-speccer.speccer:not(path),
 .ph-speccer.speccer::after,
