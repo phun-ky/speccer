@@ -1,4 +1,4 @@
-import { DissectAreaEnum, MeasureAreaEnum } from 'types/enums/area';
+import { DissectAreaEnum, MeasureAreaEnum } from '../types/enums/area';
 
 /**
  * Splits a string containing areas into an array of strings.
