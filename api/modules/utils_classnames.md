@@ -8,20 +8,25 @@
 
 ▸ **cx**(`cls`, `cls_obj?`): `string`
 
-Generate CSS classes from a string and an object.
+Combines class names and optional properties object into a single string of class names.
+
+The `cx` function takes two parameters: `cls` and `cls_obj`.
+The `cls` parameter can be either a string representing class names or an object with
+properties set to `true` or `false`. The `cls_obj` parameter is an optional object with
+ properties set to `true` or `false`, allowing for conditional inclusion of class names.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `cls` | `string` | Additional CSS classes as a string. |
-| `cls_obj?` | [`ClassNamesObjectMapInterface`](../interfaces/types_interfaces_classnames.ClassNamesObjectMapInterface.md) | A mapping of class names to boolean values. |
+| `cls` | [`ClassNamesFirstArgType`](types_interfaces_classnames.md#classnamesfirstargtype) | The class names as a string or an object with properties set to true or false. |
+| `cls_obj?` | [`ClassNamesSecondArgType`](types_interfaces_classnames.md#classnamessecondargtype) | An optional object with properties set to true or false to conditionally include class names. |
 
 #### Returns
 
 `string`
 
-- A space-separated string of CSS class names.
+- Returns a single string containing the combined class names.
 
 **`Example`**
 
@@ -33,7 +38,7 @@ console.log(classNames); // Example output: 'class1 class2'
 
 #### Defined in
 
-[utils/classnames.ts:97](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L97)
+[utils/classnames.ts:105](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L105)
 
 ___
 
@@ -65,7 +70,7 @@ remove(element, 'class1 class2');
 
 #### Defined in
 
-[utils/classnames.ts:72](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L72)
+[utils/classnames.ts:75](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L75)
 
 ___
 
@@ -97,7 +102,7 @@ set(element, 'class1 class2');
 
 #### Defined in
 
-[utils/classnames.ts:20](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L20)
+[utils/classnames.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L23)
 
 ___
 
@@ -129,4 +134,4 @@ toggle(element, 'class1 class2');
 
 #### Defined in
 
-[utils/classnames.ts:46](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L46)
+[utils/classnames.ts:49](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L49)

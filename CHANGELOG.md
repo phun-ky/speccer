@@ -1,5 +1,20 @@
 # Changelog
 
+## [8.0.4](https://github.com/phun-ky/speccer/compare/v8.0.3...v8.0.4) (2023-10-18)
+
+
+### Bug
+
+* 🐛 Add back missing methods ([8bf104e](https://github.com/phun-ky/speccer/commit/8bf104ea3b2c58a73270f773dfa8082ab469f172))
+* 🐛 Correctly check for undefined values ([b7d7b0b](https://github.com/phun-ky/speccer/commit/b7d7b0bea72dabf036df533295f57c22c5e520c4))
+* 🐛 Fix issues with jest/ts ([a4395a8](https://github.com/phun-ky/speccer/commit/a4395a81a56ed1f7c18aaf80677e875fd65a45a3))
+* 🐛 Use correct import path ([ad6f717](https://github.com/phun-ky/speccer/commit/ad6f7171891b4df90cb491f635316426e57fae53))
+
+
+### Refactoring
+
+* 💡 Update `cx` ([5754282](https://github.com/phun-ky/speccer/commit/5754282fbc7cc8f4a16980f82ea795656eea90bb))
+
 ## [8.0.3](https://github.com/phun-ky/speccer/compare/v8.0.2...v8.0.3) (2023-10-17)
 
 

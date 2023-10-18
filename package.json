@@ -1,6 +1,6 @@
 {
   "name": "@phun-ky/speccer",
-  "version": "8.0.3",
+  "version": "8.0.4",
   "description": "A script to annotate, show spacing specs and to display typography information in documentation/website on HTML elements",
   "main": "speccer.js",
   "publishConfig": {
