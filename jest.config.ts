@@ -8,7 +8,7 @@ const config = {
   projects: [
     {
       displayName: 'speccer/utils',
-      testMatch: ['<rootDir>/**/utils/__tests__/**/*.[jt]s?(x)'],
+      testMatch: ['<rootDir>/src/utils/__tests__/**/*.[jt]s?(x)'],
       preset: 'ts-jest',
       testEnvironment: 'jsdom',
       transform: {

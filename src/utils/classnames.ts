@@ -4,7 +4,7 @@
 import {
   ClassNamesFirstArgType,
   ClassNamesSecondArgType
-} from 'types/interfaces/classnames';
+} from '../types/interfaces/classnames';
 
 /**
  * Add CSS classes to an HTML element.
