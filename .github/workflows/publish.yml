@@ -8,9 +8,22 @@ on:
     types: [closed]
     branches: [ "main" ]
     paths:
+      - '.github'
       - 'src/**'
       - 'api/**'
       - 'public/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'rollup.config.js'
+      - 'tsconfig.json'
+      - '.npmrc'
+      - '.release-it.json'
+      - 'README.md'
+      - 'CONTRIBUTING.md'
+      - 'CODE_OF_CONDUCT.md'
+      - 'SECURITY.md'
+      - '.postcssrc.cjs'
+      - '.browserlistrc'
   workflow_dispatch:
 jobs:
   publish:
