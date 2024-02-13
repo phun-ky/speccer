@@ -6,7 +6,7 @@
 
 ### position
 
-▸ **position**(`property`, `value`, `spacingEl`, `targetEl`): `Promise`<`void`\>
+▸ **position**(`property`, `value`, `spacingEl`, `targetEl`): `Promise`\<`void`\>
 
 Set the position and dimensions of a spacing element relative to a target element.
 
@@ -21,7 +21,7 @@ Set the position and dimensions of a spacing element relative to a target elemen
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 - A promise that resolves after setting the position and dimensions.
 

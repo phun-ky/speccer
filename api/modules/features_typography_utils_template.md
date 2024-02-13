@@ -6,7 +6,7 @@
 
 ### template
 
-▸ **template**(`targetEl`): `Promise`<`string`\>
+▸ **template**(`targetEl`): `Promise`\<`string`\>
 
 Generate a HTML string for typography styles of a target element.
 
@@ -18,7 +18,7 @@ Generate a HTML string for typography styles of a target element.
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 - A promise that resolves with the HTML string.
 

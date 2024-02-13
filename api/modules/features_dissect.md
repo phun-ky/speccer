@@ -33,13 +33,13 @@ document.body.appendChild(dissectedElement);
 
 #### Defined in
 
-[features/dissect/index.ts:29](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/index.ts#L29)
+[features/dissect/index.ts:26](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/index.ts#L26)
 
 ___
 
 ### element
 
-▸ **element**(`sectionEl`): `Promise`<`void`\>
+▸ **element**(`sectionEl`): `Promise`\<`void`\>
 
 Create dissected elements based on the section element and its data-anatomy attributes.
 
@@ -51,7 +51,7 @@ Create dissected elements based on the section element and its data-anatomy attr
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 - A promise that resolves after creating dissected elements.
 
@@ -64,4 +64,4 @@ element(sectionElement);
 
 #### Defined in
 
-[features/dissect/index.ts:70](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/index.ts#L70)
+[features/dissect/index.ts:64](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/index.ts#L64)

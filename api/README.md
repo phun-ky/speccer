@@ -64,5 +64,6 @@
 - [utils/position](modules/utils_position.md)
 - [utils/resize](modules/utils_resize.md)
 - [utils/styles](modules/utils_styles.md)
+- [utils/typeof](modules/utils_typeof.md)
 - [utils/wait](modules/utils_wait.md)
 - [utils/xy](modules/utils_xy.md)

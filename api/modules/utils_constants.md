@@ -80,7 +80,7 @@ console.log(defaultPinSpace); // Example output: 48
 
 #### Defined in
 
-[utils/constants.ts:48](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L48)
+[utils/constants.ts:47](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L47)
 
 ___
 
@@ -100,7 +100,7 @@ console.log(negativeDefaultPinSpace); // Example output: -48
 
 #### Defined in
 
-[utils/constants.ts:61](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L61)
+[utils/constants.ts:60](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L60)
 
 ___
 
@@ -120,7 +120,7 @@ console.log(letters); // Example output: ['A', 'B', 'C', ...]
 
 #### Defined in
 
-[utils/constants.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L15)
+[utils/constants.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L14)
 
 ___
 
@@ -140,4 +140,4 @@ console.log(tagsToAvoid); // Example output: ['TR', 'TH', 'TD', ...]
 
 #### Defined in
 
-[utils/constants.ts:28](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L28)
+[utils/constants.ts:27](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L27)

@@ -6,7 +6,7 @@
 
 ### getRec
 
-▸ **getRec**(`sourceEl`, `targetEl`): `Promise`<[`GetRecPropertiesInterface`](../interfaces/types_interfaces_position.GetRecPropertiesInterface.md)\>
+▸ **getRec**(`sourceEl`, `targetEl`): `Promise`\<[`GetRecPropertiesInterface`](../interfaces/types_interfaces_position.GetRecPropertiesInterface.md)\>
 
 Gets various positioning properties between two HTML elements.
 
@@ -19,7 +19,7 @@ Gets various positioning properties between two HTML elements.
 
 #### Returns
 
-`Promise`<[`GetRecPropertiesInterface`](../interfaces/types_interfaces_position.GetRecPropertiesInterface.md)\>
+`Promise`\<[`GetRecPropertiesInterface`](../interfaces/types_interfaces_position.GetRecPropertiesInterface.md)\>
 
 - A promise that resolves to an object with positioning functions.
 
@@ -110,7 +110,7 @@ ___
 
 ### offset
 
-▸ **offset**(`targetEl`): `Promise`<[`PositionPropertiesType`](types_position.md#positionpropertiestype)\>
+▸ **offset**(`targetEl`): `Promise`\<[`PositionPropertiesType`](types_position.md#positionpropertiestype)\>
 
 Gets the offset properties of an HTML element.
 
@@ -122,7 +122,7 @@ Gets the offset properties of an HTML element.
 
 #### Returns
 
-`Promise`<[`PositionPropertiesType`](types_position.md#positionpropertiestype)\>
+`Promise`\<[`PositionPropertiesType`](types_position.md#positionpropertiestype)\>
 
 - A promise that resolves to the offset properties.
 
@@ -141,7 +141,7 @@ ___
 
 ### offsetWithCenter
 
-▸ **offsetWithCenter**(`sourceEl`, `targetEl`): `Promise`<[`PositionPropertiesType`](types_position.md#positionpropertiestype)\>
+▸ **offsetWithCenter**(`sourceEl`, `targetEl`): `Promise`\<[`PositionPropertiesType`](types_position.md#positionpropertiestype)\>
 
 Gets the offset properties of an HTML element with its center aligned to another element.
 
@@ -154,7 +154,7 @@ Gets the offset properties of an HTML element with its center aligned to another
 
 #### Returns
 
-`Promise`<[`PositionPropertiesType`](types_position.md#positionpropertiestype)\>
+`Promise`\<[`PositionPropertiesType`](types_position.md#positionpropertiestype)\>
 
 - A promise that resolves to the offset properties.
 

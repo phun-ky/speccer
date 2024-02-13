@@ -19,7 +19,7 @@ Options for creating a bezier path.
 
 #### Defined in
 
-[types/bezier.ts:41](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L41)
+[types/bezier.ts:42](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L42)
 
 ___
 
@@ -40,7 +40,7 @@ Parameters for creating coordinates for a curve.
 
 #### Defined in
 
-[types/bezier.ts:56](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L56)
+[types/bezier.ts:57](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L57)
 
 ___
 
@@ -60,7 +60,7 @@ Options for creating coordinates for a curve.
 
 #### Defined in
 
-[types/bezier.ts:81](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L81)
+[types/bezier.ts:82](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L82)
 
 ___
 
@@ -81,16 +81,16 @@ Options for creating a curly bezier path.
 
 #### Defined in
 
-[types/bezier.ts:16](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L16)
+[types/bezier.ts:17](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L17)
 
 ___
 
 ### DissectStylesOptionsType
 
-Ƭ **DissectStylesOptionsType**: `Record`<`string`, `never`\> \| { `isCurly?`: `boolean`  }
+Ƭ **DissectStylesOptionsType**: `Record`\<`string`, `never`\> \| \{ `isCurly?`: `boolean`  }
 
 Options for dissect styles.
 
 #### Defined in
 
-[types/bezier.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L4)
+[types/bezier.ts:5](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L5)

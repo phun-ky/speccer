@@ -18,7 +18,7 @@ ___
 
 ### ClassNamesSecondArgType
 
-Ƭ **ClassNamesSecondArgType**: `undefined` \| `Record`<`string`, `boolean`\>
+Ƭ **ClassNamesSecondArgType**: `undefined` \| `Record`\<`string`, `boolean`\>
 
 Type for the optional properties object with boolean values.
 

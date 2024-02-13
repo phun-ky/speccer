@@ -43,4 +43,4 @@ const angleValue = angle(0, 0, 3, 4);
 
 #### Defined in
 
-[utils/angle.ts:18](https://github.com/phun-ky/speccer/blob/main/src/utils/angle.ts#L18)
+[utils/angle.ts:20](https://github.com/phun-ky/speccer/blob/main/src/utils/angle.ts#L20)

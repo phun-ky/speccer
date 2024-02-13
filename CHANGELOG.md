@@ -1,5 +1,27 @@
 # Changelog
 
+## [8.0.6](https://github.com/phun-ky/speccer/compare/v8.0.5...v8.0.6) (2024-02-13)
+
+
+### Tasks
+
+* ✏️ Create SECURITY.md ([5910ecb](https://github.com/phun-ky/speccer/commit/5910ecb26cf7d8b827de8f4ad706483c2fb8a5d5))
+* 🤖 bump @adobe/css-tools and stylus ([0f4398b](https://github.com/phun-ky/speccer/commit/0f4398b34cc4a1f804ceb0052cff6dd3f1f735a3))
+* 🤖 bump @release-it/conventional-changelog from 7.0.1 to 7.0.2 ([833edb7](https://github.com/phun-ky/speccer/commit/833edb7fa467283a52e26104efecf7002d977823))
+* 🤖 bump @typescript-eslint/parser from 5.38.1 to 5.62.0 ([043c498](https://github.com/phun-ky/speccer/commit/043c498f2dc5d2677b54ffb8f99a51d7aa650bb9))
+* 🤖 bump rollup-plugin-typescript2 from 0.35.0 to 0.36.0 ([c5df799](https://github.com/phun-ky/speccer/commit/c5df799c5146bf7c483a9c165b07f439aa9ef2c4))
+* 🤖 bump typedoc-plugin-markdown from 3.16.0 to 3.17.1 ([8b8d9c6](https://github.com/phun-ky/speccer/commit/8b8d9c6893af043205b39c5c7ed5a6ab7537ac9b))
+* 🤖 bump typedoc-plugin-rename-defaults from 0.6.6 to 0.6.7 ([06aea25](https://github.com/phun-ky/speccer/commit/06aea25109c7ef2b529a940bcf672e0f1da55d47))
+* 🤖 bump typescript from 4.8.4 to 4.9.5 ([24fc76a](https://github.com/phun-ky/speccer/commit/24fc76a5b82389e1d38b55862aaad597a1fe2cd2))
+* 🤖 reinstall ([e335812](https://github.com/phun-ky/speccer/commit/e3358128516dd7fdca77c72dc4a293802d3f4136))
+* 🤖 Update eslint ([6763306](https://github.com/phun-ky/speccer/commit/67633063bd9cf123bb9bcb3c9e5ccddf2e1eaf25))
+
+
+### Documentation
+
+* ✏️ Add `CONTRIBUTING.md` ([e28e791](https://github.com/phun-ky/speccer/commit/e28e791ef9eb809de3ab6db8c0831f5362308395))
+* ✏️ Create CODE_OF_CONDUCT.md ([ddde767](https://github.com/phun-ky/speccer/commit/ddde7679a56edc39727be0be7633d8b8ef76b7e9))
+
 ## [8.0.5](https://github.com/phun-ky/speccer/compare/v8.0.4...v8.0.5) (2023-10-18)
 
 

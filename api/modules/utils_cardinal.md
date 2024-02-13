@@ -41,7 +41,7 @@ const direction = cardinal_direction(45);
 
 #### Defined in
 
-[utils/cardinal.ts:19](https://github.com/phun-ky/speccer/blob/main/src/utils/cardinal.ts#L19)
+[utils/cardinal.ts:18](https://github.com/phun-ky/speccer/blob/main/src/utils/cardinal.ts#L18)
 
 ___
 
@@ -82,4 +82,4 @@ const direction = cardinal_direction_crude(45);
 
 #### Defined in
 
-[utils/cardinal.ts:60](https://github.com/phun-ky/speccer/blob/main/src/utils/cardinal.ts#L60)
+[utils/cardinal.ts:49](https://github.com/phun-ky/speccer/blob/main/src/utils/cardinal.ts#L49)

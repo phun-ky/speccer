@@ -6,7 +6,7 @@
 
 ### getCoordsPairFromObjects
 
-▸ **getCoordsPairFromObjects**(`el1`, `el2`, `pos1?`, `pos2?`): `Promise`<{ `x1`: `number` ; `x2`: `number` ; `y1`: `number` ; `y2`: `number`  }\>
+▸ **getCoordsPairFromObjects**(`el1`, `el2`, `pos1?`, `pos2?`): `Promise`\<\{ `x1`: `number` ; `x2`: `number` ; `y1`: `number` ; `y2`: `number`  }\>
 
 Get the x and y coordinates of two elements and return them as an object.
 
@@ -21,7 +21,7 @@ Get the x and y coordinates of two elements and return them as an object.
 
 #### Returns
 
-`Promise`<{ `x1`: `number` ; `x2`: `number` ; `y1`: `number` ; `y2`: `number`  }\>
+`Promise`\<\{ `x1`: `number` ; `x2`: `number` ; `y1`: `number` ; `y2`: `number`  }\>
 
 - An object containing the coordinates.
 

@@ -10,7 +10,7 @@ Class representing a DrawSVGCurlyBracket instance.
 
 ### constructor
 
-• **new DrawSVGCurlyBracket**(`startElement`, `stopElement`)
+• **new DrawSVGCurlyBracket**(`startElement`, `stopElement`): [`DrawSVGCurlyBracket`](utils_classes_DrawSVGCurlyBracket.DrawSVGCurlyBracket.md)
 
 Creates a new DrawSVGCurlyBracket instance.
 
@@ -21,9 +21,13 @@ Creates a new DrawSVGCurlyBracket instance.
 | `startElement` | `HTMLElement` | The starting element for the bracket. |
 | `stopElement` | `HTMLElement` | The ending element for the bracket. |
 
+#### Returns
+
+[`DrawSVGCurlyBracket`](utils_classes_DrawSVGCurlyBracket.DrawSVGCurlyBracket.md)
+
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:24](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L24)
+[utils/classes/DrawSVGCurlyBracket.ts:22](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L22)
 
 ## Properties
 
@@ -33,7 +37,7 @@ Creates a new DrawSVGCurlyBracket instance.
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L12)
+[utils/classes/DrawSVGCurlyBracket.ts:10](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L10)
 
 ___
 
@@ -43,7 +47,7 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L13)
+[utils/classes/DrawSVGCurlyBracket.ts:11](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L11)
 
 ___
 
@@ -53,7 +57,7 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:16](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L16)
+[utils/classes/DrawSVGCurlyBracket.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L14)
 
 ___
 
@@ -63,7 +67,7 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:17](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L17)
+[utils/classes/DrawSVGCurlyBracket.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L15)
 
 ___
 
@@ -73,7 +77,7 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L14)
+[utils/classes/DrawSVGCurlyBracket.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L12)
 
 ___
 
@@ -83,13 +87,13 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L15)
+[utils/classes/DrawSVGCurlyBracket.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L13)
 
 ## Methods
 
 ### #getPathElement
 
-▸ `Private` **#getPathElement**(`path`): `SVGPathElement`
+▸ **#getPathElement**(`path`): `SVGPathElement`
 
 Creates a new path element based on the provided path.
 
@@ -111,13 +115,13 @@ Will throw an error if no path is provided.
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:79](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L79)
+[utils/classes/DrawSVGCurlyBracket.ts:77](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L77)
 
 ___
 
 ### #init
 
-▸ `Private` **#init**(`startElement`, `stopElement`): `void`
+▸ **#init**(`startElement`, `stopElement`): `void`
 
 Initializes the DrawSVGCurlyBracket instance.
 
@@ -138,7 +142,7 @@ Will throw an error if required elements are missing or not in the DOM.
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:34](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L34)
+[utils/classes/DrawSVGCurlyBracket.ts:32](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L32)
 
 ___
 
@@ -154,13 +158,13 @@ Connects and draws the curly bracket.
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:69](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L69)
+[utils/classes/DrawSVGCurlyBracket.ts:67](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L67)
 
 ___
 
 ### draw
 
-▸ **draw**(`path`): `Promise`<`void`\>
+▸ **draw**(`path`): `Promise`\<`void`\>
 
 Draws the curly bracket based on the provided path.
 
@@ -172,7 +176,7 @@ Draws the curly bracket based on the provided path.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 **`Throws`**
 
@@ -180,4 +184,4 @@ Will throw an error if no path is provided.
 
 #### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:103](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L103)
+[utils/classes/DrawSVGCurlyBracket.ts:101](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L101)

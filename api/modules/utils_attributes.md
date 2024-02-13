@@ -63,4 +63,4 @@ setAttributes(element, {
 
 #### Defined in
 
-[utils/attributes.ts:21](https://github.com/phun-ky/speccer/blob/main/src/utils/attributes.ts#L21)
+[utils/attributes.ts:19](https://github.com/phun-ky/speccer/blob/main/src/utils/attributes.ts#L19)

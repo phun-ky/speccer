@@ -39,4 +39,4 @@ debouncedFn('World'); // This will trigger immediate execution
 
 #### Defined in
 
-[utils/debounce.ts:26](https://github.com/phun-ky/speccer/blob/main/src/utils/debounce.ts#L26)
+[utils/debounce.ts:24](https://github.com/phun-ky/speccer/blob/main/src/utils/debounce.ts#L24)

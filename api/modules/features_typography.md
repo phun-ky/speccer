@@ -34,13 +34,13 @@ document.body.appendChild(createdElement);
 
 #### Defined in
 
-[features/typography/index.ts:24](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L24)
+[features/typography/index.ts:23](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L23)
 
 ___
 
 ### element
 
-▸ **element**(`targetEl`): `Promise`<`void`\>
+▸ **element**(`targetEl`): `Promise`\<`void`\>
 
 Create a specced typography element for a given target element.
 
@@ -52,7 +52,7 @@ Create a specced typography element for a given target element.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 - A promise that resolves once typography element is created and positioned.
 
@@ -67,4 +67,4 @@ if (targetElement) {
 
 #### Defined in
 
-[features/typography/index.ts:55](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L55)
+[features/typography/index.ts:52](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L52)

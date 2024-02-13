@@ -12,6 +12,12 @@ Interface for functions that calculate position properties based on input.
 
 • **absolute**: (`inp?`: [`PositionInputType`](../modules/types_position.md#positioninputtype)) => [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
 
+Calculates absolute position properties.
+
+**`Param`**
+
+Optional position input.
+
 #### Type declaration
 
 ▸ (`inp?`): [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
@@ -39,6 +45,12 @@ ___
 ### fromBottom
 
 • **fromBottom**: (`inp?`: [`PositionInputType`](../modules/types_position.md#positioninputtype)) => [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
+
+Calculates position properties for moving from the bottom.
+
+**`Param`**
+
+Optional position input.
 
 #### Type declaration
 
@@ -68,6 +80,12 @@ ___
 
 • **fromLeft**: (`inp?`: [`PositionInputType`](../modules/types_position.md#positioninputtype)) => [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
 
+Calculates position properties for moving from the left.
+
+**`Param`**
+
+Optional position input.
+
 #### Type declaration
 
 ▸ (`inp?`): [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
@@ -95,6 +113,12 @@ ___
 ### fromRight
 
 • **fromRight**: (`inp?`: [`PositionInputType`](../modules/types_position.md#positioninputtype)) => [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
+
+Calculates position properties for moving from the right.
+
+**`Param`**
+
+Optional position input.
 
 #### Type declaration
 
@@ -124,6 +148,12 @@ ___
 
 • **fromTop**: (`inp?`: [`PositionInputType`](../modules/types_position.md#positioninputtype)) => [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
 
+Calculates position properties for moving from the top.
+
+**`Param`**
+
+Optional position input.
+
 #### Type declaration
 
 ▸ (`inp?`): [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
@@ -151,6 +181,12 @@ ___
 ### toBottom
 
 • **toBottom**: (`inp?`: [`PositionInputType`](../modules/types_position.md#positioninputtype)) => [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
+
+Calculates position properties for moving to the bottom.
+
+**`Param`**
+
+Optional position input.
 
 #### Type declaration
 
@@ -180,6 +216,12 @@ ___
 
 • **toLeft**: (`inp?`: [`PositionInputType`](../modules/types_position.md#positioninputtype)) => [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
 
+Calculates position properties for moving to the left.
+
+**`Param`**
+
+Optional position input.
+
 #### Type declaration
 
 ▸ (`inp?`): [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
@@ -208,6 +250,12 @@ ___
 
 • **toRight**: (`inp?`: [`PositionInputType`](../modules/types_position.md#positioninputtype)) => [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
 
+Calculates position properties for moving to the right.
+
+**`Param`**
+
+Optional position input.
+
 #### Type declaration
 
 ▸ (`inp?`): [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
@@ -235,6 +283,12 @@ ___
 ### toTop
 
 • **toTop**: (`inp?`: [`PositionInputType`](../modules/types_position.md#positioninputtype)) => [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
+
+Calculates position properties for moving to the top.
+
+**`Param`**
+
+Optional position input.
 
 #### Type declaration
 

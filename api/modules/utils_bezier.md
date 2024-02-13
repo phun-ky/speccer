@@ -25,16 +25,16 @@ Coordinates for the Bezier curve.
 
 | Name | Type |
 | :------ | :------ |
-| `firstControl` | { `x`: `number` ; `y`: `number` = y1 } |
+| `firstControl` | \{ `x`: `number` ; `y`: `number` = y1 } |
 | `firstControl.x` | `number` |
 | `firstControl.y` | `number` |
-| `firstPoint` | { `x`: `number` = x1; `y`: `number` = y1 } |
+| `firstPoint` | \{ `x`: `number` = x1; `y`: `number` = y1 } |
 | `firstPoint.x` | `number` |
 | `firstPoint.y` | `number` |
-| `lastControl` | { `x`: `number` ; `y`: `number` = y2 } |
+| `lastControl` | \{ `x`: `number` ; `y`: `number` = y2 } |
 | `lastControl.x` | `number` |
 | `lastControl.y` | `number` |
-| `lastPoint` | { `x`: `number` = x2; `y`: `number` = y2 } |
+| `lastPoint` | \{ `x`: `number` = x2; `y`: `number` = y2 } |
 | `lastPoint.x` | `number` |
 | `lastPoint.y` | `number` |
 
@@ -49,13 +49,13 @@ const coordinates = createBezierCurveCoordinates(
 
 #### Defined in
 
-[utils/bezier.ts:24](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L24)
+[utils/bezier.ts:25](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L25)
 
 ___
 
 ### getCurlySVGPath
 
-▸ **getCurlySVGPath**(`startEl`, `stopEl`, `options`): `Promise`<`string`\>
+▸ **getCurlySVGPath**(`startEl`, `stopEl`, `options`): `Promise`\<`string`\>
 
 Generates an SVG path for a curved line between two HTML elements.
 
@@ -69,7 +69,7 @@ Generates an SVG path for a curved line between two HTML elements.
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 The SVG path string for the curved line.
 
@@ -86,7 +86,7 @@ const svgPath = getCurlySVGPath(startElement, stopElement, {
 
 #### Defined in
 
-[utils/bezier.ts:94](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L94)
+[utils/bezier.ts:95](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L95)
 
 ___
 
@@ -123,7 +123,7 @@ const positions = getPositionsForCurlySVGPath('west');
 
 #### Defined in
 
-[utils/bezier.ts:233](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L233)
+[utils/bezier.ts:226](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L226)
 
 ___
 
@@ -158,13 +158,13 @@ const positions = getPositionsForSVGPath('east');
 
 #### Defined in
 
-[utils/bezier.ts:195](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L195)
+[utils/bezier.ts:188](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L188)
 
 ___
 
 ### getSVGPath
 
-▸ **getSVGPath**(`startEl`, `stopEl`, `options`): `Promise`<`string`\>
+▸ **getSVGPath**(`startEl`, `stopEl`, `options`): `Promise`\<`string`\>
 
 Generates an SVG path for a straight line between two HTML elements.
 
@@ -178,7 +178,7 @@ Generates an SVG path for a straight line between two HTML elements.
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 The SVG path string for the straight line.
 
@@ -193,4 +193,4 @@ const svgPath = getSVGPath(startElement, stopElement, {
 
 #### Defined in
 
-[utils/bezier.ts:160](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L160)
+[utils/bezier.ts:156](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L156)

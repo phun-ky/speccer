@@ -26,4 +26,4 @@ console.log(id); // Example output: "_abc123def"
 
 #### Defined in
 
-[utils/id.ts:16](https://github.com/phun-ky/speccer/blob/main/src/utils/id.ts#L16)
+[utils/id.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/id.ts#L14)

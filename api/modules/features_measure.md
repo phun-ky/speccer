@@ -33,13 +33,13 @@ document.body.appendChild(measurement);
 
 #### Defined in
 
-[features/measure/index.ts:30](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L30)
+[features/measure/index.ts:28](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L28)
 
 ___
 
 ### element
 
-▸ **element**(`targetEl`): `Promise`<`void`\>
+▸ **element**(`targetEl`): `Promise`\<`void`\>
 
 Create a measurement element and add it to the body with styles matching a specified target element.
 
@@ -51,7 +51,7 @@ Create a measurement element and add it to the body with styles matching a speci
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 - A promise that resolves after creating and styling the measurement element.
 
@@ -64,4 +64,4 @@ element(targetElement);
 
 #### Defined in
 
-[features/measure/index.ts:57](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L57)
+[features/measure/index.ts:55](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L55)

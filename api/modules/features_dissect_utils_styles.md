@@ -6,7 +6,7 @@
 
 ### styles
 
-▸ **styles**(`area`, `targetEl`, `dissectionEl`, `options?`): `Promise`<{ `height?`: `string` ; `left`: `string` ; `top`: `string` ; `width?`: `string`  }\>
+▸ **styles**(`area`, `targetEl`, `dissectionEl`, `options?`): `Promise`\<\{ `height?`: `string` ; `left`: `string` ; `top`: `string` ; `width?`: `string`  }\>
 
 Get styles for dissected elements based on the specified area and options.
 
@@ -21,7 +21,7 @@ Get styles for dissected elements based on the specified area and options.
 
 #### Returns
 
-`Promise`<{ `height?`: `string` ; `left`: `string` ; `top`: `string` ; `width?`: `string`  }\>
+`Promise`\<\{ `height?`: `string` ; `left`: `string` ; `top`: `string` ; `width?`: `string`  }\>
 
 - The computed styles.
 

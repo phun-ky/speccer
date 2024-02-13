@@ -6,7 +6,7 @@
 
 ### after
 
-▸ **after**(`el`, `newSibling`): ``null`` \| `Element`
+▸ **after**(`el`, `newSibling`): `undefined` \| ``null`` \| `Element`
 
 Inserts an HTML element after another element in the DOM.
 
@@ -19,7 +19,7 @@ Inserts an HTML element after another element in the DOM.
 
 #### Returns
 
-``null`` \| `Element`
+`undefined` \| ``null`` \| `Element`
 
 **`Example`**
 
@@ -61,4 +61,4 @@ removeAll('.my-class');
 
 #### Defined in
 
-[utils/node.ts:33](https://github.com/phun-ky/speccer/blob/main/src/utils/node.ts#L33)
+[utils/node.ts:34](https://github.com/phun-ky/speccer/blob/main/src/utils/node.ts#L34)

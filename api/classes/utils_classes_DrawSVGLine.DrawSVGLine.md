@@ -10,7 +10,7 @@ Class representing a DrawSVGLine instance.
 
 ### constructor
 
-• **new DrawSVGLine**(`startElement`, `stopElement`)
+• **new DrawSVGLine**(`startElement`, `stopElement`): [`DrawSVGLine`](utils_classes_DrawSVGLine.DrawSVGLine.md)
 
 Creates a new DrawSVGLine instance.
 
@@ -21,9 +21,13 @@ Creates a new DrawSVGLine instance.
 | `startElement` | `HTMLElement` | The starting element for the line. |
 | `stopElement` | `HTMLElement` | The ending element for the line. |
 
+#### Returns
+
+[`DrawSVGLine`](utils_classes_DrawSVGLine.DrawSVGLine.md)
+
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L23)
+[utils/classes/DrawSVGLine.ts:21](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L21)
 
 ## Properties
 
@@ -33,7 +37,7 @@ Creates a new DrawSVGLine instance.
 
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L12)
+[utils/classes/DrawSVGLine.ts:10](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L10)
 
 ___
 
@@ -43,7 +47,7 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L13)
+[utils/classes/DrawSVGLine.ts:11](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L11)
 
 ___
 
@@ -53,7 +57,7 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:16](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L16)
+[utils/classes/DrawSVGLine.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L14)
 
 ___
 
@@ -63,7 +67,7 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L14)
+[utils/classes/DrawSVGLine.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L12)
 
 ___
 
@@ -73,13 +77,13 @@ ___
 
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L15)
+[utils/classes/DrawSVGLine.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L13)
 
 ## Methods
 
 ### #init
 
-▸ `Private` **#init**(`startElement`, `stopElement`): `void`
+▸ **#init**(`startElement`, `stopElement`): `void`
 
 Initializes the DrawSVGLine instance.
 
@@ -100,7 +104,7 @@ Will throw an error if required elements are missing or not in the DOM.
 
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:33](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L33)
+[utils/classes/DrawSVGLine.ts:31](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L31)
 
 ___
 
@@ -116,13 +120,13 @@ Connects and draws the line.
 
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:68](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L68)
+[utils/classes/DrawSVGLine.ts:66](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L66)
 
 ___
 
 ### draw
 
-▸ **draw**(`path`): `Promise`<`void`\>
+▸ **draw**(`path`): `Promise`\<`void`\>
 
 Draws the line based on the provided path.
 
@@ -134,7 +138,7 @@ Draws the line based on the provided path.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 **`Throws`**
 
@@ -142,4 +146,4 @@ Will throw an error if no path is provided.
 
 #### Defined in
 
-[utils/classes/DrawSVGLine.ts:77](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L77)
+[utils/classes/DrawSVGLine.ts:75](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L75)

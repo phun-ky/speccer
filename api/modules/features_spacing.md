@@ -32,13 +32,13 @@ document.body.appendChild(spacingElement);
 
 #### Defined in
 
-[features/spacing/index.ts:26](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L26)
+[features/spacing/index.ts:25](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L25)
 
 ___
 
 ### element
 
-▸ **element**(`targetEl`): `Promise`<`void`\>
+▸ **element**(`targetEl`): `Promise`\<`void`\>
 
 Create and position spacing elements based on the target element's computed spacing styles.
 
@@ -50,7 +50,7 @@ Create and position spacing elements based on the target element's computed spac
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 - A promise that resolves after creating and positioning the spacing elements.
 
@@ -63,4 +63,4 @@ element(targetElement);
 
 #### Defined in
 
-[features/spacing/index.ts:52](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L52)
+[features/spacing/index.ts:51](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L51)

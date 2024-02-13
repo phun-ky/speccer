@@ -6,7 +6,7 @@
 
 ### PositionInputType
 
-Ƭ **PositionInputType**: `Record`<`string`, `never`\> \| { `center?`: `boolean` ; `modifier?`: `number` ; `sourceHeight?`: `number` ; `sourceWidth?`: `number` ; `targetHeight?`: `number` ; `targetWidth?`: `number`  }
+Ƭ **PositionInputType**: `Record`\<`string`, `never`\> \| \{ `center?`: `boolean` ; `modifier?`: `number` ; `sourceHeight?`: `number` ; `sourceWidth?`: `number` ; `targetHeight?`: `number` ; `targetWidth?`: `number`  }
 
 Type definition for input parameters related to positioning.
 

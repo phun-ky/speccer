@@ -35,4 +35,4 @@ activate(mySpeccer);
 
 #### Defined in
 
-[utils/resize.ts:24](https://github.com/phun-ky/speccer/blob/main/src/utils/resize.ts#L24)
+[utils/resize.ts:22](https://github.com/phun-ky/speccer/blob/main/src/utils/resize.ts#L22)

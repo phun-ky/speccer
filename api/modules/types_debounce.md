@@ -8,11 +8,11 @@
 
 Ƭ **DebounceAnyFunctionType**: (...`args`: `any`[]) => `void`
 
+Type definition for a debounced function that accepts any arguments.
+
 #### Type declaration
 
 ▸ (`...args`): `void`
-
-Type definition for a debounced function that accepts any arguments.
 
 ##### Parameters
 

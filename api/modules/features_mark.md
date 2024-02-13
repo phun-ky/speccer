@@ -31,13 +31,13 @@ document.body.appendChild(marker);
 
 #### Defined in
 
-[features/mark/index.ts:20](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L20)
+[features/mark/index.ts:18](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L18)
 
 ___
 
 ### element
 
-▸ **element**(`elementToMark`): `Promise`<`void`\>
+▸ **element**(`elementToMark`): `Promise`\<`void`\>
 
 Create a marker element and add it to the body with styles matching a specified element.
 
@@ -49,7 +49,7 @@ Create a marker element and add it to the body with styles matching a specified 
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 - A promise that resolves after creating and styling the marker element.
 
@@ -62,4 +62,4 @@ element(elementToMark);
 
 #### Defined in
 
-[features/mark/index.ts:41](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L41)
+[features/mark/index.ts:39](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L39)

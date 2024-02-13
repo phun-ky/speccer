@@ -6,7 +6,7 @@
 
 ### position
 
-▸ **position**(`area`, `targetEl`, `speccerEl`): `Promise`<{ `left`: `string` ; `top`: `string`  }\>
+▸ **position**(`area`, `targetEl`, `speccerEl`): `Promise`\<\{ `left`: `string` ; `top`: `string`  }\>
 
 Calculate the position for the speccer element relative to the target element.
 
@@ -20,7 +20,7 @@ Calculate the position for the speccer element relative to the target element.
 
 #### Returns
 
-`Promise`<{ `left`: `string` ; `top`: `string`  }\>
+`Promise`\<\{ `left`: `string` ; `top`: `string`  }\>
 
 - A promise that resolves with the calculated position.
 
@@ -36,4 +36,4 @@ console.log(position); // { left: '10px', top: '20px' }
 
 #### Defined in
 
-[features/typography/utils/position.ts:28](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/position.ts#L28)
+[features/typography/utils/position.ts:27](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/position.ts#L27)

@@ -32,4 +32,4 @@ const formattedNumber = decimal(12.3456, 2); // "12.34"
 
 #### Defined in
 
-[utils/number.ts:17](https://github.com/phun-ky/speccer/blob/main/src/utils/number.ts#L17)
+[utils/number.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/number.ts#L15)

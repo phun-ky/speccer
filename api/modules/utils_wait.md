@@ -6,7 +6,7 @@
 
 ### waitFor
 
-▸ **waitFor**(`ms`): `Promise`<`void`\>
+▸ **waitFor**(`ms`): `Promise`\<`void`\>
 
 Waits for the specified amount of time in milliseconds.
 
@@ -18,7 +18,7 @@ Waits for the specified amount of time in milliseconds.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 - A Promise that resolves after the specified time.
 
@@ -37,13 +37,13 @@ ___
 
 ### waitForFrame
 
-▸ **waitForFrame**(): `Promise`<`number`\>
+▸ **waitForFrame**(): `Promise`\<`number`\>
 
 Waits for the next animation frame using requestAnimationFrame.
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
 - A Promise that resolves with the timestamp of the next animation frame.
 
