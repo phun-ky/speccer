@@ -8,26 +8,27 @@
 
 ![Image of speccer](./public/speccer.png)
 
-1. [@phun-ky/speccer](#phun-kyspeccer)
-   1. [About](#about)
-   2. [API](#api)
-   3. [Usage](#usage)
-      1. [Typescript](#typescript)
-      2. [ESM](#esm)
-      3. [Script](#script)
-      4. [React](#react)
-   4. [Advanced usage](#advanced-usage)
-      1. [Lazy](#lazy)
-   5. [Features](#features)
-      1. [Element spacing](#element-spacing)
-      2. [Element dimensions](#element-dimensions)
-         1. [Subtle measure](#subtle-measure)
-      3. [Highlight the anatomy of an element](#highlight-the-anatomy-of-an-element)
-         1. [Subtle anatomy](#subtle-anatomy)
-      4. [Curly brackets](#curly-brackets)
-      5. [Element typography](#element-typography)
-      6. [Mark elements](#mark-elements)
-   6. [Customization](#customization)
+- [@phun-ky/speccer](#phun-kyspeccer)
+  - [About](#about)
+  - [API](#api)
+  - [Usage](#usage)
+    - [Typescript](#typescript)
+    - [ESM](#esm)
+    - [Script](#script)
+    - [React](#react)
+  - [Advanced usage](#advanced-usage)
+    - [Lazy](#lazy)
+  - [Features](#features)
+    - [Element spacing](#element-spacing)
+    - [Element dimensions](#element-dimensions)
+      - [Subtle measure](#subtle-measure)
+    - [Highlight the anatomy of an element](#highlight-the-anatomy-of-an-element)
+      - [Subtle anatomy](#subtle-anatomy)
+    - [Curly brackets](#curly-brackets)
+    - [Element typography](#element-typography)
+    - [Mark elements](#mark-elements)
+  - [Customization](#customization)
+  - [Contributing](#contributing)
 
 ## About
 
@@ -305,3 +306,7 @@ Allthough the styling works nicely with dark mode, you can use the provided CSS 
   --ph-speccer-measure-size: 8px;
 }
 ```
+
+## Contributing
+
+If you want to contribute, please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
