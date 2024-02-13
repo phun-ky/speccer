@@ -65,5 +65,6 @@
 - [utils/resize](modules/utils_resize.md)
 - [utils/styles](modules/utils_styles.md)
 - [utils/typeof](modules/utils_typeof.md)
+- [utils/typeof/\_\_tests\_\_/typeof](modules/utils_typeof___tests___typeof.md)
 - [utils/wait](modules/utils_wait.md)
 - [utils/xy](modules/utils_xy.md)

@@ -1,5 +1,7 @@
 # Changelog
 
+## [9.0.3](https://github.com/phun-ky/speccer/compare/v9.0.2...v9.0.3) (2024-02-13)
+
 ## [9.0.2](https://github.com/phun-ky/speccer/compare/v9.0.1...v9.0.2) (2024-02-13)
 
 
