@@ -39,11 +39,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Checkout all branches and tags
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.5.2
+        uses: actions/setup-node@v4
         with:
           node-version: 18
       - name: Install dependencies
@@ -56,7 +56,7 @@ jobs:
   notify:
     name: Notify failed check
     needs: check
-    if: failure() && github.event.pull_request == null
+    if: failure()
     runs-on: ubuntu-latest
     steps:
       - uses: jayqi/failed-build-issue-action@v1
