@@ -8,7 +8,7 @@ on:
     types: [closed]
     branches: [ "main" ]
     paths:
-      - '.github'
+      - '.github/**'
       - 'src/**'
       - 'api/**'
       - 'public/**'

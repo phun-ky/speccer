@@ -8,8 +8,8 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - '.github'
-      - 'src'
+      - '.github/**'
+      - 'src/**'
       - 'package.json'
       - 'package-lock.json'
       - 'rollup.config.js'
@@ -19,8 +19,8 @@ on:
     branches: [ "main" ]
     types: [opened, synchronize] # Workflow triggering events
     paths:
-      - '.github'
-      - 'src'
+      - '.github/**'
+      - 'src/**'
       - 'package.json'
       - 'package-lock.json'
       - 'rollup.config.js'
