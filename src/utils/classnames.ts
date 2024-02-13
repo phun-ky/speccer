@@ -1,10 +1,10 @@
 /* eslint no-console:0 */
-'use strict';
-
 import {
   ClassNamesFirstArgType,
   ClassNamesSecondArgType
 } from '../types/interfaces/classnames';
+
+import { isNotString } from './typeof';
 
 /**
  * Add CSS classes to an HTML element.
@@ -23,7 +23,7 @@ import {
 export const set = (el: HTMLElement, cls: string, avoid = 'noop') => {
   if (!el) return;
 
-  if (!cls || (cls && cls.length === 0)) return;
+  if (!cls || (cls && !cls.length)) return;
 
   cls
     .trim()
@@ -49,7 +49,7 @@ export const set = (el: HTMLElement, cls: string, avoid = 'noop') => {
 export const toggle = (el: HTMLElement, cls: string, avoid = 'noop') => {
   if (!el) return;
 
-  if (!cls || (cls && cls.length === 0)) return;
+  if (!cls || (cls && !cls.length)) return;
 
   cls
     .trim()
@@ -75,7 +75,7 @@ export const toggle = (el: HTMLElement, cls: string, avoid = 'noop') => {
 export const remove = (el: HTMLElement, cls: string, avoid = 'noop') => {
   if (!el) return;
 
-  if (!cls || (cls && cls.length === 0)) return;
+  if (!cls || (cls && !cls.length)) return;
 
   cls
     .trim()
@@ -108,11 +108,11 @@ export const cx = (
 ): string => {
   if (!cls) return '';
 
-  if (!cls_obj && typeof cls !== 'string') {
-    return `${Object.keys(cls)
+  if (!cls_obj && isNotString(cls))
+    return Object.keys(cls)
       .filter((classname) => cls[classname])
-      .join(' ')}`.trim();
-  }
+      .join(' ')
+      .trim();
 
   return `${(cls as string).trim()} ${
     cls_obj

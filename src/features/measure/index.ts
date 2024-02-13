@@ -1,17 +1,15 @@
 /* eslint no-console:0 */
-'use strict';
-
 import {
   isBottomArea,
   isHeightArea,
   isRightArea,
   isWidthArea
-} from 'utils/area';
+} from '../../utils/area';
 import { set as setClassNames } from '../../utils/classnames';
+import { SPECCER_DEFAULT_MEASURE_SIZE_NEG } from '../../utils/constants';
+import { getRec } from '../../utils/position';
 import { get as getStyles, add as addStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
-import { getRec } from '../../utils/position';
-import { SPECCER_DEFAULT_MEASURE_SIZE_NEG } from 'utils/constants';
 
 /**
  * Create a measurement element with optional text, area, and element type.
@@ -34,8 +32,8 @@ export const create = (
 ): HTMLElement => {
   const _el = document.createElement(tag);
 
-  _el.setAttribute('title', text + 'px');
-  _el.setAttribute('data-measure', parseInt(text + '', 10) + 'px');
+  _el.setAttribute('title', `${text}px`);
+  _el.setAttribute('data-measure', `${parseInt(`${text}`, 10)}px`);
 
   setClassNames(_el, `ph-speccer speccer measure ${area}`);
 
@@ -61,9 +59,7 @@ export const element = async (targetEl: HTMLElement): Promise<void> => {
     'data-speccer-measure'
   );
 
-  if (_areas_string === '' || !_areas_string) {
-    return;
-  }
+  if (_areas_string === '' || !_areas_string) return;
 
   const _target_styles = await getStyles(targetEl);
 
@@ -71,9 +67,8 @@ export const element = async (targetEl: HTMLElement): Promise<void> => {
     _target_styles.display === 'none' ||
     _target_styles.opacity === '0' ||
     _target_styles.visibility === 'hidden'
-  ) {
+  )
     return;
-  }
 
   await waitForFrame();
 

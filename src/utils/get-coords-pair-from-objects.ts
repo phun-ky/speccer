@@ -23,9 +23,7 @@ export const getCoordsPairFromObjects = async (
   pos1 = 'center',
   pos2 = 'center'
 ): Promise<{ x1: number; y1: number; x2: number; y2: number }> => {
-  if (!el1 || !el2) {
-    throw new Error('No element given');
-  }
+  if (!el1 || !el2) throw Error('No element given');
 
   const { x: x1, y: y1 } = await intrinsic_coords(el1, pos1);
   const { x: x2, y: y2 } = await intrinsic_coords(el2, pos2);

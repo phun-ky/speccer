@@ -1,6 +1,4 @@
 /* eslint no-console:0 */
-'use strict';
-
 import { AttributesMapInterface } from '../types/interfaces/attributes';
 
 /**
@@ -26,7 +24,9 @@ export const setAttributes = (
 
   if (!attrs) return;
 
-  Object.keys(attrs).forEach((key) => el.setAttribute(key, attrs[key]));
+  for (const key of Object.keys(attrs)) {
+    el.setAttribute(key, attrs[key]);
+  }
 };
 
 /**
@@ -46,5 +46,7 @@ export const removeAttributes = (el: HTMLElement, attrs?: string[]) => {
 
   if (!attrs) return;
 
-  attrs.forEach((key) => el.removeAttribute(key));
+  for (const key of attrs) {
+    el.removeAttribute(key);
+  }
 };

@@ -1,7 +1,7 @@
-import { waitForFrame } from './wait';
-
+import { GetRecPropertiesInterface } from '../types/interfaces/position';
 import { PositionPropertiesType, PositionInputType } from '../types/position';
-import { GetRecPropertiesInterface } from 'types/interfaces/position';
+
+import { waitForFrame } from './wait';
 
 /**
  * Calculates the horizontal center of two elements.
@@ -142,117 +142,99 @@ export const getRec = async (
   const _source_width = _source_rect.width;
 
   return {
-    absolute: (): PositionPropertiesType => {
-      return {
-        top: _target_offset.top,
-        left: _target_offset.left,
-        height: _target_height,
-        width: _target_width
-      };
-    },
+    absolute: (): PositionPropertiesType => ({
+      top: _target_offset.top,
+      left: _target_offset.left,
+      height: _target_height,
+      width: _target_width
+    }),
     toTop: ({
       center = false,
       sourceHeight = _source_height,
       modifier = 0
-    }: PositionInputType = {}): PositionPropertiesType => {
-      return {
-        top: _target_offset.top + sourceHeight + modifier,
-        left: center ? _target_offset_center.left : _target_offset.left,
-        height: _target_height,
-        width: _target_width
-      };
-    },
+    }: PositionInputType = {}): PositionPropertiesType => ({
+      top: _target_offset.top + sourceHeight + modifier,
+      left: center ? _target_offset_center.left : _target_offset.left,
+      height: _target_height,
+      width: _target_width
+    }),
 
     fromTop: ({
       center = false,
       sourceHeight = _source_height,
       modifier = 0
-    }: PositionInputType = {}): PositionPropertiesType => {
-      return {
-        top: _target_offset.top - sourceHeight - modifier,
-        left: center ? _target_offset_center.left : _target_offset.left,
-        height: _target_height,
-        width: _target_width
-      };
-    },
+    }: PositionInputType = {}): PositionPropertiesType => ({
+      top: _target_offset.top - sourceHeight - modifier,
+      left: center ? _target_offset_center.left : _target_offset.left,
+      height: _target_height,
+      width: _target_width
+    }),
 
     toBottom: ({
       center = false,
       sourceHeight = _source_height,
       targetHeight = _target_height,
       modifier = 0
-    }: PositionInputType = {}): PositionPropertiesType => {
-      return {
-        top: _target_offset.top + targetHeight - (sourceHeight + modifier),
-        left: center ? _target_offset_center.left : _target_offset.left,
-        height: _target_height,
-        width: _target_width
-      };
-    },
+    }: PositionInputType = {}): PositionPropertiesType => ({
+      top: _target_offset.top + targetHeight - (sourceHeight + modifier),
+      left: center ? _target_offset_center.left : _target_offset.left,
+      height: _target_height,
+      width: _target_width
+    }),
     fromBottom: ({
       center = false,
       targetHeight = _target_height,
       modifier = 0
-    }: PositionInputType = {}): PositionPropertiesType => {
-      return {
-        top: _target_offset.top + targetHeight + modifier,
-        left: center ? _target_offset_center.left : _target_offset.left,
-        height: _target_height,
-        width: _target_width
-      };
-    },
+    }: PositionInputType = {}): PositionPropertiesType => ({
+      top: _target_offset.top + targetHeight + modifier,
+      left: center ? _target_offset_center.left : _target_offset.left,
+      height: _target_height,
+      width: _target_width
+    }),
 
     toLeft: ({
       center = false,
       sourceWidth = _source_width,
       modifier = 0
-    }: PositionInputType = {}): PositionPropertiesType => {
-      return {
-        top: center ? _target_offset_center.top : _target_offset.top,
-        left: _target_offset.left + sourceWidth + modifier,
-        height: _target_height,
-        width: _target_width
-      };
-    },
+    }: PositionInputType = {}): PositionPropertiesType => ({
+      top: center ? _target_offset_center.top : _target_offset.top,
+      left: _target_offset.left + sourceWidth + modifier,
+      height: _target_height,
+      width: _target_width
+    }),
 
     fromLeft: ({
       center = false,
       sourceWidth = _source_width,
       modifier = 0
-    }: PositionInputType = {}): PositionPropertiesType => {
-      return {
-        top: center ? _target_offset_center.top : _target_offset.top,
-        left: _target_offset.left - sourceWidth - modifier,
-        height: _target_height,
-        width: _target_width
-      };
-    },
+    }: PositionInputType = {}): PositionPropertiesType => ({
+      top: center ? _target_offset_center.top : _target_offset.top,
+      left: _target_offset.left - sourceWidth - modifier,
+      height: _target_height,
+      width: _target_width
+    }),
 
     toRight: ({
       center = false,
       sourceWidth = _source_width,
       targetWidth = _target_width,
       modifier = 0
-    }: PositionInputType = {}): PositionPropertiesType => {
-      return {
-        top: center ? _target_offset_center.top : _target_offset.top,
-        left: _target_offset.left + targetWidth - (sourceWidth + modifier),
-        height: _target_height,
-        width: _target_width
-      };
-    },
+    }: PositionInputType = {}): PositionPropertiesType => ({
+      top: center ? _target_offset_center.top : _target_offset.top,
+      left: _target_offset.left + targetWidth - (sourceWidth + modifier),
+      height: _target_height,
+      width: _target_width
+    }),
 
     fromRight: ({
       center = false,
       targetWidth = _target_width,
       modifier = 0
-    }: PositionInputType = {}): PositionPropertiesType => {
-      return {
-        top: center ? _target_offset_center.top : _target_offset.top,
-        left: _target_offset.left + targetWidth + modifier,
-        height: _target_height,
-        width: _target_width
-      };
-    }
+    }: PositionInputType = {}): PositionPropertiesType => ({
+      top: center ? _target_offset_center.top : _target_offset.top,
+      left: _target_offset.left + targetWidth + modifier,
+      height: _target_height,
+      width: _target_width
+    })
   };
 };

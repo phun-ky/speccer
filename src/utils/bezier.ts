@@ -3,7 +3,8 @@ import {
   CreateCoordinatesForCurveCoordParamType,
   CreateCoordinatesForCurveOptionsParamType,
   CurlyBezierPathOptionsType
-} from 'types/bezier';
+} from '../types/bezier';
+
 import { getCoordsPairFromObjects } from './get-coords-pair-from-objects';
 
 /**
@@ -110,30 +111,25 @@ export const getCurlySVGPath = async (
   let y2modifier = 0;
 
   // Create a gap between the pin and the bracket center
-  if (direction == 'north') {
-    y2modifier = 8;
-  } else if (direction == 'west') {
-    x2modifier = 8;
-  } else if (direction == 'east') {
-    x2modifier = -8;
-  } else if (direction == 'south') {
-    y2modifier = -8;
-  }
+  if (direction === 'north') y2modifier = 8;
+  else if (direction === 'west') x2modifier = 8;
+  else if (direction === 'east') x2modifier = -8;
+  else if (direction === 'south') y2modifier = -8;
 
-  const coordinates = createBezierCurveCoordinates(
-    {
-      x1: x1 + x1modifier,
-      x2: x2 + x2modifier,
-      y1: y1 + y1modifier + document.documentElement.scrollTop,
-      y2: y2 + y2modifier + document.documentElement.scrollTop
-    },
-    {
-      direct: true,
-      firstSet,
-      direction
-    }
-  );
-  const { firstPoint, firstControl, lastControl, lastPoint } = coordinates;
+  const { firstPoint, firstControl, lastControl, lastPoint } =
+    createBezierCurveCoordinates(
+      {
+        x1: x1 + x1modifier,
+        x2: x2 + x2modifier,
+        y1: y1 + y1modifier + document.documentElement.scrollTop,
+        y2: y2 + y2modifier + document.documentElement.scrollTop
+      },
+      {
+        direct: true,
+        firstSet,
+        direction
+      }
+    );
 
   return (
     `M ${firstPoint.x} ${firstPoint.y}` +
@@ -169,11 +165,8 @@ export const getSVGPath = async (
     pos1,
     pos2
   );
-  const coordinates = createBezierCurveCoordinates(
-    { x1, x2, y1, y2 },
-    { direction: '' }
-  );
-  const { firstPoint, firstControl, lastControl, lastPoint } = coordinates;
+  const { firstPoint, firstControl, lastControl, lastPoint } =
+    createBezierCurveCoordinates({ x1, x2, y1, y2 }, { direction: '' });
 
   return (
     `M ${firstPoint.x} ${firstPoint.y}` +

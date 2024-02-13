@@ -1,9 +1,7 @@
 /* eslint no-console:0 */
-'use strict';
-
-import { add as addStyles } from '../../utils/styles';
 import { cx, set } from '../../utils/classnames';
 import { getRec } from '../../utils/position';
+import { add as addStyles } from '../../utils/styles';
 
 /**
  * Create a marker element with an optional element type.
@@ -39,7 +37,7 @@ export const create = (n = 'span'): HTMLElement => {
  * ```
  */
 export const element = async (elementToMark: HTMLElement): Promise<void> => {
-  if (!elementToMark) return Promise.resolve();
+  if (!elementToMark) return;
 
   const markElement = create();
 

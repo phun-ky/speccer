@@ -1,6 +1,4 @@
 /* eslint no-console:0 */
-'use strict';
-
 /**
  * Converts a number to a string with a specified number of decimal places.
  *

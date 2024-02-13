@@ -1,8 +1,6 @@
-'use strict';
-
-import { uniqueID } from '../id';
 import { getCurlySVGPath, getPositionsForCurlySVGPath } from '../bezier';
 import { direction_of_element } from '../direction-of-element';
+import { uniqueID } from '../id';
 import { add as addStyle } from '../styles';
 
 /**

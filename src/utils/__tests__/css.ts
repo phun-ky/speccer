@@ -1,6 +1,10 @@
 import { describe, it, expect } from '@jest/globals';
 
 import {
+  SpacingCSSPropertiesType,
+  TypographyCSSPropertiesType
+} from '../../types/css';
+import {
   getNumberValue,
   normalizeNumberValue,
   getClassNameFromCSSProperty,
@@ -10,10 +14,6 @@ import {
   measureSize,
   lineWidth
 } from '../css';
-import {
-  SpacingCSSPropertiesType,
-  TypographyCSSPropertiesType
-} from 'types/css';
 
 describe('css', () => {
   it('getNumberValue should parse a string value into an integer', () => {

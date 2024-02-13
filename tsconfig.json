@@ -1,22 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es2022",
-    "lib": ["ES2021", "dom"],
+    "target": "ES2022",
+    "module": "esnext",
+    "lib": ["ES2022", "dom"],
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
     "declarationDir": "./dts",
     "moduleResolution": "node",
-    "rootDir": "src",
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": false,
     "strictNullChecks": true,
     "esModuleInterop": true,
-    "baseUrl": "src/",
-    "typeRoots": ["./node_modules/@types"],
-    "resolveJsonModule": true,
-    "types": ["jest", "node", "./node_modules/network-information-types"]
+    "resolveJsonModule": true
   },
   "exclude": [
     "jest.config.ts",

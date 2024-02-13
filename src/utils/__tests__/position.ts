@@ -13,9 +13,7 @@ describe('position', () => {
   const createDivElement = (id) => {
     document.body.innerHTML += `<div id="${id}"></div>`;
 
-    const el = document.querySelector(`#${id}`);
-
-    return el;
+    return document.querySelector(`#${id}`);
   };
   // Helper function to set the position of an element
   const setElementPosition = (element, top, left, width, height) => {

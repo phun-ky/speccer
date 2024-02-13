@@ -1,5 +1,5 @@
-import { add as addStyles } from '../../../utils/styles';
 import { offset } from '../../../utils/position';
+import { add as addStyles } from '../../../utils/styles';
 import { waitForFrame } from '../../../utils/wait';
 
 /**
@@ -29,52 +29,47 @@ export const position = async (
   const _target_rect = targetEl.getBoundingClientRect();
   const _target_offset = await offset(targetEl);
 
-  if (property === 'marginTop') {
+  if (property === 'marginTop')
     addStyles(spacingEl, {
       height: `${value}px`,
       width: _target_rect.width + 'px',
       left: _target_offset.left + 'px',
       top: _target_offset.top - value + 'px'
     });
-  }
 
-  if (property === 'marginRight') {
+  if (property === 'marginRight')
     addStyles(spacingEl, {
       height: _target_rect.height + 'px',
       width: `${value}px`,
       left: _target_offset.left + parseInt(_target_rect.width + '', 10) + 'px',
       top: _target_offset.top + 'px'
     });
-  }
 
-  if (property === 'marginBottom') {
+  if (property === 'marginBottom')
     addStyles(spacingEl, {
       height: `${value}px`,
       width: _target_rect.width + 'px',
       left: _target_offset.left + 'px',
       top: _target_offset.top + parseInt(_target_rect.height + '', 10) + 'px'
     });
-  }
 
-  if (property === 'marginLeft') {
+  if (property === 'marginLeft')
     addStyles(spacingEl, {
       height: _target_rect.height + 'px',
       width: `${value}px`,
       left: _target_offset.left - value + 'px',
       top: _target_offset.top + 'px'
     });
-  }
 
-  if (property === 'paddingTop') {
+  if (property === 'paddingTop')
     addStyles(spacingEl, {
       height: `${value}px`,
       width: _target_rect.width + 'px',
       left: _target_offset.left + 'px',
       top: _target_offset.top + 'px'
     });
-  }
 
-  if (property === 'paddingBottom') {
+  if (property === 'paddingBottom')
     addStyles(spacingEl, {
       height: `${value}px`,
       width: _target_rect.width + 'px',
@@ -84,9 +79,8 @@ export const position = async (
         (parseInt(_target_rect.height + '', 10) - value) +
         'px'
     });
-  }
 
-  if (property === 'paddingRight') {
+  if (property === 'paddingRight')
     addStyles(spacingEl, {
       height: _target_rect.height + 'px',
       width: `${value}px`,
@@ -96,14 +90,12 @@ export const position = async (
         'px',
       top: _target_offset.top + 'px'
     });
-  }
 
-  if (property === 'paddingLeft') {
+  if (property === 'paddingLeft')
     addStyles(spacingEl, {
       height: _target_rect.height + 'px',
       width: `${value}px`,
       left: _target_offset.left + 'px',
       top: _target_offset.top + 'px'
     });
-  }
 };

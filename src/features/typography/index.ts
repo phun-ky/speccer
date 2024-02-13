@@ -1,8 +1,7 @@
 /* eslint no-console:0 */
-'use strict';
-
 import { set as setClassNames, cx } from '../../utils/classnames';
 import { add as addStyles, get as getStyles } from '../../utils/styles';
+
 import { position } from './utils/position';
 import { template } from './utils/template';
 
@@ -25,9 +24,7 @@ export const create = (html: string, area: string | null): HTMLElement => {
   const _el = document.createElement('div');
   const _extra_class_names = {};
 
-  if (area !== null && area !== '') {
-    _extra_class_names[area] = true;
-  }
+  if (area !== null && area !== '') _extra_class_names[area] = true;
 
   const _class_names = cx('ph-speccer speccer typography', _extra_class_names);
 
@@ -62,9 +59,8 @@ export const element = async (targetEl: HTMLElement): Promise<void> => {
     _target_styles.display === 'none' ||
     _target_styles.opacity === '0' ||
     _target_styles.visibility === 'hidden'
-  ) {
+  )
     return;
-  }
 
   targetEl.classList.add('is-specced');
 
