@@ -1,20 +1,28 @@
+/* eslint-disable import/no-unused-modules */
 import { nodeResolve } from '@rollup/plugin-node-resolve';
-import ts from 'rollup-plugin-typescript2';
 import dts from 'rollup-plugin-dts';
-import typescript from 'typescript';
 import { terser } from 'rollup-plugin-terser';
+import ts from 'rollup-plugin-typescript2';
+import typescript from 'typescript';
 
 export default [
   {
     input: 'src/main.ts',
-    output: {
+    output: [{
       name: 'speccer',
-      file: './speccer.js',
+      file: './dist/speccer.js',
       format: 'umd',
       sourcemap: true,
       exports: 'named',
       assetFileNames: '[name][extname]'
-    },
+    },{
+      name: 'speccer',
+      file: './dist/speccer.esm.js',
+      format: 'esm',
+      sourcemap: true,
+      exports: 'named',
+      assetFileNames: '[name][extname]'
+    }],
     plugins: [
       nodeResolve(),
       ts({
@@ -27,7 +35,7 @@ export default [
   },
   {
     input: './dts/main.d.ts',
-    output: [{ file: './speccer.d.ts', format: 'es' }],
+    output: [{ file: './dist/speccer.d.ts', format: 'es' }],
     plugins: [dts()]
   }
 ];
