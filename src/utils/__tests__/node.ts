@@ -23,11 +23,11 @@ describe('node', () => {
       document.body.removeChild(newElement);
     });
 
-    it('should return null if the reference element is null', () => {
+    it('should return undefined if the reference element is null', () => {
       const newElement = document.createElement('span');
       const result = after(null, newElement);
 
-      expect(result).toBeNull();
+      expect(result).toBeUndefined();
       expect(document.body.contains(newElement)).toBeFalsy();
     });
   });

@@ -1,6 +1,4 @@
 /* eslint no-console:0 */
-'use strict';
-
 import { set as setClassNames } from '../../utils/classnames';
 import {
   getSpacing,
@@ -29,10 +27,10 @@ export const create = (
   tag = 'span'
 ): HTMLElement => {
   const _el = document.createElement(tag);
-  const _text_content = document.createTextNode(text + '');
+  const _text_content = document.createTextNode(`${text}`);
 
   _el.appendChild(_text_content);
-  _el.setAttribute('title', text + 'px');
+  _el.setAttribute('title', `${text}px`);
   setClassNames(_el, 'ph-speccer speccer spacing');
 
   return _el;
@@ -59,9 +57,8 @@ export const element = async (targetEl: HTMLElement): Promise<void> => {
     _target_styles.display === 'none' ||
     _target_styles.opacity === '0' ||
     _target_styles.visibility === 'hidden'
-  ) {
+  )
     return;
-  }
 
   const _target_spacing_styles = getSpacing(_target_styles);
   const _target_pruned_spacing_styles = Object.keys(
@@ -72,9 +69,9 @@ export const element = async (targetEl: HTMLElement): Promise<void> => {
     return _value !== '0px';
   });
 
-  if (_target_pruned_spacing_styles.length === 0) return;
+  if (!_target_pruned_spacing_styles.length) return;
 
-  _target_pruned_spacing_styles.forEach(async (property) => {
+  for (const property of _target_pruned_spacing_styles) {
     const _value = getNumberValue(_target_spacing_styles[property]);
     const _speccer_el = create(_value);
     const _class_name = getClassNameFromCSSProperty(property);
@@ -84,5 +81,5 @@ export const element = async (targetEl: HTMLElement): Promise<void> => {
 
     targetEl.classList.add('is-specced');
     await position(property, _value, _speccer_el, targetEl);
-  });
+  }
 };

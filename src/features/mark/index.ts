@@ -1,6 +1,4 @@
 /* eslint no-console:0 */
-'use strict';
-
 import { cx, set } from '../../utils/classnames';
 import { getRec } from '../../utils/position';
 import { add as addStyles } from '../../utils/styles';
@@ -39,7 +37,7 @@ export const create = (n = 'span'): HTMLElement => {
  * ```
  */
 export const element = async (elementToMark: HTMLElement): Promise<void> => {
-  if (!elementToMark) return Promise.resolve();
+  if (!elementToMark) return;
 
   const markElement = create();
 

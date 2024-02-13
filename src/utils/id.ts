@@ -1,6 +1,4 @@
 /* eslint no-console:0 */
-'use strict';
-
 /**
  * Generates a unique ID consisting of an underscore followed by a random alphanumeric string.
  *

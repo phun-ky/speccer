@@ -1,9 +1,9 @@
 /**
  * Inserts an HTML element after another element in the DOM.
  *
- * @param {HTMLElement | null} el - The reference element after which the new element will be inserted.
+ * @param {HTMLElement|null} el - The reference element after which the new element will be inserted.
  * @param {HTMLElement} newSibling - The new element to be inserted.
- * @returns {Element|null}
+ * @returns {Element|undefined|null}
  *
  * @example
  * ```ts
@@ -15,7 +15,8 @@
 export const after = (
   el: HTMLElement | null,
   newSibling: HTMLElement
-): Element | null => el && el.insertAdjacentElement('afterend', newSibling);
+): Element | undefined | null =>
+  el?.insertAdjacentElement('afterend', newSibling);
 
 /**
  * Removes all elements matching a selector from the DOM.

@@ -1,7 +1,5 @@
 /* eslint-disable import/no-unused-modules */
 /* eslint no-console:0 */
-'use strict';
-
 import './types/interfaces/global';
 import { dom, lazy, manual, activate } from './config/browser';
 import {
@@ -68,11 +66,21 @@ const speccer = () => {
   const elsToBeDissected = document.querySelectorAll('[data-anatomy-section]');
   const elsToBeMarked = document.querySelectorAll('[data-speccer-mark]');
 
-  elsToBeMarked.forEach(markElement);
-  elsToBeSpecced.forEach(spacingElement);
-  elsToBeMeasured.forEach(measureElement);
-  elsToBeTypographySpecced.forEach(typographyElement);
-  elsToBeDissected.forEach(dissectElement);
+  for (const el of elsToBeMarked) {
+    markElement(el as HTMLElement);
+  }
+  for (const el of elsToBeSpecced) {
+    spacingElement(el as HTMLElement);
+  }
+  for (const el of elsToBeMeasured) {
+    measureElement(el as HTMLElement);
+  }
+  for (const el of elsToBeTypographySpecced) {
+    typographyElement(el as HTMLElement);
+  }
+  for (const el of elsToBeDissected) {
+    dissectElement(el as HTMLElement);
+  }
 };
 
 export default speccer;

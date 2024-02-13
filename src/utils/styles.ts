@@ -1,12 +1,12 @@
 /* eslint no-console:0 */
-'use strict';
+import { isBoolean, isNumber, isString } from './typeof';
 import { waitForFrame } from './wait';
 
 /**
  * Adds CSS styles to an HTMLElement.
  *
  * @param {HTMLElement} el - The HTMLElement to apply styles to.
- * @param {object | Array<{ key: string; value: string }>} styles - An object or an array of objects containing CSS styles to apply.
+ * @param {object | { key: string; value: string }[]} styles - An object or an array of objects containing CSS styles to apply.
  * @returns {Promise<void>} - A Promise that resolves after styles are applied.
  *
  * @example
@@ -25,30 +25,29 @@ import { waitForFrame } from './wait';
  */
 export const add = async (
   el: HTMLElement,
-  styles: object | Array<{ key: string; value: string }>
+  styles: object | { key: string; value: string }[]
 ): Promise<void> => {
   if (
     !el ||
     !styles ||
-    typeof styles === 'string' ||
-    typeof styles === 'number' ||
-    typeof styles === 'boolean' ||
-    (Array.isArray(styles) && styles.length === 0) ||
-    (Object.keys(styles).length === 0 && styles.constructor === Object)
-  ) {
+    isString(styles) ||
+    isNumber(styles) ||
+    isBoolean(styles) ||
+    (Array.isArray(styles) && !styles.length) ||
+    (!Object.keys(styles).length && styles.constructor === Object)
+  )
     return;
-  }
 
   await waitForFrame();
 
-  if (Array.isArray(styles)) {
-    styles.forEach(
-      (style: { key: string; value: string }) =>
-        (el.style[style.key] = style.value)
-    );
-  } else {
-    Object.keys(styles).forEach((key) => (el.style[key] = styles[key]));
-  }
+  if (Array.isArray(styles))
+    for (const style of styles) {
+      el.style[style.key] = style.value;
+    }
+  else
+    for (const key of Object.keys(styles)) {
+      el.style[key] = styles[key];
+    }
 };
 
 /**

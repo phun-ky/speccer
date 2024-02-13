@@ -71,17 +71,17 @@ export const position = async (
     top: _left_layout_position_top
   };
 
-  if (area && area.indexOf(SpeccerAreaEnum.Right) !== -1) {
+  if (area?.includes(SpeccerAreaEnum.Right)) {
     _position = {
       left: _right_layout_position_left,
       top: _right_layout_position_top
     };
-  } else if (area && area.indexOf(SpeccerAreaEnum.Top) !== -1) {
+  } else if (area?.includes(SpeccerAreaEnum.Top)) {
     _position = {
       left: _top_layout_position_left,
       top: _top_layout_position_top
     };
-  } else if (area && area.indexOf(SpeccerAreaEnum.Bottom) !== -1) {
+  } else if (area?.includes(SpeccerAreaEnum.Bottom)) {
     _position = {
       left: _bottom_layout_position_left,
       top: _bottom_layout_position_top

@@ -21,6 +21,7 @@
     "docs:gen": "node ./node_modules/.bin/typedoc --entryPoints src --entryPointStrategy expand --gitRevision main --githubPages false --plugin typedoc-plugin-markdown --tsconfig tsconfig.json --hideInPageTOC --out api --readme none",
     "style:lint": "./node_modules/.bin/eslint -c ./.eslintrc --max-warnings=0 src --ignore-path .gitignore ",
     "style:format": "prettier-eslint --config .prettierrc --eslint-config-path $PWD/.eslintrc --list-different --write \"./src/**/*.ts\"",
+    "style:code": "npx putout src",
     "commit": "npx git-cz",
     "release": "release-it"
   },
@@ -91,6 +92,7 @@
     "prettier": "^3.2.5",
     "prettier-eslint": "^16.3.0",
     "prettier-eslint-cli": "^8.0.1",
+    "putout": "^35.1.0",
     "release-it": "^16.1.5",
     "rollup": "^2.39.0",
     "rollup-plugin-dts": "^4.0.1",

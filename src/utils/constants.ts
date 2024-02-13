@@ -1,7 +1,5 @@
 /* eslint-disable import/no-unused-modules */
 /* eslint no-console:0 */
-'use strict';
-
 /**
  * Array of uppercase letters.
  *

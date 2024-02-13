@@ -1,4 +1,4 @@
-declare type SpeccerFunctionType = () => void;
+type SpeccerFunctionType = () => void;
 
 /**
  * Extends the global Window interface to add custom properties.

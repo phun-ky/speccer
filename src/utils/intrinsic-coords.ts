@@ -1,3 +1,4 @@
+import { isNotString } from './typeof';
 import { waitForFrame } from './wait';
 import { xy } from './xy';
 
@@ -20,15 +21,12 @@ export const intrinsic_coords = async (
   el: HTMLElement,
   pos = 'center'
 ): Promise<{ x: number; y: number }> => {
-  if (!pos) {
-    throw new Error('No position given');
-  }
+  if (!pos) throw Error('No position given');
 
-  if (typeof pos !== 'string') {
-    throw new Error(
+  if (isNotString(pos))
+    throw Error(
       `The position given is not the required type: pos: ${typeof pos}`
     );
-  }
 
   const _allowed_positions = [
     'center',
@@ -50,13 +48,12 @@ export const intrinsic_coords = async (
     'left-center'
   ];
 
-  if (!_allowed_positions.includes(pos)) {
-    throw new Error(
+  if (!_allowed_positions.includes(pos))
+    throw Error(
       `The position given does not match allowed positions to use! Valid positions are: ${_allowed_positions.join(
         ', '
       )}`
     );
-  }
 
   await waitForFrame();
 

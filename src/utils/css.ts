@@ -1,5 +1,4 @@
 /* eslint no-console:0 */
-'use strict';
 import {
   SpacingCSSPropertiesType,
   TypographyCSSPropertiesType
@@ -62,13 +61,13 @@ export const normalizeNumberValue = (value: string | number): number => {
  * ```
  */
 export const getClassNameFromCSSProperty = (property: string): string => {
-  if (property.indexOf('Top') !== -1) {
+  if (property.includes('Top')) {
     return property.replace('Top', ' top');
-  } else if (property.indexOf('Right') !== -1) {
+  } else if (property.includes('Right')) {
     return property.replace('Right', ' right');
-  } else if (property.indexOf('Bottom') !== -1) {
+  } else if (property.includes('Bottom')) {
     return property.replace('Bottom', ' bottom');
-  } else if (property.indexOf('Left') !== -1) {
+  } else if (property.includes('Left')) {
     return property.replace('Left', ' left');
   }
 

@@ -1,5 +1,3 @@
-'use strict';
-
 import { SpeccerFunctionType } from '../types/speccer';
 
 import debounce from './debounce';

@@ -1,6 +1,4 @@
 /* eslint no-console:0 */
-'use strict';
-
 import {
   isBottomArea,
   isHeightArea,
@@ -34,8 +32,8 @@ export const create = (
 ): HTMLElement => {
   const _el = document.createElement(tag);
 
-  _el.setAttribute('title', text + 'px');
-  _el.setAttribute('data-measure', parseInt(text + '', 10) + 'px');
+  _el.setAttribute('title', `${text}px`);
+  _el.setAttribute('data-measure', `${parseInt(`${text}`, 10)}px`);
 
   setClassNames(_el, `ph-speccer speccer measure ${area}`);
 
@@ -61,9 +59,7 @@ export const element = async (targetEl: HTMLElement): Promise<void> => {
     'data-speccer-measure'
   );
 
-  if (_areas_string === '' || !_areas_string) {
-    return;
-  }
+  if (_areas_string === '' || !_areas_string) return;
 
   const _target_styles = await getStyles(targetEl);
 
@@ -71,9 +67,8 @@ export const element = async (targetEl: HTMLElement): Promise<void> => {
     _target_styles.display === 'none' ||
     _target_styles.opacity === '0' ||
     _target_styles.visibility === 'hidden'
-  ) {
+  )
     return;
-  }
 
   await waitForFrame();
 

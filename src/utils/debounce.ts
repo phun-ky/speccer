@@ -1,6 +1,4 @@
 /* eslint @typescript-eslint/no-explicit-any: ["error", { "fixToUnknown": true }] */
-'use strict';
-
 import { DebounceAnyFunctionType } from '../types/debounce';
 
 /**
@@ -38,9 +36,7 @@ const debounce = (
     };
     const callNow = immediate && !timeout;
 
-    if (timeout) {
-      clearTimeout(timeout);
-    }
+    if (timeout) clearTimeout(timeout);
 
     timeout = setTimeout(later, wait);
 
