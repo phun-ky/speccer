@@ -1,5 +1,31 @@
 # Changelog
 
+## [9.0.0](https://github.com/phun-ky/speccer/compare/v8.0.6...v9.0.0) (2024-02-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* 🧨 Produced files are now moved to `dist`, this breaks anyone references
+the built files with the `script`-tag. Old URL was `*/speccer*`, new is
+`*/dist/speccer*`
+
+### Tasks
+
+* 🤖 Add `.github` paths to check ([d41facc](https://github.com/phun-ky/speccer/commit/d41facc12e2ae29221372cba248c9f636f224d1d))
+* 🤖 bump @rollup/plugin-node-resolve from 11.2.1 to 15.2.3 ([ea35d3d](https://github.com/phun-ky/speccer/commit/ea35d3dde879db5a7c05d6b1f8ff1a70a80ad9c6))
+* 🤖 Publish on more path changes ([a04e2ee](https://github.com/phun-ky/speccer/commit/a04e2eeb09e5de5a281d783107fb2686b16b2bb7))
+* 🤖 Update github actions ([f10b6e8](https://github.com/phun-ky/speccer/commit/f10b6e882324a2ba543b3f6c7c525c1f7fdc87db))
+
+
+### Bug
+
+* 🐛 Use correct path ([706f41f](https://github.com/phun-ky/speccer/commit/706f41f2ba0ea921e27eeed1865c58f5c81facc9))
+
+
+### Refactoring
+
+* 💡 Add built files to `dist` and ignore it ([6591374](https://github.com/phun-ky/speccer/commit/659137449a79a282e089d856d1fb940410d6389d)), closes [#19](https://github.com/phun-ky/speccer/issues/19)
+
 ## [8.0.6](https://github.com/phun-ky/speccer/compare/v8.0.5...v8.0.6) (2024-02-13)
 
 
