@@ -1,13 +1,11 @@
 /* eslint no-console:0 */
 'use strict';
 
-import { SpeccerFunctionType } from 'types/speccer';
-
-import { activate as resizeActivate } from '../utils/resize';
-
-import { element as specElement } from '../features/spacing';
-import { element as measureElement } from '../features/measure';
 import { element as dissectElement } from '../features/dissect';
+import { element as measureElement } from '../features/measure';
+import { element as specElement } from '../features/spacing';
+import { SpeccerFunctionType } from '../types/speccer';
+import { activate as resizeActivate } from '../utils/resize';
 
 /**
  * A function to initialize speccer when the DOM is ready.

@@ -1,5 +1,5 @@
-import { add as addStyles } from '../../../utils/styles';
 import { offset } from '../../../utils/position';
+import { add as addStyles } from '../../../utils/styles';
 import { waitForFrame } from '../../../utils/wait';
 
 /**

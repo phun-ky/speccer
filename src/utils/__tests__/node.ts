@@ -1,7 +1,6 @@
 import { describe, it, expect } from '@jest/globals';
 
-import { after } from '../node';
-import { removeAll } from '../node';
+import { after, removeAll } from '../node';
 
 describe('node', () => {
   describe('after', () => {

@@ -1,8 +1,8 @@
 'use strict';
 
-import { uniqueID } from '../id';
 import { getPositionsForSVGPath, getSVGPath } from '../bezier';
 import { direction_of_element } from '../direction-of-element';
+import { uniqueID } from '../id';
 import { add as addStyle } from '../styles';
 
 /**

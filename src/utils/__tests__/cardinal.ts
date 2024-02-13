@@ -1,4 +1,5 @@
 import { describe, it, expect } from '@jest/globals';
+
 import { cardinal_direction, cardinal_direction_crude } from '../cardinal';
 
 describe('Cardinal Direction Functions', () => {

@@ -1,4 +1,13 @@
 {
+  "overrides": [
+    {
+      "files": ["**/__tests__/**"],
+      "env": {
+        "jest": true
+      }
+    }
+  ],
+  "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -9,33 +18,105 @@
   },
   "env": {
     "browser": true,
-    "amd": true,
-    "es2021": true,
-    "node": true,
-    "jest/globals": true
+    "es2021": true
   },
-  "plugins": ["jest", "@typescript-eslint"],
+  "plugins": ["@typescript-eslint"],
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
   "rules": {
-    "comma-dangle": 1,
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "external",
+          "builtin",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "pathGroupsExcludedImportTypes": ["internal"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "always"
+      }
+    ],
+    "no-unused-vars": "off",
     "quotes": [1, "single"],
+    "import/no-named-as-default": 0,
+    "padded-blocks": ["error", "never"],
+    "one-var": ["error", "never"],
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": "error",
     "no-undef": 2,
     "prefer-const": "error",
-    "one-var": ["error", "never"],
-    "padded-blocks": ["error", "never"],
     "padding-line-between-statements": [
       "error",
-      { "blankLine": "always", "prev": "*", "next": "return" },
-      { "blankLine": "always", "prev": "*", "next": "export" },
-      { "blankLine": "always", "prev": "export", "next": "export" },
-      { "blankLine": "always", "prev": "export", "next": "*" },
-      { "blankLine": "always", "prev": "*", "next": "if" },
-      { "blankLine": "always", "prev": "if", "next": "*" },
-      { "blankLine": "always", "prev": "const", "next": "*" },
-      { "blankLine": "always", "prev": "*", "next": "const" },
-      { "blankLine": "always", "prev": "let", "next": "*" },
-      { "blankLine": "always", "prev": "*", "next": "let" },
-      { "blankLine": "always", "prev": "var", "next": "*" },
-      { "blankLine": "always", "prev": "*", "next": "var" },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "export"
+      },
+      {
+        "blankLine": "always",
+        "prev": "export",
+        "next": "export"
+      },
+      {
+        "blankLine": "always",
+        "prev": "export",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "if"
+      },
+      {
+        "blankLine": "always",
+        "prev": "if",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "const",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "const"
+      },
+      {
+        "blankLine": "always",
+        "prev": "let",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "let"
+      },
+      {
+        "blankLine": "always",
+        "prev": "var",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "var"
+      },
       {
         "blankLine": "always",
         "prev": "const",
@@ -73,22 +154,39 @@
       }
     ],
     "global-strict": 0,
-    "indent": [1, 2, { "SwitchCase": 1 }],
+    "indent": [
+      1,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
     "no-extra-semi": 1,
     "no-underscore-dangle": 0,
     "no-console": 1,
-    "no-unused-vars": 1,
-    "no-trailing-spaces": [1, { "skipBlankLines": true }],
+    "no-trailing-spaces": [
+      1,
+      {
+        "skipBlankLines": true
+      }
+    ],
     "no-unreachable": 1,
     "no-alert": 0,
-    "semi": 1
+    "semi": 1,
+    "import/no-unused-modules": [
+      1,
+      {
+        "unusedExports": true
+      }
+    ]
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
-    "prettier",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
     "plugin:compat/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ]
 }

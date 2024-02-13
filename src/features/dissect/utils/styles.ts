@@ -1,5 +1,4 @@
-import { pinSpace, measureSize } from '../../../utils/css';
-import { getRec } from '../../../utils/position';
+import { DissectStylesOptionsType } from '../../../types/bezier';
 import {
   isBottomArea,
   isEncloseArea,
@@ -7,7 +6,8 @@ import {
   isLeftArea,
   isRightArea
 } from '../../../utils/area';
-import { DissectStylesOptionsType } from 'types/bezier';
+import { pinSpace, measureSize } from '../../../utils/css';
+import { getRec } from '../../../utils/position';
 
 /**
  * Get styles for dissected elements based on the specified area and options.

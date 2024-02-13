@@ -6,12 +6,12 @@ import {
   isHeightArea,
   isRightArea,
   isWidthArea
-} from 'utils/area';
+} from '../../utils/area';
 import { set as setClassNames } from '../../utils/classnames';
+import { SPECCER_DEFAULT_MEASURE_SIZE_NEG } from '../../utils/constants';
+import { getRec } from '../../utils/position';
 import { get as getStyles, add as addStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
-import { getRec } from '../../utils/position';
-import { SPECCER_DEFAULT_MEASURE_SIZE_NEG } from 'utils/constants';
 
 /**
  * Create a measurement element with optional text, area, and element type.

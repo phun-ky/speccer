@@ -1,14 +1,15 @@
 /* eslint no-console:0 */
 'use strict';
 import {
+  SpacingCSSPropertiesType,
+  TypographyCSSPropertiesType
+} from '../types/css';
+
+import {
   SPECCER_DEFAULT_PIN_SPACE,
   SPECCER_DEFAULT_MEASURE_SIZE,
   SPECCER_DEFAULT_LINE_WIDTH
 } from './constants';
-import {
-  SpacingCSSPropertiesType,
-  TypographyCSSPropertiesType
-} from '../types/css';
 
 /**
  * Parses a string value into an integer.

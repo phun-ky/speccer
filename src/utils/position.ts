@@ -1,7 +1,7 @@
-import { waitForFrame } from './wait';
-
+import { GetRecPropertiesInterface } from '../types/interfaces/position';
 import { PositionPropertiesType, PositionInputType } from '../types/position';
-import { GetRecPropertiesInterface } from 'types/interfaces/position';
+
+import { waitForFrame } from './wait';
 
 /**
  * Calculates the horizontal center of two elements.

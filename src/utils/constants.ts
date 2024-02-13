@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unused-modules */
 /* eslint no-console:0 */
 'use strict';
 
@@ -12,7 +13,7 @@
  * console.log(letters); // Example output: ['A', 'B', 'C', ...]
  * ```
  */
-export const SPECCER_LITERALS = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
+export const SPECCER_LITERALS: string[] = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
 
 /**
  * Array of HTML tags to avoid when processing.
@@ -25,7 +26,7 @@ export const SPECCER_LITERALS = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
  * console.log(tagsToAvoid); // Example output: ['TR', 'TH', 'TD', ...]
  * ```
  */
-export const SPECCER_TAGS_TO_AVOID = [
+export const SPECCER_TAGS_TO_AVOID: string[] = [
   'TR',
   'TH',
   'TD',
@@ -58,7 +59,8 @@ export const SPECCER_DEFAULT_PIN_SPACE = 48;
  * console.log(negativeDefaultPinSpace); // Example output: -48
  * ```
  */
-export const SPECCER_DEFAULT_PIN_SPACE_NEG = SPECCER_DEFAULT_PIN_SPACE * -1;
+export const SPECCER_DEFAULT_PIN_SPACE_NEG: number =
+  SPECCER_DEFAULT_PIN_SPACE * -1;
 
 /**
  * Default value for measure size.
@@ -84,7 +86,7 @@ export const SPECCER_DEFAULT_MEASURE_SIZE = 8;
  * console.log(negativeDefaultMeasureSize); // Example output: -8
  * ```
  */
-export const SPECCER_DEFAULT_MEASURE_SIZE_NEG =
+export const SPECCER_DEFAULT_MEASURE_SIZE_NEG: number =
   SPECCER_DEFAULT_MEASURE_SIZE * -1;
 
 /**

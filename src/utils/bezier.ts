@@ -3,7 +3,8 @@ import {
   CreateCoordinatesForCurveCoordParamType,
   CreateCoordinatesForCurveOptionsParamType,
   CurlyBezierPathOptionsType
-} from 'types/bezier';
+} from '../types/bezier';
+
 import { getCoordsPairFromObjects } from './get-coords-pair-from-objects';
 
 /**

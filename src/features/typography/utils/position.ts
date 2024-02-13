@@ -1,3 +1,4 @@
+import { SpeccerAreaEnum } from '../../../types/enums/area';
 import { pinSpace } from '../../../utils/css';
 import { decimal } from '../../../utils/number';
 import {
@@ -5,8 +6,6 @@ import {
   get_vertical_center_of_els,
   offset
 } from '../../../utils/position';
-
-import { SpeccerAreaEnum } from '../../../types/enums/area';
 
 /**
  * Calculate the position for the speccer element relative to the target element.

@@ -1,7 +1,7 @@
 /* eslint @typescript-eslint/no-explicit-any: ["error", { "fixToUnknown": true }] */
 'use strict';
 
-import { DebounceAnyFunctionType } from 'types/debounce';
+import { DebounceAnyFunctionType } from '../types/debounce';
 
 /**
  * Creates a debounced version of a function that delays its execution until after a specified waiting time has elapsed since the last time the debounced function was invoked.

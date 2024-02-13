@@ -21,7 +21,9 @@ describe('waitFor', () => {
 describe('waitForFrame', () => {
   it('should wait for the next animation frame', async () => {
     const startTime = performance.now(); // High-resolution timestamp
-    const timestamp = await waitForFrame();
+
+    await waitForFrame();
+
     const endTime = performance.now(); // High-resolution timestamp
     const elapsedTime = endTime - startTime;
 

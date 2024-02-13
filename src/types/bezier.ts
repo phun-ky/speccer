@@ -1,6 +1,7 @@
 /**
  * Options for dissect styles.
  */
+// eslint-disable-next-line import/no-unused-modules
 export type DissectStylesOptionsType =
   | Record<string, never>
   | {

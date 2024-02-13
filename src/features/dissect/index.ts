@@ -2,13 +2,12 @@
 'use strict';
 
 import { DissectAreaEnum } from '../../types/enums/area';
-
+import { isCurly, isEncloseArea, isFullArea, useSVG } from '../../utils/area';
+import { DrawSVGCurlyBracket } from '../../utils/classes/DrawSVGCurlyBracket';
+import { DrawSVGLine } from '../../utils/classes/DrawSVGLine';
 import { set as setClassNames, cx } from '../../utils/classnames';
 import { SPECCER_LITERALS } from '../../utils/constants';
 import { add } from '../../utils/styles';
-import { isCurly, isEncloseArea, isFullArea, useSVG } from '../../utils/area';
-import { DrawSVGLine } from '../../utils/classes/DrawSVGLine';
-import { DrawSVGCurlyBracket } from '../../utils/classes/DrawSVGCurlyBracket';
 
 import { styles } from './utils/styles';
 
