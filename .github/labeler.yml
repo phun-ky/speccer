@@ -1,28 +1,73 @@
 'section: workflows':
-  - .github/workflows/**
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - .github/workflows/**
 'section: repo':
-  - '*'
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - '*'
 'experience: developer':
-  - 'dev'
-  - '.eslintignore'
-  - '.eslintrc.json'
-  - '.gitignore'
-  - '.npmrc'
-  - '.prettierrc'
-  - 'tslint.json'
-  - '.stylintrc'
-  - '.postcssrc.cjs'
-  - '.postcssrc.js'
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - '.editorconfig'
+              - '.eslintignore'
+              - '.eslintrc.json'
+              - '.eslintrc.js'
+              - '.gitignore'
+              - '.release-it.json'
+              - '.renovate.json'
+              - '.npmrc'
+              - '.prettierrc'
+              - 'tslint.json'
 'context: github':
-  - .github/**
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - .github/**
 'context: docker':
-  - Dockerfile
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - Dockerfile
 'context: npm':
-  - '.npmrc'
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - '.npmrc'
 'context: rollup':
-  - 'rollup.config.js'
-  - 'rollup.*.config.js'
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - 'rollup.config.js'
+              - 'rollup.config.mjs'
+              - 'rollup.*.config.js'
+              - 'rollup.*.config.mjs'
 'mindless: docs':
-  - '**/*.md'
+  - any:
+      - head-branch: ['^docs', 'docs']
+      - changed-files:
+          - any-glob-to-any-file:
+              - '**/*.md'
 'mindless: dependencies':
-  - 'package-lock.json'
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - 'package-lock.json'
+              - 'yarn.lock'
+
+# Add '✨ feature' label to any PR where the head branch name starts with `feat` or has a `feat` section in the name
+'✨ feature':
+  - head-branch: ['^feat', 'feat']
+'problems: bug':
+  - head-branch: ['^fix', 'fix']
+'mindless: chore':
+  - head-branch: ['^chore', 'chore']
+'improvements: enhancement':
+  - head-branch: ['^improvements', 'improvements']
+
+# Add 'release' label to any PR that is opened against the `main` branch
+release:
+  - base-branch: 'main'

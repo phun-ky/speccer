@@ -26,7 +26,7 @@ jobs:
           fetch-depth: 0 # Checkout all branches and tags
           token: ${{ secrets.GH_TOKEN }}
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.5.2
+        uses: actions/setup-node@v4
         with:
           node-version: 18
       - name: Install dependencies
@@ -43,7 +43,7 @@ jobs:
   notify:
     name: Notify failed build
     needs: publish
-    if: failure() && github.event.pull_request == null
+    if: failure()
     runs-on: ubuntu-latest
     steps:
       - uses: jayqi/failed-build-issue-action@v1
