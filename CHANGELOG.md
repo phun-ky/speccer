@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.0.1](https://github.com/phun-ky/speccer/compare/v9.0.0...v9.0.1) (2024-02-13)
+
+
+### Tasks
+
+* 🤖 Add `putout` ([407c90f](https://github.com/phun-ky/speccer/commit/407c90f9cc4dd8a07d38614d3d2fcb56a21f3d9e))
+
 ## [9.0.0](https://github.com/phun-ky/speccer/compare/v8.0.6...v9.0.0) (2024-02-13)
 
 
