@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unused-modules */
 const config = {
   preset: 'ts-jest',
   displayName: 'speccer',
@@ -15,7 +16,9 @@ const config = {
         '^.+\\.(ts|js)$': ['esbuild-jest']
       }
     }
-  ]
+  ],
+  collectCoverage: true,
+  coverageReporters: ['text', 'cobertura']
 };
 
 export default config;

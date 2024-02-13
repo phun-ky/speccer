@@ -55,6 +55,11 @@ jobs:
         run: npm run build
       - name: Test
         run: npm test
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        env:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: phun-ky/speccer
   notify:
     name: Notify failed check
     needs: check
