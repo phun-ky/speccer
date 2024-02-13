@@ -4,7 +4,7 @@
 
 > A zero dependency package to highlight elements
 
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](http://makeapullrequest.com) [![SemVer 2.0](https://img.shields.io/badge/SemVer-2.0-green.svg)](http://semver.org/spec/v2.0.0.html) ![npm version](https://img.shields.io/npm/v/@phun-ky/speccer) ![issues](https://img.shields.io/github/issues/phun-ky/speccer) ![license](https://img.shields.io/npm/l/@phun-ky/speccer) ![size](https://img.shields.io/bundlephobia/min/@phun-ky/speccer) ![npm](https://img.shields.io/npm/dm/%40phun-ky/speccer) ![GitHub Repo stars](https://img.shields.io/github/stars/phun-ky/speccer)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](http://makeapullrequest.com) [![SemVer 2.0](https://img.shields.io/badge/SemVer-2.0-green.svg)](http://semver.org/spec/v2.0.0.html) ![npm version](https://img.shields.io/npm/v/@phun-ky/speccer) ![issues](https://img.shields.io/github/issues/phun-ky/speccer) ![license](https://img.shields.io/npm/l/@phun-ky/speccer) ![size](https://img.shields.io/bundlephobia/min/@phun-ky/speccer) ![npm](https://img.shields.io/npm/dm/%40phun-ky/speccer) ![GitHub Repo stars](https://img.shields.io/github/stars/phun-ky/speccer) [![codecov](https://codecov.io/gh/phun-ky/speccer/graph/badge.svg?token=VA91DL7ZLZ)](https://codecov.io/gh/phun-ky/speccer)
 
 ![Image of speccer](./public/speccer.png)
 
@@ -48,14 +48,14 @@ Go [here](https://github.com/phun-ky/speccer/blob/main/api/README.md) to read th
 
 ### Typescript
 
-Types can be found in `@phun-ky/speccer/speccer.d.ts`.
+Types can be found in `@phun-ky/speccer/dist/speccer.d.ts`.
 
 ### ESM
 
 Either import and run the required functions:
 
 ```javascript
-import '@phun-ky/speccer/speccer.min.css';
+import '@phun-ky/speccer/dist/speccer.min.css';
 import speccer from '@phun-ky/speccer';
 
 // do stuff
@@ -71,6 +71,16 @@ Or place these `script` and `link` tags in your web page:
 <script src="../path/to/speccer.js"></script>
 ```
 
+Or with a CDN:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@phun-ky/speccer/dist/speccer.min.css"
+/>
+<script src="https://unpkg.com/@phun-ky/speccer/dist/speccer.js"></script>
+```
+
 And then follow the steps below to display the specifications you want :)
 
 ### React
@@ -82,7 +92,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import debounce from './lib/debounce';
-import '@phun-ky/speccer/speccer.min.css';
+import '@phun-ky/speccer/dist/speccer.min.css';
 
 const Component = () => {
   let speccerEventFunc;
@@ -114,6 +124,12 @@ If you want to control speccer a bit more, you have some options. Apply one of t
 
 ```html
 <script src="../speccer.js" data-<manual|instant|dom|lazy></script>
+```
+
+Or with a CDN:
+
+```html
+<script src="https://unpkg.com/@phun-ky/speccer/dist/speccer.js" data-<manual|instant|dom|lazy></script>
 ```
 
 | Tag            | Description                                                         |
