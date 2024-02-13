@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.0.2](https://github.com/phun-ky/speccer/compare/v9.0.1...v9.0.2) (2024-02-13)
+
+
+### Documentation
+
+* ✏️ Update links to dist ([6e4987b](https://github.com/phun-ky/speccer/commit/6e4987bf4750e570e29c2328ebae0e2aa0df1ba0))
+
 ## [9.0.1](https://github.com/phun-ky/speccer/compare/v9.0.0...v9.0.1) (2024-02-13)
 
 
