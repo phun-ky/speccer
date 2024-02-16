@@ -63,11 +63,9 @@ export const normalizeNumberValue = (value: string | number): number => {
 export const getClassNameFromCSSProperty = (property: string): string => {
   if (property.includes('Top')) return property.replace('Top', ' top');
 
-  if (property.includes('Right'))
-    return property.replace('Right', ' right');
+  if (property.includes('Right')) return property.replace('Right', ' right');
 
-  if (property.includes('Bottom'))
-    return property.replace('Bottom', ' bottom');
+  if (property.includes('Bottom')) return property.replace('Bottom', ' bottom');
 
   if (property.includes('Left')) return property.replace('Left', ' left');
 

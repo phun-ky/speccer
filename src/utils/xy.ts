@@ -80,7 +80,10 @@ export const xy = {
    * // leftCoordinates.x and leftCoordinates.y will contain the coordinates
    * ```
    */
-  left: (rect: DOMRect): SpeccerCoordinatesInterface => ({ x: coords.left(rect), y: coords.center_y(rect) }),
+  left: (rect: DOMRect): SpeccerCoordinatesInterface => ({
+    x: coords.left(rect),
+    y: coords.center_y(rect)
+  }),
   'right-top': (rect: DOMRect) => ({
     x: coords.right(rect),
     y: coords.top(rect)
