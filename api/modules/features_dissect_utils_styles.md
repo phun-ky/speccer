@@ -38,4 +38,4 @@ console.log(styles);
 
 #### Defined in
 
-[features/dissect/utils/styles.ts:31](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/styles.ts#L31)
+[features/dissect/utils/styles.ts:32](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/styles.ts#L32)

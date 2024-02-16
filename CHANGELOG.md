@@ -1,5 +1,18 @@
 # Changelog
 
+## [9.0.4](https://github.com/phun-ky/speccer/compare/v9.0.3...v9.0.4) (2024-02-16)
+
+
+### Tasks
+
+* 🤖 Adjust dev script ([9316d0a](https://github.com/phun-ky/speccer/commit/9316d0a41da30a764f94a59ffe0330b118700bf8))
+
+
+### Bug
+
+* 🐛 Add test for typography position util ([39f3ae4](https://github.com/phun-ky/speccer/commit/39f3ae4a1f3a632fd909b054419ec12329f963b2))
+* 🐛 Revert `for..of` to `.forEach` to solve racing condition ([55c2cde](https://github.com/phun-ky/speccer/commit/55c2cde9fe6cae4106250c75d5fc350b04c1efba)), closes [#106](https://github.com/phun-ky/speccer/issues/106)
+
 ## [9.0.3](https://github.com/phun-ky/speccer/compare/v9.0.2...v9.0.3) (2024-02-13)
 
 ## [9.0.2](https://github.com/phun-ky/speccer/compare/v9.0.1...v9.0.2) (2024-02-13)
