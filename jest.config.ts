@@ -15,6 +15,15 @@ const config = {
       transform: {
         '^.+\\.(ts|js)$': ['esbuild-jest']
       }
+    },
+    {
+      displayName: 'speccer/features',
+      testMatch: ['<rootDir>/src/features/__tests__/**/*.[jt]s?(x)','<rootDir>/src/features/**/__tests__/**/*.[jt]s?(x)'],
+      preset: 'ts-jest',
+      testEnvironment: 'jsdom',
+      transform: {
+        '^.+\\.(ts|js)$': ['esbuild-jest']
+      }
     }
   ],
   collectCoverage: true,
