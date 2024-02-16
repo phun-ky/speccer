@@ -8,6 +8,7 @@ import {
 } from '../../../utils/area';
 import { pinSpace, measureSize } from '../../../utils/css';
 import { getRec } from '../../../utils/position';
+import { waitForFrame } from '../../../utils/wait';
 
 /**
  * Get styles for dissected elements based on the specified area and options.
@@ -34,6 +35,8 @@ export const styles = async (
   dissectionEl: HTMLElement,
   options?: DissectStylesOptionsType
 ): Promise<{ left: string; top: string; height?: string; width?: string }> => {
+  await waitForFrame();
+
   const { isCurly = false } = options || {};
   const SPECCER_PIN_SPACE = pinSpace(dissectionEl);
   const SPECCER_MEASURE_SIZE = measureSize(dissectionEl);
