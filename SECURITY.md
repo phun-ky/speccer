@@ -1,5 +1,7 @@
 # Security Policy
 
+I strive to keep this as secure as possible, but since this is an app that has zero dependencies, most (if not all) updates are directed to the dev dependencies.
+
 ## Supported Versions
 
 These are the versions that is updated with security patches.
