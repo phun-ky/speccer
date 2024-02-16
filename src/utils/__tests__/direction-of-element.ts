@@ -1,19 +1,19 @@
-import { describe, it, expect } from '@jest/globals';
+import { describe, it, expect, vi } from 'vitest';
 
 import { direction_of_element } from '../direction-of-element';
 
 // Mock the required dependencies
-jest.mock('./angle', () => ({
-  angle: jest.fn(() => 45)
+vi.mock('./angle', () => ({
+  angle: vi.fn(() => 45)
 }));
 
-jest.mock('./cardinal', () => ({
-  cardinal_direction: jest.fn(() => 'north-west'),
-  cardinal_direction_crude: jest.fn(() => 'east')
+vi.mock('./cardinal', () => ({
+  cardinal_direction: vi.fn(() => 'north-west'),
+  cardinal_direction_crude: vi.fn(() => 'east')
 }));
 
-jest.mock('./get-coords-pair-from-objects', () => ({
-  getCoordsPairFromObjects: jest.fn(() => ({
+vi.mock('./get-coords-pair-from-objects', () => ({
+  getCoordsPairFromObjects: vi.fn(() => ({
     x1: 0,
     y1: 0,
     x2: 100,

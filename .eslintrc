@@ -2,8 +2,10 @@
   "overrides": [
     {
       "files": ["**/__tests__/**"],
+      "extends": ["plugin:vitest/recommended"],
+      "plugins": ["vitest"],
       "env": {
-        "jest": true
+        "browser": true
       }
     }
   ],

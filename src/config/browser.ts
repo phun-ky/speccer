@@ -110,12 +110,7 @@ export const activate = (speccer: SpeccerFunctionType): void => {
   if (_script) {
     const _speccer_script_src = _script.getAttribute('src');
 
-    if (
-      _speccer_script_src &&
-      (_speccer_script_src.includes('speccer.js') ||
-        // for codepen
-        _speccer_script_src.includes('JaXpOK.js'))
-    ) {
+    if (_speccer_script_src && _speccer_script_src.includes('speccer.js')) {
       if (_script.hasAttribute('data-manual')) manual(speccer);
       else if (_script.hasAttribute('data-instant')) speccer();
       else if (_script.hasAttribute('data-dom')) dom(speccer);

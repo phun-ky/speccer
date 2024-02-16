@@ -107,7 +107,6 @@ export const element = async (sectionEl: HTMLElement): Promise<void> => {
         }
       );
 
-
       await add(_dissection_el, _dissection_styles);
 
       if (useSVG(_areas_string) && !isCurly(_areas_string))

@@ -5,7 +5,8 @@
  * @param {unknown} variable - The variable to check.
  * @returns {boolean} True if the variable is a string, false otherwise.
  */
-export const isString = (variable: unknown): boolean => typeof variable === 'string';
+export const isString = (variable: unknown): boolean =>
+  typeof variable === 'string';
 
 /**
  * Checks if the given variable is not a string.
@@ -21,7 +22,8 @@ export const isNotString = (variable: unknown): boolean => !isString(variable);
  * @param {unknown} variable - The variable to check.
  * @returns {boolean} True if the variable is a number, false otherwise.
  */
-export const isNumber = (variable: unknown): boolean => typeof variable === 'number';
+export const isNumber = (variable: unknown): boolean =>
+  typeof variable === 'number';
 
 /**
  * Checks if the given variable is not a number.
@@ -37,7 +39,8 @@ export const isNotNumber = (variable: unknown): boolean => !isNumber(variable);
  * @param {unknown} variable - The variable to check.
  * @returns {boolean} True if the variable is a boolean, false otherwise.
  */
-export const isBoolean = (variable: unknown): boolean => typeof variable === 'boolean';
+export const isBoolean = (variable: unknown): boolean =>
+  typeof variable === 'boolean';
 
 /**
  * Checks if the given variable is not a boolean.
@@ -45,7 +48,8 @@ export const isBoolean = (variable: unknown): boolean => typeof variable === 'bo
  * @param {unknown} variable - The variable to check.
  * @returns {boolean} True if the variable is not a boolean, false otherwise.
  */
-export const isNotBoolean = (variable: unknown): boolean => !isBoolean(variable);
+export const isNotBoolean = (variable: unknown): boolean =>
+  !isBoolean(variable);
 
 /**
  * Checks if the given variable is undefined.
@@ -53,7 +57,8 @@ export const isNotBoolean = (variable: unknown): boolean => !isBoolean(variable)
  * @param {unknown} variable - The variable to check.
  * @returns {boolean} True if the variable is undefined, false otherwise.
  */
-export const isUndefined = (variable: unknown): boolean => typeof variable === 'undefined';
+export const isUndefined = (variable: unknown): boolean =>
+  typeof variable === 'undefined';
 
 /**
  * Checks if the given variable is not undefined.
@@ -61,4 +66,5 @@ export const isUndefined = (variable: unknown): boolean => typeof variable === '
  * @param {unknown} variable - The variable to check.
  * @returns {boolean} True if the variable is not undefined, false otherwise.
  */
-export const isNotUndefined = (variable: unknown): boolean => !isUndefined(variable);
+export const isNotUndefined = (variable: unknown): boolean =>
+  !isUndefined(variable);

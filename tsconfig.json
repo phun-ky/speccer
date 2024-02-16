@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "esnext",
-    "lib": ["ES2022", "dom"],
+    "lib": ["ES2022", "dom", "dom.iterable"],
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
@@ -16,14 +16,11 @@
     "resolveJsonModule": true
   },
   "exclude": [
-    "jest.config.ts",
     "node_modules",
     "build",
     "dist",
-    "./speccer.js",
     "scripts",
-    "tests",
-    "__tests__",
-    "dts"
+    "dts",
+    "vitest.config.ts"
   ]
 }

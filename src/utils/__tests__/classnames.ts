@@ -1,4 +1,4 @@
-import { describe, it, expect } from '@jest/globals';
+import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 
 import { set, toggle, remove, cx } from '../classnames';
 
