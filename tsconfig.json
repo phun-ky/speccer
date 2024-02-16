@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "esnext",
-    "lib": ["ES2022", "dom"],
+    "lib": ["ES2022", "dom", "dom.iterable"],
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
