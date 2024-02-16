@@ -69,8 +69,8 @@ export const element = async (sectionEl: HTMLElement): Promise<void> => {
   if (_dissection_els) {
     let _index_to_use = 0;
 
-    for (const [targetIndex, targetEl] of _dissection_els.entries()) {
-      if (!targetEl) continue;
+    _dissection_els.forEach(async (targetEl, targetIndex) => {
+      if (!targetEl) return;
 
       const _areas_string: string = targetEl.getAttribute('data-anatomy') || '';
 
@@ -79,7 +79,7 @@ export const element = async (sectionEl: HTMLElement): Promise<void> => {
         _areas_string === '' ||
         !_areas_string.includes(DissectAreaEnum.Outline)
       )
-        continue;
+        return;
 
       /**
        * If we're running out of literals to use,
@@ -107,12 +107,13 @@ export const element = async (sectionEl: HTMLElement): Promise<void> => {
         }
       );
 
+
       await add(_dissection_el, _dissection_styles);
 
       if (useSVG(_areas_string) && !isCurly(_areas_string))
         new DrawSVGLine(targetEl as HTMLElement, _dissection_el);
       else if (isCurly(_areas_string))
         new DrawSVGCurlyBracket(targetEl as HTMLElement, _dissection_el);
-    }
+    });
   }
 };

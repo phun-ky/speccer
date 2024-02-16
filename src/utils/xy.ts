@@ -1,3 +1,5 @@
+import { SpeccerCoordinatesInterface } from '../types/xy';
+
 import { coords } from './coords';
 
 /**
@@ -7,7 +9,7 @@ export const xy = {
   /**
    * Get the x and y coordinates of the center of a DOMRect.
    * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
-   * @returns {{ x: number, y: number }} The x and y coordinates of the center.
+   * @returns {SpeccerCoordinatesInterface} The x and y coordinates of the center.
    * @example
    * ```ts
    * const rect = element.getBoundingClientRect();
@@ -15,7 +17,7 @@ export const xy = {
    * // centerCoordinates.x and centerCoordinates.y will contain the coordinates
    * ```
    */
-  center: (rect: DOMRect): { x: number; y: number } => ({
+  center: (rect: DOMRect): SpeccerCoordinatesInterface => ({
     x: coords.center_x(rect),
     y: coords.center_y(rect)
   }),
@@ -23,7 +25,7 @@ export const xy = {
   /**
    * Get the x and y coordinates of the top center of a DOMRect.
    * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
-   * @returns {{ x: number, y: number }} The x and y coordinates of the top center.
+   * @returns {SpeccerCoordinatesInterface} The x and y coordinates of the top center.
    * @example
    * ```ts
    * const rect = element.getBoundingClientRect();
@@ -31,7 +33,7 @@ export const xy = {
    * // topCenterCoordinates.x and topCenterCoordinates.y will contain the coordinates
    * ```
    */
-  top: (rect: DOMRect): { x: number; y: number } => ({
+  top: (rect: DOMRect): SpeccerCoordinatesInterface => ({
     x: coords.center_x(rect),
     y: coords.top(rect)
   }),
@@ -39,7 +41,7 @@ export const xy = {
   /**
    * Get the x and y coordinates of the right center of a DOMRect.
    * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
-   * @returns {{ x: number, y: number }} The x and y coordinates of the right center.
+   * @returns {SpeccerCoordinatesInterface} The x and y coordinates of the right center.
    * @example
    * ```ts
    * const rect = element.getBoundingClientRect();
@@ -47,7 +49,7 @@ export const xy = {
    * // rightCenterCoordinates.x and rightCenterCoordinates.y will contain the coordinates
    * ```
    */
-  right: (rect: DOMRect): { x: number; y: number } => ({
+  right: (rect: DOMRect): SpeccerCoordinatesInterface => ({
     x: coords.right(rect),
     y: coords.center_y(rect)
   }),
@@ -55,7 +57,7 @@ export const xy = {
   /**
    * Get the x and y coordinates of the bottom center of a DOMRect.
    * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
-   * @returns {{ x: number, y: number }} The x and y coordinates of the bottom center.
+   * @returns {SpeccerCoordinatesInterface} The x and y coordinates of the bottom center.
    * @example
    * ```ts
    * const rect = element.getBoundingClientRect();
@@ -63,14 +65,14 @@ export const xy = {
    * // bottomCenterCoordinates.x and bottomCenterCoordinates.y will contain the coordinates
    * ```
    */
-  bottom: (rect: DOMRect): { x: number; y: number } => ({
+  bottom: (rect: DOMRect): SpeccerCoordinatesInterface => ({
     x: coords.center_x(rect),
     y: coords.bottom(rect)
   }),
   /**
    * Get the x and y coordinates of the left of a DOMRect.
    * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
-   * @returns {{ x: number, y: number }} The x and y coordinates of the left.
+   * @returns {SpeccerCoordinatesInterface} The x and y coordinates of the left.
    * @example
    * ```ts
    * const rect = element.getBoundingClientRect();
@@ -78,7 +80,7 @@ export const xy = {
    * // leftCoordinates.x and leftCoordinates.y will contain the coordinates
    * ```
    */
-  left: (rect: DOMRect) => ({ x: coords.left(rect), y: coords.center_y(rect) }),
+  left: (rect: DOMRect): SpeccerCoordinatesInterface => ({ x: coords.left(rect), y: coords.center_y(rect) }),
   'right-top': (rect: DOMRect) => ({
     x: coords.right(rect),
     y: coords.top(rect)
@@ -86,7 +88,7 @@ export const xy = {
   /**
    * Get the x and y coordinates of the right bottom of a DOMRect.
    * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
-   * @returns {{ x: number, y: number }} The x and y coordinates of the right bottom.
+   * @returns {SpeccerCoordinatesInterface} The x and y coordinates of the right bottom.
    * @example
    * ```ts
    * const rect = element.getBoundingClientRect();
@@ -94,14 +96,14 @@ export const xy = {
    * // rightBottomCoordinates.x and rightBottomCoordinates.y will contain the coordinates
    * ```
    */
-  'right-bottom': (rect: DOMRect) => ({
+  'right-bottom': (rect: DOMRect): SpeccerCoordinatesInterface => ({
     x: coords.right(rect),
     y: coords.bottom(rect)
   }),
   /**
    * Get the x and y coordinates of the left top of a DOMRect.
    * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
-   * @returns {{ x: number, y: number }} The x and y coordinates of the left top.
+   * @returns {SpeccerCoordinatesInterface} The x and y coordinates of the left top.
    * @example
    * ```ts
    * const rect = element.getBoundingClientRect();
@@ -109,14 +111,14 @@ export const xy = {
    * // leftTop.x and leftTop.y will contain the coordinates
    * ```
    */
-  'left-top': (rect: DOMRect) => ({
+  'left-top': (rect: DOMRect): SpeccerCoordinatesInterface => ({
     x: coords.left(rect),
     y: coords.top(rect)
   }),
   /**
    * Get the x and y coordinates of the left bottom of a DOMRect.
    * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
-   * @returns {{ x: number, y: number }} The x and y coordinates of the left bottom.
+   * @returns {SpeccerCoordinatesInterface} The x and y coordinates of the left bottom.
    * @example
    * ```ts
    * const rect = element.getBoundingClientRect();
@@ -124,14 +126,14 @@ export const xy = {
    * // leftBottomCoordinates.x and leftBottomCoordinates.y will contain the coordinates
    * ```
    */
-  'left-bottom': (rect: DOMRect) => ({
+  'left-bottom': (rect: DOMRect): SpeccerCoordinatesInterface => ({
     x: coords.left(rect),
     y: coords.bottom(rect)
   }),
   /**
    * Get the x and y coordinates of the top left of a DOMRect.
    * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
-   * @returns {{ x: number, y: number }} The x and y coordinates of the top left.
+   * @returns {SpeccerCoordinatesInterface} The x and y coordinates of the top left.
    * @example
    * ```ts
    * const rect = element.getBoundingClientRect();
@@ -139,14 +141,14 @@ export const xy = {
    * // topLeftCoordinates.x and topLeftCoordinates.y will contain the coordinates
    * ```
    */
-  'top-left': (rect: DOMRect) => ({
+  'top-left': (rect: DOMRect): SpeccerCoordinatesInterface => ({
     x: coords.left(rect),
     y: coords.top(rect)
   }),
   /**
    * Get the x and y coordinates of the top right of a DOMRect.
    * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
-   * @returns {{ x: number, y: number }} The x and y coordinates of the top right.
+   * @returns {SpeccerCoordinatesInterface} The x and y coordinates of the top right.
    * @example
    * ```ts
    * const rect = element.getBoundingClientRect();
@@ -154,14 +156,14 @@ export const xy = {
    * // topRightCoordinates.x and topRightCoordinates.y will contain the coordinates
    * ```
    */
-  'top-right': (rect: DOMRect) => ({
+  'top-right': (rect: DOMRect): SpeccerCoordinatesInterface => ({
     x: coords.right(rect),
     y: coords.top(rect)
   }),
   /**
    * Get the x and y coordinates of the bottom left of a DOMRect.
    * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
-   * @returns {{ x: number, y: number }} The x and y coordinates of the bottom left.
+   * @returns {SpeccerCoordinatesInterface} The x and y coordinates of the bottom left.
    * @example
    * ```ts
    * const rect = element.getBoundingClientRect();
@@ -169,14 +171,14 @@ export const xy = {
    * // bottomLeftCoordinates.x and bottomLeftCoordinates.y will contain the coordinates
    * ```
    */
-  'bottom-left': (rect: DOMRect) => ({
+  'bottom-left': (rect: DOMRect): SpeccerCoordinatesInterface => ({
     x: coords.left(rect),
     y: coords.bottom(rect)
   }),
   /**
    * Get the x and y coordinates of the bottom right of a DOMRect.
    * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
-   * @returns {{ x: number, y: number }} The x and y coordinates of the bottom right.
+   * @returns {SpeccerCoordinatesInterface} The x and y coordinates of the bottom right.
    * @example
    * ```ts
    * const rect = element.getBoundingClientRect();
@@ -184,14 +186,14 @@ export const xy = {
    * // bottomRight.x and bottomRight.y will contain the coordinates
    * ```
    */
-  'bottom-right': (rect: DOMRect) => ({
+  'bottom-right': (rect: DOMRect): SpeccerCoordinatesInterface => ({
     x: coords.right(rect),
     y: coords.bottom(rect)
   }),
   /**
    * Get the x and y coordinates of the top center of a DOMRect.
    * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
-   * @returns {{ x: number, y: number }} The x and y coordinates of the top center.
+   * @returns {SpeccerCoordinatesInterface} The x and y coordinates of the top center.
    * @example
    * ```ts
    * const rect = element.getBoundingClientRect();
@@ -199,14 +201,14 @@ export const xy = {
    * // topCenterCoordinates.x and topCenterCoordinates.y will contain the coordinates
    * ```
    */
-  'top-center': (rect: DOMRect) => ({
+  'top-center': (rect: DOMRect): SpeccerCoordinatesInterface => ({
     x: coords.center_x(rect),
     y: coords.top(rect)
   }),
   /**
    * Get the x and y coordinates of the right center of a DOMRect.
    * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
-   * @returns {{ x: number, y: number }} The x and y coordinates of the right center.
+   * @returns {SpeccerCoordinatesInterface} The x and y coordinates of the right center.
    * @example
    * ```ts
    * const rect = element.getBoundingClientRect();
@@ -214,14 +216,14 @@ export const xy = {
    * // rightCenterCoordinates.x and rightCenterCoordinates.y will contain the coordinates
    * ```
    */
-  'right-center': (rect: DOMRect) => ({
+  'right-center': (rect: DOMRect): SpeccerCoordinatesInterface => ({
     x: coords.right(rect),
     y: coords.center_y(rect)
   }),
   /**
    * Get the x and y coordinates of the bottom center of a DOMRect.
    * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
-   * @returns {{ x: number, y: number }} The x and y coordinates of the bottom center.
+   * @returns {SpeccerCoordinatesInterface} The x and y coordinates of the bottom center.
    * @example
    * ```ts
    * const rect = element.getBoundingClientRect();
@@ -229,14 +231,14 @@ export const xy = {
    * // bottomCenterCoordinates.x and bottomCenterCoordinates.y will contain the coordinates
    * ```
    */
-  'bottom-center': (rect: DOMRect) => ({
+  'bottom-center': (rect: DOMRect): SpeccerCoordinatesInterface => ({
     x: coords.center_x(rect),
     y: coords.bottom(rect)
   }),
   /**
    * Get the x and y coordinates of the left center of a DOMRect.
    * @param {DOMRect} rect - The DOMRect to retrieve the coordinates from.
-   * @returns {{ x: number, y: number }} The x and y coordinates of the left center.
+   * @returns {SpeccerCoordinatesInterface} The x and y coordinates of the left center.
    * @example
    * ```ts
    * const rect = element.getBoundingClientRect();
@@ -244,7 +246,7 @@ export const xy = {
    * // leftCenterCoordinates.x and leftCenterCoordinates.y will contain the coordinates
    * ```
    */
-  'left-center': (rect: DOMRect) => ({
+  'left-center': (rect: DOMRect): SpeccerCoordinatesInterface => ({
     x: coords.left(rect),
     y: coords.center_y(rect)
   })
