@@ -1,4 +1,4 @@
-import { describe, it, expect } from '@jest/globals';
+import { describe, it, expect, beforeEach } from 'vitest';
 
 import { coords } from '../coords';
 

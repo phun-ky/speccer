@@ -1,4 +1,4 @@
-import { describe, it, expect } from '@jest/globals';
+import { describe, it, expect } from 'vitest';
 
 import {
   createBezierCurveCoordinates,
@@ -10,10 +10,11 @@ import {
 
 describe('Bezier Functions', () => {
   it('createBezierCurveCoordinates should calculate coordinates for a Bezier curve', () => {
-    const { firstPoint, lastPoint, firstControl, lastControl } = createBezierCurveCoordinates(
-      { x1: 0, x2: 100, y1: 0, y2: 100 },
-      { direct: true, firstSet: true, direction: 'west' }
-    );
+    const { firstPoint, lastPoint, firstControl, lastControl } =
+      createBezierCurveCoordinates(
+        { x1: 0, x2: 100, y1: 0, y2: 100 },
+        { direct: true, firstSet: true, direction: 'west' }
+      );
 
     expect(firstControl.x).toEqual(-32);
     expect(firstControl.y).toEqual(-8);

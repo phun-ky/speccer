@@ -1,12 +1,12 @@
-import { describe, it, expect } from '@jest/globals';
+import { describe, it, expect, vi } from 'vitest';
 
 import debounce from '../debounce';
 
 describe('debounce', () => {
-  jest.useFakeTimers();
+  vi.useFakeTimers();
 
   it('should debounce a function with the specified wait time', () => {
-    const mockFn = jest.fn();
+    const mockFn = vi.fn();
     const debouncedFn = debounce(mockFn, 500);
 
     // Call debounced function twice in quick succession
@@ -17,14 +17,14 @@ describe('debounce', () => {
     expect(mockFn).not.toBeCalled();
 
     // Fast-forward time by 500 milliseconds
-    jest.advanceTimersByTime(500);
+    vi.advanceTimersByTime(500);
 
     // Now the debounced function should be called with the last arguments
-    expect(mockFn).toBeCalled;
+    expect(mockFn).toBeCalled();
   });
 
   it('should debounce a function with immediate execution', () => {
-    const mockFn = jest.fn();
+    const mockFn = vi.fn();
     const debouncedFn = debounce(mockFn, 500, true);
 
     // Call debounced function twice in quick succession
@@ -32,7 +32,7 @@ describe('debounce', () => {
     debouncedFn();
 
     // The function should be called immediately with the last arguments
-    expect(mockFn).toBeCalled;
+    expect(mockFn).toBeCalled();
 
     // Should not have been called again
     expect(mockFn).toHaveBeenCalledTimes(1);

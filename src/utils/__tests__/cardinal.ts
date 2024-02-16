@@ -1,4 +1,4 @@
-import { describe, it, expect } from '@jest/globals';
+import { describe, it, expect } from 'vitest';
 
 import { cardinal_direction, cardinal_direction_crude } from '../cardinal';
 

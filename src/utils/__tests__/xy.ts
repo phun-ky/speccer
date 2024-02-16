@@ -1,10 +1,7 @@
-import { describe, it, expect } from '@jest/globals';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
 import { coords } from '../coords';
-import {
-  xy
-} from '../xy';
-
+import { xy } from '../xy';
 
 describe('xy', () => {
   const mockRect: DOMRect = {
@@ -21,16 +18,16 @@ describe('xy', () => {
 
   beforeEach(() => {
     // Mocking the coords module functions
-    jest.spyOn(coords, 'center_x').mockReturnValue(50);
-    jest.spyOn(coords, 'center_y').mockReturnValue(50);
-    jest.spyOn(coords, 'top').mockReturnValue(0);
-    jest.spyOn(coords, 'right').mockReturnValue(100);
-    jest.spyOn(coords, 'bottom').mockReturnValue(100);
-    jest.spyOn(coords, 'left').mockReturnValue(0);
+    vi.spyOn(coords, 'center_x').mockReturnValue(50);
+    vi.spyOn(coords, 'center_y').mockReturnValue(50);
+    vi.spyOn(coords, 'top').mockReturnValue(0);
+    vi.spyOn(coords, 'right').mockReturnValue(100);
+    vi.spyOn(coords, 'bottom').mockReturnValue(100);
+    vi.spyOn(coords, 'left').mockReturnValue(0);
   });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   describe('center', () => {
