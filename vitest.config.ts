@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unused-modules */
-import { defineConfig } from 'vitest/config';
+import { defineConfig, configDefaults } from 'vitest/config';
 
 export default defineConfig({
   test: {
@@ -10,7 +10,13 @@ export default defineConfig({
     environment: 'jsdom',
     include: ['src/**/__tests__/**/*.[jt]s'],
     coverage: {
-      reporter: ['text', 'cobertura']
+      reporter: ['text', 'cobertura'],
+      exclude: [
+        ...(configDefaults.coverage.exclude as string[]),
+        'src/main.ts',
+        'src/types',
+        'src/types/**'
+      ]
     },
     setupFiles: ['./src/tests/setupFiles.ts'],
     outputFile: 'reports/coverage/sonar-report.xml'
