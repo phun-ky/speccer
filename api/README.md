@@ -57,6 +57,8 @@
 - [utils/cardinal](modules/utils_cardinal.md)
 - [utils/classes/DrawSVGCurlyBracket](modules/utils_classes_DrawSVGCurlyBracket.md)
 - [utils/classes/DrawSVGLine](modules/utils_classes_DrawSVGLine.md)
+- [utils/classes/\_\_tests\_\_/DrawSVGCurlyBracket.test](modules/utils_classes___tests___DrawSVGCurlyBracket_test.md)
+- [utils/classes/\_\_tests\_\_/DrawSVGLine.test](modules/utils_classes___tests___DrawSVGLine_test.md)
 - [utils/classnames](modules/utils_classnames.md)
 - [utils/constants](modules/utils_constants.md)
 - [utils/coords](modules/utils_coords.md)
