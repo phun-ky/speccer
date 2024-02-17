@@ -7,7 +7,7 @@
     "declaration": true,
     "declarationMap": true,
     "declarationDir": "./dts",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": false,
