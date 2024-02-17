@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.0.7](https://github.com/phun-ky/speccer/compare/v9.0.6...v9.0.7) (2024-02-17)
+
+
+### Tasks
+
+* 🤖 Upgrade codecov action ([eee1d76](https://github.com/phun-ky/speccer/commit/eee1d76d990f9caadc05a1ee4259957060e32b52))
+
 ## [9.0.6](https://github.com/phun-ky/speccer/compare/v9.0.5...v9.0.6) (2024-02-17)
 
 
