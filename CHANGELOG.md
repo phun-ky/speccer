@@ -1,5 +1,17 @@
 # Changelog
 
+## [9.0.6](https://github.com/phun-ky/speccer/compare/v9.0.5...v9.0.6) (2024-02-17)
+
+
+### Tasks
+
+* 🤖 Upgrade github actions versions ([116943a](https://github.com/phun-ky/speccer/commit/116943aca700f74f867f599700282449498e9e61))
+
+
+### Documentation
+
+* ✏️ Update lazy loading example in `README.md` ([b8ae2b9](https://github.com/phun-ky/speccer/commit/b8ae2b9c6c4bde97b988cb565d0a45be980d5a1f))
+
 ## [9.0.5](https://github.com/phun-ky/speccer/compare/v9.0.4...v9.0.5) (2024-02-17)
 
 
