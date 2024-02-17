@@ -1,5 +1,32 @@
 # Changelog
 
+## [9.0.5](https://github.com/phun-ky/speccer/compare/v9.0.4...v9.0.5) (2024-02-17)
+
+
+### Tasks
+
+* 🤖 exclude `vitest.config.ts` ([fcd9237](https://github.com/phun-ky/speccer/commit/fcd9237e85a39fb6e405d49923cf371f4c6ae554))
+* 🤖 fix deps ([fc63f35](https://github.com/phun-ky/speccer/commit/fc63f356182594f5e0456c8288976e94d640fae9))
+* 🤖 upgrade rollup to v4 and typescript to v5 ([b13fa4f](https://github.com/phun-ky/speccer/commit/b13fa4f0002ada9f8c5e3dce8771f671cf7a4099))
+* 🤖 use `vitest` instead of `jest` ([2f2881b](https://github.com/phun-ky/speccer/commit/2f2881b65678f73b4d4f63d993f41953479ab4c7))
+
+
+### Documentation
+
+* ✏️ update `SECURITY.md` ([16d46a0](https://github.com/phun-ky/speccer/commit/16d46a01ab73b0858abd5cc34b531d6f7bc59525))
+
+
+### Bug
+
+* 🐛 Add `dom.iterable` ([4d4029a](https://github.com/phun-ky/speccer/commit/4d4029ae05fb7055138fefe3dc9e49282cd4c80c))
+* 🐛 upgraded typedoc, regenerated api docs ([bd55243](https://github.com/phun-ky/speccer/commit/bd55243dfef30d010a70396a8ac83ac456d00440))
+* 🐛 use `moduleResolution: 'bundler'` for rollup@4 ([db2fd03](https://github.com/phun-ky/speccer/commit/db2fd03ce1145894cfbc3d55a50422bd591e2bb1))
+
+
+### Refactoring
+
+* 💡 remove reference to codepen, no longer needed ([b322504](https://github.com/phun-ky/speccer/commit/b32250431aafe0832685dfb8e78473d626e59dbc))
+
 ## [9.0.4](https://github.com/phun-ky/speccer/compare/v9.0.3...v9.0.4) (2024-02-16)
 
 
