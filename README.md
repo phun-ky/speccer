@@ -143,23 +143,49 @@ If no attribute is applied, it will default to `data-dom`, as in, it will initia
 
 ### Lazy
 
-If you're importing speccer instead of with a script tag, you can use the following approach to apply lazy loading:
+If you're importing speccer instead of with a script tag, [you can use the following approach](https://codepen.io/phun-ky/pen/VwRRLyY) to apply lazy loading:
 
 ```javascript
-import { dissect } from '@phun-ky/speccer';
+import { dissect, ElementDissectionResult } from "https://esm.sh/@phun-ky/speccer";
 
-let dissectElementObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    const targets = entry.target.querySelectorAll('[data-anatomy]');
+/**
+ * Function to dissect an HTML element
+ * @param {Element} target - The element to be dissected
+ * @returns {Promise<ElementDissectionResult>} Promise that resolves with the dissection result
+ */
+const dissectElement = (target: Element): Promise<ElementDissectionResult> => {
+  return dissect.element(target);
+};
+
+/**
+ * Callback function for IntersectionObserver
+ * @param {IntersectionObserverEntry[]} entries - Array of entries being observed
+ * @param {IntersectionObserver} observer - The IntersectionObserver instance
+ * @returns {Promise<void>} Promise that resolves when element dissection is complete
+ */
+const intersectionCallback: IntersectionObserverCallback = async (entries, observer) => {
+  entries.forEach(async (entry) => {
     if (entry.intersectionRatio > 0) {
-      targets.forEach(dissect.element);
+      await dissectElement(entry.target);
       observer.unobserve(entry.target);
     }
   });
-});
+};
 
-document.querySelectorAll('[data-anatomy-section]').forEach((el) => {
+// Creating IntersectionObserver instance with the callback
+const dissectElementObserver = new IntersectionObserver(intersectionCallback);
+
+/**
+ * Function to observe elements using IntersectionObserver
+ * @param {Element} el - The element to be observed
+ */
+const observeElement = (el: Element): void => {
   dissectElementObserver.observe(el);
+};
+
+// Observing elements with the specified data attribute
+document.querySelectorAll('[data-anatomy-section]').forEach((el) => {
+  observeElement(el);
 });
 ```
 
