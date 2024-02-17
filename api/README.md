@@ -4,8 +4,11 @@
 
 ## Modules
 
+- [config/\_\_tests\_\_/dom](modules/config___tests___dom.md)
+- [config/\_\_tests\_\_/manual](modules/config___tests___manual.md)
 - [config/browser](modules/config_browser.md)
 - [features/dissect](modules/features_dissect.md)
+- [features/dissect/utils/\_\_tests\_\_/styles](modules/features_dissect_utils___tests___styles.md)
 - [features/dissect/utils/styles](modules/features_dissect_utils_styles.md)
 - [features/mark](modules/features_mark.md)
 - [features/measure](modules/features_measure.md)
@@ -16,6 +19,7 @@
 - [features/typography/utils/position](modules/features_typography_utils_position.md)
 - [features/typography/utils/template](modules/features_typography_utils_template.md)
 - [main](modules/main.md)
+- [tests/setupFiles](modules/tests_setupFiles.md)
 - [types/bezier](modules/types_bezier.md)
 - [types/css](modules/types_css.md)
 - [types/debounce](modules/types_debounce.md)
