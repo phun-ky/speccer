@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.0.8](https://github.com/phun-ky/speccer/compare/v9.0.7...v9.0.8) (2024-02-17)
+
+
+### Tasks
+
+* 🤖 roll back codecov action to v3, v4 still buggy ([21eca7b](https://github.com/phun-ky/speccer/commit/21eca7b0b651e6e40bf4d7efc76c1295c7c50566))
+
 ## [9.0.7](https://github.com/phun-ky/speccer/compare/v9.0.6...v9.0.7) (2024-02-17)
 
 
