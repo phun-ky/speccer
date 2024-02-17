@@ -99,7 +99,7 @@ console.log(spacing); // Example output: { marginTop: "10px", marginLeft: "20px"
 
 #### Defined in
 
-[utils/css.ts:93](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L93)
+[utils/css.ts:91](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L91)
 
 ___
 
@@ -134,7 +134,7 @@ console.log(typography); // Example output: { fontSize: "16px", fontWeight: "bol
 
 #### Defined in
 
-[utils/css.ts:135](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L135)
+[utils/css.ts:133](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L133)
 
 ___
 
@@ -166,7 +166,7 @@ console.log(value); // Example output: 1.5
 
 #### Defined in
 
-[utils/css.ts:208](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L208)
+[utils/css.ts:206](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L206)
 
 ___
 
@@ -198,7 +198,7 @@ console.log(value); // Example output: 20
 
 #### Defined in
 
-[utils/css.ts:190](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L190)
+[utils/css.ts:188](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L188)
 
 ___
 
@@ -263,4 +263,4 @@ console.log(value); // Example output: 10
 
 #### Defined in
 
-[utils/css.ts:172](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L172)
+[utils/css.ts:170](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L170)
