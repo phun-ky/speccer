@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.0.13](https://github.com/phun-ky/speccer/compare/v9.0.12...v9.0.13) (2024-02-22)
+
+
+### Tasks
+
+* 🤖 bump release-it and @release-it/conventional-changelog ([e8eefc5](https://github.com/phun-ky/speccer/commit/e8eefc59a454053cf6b933f3c0d7ee7eb82512f8))
+
 ## [9.0.12](https://github.com/phun-ky/speccer/compare/v9.0.11...v9.0.12) (2024-02-22)
 
 
