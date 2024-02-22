@@ -119,5 +119,9 @@
     "commitizen": {
       "path": "./node_modules/git-cz"
     }
+  },
+  "engines": {
+    "node": ">=20.11.1",
+    "npm": ">=10.2.4"
   }
 }
