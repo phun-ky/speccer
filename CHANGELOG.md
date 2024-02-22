@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.0.10](https://github.com/phun-ky/speccer/compare/v9.0.9...v9.0.10) (2024-02-22)
+
+
+### Bug
+
+* 🐛 place `quibble` under `devDependencies` ([4df90a0](https://github.com/phun-ky/speccer/commit/4df90a0cf259e20d19dc45cd2977852574568669))
+
 ## [9.0.9](https://github.com/phun-ky/speccer/compare/v9.0.8...v9.0.9) (2024-02-22)
 
 
