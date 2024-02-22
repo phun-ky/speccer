@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.0.11](https://github.com/phun-ky/speccer/compare/v9.0.10...v9.0.11) (2024-02-22)
+
+
+### Bug
+
+* 🐛 Attempt to fix test with `requestAnimationFrame` ([b03e257](https://github.com/phun-ky/speccer/commit/b03e257eeeca7f4797e367fb7004b9f12fd78327))
+
 ## [9.0.10](https://github.com/phun-ky/speccer/compare/v9.0.9...v9.0.10) (2024-02-22)
 
 
