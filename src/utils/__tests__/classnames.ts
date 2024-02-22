@@ -1,4 +1,5 @@
-import { describe, it, expect, beforeEach, afterEach } from 'vitest';
+import assert from 'node:assert/strict';
+import { describe, it, beforeEach, afterEach } from 'node:test';
 
 import { set, toggle, remove, cx } from '../classnames';
 
@@ -19,30 +20,30 @@ describe('classnames', () => {
 
   it('set should add CSS classes to an HTML element', () => {
     set(dummyElement, 'class1 class2');
-    expect(dummyElement.classList.contains('class1')).toBe(true);
-    expect(dummyElement.classList.contains('class2')).toBe(true);
+    assert.equal(dummyElement.classList.contains('class1'),true);
+    assert.equal(dummyElement.classList.contains('class2'),true);
   });
 
   it('toggle should toggle CSS classes on an HTML element', () => {
     toggle(dummyElement, 'class1 class2');
-    expect(dummyElement.classList.contains('class1')).toBe(true);
-    expect(dummyElement.classList.contains('class2')).toBe(true);
+    assert.equal(dummyElement.classList.contains('class1'),true);
+    assert.equal(dummyElement.classList.contains('class2'),true);
 
     toggle(dummyElement, 'class1 class2');
-    expect(dummyElement.classList.contains('class1')).toBe(false);
-    expect(dummyElement.classList.contains('class2')).toBe(false);
+    assert.equal(dummyElement.classList.contains('class1'),false);
+    assert.equal(dummyElement.classList.contains('class2'),false);
   });
 
   it('remove should remove CSS classes from an HTML element', () => {
     set(dummyElement, 'class1 class2');
     remove(dummyElement, 'class1');
-    expect(dummyElement.classList.contains('class1')).toBe(false);
-    expect(dummyElement.classList.contains('class2')).toBe(true);
+    assert.equal(dummyElement.classList.contains('class1'),false);
+    assert.equal(dummyElement.classList.contains('class2'),true);
   });
 
   it('cx should generate CSS classes from a string and an object', () => {
     const classNames = cx('class1', { class2: true, class3: false });
 
-    expect(classNames).toBe('class1 class2');
+    assert.equal(classNames,'class1 class2');
   });
 });

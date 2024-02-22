@@ -1,4 +1,5 @@
-import { describe, it, expect } from 'vitest';
+import assert from 'node:assert/strict';
+import { describe, it } from 'node:test';
 
 import {
   SpacingCSSPropertiesType,
@@ -19,40 +20,52 @@ describe('css', () => {
   it('getNumberValue should parse a string value into an integer', () => {
     const intValue = getNumberValue('42');
 
-    expect(intValue).toBe(42);
+    assert.equal(intValue, 42);
   });
 
   it('normalizeNumberValue should ensure a valid number within [0, 1] or [-1, 0) is normalized to 0', () => {
-    expect(normalizeNumberValue('1.5')).toBe(1.5);
-    expect(normalizeNumberValue(-0.5)).toBe(0);
-    expect(normalizeNumberValue(0.0)).toBe(0.0);
-    expect(normalizeNumberValue(1.0)).toBe(1.0);
+    assert.equal(normalizeNumberValue('1.5'), 1.5);
+    assert.equal(normalizeNumberValue(-0.5), 0);
+    assert.equal(normalizeNumberValue(0.0), 0.0);
+    assert.equal(normalizeNumberValue(1.0), 1.0);
   });
 
   it('getClassNameFromCSSProperty should convert a CSS property name to a class name', () => {
     const className = getClassNameFromCSSProperty('marginTop');
 
-    expect(className).toBe('margin top');
+    assert.equal(className, 'margin top');
   });
 
   it('getSpacing should extract spacing-related properties from a style object', () => {
-    const style = {
+    const style =  {
+      marginBottom: undefined,
+      marginLeft: '20px',
+      marginRight: undefined,
       marginTop: '10px',
-      marginLeft: '20px'
+      paddingBottom: undefined,
+      paddingLeft: undefined,
+      paddingRight: undefined,
+      paddingTop: undefined
     };
-    const spacing = getSpacing(style as SpacingCSSPropertiesType);
+    const spacing = getSpacing(style as unknown as SpacingCSSPropertiesType);
 
-    expect(spacing).toEqual(style);
+    assert.deepEqual(spacing, style);
   });
 
   it('getTypography should extract typography-related properties from a style object', () => {
-    const style = {
+    const style =  {
+      fontFamily: undefined,
       fontSize: '16px',
-      fontWeight: 'bold'
-    };
-    const typography = getTypography(style as TypographyCSSPropertiesType);
+      fontStyle: undefined,
+      fontVariationSettings: undefined,
+      fontWeight: 'bold',
+      letterSpacing: undefined,
+      lineHeight: undefined
 
-    expect(typography).toEqual(style);
+    };
+    const typography = getTypography(style as unknown as TypographyCSSPropertiesType);
+
+    assert.deepEqual(typography, style);
   });
 
   it('pinSpace should retrieve the value of a custom CSS property', () => {
@@ -63,7 +76,7 @@ describe('css', () => {
 
     const value = pinSpace(dummyElement);
 
-    expect(value).toBe(5);
+    assert.equal(value, 5);
     document.body.removeChild(dummyElement);
   });
 
@@ -75,7 +88,7 @@ describe('css', () => {
 
     const value = measureSize(dummyElement);
 
-    expect(value).toBe(15);
+    assert.equal(value, 15);
     document.body.removeChild(dummyElement);
   });
 
@@ -87,7 +100,7 @@ describe('css', () => {
 
     const value = lineWidth(dummyElement);
 
-    expect(value).toBe(3);
+    assert.equal(value, 3);
     document.body.removeChild(dummyElement);
   });
 });

@@ -16,12 +16,5 @@
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "exclude": [
-    "node_modules",
-    "build",
-    "dist",
-    "scripts",
-    "dts",
-    "vitest.config.ts"
-  ]
+  "exclude": ["node_modules", "build", "dist", "scripts", "dts"]
 }

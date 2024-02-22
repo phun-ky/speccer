@@ -1,4 +1,5 @@
-import { describe, it, expect } from 'vitest';
+import assert from 'node:assert/strict';
+import { describe, it } from 'node:test';
 
 import {
   get_horizontal_center_of_els,
@@ -37,7 +38,7 @@ describe('position', () => {
     const stopRect = stopEl.getBoundingClientRect();
     const center = get_horizontal_center_of_els(0, startRect, stopRect);
 
-    expect(center).toBe(0); // Check if it correctly calculates the horizontal center
+    assert.equal(center, 0); // Check if it correctly calculates the horizontal center
   });
 
   it('should calculate the vertical center', () => {
@@ -53,7 +54,7 @@ describe('position', () => {
     const stopRect = stopEl.getBoundingClientRect();
     const center = get_vertical_center_of_els(0, startRect, stopRect);
 
-    expect(center).toBe(0); // Check if it correctly calculates the vertical center
+    assert.equal(center, 0); // Check if it correctly calculates the vertical center
   });
 
   it('should calculate the offset', async () => {
@@ -64,7 +65,7 @@ describe('position', () => {
     // @ts-expect-error object-possibly-null
     const offsetProperties = await offset(targetElement);
 
-    expect(offsetProperties).toEqual({
+    assert.deepEqual(offsetProperties, {
       height: 0,
       width: 0,
       top: 0,
@@ -85,7 +86,7 @@ describe('position', () => {
       targetElement
     );
 
-    expect(offsetProperties).toEqual({
+    assert.deepEqual(offsetProperties, {
       height: 0,
       width: 0,
       top: 0,
@@ -103,21 +104,21 @@ describe('position', () => {
     // @ts-expect-error object-possibly-null
     const recProps = await getRec(sourceElement, targetElement);
 
-    expect(recProps.absolute()).toEqual({
+    assert.deepEqual(recProps.absolute(), {
       height: 0,
       width: 0,
       top: 0,
       left: 0
     });
 
-    expect(recProps.toTop()).toEqual({
+    assert.deepEqual(recProps.toTop(), {
       height: 0,
       width: 0,
       top: 0,
       left: 0
     });
 
-    expect(recProps.fromTop()).toEqual({
+    assert.deepEqual(recProps.fromTop(), {
       height: 0,
       width: 0,
       top: 0,

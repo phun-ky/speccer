@@ -1,4 +1,5 @@
-import { describe, it, expect, beforeEach, afterEach } from 'vitest';
+import assert from 'node:assert/strict';
+import { describe, it, beforeEach, afterEach } from 'node:test';
 
 import { setAttributes, removeAttributes } from '../attributes';
 
@@ -23,14 +24,14 @@ describe('Attribute-related functions', () => {
         'data-value': '123'
       });
 
-      expect(testElement.getAttribute('class')).toBe('active');
-      expect(testElement.getAttribute('data-value')).toBe('123');
+      assert.equal(testElement.getAttribute('class'), 'active');
+      assert.equal(testElement.getAttribute('data-value'), '123');
     });
 
     it('should handle empty input gracefully', () => {
       setAttributes(testElement); // No attributes provided
 
-      expect(testElement.hasAttributes()).toBe(false);
+      assert.equal(testElement.hasAttributes(), false);
     });
   });
 
@@ -44,15 +45,15 @@ describe('Attribute-related functions', () => {
     it('should remove attributes from an HTML element', () => {
       removeAttributes(testElement, ['class', 'data-value']);
 
-      expect(testElement.getAttribute('class')).toBe(null);
-      expect(testElement.getAttribute('data-value')).toBe(null);
+      assert.equal(testElement.getAttribute('class'), null);
+      assert.equal(testElement.getAttribute('data-value'), null);
     });
 
     it('should handle empty input gracefully', () => {
       removeAttributes(testElement); // No attributes provided
 
-      expect(testElement.getAttribute('class')).toBe('active');
-      expect(testElement.getAttribute('data-value')).toBe('123');
+      assert.equal(testElement.getAttribute('class'), 'active');
+      assert.equal(testElement.getAttribute('data-value'), '123');
     });
   });
 });

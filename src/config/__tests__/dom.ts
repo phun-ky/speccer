@@ -1,14 +1,6 @@
-import {
-  describe,
-  it,
-  expect,
-  vi,
-  beforeAll,
-  afterEach,
-  beforeEach
-} from 'vitest';
+import assert from 'node:assert/strict';
+import { describe, it, before, afterEach, beforeEach, mock } from 'node:test';
 
-import { SpeccerFunctionType } from '../../types/speccer';
 import { dom } from '../browser';
 
 describe('dom', () => {
@@ -17,7 +9,7 @@ describe('dom', () => {
   let mockReadySate = 'complete';
   let eventListenerMock;
 
-  beforeAll(() => {
+  before(() => {
     Object.defineProperty(document, 'readyState', {
       get() {
         return mockReadySate;
@@ -26,44 +18,43 @@ describe('dom', () => {
   });
 
   beforeEach(() => {
-    eventListenerMock = vi
-      .fn()
-      .mockImplementation((event, callback) => callback());
+    eventListenerMock = mock.fn((event, callback) => callback());
     document.addEventListener = eventListenerMock;
   });
 
   afterEach(() => {
-    vi.restoreAllMocks();
+    mock.reset();
     document.addEventListener = addEventListener;
   });
 
-  it('should add event listener if document is still loading', () => {
+  it('should add event listener if document is still loading', (context) => {
     mockReadySate = 'loading';
 
-    const speccerMock: SpeccerFunctionType = vi.fn();
+    const speccerMock = context.mock.fn();
 
     dom(speccerMock);
-    expect(eventListenerMock).toHaveBeenCalledTimes(1);
-    expect(eventListenerMock).toHaveBeenCalledWith(
-      'DOMContentLoaded',
-      expect.any(Function)
+    assert.equal(eventListenerMock.mock.calls.length, 1);
+
+    assert.equal(
+      eventListenerMock.mock.calls[0].arguments[0],
+      'DOMContentLoaded'
     );
-    expect(speccerMock).toHaveBeenCalled();
+    assert.equal(speccerMock.mock.calls.length, 1);
 
     mockReadySate = 'complete';
 
-    expect(eventListenerMock).toHaveBeenCalledTimes(1);
-    expect(speccerMock).toHaveBeenCalled();
+    assert.equal(eventListenerMock.mock.calls.length, 1);
+    assert.equal(speccerMock.mock.calls.length, 1);
   });
 
-  it('should execute speccer directly if document is already loaded', () => {
-    const speccerMock: SpeccerFunctionType = vi.fn();
+  it('should execute speccer directly if document is already loaded', (context) => {
+    const speccerMock = context.mock.fn();
 
     mockReadySate = 'complete';
 
     dom(speccerMock);
 
-    expect(eventListenerMock).not.toHaveBeenCalled();
-    expect(speccerMock).toHaveBeenCalled();
+    assert.equal(eventListenerMock.mock.calls.length, 0);
+    assert.equal(speccerMock.mock.calls.length, 1);
   });
 });

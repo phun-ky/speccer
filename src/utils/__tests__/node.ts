@@ -1,4 +1,5 @@
-import { describe, it, expect } from 'vitest';
+import assert from 'node:assert/strict';
+import { describe, it } from 'node:test';
 
 import { after, removeAll } from '../node';
 
@@ -16,7 +17,7 @@ describe('node', () => {
       after(referenceElement, newElement);
 
       // Check if the new element is inserted after the reference element
-      expect(referenceElement.nextSibling).toBe(newElement);
+      assert.deepEqual(referenceElement.nextSibling, newElement);
 
       // Clean up by removing the elements
       document.body.removeChild(referenceElement);
@@ -27,8 +28,8 @@ describe('node', () => {
       const newElement = document.createElement('span');
       const result = after(null, newElement);
 
-      expect(result).toBeUndefined();
-      expect(document.body.contains(newElement)).toBeFalsy();
+      assert.equal(result, undefined);
+      assert.equal(document.body.contains(newElement), false);
     });
   });
 
@@ -49,8 +50,8 @@ describe('node', () => {
       removeAll('.my-class');
 
       // Check if the elements are removed
-      expect(document.body.contains(element1)).toBeFalsy();
-      expect(document.body.contains(element2)).toBeFalsy();
+      assert.equal(document.body.contains(element1), false);
+      assert.equal(document.body.contains(element2), false);
     });
 
     it('should not remove elements with a different class', () => {
@@ -69,8 +70,8 @@ describe('node', () => {
       removeAll('.my-class');
 
       // Check if only elements with 'my-class' are removed
-      expect(document.body.contains(element1)).toBeFalsy();
-      expect(document.body.contains(element2)).toBeTruthy();
+      assert.equal(document.body.contains(element1), false);
+      assert.equal(document.body.contains(element2), true);
 
       // Clean up by removing the remaining element
       document.body.removeChild(element2);

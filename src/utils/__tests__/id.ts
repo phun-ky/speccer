@@ -1,4 +1,5 @@
-import { describe, it, expect } from 'vitest';
+import assert from 'node:assert/strict';
+import { describe, it } from 'node:test';
 
 import { uniqueID } from '../id';
 
@@ -9,14 +10,14 @@ describe('id', () => {
     const id3 = uniqueID();
 
     // Check if the IDs have the correct format (start with an underscore followed by 9 characters)
-    expect(id1).toMatch(/^_[a-z0-9]{9}$/);
-    expect(id2).toMatch(/^_[a-z0-9]{9}$/);
-    expect(id3).toMatch(/^_[a-z0-9]{9}$/);
+    assert.match(id1, /^_[a-z0-9]{9}$/);
+    assert.match(id2, /^_[a-z0-9]{9}$/);
+    assert.match(id3, /^_[a-z0-9]{9}$/);
 
     // Check if the generated IDs are unique
-    expect(id1).not.toEqual(id2);
-    expect(id2).not.toEqual(id3);
-    expect(id1).not.toEqual(id3);
+    assert.ok(id1 !== id2);
+    assert.ok(id2 !== id3);
+    assert.ok(id1 !== id3);
   });
 
   it('should generate different IDs on multiple calls', () => {
@@ -30,6 +31,6 @@ describe('id', () => {
     }
 
     // Check if all generated IDs are unique
-    expect(generatedIDs.size).toBe(1000);
+    assert.equal(generatedIDs.size, 1000);
   });
 });

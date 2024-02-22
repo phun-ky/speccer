@@ -1,25 +1,27 @@
-import { describe, it, expect, vi } from 'vitest';
+import quibble from 'quibble';
+
+import assert from 'node:assert/strict';
+import { describe, it, mock, before} from 'node:test';
 
 import { direction_of_element } from '../direction-of-element';
 
-// Mock the required dependencies
-vi.mock('./angle', () => ({
-  angle: vi.fn(() => 45)
-}));
+before(async () => {
+  await quibble.esm('./angle', {angle: mock.fn(() => 45)});
+  await quibble.esm('./cardinal', {
+    cardinal_direction: mock.fn(() => 'north-west'),
+    cardinal_direction_crude: mock.fn(() => 'east')
+  });
+  await quibble.esm('./get-coords-pair-from-objects', {
+    getCoordsPairFromObjects: mock.fn(() => ({
+      x1: 0,
+      y1: 0,
+      x2: 100,
+      y2: 100
+    }))
+  });
+});
 
-vi.mock('./cardinal', () => ({
-  cardinal_direction: vi.fn(() => 'north-west'),
-  cardinal_direction_crude: vi.fn(() => 'east')
-}));
 
-vi.mock('./get-coords-pair-from-objects', () => ({
-  getCoordsPairFromObjects: vi.fn(() => ({
-    x1: 0,
-    y1: 0,
-    x2: 100,
-    y2: 100
-  }))
-}));
 
 describe('direction-of-element', () => {
   it('should calculate the direction of an element with cardinal directions', async () => {
@@ -30,7 +32,7 @@ describe('direction-of-element', () => {
       stop: stopElement
     });
 
-    expect(direction).toBe('east');
+    assert.equal(direction, 'east');
   });
 
   it('should calculate the direction of an element crudely', async () => {
@@ -42,6 +44,6 @@ describe('direction-of-element', () => {
       crude: true
     });
 
-    expect(direction).toBe('east');
+    assert.equal(direction, 'east');
   });
 });

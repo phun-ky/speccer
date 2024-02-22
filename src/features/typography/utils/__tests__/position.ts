@@ -1,13 +1,21 @@
-import { describe, it, expect, vi } from 'vitest';
+import quibble from 'quibble';
+
+import assert from 'node:assert/strict';
+import { describe, it, mock, before } from 'node:test';
 
 import { SpeccerAreaEnum } from '../../../../types/enums/area';
 import { position } from '../position';
 
-vi.mock('../../../../utils/position', () => ({
-  get_horizontal_center_of_els: vi.fn(() => 0),
-  get_vertical_center_of_els: vi.fn(() => 0),
-  offset: vi.fn(() => Promise.resolve({ left: 0, top: 0 }))
-}));
+before(async () => {
+  await quibble.esm('../../../../utils/position', {
+    get_horizontal_center_of_els: mock.fn(() => 0),
+    get_vertical_center_of_els: mock.fn(() => 0),
+    offset: mock.fn(() => Promise.resolve({ left: 0, top: 0 }))
+  });
+  await quibble.esm('../../../../utils/css', {
+    pinSpace: mock.fn(() => 48)
+  });
+});
 
 describe('position function', () => {
   it('calculates position for speccer element relative to the target element', async () => {
@@ -23,11 +31,6 @@ describe('position function', () => {
     // Add the target and speccer elements to the document body
     document.body.appendChild(targetElement);
     document.body.appendChild(speccerElement);
-
-    // Mock pinSpace function
-    vi.mock('../../../../utils/css', () => ({
-      pinSpace: vi.fn(() => 48) // Replace with the desired mock value
-    }));
 
     // Call the position function with different areas
     const leftPosition = await position(null, targetElement, speccerElement);
@@ -48,10 +51,10 @@ describe('position function', () => {
     );
 
     // Assert the calculated positions based on your logic
-    expect(leftPosition).toEqual({ left: '-48px', top: '0.000px' });
-    expect(rightPosition).toEqual({ left: '48px', top: '0.000px' });
-    expect(topPosition).toEqual({ left: '0.000px', top: '-48px' });
-    expect(bottomPosition).toEqual({ left: '0.000px', top: '48px' });
+    assert.deepEqual(leftPosition, { left: '-48px', top: '0.000px' });
+    assert.deepEqual(rightPosition, { left: '48px', top: '0.000px' });
+    assert.deepEqual(topPosition, { left: '0.000px', top: '-48px' });
+    assert.deepEqual(bottomPosition, { left: '0.000px', top: '48px' });
 
     // Remove the target and speccer elements from the document body
     document.body.removeChild(targetElement);

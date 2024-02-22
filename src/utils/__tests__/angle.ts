@@ -1,4 +1,5 @@
-import { describe, it, expect } from 'vitest';
+import assert from 'node:assert/strict';
+import { describe, it } from 'node:test';
 
 import { angle } from '../angle';
 
@@ -7,20 +8,20 @@ describe('angle', () => {
     const angleValue = angle(0, 0, 3, 4);
 
     // The angle between (0,0) and (3,4) is 53.13 degrees.
-    expect(angleValue).toBeCloseTo(53.13, 2); // Allowing for small floating-point imprecision
+    assert.strictEqual(Math.abs(angleValue - 53.13) < Math.pow(10, -2), true); // Allowing for small floating-point imprecision
   });
 
   it('should normalize negative angles', () => {
     const angleValue = angle(0, 0, -3, -4);
 
     // The angle between (0,0) and (-3,-4) is -126.87 degrees, normalized to 233.13 degrees.
-    expect(angleValue).toBeCloseTo(233.13, 2);
+    assert.strictEqual(Math.abs(angleValue - 233.13) < Math.pow(10, -2), true);
   });
 
   it('should throw a SyntaxError when missing input', () => {
-    expect(() => {
+    assert.throws(() => {
       // @ts-expect-error testing wrong argument type
       angle();
-    }).toThrow(SyntaxError);
+    }, SyntaxError);
   });
 });

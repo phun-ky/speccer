@@ -1,18 +1,19 @@
-import { describe, it, expect, beforeAll, afterAll } from 'vitest';
+import assert from 'node:assert/strict';
+import { describe, it, before, after } from 'node:test';
 
 import { add, get } from '../styles';
 
 describe('add', () => {
   let element;
 
-  beforeAll(() => {
+  before(() => {
     // Create a div element for testing
     element = document.createElement('div');
     element.id = 'my-element';
     document.body.appendChild(element);
   });
 
-  afterAll(() => {
+  after(() => {
     // Clean up: remove the element after testing
     document.body.removeChild(element);
   });
@@ -22,8 +23,8 @@ describe('add', () => {
 
     const computedStyles = getComputedStyle(element);
 
-    expect(computedStyles.color).toBe('rgb(255, 0, 0)');
-    expect(computedStyles.fontSize).toBe('16px');
+    assert.equal(computedStyles.color,'rgb(255, 0, 0)');
+    assert.equal(computedStyles.fontSize,'16px');
   });
 
   it('should apply styles as an array of objects', async () => {
@@ -36,15 +37,15 @@ describe('add', () => {
 
     const computedStyles = getComputedStyle(element);
 
-    expect(computedStyles.color).toBe('rgb(0, 0, 255)');
-    expect(computedStyles.backgroundColor).toBe('rgb(255, 255, 0)');
+    assert.equal(computedStyles.color,'rgb(0, 0, 255)');
+    assert.equal(computedStyles.backgroundColor,'rgb(255, 255, 0)');
   });
 });
 
 describe('get', () => {
   let element;
 
-  beforeAll(() => {
+  before(() => {
     // Create a div element for testing
     element = document.createElement('div');
     element.id = 'my-element';
@@ -52,8 +53,7 @@ describe('get', () => {
     element.style.fontSize = '18px';
     document.body.appendChild(element);
   });
-
-  afterAll(() => {
+  after(() => {
     // Clean up: remove the element after testing
     document.body.removeChild(element);
   });
@@ -61,7 +61,7 @@ describe('get', () => {
   it('should get computed styles', async () => {
     const computedStyles = await get(element);
 
-    expect(computedStyles.color).toBe('rgb(0, 128, 0)');
-    expect(computedStyles.fontSize).toBe('18px');
+    assert.equal(computedStyles.color,'rgb(0, 128, 0)');
+    assert.equal(computedStyles.fontSize,'18px');
   });
 });
