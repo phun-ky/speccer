@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.0.9](https://github.com/phun-ky/speccer/compare/v9.0.8...v9.0.9) (2024-02-22)
+
+
+### Refactoring
+
+* 💡 Replace `vitest` with native `node:test` ([01d3d87](https://github.com/phun-ky/speccer/commit/01d3d876ca5f807e41a519bcc6d7d9af2abb899f))
+
 ## [9.0.8](https://github.com/phun-ky/speccer/compare/v9.0.7...v9.0.8) (2024-02-17)
 
 
