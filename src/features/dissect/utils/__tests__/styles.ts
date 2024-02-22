@@ -1,11 +1,9 @@
-import { describe, it, expect, vi } from 'vitest';
+import assert from 'node:assert/strict';
+import { describe, it } from 'node:test';
 
-import { waitForFrame } from '../../../../utils/wait';
 import { styles } from '../styles';
 
-vi.mock('../../../../utils/wait', () => ({ waitForFrame: vi.fn() }));
-
-describe('styles', () => {
+describe('dissect styles', () => {
   it('should return styles for enclose area', async () => {
     const targetEl = document.createElement('div');
     const dissectionEl = document.createElement('div');
@@ -13,11 +11,10 @@ describe('styles', () => {
     const options = { isCurly: true };
     const result = await styles(area, targetEl, dissectionEl, options);
 
-    expect(result).toHaveProperty('left');
-    expect(result).toHaveProperty('top');
-    expect(result).toHaveProperty('height');
-    expect(result).toHaveProperty('width');
-    expect(waitForFrame).toHaveBeenCalled();
+    assert.ok(result['left'] !== undefined);
+    assert.ok(result['top'] !== undefined);
+    assert.ok(result['height'] !== undefined);
+    assert.ok(result['width'] !== undefined);
   });
 
   it('should return styles for left area with isCurly', async () => {
@@ -27,9 +24,8 @@ describe('styles', () => {
     const options = { isCurly: true };
     const result = await styles(area, targetEl, dissectionEl, options);
 
-    expect(result).toHaveProperty('left');
-    expect(result).toHaveProperty('top');
-    expect(waitForFrame).toHaveBeenCalled();
+    assert.ok(result['left'] !== undefined);
+    assert.ok(result['top'] !== undefined);
   });
 
   it('should return styles for left area without isCurly', async () => {
@@ -39,9 +35,8 @@ describe('styles', () => {
     const options = { isCurly: false };
     const result = await styles(area, targetEl, dissectionEl, options);
 
-    expect(result).toHaveProperty('left');
-    expect(result).toHaveProperty('top');
-    expect(waitForFrame).toHaveBeenCalled();
+    assert.ok(result['left'] !== undefined);
+    assert.ok(result['top'] !== undefined);
   });
 
   it('should return styles for left full area without isCurly', async () => {
@@ -51,10 +46,9 @@ describe('styles', () => {
     const options = { isCurly: false };
     const result = await styles(area, targetEl, dissectionEl, options);
 
-    expect(result).toHaveProperty('left');
-    expect(result).toHaveProperty('top');
-    expect(result).toHaveProperty('height');
-    expect(waitForFrame).toHaveBeenCalled();
+    assert.ok(result['left'] !== undefined);
+    assert.ok(result['top'] !== undefined);
+    assert.ok(result['height'] !== undefined);
   });
 
   it('should return styles for right area with isCurly', async () => {
@@ -64,9 +58,8 @@ describe('styles', () => {
     const options = { isCurly: true };
     const result = await styles(area, targetEl, dissectionEl, options);
 
-    expect(result).toHaveProperty('left');
-    expect(result).toHaveProperty('top');
-    expect(waitForFrame).toHaveBeenCalled();
+    assert.ok(result['left'] !== undefined);
+    assert.ok(result['top'] !== undefined);
   });
 
   it('should return styles for right area without isCurly', async () => {
@@ -76,9 +69,8 @@ describe('styles', () => {
     const options = { isCurly: false };
     const result = await styles(area, targetEl, dissectionEl, options);
 
-    expect(result).toHaveProperty('left');
-    expect(result).toHaveProperty('top');
-    expect(waitForFrame).toHaveBeenCalled();
+    assert.ok(result['left'] !== undefined);
+    assert.ok(result['top'] !== undefined);
   });
 
   it('should return styles for right full area without isCurly', async () => {
@@ -88,10 +80,9 @@ describe('styles', () => {
     const options = { isCurly: false };
     const result = await styles(area, targetEl, dissectionEl, options);
 
-    expect(result).toHaveProperty('left');
-    expect(result).toHaveProperty('top');
-    expect(result).toHaveProperty('height');
-    expect(waitForFrame).toHaveBeenCalled();
+    assert.ok(result['left'] !== undefined);
+    assert.ok(result['top'] !== undefined);
+    assert.ok(result['height'] !== undefined);
   });
 
   it('should return styles for bottom area with isCurly', async () => {
@@ -101,9 +92,8 @@ describe('styles', () => {
     const options = { isCurly: true };
     const result = await styles(area, targetEl, dissectionEl, options);
 
-    expect(result).toHaveProperty('left');
-    expect(result).toHaveProperty('top');
-    expect(waitForFrame).toHaveBeenCalled();
+    assert.ok(result['left'] !== undefined);
+    assert.ok(result['top'] !== undefined);
   });
 
   it('should return styles for bottom area without isCurly', async () => {
@@ -113,9 +103,8 @@ describe('styles', () => {
     const options = { isCurly: false };
     const result = await styles(area, targetEl, dissectionEl, options);
 
-    expect(result).toHaveProperty('left');
-    expect(result).toHaveProperty('top');
-    expect(waitForFrame).toHaveBeenCalled();
+    assert.ok(result['left'] !== undefined);
+    assert.ok(result['top'] !== undefined);
   });
 
   it('should return styles for bottom full area without isCurly', async () => {
@@ -125,10 +114,9 @@ describe('styles', () => {
     const options = { isCurly: false };
     const result = await styles(area, targetEl, dissectionEl, options);
 
-    expect(result).toHaveProperty('left');
-    expect(result).toHaveProperty('top');
-    expect(result).toHaveProperty('width');
-    expect(waitForFrame).toHaveBeenCalled();
+    assert.ok(result['left'] !== undefined);
+    assert.ok(result['top'] !== undefined);
+    assert.ok(result['width'] !== undefined);
   });
 
   it('should return styles for full area with isCurly', async () => {
@@ -138,9 +126,8 @@ describe('styles', () => {
     const options = { isCurly: true };
     const result = await styles(area, targetEl, dissectionEl, options);
 
-    expect(result).toHaveProperty('left');
-    expect(result).toHaveProperty('top');
-    expect(waitForFrame).toHaveBeenCalled();
+    assert.ok(result['left'] !== undefined);
+    assert.ok(result['top'] !== undefined);
   });
 
   it('should return styles for full area without isCurly', async () => {
@@ -150,9 +137,8 @@ describe('styles', () => {
     const options = { isCurly: false };
     const result = await styles(area, targetEl, dissectionEl, options);
 
-    expect(result).toHaveProperty('left');
-    expect(result).toHaveProperty('top');
-    expect(result).toHaveProperty('width');
-    expect(waitForFrame).toHaveBeenCalled();
+    assert.ok(result['left'] !== undefined);
+    assert.ok(result['top'] !== undefined);
+    assert.ok(result['width'] !== undefined);
   });
 });

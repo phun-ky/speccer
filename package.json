@@ -10,9 +10,9 @@
     "access": "public"
   },
   "scripts": {
-    "test": "npx vitest --run --silent",
-    "beforetest-ci": "rm -rf coverage",
-    "test-ci": "npx vitest --run --coverage",
+    "test": "glob -c \"node --import tsx --import global-jsdom/register --test --no-warnings\" \"./src/**/__tests__/**/*.[jt]s\"",
+    "pretest-ci": "rm -rf coverage && mkdir -p coverage",
+    "test-ci": "glob -c \"node --import tsx --import global-jsdom/register --test --no-warnings --experimental-test-coverage --test-reporter=cobertura --test-reporter-destination=coverage/cobertura-coverage.xml --test-reporter=spec --test-reporter-destination=stdout\" \"./src/**/__tests__/**/*.[jt]s\"",
     "rollup": "rollup -c",
     "prerollup:dev": "npm run clean && npm run styles",
     "rollup:dev": "rollup -c -w",
@@ -76,10 +76,10 @@
     "@release-it/conventional-changelog": "^7.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
+    "@testing-library/dom": "^9.3.4",
     "@testing-library/jest-dom": "^6.4.2",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.0.1",
-    "@vitest/coverage-v8": "^1.3.0",
     "cobertura": "^1.0.1",
     "cssnano": "^5.0.4",
     "eslint": "^8.56.0",
@@ -88,8 +88,9 @@
     "eslint-plugin-compat": "^4.2.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-vitest": "^0.3.22",
     "git-cz": "^4.9.0",
+    "glob": "^10.3.10",
+    "global-jsdom": "^24.0.0",
     "jsdom": "^24.0.0",
     "postcss": "^8.3.0",
     "postcss-cli": "^8.3.1",
@@ -104,18 +105,21 @@
     "stylus": "^0.62.0",
     "ts-node": "^10.9.1",
     "tslib": "^2.3.1",
+    "tsx": "^4.7.1",
     "typedoc": "^0.25.8",
     "typedoc-plugin-frontmatter": "^0.0.2",
     "typedoc-plugin-markdown": "^3.17.1",
     "typedoc-plugin-mdn-links": "^3.1.16",
     "typedoc-plugin-no-inherit": "^1.4.0",
     "typedoc-plugin-rename-defaults": "^0.7.0",
-    "typescript": "^5.0.0",
-    "vitest": "^1.3.0"
+    "typescript": "^5.0.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/git-cz"
     }
+  },
+  "dependencies": {
+    "quibble": "^0.9.1"
   }
 }

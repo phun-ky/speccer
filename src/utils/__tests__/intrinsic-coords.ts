@@ -1,4 +1,5 @@
-import { describe, it, expect } from 'vitest';
+import assert from 'node:assert/strict';
+import { describe, it } from 'node:test';
 
 import { intrinsic_coords } from '../intrinsic-coords';
 
@@ -12,8 +13,8 @@ describe('intrinsic-coords', () => {
 
     const coordinates = await intrinsic_coords(element, 'center');
 
-    expect(coordinates.x).toBe(0);
-    expect(coordinates.y).toBe(0);
+    assert.equal(coordinates.x, 0);
+    assert.equal(coordinates.y, 0);
 
     document.body.removeChild(element);
   });
@@ -27,8 +28,8 @@ describe('intrinsic-coords', () => {
 
     const coordinates = await intrinsic_coords(element, 'top-left');
 
-    expect(coordinates.x).toBe(0);
-    expect(coordinates.y).toBe(0);
+    assert.equal(coordinates.x, 0);
+    assert.equal(coordinates.y, 0);
 
     document.body.removeChild(element);
   });
@@ -45,7 +46,8 @@ describe('intrinsic-coords', () => {
     try {
       await intrinsic_coords(element, 'invalid-position');
     } catch (error) {
-      expect(error.message).toBe(
+      assert.equal(
+        error.message,
         'The position given does not match allowed positions to use! Valid positions are: center, left, right, top, bottom, right-top, right-bottom, left-top, left-bottom, top-left, top-right, bottom-left, bottom-right, top-center, right-center, bottom-center, left-center'
       );
     }

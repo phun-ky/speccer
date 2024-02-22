@@ -1,4 +1,5 @@
-import { describe, it, expect } from 'vitest';
+import assert from 'node:assert/strict';
+import { describe, it } from 'node:test';
 
 import { decimal } from '../number';
 
@@ -9,7 +10,7 @@ describe('number', () => {
       const result = decimal(12.3456);
 
       // Check if the result has the default number of decimal places (3)
-      expect(result).toBe('12.346'); // Rounding should be applied
+      assert.equal(result, '12.346'); // Rounding should be applied
     });
 
     it('should convert a number to a string with the specified number of decimal places', () => {
@@ -17,7 +18,7 @@ describe('number', () => {
       const result = decimal(12.3456, 2);
 
       // Check if the result has exactly 2 decimal places
-      expect(result).toBe('12.35'); // Rounding should be applied
+      assert.equal(result, '12.35'); // Rounding should be applied
     });
 
     it('should handle numbers passed as strings', () => {
@@ -25,7 +26,7 @@ describe('number', () => {
       const result = decimal('12.3456', 2);
 
       // Check if the result has exactly 2 decimal places
-      expect(result).toBe('12.35'); // Rounding should be applied
+      assert.equal(result, '12.35'); // Rounding should be applied
     });
 
     it('should handle negative numbers', () => {
@@ -33,7 +34,7 @@ describe('number', () => {
       const result = decimal(-12.3456, 2);
 
       // Check if the result has exactly 2 decimal places and the negative sign
-      expect(result).toBe('-12.35'); // Rounding should be applied
+      assert.equal(result, '-12.35'); // Rounding should be applied
     });
   });
 });

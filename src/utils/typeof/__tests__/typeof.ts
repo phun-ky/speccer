@@ -1,4 +1,5 @@
-import { describe, it, expect } from 'vitest';
+import assert from 'node:assert/strict';
+import { describe, it } from 'node:test';
 
 import {
   isBoolean,
@@ -13,65 +14,65 @@ import {
 
 describe('isString', () => {
   it('should typecheck the given variable correctly', () => {
-    expect(isString('test')).toBe(true);
-    expect(isString(123)).toBe(false);
-    expect(isString(true)).toBe(false);
-    expect(isString(undefined)).toBe(false);
+    assert.equal(isString('test'), true);
+    assert.equal(isString(123), false);
+    assert.equal(isString(true), false);
+    assert.equal(isString(undefined), false);
   });
 });
 describe('isNotString', () => {
   it('should typecheck the given variable correctly', () => {
-    expect(isNotString('test')).toBe(false);
-    expect(isNotString(123)).toBe(true);
-    expect(isNotString(true)).toBe(true);
-    expect(isNotString(undefined)).toBe(true);
+    assert.equal(isNotString('test'), false);
+    assert.equal(isNotString(123), true);
+    assert.equal(isNotString(true), true);
+    assert.equal(isNotString(undefined), true);
   });
 });
 describe('isNumber', () => {
   it('should typecheck the given variable correctly', () => {
-    expect(isNumber(123)).toBe(true);
-    expect(isNumber('test')).toBe(false);
-    expect(isNumber(true)).toBe(false);
-    expect(isNumber(undefined)).toBe(false);
+    assert.equal(isNumber(123), true);
+    assert.equal(isNumber('test'), false);
+    assert.equal(isNumber(true), false);
+    assert.equal(isNumber(undefined), false);
   });
 });
 describe('isNotNumber', () => {
   it('should typecheck the given variable correctly', () => {
-    expect(isNotNumber(123)).toBe(false);
-    expect(isNotNumber('test')).toBe(true);
-    expect(isNotNumber(true)).toBe(true);
-    expect(isNotNumber(undefined)).toBe(true);
+    assert.equal(isNotNumber(123), false);
+    assert.equal(isNotNumber('test'), true);
+    assert.equal(isNotNumber(true), true);
+    assert.equal(isNotNumber(undefined), true);
   });
 });
 describe('isBoolean', () => {
   it('should typecheck the given variable correctly', () => {
-    expect(isBoolean(true)).toBe(true);
-    expect(isBoolean(123)).toBe(false);
-    expect(isBoolean('test')).toBe(false);
-    expect(isBoolean(undefined)).toBe(false);
+    assert.equal(isBoolean(true), true);
+    assert.equal(isBoolean(123), false);
+    assert.equal(isBoolean('test'), false);
+    assert.equal(isBoolean(undefined), false);
   });
 });
 describe('isNotBoolean', () => {
   it('should typecheck the given variable correctly', () => {
-    expect(isNotBoolean(true)).toBe(false);
-    expect(isNotBoolean(123)).toBe(true);
-    expect(isNotBoolean('test')).toBe(true);
-    expect(isNotBoolean(undefined)).toBe(true);
+    assert.equal(isNotBoolean(true), false);
+    assert.equal(isNotBoolean(123), true);
+    assert.equal(isNotBoolean('test'), true);
+    assert.equal(isNotBoolean(undefined), true);
   });
 });
 describe('isUndefined', () => {
   it('should typecheck the given variable correctly', () => {
-    expect(isUndefined(undefined)).toBe(true);
-    expect(isUndefined(123)).toBe(false);
-    expect(isUndefined('test')).toBe(false);
-    expect(isUndefined(true)).toBe(false);
+    assert.equal(isUndefined(undefined), true);
+    assert.equal(isUndefined(123), false);
+    assert.equal(isUndefined('test'), false);
+    assert.equal(isUndefined(true), false);
   });
 });
 describe('isNotUndefined', () => {
   it('should typecheck the given variable correctly', () => {
-    expect(isNotUndefined(undefined)).toBe(false);
-    expect(isNotUndefined(123)).toBe(true);
-    expect(isNotUndefined('test')).toBe(true);
-    expect(isNotUndefined(true)).toBe(true);
+    assert.equal(isNotUndefined(undefined), false);
+    assert.equal(isNotUndefined(123), true);
+    assert.equal(isNotUndefined('test'), true);
+    assert.equal(isNotUndefined(true), true);
   });
 });

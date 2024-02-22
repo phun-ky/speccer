@@ -1,4 +1,5 @@
-import { describe, it, expect } from 'vitest';
+import assert from 'node:assert/strict';
+import { describe, it } from 'node:test';
 
 import { waitFor, waitForFrame } from '../wait';
 
@@ -13,8 +14,8 @@ describe('waitFor', () => {
     const elapsedTime = endTime - startTime;
 
     // Check that the elapsed time is approximately equal to the wait time
-    expect(elapsedTime).toBeGreaterThanOrEqual(waitTime - 20); // Allowing for a 20ms margin of error
-    expect(elapsedTime).toBeLessThanOrEqual(waitTime + 20);
+    assert.ok(elapsedTime >= waitTime - 20); // Allowing for a 20ms margin of error
+    assert.ok(elapsedTime <= waitTime + 20);
   });
 });
 
@@ -28,6 +29,6 @@ describe('waitForFrame', () => {
     const elapsedTime = endTime - startTime;
 
     // Check that the timestamp received is an approximate match to the expected next frame timestamp
-    expect(elapsedTime).toBeLessThan(20); // Assuming 60 frames per second (approximately 16ms per frame)
+    assert.ok(elapsedTime < 20); // Assuming 60 frames per second (approximately 16ms per frame)
   });
 });

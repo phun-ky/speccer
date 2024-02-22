@@ -1,4 +1,5 @@
-import { describe, it, expect } from 'vitest';
+import assert from 'node:assert/strict';
+import { describe, it } from 'node:test';
 
 import { getCoordsPairFromObjects } from '../get-coords-pair-from-objects';
 
@@ -8,7 +9,7 @@ describe('get-coords-pair-from-objects', () => {
     const element2 = document.createElement('div');
     const coordinates = await getCoordsPairFromObjects(element1, element2);
 
-    expect(coordinates).toEqual({ x1: 0, y1: 0, x2: 0, y2: 0 });
+    assert.deepEqual(coordinates, { x1: 0, y1: 0, x2: 0, y2: 0 });
   });
 
   it('should return coordinates for two elements with custom positions', async () => {
@@ -21,7 +22,7 @@ describe('get-coords-pair-from-objects', () => {
       'bottom'
     );
 
-    expect(coordinates).toEqual({ x1: 0, y1: 0, x2: 0, y2: 0 });
+    assert.deepEqual(coordinates, { x1: 0, y1: 0, x2: 0, y2: 0 });
   });
 
   it('should throw an error when no element is given', async () => {
@@ -32,8 +33,9 @@ describe('get-coords-pair-from-objects', () => {
       // @ts-expect-error testing wrong argument type
       await getCoordsPairFromObjects(element1);
     } catch (error) {
-      expect(error).toBeInstanceOf(Error);
-      expect(error.message).toBe('No element given');
+      assert.ok(error instanceof Error);
+
+      assert.equal(error.message, 'No element given');
     }
   });
 });

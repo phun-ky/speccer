@@ -1,4 +1,5 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import assert from 'node:assert/strict';
+import { mock, describe, it, beforeEach, afterEach } from 'node:test';
 
 import { coords } from '../coords';
 import { xy } from '../xy';
@@ -18,25 +19,27 @@ describe('xy', () => {
 
   beforeEach(() => {
     // Mocking the coords module functions
-    vi.spyOn(coords, 'center_x').mockReturnValue(50);
-    vi.spyOn(coords, 'center_y').mockReturnValue(50);
-    vi.spyOn(coords, 'top').mockReturnValue(0);
-    vi.spyOn(coords, 'right').mockReturnValue(100);
-    vi.spyOn(coords, 'bottom').mockReturnValue(100);
-    vi.spyOn(coords, 'left').mockReturnValue(0);
+    mock.method(coords, 'center_x', () => 50);
+    mock.method(coords, 'center_y', () => 50);
+    mock.method(coords, 'top', () => 0);
+    mock.method(coords, 'right', () => 100);
+    mock.method(coords, 'bottom', () => 100);
+    mock.method(coords, 'left', () => 0);
   });
 
   afterEach(() => {
-    vi.clearAllMocks();
+    mock.reset();
   });
 
   describe('center', () => {
     it('should return the center coordinates', () => {
       const result = xy.center(mockRect);
 
-      expect(result).toEqual({ x: 50, y: 50 });
-      expect(coords.center_x).toHaveBeenCalledWith(mockRect);
-      expect(coords.center_y).toHaveBeenCalledWith(mockRect);
+      assert.deepEqual(result,{ x: 50, y: 50 });
+      // @ts-expect-error mock
+      assert.deepEqual(coords.center_x.mock.calls[0].arguments, [mockRect]);
+      // @ts-expect-error mock
+      assert.deepEqual(coords.center_y.mock.calls[0].arguments, [mockRect]);
     });
   });
 
@@ -44,9 +47,11 @@ describe('xy', () => {
     it('should return the top center coordinates', () => {
       const result = xy.top(mockRect);
 
-      expect(result).toEqual({ x: 50, y: 0 });
-      expect(coords.center_x).toHaveBeenCalledWith(mockRect);
-      expect(coords.top).toHaveBeenCalledWith(mockRect);
+      assert.deepEqual(result,{ x: 50, y: 0 });
+      // @ts-expect-error mock
+      assert.deepEqual(coords.center_x.mock.calls[0].arguments, [mockRect]);
+      // @ts-expect-error mock
+      assert.deepEqual(coords.top.mock.calls[0].arguments, [mockRect]);
     });
   });
 
@@ -54,9 +59,11 @@ describe('xy', () => {
     it('should return the right center coordinates', () => {
       const result = xy.right(mockRect);
 
-      expect(result).toEqual({ x: 100, y: 50 });
-      expect(coords.right).toHaveBeenCalledWith(mockRect);
-      expect(coords.center_y).toHaveBeenCalledWith(mockRect);
+      assert.deepEqual(result,{ x: 100, y: 50 });
+      // @ts-expect-error mock
+      assert.deepEqual(coords.right.mock.calls[0].arguments, [mockRect]);
+      // @ts-expect-error mock
+      assert.deepEqual(coords.center_y.mock.calls[0].arguments, [mockRect]);
     });
   });
 
@@ -64,9 +71,11 @@ describe('xy', () => {
     it('should return the bottom center coordinates', () => {
       const result = xy.bottom(mockRect);
 
-      expect(result).toEqual({ x: 50, y: 100 });
-      expect(coords.bottom).toHaveBeenCalledWith(mockRect);
-      expect(coords.center_x).toHaveBeenCalledWith(mockRect);
+      assert.deepEqual(result,{ x: 50, y: 100 });
+      // @ts-expect-error mock
+      assert.deepEqual(coords.bottom.mock.calls[0].arguments, [mockRect]);
+      // @ts-expect-error mock
+      assert.deepEqual(coords.center_x.mock.calls[0].arguments, [mockRect]);
     });
   });
 
@@ -74,9 +83,11 @@ describe('xy', () => {
     it('should return the right bottom coordinates', () => {
       const result = xy['right-bottom'](mockRect);
 
-      expect(result).toEqual({ x: 100, y: 100 });
-      expect(coords.bottom).toHaveBeenCalledWith(mockRect);
-      expect(coords.right).toHaveBeenCalledWith(mockRect);
+      assert.deepEqual(result,{ x: 100, y: 100 });
+      // @ts-expect-error mock
+      assert.deepEqual(coords.bottom.mock.calls[0].arguments, [mockRect]);
+      // @ts-expect-error mock
+      assert.deepEqual(coords.right.mock.calls[0].arguments, [mockRect]);
     });
   });
 
@@ -84,9 +95,11 @@ describe('xy', () => {
     it('should return the left top coordinates', () => {
       const result = xy['left-top'](mockRect);
 
-      expect(result).toEqual({ x: 0, y: 0 });
-      expect(coords.top).toHaveBeenCalledWith(mockRect);
-      expect(coords.left).toHaveBeenCalledWith(mockRect);
+      assert.deepEqual(result,{ x: 0, y: 0 });
+      // @ts-expect-error mock
+      assert.deepEqual(coords.top.mock.calls[0].arguments, [mockRect]);
+      // @ts-expect-error mock
+      assert.deepEqual(coords.left.mock.calls[0].arguments, [mockRect]);
     });
   });
 
@@ -94,9 +107,11 @@ describe('xy', () => {
     it('should return the left bottom coordinates', () => {
       const result = xy['left-bottom'](mockRect);
 
-      expect(result).toEqual({ x: 0, y: 100 });
-      expect(coords.bottom).toHaveBeenCalledWith(mockRect);
-      expect(coords.left).toHaveBeenCalledWith(mockRect);
+      assert.deepEqual(result,{ x: 0, y: 100 });
+      // @ts-expect-error mock
+      assert.deepEqual(coords.bottom.mock.calls[0].arguments, [mockRect]);
+      // @ts-expect-error mock
+      assert.deepEqual(coords.left.mock.calls[0].arguments, [mockRect]);
     });
   });
 
@@ -104,9 +119,11 @@ describe('xy', () => {
     it('should return the top left coordinates', () => {
       const result = xy['top-left'](mockRect);
 
-      expect(result).toEqual({ x: 0, y: 0 });
-      expect(coords.left).toHaveBeenCalledWith(mockRect);
-      expect(coords.top).toHaveBeenCalledWith(mockRect);
+      assert.deepEqual(result,{ x: 0, y: 0 });
+      // @ts-expect-error mock
+      assert.deepEqual(coords.left.mock.calls[0].arguments, [mockRect]);
+      // @ts-expect-error mock
+      assert.deepEqual(coords.top.mock.calls[0].arguments, [mockRect]);
     });
   });
 
@@ -114,9 +131,11 @@ describe('xy', () => {
     it('should return the top right coordinates', () => {
       const result = xy['top-right'](mockRect);
 
-      expect(result).toEqual({ x: 100, y: 0 });
-      expect(coords.right).toHaveBeenCalledWith(mockRect);
-      expect(coords.top).toHaveBeenCalledWith(mockRect);
+      assert.deepEqual(result,{ x: 100, y: 0 });
+      // @ts-expect-error mock
+      assert.deepEqual(coords.right.mock.calls[0].arguments, [mockRect]);
+      // @ts-expect-error mock
+      assert.deepEqual(coords.top.mock.calls[0].arguments, [mockRect]);
     });
   });
 
@@ -124,9 +143,11 @@ describe('xy', () => {
     it('should return the bottom left coordinates', () => {
       const result = xy['bottom-left'](mockRect);
 
-      expect(result).toEqual({ x: 0, y: 100 });
-      expect(coords.left).toHaveBeenCalledWith(mockRect);
-      expect(coords.bottom).toHaveBeenCalledWith(mockRect);
+      assert.deepEqual(result,{ x: 0, y: 100 });
+      // @ts-expect-error mock
+      assert.deepEqual(coords.left.mock.calls[0].arguments, [mockRect]);
+      // @ts-expect-error mock
+      assert.deepEqual(coords.bottom.mock.calls[0].arguments, [mockRect]);
     });
   });
 
@@ -134,9 +155,11 @@ describe('xy', () => {
     it('should return the bottom right coordinates', () => {
       const result = xy['bottom-right'](mockRect);
 
-      expect(result).toEqual({ x: 100, y: 100 });
-      expect(coords.right).toHaveBeenCalledWith(mockRect);
-      expect(coords.bottom).toHaveBeenCalledWith(mockRect);
+      assert.deepEqual(result,{ x: 100, y: 100 });
+      // @ts-expect-error mock
+      assert.deepEqual(coords.right.mock.calls[0].arguments, [mockRect]);
+      // @ts-expect-error mock
+      assert.deepEqual(coords.bottom.mock.calls[0].arguments, [mockRect]);
     });
   });
 
@@ -144,9 +167,11 @@ describe('xy', () => {
     it('should return the top center coordinates', () => {
       const result = xy['top-center'](mockRect);
 
-      expect(result).toEqual({ x: 50, y: 0 });
-      expect(coords.center_x).toHaveBeenCalledWith(mockRect);
-      expect(coords.top).toHaveBeenCalledWith(mockRect);
+      assert.deepEqual(result,{ x: 50, y: 0 });
+      // @ts-expect-error mock
+      assert.deepEqual(coords.center_x.mock.calls[0].arguments, [mockRect]);
+      // @ts-expect-error mock
+      assert.deepEqual(coords.top.mock.calls[0].arguments, [mockRect]);
     });
   });
 
@@ -154,9 +179,11 @@ describe('xy', () => {
     it('should return the right center coordinates', () => {
       const result = xy['right-center'](mockRect);
 
-      expect(result).toEqual({ x: 100, y: 50 });
-      expect(coords.center_y).toHaveBeenCalledWith(mockRect);
-      expect(coords.right).toHaveBeenCalledWith(mockRect);
+      assert.deepEqual(result,{ x: 100, y: 50 });
+      // @ts-expect-error mock
+      assert.deepEqual(coords.center_y.mock.calls[0].arguments, [mockRect]);
+      // @ts-expect-error mock
+      assert.deepEqual(coords.right.mock.calls[0].arguments, [mockRect]);
     });
   });
 
@@ -164,9 +191,11 @@ describe('xy', () => {
     it('should return the bottom center coordinates', () => {
       const result = xy['bottom-center'](mockRect);
 
-      expect(result).toEqual({ x: 50, y: 100 });
-      expect(coords.center_x).toHaveBeenCalledWith(mockRect);
-      expect(coords.bottom).toHaveBeenCalledWith(mockRect);
+      assert.deepEqual(result,{ x: 50, y: 100 });
+      // @ts-expect-error mock
+      assert.deepEqual(coords.center_x.mock.calls[0].arguments, [mockRect]);
+      // @ts-expect-error mock
+      assert.deepEqual(coords.bottom.mock.calls[0].arguments, [mockRect]);
     });
   });
 
@@ -174,9 +203,11 @@ describe('xy', () => {
     it('should return the left center coordinates', () => {
       const result = xy['left-center'](mockRect);
 
-      expect(result).toEqual({ x: 0, y: 50 });
-      expect(coords.center_y).toHaveBeenCalledWith(mockRect);
-      expect(coords.left).toHaveBeenCalledWith(mockRect);
+      assert.deepEqual(result,{ x: 0, y: 50 });
+      // @ts-expect-error mock
+      assert.deepEqual(coords.center_y.mock.calls[0].arguments, [mockRect]);
+      // @ts-expect-error mock
+      assert.deepEqual(coords.left.mock.calls[0].arguments, [mockRect]);
     });
   });
 });
