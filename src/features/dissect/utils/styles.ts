@@ -1,4 +1,5 @@
 import { DissectStylesOptionsType } from '../../../types/bezier';
+import { SpeccerStylesReturnType } from '../../../types/styles';
 import {
   isBottomArea,
   isEncloseArea,
@@ -17,7 +18,7 @@ import { waitForFrame } from '../../../utils/wait';
  * @param {HTMLElement} targetEl - The target element.
  * @param {HTMLElement} dissectionEl - The dissection element.
  * @param {DissectStylesOptionsType} options - Optional styles options.
- * @returns {Promise<{ left: string; top: string; height?: string; width?: string }>} - The computed styles.
+ * @returns {Promise<SpeccerStylesReturnType>} - The computed styles.
  *
  * @example
  * ```ts
@@ -34,7 +35,7 @@ export const styles = async (
   targetEl: HTMLElement,
   dissectionEl: HTMLElement,
   options?: DissectStylesOptionsType
-): Promise<{ left: string; top: string; height?: string; width?: string }> => {
+): Promise<SpeccerStylesReturnType> => {
   await waitForFrame();
 
   const { isCurly = false } = options || {};

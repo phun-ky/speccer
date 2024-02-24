@@ -2,6 +2,7 @@
 /* eslint no-console:0 */
 import './types/interfaces/global';
 import { dom, lazy, manual, activate } from './config/browser';
+import { init as initA11y } from './features/a11y';
 import {
   create as dissectCreate,
   element as dissectElement
@@ -20,6 +21,7 @@ import {
   element as typographyElement
 } from './features/typography';
 import { removeAll } from './utils/node';
+
 
 export const spacing = {
   create: spacingCreate,
@@ -81,6 +83,7 @@ const speccer = () => {
   for (const el of elsToBeDissected) {
     dissectElement(el as HTMLElement);
   }
+  initA11y();
 };
 
 export default speccer;

@@ -23,6 +23,8 @@ $ph-speccer-pin-space = 48px
 $ph-speccer-line-width = 1px
 $ph-speccer-line-width-negative = -1px
 $ph-speccer-measure-size = 8px
+$ph-speccer-a11y-color-bakground = rgb(24, 104, 178)
+$ph-speccer-a11y-landmark-color-background = rgb(126, 96, 197)
 
 
 .ph-speccer.speccer
@@ -51,6 +53,8 @@ $ph-speccer-measure-size = 8px
   --ph-speccer-line-width: $ph-speccer-line-width;
   --ph-speccer-line-width-negative: $ph-speccer-line-width-negative;
   --ph-speccer-measure-size: $ph-speccer-measure-size;
+  --ph-speccer-a11y-color-background: $ph-speccer-a11y-color-bakground;
+  --ph-speccer-a11y-landmark-color-background: $ph-speccer-a11y-landmark-color-background;
 
 
 svg.ph-speccer,
@@ -91,3 +95,4 @@ svg.ph-speccer .ph-speccer.path
 @require './anatomy.styl'
 @require './spacing.styl'
 @require './mark.styl'
+@require '../features/a11y/styles/index.styl'

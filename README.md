@@ -27,6 +27,10 @@
     - [Curly brackets](#curly-brackets)
     - [Element typography](#element-typography)
     - [Mark elements](#mark-elements)
+    - [A11y notation](#a11y-notation)
+      - [Tab stops](#tab-stops)
+      - [Landmarks and regions](#landmarks-and-regions)
+      - [Keys and shortcut](#keys-and-shortcut)
   - [Customization](#customization)
   - [Contributing](#contributing)
 
@@ -313,9 +317,37 @@ In your component examples, use the following attribute.
 <div data-speccer-mark …>…</div>
 ```
 
+### A11y notation
+
+With speccer, you can also display accessibility notation, like [Accessibility Bluelines](https://dribbble.com/shots/6269661-Accessibility-Bluelines?utm_source=Clipboard_Shot&utm_campaign=jeremyelder&utm_content=Accessibility%20Bluelines&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=jeremyelder&utm_content=Accessibility%20Bluelines&utm_medium=Social_Share):
+
+Prior art: [Jeremy Elder](https://twitter.com/JeremyElder)
+
+#### Tab stops
+
+![Screenshot of speccer a11y tab stops in use](./public/a11y-tabstop.png)
+
+If you want to display tab stops, append `data-speccer-a11y-tabstops` as an attribute to the container you want to display the tab stops in.
+
+#### Landmarks and regions
+
+![Screenshot of speccer a11y landmarks in use](./public/a11y-landmark.png)
+
+If you want to display landmarks and regions, append `data-speccer-a11y-landmark` as an attribute to the container you want to display the landmarks and regions in.
+
+#### Keys and shortcut
+
+![Screenshot of speccer a11y shortcuts in use](./public/a11y-shortcut.png)
+
+If you want to display the shortcut with keys used for elements, use `data-speccer-a11y-shortcut="<shortcut>"` on the element that uses this shortcut:
+
+```html
+<button type="button" data-speccer-a11y-shortcut="ctrl + s">Save</button>
+```
+
 ## Customization
 
-![Image of speccer dark mode](./public/darkmode.png)
+![Screenshot of speccer in a dark mode example](./public/darkmode.png)
 
 Allthough the styling works nicely with dark mode, you can use the provided CSS variables to customize the look and feel. If more control is needed, you can use CSS overrides :)
 
