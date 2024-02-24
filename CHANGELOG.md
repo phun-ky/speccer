@@ -1,5 +1,27 @@
 # Changelog
 
+## [9.1.0](https://github.com/phun-ky/speccer/compare/v9.0.13...v9.1.0) (2024-02-24)
+
+
+### Tasks
+
+* 🤖 Adjust dev script ([1479ce4](https://github.com/phun-ky/speccer/commit/1479ce410e3ca4cbb19f6b698493af9d872eae7c))
+
+
+### Feature
+
+* 🎸 Add feature for Accessibility notation ([8f646a6](https://github.com/phun-ky/speccer/commit/8f646a6f062ddf62c614227302b6b1aacf9b9b99)), closes [#16](https://github.com/phun-ky/speccer/issues/16)
+
+
+### Bug
+
+* 🐛 Adjust position for sticky elements and parents ([54979b3](https://github.com/phun-ky/speccer/commit/54979b32e32edda510acc49303d82ca53e95ef0d))
+
+
+### Refactoring
+
+* 💡 Add type for styles return object ([6cc7d40](https://github.com/phun-ky/speccer/commit/6cc7d40966ef58e8098f99d8eaf5d84601b35a7c))
+
 ## [9.0.13](https://github.com/phun-ky/speccer/compare/v9.0.12...v9.0.13) (2024-02-22)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@phun-ky/speccer",
-  "version": "9.0.13",
+  "version": "9.1.0",
   "description": "A script to annotate, show spacing specs and to display typography information in documentation/website on HTML elements",
   "main": "dist/speccer.js",
   "module": "dist/speccer.esm.js",

@@ -6,7 +6,7 @@
 
 ### styles
 
-▸ **styles**(`area`, `targetEl`, `dissectionEl`, `options?`): `Promise`\<\{ `height?`: `string` ; `left`: `string` ; `top`: `string` ; `width?`: `string`  }\>
+▸ **styles**(`area`, `targetEl`, `dissectionEl`, `options?`): `Promise`\<[`SpeccerStylesReturnType`](types_styles.md#speccerstylesreturntype)\>
 
 Get styles for dissected elements based on the specified area and options.
 
@@ -21,7 +21,7 @@ Get styles for dissected elements based on the specified area and options.
 
 #### Returns
 
-`Promise`\<\{ `height?`: `string` ; `left`: `string` ; `top`: `string` ; `width?`: `string`  }\>
+`Promise`\<[`SpeccerStylesReturnType`](types_styles.md#speccerstylesreturntype)\>
 
 - The computed styles.
 
@@ -38,4 +38,4 @@ console.log(styles);
 
 #### Defined in
 
-[features/dissect/utils/styles.ts:32](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/styles.ts#L32)
+[features/dissect/utils/styles.ts:33](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/styles.ts#L33)

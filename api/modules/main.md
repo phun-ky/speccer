@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[main.ts:29](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L29)
+[main.ts:31](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L31)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[main.ts:39](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L39)
+[main.ts:41](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L41)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[main.ts:34](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L34)
+[main.ts:36](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L36)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[main.ts:49](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L49)
+[main.ts:51](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L51)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[main.ts:24](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L24)
+[main.ts:26](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L26)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[main.ts:44](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L44)
+[main.ts:46](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L46)
 
 ## Functions
 
@@ -118,4 +118,4 @@ ___
 
 #### Defined in
 
-[main.ts:56](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L56)
+[main.ts:58](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L58)

@@ -38,7 +38,7 @@ const aboveProps = recProps.toTop();
 
 #### Defined in
 
-[utils/position.ts:130](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L130)
+[utils/position.ts:159](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L159)
 
 ___
 
@@ -71,7 +71,7 @@ const center = get_horizontal_center_of_els(0, startRect, targetRect);
 
 #### Defined in
 
-[utils/position.ts:20](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L20)
+[utils/position.ts:21](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L21)
 
 ___
 
@@ -104,7 +104,7 @@ const center = get_vertical_center_of_els(0, startRect, targetRect);
 
 #### Defined in
 
-[utils/position.ts:40](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L40)
+[utils/position.ts:41](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L41)
 
 ___
 
@@ -135,7 +135,7 @@ const offsetProps = await offset(targetElement);
 
 #### Defined in
 
-[utils/position.ts:58](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L58)
+[utils/position.ts:59](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L59)
 
 ___
 
@@ -167,4 +167,4 @@ const offsetProps = await offsetWithCenter(sourceElement, targetElement);
 
 #### Defined in
 
-[utils/position.ts:88](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L88)
+[utils/position.ts:117](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L117)
