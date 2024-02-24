@@ -37,3 +37,4 @@ export enum MeasureAreaEnum {
   Bottom = 'bottom', // Represents the bottom measurement area
   Top = 'top' // Represents the top measurement area
 }
+
