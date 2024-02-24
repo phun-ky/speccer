@@ -1,6 +1,7 @@
 import { GetRecPropertiesInterface } from '../types/interfaces/position';
 import { PositionPropertiesType, PositionInputType } from '../types/position';
 
+import { getParentThatIsSticky, isSticky } from './style-property';
 import { waitForFrame } from './wait';
 
 /**
@@ -60,9 +61,37 @@ export const offset = async (
 ): Promise<PositionPropertiesType> => {
   await waitForFrame();
 
-  const _target_rect = targetEl.getBoundingClientRect();
-  const _el_offset_top = _target_rect.top + window.scrollY;
+  let _target_rect = targetEl.getBoundingClientRect();
+  let _el_offset_top = _target_rect.top + window.scrollY;
+
   const _el_offset_left = _target_rect.left + window.scrollX;
+  const stickyParentElement = await getParentThatIsSticky(targetEl);
+  const isTargetSticky = await isSticky(targetEl);
+
+  // if node is sticky, we need to account for that
+  if (isTargetSticky) {
+    const originalPosition = targetEl.style.position;
+
+    await waitForFrame();
+    targetEl.style.position = 'relative';
+
+    await waitForFrame();
+    _target_rect = targetEl.getBoundingClientRect();
+    _el_offset_top = _target_rect.top;
+    targetEl.style.position = originalPosition;
+  }
+  // If any of the parents are sticky, we need to account for that
+  else if (stickyParentElement) {
+    const originalPosition = stickyParentElement.style.position;
+
+    await waitForFrame();
+    stickyParentElement.style.position = 'relative';
+
+    await waitForFrame();
+    _target_rect = targetEl.getBoundingClientRect();
+    _el_offset_top = _target_rect.top;
+    stickyParentElement.style.position = originalPosition;
+  }
 
   return {
     height: _target_rect.height,
