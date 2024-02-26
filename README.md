@@ -33,6 +33,7 @@
       - [Keys and shortcut](#keys-and-shortcut)
   - [Customization](#customization)
   - [Contributing](#contributing)
+  - [Sponsor me](#sponsor-me)
 
 ## About
 
@@ -384,3 +385,11 @@ Allthough the styling works nicely with dark mode, you can use the provided CSS 
 ## Contributing
 
 If you want to contribute, please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+
+## Sponsor me
+
+I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+
+The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+
+[Support me with GitHub Sponsors](https://github.com/sponsors/phun-ky).
