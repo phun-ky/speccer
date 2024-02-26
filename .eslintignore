@@ -1,2 +1,4 @@
-speccer.js
-scripts/server.js
+dts
+node_modules
+coverage
+dist
