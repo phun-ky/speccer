@@ -1,5 +1,18 @@
 # Changelog
 
+## [9.1.1](https://github.com/phun-ky/speccer/compare/v9.1.0...v9.1.1) (2024-02-26)
+
+
+### Tasks
+
+* 🤖 Add banner to produced js files ([e9abcdc](https://github.com/phun-ky/speccer/commit/e9abcdc4436319a92675fc986cbb532fc2b7e2ca))
+* 🤖 Ignore dist and dts ([2d09a42](https://github.com/phun-ky/speccer/commit/2d09a42e5f4062c29da18b7133278ced55a9953e))
+
+
+### Documentation
+
+* ✏️ Update `README.md` with info about sponsorship ([0cb49cc](https://github.com/phun-ky/speccer/commit/0cb49ccd761fda51699c8196e888bc5b81999813))
+
 ## [9.1.0](https://github.com/phun-ky/speccer/compare/v9.0.13...v9.1.0) (2024-02-24)
 
 
