@@ -16,5 +16,12 @@
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "exclude": ["node_modules", "build", "dist", "scripts", "dts"]
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "scripts",
+    "dts",
+    "**/__tests__/**"
+  ]
 }
