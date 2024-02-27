@@ -64,7 +64,9 @@
     "html-elements",
     "inspect",
     "spacing",
-    "speccer"
+    "speccer",
+    "a11y",
+    "accessibility"
   ],
   "author": "Alexander Vassbotn Røyne-Helgesen <alexander@phun-ky.net>",
   "license": "MIT",
