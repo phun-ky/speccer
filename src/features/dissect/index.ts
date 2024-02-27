@@ -52,6 +52,8 @@ export const create = (
 /**
  * Create dissected elements based on the section element and its data-anatomy attributes.
  *
+ * ![dissect](https://github.com/phun-ky/speccer/blob/main/public/anatomy.png?raw=true)
+ *
  * @param {HTMLElement} sectionEl - The section element containing dissected elements.
  * @returns {Promise<void>} - A promise that resolves after creating dissected elements.
  *

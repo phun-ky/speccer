@@ -27,6 +27,8 @@ export const create = (n = 'span'): HTMLElement => {
 /**
  * Create a marker element and add it to the body with styles matching a specified element.
  *
+ * ![mark](https://github.com/phun-ky/speccer/blob/main/public/mark.png?raw=true)
+ *
  * @param {HTMLElement} elementToMark - The target element to match styles with.
  * @returns {Promise<void>} - A promise that resolves after creating and styling the marker element.
  *

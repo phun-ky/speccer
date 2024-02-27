@@ -9,6 +9,7 @@
 ▸ **create**(`type?`, `content?`, `n?`): `HTMLElement`
 
 Creates an HTML element based on the specified type.
+*
 
 #### Parameters
 
@@ -27,12 +28,14 @@ The created HTML element.
 **`Example`**
 
 ```ts
-const tabElement = create('tabstops', 'Tab Content', 'div');
+const tabElement = create('tabstops', null, 'div');
+const landmarkElement = create('landmark', 1, 'div');
+const regionElement = create('region', null, 'div');
 ```
 
 #### Defined in
 
-[features/a11y/index.ts:27](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/index.ts#L27)
+[features/a11y/index.ts:29](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/index.ts#L29)
 
 ___
 
@@ -41,6 +44,9 @@ ___
 ▸ **element**(`targetEl`, `content?`, `type`): `Promise`\<`void`\>
 
 Adds an accessibility element to the document body based on the target element and type.
+
+![Screenshot of speccer a11y tab stops in use](https://github.com/phun-ky/speccer/blob/main/public/a11y-tabstop.png?raw=true)
+![Screenshot of speccer a11y landmark in use](https://github.com/phun-ky/speccer/blob/main/public/a11y-landmark.png?raw=true)
 
 #### Parameters
 
@@ -61,13 +67,14 @@ A Promise resolving when the operation is complete.
 ```ts
 const targetElement = document.getElementById('myElement');
 if (targetElement) {
-  await element(targetElement, 'Landmark Content', 'landmark');
+  await element(targetElement, 1, 'landmark');
+  await element(targetElement, null, 'tabstops');
 }
 ```
 
 #### Defined in
 
-[features/a11y/index.ts:66](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/index.ts#L66)
+[features/a11y/index.ts:72](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/index.ts#L72)
 
 ___
 
@@ -89,7 +96,7 @@ init();
 
 #### Defined in
 
-[features/a11y/index.ts:159](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/index.ts#L159)
+[features/a11y/index.ts:167](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/index.ts#L167)
 
 ___
 
@@ -98,6 +105,8 @@ ___
 ▸ **shortcut**(`el`, `shortcutString`): `Promise`\<`void`\>
 
 Adds a shortcut element to the document body based on the provided HTML element and shortcut string.
+
+![Screenshot of speccer a11y shortcuts in use](https://github.com/phun-ky/speccer/blob/main/public/a11y-shortcut.png?raw=true)
 
 #### Parameters
 
@@ -123,4 +132,4 @@ if (shortcutElement) {
 
 #### Defined in
 
-[features/a11y/index.ts:107](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/index.ts#L107)
+[features/a11y/index.ts:115](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/index.ts#L115)
