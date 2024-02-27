@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.3](https://github.com/phun-ky/speccer/compare/v9.1.2...v9.1.3) (2024-02-27)
+
+
+### Documentation
+
+* ✏️ Add images to docs ([e5b7cbd](https://github.com/phun-ky/speccer/commit/e5b7cbd5dac4bab28186eb1e4073ec30db01eea8))
+
 ## [9.1.2](https://github.com/phun-ky/speccer/compare/v9.1.1...v9.1.2) (2024-02-27)
 
 
