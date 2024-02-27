@@ -38,6 +38,8 @@ export const create = (html: string, area: string | null): HTMLElement => {
 /**
  * Create a specced typography element for a given target element.
  *
+ * ![typography](https://github.com/phun-ky/speccer/blob/main/public/typography.png?raw=true)
+ *
  * @param {HTMLElement} targetEl - The target element to specc typography for.
  * @returns {Promise<void>} - A promise that resolves once typography element is created and positioned.
  *

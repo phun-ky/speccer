@@ -13,7 +13,7 @@ import { styles } from './utils/styles';
 
 /**
  * Creates an HTML element based on the specified type.
- *
+ * *
  * @param {string} [type='tabstops'] - Type of element ('tabstops', 'landmark', 'region').
  * @param {unknown} [content] - Content to be added to the element.
  * @param {string} [n='span'] - HTML tag name (default is 'span').
@@ -21,7 +21,9 @@ import { styles } from './utils/styles';
  *
  * @example
  * ```ts
- * const tabElement = create('tabstops', 'Tab Content', 'div');
+ * const tabElement = create('tabstops', null, 'div');
+ * const landmarkElement = create('landmark', 1, 'div');
+ * const regionElement = create('region', null, 'div');
  * ```
  */
 export const create = (
@@ -50,6 +52,9 @@ export const create = (
 /**
  * Adds an accessibility element to the document body based on the target element and type.
  *
+ * ![Screenshot of speccer a11y tab stops in use](https://github.com/phun-ky/speccer/blob/main/public/a11y-tabstop.png?raw=true)
+ * ![Screenshot of speccer a11y landmark in use](https://github.com/phun-ky/speccer/blob/main/public/a11y-landmark.png?raw=true)
+ *
  * @param {HTMLElement} targetEl - Target HTML element.
  * @param {unknown} [content] - Content to be added to the accessibility element.
  * @param {string} type - Type of accessibility element ('tabstops' or 'landmark').
@@ -59,7 +64,8 @@ export const create = (
  * ```ts
  * const targetElement = document.getElementById('myElement');
  * if (targetElement) {
- *   await element(targetElement, 'Landmark Content', 'landmark');
+ *   await element(targetElement, 1, 'landmark');
+ *   await element(targetElement, null, 'tabstops');
  * }
  * ```
  */
@@ -91,6 +97,8 @@ export const element = async (
 
 /**
  * Adds a shortcut element to the document body based on the provided HTML element and shortcut string.
+ *
+ * ![Screenshot of speccer a11y shortcuts in use](https://github.com/phun-ky/speccer/blob/main/public/a11y-shortcut.png?raw=true)
  *
  * @param {HTMLElement} el - Target HTML element.
  * @param {string} shortcutString - Shortcut string to be displayed.

@@ -41,6 +41,8 @@ ___
 
 Create a marker element and add it to the body with styles matching a specified element.
 
+![mark](https://github.com/phun-ky/speccer/blob/main/public/mark.png?raw=true)
+
 #### Parameters
 
 | Name | Type | Description |
@@ -62,4 +64,4 @@ element(elementToMark);
 
 #### Defined in
 
-[features/mark/index.ts:39](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L39)
+[features/mark/index.ts:41](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L41)

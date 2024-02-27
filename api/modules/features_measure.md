@@ -43,6 +43,8 @@ ___
 
 Create a measurement element and add it to the body with styles matching a specified target element.
 
+![measure](https://github.com/phun-ky/speccer/blob/main/public/measure.png?raw=true)
+
 #### Parameters
 
 | Name | Type | Description |
@@ -64,4 +66,4 @@ element(targetElement);
 
 #### Defined in
 
-[features/measure/index.ts:55](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L55)
+[features/measure/index.ts:57](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L57)
