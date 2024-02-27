@@ -1,5 +1,17 @@
 # Changelog
 
+## [9.1.2](https://github.com/phun-ky/speccer/compare/v9.1.1...v9.1.2) (2024-02-27)
+
+
+### Tasks
+
+* 🤖 Add more tags ([79d6d0f](https://github.com/phun-ky/speccer/commit/79d6d0fced0784b68d8c3b404718de91c81845c1))
+
+
+### Documentation
+
+* ✏️ Update docs ([c5c2480](https://github.com/phun-ky/speccer/commit/c5c248094a8e663b61829e7e3220343534aff299))
+
 ## [9.1.1](https://github.com/phun-ky/speccer/compare/v9.1.0...v9.1.1) (2024-02-26)
 
 
