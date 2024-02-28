@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.6](https://github.com/phun-ky/speccer/compare/v9.1.5...v9.1.6) (2024-02-28)
+
+
+### Tasks
+
+* 🤖 bump cssnano from 6.0.3 to 6.0.5 ([f41e732](https://github.com/phun-ky/speccer/commit/f41e732d7aea9f4033f009de9ef25b39f37aca16))
+
 ## [9.1.5](https://github.com/phun-ky/speccer/compare/v9.1.4...v9.1.5) (2024-02-28)
 
 
