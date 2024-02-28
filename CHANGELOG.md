@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.5](https://github.com/phun-ky/speccer/compare/v9.1.4...v9.1.5) (2024-02-28)
+
+
+### Tasks
+
+* 🤖 bump typedoc from 0.25.8 to 0.25.9 ([26b54bd](https://github.com/phun-ky/speccer/commit/26b54bdcd8c7a402467d50d7c84f37d0c73a4e20))
+
 ## [9.1.4](https://github.com/phun-ky/speccer/compare/v9.1.3...v9.1.4) (2024-02-28)
 
 
