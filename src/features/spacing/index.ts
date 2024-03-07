@@ -39,6 +39,8 @@ export const create = (
 /**
  * Create and position spacing elements based on the target element's computed spacing styles.
  *
+ * ![spacing](https://github.com/phun-ky/speccer/blob/main/public/spacing.png?raw=true)
+ *
  * @param {HTMLElement} targetEl - The target element to create spacing elements for.
  * @returns {Promise<void>} - A promise that resolves after creating and positioning the spacing elements.
  *

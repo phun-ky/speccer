@@ -43,6 +43,8 @@ export const create = (
 /**
  * Create a measurement element and add it to the body with styles matching a specified target element.
  *
+ * ![measure](https://github.com/phun-ky/speccer/blob/main/public/measure.png?raw=true)
+ *
  * @param {HTMLElement} targetEl - The target element to match styles with.
  * @returns {Promise<void>} - A promise that resolves after creating and styling the measurement element.
  *

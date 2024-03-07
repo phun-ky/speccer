@@ -42,6 +42,8 @@ ___
 
 Create and position spacing elements based on the target element's computed spacing styles.
 
+![spacing](https://github.com/phun-ky/speccer/blob/main/public/spacing.png?raw=true)
+
 #### Parameters
 
 | Name | Type | Description |
@@ -63,4 +65,4 @@ element(targetElement);
 
 #### Defined in
 
-[features/spacing/index.ts:51](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L51)
+[features/spacing/index.ts:53](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L53)

@@ -44,6 +44,8 @@ ___
 
 Create a specced typography element for a given target element.
 
+![typography](https://github.com/phun-ky/speccer/blob/main/public/typography.png?raw=true)
+
 #### Parameters
 
 | Name | Type | Description |
@@ -67,4 +69,4 @@ if (targetElement) {
 
 #### Defined in
 
-[features/typography/index.ts:52](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L52)
+[features/typography/index.ts:54](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L54)

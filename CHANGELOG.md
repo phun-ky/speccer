@@ -1,5 +1,33 @@
 # Changelog
 
+## [9.1.6](https://github.com/phun-ky/speccer/compare/v9.1.5...v9.1.6) (2024-02-28)
+
+
+### Tasks
+
+* 🤖 bump cssnano from 6.0.3 to 6.0.5 ([f41e732](https://github.com/phun-ky/speccer/commit/f41e732d7aea9f4033f009de9ef25b39f37aca16))
+
+## [9.1.5](https://github.com/phun-ky/speccer/compare/v9.1.4...v9.1.5) (2024-02-28)
+
+
+### Tasks
+
+* 🤖 bump typedoc from 0.25.8 to 0.25.9 ([26b54bd](https://github.com/phun-ky/speccer/commit/26b54bdcd8c7a402467d50d7c84f37d0c73a4e20))
+
+## [9.1.4](https://github.com/phun-ky/speccer/compare/v9.1.3...v9.1.4) (2024-02-28)
+
+
+### Tasks
+
+* 🤖 bump typedoc-plugin-mdn-links from 3.1.16 to 3.1.17 ([9907bde](https://github.com/phun-ky/speccer/commit/9907bde656bef204660e8e2e49fd088b2b20b34c))
+
+## [9.1.3](https://github.com/phun-ky/speccer/compare/v9.1.2...v9.1.3) (2024-02-27)
+
+
+### Documentation
+
+* ✏️ Add images to docs ([e5b7cbd](https://github.com/phun-ky/speccer/commit/e5b7cbd5dac4bab28186eb1e4073ec30db01eea8))
+
 ## [9.1.2](https://github.com/phun-ky/speccer/compare/v9.1.1...v9.1.2) (2024-02-27)
 
 
