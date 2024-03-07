@@ -5,6 +5,7 @@
   "main": "dist/speccer.js",
   "module": "dist/speccer.esm.js",
   "types": "dist/speccer.d.ts",
+  "funding": "https://github.com/phun-ky/speccer?sponsor=1",
   "type": "module",
   "publishConfig": {
     "access": "public"
