@@ -14,15 +14,9 @@ Interface for functions that calculate position properties based on input.
 
 Calculates absolute position properties.
 
-**`Param`**
-
-Optional position input.
-
 #### Type declaration
 
 ▸ (`inp?`): [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Calculates absolute position properties.
 
 ##### Parameters
 
@@ -33,8 +27,6 @@ Calculates absolute position properties.
 ##### Returns
 
 [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Position properties.
 
 #### Defined in
 
@@ -48,15 +40,9 @@ ___
 
 Calculates position properties for moving from the bottom.
 
-**`Param`**
-
-Optional position input.
-
 #### Type declaration
 
 ▸ (`inp?`): [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Calculates position properties for moving from the bottom.
 
 ##### Parameters
 
@@ -67,8 +53,6 @@ Calculates position properties for moving from the bottom.
 ##### Returns
 
 [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Position properties.
 
 #### Defined in
 
@@ -82,15 +66,9 @@ ___
 
 Calculates position properties for moving from the left.
 
-**`Param`**
-
-Optional position input.
-
 #### Type declaration
 
 ▸ (`inp?`): [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Calculates position properties for moving from the left.
 
 ##### Parameters
 
@@ -101,8 +79,6 @@ Calculates position properties for moving from the left.
 ##### Returns
 
 [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Position properties.
 
 #### Defined in
 
@@ -116,15 +92,9 @@ ___
 
 Calculates position properties for moving from the right.
 
-**`Param`**
-
-Optional position input.
-
 #### Type declaration
 
 ▸ (`inp?`): [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Calculates position properties for moving from the right.
 
 ##### Parameters
 
@@ -135,8 +105,6 @@ Calculates position properties for moving from the right.
 ##### Returns
 
 [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Position properties.
 
 #### Defined in
 
@@ -150,15 +118,9 @@ ___
 
 Calculates position properties for moving from the top.
 
-**`Param`**
-
-Optional position input.
-
 #### Type declaration
 
 ▸ (`inp?`): [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Calculates position properties for moving from the top.
 
 ##### Parameters
 
@@ -169,8 +131,6 @@ Calculates position properties for moving from the top.
 ##### Returns
 
 [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Position properties.
 
 #### Defined in
 
@@ -184,15 +144,9 @@ ___
 
 Calculates position properties for moving to the bottom.
 
-**`Param`**
-
-Optional position input.
-
 #### Type declaration
 
 ▸ (`inp?`): [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Calculates position properties for moving to the bottom.
 
 ##### Parameters
 
@@ -203,8 +157,6 @@ Calculates position properties for moving to the bottom.
 ##### Returns
 
 [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Position properties.
 
 #### Defined in
 
@@ -218,15 +170,9 @@ ___
 
 Calculates position properties for moving to the left.
 
-**`Param`**
-
-Optional position input.
-
 #### Type declaration
 
 ▸ (`inp?`): [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Calculates position properties for moving to the left.
 
 ##### Parameters
 
@@ -237,8 +183,6 @@ Calculates position properties for moving to the left.
 ##### Returns
 
 [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Position properties.
 
 #### Defined in
 
@@ -252,15 +196,9 @@ ___
 
 Calculates position properties for moving to the right.
 
-**`Param`**
-
-Optional position input.
-
 #### Type declaration
 
 ▸ (`inp?`): [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Calculates position properties for moving to the right.
 
 ##### Parameters
 
@@ -271,8 +209,6 @@ Calculates position properties for moving to the right.
 ##### Returns
 
 [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Position properties.
 
 #### Defined in
 
@@ -286,15 +222,9 @@ ___
 
 Calculates position properties for moving to the top.
 
-**`Param`**
-
-Optional position input.
-
 #### Type declaration
 
 ▸ (`inp?`): [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Calculates position properties for moving to the top.
 
 ##### Parameters
 
@@ -305,8 +235,6 @@ Calculates position properties for moving to the top.
 ##### Returns
 
 [`PositionPropertiesType`](../modules/types_position.md#positionpropertiestype)
-
-Position properties.
 
 #### Defined in
 

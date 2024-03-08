@@ -1,5 +1,18 @@
 # Changelog
 
+## [9.1.7](https://github.com/phun-ky/speccer/compare/v9.1.6...v9.1.7) (2024-03-08)
+
+
+### Tasks
+
+* 🤖 Add funding ([bd49f97](https://github.com/phun-ky/speccer/commit/bd49f97b5d17c5503f92c97bec431c96790274ff))
+* 🤖 reinstall ([ca1002e](https://github.com/phun-ky/speccer/commit/ca1002ec24d482f10eb97cda03687bc98d0e57e3))
+
+
+### Documentation
+
+* ✏️ fix typo ([11fd1e7](https://github.com/phun-ky/speccer/commit/11fd1e7892811454d12743cf209d32399c90de99))
+
 ## [9.1.6](https://github.com/phun-ky/speccer/compare/v9.1.5...v9.1.6) (2024-02-28)
 
 

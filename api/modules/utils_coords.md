@@ -14,12 +14,12 @@ A set of functions to retrieve specific coordinates from a DOMRect.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `bottom` | (`rect`: `DOMRect`) => `number` | Get the bottom coordinate of a DOMRect. **`Example`** ```ts const rect = element.getBoundingClientRect(); const bottomCoordinate = coords.bottom(rect); ``` |
-| `center_x` | (`rect`: `DOMRect`) => `number` | Get the x-coordinate of the center of a DOMRect. **`Example`** ```ts const rect = element.getBoundingClientRect(); const centerXCoordinate = coords.center_x(rect); ``` |
-| `center_y` | (`rect`: `DOMRect`) => `number` | Get the y-coordinate of the center of a DOMRect. **`Example`** ```ts const rect = element.getBoundingClientRect(); const centerYCoordinate = coords.center_y(rect); ``` |
-| `left` | (`rect`: `DOMRect`) => `number` | Get the left coordinate of a DOMRect. **`Example`** ```ts const rect = element.getBoundingClientRect(); const leftCoordinate = coords.left(rect); ``` |
-| `right` | (`rect`: `DOMRect`) => `number` | Get the right coordinate of a DOMRect. **`Example`** ```ts const rect = element.getBoundingClientRect(); const rightCoordinate = coords.right(rect); ``` |
-| `top` | (`rect`: `DOMRect`) => `number` | Get the top coordinate of a DOMRect. **`Example`** ```ts const rect = element.getBoundingClientRect(); const topCoordinate = coords.top(rect); ``` |
+| `bottom` | (`rect`: `DOMRect`) => `number` | - |
+| `center_x` | (`rect`: `DOMRect`) => `number` | - |
+| `center_y` | (`rect`: `DOMRect`) => `number` | - |
+| `left` | (`rect`: `DOMRect`) => `number` | - |
+| `right` | (`rect`: `DOMRect`) => `number` | - |
+| `top` | (`rect`: `DOMRect`) => `number` | - |
 
 #### Defined in
 
