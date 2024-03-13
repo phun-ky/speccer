@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.9](https://github.com/phun-ky/speccer/compare/v9.1.8...v9.1.9) (2024-03-13)
+
+
+### Tasks
+
+* 🤖 bump stylus from 0.62.0 to 0.63.0 ([6f57bb5](https://github.com/phun-ky/speccer/commit/6f57bb56e46eaf0e6cea8e9c7edf2cffc6834def))
+
 ## [9.1.8](https://github.com/phun-ky/speccer/compare/v9.1.7...v9.1.8) (2024-03-08)
 
 ## [9.1.7](https://github.com/phun-ky/speccer/compare/v9.1.6...v9.1.7) (2024-03-08)
