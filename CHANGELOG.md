@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.12](https://github.com/phun-ky/speccer/compare/v9.1.11...v9.1.12) (2024-03-19)
+
+
+### Tasks
+
+* 🤖 bump typescript from 5.3.3 to 5.4.2 ([ab466f9](https://github.com/phun-ky/speccer/commit/ab466f9253c59a051dd41630568ab9059b179ee4))
+
 ## [9.1.11](https://github.com/phun-ky/speccer/compare/v9.1.10...v9.1.11) (2024-03-19)
 
 
