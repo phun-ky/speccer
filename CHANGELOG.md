@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.17](https://github.com/phun-ky/speccer/compare/v9.1.16...v9.1.17) (2024-04-04)
+
+
+### Tasks
+
+* 🤖 bump quibble from 0.9.1 to 0.9.2 ([2e33cfc](https://github.com/phun-ky/speccer/commit/2e33cfc8068a9ede8ef8359af0948e17b01fc2ae))
+
 ## [9.1.16](https://github.com/phun-ky/speccer/compare/v9.1.15...v9.1.16) (2024-04-02)
 
 
