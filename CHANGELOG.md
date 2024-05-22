@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.21](https://github.com/phun-ky/speccer/compare/v9.1.20...v9.1.21) (2024-05-22)
+
+
+### Tasks
+
+* 🤖 bump putout from 35.7.5 to 35.18.0 ([1f198e4](https://github.com/phun-ky/speccer/commit/1f198e4fdb5af9530a607aa34391a709ccea00a4))
+
 ## [9.1.20](https://github.com/phun-ky/speccer/compare/v9.1.19...v9.1.20) (2024-05-22)
 
 
