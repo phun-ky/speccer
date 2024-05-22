@@ -1,5 +1,33 @@
 # Changelog
 
+## [9.1.22](https://github.com/phun-ky/speccer/compare/v9.1.21...v9.1.22) (2024-05-22)
+
+
+### Tasks
+
+* 🤖 bump typedoc-plugin-mdn-links from 3.1.18 to 3.1.23 ([f50923f](https://github.com/phun-ky/speccer/commit/f50923f7428ec57071ceb97a16b20548670942c5))
+
+## [9.1.21](https://github.com/phun-ky/speccer/compare/v9.1.20...v9.1.21) (2024-05-22)
+
+
+### Tasks
+
+* 🤖 bump putout from 35.7.5 to 35.18.0 ([1f198e4](https://github.com/phun-ky/speccer/commit/1f198e4fdb5af9530a607aa34391a709ccea00a4))
+
+## [9.1.20](https://github.com/phun-ky/speccer/compare/v9.1.19...v9.1.20) (2024-05-22)
+
+
+### Tasks
+
+* 🤖 bump glob from 10.3.10 to 10.3.15 ([efb37f9](https://github.com/phun-ky/speccer/commit/efb37f9f6a663d5f3773c9908cd4f19944ff7ae0))
+
+## [9.1.19](https://github.com/phun-ky/speccer/compare/v9.1.18...v9.1.19) (2024-05-02)
+
+
+### Tasks
+
+* 🤖 bump typescript from 5.4.3 to 5.4.5 ([e3d7bc2](https://github.com/phun-ky/speccer/commit/e3d7bc2daa67187f2cd4d2f4e584036151829b1c))
+
 ## [9.1.18](https://github.com/phun-ky/speccer/compare/v9.1.17...v9.1.18) (2024-04-23)
 
 
