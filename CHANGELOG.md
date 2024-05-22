@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.23](https://github.com/phun-ky/speccer/compare/v9.1.22...v9.1.23) (2024-05-22)
+
+
+### Tasks
+
+* 🤖 bump tsx from 4.7.2 to 4.7.3 ([3eff480](https://github.com/phun-ky/speccer/commit/3eff480a4110a66b52f59c7764e48f5e4626ab2c))
+
 ## [9.1.22](https://github.com/phun-ky/speccer/compare/v9.1.21...v9.1.22) (2024-05-22)
 
 
