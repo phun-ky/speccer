@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.20](https://github.com/phun-ky/speccer/compare/v9.1.19...v9.1.20) (2024-05-22)
+
+
+### Tasks
+
+* 🤖 bump glob from 10.3.10 to 10.3.15 ([efb37f9](https://github.com/phun-ky/speccer/commit/efb37f9f6a663d5f3773c9908cd4f19944ff7ae0))
+
 ## [9.1.19](https://github.com/phun-ky/speccer/compare/v9.1.18...v9.1.19) (2024-05-02)
 
 
