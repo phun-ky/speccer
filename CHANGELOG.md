@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.24](https://github.com/phun-ky/speccer/compare/v9.1.23...v9.1.24) (2024-05-22)
+
+
+### Tasks
+
+* 🤖 bump postcss from 8.4.35 to 8.4.38 ([e2fa0c5](https://github.com/phun-ky/speccer/commit/e2fa0c50d4a0a4e2c1ae0740e4b637846b2deedb))
+
 ## [9.1.23](https://github.com/phun-ky/speccer/compare/v9.1.22...v9.1.23) (2024-05-22)
 
 
