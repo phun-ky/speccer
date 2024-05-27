@@ -112,7 +112,7 @@
     "tsx": "^4.7.1",
     "typedoc": "^0.25.8",
     "typedoc-plugin-frontmatter": "^0.0.2",
-    "typedoc-plugin-markdown": "^3.17.1",
+    "typedoc-plugin-markdown": "^4.0.3",
     "typedoc-plugin-mdn-links": "^3.1.16",
     "typedoc-plugin-no-inherit": "^1.4.0",
     "typedoc-plugin-rename-defaults": "^0.7.0",
