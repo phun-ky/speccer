@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.27](https://github.com/phun-ky/speccer/compare/v9.1.26...v9.1.27) (2024-06-17)
+
+
+### Tasks
+
+* 🤖 bump release-it from 17.1.1 to 17.3.0 ([79aec9f](https://github.com/phun-ky/speccer/commit/79aec9f811fa121816e1e67eb13d71d7ef2aef83))
+
 ## [9.1.26](https://github.com/phun-ky/speccer/compare/v9.1.25...v9.1.26) (2024-06-07)
 
 
