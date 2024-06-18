@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.29](https://github.com/phun-ky/speccer/compare/v9.1.28...v9.1.29) (2024-06-18)
+
+
+### Tasks
+
+* 🤖 add auto labelling for projects ([25c1d1d](https://github.com/phun-ky/speccer/commit/25c1d1dd77c1fc0cd77ec47ba3600fb5adfa7571))
+
 ## [9.1.28](https://github.com/phun-ky/speccer/compare/v9.1.27...v9.1.28) (2024-06-18)
 
 
