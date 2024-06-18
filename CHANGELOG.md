@@ -1,5 +1,13 @@
 # Changelog
 
+## [9.1.30](https://github.com/phun-ky/speccer/compare/v9.1.29...v9.1.30) (2024-06-18)
+
+
+### Tasks
+
+* 🤖 bump ws from 8.16.0 to 8.17.1 ([8ca62ef](https://github.com/phun-ky/speccer/commit/8ca62efef1ce573dae7ac5c072208792b814dd10))
+* 🤖 remove project auto labeller, only works with classic ([a25df9e](https://github.com/phun-ky/speccer/commit/a25df9e96dbf160f5c8104449d6d3840d84835cc))
+
 ## [9.1.29](https://github.com/phun-ky/speccer/compare/v9.1.28...v9.1.29) (2024-06-18)
 
 
