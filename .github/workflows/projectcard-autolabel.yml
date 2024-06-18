@@ -1,0 +1,16 @@
+name: ProjectCard Auto Labels
+
+on:
+  project_card:
+    types: [moved]
+
+jobs:
+  projectcardautolabel_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run ProjectCard AutoLabel
+      id: runprojectcardautolabel
+      uses: Matticusau/projectcard-autolabel@v1.0.0
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        autolabel-config: '[{"column":"Backlog", "add_labels":["🚑 triage"]},{"column":"Backlog", "remove_labels":["🚑 triage"]},{"column":"In progress", "add_labels":["pending: in progress"]},{"column":"In review", "remove_labels":["pending: in progress"]}]'
