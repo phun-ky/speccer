@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.28](https://github.com/phun-ky/speccer/compare/v9.1.27...v9.1.28) (2024-06-18)
+
+
+### Tasks
+
+* 🤖 Add triage label to opened and reopened issues ([b1f1ecf](https://github.com/phun-ky/speccer/commit/b1f1ecf29bbea824f991251bec244acf7a4c2b33))
+
 ## [9.1.27](https://github.com/phun-ky/speccer/compare/v9.1.26...v9.1.27) (2024-06-17)
 
 
