@@ -1,5 +1,26 @@
 # Changelog
 
+## [9.1.33](https://github.com/phun-ky/speccer/compare/v9.1.32...v9.1.33) (2024-07-22)
+
+
+### Tasks
+
+* 🤖 bump prettier from 3.2.5 to 3.3.3 ([516a02f](https://github.com/phun-ky/speccer/commit/516a02fb4c89f7ae686d4bb0e4de567a6770269e))
+
+## [9.1.32](https://github.com/phun-ky/speccer/compare/v9.1.31...v9.1.32) (2024-07-22)
+
+
+### Tasks
+
+* 🤖 bump rollup from 4.13.0 to 4.19.0 ([655685e](https://github.com/phun-ky/speccer/commit/655685e6bf1943bd638fb095044ecf4d86eec6cb))
+
+## [9.1.31](https://github.com/phun-ky/speccer/compare/v9.1.30...v9.1.31) (2024-07-22)
+
+
+### Tasks
+
+* 🤖 bump putout from 35.18.0 to 35.37.1 ([df47c67](https://github.com/phun-ky/speccer/commit/df47c674a7ed7b08cf2c52534f9cd9c19dae62b0))
+
 ## [9.1.30](https://github.com/phun-ky/speccer/compare/v9.1.29...v9.1.30) (2024-06-18)
 
 
