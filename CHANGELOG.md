@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.35](https://github.com/phun-ky/speccer/compare/v9.1.34...v9.1.35) (2024-07-22)
+
+
+### Tasks
+
+* 🤖 bump tslib from 2.6.2 to 2.6.3 ([0c5137c](https://github.com/phun-ky/speccer/commit/0c5137c333038f457c9a8883769c87d33f79844c))
+
 ## [9.1.34](https://github.com/phun-ky/speccer/compare/v9.1.33...v9.1.34) (2024-07-22)
 
 
