@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.33](https://github.com/phun-ky/speccer/compare/v9.1.32...v9.1.33) (2024-07-22)
+
+
+### Tasks
+
+* 🤖 bump prettier from 3.2.5 to 3.3.3 ([516a02f](https://github.com/phun-ky/speccer/commit/516a02fb4c89f7ae686d4bb0e4de567a6770269e))
+
 ## [9.1.32](https://github.com/phun-ky/speccer/compare/v9.1.31...v9.1.32) (2024-07-22)
 
 
