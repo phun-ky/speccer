@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.34](https://github.com/phun-ky/speccer/compare/v9.1.33...v9.1.34) (2024-07-22)
+
+
+### Tasks
+
+* 🤖 bump braces from 3.0.2 to 3.0.3 ([2b0c37a](https://github.com/phun-ky/speccer/commit/2b0c37aa63ad550b531cf15396cae0f6b57db57d))
+
 ## [9.1.33](https://github.com/phun-ky/speccer/compare/v9.1.32...v9.1.33) (2024-07-22)
 
 
