@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.36](https://github.com/phun-ky/speccer/compare/v9.1.35...v9.1.36) (2024-07-23)
+
+
+### Tasks
+
+* 🤖 bump jsdom from 24.0.0 to 24.1.1 ([8599aec](https://github.com/phun-ky/speccer/commit/8599aec06dcd882af743a4e3215deb72eff98d25))
+
 ## [9.1.35](https://github.com/phun-ky/speccer/compare/v9.1.34...v9.1.35) (2024-07-22)
 
 
