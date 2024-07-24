@@ -1,5 +1,17 @@
 # Changelog
 
+## [9.1.38](https://github.com/phun-ky/speccer/compare/v9.1.37...v9.1.38) (2024-07-24)
+
+
+### Tasks
+
+* 🤖 bump typescript from 5.4.5 to 5.5.4 ([3284aea](https://github.com/phun-ky/speccer/commit/3284aea4151f7c0e1e50c37740c3a547664dd482))
+
+
+### Bug
+
+* 🐛 reinstall packages to have a clean dir when publishing ([7003cc4](https://github.com/phun-ky/speccer/commit/7003cc4f957ad70f97eb951532fadd0f5afdd0d3)), closes [#192](https://github.com/phun-ky/speccer/issues/192)
+
 ## [9.1.37](https://github.com/phun-ky/speccer/compare/v9.1.36...v9.1.37) (2024-07-24)
 
 
