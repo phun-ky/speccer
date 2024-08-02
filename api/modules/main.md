@@ -17,7 +17,24 @@
 
 #### Defined in
 
-[main.ts:31](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L31)
+[main.ts:40](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L40)
+
+___
+
+### grid
+
+• `Const` **grid**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `create` | (`targetElement`: `HTMLElement`, `styles`: `CSSStyleDeclaration`) => `HTMLDivElement` |
+| `element` | (`targetElement`: `HTMLElement`) => `Promise`\<`void`\> |
+
+#### Defined in
+
+[main.ts:30](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L30)
 
 ___
 
@@ -34,7 +51,7 @@ ___
 
 #### Defined in
 
-[main.ts:41](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L41)
+[main.ts:50](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L50)
 
 ___
 
@@ -51,7 +68,7 @@ ___
 
 #### Defined in
 
-[main.ts:36](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L36)
+[main.ts:45](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L45)
 
 ___
 
@@ -70,7 +87,7 @@ ___
 
 #### Defined in
 
-[main.ts:51](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L51)
+[main.ts:60](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L60)
 
 ___
 
@@ -87,7 +104,7 @@ ___
 
 #### Defined in
 
-[main.ts:26](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L26)
+[main.ts:35](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L35)
 
 ___
 
@@ -104,7 +121,7 @@ ___
 
 #### Defined in
 
-[main.ts:46](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L46)
+[main.ts:55](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L55)
 
 ## Functions
 
@@ -118,4 +135,4 @@ ___
 
 #### Defined in
 
-[main.ts:58](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L58)
+[main.ts:67](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L67)
