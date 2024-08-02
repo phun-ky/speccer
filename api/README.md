@@ -10,6 +10,7 @@
 - [features/a11y/utils/styles](modules/features_a11y_utils_styles.md)
 - [features/dissect](modules/features_dissect.md)
 - [features/dissect/utils/styles](modules/features_dissect_utils_styles.md)
+- [features/grid](modules/features_grid.md)
 - [features/mark](modules/features_mark.md)
 - [features/measure](modules/features_measure.md)
 - [features/spacing](modules/features_spacing.md)

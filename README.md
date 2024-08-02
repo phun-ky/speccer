@@ -26,6 +26,7 @@
       - [Subtle anatomy](#subtle-anatomy)
     - [Curly brackets](#curly-brackets)
     - [Element typography](#element-typography)
+    - [Grid spacing](#grid-spacing)
     - [Mark elements](#mark-elements)
     - [A11y notation](#a11y-notation)
       - [Tab stops](#tab-stops)
@@ -306,9 +307,21 @@ In your component examples, use the following attribute.
 
 This will place a box to display typography information. Default is `left`.
 
+### Grid spacing
+
+![Screenshot of grid feature](./public/grid.png)
+
+This will highlight the grid spacing in a `display: grid;` element.
+
+In your component examples, use the following attribute on your grid container.
+
+```html
+<div data-speccer-grid="grid" …>…</div>
+```
+
 ### Mark elements
 
-![Alt text](./public/mark.png)
+![Screenshot of marked elements](./public/mark.png)
 
 This will mark the given elements.
 
@@ -369,9 +382,9 @@ Allthough the styling works nicely with dark mode, you can use the provided CSS 
   --ph-speccer-typography-color-text: #57575b;
   --ph-speccer-typography-color-value: var(--ph-speccer-color-contrast);
   --ph-speccer-depth-opacity-400: 0.4;
-  --ph-speccer-font-family: 'Menlo for Powerline',
-    'Menlo Regular for Powerline', 'DejaVu Sans Mono', Consolas, Monaco,
-    'Andale Mono', 'Ubuntu Mono', monospace;
+  --ph-speccer-font-family: 'Menlo for Powerline', 'Menlo Regular for Powerline',
+    'DejaVu Sans Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+    monospace;
   --ph-speccer-font-size: 12px;
   --ph-speccer-line-height: 12px;
   --ph-speccer-pin-size: 24px;
