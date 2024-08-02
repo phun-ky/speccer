@@ -1,5 +1,23 @@
 # Changelog
 
+## [9.2.0](https://github.com/phun-ky/speccer/compare/v9.1.38...v9.2.0) (2024-08-02)
+
+
+### Tasks
+
+* 🤖 Add tmp file for testing ([fae0b28](https://github.com/phun-ky/speccer/commit/fae0b282feaaf0ef91251b572455d7329e1d6056))
+* 🤖 Remove tmp file, not required ([01562a0](https://github.com/phun-ky/speccer/commit/01562a092930f835f6696e2abfb42aa15e4fa714))
+
+
+### Documentation
+
+* ✏️ Generate documentation for the grid feature ([6ab2a4e](https://github.com/phun-ky/speccer/commit/6ab2a4ecbe3e526de54e2ee15401b59f6a3d788e))
+
+
+### Feature
+
+* 🎸 Add feature to highlight column gaps in grid containers ([2306cee](https://github.com/phun-ky/speccer/commit/2306ceeee87bd1259890e6d4d2152d2bb35f7aff)), closes [#198](https://github.com/phun-ky/speccer/issues/198)
+
 ## [9.1.38](https://github.com/phun-ky/speccer/compare/v9.1.37...v9.1.38) (2024-07-24)
 
 
