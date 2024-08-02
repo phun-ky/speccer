@@ -7,6 +7,10 @@ import {
   create as dissectCreate,
   element as dissectElement
 } from './features/dissect';
+import {
+  create as gridCreate,
+  element as gridElement
+} from './features/grid';
 import { create as markCreate, element as markElement } from './features/mark';
 import {
   create as measureCreate,
@@ -22,6 +26,11 @@ import {
 } from './features/typography';
 import { removeAll } from './utils/node';
 
+
+export const grid = {
+  create: gridCreate,
+  element: gridElement
+};
 
 export const spacing = {
   create: spacingCreate,
@@ -67,9 +76,17 @@ const speccer = () => {
   );
   const elsToBeDissected = document.querySelectorAll('[data-anatomy-section]');
   const elsToBeMarked = document.querySelectorAll('[data-speccer-mark]');
+  const SPECCER_DATA_ATTR = 'data-speccer-grid';
+  const SPECCER_FEATURE_GRID = 'grid';
+  const SPECCER_FEATURE_GRID_SELECTOR = `[${SPECCER_DATA_ATTR}="${SPECCER_FEATURE_GRID}"]`;
+  const elstToBeGrid = document.querySelectorAll(SPECCER_FEATURE_GRID_SELECTOR);
 
   for (const el of elsToBeMarked) {
     markElement(el as HTMLElement);
+  }
+
+  for (const el of elstToBeGrid) {
+    gridElement(el as HTMLElement);
   }
   for (const el of elsToBeSpecced) {
     spacingElement(el as HTMLElement);
