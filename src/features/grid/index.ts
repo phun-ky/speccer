@@ -30,8 +30,8 @@ export const create = (targetElement:HTMLElement, styles: CSSStyleDeclaration) =
   const padding = styles.padding;
   const gridContainer = document.createElement('div');
 
-  gridContainer.style.setProperty('--ph-speccer-grid-gap-original',`${columnGap}px`);
-  gridContainer.style.setProperty('--ph-speccer-grid-gap',`${columnGap < 24 ? 24 : columnGap}px`);
+  document.documentElement.style.setProperty('--ph-speccer-grid-gap-original',`${columnGap}px`);
+  document.documentElement.style.setProperty('--ph-speccer-grid-gap',`${columnGap < 24 ? 24 : columnGap}px`);
 
   if(columnGap < 24){
     gridContainer.classList.add('speccer-small-grid');
