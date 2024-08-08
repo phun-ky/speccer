@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.2.1](https://github.com/phun-ky/speccer/compare/v9.2.0...v9.2.1) (2024-08-08)
+
+
+### Refactoring
+
+* 💡 Set css var on body element ([c3b1cac](https://github.com/phun-ky/speccer/commit/c3b1cac269b00547db35e8832db8b6c3394b343e))
+
 ## [9.2.0](https://github.com/phun-ky/speccer/compare/v9.1.38...v9.2.0) (2024-08-02)
 
 
