@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.2.9](https://github.com/phun-ky/speccer/compare/v9.2.8...v9.2.9) (2024-08-09)
+
+
+### Tasks
+
+* 🤖 Reinstall dependencies ([9f17684](https://github.com/phun-ky/speccer/commit/9f1768437ea085de39a258c56becf3525b7d1fdf))
+
 ## [9.2.8](https://github.com/phun-ky/speccer/compare/v9.2.7...v9.2.8) (2024-08-09)
 
 
