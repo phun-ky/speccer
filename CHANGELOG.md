@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.2.4](https://github.com/phun-ky/speccer/compare/v9.2.3...v9.2.4) (2024-08-09)
+
+
+### Tasks
+
+* 🤖 Use correct label for bugs ([dd08def](https://github.com/phun-ky/speccer/commit/dd08def9c26ddb4e9c49334e469a4f236ebe3fa1))
+
 ## [9.2.3](https://github.com/phun-ky/speccer/compare/v9.2.2...v9.2.3) (2024-08-09)
 
 
