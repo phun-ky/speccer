@@ -24,9 +24,9 @@ const SPECCER_FEATURE_GRID = 'grid';
 export const create = (targetElement:HTMLElement, styles: CSSStyleDeclaration) => {
   const rect = targetElement.getBoundingClientRect();
   const templateColumns = styles.gridTemplateColumns;
-  // const templateRows = styles['gridTemplateRows'];
+  // const templateRows = styles['gridTemplateRows'];// for a later feature perhaps
   const columnGap = parseInt(styles.columnGap);
-  // const rowGap = styles.rowGap;
+  // const rowGap = styles.rowGap;// for a later feature perhaps
   const padding = styles.padding;
   const gridContainer = document.createElement('div');
 
@@ -43,15 +43,13 @@ export const create = (targetElement:HTMLElement, styles: CSSStyleDeclaration) =
 
   gridContainer.style.height = rect.height + 64 + 'px';
   gridContainer.style.width = rect.width + 'px';
-  gridContainer.style.position = 'absolute';
   gridContainer.style.left = rect.left + 'px';
   gridContainer.style.top = rect.top - 32 + 'px';
-  gridContainer.style.display = 'grid';
   gridContainer.style.padding = padding;
-  gridContainer.style.columnGap = `${columnGap}px`;
+  // gridContainer.style.columnGap = `${columnGap}px`; // using css vars instead
   gridContainer.style.gridTemplateColumns = templateColumns;
 
-  //gridContainer.style.gridTemplateRows = templateRows;
+  //gridContainer.style.gridTemplateRows = templateRows; // for a later feature perhaps
   const numberOfItems = templateColumns.split(' ').length;
 
   for(let i = 0; i < numberOfItems;i++){
