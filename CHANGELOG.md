@@ -1,5 +1,18 @@
 # Changelog
 
+## [9.2.7](https://github.com/phun-ky/speccer/compare/v9.2.6...v9.2.7) (2024-08-09)
+
+
+### Tasks
+
+* 🤖 Add new keywords to `package.json` ([746bff5](https://github.com/phun-ky/speccer/commit/746bff53bb94015a7643cbdcd72e4009f03e745c))
+* 🤖 bump typescript from 5.4.5 to 5.5.4 ([b89721b](https://github.com/phun-ky/speccer/commit/b89721b1c7fab029370d909d004ab9b812bb82fc))
+
+
+### Bug
+
+* 🐛 Use `gridTemplate` instead of `gridTemplateColumns` ([75370ef](https://github.com/phun-ky/speccer/commit/75370ef2bffaa61aee3ec13c04ec60fa8ad47d25))
+
 ## [9.2.6](https://github.com/phun-ky/speccer/compare/v9.2.5...v9.2.6) (2024-08-09)
 
 
