@@ -1,5 +1,17 @@
 # Changelog
 
+## [9.2.8](https://github.com/phun-ky/speccer/compare/v9.2.7...v9.2.8) (2024-08-09)
+
+
+### Documentation
+
+* ✏️ Update docs ([a82ff13](https://github.com/phun-ky/speccer/commit/a82ff13cd01cbed874766a781652033dd005766e))
+
+
+### Bug
+
+* 🐛 Override `gridTemplateRows` so we can ensure height ([2fdbdea](https://github.com/phun-ky/speccer/commit/2fdbdeaaf75e532596c25fba7ebeb47398906e8e))
+
 ## [9.2.7](https://github.com/phun-ky/speccer/compare/v9.2.6...v9.2.7) (2024-08-09)
 
 
