@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.2.2](https://github.com/phun-ky/speccer/compare/v9.2.1...v9.2.2) (2024-08-09)
+
+
+### Bug
+
+* 🐛 Add missing transition property to grid feature ([9b17c86](https://github.com/phun-ky/speccer/commit/9b17c86458e79fc09f3cd9724e5b3801d5ee0108))
+
 ## [9.2.1](https://github.com/phun-ky/speccer/compare/v9.2.0...v9.2.1) (2024-08-08)
 
 
