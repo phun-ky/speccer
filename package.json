@@ -67,7 +67,9 @@
     "spacing",
     "speccer",
     "a11y",
-    "accessibility"
+    "accessibility",
+    "grid",
+    "grid-layout"
   ],
   "author": "Alexander Vassbotn Røyne-Helgesen <alexander@phun-ky.net>",
   "license": "MIT",
