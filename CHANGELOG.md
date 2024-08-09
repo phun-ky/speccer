@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.2.6](https://github.com/phun-ky/speccer/compare/v9.2.5...v9.2.6) (2024-08-09)
+
+
+### Tasks
+
+* 🤖 bump rollup from 4.19.0 to 4.20.0 ([73783ef](https://github.com/phun-ky/speccer/commit/73783ef42570db4bfc6b929d07c4ffc28f17b211))
+
 ## [9.2.5](https://github.com/phun-ky/speccer/compare/v9.2.4...v9.2.5) (2024-08-09)
 
 
