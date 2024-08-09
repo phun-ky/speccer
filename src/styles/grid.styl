@@ -1,9 +1,11 @@
 .ph-speccer.speccer.speccer-grid-container
   counter-reset column-gap
   justify-content initial
+  transition var(--ph-speccer-transition-default)
 
 
 .ph-speccer.speccer.speccer-grid-item
+  transition var(--ph-speccer-transition-default)
   border-left 1px solid var(--ph-speccer-color-contrast)
   border-right 1px solid var(--ph-speccer-color-contrast)
   position relative
@@ -11,6 +13,7 @@
 
 
 .ph-speccer.speccer.speccer-grid-item::before
+  transition var(--ph-speccer-transition-default)
   font-family var(--ph-speccer-font-family) !important
   counter-increment column-gap
   font-size 16px
@@ -30,6 +33,7 @@
 
 
 .ph-speccer.speccer.speccer-grid-item:first-child::after
+  transition var(--ph-speccer-transition-default)
   font-family var(--ph-speccer-font-family) !important
   counter-increment column-gap
   font-size 16px
