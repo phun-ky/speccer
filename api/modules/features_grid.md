@@ -75,4 +75,4 @@ if (targetElement) {
 
 #### Defined in
 
-[features/grid/index.ts:88](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L88)
+[features/grid/index.ts:89](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L89)

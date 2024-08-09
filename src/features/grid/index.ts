@@ -49,6 +49,7 @@ export const create = (targetElement:HTMLElement, styles: CSSStyleDeclaration) =
   gridContainer.style.padding = padding;
   // gridContainer.style.columnGap = `${columnGap}px`; // using css vars instead
   gridContainer.style.gridTemplate = gridTemplate;
+  gridContainer.style.gridTemplateRows = 'repeat(1, 100%)';
 
   //gridContainer.style.gridTemplateRows = templateRows; // for a later feature perhaps
   const numberOfItems = templateColumns.split(' ').length;
