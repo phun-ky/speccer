@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.2.3](https://github.com/phun-ky/speccer/compare/v9.2.2...v9.2.3) (2024-08-09)
+
+
+### Bug
+
+* 🐛 Use CSS vars correctly to accommodate for transition ([362d111](https://github.com/phun-ky/speccer/commit/362d1114b8fc35362179e45f5c054b1e37ff0d94))
+
 ## [9.2.2](https://github.com/phun-ky/speccer/compare/v9.2.1...v9.2.2) (2024-08-09)
 
 
