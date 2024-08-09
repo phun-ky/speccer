@@ -24,6 +24,7 @@ const SPECCER_FEATURE_GRID = 'grid';
 export const create = (targetElement:HTMLElement, styles: CSSStyleDeclaration) => {
   const rect = targetElement.getBoundingClientRect();
   const templateColumns = styles.gridTemplateColumns;
+  const gridTemplate = styles.gridTemplate;
   // const templateRows = styles['gridTemplateRows'];// for a later feature perhaps
   const columnGap = parseInt(styles.columnGap);
   // const rowGap = styles.rowGap;// for a later feature perhaps
@@ -47,7 +48,7 @@ export const create = (targetElement:HTMLElement, styles: CSSStyleDeclaration) =
   gridContainer.style.top = rect.top - 32 + 'px';
   gridContainer.style.padding = padding;
   // gridContainer.style.columnGap = `${columnGap}px`; // using css vars instead
-  gridContainer.style.gridTemplateColumns = templateColumns;
+  gridContainer.style.gridTemplate = gridTemplate;
 
   //gridContainer.style.gridTemplateRows = templateRows; // for a later feature perhaps
   const numberOfItems = templateColumns.split(' ').length;
