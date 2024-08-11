@@ -1,5 +1,17 @@
 # Changelog
 
+## [9.2.10](https://github.com/phun-ky/speccer/compare/v9.2.9...v9.2.10) (2024-08-11)
+
+
+### Documentation
+
+* ✏️ Update link to demo in `README.md` and update darkmode ([9c84a59](https://github.com/phun-ky/speccer/commit/9c84a5932a55cc39dd571d976ecdca5ea4e1c249))
+
+
+### Bug
+
+* 🐛 Add missing CSS variable ([fb41fcc](https://github.com/phun-ky/speccer/commit/fb41fccc071b61f1360c742b0ddbdc4b22ac6ac3))
+
 ## [9.2.9](https://github.com/phun-ky/speccer/compare/v9.2.8...v9.2.9) (2024-08-09)
 
 
