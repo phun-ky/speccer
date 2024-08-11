@@ -44,7 +44,7 @@ Speccer was originally created to make it easier to document components in a des
 npm i @phun-ky/speccer
 ```
 
-See demo here: <https://codepen.io/phun-ky/pen/xaOrYX>
+See demo here: <https://codepen.io/phun-ky/pen/OJejexN>
 
 ## API
 
@@ -265,6 +265,8 @@ You can also give a more subtle touch to the anatomy elements.
 </div>
 ```
 
+This will give a dashed border, and a more subtle pin style.
+
 ### Curly brackets
 
 You can use curly brackets with the `curly` tag in `data-anatomy` along side `outline full` to provide a more sleek look to the style.
@@ -290,8 +292,6 @@ The curly brackets are made with SVG paths, and it is required to have the follo
   />
 </svg>
 ```
-
-This will give a dashed border, and a more subtle pin style.
 
 ### Element typography
 
