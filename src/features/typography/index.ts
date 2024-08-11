@@ -24,7 +24,11 @@ export const create = (html: string, area: string | null): HTMLElement => {
   const _el = document.createElement('div');
   const _extra_class_names = {};
 
-  if (area !== null && area !== '') _extra_class_names[area] = true;
+  if (area !== null && area !== '') {
+    area.split(' ').forEach(a => {
+      _extra_class_names[a] = true;
+    });
+  }
 
   const _class_names = cx('ph-speccer speccer typography', _extra_class_names);
 
@@ -64,9 +68,11 @@ export const element = async (targetEl: HTMLElement): Promise<void> => {
   )
     return;
 
+  const _use_highlighting = _area?.includes('syntax');
+
   targetEl.classList.add('is-specced');
 
-  const _html = await template(targetEl);
+  const _html = await template(targetEl, _use_highlighting);
   const _speccer_el = create(_html, _area);
 
   document.body.appendChild(_speccer_el);
