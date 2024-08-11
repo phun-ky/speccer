@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.3.0](https://github.com/phun-ky/speccer/compare/v9.2.10...v9.3.0) (2024-08-11)
+
+
+### Feature
+
+* 🎸 Add support to use syntax highlighting for typography ([25f3524](https://github.com/phun-ky/speccer/commit/25f3524c38b380ed8d4694c3ab23f5f1e1737048)), closes [#212](https://github.com/phun-ky/speccer/issues/212)
+
 ## [9.2.10](https://github.com/phun-ky/speccer/compare/v9.2.9...v9.2.10) (2024-08-11)
 
 
