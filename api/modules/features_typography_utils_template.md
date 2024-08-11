@@ -6,15 +6,16 @@
 
 ### template
 
-▸ **template**(`targetEl`): `Promise`\<`string`\>
+▸ **template**(`targetEl`, `useHighlighting?`): `Promise`\<`string`\>
 
 Generate a HTML string for typography styles of a target element.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `targetEl` | `HTMLElement` | The target element for which to generate typography styles. |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `targetEl` | `HTMLElement` | `undefined` | The target element for which to generate typography styles. |
+| `useHighlighting?` | `boolean` | `false` | If we should use highlighting markup |
 
 #### Returns
 
@@ -26,10 +27,10 @@ Generate a HTML string for typography styles of a target element.
 
 ```ts
 const targetElement = document.getElementById('target');
-const typographyStyles = await template(targetElement);
+const typographyStyles = await template(targetElement, true);
 console.log(typographyStyles);
 ```
 
 #### Defined in
 
-[features/typography/utils/template.ts:17](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/template.ts#L17)
+[features/typography/utils/template.ts:18](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/template.ts#L18)

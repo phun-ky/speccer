@@ -69,4 +69,4 @@ if (targetElement) {
 
 #### Defined in
 
-[features/typography/index.ts:54](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L54)
+[features/typography/index.ts:58](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L58)
