@@ -23,6 +23,7 @@
     - [Element dimensions](#element-dimensions)
       - [Subtle measure](#subtle-measure)
     - [Highlight the anatomy of an element](#highlight-the-anatomy-of-an-element)
+      - [Custom literals](#custom-literals)
       - [Subtle anatomy](#subtle-anatomy)
     - [Curly brackets](#curly-brackets)
     - [Element typography](#element-typography)
@@ -253,6 +254,26 @@ In your component examples, use the following attribute. Remember to use the `da
 ```
 
 This will place a pin to the outline of the element. Default is `top`.
+
+#### Custom literals
+
+![Image of japanese literals instead of latin characters](./public/literals.png)
+
+You can use custom literals by assigned a global variable with the literals you want:
+
+```js
+window.SPECCER_LITERALS = [
+  'あ',
+  'い',
+  'う',
+  'え',
+  'お',
+  'か',
+  'き',
+  'く',
+  …
+];
+```
 
 #### Subtle anatomy
 
