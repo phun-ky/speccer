@@ -102,7 +102,7 @@
     "prettier": "^3.2.5",
     "prettier-eslint": "^16.3.0",
     "prettier-eslint-cli": "^8.0.1",
-    "putout": "^35.1.0",
+    "putout": "^36.0.3",
     "quibble": "^0.9.1",
     "release-it": "^17.1.1",
     "rollup": "^4.12.0",
