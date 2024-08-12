@@ -1,5 +1,17 @@
 # Changelog
 
+## [9.4.0](https://github.com/phun-ky/speccer/compare/v9.3.0...v9.4.0) (2024-08-12)
+
+
+### Documentation
+
+* ✏️ Regenerate documentation ([7191c3f](https://github.com/phun-ky/speccer/commit/7191c3fe573c89abc781ccd5c35c3ced3443efd7))
+
+
+### Feature
+
+* 🎸 Add support for custom literals ([01d3507](https://github.com/phun-ky/speccer/commit/01d35079f2466c46d3b22b7dbb0c42959c792ec8)), closes [#215](https://github.com/phun-ky/speccer/issues/215)
+
 ## [9.3.0](https://github.com/phun-ky/speccer/compare/v9.2.10...v9.3.0) (2024-08-11)
 
 
