@@ -83,20 +83,22 @@ export const element = async (sectionEl: HTMLElement): Promise<void> => {
       )
         return;
 
+      const _literals_to_use = window.SPECCER_LITERALS || SPECCER_LITERALS;
+
+      let _character_to_use = _literals_to_use[targetIndex];
+
       /**
-       * If we're running out of literals to use,
+       * If we're running out of characters to use,
        * make a new one with uppercase and lowercase pairs
        */
-      let _literal_to_use = SPECCER_LITERALS[targetIndex];
-
-      if (!_literal_to_use) {
-        _literal_to_use = `${SPECCER_LITERALS[_index_to_use]}${SPECCER_LITERALS[
+      if (!_character_to_use) {
+        _character_to_use = `${_literals_to_use[_index_to_use]}${_literals_to_use[
           _index_to_use
         ].toLowerCase()}`;
         _index_to_use++;
       }
 
-      const _dissection_el = create(_literal_to_use, _areas_string);
+      const _dissection_el = create(_character_to_use, _areas_string);
 
       document.body.appendChild(_dissection_el);
 
