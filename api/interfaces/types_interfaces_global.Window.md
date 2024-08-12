@@ -34,7 +34,8 @@ ___
 
 • **SPECCER\_LITERALS**: `string`[]
 
-Represents the custom literals to be used
+Represents the custom literals to be used.
+![Screenshot of speccer with custom literals](https://github.com/phun-ky/speccer/blob/main/public/literals.png?raw=true)
 
 **`Example`**
 
@@ -45,7 +46,7 @@ speccer();
 
 #### Defined in
 
-[types/interfaces/global.ts:32](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/global.ts#L32)
+[types/interfaces/global.ts:33](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/global.ts#L33)
 
 ___
 
