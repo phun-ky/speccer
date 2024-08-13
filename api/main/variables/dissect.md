@@ -12,7 +12,7 @@
 
 ### create()
 
-> **create**: (`textContent`, `area`, `n`) => `HTMLElement` = `dissectCreate`
+> **create**: (`textContent`, `area`, `id`, `n`) => `HTMLElement` = `dissectCreate`
 
 Create a dissected element with optional text content, area description, and element type.
 
@@ -25,6 +25,10 @@ The text content to add to the element.
 • **area**: `string`
 
 The area description for styling.
+
+• **id**: `string` = `''`
+
+The id of the dissection element
 
 • **n**: `string` = `'span'`
 
@@ -41,6 +45,45 @@ The element type.
 ```ts
 const dissectedElement = create('A', 'outline top', 'div');
 document.body.appendChild(dissectedElement);
+```
+
+### dissect()
+
+> **dissect**: (`el`, `symbol`, `areas`?) => `Promise`\<`string` \| `void`\> = `_dissect`
+
+Create and style the dissection element as needed.
+
+This function appends a new dissection element to the document body based on the anatomy data attribute
+of the target element. It handles different styles, such as curly brackets or lines, based on the anatomy type.
+
+#### Parameters
+
+• **el**: `HTMLElement`
+
+The target element that contains the anatomy data.
+
+• **symbol**: `string`
+
+The symbol to use.
+
+• **areas?**: `string` = `''`
+
+Optional areas to use if not [data-anatomy] is set as an attribute on the element
+
+#### Returns
+
+`Promise`\<`string` \| `void`\>
+
+A promise that resolves to the id of the dissection element when the dissection is completed, or `void` if required input is invalid.
+
+#### Example
+
+```ts
+const element = document.getElementById('target');
+const symbol = 0;
+dissect(element, symbol).then(() => {
+  console.log('Dissection completed');
+});
 ```
 
 ### element()
@@ -72,4 +115,4 @@ element(sectionElement);
 
 ## Defined in
 
-[main.ts:39](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L39)
+[main.ts:40](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L40)

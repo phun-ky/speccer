@@ -33,4 +33,4 @@ element(sectionElement);
 
 ## Defined in
 
-[features/dissect/index.ts:20](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/index.ts#L20)
+[features/dissect/index.ts:24](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/index.ts#L24)

@@ -6,7 +6,7 @@
 
 # Function: create()
 
-> **create**(`textContent`, `area`, `n`): `HTMLElement`
+> **create**(`textContent`, `area`, `id`, `n`): `HTMLElement`
 
 Create a dissected element with optional text content, area description, and element type.
 
@@ -19,6 +19,10 @@ The text content to add to the element.
 • **area**: `string`
 
 The area description for styling.
+
+• **id**: `string` = `''`
+
+The id of the dissection element
 
 • **n**: `string` = `'span'`
 
@@ -39,4 +43,4 @@ document.body.appendChild(dissectedElement);
 
 ## Defined in
 
-[features/dissect/utils/create.ts:18](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/create.ts#L18)
+[features/dissect/utils/create.ts:19](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/create.ts#L19)
