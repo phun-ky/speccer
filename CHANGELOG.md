@@ -1,5 +1,29 @@
 # Changelog
 
+## [9.4.1](https://github.com/phun-ky/speccer/compare/v9.4.0...v9.4.1) (2024-08-13)
+
+
+### Tasks
+
+* 🤖 bump typedoc from 0.25.13 to 0.26.5 ([90a7a56](https://github.com/phun-ky/speccer/commit/90a7a5600e2490aaa4a14a46da4610229e0864bb))
+* 🤖 Update dev file for dissect/anatomy ([f6f9b92](https://github.com/phun-ky/speccer/commit/f6f9b922cf3f67013d98e7af7bbeddb979f932d4))
+
+
+### Documentation
+
+* ✏️ Update `README.md` ([1c7e3dd](https://github.com/phun-ky/speccer/commit/1c7e3ddaa183e3b43cf40ff5c049f949b69cef71))
+
+
+### Bug
+
+* 🐛 Use correct background-color for subtle feature ([cd976b6](https://github.com/phun-ky/speccer/commit/cd976b60e3afa46d93c65caa098c01f5eaa7e486))
+* 🐛 Use correct versions of typedoc plugins after upgrade ([75add9f](https://github.com/phun-ky/speccer/commit/75add9f2e8af0c92d6086c8e49598101e0b1e441))
+
+
+### Refactoring
+
+* 💡 Extract functions into separate files ([e8c3fd6](https://github.com/phun-ky/speccer/commit/e8c3fd63c04157e0b573a009c61687f9b218df6c))
+
 ## [9.4.0](https://github.com/phun-ky/speccer/compare/v9.3.0...v9.4.0) (2024-08-12)
 
 
