@@ -1,6 +1,6 @@
 {
   "name": "@phun-ky/speccer",
-  "version": "9.5.1",
+  "version": "9.5.2",
   "description": "A script to annotate, show spacing specs and to display typography information in documentation/website on HTML elements",
   "main": "dist/speccer.js",
   "module": "dist/speccer.esm.js",
@@ -76,7 +76,7 @@
   "bugs": {
     "url": "https://github.com/phun-ky/speccer/issues"
   },
-  "homepage": "https://github.com/phun-ky/speccer#readme",
+  "homepage": "https://phun-ky.net/projects/speccer",
   "devDependencies": {
     "@release-it/conventional-changelog": "^8.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
