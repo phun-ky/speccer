@@ -323,6 +323,8 @@ The curly brackets are made with SVG paths, and it is required to have the follo
 
 from v9.5 you can utilize the `dissect` feature to highlight the anatomy of an element programaticaly. [Here is an example with a click event](https://codepen.io/phun-ky/full/LYKOWyP).
 
+[Kazam_screencast_00002.webm](https://github.com/user-attachments/assets/5c78cece-de46-4876-81f2-98c9108a2103)
+
 ### Element typography
 
 ![Image of typography speccer](./public/typography.png)

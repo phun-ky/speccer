@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.5.1](https://github.com/phun-ky/speccer/compare/v9.5.0...v9.5.1) (2024-08-13)
+
+
+### Documentation
+
+* Update README.md ([6c91eaa](https://github.com/phun-ky/speccer/commit/6c91eaa10f6bb3763916a57bcc69dc6855342ee3))
+
 ## [9.5.0](https://github.com/phun-ky/speccer/compare/v9.4.1...v9.5.0) (2024-08-13)
 
 
