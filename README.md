@@ -10,6 +10,7 @@
 
 - [@phun-ky/speccer](#phun-kyspeccer)
   - [About](#about)
+  - [Installation](#installation)
   - [API](#api)
   - [Usage](#usage)
     - [Typescript](#typescript)
@@ -40,17 +41,19 @@
 
 ## About
 
-Speccer was originally created to make it easier to document components in a design system, but you can use it to whatever you like, if you are in the need to highlight any element!
+**SPECCER** was originally created to simplify documenting components in a design system, but it can be used to highlight any HTML element on a webpage. If you need to draw attention to elements, **SPECCER** is your tool!
+
+## Installation
 
 ```shell-session
-npm i @phun-ky/speccer
+npm i --save @phun-ky/speccer
 ```
 
-See demo here: <https://codepen.io/phun-ky/pen/OJejexN>
+[See a live demo](https://codepen.io/phun-ky/pen/OJejexN).
 
 ## API
 
-Go [here](https://github.com/phun-ky/speccer/blob/main/api/README.md) to read the full API documentation.
+Full API documentation is available [here](https://github.com/phun-ky/speccer/blob/main/api/README.md).
 
 ## Usage
 
@@ -203,7 +206,7 @@ document.querySelectorAll('[data-anatomy-section]').forEach((el) => {
 
 ![Image of speccer](./public/spacing.png)
 
-In your component examples, use the following attribute:
+Use the following attribute to display element padding and margin:
 
 ```html
 <div data-speccer class="..."></div>
@@ -215,7 +218,7 @@ This will display the element _and all of it's children_ padding and margin.
 
 ![Image of speccer](./public/measure.png)
 
-In your component examples, use the following attribute:
+Display dimensions with:
 
 ```html
 <div
@@ -230,7 +233,7 @@ Where `height` and `width` comes with placement flags. Default for `height` is `
 
 ![Image of subtle option for measure](./public/subtle-measure.png)
 
-You can also give a more subtle touch to the measure elements.
+Use a subtle style:
 
 ```html
 <div data-speccer-measure="height left subtle" class="..."></div>
@@ -291,7 +294,7 @@ This will give a dashed border, and a more subtle pin style.
 
 ### Curly brackets
 
-You can use curly brackets with the `curly` tag in `data-anatomy` along side `outline full` to provide a more sleek look to the style.
+You can use curly brackets with the `curly` tag in `data-anatomy` along side `outline full` to provide a more sleek style.
 
 > [!NOTE]  
 > Only works with `outline full`
@@ -319,7 +322,7 @@ The curly brackets are made with SVG paths, and it is required to have the follo
 
 ![Image of typography speccer](./public/typography.png)
 
-In your component examples, use the following attribute.
+Display typography details:
 
 ```html
 <p data-speccer-typography="[left|right|top|bottom]" class="...">Some text</p>
@@ -468,7 +471,7 @@ Allthough the styling works nicely with dark mode, you can use the provided CSS 
 
 ## Contributing
 
-If you want to contribute, please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 ## Sponsor me
 
@@ -476,4 +479,4 @@ I'm an Open Source evangelist, creating stuff that does not exist yet to help ge
 
 The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
 
-[Support me with GitHub Sponsors](https://github.com/sponsors/phun-ky).
+[Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
