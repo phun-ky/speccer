@@ -26,7 +26,6 @@ import {
 } from './features/typography';
 import { removeAll } from './utils/node';
 
-
 export const grid = {
   create: gridCreate,
   element: gridElement
