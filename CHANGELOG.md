@@ -1,5 +1,18 @@
 # Changelog
 
+## [9.5.2](https://github.com/phun-ky/speccer/compare/v9.5.1...v9.5.2) (2024-08-13)
+
+
+### Tasks
+
+* 🤖 Add new homepage ([a753659](https://github.com/phun-ky/speccer/commit/a7536592907297e9fb8ece7d9a431a918743aa8d))
+* 🤖 Update labels ([b9a3cc6](https://github.com/phun-ky/speccer/commit/b9a3cc611d594a153127907196b2a10223059e0f))
+
+
+### Documentation
+
+* ✏️ Add and update banners in `README.md` ([6e37553](https://github.com/phun-ky/speccer/commit/6e3755314e0eea9f391cd3f34fa2ce93569fa12c))
+
 ## [9.5.1](https://github.com/phun-ky/speccer/compare/v9.5.0...v9.5.1) (2024-08-13)
 
 
