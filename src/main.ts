@@ -5,7 +5,8 @@ import { dom, lazy, manual, activate } from './config/browser';
 import { init as initA11y } from './features/a11y';
 import {
   create as dissectCreate,
-  element as dissectElement
+  element as dissectElement,
+  dissect as _dissect
 } from './features/dissect';
 import {
   create as gridCreate,
@@ -38,7 +39,8 @@ export const spacing = {
 
 export const dissect = {
   create: dissectCreate,
-  element: dissectElement
+  element: dissectElement,
+  dissect: _dissect
 };
 
 export const measure = {

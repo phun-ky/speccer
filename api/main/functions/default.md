@@ -14,4 +14,4 @@
 
 ## Defined in
 
-[main.ts:66](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L66)
+[main.ts:68](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L68)

@@ -72,4 +72,4 @@ if (targetElement) {
 
 ## Defined in
 
-[main.ts:54](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L54)
+[main.ts:56](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L56)

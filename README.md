@@ -26,7 +26,8 @@
     - [Highlight the anatomy of an element](#highlight-the-anatomy-of-an-element)
       - [Custom literals](#custom-literals)
       - [Subtle anatomy](#subtle-anatomy)
-    - [Curly brackets](#curly-brackets)
+      - [Curly brackets](#curly-brackets)
+      - [Highlight anatomy programatically](#highlight-anatomy-programatically)
     - [Element typography](#element-typography)
       - [Syntax highlighting for typography](#syntax-highlighting-for-typography)
     - [Grid spacing](#grid-spacing)
@@ -292,7 +293,7 @@ You can also give a more subtle touch to the anatomy elements.
 
 This will give a dashed border, and a more subtle pin style.
 
-### Curly brackets
+#### Curly brackets
 
 You can use curly brackets with the `curly` tag in `data-anatomy` along side `outline full` to provide a more sleek style.
 
@@ -317,6 +318,12 @@ The curly brackets are made with SVG paths, and it is required to have the follo
   />
 </svg>
 ```
+
+#### Highlight anatomy programatically
+
+from v9.5 you can utilize the `dissect` feature to highlight the anatomy of an element programaticaly. [Here is an example with a click event](https://codepen.io/phun-ky/full/LYKOWyP).
+
+[Kazam_screencast_00002.webm](https://github.com/user-attachments/assets/5c78cece-de46-4876-81f2-98c9108a2103)
 
 ### Element typography
 
