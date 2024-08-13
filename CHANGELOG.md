@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.5.0](https://github.com/phun-ky/speccer/compare/v9.4.1...v9.5.0) (2024-08-13)
+
+
+### Feature
+
+* 🎸 Add feature to activate dissect programmatically ([7a03069](https://github.com/phun-ky/speccer/commit/7a0306924737c99c078ae96a9497bdb176e39dce)), closes [#217](https://github.com/phun-ky/speccer/issues/217)
+
 ## [9.4.1](https://github.com/phun-ky/speccer/compare/v9.4.0...v9.4.1) (2024-08-13)
 
 
