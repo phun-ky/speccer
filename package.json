@@ -76,7 +76,7 @@
   "bugs": {
     "url": "https://github.com/phun-ky/speccer/issues"
   },
-  "homepage": "https://github.com/phun-ky/speccer#readme",
+  "homepage": "https://phun-ky.net/projects/speccer",
   "devDependencies": {
     "@release-it/conventional-changelog": "^8.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",

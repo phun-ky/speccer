@@ -45,7 +45,7 @@
               - 'rollup.config.mjs'
               - 'rollup.*.config.js'
               - 'rollup.*.config.mjs'
-'mindless: docs':
+'mindless: ✏️ docs':
   - any:
       - head-branch: ['^docs', 'docs']
       - changed-files:
@@ -63,9 +63,9 @@
   - head-branch: ['^feat', 'feat']
 'problems: 🐛 bug':
   - head-branch: ['^fix', 'fix']
-'mindless: chore':
+'mindless: 🤖 chore':
   - head-branch: ['^chore', 'chore']
-'improvements: enhancement':
+'improvements: 💡 enhancement':
   - head-branch: ['^improvements', 'improvements']
 
 # Add 'release' label to any PR that is opened against the `main` branch
