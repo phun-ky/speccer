@@ -98,4 +98,4 @@ The speccer function to execute.
 
 ## Defined in
 
-[main.ts:59](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L59)
+[main.ts:61](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L61)

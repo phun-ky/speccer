@@ -6,6 +6,7 @@ import { set as setClassNames, cx } from '../../../utils/classnames';
  *
  * @param {string} textContent - The text content to add to the element.
  * @param {string} area - The area description for styling.
+ * @param {string} id - The id of the dissection element
  * @param {string} n - The element type.
  * @returns {HTMLElement} - The created dissected element.
  *
@@ -18,6 +19,7 @@ import { set as setClassNames, cx } from '../../../utils/classnames';
 export const create = (
   textContent = '',
   area: string,
+  id = '',
   n = 'span'
 ): HTMLElement => {
   const _el = document.createElement(n);
@@ -37,6 +39,8 @@ export const create = (
   const _class_names = cx('ph-speccer speccer dissection', _extra_class_names);
 
   setClassNames(_el, _class_names);
+
+  _el.setAttribute('id', id);
 
   return _el;
 };

@@ -72,4 +72,4 @@ element(targetElement);
 
 ## Defined in
 
-[main.ts:44](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L44)
+[main.ts:46](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L46)

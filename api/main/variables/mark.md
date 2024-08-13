@@ -64,4 +64,4 @@ element(elementToMark);
 
 ## Defined in
 
-[main.ts:49](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L49)
+[main.ts:51](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L51)

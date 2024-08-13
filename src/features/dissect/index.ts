@@ -1,7 +1,11 @@
 // eslint-disable-next-line import/no-unused-modules
 export { create } from './utils/create';
 
-import { dissectionIterator } from './utils/dissection-iterator';
+// eslint-disable-next-line import/no-unused-modules
+export { dissect } from './utils/dissect';
+
+import { dissect as dissectionIterator} from './utils/dissect';
+import { getCharacterToUse } from './utils/get-character-to-use';
 
 /**
  * Create dissected elements based on the section element and its data-anatomy attributes.
@@ -24,5 +28,9 @@ export const element = async (sectionEl: HTMLElement): Promise<void> => {
 
   if(!_dissection_els || _dissection_els.length === 0) return;
 
-  _dissection_els.forEach(dissectionIterator);
+  _dissection_els.forEach(async (targetEl: HTMLElement, targetIndex: number): Promise<void> => {
+    const _character_to_use = getCharacterToUse(targetIndex);
+
+    await dissectionIterator(targetEl, _character_to_use);
+  });
 };

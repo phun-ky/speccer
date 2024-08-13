@@ -17,3 +17,9 @@
 ### create
 
 Re-exports [create](utils/create/functions/create.md)
+
+***
+
+### dissect
+
+Re-exports [dissect](utils/dissect/functions/dissect.md)
