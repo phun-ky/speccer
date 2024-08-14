@@ -4,7 +4,7 @@
 
 # utils/attributes
 
-> Last updated 2024-08-14T10:16:53.368Z
+> Last updated 2024-08-14T10:18:52.252Z
 
 ## Functions
 

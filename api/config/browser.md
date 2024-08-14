@@ -4,7 +4,7 @@
 
 # config/browser
 
-> Last updated 2024-08-14T10:16:53.354Z
+> Last updated 2024-08-14T10:18:52.238Z
 
 Contains the helper functions to activate SPECCER via a script tag, based on attributes:
 
@@ -13,13 +13,12 @@ Contains the helper functions to activate SPECCER via a script tag, based on att
 
 > [!NOTE]
 > Remember to add the CSS file!:
->
+
 > ```html
 > <link rel="stylesheet" href="../path/to/speccer.min.css" />
 > ```
 
 ## Default implementation
-
 ```html
 <script src="../speccer.js"</script>
 ```
@@ -27,7 +26,6 @@ Contains the helper functions to activate SPECCER via a script tag, based on att
 If no attribute is applied, it will default to `data-dom`, as in, it will initialize when `DOMContentLoaded` is fired.
 
 ## Manual initiation
-
 ```html
 <script src="../speccer.js" data-manual</script>
 ```
@@ -35,7 +33,6 @@ If no attribute is applied, it will default to `data-dom`, as in, it will initia
 Makes `window.speccer()` available to be used when you feel like it
 
 ## Initiate immediately
-
 ```html
 <script src="../speccer.js" data-instant></script>
 ```
@@ -43,7 +40,6 @@ Makes `window.speccer()` available to be used when you feel like it
 fires off `speccer()` right away
 
 ## Initiate when dom ready
-
 ```html
 <script src="../speccer.js" data-dom></script>
 ```
@@ -51,7 +47,6 @@ fires off `speccer()` right away
 Waits for `DOMContentLoaded`
 
 ## Initiate with lazy loading
-
 ```html
 <script src="../speccer.js" data-lazy></script>
 ```
@@ -63,15 +58,15 @@ Lazy loads `speccer()` per specced element
 ### activate()
 
 ```ts
-function activate(speccer): void;
+function activate(speccer): void
 ```
 
 A function to activate speccer based on script attributes.
 
 #### Parameters
 
-| Parameter | Type                                                             | Description                      |
-| --------- | ---------------------------------------------------------------- | -------------------------------- |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
 | `speccer` | [`SpeccerFunctionType`](../types/speccer.md#speccerfunctiontype) | The speccer function to execute. |
 
 #### Returns
@@ -87,22 +82,22 @@ A function to activate speccer based on script attributes.
 
 #### Defined in
 
-[config/browser.ts:155](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L155)
+[config/browser.ts:156](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L156)
 
----
+***
 
 ### dom()
 
 ```ts
-function dom(speccer): void;
+function dom(speccer): void
 ```
 
 A function to initialize speccer when the DOM is ready.
 
 #### Parameters
 
-| Parameter | Type                                                             | Description                      |
-| --------- | ---------------------------------------------------------------- | -------------------------------- |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
 | `speccer` | [`SpeccerFunctionType`](../types/speccer.md#speccerfunctiontype) | The speccer function to execute. |
 
 #### Returns
@@ -118,14 +113,14 @@ A function to initialize speccer when the DOM is ready.
 
 #### Defined in
 
-[config/browser.ts:68](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L68)
+[config/browser.ts:69](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L69)
 
----
+***
 
 ### lazy()
 
 ```ts
-function lazy(): void;
+function lazy(): void
 ```
 
 A function to initialize lazy speccer functionality.
@@ -143,22 +138,22 @@ A function to initialize lazy speccer functionality.
 
 #### Defined in
 
-[config/browser.ts:86](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L86)
+[config/browser.ts:87](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L87)
 
----
+***
 
 ### manual()
 
 ```ts
-function manual(speccer): void;
+function manual(speccer): void
 ```
 
 A function to manually activate speccer.
 
 #### Parameters
 
-| Parameter | Type                                                             | Description                      |
-| --------- | ---------------------------------------------------------------- | -------------------------------- |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
 | `speccer` | [`SpeccerFunctionType`](../types/speccer.md#speccerfunctiontype) | The speccer function to execute. |
 
 #### Returns
@@ -174,9 +169,9 @@ A function to manually activate speccer.
 
 #### Defined in
 
-[config/browser.ts:140](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L140)
+[config/browser.ts:141](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L141)
 
----
+***
 
 ## Contributing
 
@@ -192,8 +187,7 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
 
----
-
+***
 <p class="ph">
   This project created by
   <a rel="noopener noreferrer" target="_blank" class="ph" href="http://phun-ky.net" property="cc:attributionName">
