@@ -1,16 +1,18 @@
-[**@phun-ky/speccer**](../README.md) • **Docs**
-
-***
+<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/>
 
 [@phun-ky/speccer](../README.md) / utils/constants
 
 # utils/constants
 
+> Last updated 2024-08-14T10:16:53.371Z
+
 ## Variables
 
 ### SPECCER\_DEFAULT\_LINE\_WIDTH
 
-> `const` **SPECCER\_DEFAULT\_LINE\_WIDTH**: `1` = `1`
+```ts
+const SPECCER_DEFAULT_LINE_WIDTH: 1 = 1;
+```
 
 Default line width value.
 
@@ -30,7 +32,9 @@ console.log(defaultLineWidth); // Example output: 1
 
 ### SPECCER\_DEFAULT\_MEASURE\_SIZE
 
-> `const` **SPECCER\_DEFAULT\_MEASURE\_SIZE**: `8` = `8`
+```ts
+const SPECCER_DEFAULT_MEASURE_SIZE: 8 = 8;
+```
 
 Default value for measure size.
 
@@ -50,7 +54,9 @@ console.log(defaultMeasureSize); // Example output: 8
 
 ### SPECCER\_DEFAULT\_MEASURE\_SIZE\_NEG
 
-> `const` **SPECCER\_DEFAULT\_MEASURE\_SIZE\_NEG**: `number`
+```ts
+const SPECCER_DEFAULT_MEASURE_SIZE_NEG: number;
+```
 
 Negative default value for measure size.
 
@@ -70,7 +76,9 @@ console.log(negativeDefaultMeasureSize); // Example output: -8
 
 ### SPECCER\_DEFAULT\_PIN\_SPACE
 
-> `const` **SPECCER\_DEFAULT\_PIN\_SPACE**: `48` = `48`
+```ts
+const SPECCER_DEFAULT_PIN_SPACE: 48 = 48;
+```
 
 Default value for pin space.
 
@@ -90,7 +98,9 @@ console.log(defaultPinSpace); // Example output: 48
 
 ### SPECCER\_DEFAULT\_PIN\_SPACE\_NEG
 
-> `const` **SPECCER\_DEFAULT\_PIN\_SPACE\_NEG**: `number`
+```ts
+const SPECCER_DEFAULT_PIN_SPACE_NEG: number;
+```
 
 Negative default value for pin space.
 
@@ -110,7 +120,9 @@ console.log(negativeDefaultPinSpace); // Example output: -48
 
 ### SPECCER\_LITERALS
 
-> `const` **SPECCER\_LITERALS**: `string`[]
+```ts
+const SPECCER_LITERALS: string[];
+```
 
 Array of uppercase letters.
 
@@ -130,7 +142,9 @@ console.log(letters); // Example output: ['A', 'B', 'C', ...]
 
 ### SPECCER\_TAGS\_TO\_AVOID
 
-> `const` **SPECCER\_TAGS\_TO\_AVOID**: `string`[]
+```ts
+const SPECCER_TAGS_TO_AVOID: string[];
+```
 
 Array of HTML tags to avoid when processing.
 
@@ -145,3 +159,29 @@ console.log(tagsToAvoid); // Example output: ['TR', 'TH', 'TD', ...]
 #### Defined in
 
 [utils/constants.ts:27](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L27)
+
+***
+
+## Contributing
+
+Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+
+## Sponsor me
+
+I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+
+The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+
+[Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
+
+![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
+
+***
+<p class="ph">
+  This project created by
+  <a rel="noopener noreferrer" target="_blank" class="ph" href="http://phun-ky.net" property="cc:attributionName">
+    Alexander Vassbotn Røyne-Helgesen</a>
+  is licensed under a
+  <a rel="noopener noreferrer" target="_blank" class="ph" href="https://choosealicense.com/licenses/mit/">
+    MIT License </a>.
+</p>

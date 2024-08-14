@@ -1,16 +1,35 @@
-[**@phun-ky/speccer**](../README.md) • **Docs**
-
-***
+<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/>
 
 [@phun-ky/speccer](../README.md) / utils/bezier
 
 # utils/bezier
 
+> Last updated 2024-08-14T10:16:53.369Z
+
 ## Functions
 
 ### createBezierCurveCoordinates()
 
-> **createBezierCurveCoordinates**(`coords`, `options`): `object`
+```ts
+function createBezierCurveCoordinates(coords, options): {
+  firstControl: {
+     x: number;
+     y: y1;
+    };
+  firstPoint: {
+     x: x1;
+     y: y1;
+    };
+  lastControl: {
+     x: number;
+     y: y2;
+    };
+  lastPoint: {
+     x: x2;
+     y: y2;
+    };
+}
+```
 
 Calculates coordinates for a Bezier curve between two points.
 
@@ -23,22 +42,41 @@ Calculates coordinates for a Bezier curve between two points.
 
 #### Returns
 
-`object`
+```ts
+{
+  firstControl: {
+     x: number;
+     y: y1;
+    };
+  firstPoint: {
+     x: x1;
+     y: y1;
+    };
+  lastControl: {
+     x: number;
+     y: y2;
+    };
+  lastPoint: {
+     x: x2;
+     y: y2;
+    };
+}
+```
 
 Coordinates for the Bezier curve.
 
 | Name | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `firstControl` | `object` | - | [utils/bezier.ts:71](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L71) |
+| `firstControl` | \{ `x`: `number`; `y`: `y1`; \} | - | [utils/bezier.ts:71](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L71) |
 | `firstControl.x` | `number` | - | [utils/bezier.ts:34](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L34) |
 | `firstControl.y` | `number` | y1 | [utils/bezier.ts:34](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L34) |
-| `firstPoint` | `object` | - | [utils/bezier.ts:70](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L70) |
+| `firstPoint` | \{ `x`: `x1`; `y`: `y1`; \} | - | [utils/bezier.ts:70](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L70) |
 | `firstPoint.x` | `number` | x1 | [utils/bezier.ts:31](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L31) |
 | `firstPoint.y` | `number` | y1 | [utils/bezier.ts:31](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L31) |
-| `lastControl` | `object` | - | [utils/bezier.ts:73](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L73) |
+| `lastControl` | \{ `x`: `number`; `y`: `y2`; \} | - | [utils/bezier.ts:73](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L73) |
 | `lastControl.x` | `number` | - | [utils/bezier.ts:35](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L35) |
 | `lastControl.y` | `number` | y2 | [utils/bezier.ts:35](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L35) |
-| `lastPoint` | `object` | - | [utils/bezier.ts:72](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L72) |
+| `lastPoint` | \{ `x`: `x2`; `y`: `y2`; \} | - | [utils/bezier.ts:72](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L72) |
 | `lastPoint.x` | `number` | x2 | [utils/bezier.ts:32](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L32) |
 | `lastPoint.y` | `number` | y2 | [utils/bezier.ts:32](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L32) |
 
@@ -59,7 +97,12 @@ const coordinates = createBezierCurveCoordinates(
 
 ### getCurlySVGPath()
 
-> **getCurlySVGPath**(`startEl`, `stopEl`, `options`): `Promise`\<`string`\>
+```ts
+function getCurlySVGPath(
+   startEl, 
+   stopEl, 
+options): Promise<string>
+```
 
 Generates an SVG path for a curved line between two HTML elements.
 
@@ -96,7 +139,14 @@ const svgPath = getCurlySVGPath(startElement, stopElement, {
 
 ### getPositionsForCurlySVGPath()
 
-> **getPositionsForCurlySVGPath**(`direction`): `object`
+```ts
+function getPositionsForCurlySVGPath(direction): {
+  path1pos1: string;
+  path1pos2: string;
+  path2pos1: string;
+  path2pos2: string;
+}
+```
 
 Returns positions for creating an SVG path for a curved line based on a cardinal direction.
 
@@ -108,7 +158,14 @@ Returns positions for creating an SVG path for a curved line based on a cardinal
 
 #### Returns
 
-`object`
+```ts
+{
+  path1pos1: string;
+  path1pos2: string;
+  path2pos1: string;
+  path2pos2: string;
+}
+```
 
 Positions for creating an SVG path for a curved line.
 
@@ -133,7 +190,12 @@ const positions = getPositionsForCurlySVGPath('west');
 
 ### getPositionsForSVGPath()
 
-> **getPositionsForSVGPath**(`direction`): `object`
+```ts
+function getPositionsForSVGPath(direction): {
+  pos1: string;
+  pos2: string;
+}
+```
 
 Returns positions for creating an SVG path based on a cardinal direction.
 
@@ -145,7 +207,12 @@ Returns positions for creating an SVG path based on a cardinal direction.
 
 #### Returns
 
-`object`
+```ts
+{
+  pos1: string;
+  pos2: string;
+}
+```
 
 Positions for creating an SVG path.
 
@@ -168,7 +235,12 @@ const positions = getPositionsForSVGPath('east');
 
 ### getSVGPath()
 
-> **getSVGPath**(`startEl`, `stopEl`, `options`): `Promise`\<`string`\>
+```ts
+function getSVGPath(
+   startEl, 
+   stopEl, 
+options): Promise<string>
+```
 
 Generates an SVG path for a straight line between two HTML elements.
 
@@ -198,3 +270,29 @@ const svgPath = getSVGPath(startElement, stopElement, {
 #### Defined in
 
 [utils/bezier.ts:156](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L156)
+
+***
+
+## Contributing
+
+Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+
+## Sponsor me
+
+I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+
+The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+
+[Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
+
+![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
+
+***
+<p class="ph">
+  This project created by
+  <a rel="noopener noreferrer" target="_blank" class="ph" href="http://phun-ky.net" property="cc:attributionName">
+    Alexander Vassbotn Røyne-Helgesen</a>
+  is licensed under a
+  <a rel="noopener noreferrer" target="_blank" class="ph" href="https://choosealicense.com/licenses/mit/">
+    MIT License </a>.
+</p>

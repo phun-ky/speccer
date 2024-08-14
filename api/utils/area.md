@@ -1,16 +1,18 @@
-[**@phun-ky/speccer**](../README.md) • **Docs**
-
-***
+<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/>
 
 [@phun-ky/speccer](../README.md) / utils/area
 
 # utils/area
 
+> Last updated 2024-08-14T10:16:53.368Z
+
 ## Functions
 
 ### getAreasFromString()
 
-> **getAreasFromString**(`areaString`): `string`[]
+```ts
+function getAreasFromString(areaString): string[]
+```
 
 Splits a string containing areas into an array of strings.
 
@@ -41,7 +43,9 @@ const areas = getAreasFromString('left right top');
 
 ### isBottomArea()
 
-> **isBottomArea**(`areaString`): `boolean`
+```ts
+function isBottomArea(areaString): boolean
+```
 
 Checks if 'bottom' area is present in the provided areaString.
 
@@ -65,7 +69,9 @@ Checks if 'bottom' area is present in the provided areaString.
 
 ### isCurly()
 
-> **isCurly**(`areaString`): `boolean`
+```ts
+function isCurly(areaString): boolean
+```
 
 Checks if the provided areaString contains 'curly' and 'full' areas.
 
@@ -89,7 +95,9 @@ Checks if the provided areaString contains 'curly' and 'full' areas.
 
 ### isEncloseArea()
 
-> **isEncloseArea**(`areaString`): `boolean`
+```ts
+function isEncloseArea(areaString): boolean
+```
 
 Checks if 'enclose' area is present in the provided areaString.
 
@@ -113,7 +121,9 @@ Checks if 'enclose' area is present in the provided areaString.
 
 ### isFullArea()
 
-> **isFullArea**(`areaString`): `boolean`
+```ts
+function isFullArea(areaString): boolean
+```
 
 Checks if 'full' area is present in the provided areaString.
 
@@ -137,7 +147,9 @@ Checks if 'full' area is present in the provided areaString.
 
 ### isHeightArea()
 
-> **isHeightArea**(`areaString`): `boolean`
+```ts
+function isHeightArea(areaString): boolean
+```
 
 Checks if 'height' area is present in the provided areaString.
 
@@ -161,7 +173,9 @@ Checks if 'height' area is present in the provided areaString.
 
 ### isLeftArea()
 
-> **isLeftArea**(`areaString`): `boolean`
+```ts
+function isLeftArea(areaString): boolean
+```
 
 Checks if 'left' area is present in the provided areaString.
 
@@ -185,7 +199,9 @@ Checks if 'left' area is present in the provided areaString.
 
 ### isRightArea()
 
-> **isRightArea**(`areaString`): `boolean`
+```ts
+function isRightArea(areaString): boolean
+```
 
 Checks if 'right' area is present in the provided areaString.
 
@@ -209,7 +225,9 @@ Checks if 'right' area is present in the provided areaString.
 
 ### isTopArea()
 
-> **isTopArea**(`areaString`): `boolean`
+```ts
+function isTopArea(areaString): boolean
+```
 
 Checks if 'top' area is present in the provided areaString.
 
@@ -233,7 +251,9 @@ Checks if 'top' area is present in the provided areaString.
 
 ### isWidthArea()
 
-> **isWidthArea**(`areaString`): `boolean`
+```ts
+function isWidthArea(areaString): boolean
+```
 
 Checks if 'width' area is present in the provided areaString.
 
@@ -257,7 +277,9 @@ Checks if 'width' area is present in the provided areaString.
 
 ### useSVG()
 
-> **useSVG**(`areaString`): `boolean`
+```ts
+function useSVG(areaString): boolean
+```
 
 Checks if the provided areaString contains SVG-related areas.
 
@@ -276,3 +298,29 @@ Checks if the provided areaString contains SVG-related areas.
 #### Defined in
 
 [utils/area.ts:120](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L120)
+
+***
+
+## Contributing
+
+Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+
+## Sponsor me
+
+I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+
+The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+
+[Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
+
+![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
+
+***
+<p class="ph">
+  This project created by
+  <a rel="noopener noreferrer" target="_blank" class="ph" href="http://phun-ky.net" property="cc:attributionName">
+    Alexander Vassbotn Røyne-Helgesen</a>
+  is licensed under a
+  <a rel="noopener noreferrer" target="_blank" class="ph" href="https://choosealicense.com/licenses/mit/">
+    MIT License </a>.
+</p>

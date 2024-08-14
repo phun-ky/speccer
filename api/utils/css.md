@@ -1,16 +1,18 @@
-[**@phun-ky/speccer**](../README.md) • **Docs**
-
-***
+<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/>
 
 [@phun-ky/speccer](../README.md) / utils/css
 
 # utils/css
 
+> Last updated 2024-08-14T10:16:53.371Z
+
 ## Functions
 
 ### getClassNameFromCSSProperty()
 
-> **getClassNameFromCSSProperty**(`property`): `string`
+```ts
+function getClassNameFromCSSProperty(property): string
+```
 
 Converts a CSS property name with "Top", "Right", "Bottom", or "Left" into a class name.
 
@@ -42,7 +44,9 @@ console.log(className); // Example output: "margin top"
 
 ### getNumberValue()
 
-> **getNumberValue**(`value`): `number`
+```ts
+function getNumberValue(value): number
+```
 
 Parses a string value into an integer.
 
@@ -74,7 +78,9 @@ console.log(intValue); // Example output: 42
 
 ### getSpacing()
 
-> **getSpacing**(`style`): [`SpacingCSSPropertiesType`](../types/css.md#spacingcsspropertiestype)
+```ts
+function getSpacing(style): SpacingCSSPropertiesType
+```
 
 Extracts spacing-related CSS properties from a style object.
 
@@ -109,7 +115,9 @@ console.log(spacing); // Example output: { marginTop: "10px", marginLeft: "20px"
 
 ### getTypography()
 
-> **getTypography**(`style`): [`TypographyCSSPropertiesType`](../types/css.md#typographycsspropertiestype)
+```ts
+function getTypography(style): TypographyCSSPropertiesType
+```
 
 Extracts typography-related CSS properties from a style object.
 
@@ -144,7 +152,9 @@ console.log(typography); // Example output: { fontSize: "16px", fontWeight: "bol
 
 ### lineWidth()
 
-> **lineWidth**(`el`): `number`
+```ts
+function lineWidth(el): number
+```
 
 Retrieves the value of a custom CSS property "--ph-speccer-line-width" from an element.
 
@@ -176,7 +186,9 @@ console.log(value); // Example output: 1.5
 
 ### measureSize()
 
-> **measureSize**(`el`): `number`
+```ts
+function measureSize(el): number
+```
 
 Retrieves the value of a custom CSS property "--ph-speccer-measure-size" from an element.
 
@@ -208,7 +220,9 @@ console.log(value); // Example output: 20
 
 ### normalizeNumberValue()
 
-> **normalizeNumberValue**(`value`): `number`
+```ts
+function normalizeNumberValue(value): number
+```
 
 Normalizes a string or number value to ensure it's a valid number.
 If the value is within the range [0, 1] or [-1, 0), it's normalized to 0.
@@ -241,7 +255,9 @@ console.log(normalizedValue); // Example output: 0.5
 
 ### pinSpace()
 
-> **pinSpace**(`el`): `number`
+```ts
+function pinSpace(el): number
+```
 
 Retrieves the value of a custom CSS property "--ph-speccer-pin-space" from an element.
 
@@ -268,3 +284,29 @@ console.log(value); // Example output: 10
 #### Defined in
 
 [utils/css.ts:170](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L170)
+
+***
+
+## Contributing
+
+Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+
+## Sponsor me
+
+I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+
+The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+
+[Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
+
+![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
+
+***
+<p class="ph">
+  This project created by
+  <a rel="noopener noreferrer" target="_blank" class="ph" href="http://phun-ky.net" property="cc:attributionName">
+    Alexander Vassbotn Røyne-Helgesen</a>
+  is licensed under a
+  <a rel="noopener noreferrer" target="_blank" class="ph" href="https://choosealicense.com/licenses/mit/">
+    MIT License </a>.
+</p>

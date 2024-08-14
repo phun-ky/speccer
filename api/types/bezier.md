@@ -1,16 +1,21 @@
-[**@phun-ky/speccer**](../README.md) • **Docs**
-
-***
+<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/>
 
 [@phun-ky/speccer](../README.md) / types/bezier
 
 # types/bezier
 
+> Last updated 2024-08-14T10:16:53.364Z
+
 ## Type Aliases
 
 ### BezierPathOptionsType
 
-> **BezierPathOptionsType**: `object`
+```ts
+type BezierPathOptionsType: {
+  pos1: string;
+  pos2: string;
+};
+```
 
 Options for creating a bezier path.
 
@@ -77,7 +82,14 @@ The second position.
 
 ### CreateCoordinatesForCurveCoordParamType
 
-> **CreateCoordinatesForCurveCoordParamType**: `object`
+```ts
+type CreateCoordinatesForCurveCoordParamType: {
+  x1: number;
+  x2: number;
+  y1: number;
+  y2: number;
+};
+```
 
 Parameters for creating coordinates for a curve.
 
@@ -188,7 +200,13 @@ The y-coordinate of the second point.
 
 ### CreateCoordinatesForCurveOptionsParamType
 
-> **CreateCoordinatesForCurveOptionsParamType**: `object`
+```ts
+type CreateCoordinatesForCurveOptionsParamType: {
+  direct: boolean;
+  direction: string;
+  firstSet: boolean;
+};
+```
 
 Options for creating coordinates for a curve.
 
@@ -277,7 +295,14 @@ Indicates if this is the first set of coordinates.
 
 ### CurlyBezierPathOptionsType
 
-> **CurlyBezierPathOptionsType**: `object`
+```ts
+type CurlyBezierPathOptionsType: {
+  direction: string;
+  firstSet: boolean;
+  pos1: string;
+  pos2: string;
+};
+```
 
 Options for creating a curly bezier path.
 
@@ -388,10 +413,40 @@ The second position.
 
 ### DissectStylesOptionsType
 
-> **DissectStylesOptionsType**: `Record`\<`string`, `never`\> \| `object`
+```ts
+type DissectStylesOptionsType: Record<string, never> | {
+  isCurly: boolean;
+};
+```
 
 Options for dissect styles.
 
 #### Defined in
 
 [types/bezier.ts:5](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L5)
+
+***
+
+## Contributing
+
+Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+
+## Sponsor me
+
+I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+
+The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+
+[Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
+
+![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
+
+***
+<p class="ph">
+  This project created by
+  <a rel="noopener noreferrer" target="_blank" class="ph" href="http://phun-ky.net" property="cc:attributionName">
+    Alexander Vassbotn Røyne-Helgesen</a>
+  is licensed under a
+  <a rel="noopener noreferrer" target="_blank" class="ph" href="https://choosealicense.com/licenses/mit/">
+    MIT License </a>.
+</p>

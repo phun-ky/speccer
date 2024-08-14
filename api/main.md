@@ -1,18 +1,10 @@
-[**@phun-ky/speccer**](README.md) • **Docs**
-
-***
+<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/>
 
 [@phun-ky/speccer](README.md) / main
 
 # main
 
-![Speccer hero, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-hero.png?raw=true)
-SPECCER, a zero dependency package to highlight elements
-
-## See
-
- - https://phun-ky.net/projects/speccer/
- - https://github.com/phun-ky/speccer
+> Last updated 2024-08-14T10:16:53.363Z
 
 ## Examples
 
@@ -33,7 +25,13 @@ speccer();
 
 ### dissect
 
-> `const` **dissect**: `object`
+```ts
+const dissect: {
+  create: dissectCreate;
+  dissect: _dissect;
+  element: dissectElement;
+};
+```
 
 #### Type declaration
 
@@ -62,7 +60,7 @@ dissectCreate
 </td>
 <td>
 
-[main.ts:62](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L62)
+[main.ts:58](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L58)
 
 </td>
 </tr>
@@ -84,7 +82,7 @@ dissectCreate
 </td>
 <td>
 
-[main.ts:64](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L64)
+[main.ts:60](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L60)
 
 </td>
 </tr>
@@ -106,7 +104,7 @@ dissectElement
 </td>
 <td>
 
-[main.ts:63](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L63)
+[main.ts:59](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L59)
 
 </td>
 </tr>
@@ -114,13 +112,18 @@ dissectElement
 
 #### Defined in
 
-[main.ts:61](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L61)
+[main.ts:57](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L57)
 
 ***
 
 ### grid
 
-> `const` **grid**: `object`
+```ts
+const grid: {
+  create: gridCreate;
+  element: gridElement;
+};
+```
 
 #### Type declaration
 
@@ -149,7 +152,7 @@ gridCreate
 </td>
 <td>
 
-[main.ts:52](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L52)
+[main.ts:48](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L48)
 
 </td>
 </tr>
@@ -171,7 +174,7 @@ gridElement
 </td>
 <td>
 
-[main.ts:53](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L53)
+[main.ts:49](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L49)
 
 </td>
 </tr>
@@ -179,13 +182,18 @@ gridElement
 
 #### Defined in
 
-[main.ts:51](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L51)
+[main.ts:47](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L47)
 
 ***
 
 ### mark
 
-> `const` **mark**: `object`
+```ts
+const mark: {
+  create: markCreate;
+  element: markElement;
+};
+```
 
 #### Type declaration
 
@@ -214,7 +222,7 @@ markCreate
 </td>
 <td>
 
-[main.ts:73](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L73)
+[main.ts:69](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L69)
 
 </td>
 </tr>
@@ -236,7 +244,7 @@ markElement
 </td>
 <td>
 
-[main.ts:74](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L74)
+[main.ts:70](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L70)
 
 </td>
 </tr>
@@ -244,13 +252,18 @@ markElement
 
 #### Defined in
 
-[main.ts:72](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L72)
+[main.ts:68](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L68)
 
 ***
 
 ### measure
 
-> `const` **measure**: `object`
+```ts
+const measure: {
+  create: measureCreate;
+  element: measureElement;
+};
+```
 
 #### Type declaration
 
@@ -279,7 +292,7 @@ measureCreate
 </td>
 <td>
 
-[main.ts:68](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L68)
+[main.ts:64](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L64)
 
 </td>
 </tr>
@@ -301,7 +314,7 @@ measureElement
 </td>
 <td>
 
-[main.ts:69](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L69)
+[main.ts:65](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L65)
 
 </td>
 </tr>
@@ -309,13 +322,20 @@ measureElement
 
 #### Defined in
 
-[main.ts:67](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L67)
+[main.ts:63](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L63)
 
 ***
 
 ### modes
 
-> `const` **modes**: `object`
+```ts
+const modes: {
+  activate: (speccer) => void;
+  dom: (speccer) => void;
+  lazy: () => void;
+  manual: (speccer) => void;
+};
+```
 
 #### Type declaration
 
@@ -338,7 +358,7 @@ measureElement
 </td>
 <td>
 
-[main.ts:86](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L86)
+[main.ts:82](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L82)
 
 </td>
 </tr>
@@ -355,7 +375,7 @@ measureElement
 </td>
 <td>
 
-[main.ts:83](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L83)
+[main.ts:79](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L79)
 
 </td>
 </tr>
@@ -372,7 +392,7 @@ measureElement
 </td>
 <td>
 
-[main.ts:84](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L84)
+[main.ts:80](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L80)
 
 </td>
 </tr>
@@ -389,7 +409,7 @@ measureElement
 </td>
 <td>
 
-[main.ts:85](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L85)
+[main.ts:81](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L81)
 
 </td>
 </tr>
@@ -397,13 +417,18 @@ measureElement
 
 #### Defined in
 
-[main.ts:82](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L82)
+[main.ts:78](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L78)
 
 ***
 
 ### spacing
 
-> `const` **spacing**: `object`
+```ts
+const spacing: {
+  create: spacingCreate;
+  element: spacingElement;
+};
+```
 
 #### Type declaration
 
@@ -432,7 +457,7 @@ spacingCreate
 </td>
 <td>
 
-[main.ts:57](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L57)
+[main.ts:53](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L53)
 
 </td>
 </tr>
@@ -454,7 +479,7 @@ spacingElement
 </td>
 <td>
 
-[main.ts:58](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L58)
+[main.ts:54](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L54)
 
 </td>
 </tr>
@@ -462,13 +487,18 @@ spacingElement
 
 #### Defined in
 
-[main.ts:56](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L56)
+[main.ts:52](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L52)
 
 ***
 
 ### typography
 
-> `const` **typography**: `object`
+```ts
+const typography: {
+  create: typographyCreate;
+  element: typographyElement;
+};
+```
 
 #### Type declaration
 
@@ -497,7 +527,7 @@ typographyCreate
 </td>
 <td>
 
-[main.ts:78](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L78)
+[main.ts:74](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L74)
 
 </td>
 </tr>
@@ -519,7 +549,7 @@ typographyElement
 </td>
 <td>
 
-[main.ts:79](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L79)
+[main.ts:75](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L75)
 
 </td>
 </tr>
@@ -527,13 +557,15 @@ typographyElement
 
 #### Defined in
 
-[main.ts:77](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L77)
+[main.ts:73](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L73)
 
 ## Functions
 
 ### default()
 
-> **default**(): `void`
+```ts
+function default(): void
+```
 
 #### Returns
 
@@ -541,4 +573,30 @@ typographyElement
 
 #### Defined in
 
-[main.ts:89](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L89)
+[main.ts:85](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L85)
+
+***
+
+## Contributing
+
+Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+
+## Sponsor me
+
+I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+
+The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+
+[Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
+
+![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
+
+***
+<p class="ph">
+  This project created by
+  <a rel="noopener noreferrer" target="_blank" class="ph" href="http://phun-ky.net" property="cc:attributionName">
+    Alexander Vassbotn Røyne-Helgesen</a>
+  is licensed under a
+  <a rel="noopener noreferrer" target="_blank" class="ph" href="https://choosealicense.com/licenses/mit/">
+    MIT License </a>.
+</p>
