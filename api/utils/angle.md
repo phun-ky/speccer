@@ -4,7 +4,7 @@
 
 # utils/angle
 
-> Last updated 2024-08-14T10:18:52.251Z
+> Last updated 2024-08-14T10:23:12.585Z
 
 ## Functions
 

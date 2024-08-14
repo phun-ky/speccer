@@ -1,5 +1,14 @@
 # Changelog
 
+## [9.5.4](https://github.com/phun-ky/speccer/compare/v9.5.3...v9.5.4) (2024-08-14)
+
+
+### Documentation
+
+* ✏️ Add custom plugin for typedoc, to ensure header/footer ([72ab7e7](https://github.com/phun-ky/speccer/commit/72ab7e709671533283dab2a41e0392b690dfbcd6))
+* ✏️ Prefer modules over members, reducing files ([b340bf5](https://github.com/phun-ky/speccer/commit/b340bf5c78a72120c6ad5ada816d9b77e172a66f))
+* ✏️ Regenerate documentation ([5769efc](https://github.com/phun-ky/speccer/commit/5769efce83ed41ca7a5e9e8bcddae800026c2cfa))
+
 ## [9.5.3](https://github.com/phun-ky/speccer/compare/v9.5.2...v9.5.3) (2024-08-14)
 
 
