@@ -8,20 +8,7 @@
 
 ## Properties
 
-### x
-
-> **x**: `number`
-
-#### Defined in
-
-[types/xy.ts:2](https://github.com/phun-ky/speccer/blob/main/src/types/xy.ts#L2)
-
-***
-
-### y
-
-> **y**: `number`
-
-#### Defined in
-
-[types/xy.ts:3](https://github.com/phun-ky/speccer/blob/main/src/types/xy.ts#L3)
+| Property | Type | Defined in |
+| ------ | ------ | ------ |
+| `x` | `number` | [types/xy.ts:2](https://github.com/phun-ky/speccer/blob/main/src/types/xy.ts#L2) |
+| `y` | `number` | [types/xy.ts:3](https://github.com/phun-ky/speccer/blob/main/src/types/xy.ts#L3) |

@@ -18,13 +18,10 @@ Creates a new DrawSVGLine instance.
 
 #### Parameters
 
-• **startElement**: `HTMLElement`
-
-The starting element for the line.
-
-• **stopElement**: `HTMLElement`
-
-The ending element for the line.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `startElement` | `HTMLElement` | The starting element for the line. |
+| `stopElement` | `HTMLElement` | The ending element for the line. |
 
 #### Returns
 
@@ -36,33 +33,11 @@ The ending element for the line.
 
 ## Properties
 
-### line
-
-> **line**: `SVGPathElement`
-
-#### Defined in
-
-[utils/classes/DrawSVGLine.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L14)
-
-***
-
-### startElement
-
-> **startElement**: `HTMLElement`
-
-#### Defined in
-
-[utils/classes/DrawSVGLine.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L12)
-
-***
-
-### stopElement
-
-> **stopElement**: `HTMLElement`
-
-#### Defined in
-
-[utils/classes/DrawSVGLine.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L13)
+| Property | Type | Defined in |
+| ------ | ------ | ------ |
+| `line` | `SVGPathElement` | [utils/classes/DrawSVGLine.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L14) |
+| `startElement` | `HTMLElement` | [utils/classes/DrawSVGLine.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L12) |
+| `stopElement` | `HTMLElement` | [utils/classes/DrawSVGLine.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L13) |
 
 ## Methods
 
@@ -90,9 +65,9 @@ Draws the line based on the provided path.
 
 #### Parameters
 
-• **path**: `SVGPathElement`
-
-The SVGPathElement to be used as the base path.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `path` | `SVGPathElement` | The SVGPathElement to be used as the base path. |
 
 #### Returns
 

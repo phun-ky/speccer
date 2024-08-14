@@ -12,9 +12,9 @@ Converts a CSS property name with "Top", "Right", "Bottom", or "Left" into a cla
 
 ## Parameters
 
-• **property**: `string`
-
-The CSS property name.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `property` | `string` | The CSS property name. |
 
 ## Returns
 

@@ -14,13 +14,10 @@ Adds a shortcut element to the document body based on the provided HTML element 
 
 ## Parameters
 
-• **el**: `HTMLElement`
-
-Target HTML element.
-
-• **shortcutString**: `string`
-
-Shortcut string to be displayed.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `el` | `HTMLElement` | Target HTML element. |
+| `shortcutString` | `string` | Shortcut string to be displayed. |
 
 ## Returns
 

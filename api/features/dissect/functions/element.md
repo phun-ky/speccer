@@ -10,13 +10,11 @@
 
 Create dissected elements based on the section element and its data-anatomy attributes.
 
-![dissect](https://github.com/phun-ky/speccer/blob/main/public/anatomy.png?raw=true)
-
 ## Parameters
 
-• **sectionEl**: `HTMLElement`
-
-The section element containing dissected elements.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `sectionEl` | `HTMLElement` | The section element containing dissected elements. |
 
 ## Returns
 
@@ -33,4 +31,4 @@ element(sectionElement);
 
 ## Defined in
 
-[features/dissect/index.ts:24](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/index.ts#L24)
+[features/dissect/index.ts:41](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/index.ts#L41)

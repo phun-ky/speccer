@@ -14,9 +14,9 @@ Create a specced typography element for a given target element.
 
 ## Parameters
 
-• **targetEl**: `HTMLElement`
-
-The target element to specc typography for.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `targetEl` | `HTMLElement` | The target element to specc typography for. |
 
 ## Returns
 

@@ -18,13 +18,10 @@ Creates a new DrawSVGCurlyBracket instance.
 
 #### Parameters
 
-• **startElement**: `HTMLElement`
-
-The starting element for the bracket.
-
-• **stopElement**: `HTMLElement`
-
-The ending element for the bracket.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `startElement` | `HTMLElement` | The starting element for the bracket. |
+| `stopElement` | `HTMLElement` | The ending element for the bracket. |
 
 #### Returns
 
@@ -36,43 +33,12 @@ The ending element for the bracket.
 
 ## Properties
 
-### firstPathElement
-
-> **firstPathElement**: `SVGPathElement`
-
-#### Defined in
-
-[utils/classes/DrawSVGCurlyBracket.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L14)
-
-***
-
-### secondPathElement
-
-> **secondPathElement**: `SVGPathElement`
-
-#### Defined in
-
-[utils/classes/DrawSVGCurlyBracket.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L15)
-
-***
-
-### startElement
-
-> **startElement**: `HTMLElement`
-
-#### Defined in
-
-[utils/classes/DrawSVGCurlyBracket.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L12)
-
-***
-
-### stopElement
-
-> **stopElement**: `HTMLElement`
-
-#### Defined in
-
-[utils/classes/DrawSVGCurlyBracket.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L13)
+| Property | Type | Defined in |
+| ------ | ------ | ------ |
+| `firstPathElement` | `SVGPathElement` | [utils/classes/DrawSVGCurlyBracket.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L14) |
+| `secondPathElement` | `SVGPathElement` | [utils/classes/DrawSVGCurlyBracket.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L15) |
+| `startElement` | `HTMLElement` | [utils/classes/DrawSVGCurlyBracket.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L12) |
+| `stopElement` | `HTMLElement` | [utils/classes/DrawSVGCurlyBracket.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L13) |
 
 ## Methods
 
@@ -100,9 +66,9 @@ Draws the curly bracket based on the provided path.
 
 #### Parameters
 
-• **path**: `SVGPathElement`
-
-The SVGPathElement to be used as the base path.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `path` | `SVGPathElement` | The SVGPathElement to be used as the base path. |
 
 #### Returns
 

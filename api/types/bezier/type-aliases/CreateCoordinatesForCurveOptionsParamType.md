@@ -12,23 +12,80 @@ Options for creating coordinates for a curve.
 
 ## Type declaration
 
-### direct?
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Defined in</th>
+</tr>
+<tr>
+<td>
 
-> `optional` **direct**: `boolean`
+`direct`
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Indicates whether the curve is direct.
 
-### direction
+</td>
+<td>
 
-> **direction**: `string`
+[types/bezier.ts:86](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L86)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`direction`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
 
 The direction of the curve.
 
-### firstSet?
+</td>
+<td>
 
-> `optional` **firstSet**: `boolean`
+[types/bezier.ts:96](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L96)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`firstSet`
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Indicates if this is the first set of coordinates.
+
+</td>
+<td>
+
+[types/bezier.ts:91](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L91)
+
+</td>
+</tr>
+</table>
 
 ## Defined in
 

@@ -23,4 +23,4 @@ A function to initialize lazy speccer functionality.
 
 ## Defined in
 
-[config/browser.ts:38](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L38)
+[config/browser.ts:80](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L80)

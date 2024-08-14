@@ -16,9 +16,9 @@ Adds a visual grid overlay to the target element if it has the appropriate data 
 
 ## Parameters
 
-• **targetElement**: `HTMLElement`
-
-The target element to add the grid overlay to.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `targetElement` | `HTMLElement` | The target element to add the grid overlay to. |
 
 ## Returns
 

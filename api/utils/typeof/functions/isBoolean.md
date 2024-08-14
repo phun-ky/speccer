@@ -12,9 +12,9 @@ Checks if the given variable is a boolean.
 
 ## Parameters
 
-• **variable**: `unknown`
-
-The variable to check.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `variable` | `unknown` | The variable to check. |
 
 ## Returns
 

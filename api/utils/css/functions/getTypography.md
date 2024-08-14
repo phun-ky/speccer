@@ -12,9 +12,9 @@ Extracts typography-related CSS properties from a style object.
 
 ## Parameters
 
-• **style**: [`TypographyCSSPropertiesType`](../../../types/css/type-aliases/TypographyCSSPropertiesType.md)
-
-The style object.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `style` | [`TypographyCSSPropertiesType`](../../../types/css/type-aliases/TypographyCSSPropertiesType.md) | The style object. |
 
 ## Returns
 

@@ -12,17 +12,11 @@ Generates an SVG path for a straight line between two HTML elements.
 
 ## Parameters
 
-• **startEl**: `HTMLElement`
-
-The starting HTML element.
-
-• **stopEl**: `HTMLElement`
-
-The ending HTML element.
-
-• **options**: [`BezierPathOptionsType`](../../../types/bezier/type-aliases/BezierPathOptionsType.md)
-
-Options for controlling the straight line.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `startEl` | `HTMLElement` | The starting HTML element. |
+| `stopEl` | `HTMLElement` | The ending HTML element. |
+| `options` | [`BezierPathOptionsType`](../../../types/bezier/type-aliases/BezierPathOptionsType.md) | Options for controlling the straight line. |
 
 ## Returns
 

@@ -13,9 +13,9 @@ If the index exceeds the available characters, it generates a new character by p
 
 ## Parameters
 
-• **targetIndex**: `number`
-
-The index of the character to retrieve.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `targetIndex` | `number` | The index of the character to retrieve. |
 
 ## Returns
 

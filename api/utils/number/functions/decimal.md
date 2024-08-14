@@ -12,13 +12,10 @@ Converts a number to a string with a specified number of decimal places.
 
 ## Parameters
 
-• **number**: `string` \| `number`
-
-The number to convert.
-
-• **decimals**: `number` = `3`
-
-The number of decimal places (default is 3).
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `number` | `string` \| `number` | `undefined` | The number to convert. |
+| `decimals` | `number` | `3` | The number of decimal places (default is 3). |
 
 ## Returns
 

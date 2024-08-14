@@ -12,9 +12,9 @@ Type definition for a debounced function that accepts any arguments.
 
 ## Parameters
 
-• ...**args**: `any`[]
-
-Arguments of any type.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| ...`args` | `any`[] | Arguments of any type. |
 
 ## Returns
 

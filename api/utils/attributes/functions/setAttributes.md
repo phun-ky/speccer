@@ -12,13 +12,10 @@ Sets attributes on an HTML element.
 
 ## Parameters
 
-• **el**: `HTMLElement`
-
-The HTML element to set attributes on.
-
-• **attrs?**: [`AttributesMapInterface`](../../../types/interfaces/attributes/interfaces/AttributesMapInterface.md)
-
-The attributes to set as a key-value mapping.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `el` | `HTMLElement` | The HTML element to set attributes on. |
+| `attrs`? | [`AttributesMapInterface`](../../../types/interfaces/attributes/interfaces/AttributesMapInterface.md) | The attributes to set as a key-value mapping. |
 
 ## Returns
 

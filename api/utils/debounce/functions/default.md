@@ -12,17 +12,11 @@ Creates a debounced version of a function that delays its execution until after 
 
 ## Parameters
 
-• **func**: [`DebounceAnyFunctionType`](../../../types/debounce/type-aliases/DebounceAnyFunctionType.md)
-
-The function to debounce.
-
-• **wait**: `number`
-
-The number of milliseconds to wait before invoking the function after the last call.
-
-• **immediate?**: `boolean` = `false`
-
-If `true`, the function is invoked immediately after the first call.
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `func` | [`DebounceAnyFunctionType`](../../../types/debounce/type-aliases/DebounceAnyFunctionType.md) | `undefined` | The function to debounce. |
+| `wait` | `number` | `undefined` | The number of milliseconds to wait before invoking the function after the last call. |
+| `immediate`? | `boolean` | `false` | If `true`, the function is invoked immediately after the first call. |
 
 ## Returns
 

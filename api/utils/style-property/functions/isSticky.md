@@ -12,9 +12,9 @@ Checks if an element has 'position: sticky'.
 
 ## Parameters
 
-• **element**: `HTMLElement`
-
-The target element.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `element` | `HTMLElement` | The target element. |
 
 ## Returns
 

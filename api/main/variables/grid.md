@@ -10,72 +10,59 @@
 
 ## Type declaration
 
-### create()
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default value</th>
+<th>Defined in</th>
+</tr>
+<tr>
+<td>
 
-> **create**: (`targetElement`, `styles`) => `HTMLDivElement` = `gridCreate`
+`create`
 
-Creates a visual grid overlay for a given target element.
+</td>
+<td>
 
-#### Parameters
+(`targetElement`, `styles`) => `HTMLDivElement`
 
-• **targetElement**: `HTMLElement`
+</td>
+<td>
 
-The target element to create the grid overlay for.
+gridCreate
 
-• **styles**: `CSSStyleDeclaration`
+</td>
+<td>
 
-The computed styles of the target element.
+[main.ts:52](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L52)
 
-#### Returns
+</td>
+</tr>
+<tr>
+<td>
 
-`HTMLDivElement`
+`element`
 
-The created grid container element.
+</td>
+<td>
 
-#### Example
+(`targetElement`) => `Promise`\<`void`\>
 
-```ts
-const targetElement = document.getElementById('target');
-if (targetElement) {
-  const styles = window.getComputedStyle(targetElement);
-  const gridOverlay = create(targetElement, styles);
-  document.body.appendChild(gridOverlay);
-}
-```
+</td>
+<td>
 
-### element()
+gridElement
 
-> **element**: (`targetElement`) => `Promise`\<`void`\> = `gridElement`
+</td>
+<td>
 
-Create a visual overlay to present the column gaps for a grid container
+[main.ts:53](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L53)
 
-Adds a visual grid overlay to the target element if it has the appropriate data attribute and is a grid.
-
-![grid](https://github.com/phun-ky/speccer/blob/main/public/grid.png?raw=true)
-
-#### Parameters
-
-• **targetElement**: `HTMLElement`
-
-The target element to add the grid overlay to.
-
-#### Returns
-
-`Promise`\<`void`\>
-
-A promise that resolves once the overlay has been added.
-
-#### Example
-
-```ts
-const targetElement = document.getElementById('target');
-if (targetElement) {
-  element(targetElement).then(() => {
-    console.log('Grid overlay added');
-  });
-}
-```
+</td>
+</tr>
+</table>
 
 ## Defined in
 
-[main.ts:30](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L30)
+[main.ts:51](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L51)

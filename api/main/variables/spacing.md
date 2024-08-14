@@ -10,62 +10,59 @@
 
 ## Type declaration
 
-### create()
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default value</th>
+<th>Defined in</th>
+</tr>
+<tr>
+<td>
 
-> **create**: (`text`, `tag`) => `HTMLElement` = `spacingCreate`
+`create`
 
-Create a spacing element with optional text content.
+</td>
+<td>
 
-#### Parameters
+(`text`, `tag`) => `HTMLElement`
 
-• **text**: `string` \| `number` = `''`
+</td>
+<td>
 
-The optional text content for the spacing element.
+spacingCreate
 
-• **tag**: `string` = `'span'`
+</td>
+<td>
 
-The HTML tag for the element (default is 'span').
+[main.ts:57](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L57)
 
-#### Returns
+</td>
+</tr>
+<tr>
+<td>
 
-`HTMLElement`
+`element`
 
-- The created spacing element.
+</td>
+<td>
 
-#### Example
+(`targetEl`) => `Promise`\<`void`\>
 
-```ts
-const spacingElement = create(20, 'div');
-document.body.appendChild(spacingElement);
-```
+</td>
+<td>
 
-### element()
+spacingElement
 
-> **element**: (`targetEl`) => `Promise`\<`void`\> = `spacingElement`
+</td>
+<td>
 
-Create and position spacing elements based on the target element's computed spacing styles.
+[main.ts:58](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L58)
 
-![spacing](https://github.com/phun-ky/speccer/blob/main/public/spacing.png?raw=true)
-
-#### Parameters
-
-• **targetEl**: `HTMLElement`
-
-The target element to create spacing elements for.
-
-#### Returns
-
-`Promise`\<`void`\>
-
-- A promise that resolves after creating and positioning the spacing elements.
-
-#### Example
-
-```ts
-const targetElement = document.getElementById('target');
-element(targetElement);
-```
+</td>
+</tr>
+</table>
 
 ## Defined in
 
-[main.ts:35](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L35)
+[main.ts:56](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L56)

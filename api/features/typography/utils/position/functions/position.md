@@ -12,17 +12,11 @@ Calculate the position for the speccer element relative to the target element.
 
 ## Parameters
 
-• **area**: `null` \| `string`
-
-The area information for positioning.
-
-• **targetEl**: `HTMLElement`
-
-The target element.
-
-• **speccerEl**: `HTMLElement`
-
-The speccer element to position.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `area` | `null` \| `string` | The area information for positioning. |
+| `targetEl` | `HTMLElement` | The target element. |
+| `speccerEl` | `HTMLElement` | The speccer element to position. |
 
 ## Returns
 
@@ -30,13 +24,10 @@ The speccer element to position.
 
 - A promise that resolves with the calculated position.
 
-### left
-
-> **left**: `string`
-
-### top
-
-> **top**: `string`
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| `left` | `string` | [features/typography/utils/position.ts:31](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/position.ts#L31) |
+| `top` | `string` | [features/typography/utils/position.ts:31](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/position.ts#L31) |
 
 ## Example
 

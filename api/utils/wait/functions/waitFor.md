@@ -12,9 +12,9 @@ Waits for the specified amount of time in milliseconds.
 
 ## Parameters
 
-• **ms**: `number`
-
-The number of milliseconds to wait.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `ms` | `number` | The number of milliseconds to wait. |
 
 ## Returns
 

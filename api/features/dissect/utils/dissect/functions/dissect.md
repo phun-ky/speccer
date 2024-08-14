@@ -15,17 +15,11 @@ of the target element. It handles different styles, such as curly brackets or li
 
 ## Parameters
 
-• **el**: `HTMLElement`
-
-The target element that contains the anatomy data.
-
-• **symbol**: `string`
-
-The symbol to use.
-
-• **areas?**: `string` = `''`
-
-Optional areas to use if not [data-anatomy] is set as an attribute on the element
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `el` | `HTMLElement` | `undefined` | The target element that contains the anatomy data. |
+| `symbol` | `string` | `undefined` | The symbol to use. |
+| `areas`? | `string` | `''` | Optional areas to use if not [data-anatomy] is set as an attribute on the element |
 
 ## Returns
 
