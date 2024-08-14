@@ -2,6 +2,7 @@
   "plugin": ["typedoc-plugin-markdown"],
   "out": "./api",
   "tsconfig": "tsconfig.json",
+  "outputFileStrategy": "modules",
   "interfacePropertiesFormat": "table",
   "classPropertiesFormat": "table",
   "enumMembersFormat": "table",
