@@ -12,13 +12,10 @@ Generate a HTML string for typography styles of a target element.
 
 ## Parameters
 
-• **targetEl**: `HTMLElement`
-
-The target element for which to generate typography styles.
-
-• **useHighlighting?**: `boolean` = `false`
-
-If we should use highlighting markup
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `targetEl` | `HTMLElement` | `undefined` | The target element for which to generate typography styles. |
+| `useHighlighting`? | `boolean` | `false` | If we should use highlighting markup |
 
 ## Returns
 

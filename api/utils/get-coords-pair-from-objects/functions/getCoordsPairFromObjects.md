@@ -12,21 +12,12 @@ Get the x and y coordinates of two elements and return them as an object.
 
 ## Parameters
 
-• **el1**: `HTMLElement`
-
-The first HTML element.
-
-• **el2**: `HTMLElement`
-
-The second HTML element.
-
-• **pos1?**: `string` = `'center'`
-
-The position to use for the first element.
-
-• **pos2?**: `string` = `'center'`
-
-The position to use for the second element.
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `el1` | `HTMLElement` | `undefined` | The first HTML element. |
+| `el2` | `HTMLElement` | `undefined` | The second HTML element. |
+| `pos1`? | `string` | `'center'` | The position to use for the first element. |
+| `pos2`? | `string` | `'center'` | The position to use for the second element. |
 
 ## Returns
 
@@ -34,21 +25,12 @@ The position to use for the second element.
 
 - An object containing the coordinates.
 
-### x1
-
-> **x1**: `number`
-
-### x2
-
-> **x2**: `number`
-
-### y1
-
-> **y1**: `number`
-
-### y2
-
-> **y2**: `number`
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| `x1` | `number` | [utils/get-coords-pair-from-objects.ts:25](https://github.com/phun-ky/speccer/blob/main/src/utils/get-coords-pair-from-objects.ts#L25) |
+| `x2` | `number` | [utils/get-coords-pair-from-objects.ts:25](https://github.com/phun-ky/speccer/blob/main/src/utils/get-coords-pair-from-objects.ts#L25) |
+| `y1` | `number` | [utils/get-coords-pair-from-objects.ts:25](https://github.com/phun-ky/speccer/blob/main/src/utils/get-coords-pair-from-objects.ts#L25) |
+| `y2` | `number` | [utils/get-coords-pair-from-objects.ts:25](https://github.com/phun-ky/speccer/blob/main/src/utils/get-coords-pair-from-objects.ts#L25) |
 
 ## Throws
 

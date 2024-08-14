@@ -10,109 +10,81 @@
 
 ## Type declaration
 
-### create()
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default value</th>
+<th>Defined in</th>
+</tr>
+<tr>
+<td>
 
-> **create**: (`textContent`, `area`, `id`, `n`) => `HTMLElement` = `dissectCreate`
+`create`
 
-Create a dissected element with optional text content, area description, and element type.
+</td>
+<td>
 
-#### Parameters
+(`textContent`, `area`, `id`, `n`) => `HTMLElement`
 
-• **textContent**: `string` = `''`
+</td>
+<td>
 
-The text content to add to the element.
+dissectCreate
 
-• **area**: `string`
+</td>
+<td>
 
-The area description for styling.
+[main.ts:62](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L62)
 
-• **id**: `string` = `''`
+</td>
+</tr>
+<tr>
+<td>
 
-The id of the dissection element
+`dissect`
 
-• **n**: `string` = `'span'`
+</td>
+<td>
 
-The element type.
+(`el`, `symbol`, `areas`?) => `Promise`\<`string` \| `void`\>
 
-#### Returns
+</td>
+<td>
 
-`HTMLElement`
+\_dissect
 
-- The created dissected element.
+</td>
+<td>
 
-#### Example
+[main.ts:64](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L64)
 
-```ts
-const dissectedElement = create('A', 'outline top', 'div');
-document.body.appendChild(dissectedElement);
-```
+</td>
+</tr>
+<tr>
+<td>
 
-### dissect()
+`element`
 
-> **dissect**: (`el`, `symbol`, `areas`?) => `Promise`\<`string` \| `void`\> = `_dissect`
+</td>
+<td>
 
-Create and style the dissection element as needed.
+(`sectionEl`) => `Promise`\<`void`\>
 
-This function appends a new dissection element to the document body based on the anatomy data attribute
-of the target element. It handles different styles, such as curly brackets or lines, based on the anatomy type.
+</td>
+<td>
 
-#### Parameters
+dissectElement
 
-• **el**: `HTMLElement`
+</td>
+<td>
 
-The target element that contains the anatomy data.
+[main.ts:63](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L63)
 
-• **symbol**: `string`
-
-The symbol to use.
-
-• **areas?**: `string` = `''`
-
-Optional areas to use if not [data-anatomy] is set as an attribute on the element
-
-#### Returns
-
-`Promise`\<`string` \| `void`\>
-
-A promise that resolves to the id of the dissection element when the dissection is completed, or `void` if required input is invalid.
-
-#### Example
-
-```ts
-const element = document.getElementById('target');
-const symbol = 0;
-dissect(element, symbol).then(() => {
-  console.log('Dissection completed');
-});
-```
-
-### element()
-
-> **element**: (`sectionEl`) => `Promise`\<`void`\> = `dissectElement`
-
-Create dissected elements based on the section element and its data-anatomy attributes.
-
-![dissect](https://github.com/phun-ky/speccer/blob/main/public/anatomy.png?raw=true)
-
-#### Parameters
-
-• **sectionEl**: `HTMLElement`
-
-The section element containing dissected elements.
-
-#### Returns
-
-`Promise`\<`void`\>
-
-- A promise that resolves after creating dissected elements.
-
-#### Example
-
-```ts
-const sectionElement = document.getElementById('section');
-element(sectionElement);
-```
+</td>
+</tr>
+</table>
 
 ## Defined in
 
-[main.ts:40](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L40)
+[main.ts:61](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L61)

@@ -12,17 +12,11 @@ Toggle CSS classes on an HTML element.
 
 ## Parameters
 
-• **el**: `HTMLElement`
-
-The HTML element on which classes should be toggled.
-
-• **cls**: `string`
-
-The CSS classes to toggle, separated by spaces.
-
-• **avoid?**: `string` = `'noop'`
-
-Classes to avoid toggling.
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `el` | `HTMLElement` | `undefined` | The HTML element on which classes should be toggled. |
+| `cls` | `string` | `undefined` | The CSS classes to toggle, separated by spaces. |
+| `avoid`? | `string` | `'noop'` | Classes to avoid toggling. |
 
 ## Returns
 

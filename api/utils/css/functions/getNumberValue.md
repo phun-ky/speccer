@@ -12,9 +12,9 @@ Parses a string value into an integer.
 
 ## Parameters
 
-• **value**: `string`
-
-The string value to parse.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `value` | `string` | The string value to parse. |
 
 ## Returns
 

@@ -12,13 +12,10 @@ Adds CSS styles to an HTMLElement.
 
 ## Parameters
 
-• **el**: `HTMLElement`
-
-The HTMLElement to apply styles to.
-
-• **styles**: `object` \| `object`[]
-
-An object or an array of objects containing CSS styles to apply.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `el` | `HTMLElement` | The HTMLElement to apply styles to. |
+| `styles` | `object` \| `object`[] | An object or an array of objects containing CSS styles to apply. |
 
 ## Returns
 

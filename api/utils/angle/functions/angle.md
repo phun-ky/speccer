@@ -12,25 +12,13 @@ Returns the angle between two sets of coordinates.
 
 ## Parameters
 
-• **cx**: `number`
-
-The x-coordinate of the first point.
-
-• **cy**: `number`
-
-The y-coordinate of the first point.
-
-• **ex**: `number`
-
-The x-coordinate of the second point.
-
-• **ey**: `number`
-
-The y-coordinate of the second point.
-
-• **normalize?**: `boolean` = `true`
-
-If the angle output should be normalized to a value between 0° and 360°.
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `cx` | `number` | `undefined` | The x-coordinate of the first point. |
+| `cy` | `number` | `undefined` | The y-coordinate of the first point. |
+| `ex` | `number` | `undefined` | The x-coordinate of the second point. |
+| `ey` | `number` | `undefined` | The y-coordinate of the second point. |
+| `normalize`? | `boolean` | `true` | If the angle output should be normalized to a value between 0° and 360°. |
 
 ## Returns
 

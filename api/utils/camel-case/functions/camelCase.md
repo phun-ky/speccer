@@ -12,9 +12,9 @@ Converts a string to camel case.
 
 ## Parameters
 
-• **str**: `string`
-
-The input string.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `str` | `string` | The input string. |
 
 ## Returns
 

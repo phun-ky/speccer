@@ -12,9 +12,9 @@ Gets the computed CSS styles of an HTMLElement.
 
 ## Parameters
 
-• **el**: `HTMLElement`
-
-The HTMLElement to get computed styles from.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `el` | `HTMLElement` | The HTMLElement to get computed styles from. |
 
 ## Returns
 

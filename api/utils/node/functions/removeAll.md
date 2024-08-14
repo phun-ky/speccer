@@ -12,13 +12,10 @@ Removes all elements matching a selector from the DOM.
 
 ## Parameters
 
-• **selector**: `string`
-
-The CSS selector used to select elements for removal.
-
-• **el**: `Document` = `document`
-
-The document context (default is the global `document` object).
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `selector` | `string` | `undefined` | The CSS selector used to select elements for removal. |
+| `el` | `Document` | `document` | The document context (default is the global `document` object). |
 
 ## Returns
 

@@ -12,17 +12,11 @@ Add CSS classes to an HTML element.
 
 ## Parameters
 
-• **el**: `HTMLElement`
-
-The HTML element to which classes should be added.
-
-• **cls**: `string`
-
-The CSS classes to add, separated by spaces.
-
-• **avoid?**: `string` = `'noop'`
-
-Classes to avoid adding.
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `el` | `HTMLElement` | `undefined` | The HTML element to which classes should be added. |
+| `cls` | `string` | `undefined` | The CSS classes to add, separated by spaces. |
+| `avoid`? | `string` | `'noop'` | Classes to avoid adding. |
 
 ## Returns
 

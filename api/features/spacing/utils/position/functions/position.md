@@ -12,21 +12,12 @@ Set the position and dimensions of a spacing element relative to a target elemen
 
 ## Parameters
 
-• **property**: `string`
-
-The CSS property to set (e.g., 'marginTop', 'marginLeft', etc.).
-
-• **value**: `number`
-
-The value of the CSS property.
-
-• **spacingEl**: `HTMLElement`
-
-The spacing element.
-
-• **targetEl**: `HTMLElement`
-
-The target element.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `property` | `string` | The CSS property to set (e.g., 'marginTop', 'marginLeft', etc.). |
+| `value` | `number` | The value of the CSS property. |
+| `spacingEl` | `HTMLElement` | The spacing element. |
+| `targetEl` | `HTMLElement` | The target element. |
 
 ## Returns
 

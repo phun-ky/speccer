@@ -15,17 +15,11 @@ Adds an accessibility element to the document body based on the target element a
 
 ## Parameters
 
-• **targetEl**: `HTMLElement`
-
-Target HTML element.
-
-• **content?**: `unknown`
-
-Content to be added to the accessibility element.
-
-• **type?**: `string`
-
-Type of accessibility element ('tabstops' or 'landmark').
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `targetEl` | `HTMLElement` | Target HTML element. |
+| `content`? | `unknown` | Content to be added to the accessibility element. |
+| `type`? | `string` | Type of accessibility element ('tabstops' or 'landmark'). |
 
 ## Returns
 

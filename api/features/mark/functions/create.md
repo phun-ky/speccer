@@ -12,9 +12,9 @@ Create a marker element with an optional element type.
 
 ## Parameters
 
-• **n**: `string` = `'span'`
-
-The element type.
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `n` | `string` | `'span'` | The element type. |
 
 ## Returns
 

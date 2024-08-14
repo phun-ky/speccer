@@ -12,9 +12,9 @@ A function to initialize speccer when the DOM is ready.
 
 ## Parameters
 
-• **speccer**: [`SpeccerFunctionType`](../../../types/speccer/type-aliases/SpeccerFunctionType.md)
-
-The speccer function to execute.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `speccer` | [`SpeccerFunctionType`](../../../types/speccer/type-aliases/SpeccerFunctionType.md) | The speccer function to execute. |
 
 ## Returns
 
@@ -29,4 +29,4 @@ The speccer function to execute.
 
 ## Defined in
 
-[config/browser.ts:20](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L20)
+[config/browser.ts:62](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L62)

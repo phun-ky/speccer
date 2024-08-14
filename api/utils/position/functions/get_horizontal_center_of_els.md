@@ -12,17 +12,11 @@ Calculates the horizontal center of two elements.
 
 ## Parameters
 
-• **modifier**: `number`
-
-A modifier value.
-
-• **startRect**: `DOMRect`
-
-The starting element's rectangle.
-
-• **targetRect**: `DOMRect`
-
-The target element's rectangle.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `modifier` | `number` | A modifier value. |
+| `startRect` | `DOMRect` | The starting element's rectangle. |
+| `targetRect` | `DOMRect` | The target element's rectangle. |
 
 ## Returns
 

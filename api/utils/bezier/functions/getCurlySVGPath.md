@@ -12,17 +12,11 @@ Generates an SVG path for a curved line between two HTML elements.
 
 ## Parameters
 
-• **startEl**: `HTMLElement`
-
-The starting HTML element.
-
-• **stopEl**: `HTMLElement`
-
-The ending HTML element.
-
-• **options**: [`CurlyBezierPathOptionsType`](../../../types/bezier/type-aliases/CurlyBezierPathOptionsType.md)
-
-Options for controlling the curved line.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `startEl` | `HTMLElement` | The starting HTML element. |
+| `stopEl` | `HTMLElement` | The ending HTML element. |
+| `options` | [`CurlyBezierPathOptionsType`](../../../types/bezier/type-aliases/CurlyBezierPathOptionsType.md) | Options for controlling the curved line. |
 
 ## Returns
 

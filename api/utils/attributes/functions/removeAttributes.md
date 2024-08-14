@@ -12,13 +12,10 @@ Removes attributes from an HTML element.
 
 ## Parameters
 
-• **el**: `HTMLElement`
-
-The HTML element to remove attributes from.
-
-• **attrs?**: `string`[]
-
-The attributes to remove as a key-value mapping.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `el` | `HTMLElement` | The HTML element to remove attributes from. |
+| `attrs`? | `string`[] | The attributes to remove as a key-value mapping. |
 
 ## Returns
 

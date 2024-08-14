@@ -12,17 +12,11 @@ Create a measurement element with optional text, area, and element type.
 
 ## Parameters
 
-• **text**: `string` \| `number` = `''`
-
-The text to display on the element.
-
-• **area**: `null` \| `string` = `''`
-
-The area to specify with CSS class.
-
-• **tag**: `string` = `'span'`
-
-The element type.
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `text` | `string` \| `number` | `''` | The text to display on the element. |
+| `area` | `null` \| `string` | `''` | The area to specify with CSS class. |
+| `tag` | `string` | `'span'` | The element type. |
 
 ## Returns
 

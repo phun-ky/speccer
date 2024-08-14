@@ -12,13 +12,10 @@ Gets various positioning properties between two HTML elements.
 
 ## Parameters
 
-• **sourceEl**: `HTMLElement`
-
-The source HTML element.
-
-• **targetEl**: `HTMLElement`
-
-The target HTML element.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `sourceEl` | `HTMLElement` | The source HTML element. |
+| `targetEl` | `HTMLElement` | The target HTML element. |
 
 ## Returns
 

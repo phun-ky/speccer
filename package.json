@@ -1,6 +1,6 @@
 {
   "name": "@phun-ky/speccer",
-  "version": "9.5.2",
+  "version": "9.5.3",
   "description": "A script to annotate, show spacing specs and to display typography information in documentation/website on HTML elements",
   "main": "dist/speccer.js",
   "module": "dist/speccer.esm.js",
@@ -23,7 +23,7 @@
     "stylus": "rm -rf ./dist/speccer.css && stylus ./src/styles/index.styl -o ./dist/speccer.css",
     "postcss": "rm -rf ./dist/speccer.min.css && postcss ./dist/speccer.css -o  ./dist/speccer.min.css",
     "dev": "npx browser-sync start --server 'dev' --files 'dist' --ss 'dist'",
-    "docs:gen": "node ./node_modules/.bin/typedoc --entryPoints src --entryPointStrategy expand --gitRevision main --githubPages false --plugin typedoc-plugin-markdown --tsconfig tsconfig.json --out api --readme none",
+    "docs:gen": "node ./node_modules/.bin/typedoc",
     "style:lint": "./node_modules/.bin/eslint -c ./.eslintrc --max-warnings=0 src --ignore-path .gitignore ",
     "style:format": "prettier-eslint --config .prettierrc --eslint-config-path $PWD/.eslintrc --list-different --write \"./src/**/*.ts\"",
     "style:code": "npx putout src",

@@ -10,66 +10,59 @@
 
 ## Type declaration
 
-### create()
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default value</th>
+<th>Defined in</th>
+</tr>
+<tr>
+<td>
 
-> **create**: (`text`, `area`, `tag`) => `HTMLElement` = `measureCreate`
+`create`
 
-Create a measurement element with optional text, area, and element type.
+</td>
+<td>
 
-#### Parameters
+(`text`, `area`, `tag`) => `HTMLElement`
 
-• **text**: `string` \| `number` = `''`
+</td>
+<td>
 
-The text to display on the element.
+measureCreate
 
-• **area**: `null` \| `string` = `''`
+</td>
+<td>
 
-The area to specify with CSS class.
+[main.ts:68](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L68)
 
-• **tag**: `string` = `'span'`
+</td>
+</tr>
+<tr>
+<td>
 
-The element type.
+`element`
 
-#### Returns
+</td>
+<td>
 
-`HTMLElement`
+(`targetEl`) => `Promise`\<`void`\>
 
-- The created measurement element.
+</td>
+<td>
 
-#### Example
+measureElement
 
-```ts
-const measurement = create(100, 'width bottom', 'div');
-document.body.appendChild(measurement);
-```
+</td>
+<td>
 
-### element()
+[main.ts:69](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L69)
 
-> **element**: (`targetEl`) => `Promise`\<`void`\> = `measureElement`
-
-Create a measurement element and add it to the body with styles matching a specified target element.
-
-![measure](https://github.com/phun-ky/speccer/blob/main/public/measure.png?raw=true)
-
-#### Parameters
-
-• **targetEl**: `HTMLElement`
-
-The target element to match styles with.
-
-#### Returns
-
-`Promise`\<`void`\>
-
-- A promise that resolves after creating and styling the measurement element.
-
-#### Example
-
-```ts
-const targetElement = document.getElementById('target');
-element(targetElement);
-```
+</td>
+</tr>
+</table>
 
 ## Defined in
 
-[main.ts:46](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L46)
+[main.ts:67](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L67)

@@ -12,9 +12,9 @@ Returns positions for creating an SVG path for a curved line based on a cardinal
 
 ## Parameters
 
-• **direction**: `string`
-
-The cardinal direction ('east', 'west', 'south', 'north').
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `direction` | `string` | The cardinal direction ('east', 'west', 'south', 'north'). |
 
 ## Returns
 
@@ -22,21 +22,12 @@ The cardinal direction ('east', 'west', 'south', 'north').
 
 Positions for creating an SVG path for a curved line.
 
-### path1pos1
-
-> **path1pos1**: `string`
-
-### path1pos2
-
-> **path1pos2**: `string`
-
-### path2pos1
-
-> **path2pos1**: `string`
-
-### path2pos2
-
-> **path2pos2**: `string`
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| `path1pos1` | `string` | [utils/bezier.ts:261](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L261) |
+| `path1pos2` | `string` | [utils/bezier.ts:262](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L262) |
+| `path2pos1` | `string` | [utils/bezier.ts:263](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L263) |
+| `path2pos2` | `string` | [utils/bezier.ts:264](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L264) |
 
 ## Example
 

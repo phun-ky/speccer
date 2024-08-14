@@ -12,9 +12,9 @@ Extracts spacing-related CSS properties from a style object.
 
 ## Parameters
 
-• **style**: [`SpacingCSSPropertiesType`](../../../types/css/type-aliases/SpacingCSSPropertiesType.md)
-
-The style object.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `style` | [`SpacingCSSPropertiesType`](../../../types/css/type-aliases/SpacingCSSPropertiesType.md) | The style object. |
 
 ## Returns
 

@@ -12,21 +12,12 @@ Get the direction of an element based on its position relative to another elemen
 
 ## Parameters
 
-• **options**
-
-Options for direction calculation.
-
-• **options.crude?**: `boolean` = `false`
-
-If the direction should be calculated crudely (NSEW).
-
-• **options.start**: `HTMLElement`
-
-The starting HTML element.
-
-• **options.stop**: `HTMLElement`
-
-The stopping HTML element.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `options` | `object` | Options for direction calculation. |
+| `options.crude`? | `boolean` | If the direction should be calculated crudely (NSEW). |
+| `options.start` | `HTMLElement` | The starting HTML element. |
+| `options.stop` | `HTMLElement` | The stopping HTML element. |
 
 ## Returns
 

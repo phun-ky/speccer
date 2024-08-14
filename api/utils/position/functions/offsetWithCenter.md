@@ -12,13 +12,10 @@ Gets the offset properties of an HTML element with its center aligned to another
 
 ## Parameters
 
-• **sourceEl**: `HTMLElement`
-
-The source HTML element.
-
-• **targetEl**: `HTMLElement`
-
-The target HTML element.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `sourceEl` | `HTMLElement` | The source HTML element. |
+| `targetEl` | `HTMLElement` | The target HTML element. |
 
 ## Returns
 

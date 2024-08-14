@@ -12,21 +12,81 @@ Type definition for position properties.
 
 ## Type declaration
 
-### height
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Defined in</th>
+</tr>
+<tr>
+<td>
 
-> **height**: `number`
+`height`
 
-### left
+</td>
+<td>
 
-> **left**: `number`
+`number`
 
-### top
+</td>
+<td>
 
-> **top**: `number`
+[types/position.ts:7](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L7)
 
-### width
+</td>
+</tr>
+<tr>
+<td>
 
-> **width**: `number`
+`left`
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+[types/position.ts:6](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L6)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`top`
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+[types/position.ts:5](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L5)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`width`
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+[types/position.ts:8](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L8)
+
+</td>
+</tr>
+</table>
 
 ## Defined in
 

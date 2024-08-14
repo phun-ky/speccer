@@ -12,13 +12,10 @@ Calculates coordinates for a Bezier curve between two points.
 
 ## Parameters
 
-• **coords**: [`CreateCoordinatesForCurveCoordParamType`](../../../types/bezier/type-aliases/CreateCoordinatesForCurveCoordParamType.md)
-
-The coordinates of the start and end points.
-
-• **options**: [`CreateCoordinatesForCurveOptionsParamType`](../../../types/bezier/type-aliases/CreateCoordinatesForCurveOptionsParamType.md)
-
-Options for controlling the curve's shape.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `coords` | [`CreateCoordinatesForCurveCoordParamType`](../../../types/bezier/type-aliases/CreateCoordinatesForCurveCoordParamType.md) | The coordinates of the start and end points. |
+| `options` | [`CreateCoordinatesForCurveOptionsParamType`](../../../types/bezier/type-aliases/CreateCoordinatesForCurveOptionsParamType.md) | Options for controlling the curve's shape. |
 
 ## Returns
 
@@ -26,53 +23,20 @@ Options for controlling the curve's shape.
 
 Coordinates for the Bezier curve.
 
-### firstControl
-
-> **firstControl**: `object`
-
-### firstControl.x
-
-> **x**: `number`
-
-### firstControl.y
-
-> **y**: `number` = `y1`
-
-### firstPoint
-
-> **firstPoint**: `object`
-
-### firstPoint.x
-
-> **x**: `number` = `x1`
-
-### firstPoint.y
-
-> **y**: `number` = `y1`
-
-### lastControl
-
-> **lastControl**: `object`
-
-### lastControl.x
-
-> **x**: `number`
-
-### lastControl.y
-
-> **y**: `number` = `y2`
-
-### lastPoint
-
-> **lastPoint**: `object`
-
-### lastPoint.x
-
-> **x**: `number` = `x2`
-
-### lastPoint.y
-
-> **y**: `number` = `y2`
+| Name | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `firstControl` | `object` | - | [utils/bezier.ts:71](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L71) |
+| `firstControl.x` | `number` | - | [utils/bezier.ts:34](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L34) |
+| `firstControl.y` | `number` | y1 | [utils/bezier.ts:34](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L34) |
+| `firstPoint` | `object` | - | [utils/bezier.ts:70](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L70) |
+| `firstPoint.x` | `number` | x1 | [utils/bezier.ts:31](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L31) |
+| `firstPoint.y` | `number` | y1 | [utils/bezier.ts:31](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L31) |
+| `lastControl` | `object` | - | [utils/bezier.ts:73](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L73) |
+| `lastControl.x` | `number` | - | [utils/bezier.ts:35](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L35) |
+| `lastControl.y` | `number` | y2 | [utils/bezier.ts:35](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L35) |
+| `lastPoint` | `object` | - | [utils/bezier.ts:72](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L72) |
+| `lastPoint.x` | `number` | x2 | [utils/bezier.ts:32](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L32) |
+| `lastPoint.y` | `number` | y2 | [utils/bezier.ts:32](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L32) |
 
 ## Example
 

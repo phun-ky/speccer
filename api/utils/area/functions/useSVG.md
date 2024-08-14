@@ -12,9 +12,9 @@ Checks if the provided areaString contains SVG-related areas.
 
 ## Parameters
 
-• **areaString**: `string`
-
-The string containing areas.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `areaString` | `string` | The string containing areas. |
 
 ## Returns
 

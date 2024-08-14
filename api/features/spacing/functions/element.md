@@ -14,9 +14,9 @@ Create and position spacing elements based on the target element's computed spac
 
 ## Parameters
 
-• **targetEl**: `HTMLElement`
-
-The target element to create spacing elements for.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `targetEl` | `HTMLElement` | The target element to create spacing elements for. |
 
 ## Returns
 

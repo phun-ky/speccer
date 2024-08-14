@@ -12,13 +12,10 @@ Creates a visual grid overlay for a given target element.
 
 ## Parameters
 
-• **targetElement**: `HTMLElement`
-
-The target element to create the grid overlay for.
-
-• **styles**: `CSSStyleDeclaration`
-
-The computed styles of the target element.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `targetElement` | `HTMLElement` | The target element to create the grid overlay for. |
+| `styles` | `CSSStyleDeclaration` | The computed styles of the target element. |
 
 ## Returns
 

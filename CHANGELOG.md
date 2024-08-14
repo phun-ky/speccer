@@ -1,5 +1,17 @@
 # Changelog
 
+## [9.5.3](https://github.com/phun-ky/speccer/compare/v9.5.2...v9.5.3) (2024-08-14)
+
+
+### Tasks
+
+* 🤖 Add config file for typedoc ([47d0d58](https://github.com/phun-ky/speccer/commit/47d0d58d551767b69df95a804ce85c102fee4e59))
+
+
+### Documentation
+
+* ✏️ Add more documentation ([e967303](https://github.com/phun-ky/speccer/commit/e9673033606beddd7e28498cdef06908bf995129))
+
 ## [9.5.2](https://github.com/phun-ky/speccer/compare/v9.5.1...v9.5.2) (2024-08-13)
 
 

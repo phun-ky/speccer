@@ -12,17 +12,11 @@ Remove CSS classes from an HTML element.
 
 ## Parameters
 
-• **el**: `HTMLElement`
-
-The HTML element from which classes should be removed.
-
-• **cls**: `string`
-
-The CSS classes to remove, separated by spaces.
-
-• **avoid?**: `string` = `'noop'`
-
-Classes to avoid removing.
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `el` | `HTMLElement` | `undefined` | The HTML element from which classes should be removed. |
+| `cls` | `string` | `undefined` | The CSS classes to remove, separated by spaces. |
+| `avoid`? | `string` | `'noop'` | Classes to avoid removing. |
 
 ## Returns
 
