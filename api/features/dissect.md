@@ -1,16 +1,25 @@
-<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/>
+<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
 
 [@phun-ky/speccer](../README.md) / features/dissect
 
 # features/dissect
 
-> Last updated 2024-08-14T10:23:12.570Z
+> Last updated 2024-08-14T10:33:46.360Z
 
 This feature highlights the anatomy of an element.
 
 ![dissect](https://github.com/phun-ky/speccer/blob/main/public/anatomy.png?raw=true)
 
 In your component examples, use the following attribute. Remember to use the `data-anatomy-section` as an attribute on a parent element to scope the marking.
+
+## Table of Contents
+
+- [Example](#example)
+- [References](#references)
+  - [create](#create)
+  - [dissect](#dissect)
+- [Functions](#functions)
+  - [element()](#element)
 
 ## Example
 
@@ -38,20 +47,20 @@ Re-exports [dissect](dissect/utils/dissect.md#dissect)
 ### element()
 
 ```ts
-function element(sectionEl): Promise<void>
+function element(sectionEl): Promise<void>;
 ```
 
 Create dissected elements based on the section element and its data-anatomy attributes.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter   | Type          | Description                                        |
+| ----------- | ------------- | -------------------------------------------------- |
 | `sectionEl` | `HTMLElement` | The section element containing dissected elements. |
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`\<`void`>
 
 - A promise that resolves after creating dissected elements.
 
@@ -66,13 +75,13 @@ element(sectionElement);
 
 [features/dissect/index.ts:41](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/index.ts#L41)
 
-***
+---
 
-## Contributing
+**Contributing**
 
 Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
-## Sponsor me
+**Sponsor me**
 
 I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
 
@@ -82,12 +91,6 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
 
-***
-<p class="ph">
-  This project created by
-  <a rel="noopener noreferrer" target="_blank" class="ph" href="http://phun-ky.net" property="cc:attributionName">
-    Alexander Vassbotn Røyne-Helgesen</a>
-  is licensed under a
-  <a rel="noopener noreferrer" target="_blank" class="ph" href="https://choosealicense.com/licenses/mit/">
-    MIT License </a>.
-</p>
+---
+
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

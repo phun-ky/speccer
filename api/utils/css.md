@@ -1,25 +1,25 @@
-<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/>
+<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
 
 [@phun-ky/speccer](../README.md) / utils/css
 
 # utils/css
 
-> Last updated 2024-08-14T10:23:12.591Z
+> Last updated 2024-08-14T10:33:46.375Z
 
 ## Functions
 
 ### getClassNameFromCSSProperty()
 
 ```ts
-function getClassNameFromCSSProperty(property): string
+function getClassNameFromCSSProperty(property): string;
 ```
 
 Converts a CSS property name with "Top", "Right", "Bottom", or "Left" into a class name.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter  | Type     | Description            |
+| ---------- | -------- | ---------------------- |
 | `property` | `string` | The CSS property name. |
 
 #### Returns
@@ -32,7 +32,7 @@ Converts a CSS property name with "Top", "Right", "Bottom", or "Left" into a cla
 
 ```ts
 // Convert a CSS property name to a class name
-const className = getClassNameFromCSSProperty("marginTop");
+const className = getClassNameFromCSSProperty('marginTop');
 console.log(className); // Example output: "margin top"
 ```
 
@@ -40,21 +40,21 @@ console.log(className); // Example output: "margin top"
 
 [utils/css.ts:63](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L63)
 
-***
+---
 
 ### getNumberValue()
 
 ```ts
-function getNumberValue(value): number
+function getNumberValue(value): number;
 ```
 
 Parses a string value into an integer.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `value` | `string` | The string value to parse. |
+| Parameter | Type     | Description                |
+| --------- | -------- | -------------------------- |
+| `value`   | `string` | The string value to parse. |
 
 #### Returns
 
@@ -66,7 +66,7 @@ Parses a string value into an integer.
 
 ```ts
 // Parse a string value into an integer
-const intValue = getNumberValue("42");
+const intValue = getNumberValue('42');
 console.log(intValue); // Example output: 42
 ```
 
@@ -74,21 +74,21 @@ console.log(intValue); // Example output: 42
 
 [utils/css.ts:26](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L26)
 
-***
+---
 
 ### getSpacing()
 
 ```ts
-function getSpacing(style): SpacingCSSPropertiesType
+function getSpacing(style): SpacingCSSPropertiesType;
 ```
 
 Extracts spacing-related CSS properties from a style object.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `style` | [`SpacingCSSPropertiesType`](../types/css.md#spacingcsspropertiestype) | The style object. |
+| Parameter | Type                                                                   | Description       |
+| --------- | ---------------------------------------------------------------------- | ----------------- |
+| `style`   | [`SpacingCSSPropertiesType`](../types/css.md#spacingcsspropertiestype) | The style object. |
 
 #### Returns
 
@@ -101,8 +101,8 @@ Extracts spacing-related CSS properties from a style object.
 ```ts
 // Extract spacing-related properties from a style object
 const spacing = getSpacing({
-  marginTop: "10px",
-  marginLeft: "20px",
+  marginTop: '10px',
+  marginLeft: '20px'
 });
 console.log(spacing); // Example output: { marginTop: "10px", marginLeft: "20px" }
 ```
@@ -111,21 +111,21 @@ console.log(spacing); // Example output: { marginTop: "10px", marginLeft: "20px"
 
 [utils/css.ts:91](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L91)
 
-***
+---
 
 ### getTypography()
 
 ```ts
-function getTypography(style): TypographyCSSPropertiesType
+function getTypography(style): TypographyCSSPropertiesType;
 ```
 
 Extracts typography-related CSS properties from a style object.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `style` | [`TypographyCSSPropertiesType`](../types/css.md#typographycsspropertiestype) | The style object. |
+| Parameter | Type                                                                         | Description       |
+| --------- | ---------------------------------------------------------------------------- | ----------------- |
+| `style`   | [`TypographyCSSPropertiesType`](../types/css.md#typographycsspropertiestype) | The style object. |
 
 #### Returns
 
@@ -138,8 +138,8 @@ Extracts typography-related CSS properties from a style object.
 ```ts
 // Extract typography-related properties from a style object
 const typography = getTypography({
-  fontSize: "16px",
-  fontWeight: "bold",
+  fontSize: '16px',
+  fontWeight: 'bold'
 });
 console.log(typography); // Example output: { fontSize: "16px", fontWeight: "bold" }
 ```
@@ -148,21 +148,21 @@ console.log(typography); // Example output: { fontSize: "16px", fontWeight: "bol
 
 [utils/css.ts:133](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L133)
 
-***
+---
 
 ### lineWidth()
 
 ```ts
-function lineWidth(el): number
+function lineWidth(el): number;
 ```
 
 Retrieves the value of a custom CSS property "--ph-speccer-line-width" from an element.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `el` | `HTMLElement` | The HTML element. |
+| Parameter | Type          | Description       |
+| --------- | ------------- | ----------------- |
+| `el`      | `HTMLElement` | The HTML element. |
 
 #### Returns
 
@@ -182,21 +182,21 @@ console.log(value); // Example output: 1.5
 
 [utils/css.ts:206](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L206)
 
-***
+---
 
 ### measureSize()
 
 ```ts
-function measureSize(el): number
+function measureSize(el): number;
 ```
 
 Retrieves the value of a custom CSS property "--ph-speccer-measure-size" from an element.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `el` | `HTMLElement` | The HTML element. |
+| Parameter | Type          | Description       |
+| --------- | ------------- | ----------------- |
+| `el`      | `HTMLElement` | The HTML element. |
 
 #### Returns
 
@@ -216,22 +216,22 @@ console.log(value); // Example output: 20
 
 [utils/css.ts:188](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L188)
 
-***
+---
 
 ### normalizeNumberValue()
 
 ```ts
-function normalizeNumberValue(value): number
+function normalizeNumberValue(value): number;
 ```
 
 Normalizes a string or number value to ensure it's a valid number.
-If the value is within the range [0, 1] or [-1, 0), it's normalized to 0.
+If the value is within the range \[0, 1] or \[-1, 0), it's normalized to 0.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `value` | `string` \| `number` | The value to normalize. |
+| Parameter | Type                 | Description             |
+| --------- | -------------------- | ----------------------- |
+| `value`   | `string` \| `number` | The value to normalize. |
 
 #### Returns
 
@@ -243,7 +243,7 @@ If the value is within the range [0, 1] or [-1, 0), it's normalized to 0.
 
 ```ts
 // Normalize a value to ensure it's a valid number
-const normalizedValue = normalizeNumberValue("0.5");
+const normalizedValue = normalizeNumberValue('0.5');
 console.log(normalizedValue); // Example output: 0.5
 ```
 
@@ -251,21 +251,21 @@ console.log(normalizedValue); // Example output: 0.5
 
 [utils/css.ts:42](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L42)
 
-***
+---
 
 ### pinSpace()
 
 ```ts
-function pinSpace(el): number
+function pinSpace(el): number;
 ```
 
 Retrieves the value of a custom CSS property "--ph-speccer-pin-space" from an element.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `el` | `HTMLElement` | The HTML element. |
+| Parameter | Type          | Description       |
+| --------- | ------------- | ----------------- |
+| `el`      | `HTMLElement` | The HTML element. |
 
 #### Returns
 
@@ -285,13 +285,13 @@ console.log(value); // Example output: 10
 
 [utils/css.ts:170](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L170)
 
-***
+---
 
-## Contributing
+**Contributing**
 
 Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
-## Sponsor me
+**Sponsor me**
 
 I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
 
@@ -301,12 +301,6 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
 
-***
-<p class="ph">
-  This project created by
-  <a rel="noopener noreferrer" target="_blank" class="ph" href="http://phun-ky.net" property="cc:attributionName">
-    Alexander Vassbotn Røyne-Helgesen</a>
-  is licensed under a
-  <a rel="noopener noreferrer" target="_blank" class="ph" href="https://choosealicense.com/licenses/mit/">
-    MIT License </a>.
-</p>
+---
+
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

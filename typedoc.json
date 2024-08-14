@@ -1,5 +1,10 @@
 {
-  "plugin": ["typedoc-plugin-markdown", "./custom-typedoc-plugin.js"],
+  "$schema": "https://typedoc-plugin-markdown.org/schema.json",
+  "plugin": [
+    "typedoc-plugin-markdown",
+    "typedoc-plugin-remark",
+    "./custom-typedoc-plugin.js"
+  ],
   "out": "./api",
   "tsconfig": "tsconfig.json",
   "outputFileStrategy": "modules",
@@ -17,5 +22,10 @@
   "githubPages": false,
   "mergeReadme": true,
   "useCodeBlocks": true,
-  "expandObjects": true
+  "expandObjects": true,
+  "remarkPlugins": [
+    "unified-prettier",
+    ["remark-github", { "repository": "https://github.com/phun-ky/speccer" }],
+    ["remark-toc", { "heading": "Table of Contents", "maxDepth": 3 }]
+  ]
 }

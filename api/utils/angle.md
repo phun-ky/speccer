@@ -1,35 +1,30 @@
-<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/>
+<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
 
 [@phun-ky/speccer](../README.md) / utils/angle
 
 # utils/angle
 
-> Last updated 2024-08-14T10:23:12.585Z
+> Last updated 2024-08-14T10:33:46.370Z
 
 ## Functions
 
 ### angle()
 
 ```ts
-function angle(
-   cx, 
-   cy, 
-   ex, 
-   ey, 
-   normalize?): number
+function angle(cx, cy, ex, ey, normalize?): number;
 ```
 
 Returns the angle between two sets of coordinates.
 
 #### Parameters
 
-| Parameter | Type | Default value | Description |
-| ------ | ------ | ------ | ------ |
-| `cx` | `number` | `undefined` | The x-coordinate of the first point. |
-| `cy` | `number` | `undefined` | The y-coordinate of the first point. |
-| `ex` | `number` | `undefined` | The x-coordinate of the second point. |
-| `ey` | `number` | `undefined` | The y-coordinate of the second point. |
-| `normalize`? | `boolean` | `true` | If the angle output should be normalized to a value between 0° and 360°. |
+| Parameter    | Type      | Default value | Description                                                              |
+| ------------ | --------- | ------------- | ------------------------------------------------------------------------ |
+| `cx`         | `number`  | `undefined`   | The x-coordinate of the first point.                                     |
+| `cy`         | `number`  | `undefined`   | The y-coordinate of the first point.                                     |
+| `ex`         | `number`  | `undefined`   | The x-coordinate of the second point.                                    |
+| `ey`         | `number`  | `undefined`   | The y-coordinate of the second point.                                    |
+| `normalize`? | `boolean` | `true`        | If the angle output should be normalized to a value between 0° and 360°. |
 
 #### Returns
 
@@ -56,13 +51,13 @@ const angleValue = angle(0, 0, 3, 4);
 
 [utils/angle.ts:20](https://github.com/phun-ky/speccer/blob/main/src/utils/angle.ts#L20)
 
-***
+---
 
-## Contributing
+**Contributing**
 
 Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
-## Sponsor me
+**Sponsor me**
 
 I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
 
@@ -72,12 +67,6 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
 
-***
-<p class="ph">
-  This project created by
-  <a rel="noopener noreferrer" target="_blank" class="ph" href="http://phun-ky.net" property="cc:attributionName">
-    Alexander Vassbotn Røyne-Helgesen</a>
-  is licensed under a
-  <a rel="noopener noreferrer" target="_blank" class="ph" href="https://choosealicense.com/licenses/mit/">
-    MIT License </a>.
-</p>
+---
+
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

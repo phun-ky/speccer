@@ -1,27 +1,27 @@
-<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/>
+<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
 
 [@phun-ky/speccer](../README.md) / features/typography
 
 # features/typography
 
-> Last updated 2024-08-14T10:23:12.575Z
+> Last updated 2024-08-14T10:33:46.364Z
 
 ## Functions
 
 ### create()
 
 ```ts
-function create(html, area): HTMLElement
+function create(html, area): HTMLElement;
 ```
 
 Create a DOM element with provided HTML and optional CSS class names.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `html` | `string` | The HTML content to be set in the created element. |
-| `area` | `null` \| `string` | The optional CSS class names to add. |
+| Parameter | Type               | Description                                        |
+| --------- | ------------------ | -------------------------------------------------- |
+| `html`    | `string`           | The HTML content to be set in the created element. |
+| `area`    | `null` \| `string` | The optional CSS class names to add.               |
 
 #### Returns
 
@@ -42,12 +42,12 @@ document.body.appendChild(createdElement);
 
 [features/typography/index.ts:23](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L23)
 
-***
+---
 
 ### element()
 
 ```ts
-function element(targetEl): Promise<void>
+function element(targetEl): Promise<void>;
 ```
 
 Create a specced typography element for a given target element.
@@ -56,13 +56,13 @@ Create a specced typography element for a given target element.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter  | Type          | Description                                 |
+| ---------- | ------------- | ------------------------------------------- |
 | `targetEl` | `HTMLElement` | The target element to specc typography for. |
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`\<`void`>
 
 - A promise that resolves once typography element is created and positioned.
 
@@ -79,13 +79,13 @@ if (targetElement) {
 
 [features/typography/index.ts:58](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L58)
 
-***
+---
 
-## Contributing
+**Contributing**
 
 Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
-## Sponsor me
+**Sponsor me**
 
 I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
 
@@ -95,12 +95,6 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
 
-***
-<p class="ph">
-  This project created by
-  <a rel="noopener noreferrer" target="_blank" class="ph" href="http://phun-ky.net" property="cc:attributionName">
-    Alexander Vassbotn Røyne-Helgesen</a>
-  is licensed under a
-  <a rel="noopener noreferrer" target="_blank" class="ph" href="https://choosealicense.com/licenses/mit/">
-    MIT License </a>.
-</p>
+---
+
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
