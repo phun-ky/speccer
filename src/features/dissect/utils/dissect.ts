@@ -1,5 +1,5 @@
 import { DissectAreaEnum } from '../../../types/enums/area';
-import { isCurly, useSVG } from '../../../utils/area';
+import { isCurly, isEncloseArea, isFullArea, isParentArea, isSubtle, useSVG } from '../../../utils/area';
 import { camelCase } from '../../../utils/camel-case';
 import { DrawSVGCurlyBracket } from '../../../utils/classes/DrawSVGCurlyBracket';
 import { DrawSVGLine } from '../../../utils/classes/DrawSVGLine';
@@ -19,6 +19,7 @@ import { styles } from './styles';
  *
  * @param {HTMLElement} el - The target element that contains the anatomy data.
  * @param {string} symbol - The symbol to use.
+ * @param {HTMLElement} parentElement - The parent element
  * @param {string} [areas] - Optional areas to use if not [data-anatomy] is set as an attribute on the element
  * @returns {Promise<string|void>} A promise that resolves to the id of the dissection element when the dissection is completed, or `void` if required input is invalid.
  *
@@ -31,19 +32,21 @@ import { styles } from './styles';
  * });
  * ```
  */
-export const dissect = async (el: HTMLElement, symbol: string, areas = ''): Promise<string|void> => {
+export const dissect = async (el: HTMLElement, symbol: string, parentElement: HTMLElement, areas = ''): Promise<string|void> => {
   if (!el) return;
 
   const _areas_string: string = el.getAttribute('data-anatomy') || areas;
 
+
   if (
     !_areas_string ||
-        _areas_string === '' ||
-        !_areas_string.includes(DissectAreaEnum.Outline)
+    _areas_string === '' ||
+    !_areas_string.includes(DissectAreaEnum.Outline)
   )
     return;
 
-  const _dissection_el_id = `speccer-${camelCase(areas)}-${el.getAttribute('id') || uniqueID()}`;
+
+  const _dissection_el_id = `speccer-${camelCase(_areas_string)}-${el.getAttribute('id') || uniqueID()}`;
   const _dissection_el = create(symbol, _areas_string, _dissection_el_id);
 
   el.setAttribute('data-speccer-element-id', _dissection_el_id);
@@ -54,6 +57,7 @@ export const dissect = async (el: HTMLElement, symbol: string, areas = ''): Prom
     _areas_string,
         el as HTMLElement,
         _dissection_el,
+        parentElement,
         {
           isCurly: isCurly(_areas_string)
         }
@@ -61,10 +65,11 @@ export const dissect = async (el: HTMLElement, symbol: string, areas = ''): Prom
 
   await add(_dissection_el, _dissection_styles);
 
-  if (useSVG(_areas_string) && !isCurly(_areas_string))
-    new DrawSVGLine(el as HTMLElement, _dissection_el);
-  else if (isCurly(_areas_string))
-    new DrawSVGCurlyBracket(el as HTMLElement, _dissection_el);
+
+  if (isParentArea(_areas_string) && !isEncloseArea(_areas_string) && !isFullArea(_areas_string) && !isSubtle(_areas_string)|| useSVG(_areas_string) && !isCurly(_areas_string)){
+    new DrawSVGLine(el as HTMLElement, _dissection_el);}
+  else if (isCurly(_areas_string)){
+    new DrawSVGCurlyBracket(el as HTMLElement, _dissection_el);}
 
 
 

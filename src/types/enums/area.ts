@@ -16,7 +16,9 @@ export enum SpeccerAreaEnum {
  */
 export enum DissectAreaEnum {
   Outline = 'outline', // Represents an outline area
+  Parent = 'parent', // Represents a parent area
   Enclose = 'enclose', // Represents an enclose area
+  Subtle = 'subtle', // Represents an subtle area
   Full = 'full', // Represents a full area
   Left = 'left', // Represents the left area
   Right = 'right', // Represents the right area

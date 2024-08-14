@@ -5,7 +5,9 @@ import {
   isEncloseArea,
   isFullArea,
   isLeftArea,
-  isRightArea
+  isParentArea,
+  isRightArea,
+  isSubtle
 } from '../../../utils/area';
 import { pinSpace, measureSize } from '../../../utils/css';
 import { getRec } from '../../../utils/position';
@@ -17,6 +19,7 @@ import { waitForFrame } from '../../../utils/wait';
  * @param {string} area - The area description.
  * @param {HTMLElement} targetEl - The target element.
  * @param {HTMLElement} dissectionEl - The dissection element.
+ * @param {HTMLElement} parentElement - The parent element.
  * @param {DissectStylesOptionsType} options - Optional styles options.
  * @returns {Promise<SpeccerStylesReturnType>} - The computed styles.
  *
@@ -24,9 +27,10 @@ import { waitForFrame } from '../../../utils/wait';
  * ```ts
  * const area = 'top-left';
  * const targetElement = document.getElementById('target');
+ * const parentElement = document.getElementById('parent');
  * const dissectionElement = document.getElementById('dissection');
  * const options = { isCurly: true };
- * const styles = await styles(area, targetElement, dissectionElement, options);
+ * const styles = await styles(area, targetElement, dissectionElement, parentElement, options);
  * console.log(styles);
  * ```
  */
@@ -34,6 +38,7 @@ export const styles = async (
   area: string,
   targetEl: HTMLElement,
   dissectionEl: HTMLElement,
+  parentElement: HTMLElement,
   options?: DissectStylesOptionsType
 ): Promise<SpeccerStylesReturnType> => {
   await waitForFrame();
@@ -51,6 +56,67 @@ export const styles = async (
       top: `${top}px`,
       height: `${height}px`,
       width: `${width}px`
+    };
+  }
+
+
+  if(isParentArea(area) && !isFullArea(area) && !isCurly && !isSubtle(area)){
+    if (isRightArea(area)) {
+      const { top } = _positional_styles.fromRight({
+        center: true
+      });
+
+      await waitForFrame();
+
+      const { left, width } = parentElement.getBoundingClientRect();
+
+      return {
+        left: `${left + width + SPECCER_PIN_SPACE}px`,
+        top: `${top}px`
+      };
+    }
+
+    if (isBottomArea(area)) {
+      const { left } = _positional_styles.toBottom({
+        center: true
+      });
+
+      await waitForFrame();
+
+      const { top , height } = parentElement.getBoundingClientRect();
+
+      return {
+        left: `${left}px`,
+        top: `${top + height + SPECCER_PIN_SPACE}px`
+      };
+    }
+
+    if (isLeftArea(area)) {
+      const { top } = _positional_styles.fromLeft({
+        center: true
+      });
+
+      await waitForFrame();
+
+      const { left } = parentElement.getBoundingClientRect();
+
+      return {
+        left: `${left - (SPECCER_PIN_SPACE * 1.5)}px`,
+        top: `${top}px`
+      };
+    }
+
+    const { left } = _positional_styles.fromTop({
+      center: true
+    });
+
+    await waitForFrame();
+
+    const { top} = parentElement.getBoundingClientRect();
+
+    return {
+      left: `${left}px`,
+      top: `${top - (SPECCER_PIN_SPACE * 1.5)}px`
     };
   }
 

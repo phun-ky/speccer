@@ -48,6 +48,6 @@ export const element = async (sectionEl: HTMLElement): Promise<void> => {
   _dissection_els.forEach(async (targetEl: HTMLElement, targetIndex: number): Promise<void> => {
     const _character_to_use = getCharacterToUse(targetIndex);
 
-    await dissectionIterator(targetEl, _character_to_use);
+    await dissectionIterator(targetEl, _character_to_use, sectionEl);
   });
 };

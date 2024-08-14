@@ -1,4 +1,4 @@
-import { isCurly, isEncloseArea, isFullArea } from '../../../utils/area';
+import { isCurly, isEncloseArea, isFullArea, isParentArea, isSubtle } from '../../../utils/area';
 import { set as setClassNames, cx } from '../../../utils/classnames';
 
 /**
@@ -27,6 +27,8 @@ export const create = (
   const _extra_class_names = {};
 
   if (area !== null && area !== '') _extra_class_names[area] = true;
+
+  if(isParentArea(area) && !isFullArea(area) && !isCurly(area) && !isSubtle(area)) _extra_class_names['svg'] = true;
 
   if (
     (!isFullArea(area) && !isEncloseArea(area)) ||
