@@ -6,7 +6,7 @@
 
 # types/speccer
 
-> Last updated 2024-08-14T10:42:04.988Z
+> Last updated 2024-08-14T10:42:54.228Z
 
 ## Type Aliases
 
