@@ -29,7 +29,8 @@ export const set = (el: HTMLElement, cls: string, avoid = 'noop') => {
     .trim()
     .split(' ')
     .filter((cl) => cl !== avoid)
-    .forEach((cl) => el.classList.add(cl));
+    .filter((cl) => cl !== '')
+    .forEach((cl) => el.classList.add(cl.trim()));
 };
 
 /**
@@ -55,7 +56,8 @@ export const toggle = (el: HTMLElement, cls: string, avoid = 'noop') => {
     .trim()
     .split(' ')
     .filter((cl) => cl !== avoid)
-    .forEach((cl) => el.classList.toggle(cl));
+    .filter((cl) => cl !== '')
+    .forEach((cl) => el.classList.toggle(cl.trim()));
 };
 
 /**
@@ -81,7 +83,8 @@ export const remove = (el: HTMLElement, cls: string, avoid = 'noop') => {
     .trim()
     .split(' ')
     .filter((cl) => cl !== avoid)
-    .forEach((cl) => el.classList.remove(cl));
+    .filter((cl) => cl !== '')
+    .forEach((cl) => el.classList.remove(cl.trim()));
 };
 
 /**
