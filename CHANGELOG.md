@@ -1,5 +1,13 @@
 # Changelog
 
+## [9.5.6](https://github.com/phun-ky/speccer/compare/v9.5.5...v9.5.6) (2024-08-14)
+
+
+### Documentation
+
+* ✏️ Add toc to docs ([4f55140](https://github.com/phun-ky/speccer/commit/4f551404539bd54c6512e68868ac89b1294cef7b))
+* ✏️ regenerate docs ([80cadd7](https://github.com/phun-ky/speccer/commit/80cadd78d3edc910712b2a248e99f552f182ca9f))
+
 ## [9.5.5](https://github.com/phun-ky/speccer/compare/v9.5.4...v9.5.5) (2024-08-14)
 
 

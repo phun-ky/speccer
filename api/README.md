@@ -8,7 +8,7 @@
 
 ---
 
-> Last updated 2024-08-14T10:42:54.214Z
+> Last updated 2024-08-14T10:46:25.824Z
 
 ## Modules
 

@@ -6,7 +6,7 @@
 
 # utils/area
 
-> Last updated 2024-08-14T10:42:54.229Z
+> Last updated 2024-08-14T10:46:25.850Z
 
 ## Functions
 
