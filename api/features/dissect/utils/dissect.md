@@ -6,14 +6,14 @@
 
 # features/dissect/utils/dissect
 
-> Last updated 2024-08-14T10:46:25.835Z
+> Last updated 2024-08-14T13:51:37.732Z
 
 ## Functions
 
 ### dissect()
 
 ```ts
-function dissect(el, symbol, areas?): Promise<string | void>;
+function dissect(el, symbol, parentElement, areas?): Promise<string | void>;
 ```
 
 Create and style the dissection element as needed.
@@ -23,11 +23,12 @@ of the target element. It handles different styles, such as curly brackets or li
 
 #### Parameters
 
-| Parameter | Type          | Default value | Description                                                                        |
-| --------- | ------------- | ------------- | ---------------------------------------------------------------------------------- |
-| `el`      | `HTMLElement` | `undefined`   | The target element that contains the anatomy data.                                 |
-| `symbol`  | `string`      | `undefined`   | The symbol to use.                                                                 |
-| `areas`?  | `string`      | `''`          | Optional areas to use if not \[data-anatomy] is set as an attribute on the element |
+| Parameter       | Type          | Default value | Description                                                                        |
+| --------------- | ------------- | ------------- | ---------------------------------------------------------------------------------- |
+| `el`            | `HTMLElement` | `undefined`   | The target element that contains the anatomy data.                                 |
+| `symbol`        | `string`      | `undefined`   | The symbol to use.                                                                 |
+| `parentElement` | `HTMLElement` | `undefined`   | The parent element                                                                 |
+| `areas`?        | `string`      | `''`          | Optional areas to use if not \[data-anatomy] is set as an attribute on the element |
 
 #### Returns
 
@@ -47,7 +48,7 @@ dissect(element, symbol).then(() => {
 
 #### Defined in
 
-[features/dissect/utils/dissect.ts:34](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/dissect.ts#L34)
+[features/dissect/utils/dissect.ts:35](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/dissect.ts#L35)
 
 ---
 

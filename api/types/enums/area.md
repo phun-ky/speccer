@@ -6,7 +6,7 @@
 
 # types/enums/area
 
-> Last updated 2024-08-14T10:46:25.846Z
+> Last updated 2024-08-14T13:51:37.738Z
 
 ## Enumerations
 
@@ -18,15 +18,17 @@ Enum representing different areas in Dissect.
 
 | Enumeration Member | Value       | Defined in                                                                                         |
 | ------------------ | ----------- | -------------------------------------------------------------------------------------------------- |
-| `Bottom`           | `"bottom"`  | [types/enums/area.ts:23](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L23) |
-| `Curly`            | `"curly"`   | [types/enums/area.ts:26](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L26) |
-| `Enclose`          | `"enclose"` | [types/enums/area.ts:19](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L19) |
-| `Full`             | `"full"`    | [types/enums/area.ts:20](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L20) |
-| `Left`             | `"left"`    | [types/enums/area.ts:21](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L21) |
+| `Bottom`           | `"bottom"`  | [types/enums/area.ts:25](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L25) |
+| `Curly`            | `"curly"`   | [types/enums/area.ts:28](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L28) |
+| `Enclose`          | `"enclose"` | [types/enums/area.ts:20](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L20) |
+| `Full`             | `"full"`    | [types/enums/area.ts:22](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L22) |
+| `Left`             | `"left"`    | [types/enums/area.ts:23](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L23) |
 | `Outline`          | `"outline"` | [types/enums/area.ts:18](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L18) |
-| `Right`            | `"right"`   | [types/enums/area.ts:22](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L22) |
-| `SVG`              | `"svg"`     | [types/enums/area.ts:25](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L25) |
-| `Top`              | `"top"`     | [types/enums/area.ts:24](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L24) |
+| `Parent`           | `"parent"`  | [types/enums/area.ts:19](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L19) |
+| `Right`            | `"right"`   | [types/enums/area.ts:24](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L24) |
+| `SVG`              | `"svg"`     | [types/enums/area.ts:27](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L27) |
+| `Subtle`           | `"subtle"`  | [types/enums/area.ts:21](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L21) |
+| `Top`              | `"top"`     | [types/enums/area.ts:26](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L26) |
 
 ---
 
@@ -38,12 +40,12 @@ Enum representing different measurement areas.
 
 | Enumeration Member | Value      | Defined in                                                                                         |
 | ------------------ | ---------- | -------------------------------------------------------------------------------------------------- |
-| `Bottom`           | `"bottom"` | [types/enums/area.ts:37](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L37) |
-| `Height`           | `"height"` | [types/enums/area.ts:34](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L34) |
-| `Left`             | `"left"`   | [types/enums/area.ts:35](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L35) |
-| `Right`            | `"right"`  | [types/enums/area.ts:36](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L36) |
-| `Top`              | `"top"`    | [types/enums/area.ts:38](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L38) |
-| `Width`            | `"width"`  | [types/enums/area.ts:33](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L33) |
+| `Bottom`           | `"bottom"` | [types/enums/area.ts:39](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L39) |
+| `Height`           | `"height"` | [types/enums/area.ts:36](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L36) |
+| `Left`             | `"left"`   | [types/enums/area.ts:37](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L37) |
+| `Right`            | `"right"`  | [types/enums/area.ts:38](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L38) |
+| `Top`              | `"top"`    | [types/enums/area.ts:40](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L40) |
+| `Width`            | `"width"`  | [types/enums/area.ts:35](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L35) |
 
 ---
 

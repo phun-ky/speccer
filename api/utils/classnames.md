@@ -6,7 +6,7 @@
 
 # utils/classnames
 
-> Last updated 2024-08-14T10:46:25.854Z
+> Last updated 2024-08-14T13:51:37.744Z
 
 ## Functions
 
@@ -46,7 +46,7 @@ console.log(classNames); // Example output: 'class1 class2'
 
 #### Defined in
 
-[utils/classnames.ts:105](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L105)
+[utils/classnames.ts:108](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L108)
 
 ---
 
@@ -80,7 +80,7 @@ remove(element, 'class1 class2');
 
 #### Defined in
 
-[utils/classnames.ts:75](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L75)
+[utils/classnames.ts:77](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L77)
 
 ---
 
@@ -148,7 +148,7 @@ toggle(element, 'class1 class2');
 
 #### Defined in
 
-[utils/classnames.ts:49](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L49)
+[utils/classnames.ts:50](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L50)
 
 ---
 

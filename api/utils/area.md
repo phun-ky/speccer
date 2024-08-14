@@ -6,7 +6,7 @@
 
 # utils/area
 
-> Last updated 2024-08-14T10:46:25.850Z
+> Last updated 2024-08-14T13:51:37.741Z
 
 ## Functions
 
@@ -91,7 +91,7 @@ Checks if the provided areaString contains 'curly' and 'full' areas.
 
 #### Defined in
 
-[utils/area.ts:129](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L129)
+[utils/area.ts:153](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L153)
 
 ---
 
@@ -169,7 +169,7 @@ Checks if 'height' area is present in the provided areaString.
 
 #### Defined in
 
-[utils/area.ts:96](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L96)
+[utils/area.ts:120](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L120)
 
 ---
 
@@ -199,6 +199,32 @@ Checks if 'left' area is present in the provided areaString.
 
 ---
 
+### isParentArea()
+
+```ts
+function isParentArea(areaString): boolean;
+```
+
+Checks if 'parent' area is present in the provided areaString.
+
+#### Parameters
+
+| Parameter    | Type     | Description                  |
+| ------------ | -------- | ---------------------------- |
+| `areaString` | `string` | The string containing areas. |
+
+#### Returns
+
+`boolean`
+
+`true` if 'parent' is present, otherwise `false`.
+
+#### Defined in
+
+[utils/area.ts:108](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L108)
+
+---
+
 ### isRightArea()
 
 ```ts
@@ -222,6 +248,32 @@ Checks if 'right' area is present in the provided areaString.
 #### Defined in
 
 [utils/area.ts:36](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L36)
+
+---
+
+### isSubtle()
+
+```ts
+function isSubtle(areaString): boolean;
+```
+
+Checks if 'subtle' area is present in the provided areaString.
+
+#### Parameters
+
+| Parameter    | Type     | Description                  |
+| ------------ | -------- | ---------------------------- |
+| `areaString` | `string` | The string containing areas. |
+
+#### Returns
+
+`boolean`
+
+`true` if 'subtle' is present, otherwise `false`.
+
+#### Defined in
+
+[utils/area.ts:96](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L96)
 
 ---
 
@@ -273,7 +325,7 @@ Checks if 'width' area is present in the provided areaString.
 
 #### Defined in
 
-[utils/area.ts:108](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L108)
+[utils/area.ts:132](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L132)
 
 ---
 
@@ -299,7 +351,7 @@ Checks if the provided areaString contains SVG-related areas.
 
 #### Defined in
 
-[utils/area.ts:120](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L120)
+[utils/area.ts:144](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L144)
 
 ---
 
