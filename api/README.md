@@ -1,64 +1,94 @@
-**@phun-ky/speccer** • **Docs**
+<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/>
 
-***
+# SPECCER API Documentation
 
-# @phun-ky/speccer
+![Speccer hero, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-hero.png?raw=true)
+
+---
+
+> Last updated 2024-08-14T10:18:52.237Z
 
 ## Modules
 
-- [config/browser](config/browser/README.md)
-- [features/a11y](features/a11y/README.md)
-- [features/a11y/constants](features/a11y/constants/README.md)
-- [features/a11y/utils/styles](features/a11y/utils/styles/README.md)
-- [features/dissect](features/dissect/README.md)
-- [features/dissect/utils/create](features/dissect/utils/create/README.md)
-- [features/dissect/utils/dissect](features/dissect/utils/dissect/README.md)
-- [features/dissect/utils/get-character-to-use](features/dissect/utils/get-character-to-use/README.md)
-- [features/dissect/utils/styles](features/dissect/utils/styles/README.md)
-- [features/grid](features/grid/README.md)
-- [features/mark](features/mark/README.md)
-- [features/measure](features/measure/README.md)
-- [features/spacing](features/spacing/README.md)
-- [features/spacing/utils/position](features/spacing/utils/position/README.md)
-- [features/typography](features/typography/README.md)
-- [features/typography/utils/position](features/typography/utils/position/README.md)
-- [features/typography/utils/template](features/typography/utils/template/README.md)
-- [main](main/README.md)
-- [types/bezier](types/bezier/README.md)
-- [types/css](types/css/README.md)
-- [types/debounce](types/debounce/README.md)
-- [types/enums/area](types/enums/area/README.md)
-- [types/interfaces/attributes](types/interfaces/attributes/README.md)
-- [types/interfaces/classnames](types/interfaces/classnames/README.md)
-- [types/interfaces/global](types/interfaces/global/README.md)
-- [types/interfaces/position](types/interfaces/position/README.md)
-- [types/position](types/position/README.md)
-- [types/speccer](types/speccer/README.md)
-- [types/styles](types/styles/README.md)
-- [types/xy](types/xy/README.md)
-- [utils/angle](utils/angle/README.md)
-- [utils/area](utils/area/README.md)
-- [utils/attributes](utils/attributes/README.md)
-- [utils/bezier](utils/bezier/README.md)
-- [utils/camel-case](utils/camel-case/README.md)
-- [utils/cardinal](utils/cardinal/README.md)
-- [utils/classes/DrawSVGCurlyBracket](utils/classes/DrawSVGCurlyBracket/README.md)
-- [utils/classes/DrawSVGLine](utils/classes/DrawSVGLine/README.md)
-- [utils/classnames](utils/classnames/README.md)
-- [utils/constants](utils/constants/README.md)
-- [utils/coords](utils/coords/README.md)
-- [utils/css](utils/css/README.md)
-- [utils/debounce](utils/debounce/README.md)
-- [utils/direction-of-element](utils/direction-of-element/README.md)
-- [utils/get-coords-pair-from-objects](utils/get-coords-pair-from-objects/README.md)
-- [utils/id](utils/id/README.md)
-- [utils/intrinsic-coords](utils/intrinsic-coords/README.md)
-- [utils/node](utils/node/README.md)
-- [utils/number](utils/number/README.md)
-- [utils/position](utils/position/README.md)
-- [utils/resize](utils/resize/README.md)
-- [utils/style-property](utils/style-property/README.md)
-- [utils/styles](utils/styles/README.md)
-- [utils/typeof](utils/typeof/README.md)
-- [utils/wait](utils/wait/README.md)
-- [utils/xy](utils/xy/README.md)
+- [config/browser](config/browser.md)
+- [features/a11y](features/a11y.md)
+- [features/a11y/constants](features/a11y/constants.md)
+- [features/a11y/utils/styles](features/a11y/utils/styles.md)
+- [features/dissect](features/dissect.md)
+- [features/dissect/utils/create](features/dissect/utils/create.md)
+- [features/dissect/utils/dissect](features/dissect/utils/dissect.md)
+- [features/dissect/utils/get-character-to-use](features/dissect/utils/get-character-to-use.md)
+- [features/dissect/utils/styles](features/dissect/utils/styles.md)
+- [features/grid](features/grid.md)
+- [features/mark](features/mark.md)
+- [features/measure](features/measure.md)
+- [features/spacing](features/spacing.md)
+- [features/spacing/utils/position](features/spacing/utils/position.md)
+- [features/typography](features/typography.md)
+- [features/typography/utils/position](features/typography/utils/position.md)
+- [features/typography/utils/template](features/typography/utils/template.md)
+- [main](main.md)
+- [types/bezier](types/bezier.md)
+- [types/css](types/css.md)
+- [types/debounce](types/debounce.md)
+- [types/enums/area](types/enums/area.md)
+- [types/interfaces/attributes](types/interfaces/attributes.md)
+- [types/interfaces/classnames](types/interfaces/classnames.md)
+- [types/interfaces/global](types/interfaces/global.md)
+- [types/interfaces/position](types/interfaces/position.md)
+- [types/position](types/position.md)
+- [types/speccer](types/speccer.md)
+- [types/styles](types/styles.md)
+- [types/xy](types/xy.md)
+- [utils/angle](utils/angle.md)
+- [utils/area](utils/area.md)
+- [utils/attributes](utils/attributes.md)
+- [utils/bezier](utils/bezier.md)
+- [utils/camel-case](utils/camel-case.md)
+- [utils/cardinal](utils/cardinal.md)
+- [utils/classes/DrawSVGCurlyBracket](utils/classes/DrawSVGCurlyBracket.md)
+- [utils/classes/DrawSVGLine](utils/classes/DrawSVGLine.md)
+- [utils/classnames](utils/classnames.md)
+- [utils/constants](utils/constants.md)
+- [utils/coords](utils/coords.md)
+- [utils/css](utils/css.md)
+- [utils/debounce](utils/debounce.md)
+- [utils/direction-of-element](utils/direction-of-element.md)
+- [utils/get-coords-pair-from-objects](utils/get-coords-pair-from-objects.md)
+- [utils/id](utils/id.md)
+- [utils/intrinsic-coords](utils/intrinsic-coords.md)
+- [utils/node](utils/node.md)
+- [utils/number](utils/number.md)
+- [utils/position](utils/position.md)
+- [utils/resize](utils/resize.md)
+- [utils/style-property](utils/style-property.md)
+- [utils/styles](utils/styles.md)
+- [utils/typeof](utils/typeof.md)
+- [utils/wait](utils/wait.md)
+- [utils/xy](utils/xy.md)
+
+***
+
+## Contributing
+
+Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+
+## Sponsor me
+
+I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+
+The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+
+[Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
+
+![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
+
+***
+<p class="ph">
+  This project created by
+  <a rel="noopener noreferrer" target="_blank" class="ph" href="http://phun-ky.net" property="cc:attributionName">
+    Alexander Vassbotn Røyne-Helgesen</a>
+  is licensed under a
+  <a rel="noopener noreferrer" target="_blank" class="ph" href="https://choosealicense.com/licenses/mit/">
+    MIT License </a>.
+</p>
