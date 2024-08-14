@@ -1,17 +1,19 @@
-<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/>
+<div>
+  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
+</div>
 
 [@phun-ky/speccer](../README.md) / utils/cardinal
 
 # utils/cardinal
 
-> Last updated 2024-08-14T10:38:21.003Z
+> Last updated 2024-08-14T10:42:54.232Z
 
 ## Functions
 
-### cardinal\_direction()
+### cardinal_direction()
 
 ```ts
-function cardinal_direction(degrees): string
+function cardinal_direction(degrees): string;
 ```
 
 Gives you the cardinal direction based on degrees.
@@ -20,8 +22,8 @@ and we travel clockwise.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter | Type     | Description           |
+| --------- | -------- | --------------------- |
 | `degrees` | `number` | The angle in degrees. |
 
 #### Returns
@@ -49,12 +51,12 @@ const direction = cardinal_direction(45);
 
 [utils/cardinal.ts:18](https://github.com/phun-ky/speccer/blob/main/src/utils/cardinal.ts#L18)
 
-***
+---
 
-### cardinal\_direction\_crude()
+### cardinal_direction_crude()
 
 ```ts
-function cardinal_direction_crude(degrees): string
+function cardinal_direction_crude(degrees): string;
 ```
 
 Gives you the cardinal direction based on degrees (crude version).
@@ -63,8 +65,8 @@ and we travel clockwise.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter | Type     | Description           |
+| --------- | -------- | --------------------- |
 | `degrees` | `number` | The angle in degrees. |
 
 #### Returns
@@ -92,13 +94,13 @@ const direction = cardinal_direction_crude(45);
 
 [utils/cardinal.ts:57](https://github.com/phun-ky/speccer/blob/main/src/utils/cardinal.ts#L57)
 
-***
+---
 
-## Contributing
+**Contributing**
 
 Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
-## Sponsor me
+**Sponsor me**
 
 I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
 
@@ -108,12 +110,6 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
 
-***
-<p class="ph">
-  This project created by
-  <a rel="noopener noreferrer" target="_blank" class="ph" href="http://phun-ky.net" property="cc:attributionName">
-    Alexander Vassbotn Røyne-Helgesen</a>
-  is licensed under a
-  <a rel="noopener noreferrer" target="_blank" class="ph" href="https://choosealicense.com/licenses/mit/">
-    MIT License </a>.
-</p>
+---
+
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

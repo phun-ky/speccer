@@ -1,17 +1,19 @@
-<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/>
+<div>
+  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
+</div>
 
 [@phun-ky/speccer](../README.md) / utils/classnames
 
 # utils/classnames
 
-> Last updated 2024-08-14T10:38:21.005Z
+> Last updated 2024-08-14T10:42:54.233Z
 
 ## Functions
 
 ### cx()
 
 ```ts
-function cx(cls, cls_obj?): string
+function cx(cls, cls_obj?): string;
 ```
 
 Combines class names and optional properties object into a single string of class names.
@@ -19,13 +21,13 @@ Combines class names and optional properties object into a single string of clas
 The `cx` function takes two parameters: `cls` and `cls_obj`.
 The `cls` parameter can be either a string representing class names or an object with
 properties set to `true` or `false`. The `cls_obj` parameter is an optional object with
- properties set to `true` or `false`, allowing for conditional inclusion of class names.
+properties set to `true` or `false`, allowing for conditional inclusion of class names.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `cls` | [`ClassNamesFirstArgType`](../types/interfaces/classnames.md#classnamesfirstargtype) | The class names as a string or an object with properties set to true or false. |
+| Parameter  | Type                                                                                   | Description                                                                                   |
+| ---------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `cls`      | [`ClassNamesFirstArgType`](../types/interfaces/classnames.md#classnamesfirstargtype)   | The class names as a string or an object with properties set to true or false.                |
 | `cls_obj`? | [`ClassNamesSecondArgType`](../types/interfaces/classnames.md#classnamessecondargtype) | An optional object with properties set to true or false to conditionally include class names. |
 
 #### Returns
@@ -46,26 +48,23 @@ console.log(classNames); // Example output: 'class1 class2'
 
 [utils/classnames.ts:105](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L105)
 
-***
+---
 
 ### remove()
 
 ```ts
-function remove(
-   el, 
-   cls, 
-   avoid?): void
+function remove(el, cls, avoid?): void;
 ```
 
 Remove CSS classes from an HTML element.
 
 #### Parameters
 
-| Parameter | Type | Default value | Description |
-| ------ | ------ | ------ | ------ |
-| `el` | `HTMLElement` | `undefined` | The HTML element from which classes should be removed. |
-| `cls` | `string` | `undefined` | The CSS classes to remove, separated by spaces. |
-| `avoid`? | `string` | `'noop'` | Classes to avoid removing. |
+| Parameter | Type          | Default value | Description                                            |
+| --------- | ------------- | ------------- | ------------------------------------------------------ |
+| `el`      | `HTMLElement` | `undefined`   | The HTML element from which classes should be removed. |
+| `cls`     | `string`      | `undefined`   | The CSS classes to remove, separated by spaces.        |
+| `avoid`?  | `string`      | `'noop'`      | Classes to avoid removing.                             |
 
 #### Returns
 
@@ -83,26 +82,23 @@ remove(element, 'class1 class2');
 
 [utils/classnames.ts:75](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L75)
 
-***
+---
 
 ### set()
 
 ```ts
-function set(
-   el, 
-   cls, 
-   avoid?): void
+function set(el, cls, avoid?): void;
 ```
 
 Add CSS classes to an HTML element.
 
 #### Parameters
 
-| Parameter | Type | Default value | Description |
-| ------ | ------ | ------ | ------ |
-| `el` | `HTMLElement` | `undefined` | The HTML element to which classes should be added. |
-| `cls` | `string` | `undefined` | The CSS classes to add, separated by spaces. |
-| `avoid`? | `string` | `'noop'` | Classes to avoid adding. |
+| Parameter | Type          | Default value | Description                                        |
+| --------- | ------------- | ------------- | -------------------------------------------------- |
+| `el`      | `HTMLElement` | `undefined`   | The HTML element to which classes should be added. |
+| `cls`     | `string`      | `undefined`   | The CSS classes to add, separated by spaces.       |
+| `avoid`?  | `string`      | `'noop'`      | Classes to avoid adding.                           |
 
 #### Returns
 
@@ -120,26 +116,23 @@ set(element, 'class1 class2');
 
 [utils/classnames.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L23)
 
-***
+---
 
 ### toggle()
 
 ```ts
-function toggle(
-   el, 
-   cls, 
-   avoid?): void
+function toggle(el, cls, avoid?): void;
 ```
 
 Toggle CSS classes on an HTML element.
 
 #### Parameters
 
-| Parameter | Type | Default value | Description |
-| ------ | ------ | ------ | ------ |
-| `el` | `HTMLElement` | `undefined` | The HTML element on which classes should be toggled. |
-| `cls` | `string` | `undefined` | The CSS classes to toggle, separated by spaces. |
-| `avoid`? | `string` | `'noop'` | Classes to avoid toggling. |
+| Parameter | Type          | Default value | Description                                          |
+| --------- | ------------- | ------------- | ---------------------------------------------------- |
+| `el`      | `HTMLElement` | `undefined`   | The HTML element on which classes should be toggled. |
+| `cls`     | `string`      | `undefined`   | The CSS classes to toggle, separated by spaces.      |
+| `avoid`?  | `string`      | `'noop'`      | Classes to avoid toggling.                           |
 
 #### Returns
 
@@ -157,13 +150,13 @@ toggle(element, 'class1 class2');
 
 [utils/classnames.ts:49](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L49)
 
-***
+---
 
-## Contributing
+**Contributing**
 
 Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
-## Sponsor me
+**Sponsor me**
 
 I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
 
@@ -173,12 +166,6 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
 
-***
-<p class="ph">
-  This project created by
-  <a rel="noopener noreferrer" target="_blank" class="ph" href="http://phun-ky.net" property="cc:attributionName">
-    Alexander Vassbotn Røyne-Helgesen</a>
-  is licensed under a
-  <a rel="noopener noreferrer" target="_blank" class="ph" href="https://choosealicense.com/licenses/mit/">
-    MIT License </a>.
-</p>
+---
+
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

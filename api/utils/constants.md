@@ -1,14 +1,16 @@
-<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/>
+<div>
+  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
+</div>
 
 [@phun-ky/speccer](../README.md) / utils/constants
 
 # utils/constants
 
-> Last updated 2024-08-14T10:38:21.006Z
+> Last updated 2024-08-14T10:42:54.233Z
 
 ## Variables
 
-### SPECCER\_DEFAULT\_LINE\_WIDTH
+### SPECCER_DEFAULT_LINE_WIDTH
 
 ```ts
 const SPECCER_DEFAULT_LINE_WIDTH: 1 = 1;
@@ -28,9 +30,9 @@ console.log(defaultLineWidth); // Example output: 1
 
 [utils/constants.ts:101](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L101)
 
-***
+---
 
-### SPECCER\_DEFAULT\_MEASURE\_SIZE
+### SPECCER_DEFAULT_MEASURE_SIZE
 
 ```ts
 const SPECCER_DEFAULT_MEASURE_SIZE: 8 = 8;
@@ -50,9 +52,9 @@ console.log(defaultMeasureSize); // Example output: 8
 
 [utils/constants.ts:74](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L74)
 
-***
+---
 
-### SPECCER\_DEFAULT\_MEASURE\_SIZE\_NEG
+### SPECCER_DEFAULT_MEASURE_SIZE_NEG
 
 ```ts
 const SPECCER_DEFAULT_MEASURE_SIZE_NEG: number;
@@ -72,9 +74,9 @@ console.log(negativeDefaultMeasureSize); // Example output: -8
 
 [utils/constants.ts:87](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L87)
 
-***
+---
 
-### SPECCER\_DEFAULT\_PIN\_SPACE
+### SPECCER_DEFAULT_PIN_SPACE
 
 ```ts
 const SPECCER_DEFAULT_PIN_SPACE: 48 = 48;
@@ -94,9 +96,9 @@ console.log(defaultPinSpace); // Example output: 48
 
 [utils/constants.ts:47](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L47)
 
-***
+---
 
-### SPECCER\_DEFAULT\_PIN\_SPACE\_NEG
+### SPECCER_DEFAULT_PIN_SPACE_NEG
 
 ```ts
 const SPECCER_DEFAULT_PIN_SPACE_NEG: number;
@@ -116,9 +118,9 @@ console.log(negativeDefaultPinSpace); // Example output: -48
 
 [utils/constants.ts:60](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L60)
 
-***
+---
 
-### SPECCER\_LITERALS
+### SPECCER_LITERALS
 
 ```ts
 const SPECCER_LITERALS: string[];
@@ -138,9 +140,9 @@ console.log(letters); // Example output: ['A', 'B', 'C', ...]
 
 [utils/constants.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L14)
 
-***
+---
 
-### SPECCER\_TAGS\_TO\_AVOID
+### SPECCER_TAGS_TO_AVOID
 
 ```ts
 const SPECCER_TAGS_TO_AVOID: string[];
@@ -160,13 +162,13 @@ console.log(tagsToAvoid); // Example output: ['TR', 'TH', 'TD', ...]
 
 [utils/constants.ts:27](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L27)
 
-***
+---
 
-## Contributing
+**Contributing**
 
 Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
-## Sponsor me
+**Sponsor me**
 
 I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
 
@@ -176,12 +178,6 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
 
-***
-<p class="ph">
-  This project created by
-  <a rel="noopener noreferrer" target="_blank" class="ph" href="http://phun-ky.net" property="cc:attributionName">
-    Alexander Vassbotn Røyne-Helgesen</a>
-  is licensed under a
-  <a rel="noopener noreferrer" target="_blank" class="ph" href="https://choosealicense.com/licenses/mit/">
-    MIT License </a>.
-</p>
+---
+
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

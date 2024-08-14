@@ -1,30 +1,32 @@
-<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/>
+<div>
+  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
+</div>
 
 [@phun-ky/speccer](../README.md) / utils/area
 
 # utils/area
 
-> Last updated 2024-08-14T10:38:20.999Z
+> Last updated 2024-08-14T10:42:54.229Z
 
 ## Functions
 
 ### getAreasFromString()
 
 ```ts
-function getAreasFromString(areaString): string[]
+function getAreasFromString(areaString): string[];
 ```
 
 Splits a string containing areas into an array of strings.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter    | Type     | Description                  |
+| ------------ | -------- | ---------------------------- |
 | `areaString` | `string` | The string containing areas. |
 
 #### Returns
 
-`string`[]
+`string`\[]
 
 An array of area strings.
 
@@ -39,20 +41,20 @@ const areas = getAreasFromString('left right top');
 
 [utils/area.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L15)
 
-***
+---
 
 ### isBottomArea()
 
 ```ts
-function isBottomArea(areaString): boolean
+function isBottomArea(areaString): boolean;
 ```
 
 Checks if 'bottom' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter    | Type     | Description                  |
+| ------------ | -------- | ---------------------------- |
 | `areaString` | `string` | The string containing areas. |
 
 #### Returns
@@ -65,20 +67,20 @@ Checks if 'bottom' area is present in the provided areaString.
 
 [utils/area.ts:60](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L60)
 
-***
+---
 
 ### isCurly()
 
 ```ts
-function isCurly(areaString): boolean
+function isCurly(areaString): boolean;
 ```
 
 Checks if the provided areaString contains 'curly' and 'full' areas.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter    | Type     | Description                  |
+| ------------ | -------- | ---------------------------- |
 | `areaString` | `string` | The string containing areas. |
 
 #### Returns
@@ -91,20 +93,20 @@ Checks if the provided areaString contains 'curly' and 'full' areas.
 
 [utils/area.ts:129](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L129)
 
-***
+---
 
 ### isEncloseArea()
 
 ```ts
-function isEncloseArea(areaString): boolean
+function isEncloseArea(areaString): boolean;
 ```
 
 Checks if 'enclose' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter    | Type     | Description                  |
+| ------------ | -------- | ---------------------------- |
 | `areaString` | `string` | The string containing areas. |
 
 #### Returns
@@ -117,20 +119,20 @@ Checks if 'enclose' area is present in the provided areaString.
 
 [utils/area.ts:84](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L84)
 
-***
+---
 
 ### isFullArea()
 
 ```ts
-function isFullArea(areaString): boolean
+function isFullArea(areaString): boolean;
 ```
 
 Checks if 'full' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter    | Type     | Description                  |
+| ------------ | -------- | ---------------------------- |
 | `areaString` | `string` | The string containing areas. |
 
 #### Returns
@@ -143,20 +145,20 @@ Checks if 'full' area is present in the provided areaString.
 
 [utils/area.ts:72](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L72)
 
-***
+---
 
 ### isHeightArea()
 
 ```ts
-function isHeightArea(areaString): boolean
+function isHeightArea(areaString): boolean;
 ```
 
 Checks if 'height' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter    | Type     | Description                  |
+| ------------ | -------- | ---------------------------- |
 | `areaString` | `string` | The string containing areas. |
 
 #### Returns
@@ -169,20 +171,20 @@ Checks if 'height' area is present in the provided areaString.
 
 [utils/area.ts:96](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L96)
 
-***
+---
 
 ### isLeftArea()
 
 ```ts
-function isLeftArea(areaString): boolean
+function isLeftArea(areaString): boolean;
 ```
 
 Checks if 'left' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter    | Type     | Description                  |
+| ------------ | -------- | ---------------------------- |
 | `areaString` | `string` | The string containing areas. |
 
 #### Returns
@@ -195,20 +197,20 @@ Checks if 'left' area is present in the provided areaString.
 
 [utils/area.ts:24](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L24)
 
-***
+---
 
 ### isRightArea()
 
 ```ts
-function isRightArea(areaString): boolean
+function isRightArea(areaString): boolean;
 ```
 
 Checks if 'right' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter    | Type     | Description                  |
+| ------------ | -------- | ---------------------------- |
 | `areaString` | `string` | The string containing areas. |
 
 #### Returns
@@ -221,20 +223,20 @@ Checks if 'right' area is present in the provided areaString.
 
 [utils/area.ts:36](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L36)
 
-***
+---
 
 ### isTopArea()
 
 ```ts
-function isTopArea(areaString): boolean
+function isTopArea(areaString): boolean;
 ```
 
 Checks if 'top' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter    | Type     | Description                  |
+| ------------ | -------- | ---------------------------- |
 | `areaString` | `string` | The string containing areas. |
 
 #### Returns
@@ -247,20 +249,20 @@ Checks if 'top' area is present in the provided areaString.
 
 [utils/area.ts:48](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L48)
 
-***
+---
 
 ### isWidthArea()
 
 ```ts
-function isWidthArea(areaString): boolean
+function isWidthArea(areaString): boolean;
 ```
 
 Checks if 'width' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter    | Type     | Description                  |
+| ------------ | -------- | ---------------------------- |
 | `areaString` | `string` | The string containing areas. |
 
 #### Returns
@@ -273,20 +275,20 @@ Checks if 'width' area is present in the provided areaString.
 
 [utils/area.ts:108](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L108)
 
-***
+---
 
 ### useSVG()
 
 ```ts
-function useSVG(areaString): boolean
+function useSVG(areaString): boolean;
 ```
 
 Checks if the provided areaString contains SVG-related areas.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter    | Type     | Description                  |
+| ------------ | -------- | ---------------------------- |
 | `areaString` | `string` | The string containing areas. |
 
 #### Returns
@@ -299,13 +301,13 @@ Checks if the provided areaString contains SVG-related areas.
 
 [utils/area.ts:120](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L120)
 
-***
+---
 
-## Contributing
+**Contributing**
 
 Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
-## Sponsor me
+**Sponsor me**
 
 I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
 
@@ -315,12 +317,6 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
 
-***
-<p class="ph">
-  This project created by
-  <a rel="noopener noreferrer" target="_blank" class="ph" href="http://phun-ky.net" property="cc:attributionName">
-    Alexander Vassbotn Røyne-Helgesen</a>
-  is licensed under a
-  <a rel="noopener noreferrer" target="_blank" class="ph" href="https://choosealicense.com/licenses/mit/">
-    MIT License </a>.
-</p>
+---
+
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
