@@ -5,6 +5,13 @@
  * > [!NOTE]
  * > If the activation method is dom or instant, a resize feature is activated, making sure everything is re-rendered on resize. for manual or lazy loading, you are responsible to handle resize yourself.
  *
+ * > [!NOTE]
+ * > Remember to add the CSS file!:
+ *
+ * > ```html
+ * > <link rel="stylesheet" href="../path/to/speccer.min.css" />
+ * > ```
+ *
  * ## Default implementation
  * ```html
  * <script src="../speccer.js"</script>

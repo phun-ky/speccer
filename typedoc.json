@@ -1,16 +1,21 @@
 {
-  "plugin": ["typedoc-plugin-markdown"],
+  "plugin": ["typedoc-plugin-markdown", "./custom-typedoc-plugin.js"],
   "out": "./api",
   "tsconfig": "tsconfig.json",
+  "outputFileStrategy": "modules",
   "interfacePropertiesFormat": "table",
   "classPropertiesFormat": "table",
   "enumMembersFormat": "table",
   "typeDeclarationFormat": "htmlTable",
   "propertyMembersFormat": "table",
+  "theme": "custom-markdown-theme",
   "parametersFormat": "table",
   "entryPoints": ["src"],
   "entryPointStrategy": "expand",
-  "readme": "none",
+  "readme": "./public/docs/README.md",
   "gitRevision": "main",
-  "githubPages": false
+  "githubPages": false,
+  "mergeReadme": true,
+  "useCodeBlocks": true,
+  "expandObjects": true
 }
