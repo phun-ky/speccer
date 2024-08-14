@@ -1,4 +1,6 @@
-<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
+<div>
+  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
+</div>
 
 # SPECCER API Documentation
 
@@ -6,7 +8,7 @@
 
 ---
 
-> Last updated 2024-08-14T10:33:46.354Z
+> Last updated 2024-08-14T10:42:04.973Z
 
 ## Modules
 

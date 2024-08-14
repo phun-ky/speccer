@@ -1,10 +1,12 @@
-<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
+<div>
+  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
+</div>
 
 [@phun-ky/speccer](../../../README.md) / features/dissect/utils/dissect
 
 # features/dissect/utils/dissect
 
-> Last updated 2024-08-14T10:33:46.361Z
+> Last updated 2024-08-14T10:42:04.980Z
 
 ## Functions
 

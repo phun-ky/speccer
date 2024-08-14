@@ -1,10 +1,12 @@
-<img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
+<div>
+  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
+</div>
 
 [@phun-ky/speccer](../../../README.md) / features/typography/utils/position
 
 # features/typography/utils/position
 
-> Last updated 2024-08-14T10:33:46.364Z
+> Last updated 2024-08-14T10:42:04.983Z
 
 ## Functions
 
