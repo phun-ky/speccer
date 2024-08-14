@@ -4,7 +4,7 @@
 
 # utils/bezier
 
-> Last updated 2024-08-14T10:23:12.586Z
+> Last updated 2024-08-14T10:38:21.001Z
 
 ## Functions
 

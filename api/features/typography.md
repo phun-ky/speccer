@@ -4,7 +4,7 @@
 
 # features/typography
 
-> Last updated 2024-08-14T10:23:12.575Z
+> Last updated 2024-08-14T10:38:20.984Z
 
 ## Functions
 

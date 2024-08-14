@@ -4,7 +4,7 @@
 
 # utils/typeof
 
-> Last updated 2024-08-14T10:23:12.595Z
+> Last updated 2024-08-14T10:38:21.013Z
 
 ## Functions
 
