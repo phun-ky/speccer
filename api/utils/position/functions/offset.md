@@ -12,9 +12,9 @@ Gets the offset properties of an HTML element.
 
 ## Parameters
 
-• **targetEl**: `HTMLElement`
-
-The target HTML element.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `targetEl` | `HTMLElement` | The target HTML element. |
 
 ## Returns
 

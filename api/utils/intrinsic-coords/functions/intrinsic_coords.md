@@ -12,13 +12,10 @@ Get the intrinsic coordinates of an element based on a specified position.
 
 ## Parameters
 
-• **el**: `HTMLElement`
-
-The HTML element.
-
-• **pos?**: `string` = `'center'`
-
-The position to use.
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `el` | `HTMLElement` | `undefined` | The HTML element. |
+| `pos`? | `string` | `'center'` | The position to use. |
 
 ## Returns
 
@@ -26,13 +23,10 @@ The position to use.
 
 - An object containing the coordinates.
 
-### x
-
-> **x**: `number`
-
-### y
-
-> **y**: `number`
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| `x` | `number` | [utils/intrinsic-coords.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/intrinsic-coords.ts#L23) |
+| `y` | `number` | [utils/intrinsic-coords.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/intrinsic-coords.ts#L23) |
 
 ## Throws
 

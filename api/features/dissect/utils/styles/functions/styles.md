@@ -12,21 +12,12 @@ Get styles for dissected elements based on the specified area and options.
 
 ## Parameters
 
-• **area**: `string`
-
-The area description.
-
-• **targetEl**: `HTMLElement`
-
-The target element.
-
-• **dissectionEl**: `HTMLElement`
-
-The dissection element.
-
-• **options?**: [`DissectStylesOptionsType`](../../../../../types/bezier/type-aliases/DissectStylesOptionsType.md)
-
-Optional styles options.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `area` | `string` | The area description. |
+| `targetEl` | `HTMLElement` | The target element. |
+| `dissectionEl` | `HTMLElement` | The dissection element. |
+| `options`? | [`DissectStylesOptionsType`](../../../../../types/bezier/type-aliases/DissectStylesOptionsType.md) | Optional styles options. |
 
 ## Returns
 

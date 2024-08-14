@@ -12,21 +12,12 @@ Create a dissected element with optional text content, area description, and ele
 
 ## Parameters
 
-• **textContent**: `string` = `''`
-
-The text content to add to the element.
-
-• **area**: `string`
-
-The area description for styling.
-
-• **id**: `string` = `''`
-
-The id of the dissection element
-
-• **n**: `string` = `'span'`
-
-The element type.
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `textContent` | `string` | `''` | The text content to add to the element. |
+| `area` | `string` | `undefined` | The area description for styling. |
+| `id` | `string` | `''` | The id of the dissection element |
+| `n` | `string` | `'span'` | The element type. |
 
 ## Returns
 

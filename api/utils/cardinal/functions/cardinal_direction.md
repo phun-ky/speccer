@@ -14,9 +14,9 @@ and we travel clockwise.
 
 ## Parameters
 
-• **degrees**: `number`
-
-The angle in degrees.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `degrees` | `number` | The angle in degrees. |
 
 ## Returns
 

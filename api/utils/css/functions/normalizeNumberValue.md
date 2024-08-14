@@ -13,9 +13,9 @@ If the value is within the range [0, 1] or [-1, 0), it's normalized to 0.
 
 ## Parameters
 
-• **value**: `string` \| `number`
-
-The value to normalize.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `value` | `string` \| `number` | The value to normalize. |
 
 ## Returns
 

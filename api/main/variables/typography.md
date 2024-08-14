@@ -10,66 +10,59 @@
 
 ## Type declaration
 
-### create()
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default value</th>
+<th>Defined in</th>
+</tr>
+<tr>
+<td>
 
-> **create**: (`html`, `area`) => `HTMLElement` = `typographyCreate`
+`create`
 
-Create a DOM element with provided HTML and optional CSS class names.
+</td>
+<td>
 
-#### Parameters
+(`html`, `area`) => `HTMLElement`
 
-• **html**: `string`
+</td>
+<td>
 
-The HTML content to be set in the created element.
+typographyCreate
 
-• **area**: `null` \| `string`
+</td>
+<td>
 
-The optional CSS class names to add.
+[main.ts:78](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L78)
 
-#### Returns
+</td>
+</tr>
+<tr>
+<td>
 
-`HTMLElement`
+`element`
 
-- The created DOM element.
+</td>
+<td>
 
-#### Example
+(`targetEl`) => `Promise`\<`void`\>
 
-```ts
-const htmlContent = '<p>This is some HTML content.</p>';
-const cssClass = 'custom-class';
-const createdElement = create(htmlContent, cssClass);
-document.body.appendChild(createdElement);
-```
+</td>
+<td>
 
-### element()
+typographyElement
 
-> **element**: (`targetEl`) => `Promise`\<`void`\> = `typographyElement`
+</td>
+<td>
 
-Create a specced typography element for a given target element.
+[main.ts:79](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L79)
 
-![typography](https://github.com/phun-ky/speccer/blob/main/public/typography.png?raw=true)
-
-#### Parameters
-
-• **targetEl**: `HTMLElement`
-
-The target element to specc typography for.
-
-#### Returns
-
-`Promise`\<`void`\>
-
-- A promise that resolves once typography element is created and positioned.
-
-#### Example
-
-```ts
-const targetElement = document.querySelector('.target');
-if (targetElement) {
-  element(targetElement);
-}
-```
+</td>
+</tr>
+</table>
 
 ## Defined in
 
-[main.ts:56](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L56)
+[main.ts:77](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L77)

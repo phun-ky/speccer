@@ -12,101 +12,188 @@ A set of functions to retrieve specific coordinates from a DOMRect.
 
 ## Type declaration
 
-### bottom()
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Defined in</th>
+</tr>
+<tr>
+<td>
 
-> **bottom**: (`rect`) => `number`
+`bottom`
 
-#### Parameters
+</td>
+<td>
 
-• **rect**: `DOMRect`
+(`rect`) => `number`
 
-The DOMRect to retrieve the bottom coordinate from.
+</td>
+<td>
 
-#### Returns
+Get the bottom coordinate of a DOMRect.
 
-`number`
+**Example**
 
-The bottom coordinate.
+```ts
+const rect = element.getBoundingClientRect();
+const bottomCoordinate = coords.bottom(rect);
+```
 
-### center\_x()
+</td>
+<td>
 
-> **center\_x**: (`rect`) => `number`
+[utils/coords.ts:39](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L39)
 
-#### Parameters
+</td>
+</tr>
+<tr>
+<td>
 
-• **rect**: `DOMRect`
+`center_x`
 
-The DOMRect to retrieve the x-coordinate of the center from.
+</td>
+<td>
 
-#### Returns
+(`rect`) => `number`
 
-`number`
+</td>
+<td>
 
-The x-coordinate of the center.
+Get the x-coordinate of the center of a DOMRect.
 
-### center\_y()
+**Example**
 
-> **center\_y**: (`rect`) => `number`
+```ts
+const rect = element.getBoundingClientRect();
+const centerXCoordinate = coords.center_x(rect);
+```
 
-#### Parameters
+</td>
+<td>
 
-• **rect**: `DOMRect`
+[utils/coords.ts:63](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L63)
 
-The DOMRect to retrieve the y-coordinate of the center from.
+</td>
+</tr>
+<tr>
+<td>
 
-#### Returns
+`center_y`
 
-`number`
+</td>
+<td>
 
-The y-coordinate of the center.
+(`rect`) => `number`
 
-### left()
+</td>
+<td>
 
-> **left**: (`rect`) => `number`
+Get the y-coordinate of the center of a DOMRect.
 
-#### Parameters
+**Example**
 
-• **rect**: `DOMRect`
+```ts
+const rect = element.getBoundingClientRect();
+const centerYCoordinate = coords.center_y(rect);
+```
 
-The DOMRect to retrieve the left coordinate from.
+</td>
+<td>
 
-#### Returns
+[utils/coords.ts:75](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L75)
 
-`number`
+</td>
+</tr>
+<tr>
+<td>
 
-The left coordinate.
+`left`
 
-### right()
+</td>
+<td>
 
-> **right**: (`rect`) => `number`
+(`rect`) => `number`
 
-#### Parameters
+</td>
+<td>
 
-• **rect**: `DOMRect`
+Get the left coordinate of a DOMRect.
 
-The DOMRect to retrieve the right coordinate from.
+**Example**
 
-#### Returns
+```ts
+const rect = element.getBoundingClientRect();
+const leftCoordinate = coords.left(rect);
+```
 
-`number`
+</td>
+<td>
 
-The right coordinate.
+[utils/coords.ts:51](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L51)
 
-### top()
+</td>
+</tr>
+<tr>
+<td>
 
-> **top**: (`rect`) => `number`
+`right`
 
-#### Parameters
+</td>
+<td>
 
-• **rect**: `DOMRect`
+(`rect`) => `number`
 
-The DOMRect to retrieve the top coordinate from.
+</td>
+<td>
 
-#### Returns
+Get the right coordinate of a DOMRect.
 
-`number`
+**Example**
 
-The top coordinate.
+```ts
+const rect = element.getBoundingClientRect();
+const rightCoordinate = coords.right(rect);
+```
+
+</td>
+<td>
+
+[utils/coords.ts:27](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L27)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`top`
+
+</td>
+<td>
+
+(`rect`) => `number`
+
+</td>
+<td>
+
+Get the top coordinate of a DOMRect.
+
+**Example**
+
+```ts
+const rect = element.getBoundingClientRect();
+const topCoordinate = coords.top(rect);
+```
+
+</td>
+<td>
+
+[utils/coords.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L15)
+
+</td>
+</tr>
+</table>
 
 ## Defined in
 

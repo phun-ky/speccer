@@ -12,9 +12,9 @@ Checks if 'top' area is present in the provided areaString.
 
 ## Parameters
 
-• **areaString**: `string`
-
-The string containing areas.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `areaString` | `string` | The string containing areas. |
 
 ## Returns
 

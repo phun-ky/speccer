@@ -12,17 +12,11 @@ Calculates and returns the styles for an accessibility element based on its type
 
 ## Parameters
 
-• **type**: `string`
-
-Type of the accessibility element ('tabstops', 'landmark', 'region', 'shortcut', or default).
-
-• **targetEl**: `HTMLElement`
-
-Target HTML element.
-
-• **a11yEl**: `HTMLElement`
-
-Accessibility HTML element to be styled.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `type` | `string` | Type of the accessibility element ('tabstops', 'landmark', 'region', 'shortcut', or default). |
+| `targetEl` | `HTMLElement` | Target HTML element. |
+| `a11yEl` | `HTMLElement` | Accessibility HTML element to be styled. |
 
 ## Returns
 

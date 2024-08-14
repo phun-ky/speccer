@@ -12,9 +12,9 @@ Attaches a debounced event listener to the window's resize event that triggers t
 
 ## Parameters
 
-• **speccer**: [`SpeccerFunctionType`](../../../types/speccer/type-aliases/SpeccerFunctionType.md)
-
-The function to trigger when the window is resized.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `speccer` | [`SpeccerFunctionType`](../../../types/speccer/type-aliases/SpeccerFunctionType.md) | The function to trigger when the window is resized. |
 
 ## Returns
 

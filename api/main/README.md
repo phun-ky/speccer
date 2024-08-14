@@ -6,6 +6,29 @@
 
 # main
 
+![Speccer hero, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-hero.png?raw=true)
+SPECCER, a zero dependency package to highlight elements
+
+## See
+
+ - https://phun-ky.net/projects/speccer/
+ - https://github.com/phun-ky/speccer
+
+## Examples
+
+```typescript
+import '@phun-ky/speccer/dist/speccer.min.css';
+import speccer from '@phun-ky/speccer';
+
+// do stuff
+speccer();
+```
+
+```html
+<link rel="stylesheet" href="../path/to/speccer.min.css" />
+<script src="../path/to/speccer.js"></script>
+```
+
 ## Index
 
 ### Variables

@@ -12,9 +12,9 @@ Retrieves the value of a custom CSS property "--ph-speccer-measure-size" from an
 
 ## Parameters
 
-• **el**: `HTMLElement`
-
-The HTML element.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `el` | `HTMLElement` | The HTML element. |
 
 ## Returns
 

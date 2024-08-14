@@ -17,13 +17,10 @@ properties set to `true` or `false`. The `cls_obj` parameter is an optional obje
 
 ## Parameters
 
-• **cls**: [`ClassNamesFirstArgType`](../../../types/interfaces/classnames/type-aliases/ClassNamesFirstArgType.md)
-
-The class names as a string or an object with properties set to true or false.
-
-• **cls\_obj?**: [`ClassNamesSecondArgType`](../../../types/interfaces/classnames/type-aliases/ClassNamesSecondArgType.md)
-
-An optional object with properties set to true or false to conditionally include class names.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `cls` | [`ClassNamesFirstArgType`](../../../types/interfaces/classnames/type-aliases/ClassNamesFirstArgType.md) | The class names as a string or an object with properties set to true or false. |
+| `cls_obj`? | [`ClassNamesSecondArgType`](../../../types/interfaces/classnames/type-aliases/ClassNamesSecondArgType.md) | An optional object with properties set to true or false to conditionally include class names. |
 
 ## Returns
 

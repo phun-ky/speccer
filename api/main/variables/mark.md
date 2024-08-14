@@ -10,58 +10,59 @@
 
 ## Type declaration
 
-### create()
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default value</th>
+<th>Defined in</th>
+</tr>
+<tr>
+<td>
 
-> **create**: (`n`) => `HTMLElement` = `markCreate`
+`create`
 
-Create a marker element with an optional element type.
+</td>
+<td>
 
-#### Parameters
+(`n`) => `HTMLElement`
 
-• **n**: `string` = `'span'`
+</td>
+<td>
 
-The element type.
+markCreate
 
-#### Returns
+</td>
+<td>
 
-`HTMLElement`
+[main.ts:73](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L73)
 
-- The created marker element.
+</td>
+</tr>
+<tr>
+<td>
 
-#### Example
+`element`
 
-```typescript
-const marker = create('div');
-document.body.appendChild(marker);
-```
+</td>
+<td>
 
-### element()
+(`elementToMark`) => `Promise`\<`void`\>
 
-> **element**: (`elementToMark`) => `Promise`\<`void`\> = `markElement`
+</td>
+<td>
 
-Create a marker element and add it to the body with styles matching a specified element.
+markElement
 
-![mark](https://github.com/phun-ky/speccer/blob/main/public/mark.png?raw=true)
+</td>
+<td>
 
-#### Parameters
+[main.ts:74](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L74)
 
-• **elementToMark**: `HTMLElement`
-
-The target element to match styles with.
-
-#### Returns
-
-`Promise`\<`void`\>
-
-- A promise that resolves after creating and styling the marker element.
-
-#### Example
-
-```typescript
-const elementToMark = document.getElementById('target');
-element(elementToMark);
-```
+</td>
+</tr>
+</table>
 
 ## Defined in
 
-[main.ts:51](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L51)
+[main.ts:72](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L72)

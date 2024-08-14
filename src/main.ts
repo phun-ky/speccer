@@ -1,3 +1,24 @@
+/**
+ * ![Speccer hero, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-hero.png?raw=true)
+ * SPECCER, a zero dependency package to highlight elements
+ * @see https://phun-ky.net/projects/speccer/
+ * @see https://github.com/phun-ky/speccer
+ *
+ * @example
+ * ```typescript
+ * import '@phun-ky/speccer/dist/speccer.min.css';
+ * import speccer from '@phun-ky/speccer';
+ *
+ * // do stuff
+ * speccer();
+ * ```
+ * @example
+ * ```html
+ * <link rel="stylesheet" href="../path/to/speccer.min.css" />
+ * <script src="../path/to/speccer.js"></script>
+ * ```
+ * @packageDocumentation
+ */
 /* eslint-disable import/no-unused-modules */
 /* eslint no-console:0 */
 import './types/interfaces/global';

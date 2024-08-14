@@ -10,21 +10,81 @@
 
 ## Type declaration
 
-### height?
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Defined in</th>
+</tr>
+<tr>
+<td>
 
-> `optional` **height**: `string`
+`height`
 
-### left
+</td>
+<td>
 
-> **left**: `string`
+`string`
 
-### top
+</td>
+<td>
 
-> **top**: `string`
+[types/styles.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L4)
 
-### width?
+</td>
+</tr>
+<tr>
+<td>
 
-> `optional` **width**: `string`
+`left`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+[types/styles.ts:2](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L2)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`top`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+[types/styles.ts:3](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L3)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`width`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+[types/styles.ts:5](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L5)
+
+</td>
+</tr>
+</table>
 
 ## Defined in
 

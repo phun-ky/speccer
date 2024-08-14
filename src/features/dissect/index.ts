@@ -1,3 +1,22 @@
+/**
+ * This feature highlights the anatomy of an element.
+ *
+ * ![dissect](https://github.com/phun-ky/speccer/blob/main/public/anatomy.png?raw=true)
+ *
+ * In your component examples, use the following attribute. Remember to use the `data-anatomy-section` as an attribute on a parent element to scope the marking.
+ *
+ * @example
+ * ```html
+ * <div data-anatomy-section>
+ *   <div
+ *     data-anatomy="outline [full|enclose][curly] [left|right|top|bottom]"
+ *     class="..."
+ *   ></div>
+ * </div>
+ * ```
+ *
+ * @packageDocumentation
+ */
 // eslint-disable-next-line import/no-unused-modules
 export { create } from './utils/create';
 
@@ -9,8 +28,6 @@ import { getCharacterToUse } from './utils/get-character-to-use';
 
 /**
  * Create dissected elements based on the section element and its data-anatomy attributes.
- *
- * ![dissect](https://github.com/phun-ky/speccer/blob/main/public/anatomy.png?raw=true)
  *
  * @param {HTMLElement} sectionEl - The section element containing dissected elements.
  * @returns {Promise<void>} - A promise that resolves after creating dissected elements.

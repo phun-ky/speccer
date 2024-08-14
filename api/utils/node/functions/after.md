@@ -12,13 +12,10 @@ Inserts an HTML element after another element in the DOM.
 
 ## Parameters
 
-• **el**: `null` \| `HTMLElement`
-
-The reference element after which the new element will be inserted.
-
-• **newSibling**: `HTMLElement`
-
-The new element to be inserted.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `el` | `null` \| `HTMLElement` | The reference element after which the new element will be inserted. |
+| `newSibling` | `HTMLElement` | The new element to be inserted. |
 
 ## Returns
 

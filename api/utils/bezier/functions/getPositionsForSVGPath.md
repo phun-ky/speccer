@@ -12,9 +12,9 @@ Returns positions for creating an SVG path based on a cardinal direction.
 
 ## Parameters
 
-• **direction**: `string`
-
-The cardinal direction ('east', 'west', 'south', 'north').
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `direction` | `string` | The cardinal direction ('east', 'west', 'south', 'north'). |
 
 ## Returns
 
@@ -22,13 +22,10 @@ The cardinal direction ('east', 'west', 'south', 'north').
 
 Positions for creating an SVG path.
 
-### pos1
-
-> **pos1**: `string`
-
-### pos2
-
-> **pos2**: `string`
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| `pos1` | `string` | [utils/bezier.ts:212](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L212) |
+| `pos2` | `string` | [utils/bezier.ts:212](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L212) |
 
 ## Example
 

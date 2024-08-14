@@ -14,9 +14,9 @@ Create a measurement element and add it to the body with styles matching a speci
 
 ## Parameters
 
-• **targetEl**: `HTMLElement`
-
-The target element to match styles with.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `targetEl` | `HTMLElement` | The target element to match styles with. |
 
 ## Returns
 

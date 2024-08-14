@@ -12,9 +12,9 @@ Splits a string containing areas into an array of strings.
 
 ## Parameters
 
-• **areaString**: `string`
-
-The string containing areas.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `areaString` | `string` | The string containing areas. |
 
 ## Returns
 

@@ -10,92 +10,82 @@
 
 ## Type declaration
 
-### activate()
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Defined in</th>
+</tr>
+<tr>
+<td>
 
-> **activate**: (`speccer`) => `void`
+`activate`
 
-A function to activate speccer based on script attributes.
+</td>
+<td>
 
-#### Parameters
+(`speccer`) => `void`
 
-• **speccer**: [`SpeccerFunctionType`](../../types/speccer/type-aliases/SpeccerFunctionType.md)
+</td>
+<td>
 
-The speccer function to execute.
+[main.ts:86](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L86)
 
-#### Returns
+</td>
+</tr>
+<tr>
+<td>
 
-`void`
+`dom`
 
-#### Example
+</td>
+<td>
 
-```ts
-// Usage example:
-// activate(mySpeccer);
-```
+(`speccer`) => `void`
 
-### dom()
+</td>
+<td>
 
-> **dom**: (`speccer`) => `void`
+[main.ts:83](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L83)
 
-A function to initialize speccer when the DOM is ready.
+</td>
+</tr>
+<tr>
+<td>
 
-#### Parameters
+`lazy`
 
-• **speccer**: [`SpeccerFunctionType`](../../types/speccer/type-aliases/SpeccerFunctionType.md)
+</td>
+<td>
 
-The speccer function to execute.
+() => `void`
 
-#### Returns
+</td>
+<td>
 
-`void`
+[main.ts:84](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L84)
 
-#### Example
+</td>
+</tr>
+<tr>
+<td>
 
-```ts
-// Usage example:
-// dom(mySpeccer);
-```
+`manual`
 
-### lazy()
+</td>
+<td>
 
-> **lazy**: () => `void`
+(`speccer`) => `void`
 
-A function to initialize lazy speccer functionality.
+</td>
+<td>
 
-#### Returns
+[main.ts:85](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L85)
 
-`void`
-
-#### Example
-
-```ts
-// Usage example:
-// lazy();
-```
-
-### manual()
-
-> **manual**: (`speccer`) => `void`
-
-A function to manually activate speccer.
-
-#### Parameters
-
-• **speccer**: [`SpeccerFunctionType`](../../types/speccer/type-aliases/SpeccerFunctionType.md)
-
-The speccer function to execute.
-
-#### Returns
-
-`void`
-
-#### Example
-
-```ts
-// Usage example:
-// manual(mySpeccer);
-```
+</td>
+</tr>
+</table>
 
 ## Defined in
 
-[main.ts:61](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L61)
+[main.ts:82](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L82)

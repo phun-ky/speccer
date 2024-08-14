@@ -12,13 +12,10 @@ Create a spacing element with optional text content.
 
 ## Parameters
 
-• **text**: `string` \| `number` = `''`
-
-The optional text content for the spacing element.
-
-• **tag**: `string` = `'span'`
-
-The HTML tag for the element (default is 'span').
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `text` | `string` \| `number` | `''` | The optional text content for the spacing element. |
+| `tag` | `string` | `'span'` | The HTML tag for the element (default is 'span'). |
 
 ## Returns
 

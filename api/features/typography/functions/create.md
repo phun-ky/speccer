@@ -12,13 +12,10 @@ Create a DOM element with provided HTML and optional CSS class names.
 
 ## Parameters
 
-• **html**: `string`
-
-The HTML content to be set in the created element.
-
-• **area**: `null` \| `string`
-
-The optional CSS class names to add.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `html` | `string` | The HTML content to be set in the created element. |
+| `area` | `null` \| `string` | The optional CSS class names to add. |
 
 ## Returns
 

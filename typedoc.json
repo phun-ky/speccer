@@ -1,0 +1,16 @@
+{
+  "plugin": ["typedoc-plugin-markdown"],
+  "out": "./api",
+  "tsconfig": "tsconfig.json",
+  "interfacePropertiesFormat": "table",
+  "classPropertiesFormat": "table",
+  "enumMembersFormat": "table",
+  "typeDeclarationFormat": "htmlTable",
+  "propertyMembersFormat": "table",
+  "parametersFormat": "table",
+  "entryPoints": ["src"],
+  "entryPointStrategy": "expand",
+  "readme": "none",
+  "gitRevision": "main",
+  "githubPages": false
+}
