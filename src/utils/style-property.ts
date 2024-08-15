@@ -76,7 +76,9 @@ const getParentWithStylePropertySet = async (
  * console.log(stickyParent); // HTMLElement or null
  * ```
  */
-export const getParentThatIsSticky = async (element: HTMLElement): Promise<HTMLElement | null> => {
+export const getParentThatIsSticky = async (
+  element: HTMLElement
+): Promise<HTMLElement | null> => {
   return await getParentWithStylePropertySet(element, 'position', 'sticky');
 };
 

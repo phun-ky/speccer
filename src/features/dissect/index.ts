@@ -23,7 +23,7 @@ export { create } from './utils/create';
 // eslint-disable-next-line import/no-unused-modules
 export { dissect } from './utils/dissect';
 
-import { dissect as dissectionIterator} from './utils/dissect';
+import { dissect as dissectionIterator } from './utils/dissect';
 import { getCharacterToUse } from './utils/get-character-to-use';
 
 /**
@@ -43,11 +43,13 @@ export const element = async (sectionEl: HTMLElement): Promise<void> => {
 
   const _dissection_els = sectionEl.querySelectorAll('[data-anatomy]');
 
-  if(!_dissection_els || _dissection_els.length === 0) return;
+  if (!_dissection_els || _dissection_els.length === 0) return;
 
-  _dissection_els.forEach(async (targetEl: HTMLElement, targetIndex: number): Promise<void> => {
-    const _character_to_use = getCharacterToUse(targetIndex);
+  _dissection_els.forEach(
+    async (targetEl: HTMLElement, targetIndex: number): Promise<void> => {
+      const _character_to_use = getCharacterToUse(targetIndex);
 
-    await dissectionIterator(targetEl, _character_to_use);
-  });
+      await dissectionIterator(targetEl, _character_to_use, sectionEl);
+    }
+  );
 };

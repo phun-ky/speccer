@@ -1,12 +1,12 @@
 import quibble from 'quibble';
 
 import assert from 'node:assert/strict';
-import { describe, it, mock, before} from 'node:test';
+import { describe, it, mock, before } from 'node:test';
 
 import { direction_of_element } from '../direction-of-element';
 
 before(async () => {
-  await quibble.esm('./angle', {angle: mock.fn(() => 45)});
+  await quibble.esm('./angle', { angle: mock.fn(() => 45) });
   await quibble.esm('./cardinal', {
     cardinal_direction: mock.fn(() => 'north-west'),
     cardinal_direction_crude: mock.fn(() => 'east')
@@ -20,8 +20,6 @@ before(async () => {
     }))
   });
 });
-
-
 
 describe('direction-of-element', () => {
   it('should calculate the direction of an element with cardinal directions', async () => {

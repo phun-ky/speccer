@@ -6,7 +6,7 @@
 
 # main
 
-> Last updated 2024-08-14T10:46:25.842Z
+> Last updated 2024-08-15T07:39:37.323Z
 
 ## Table of Contents
 
@@ -88,7 +88,7 @@ dissectCreate
 </td>
 <td>
 
-(`el`, `symbol`, `areas`?) => `Promise`\<`string` | `void`>
+(`el`, `symbol`, `parentElement`, `areas`?) => `Promise`\<`string` | `void`>
 
 </td>
 <td>

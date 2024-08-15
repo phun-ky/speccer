@@ -25,7 +25,7 @@ export const create = (html: string, area: string | null): HTMLElement => {
   const _extra_class_names = {};
 
   if (area !== null && area !== '') {
-    area.split(' ').forEach(a => {
+    area.split(' ').forEach((a) => {
       _extra_class_names[a] = true;
     });
   }

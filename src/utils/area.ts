@@ -88,6 +88,30 @@ export const isEncloseArea = (areaString: string): boolean => {
 };
 
 /**
+ * Checks if 'subtle' area is present in the provided areaString.
+ *
+ * @param areaString - The string containing areas.
+ * @returns `true` if 'subtle' is present, otherwise `false`.
+ */
+export const isSubtle = (areaString: string): boolean => {
+  const areas = getAreasFromString(areaString);
+
+  return areas.includes(DissectAreaEnum.Subtle);
+};
+
+/**
+ * Checks if 'parent' area is present in the provided areaString.
+ *
+ * @param areaString - The string containing areas.
+ * @returns `true` if 'parent' is present, otherwise `false`.
+ */
+export const isParentArea = (areaString: string): boolean => {
+  const areas = getAreasFromString(areaString);
+
+  return areas.includes(DissectAreaEnum.Parent);
+};
+
+/**
  * Checks if 'height' area is present in the provided areaString.
  *
  * @param areaString - The string containing areas.

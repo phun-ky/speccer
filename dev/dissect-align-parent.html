@@ -1,0 +1,334 @@
+<!doctype html>
+<html class="ph" lang="en">
+  <head>
+    <title>@phun-ky/speccer | dissect and align to parent</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Language" content="no" />
+    <meta name="robots" content="none" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="application-name" content="@phun-ky/speccer" />
+    <link
+      async
+      href="https://codepen.io/phun-ky/pen/RyMyme/d182b0303eaee2f82a93ae3fdcc414a7.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      async
+      href="https://phun-ky.net/css/ph.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link async href="/speccer.css" rel="stylesheet" type="text/css" />
+    <link
+      async
+      href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i&amp;display=swap&amp;subset=latin-ext"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      async
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;display=swap&amp;subset=latin-ext"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style type="text/css">
+      .ph-speccer.speccer {
+        --ph-speccer-color-contrast: #ffc72c;
+        --ph-speccer-measure-color: #ffc72c;
+        --ph-speccer-color-text-light: #000000;
+        --ph-speccer-mark-background-color: rgba(255, 247, 111, 0.4);
+        --ph-speccer-mark-border-color: #ffc72c;
+        --ph-speccer-typography-background-color: #38383d;
+      }
+      .theme--light .ph-speccer.speccer {
+        --ph-speccer-color-contrast: rgb(255, 58, 168);
+        --ph-speccer-measure-color: rgb(255, 58, 168);
+        --ph-speccer-color-text-light: #ffffff;
+        --ph-speccer-mark-background-color: rgb(255, 58, 168, 0.4);
+        --ph-speccer-mark-border-color: rgb(255, 58, 168);
+        --ph-speccer-typography-background-color: #ffffff;
+      }
+    </style>
+  </head>
+  <body class="ph">
+    <div class="ph app project" id="app">
+      <header class="ph header">
+        <a class="ph home" href="https://phun-ky.net" target="_blank">home</a>
+
+        <a
+          class="ph projects-home"
+          href="https://phun-ky.net/projects"
+          target="_blank"
+          >projects</a
+        >
+
+        <div class="ph header-menu">
+          <a
+            class="ph"
+            href="https://www.paypal.me/phunky/20"
+            rel="noopener noreferrer"
+            target="_blank"
+            >buy me a coffee?</a
+          >
+
+          <a
+            class="ph"
+            href="https://github.com/sponsors/phun-ky"
+            rel="noopener noreferrer"
+            target="_blank"
+            >sponsor me!</a
+          >
+
+          <button class="ph darkmode-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Sun Icon"
+              fill="currentColor"
+              stroke="none"
+              class="ph hide-dark"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Moon Icon"
+              fill="currentColor"
+              stroke="none"
+              class="ph hide-light"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main class="ph main">
+        <section class="ph section">
+          <div class="ph container">
+            <h1 class="ph">Dissect with pin alignment to parent</h1>
+            <p class="ph lead" style="margin-bottom: 4rem">
+              Uses the `parent` feature from @phun-ky/speccer to align pins to
+              their parent.
+            </p>
+          </div>
+        </section>
+        <section class="ph section">
+          <div class="ph container">
+            <div class="ph well" data-anatomy-section>
+              <h2 class="ph">Form</h2>
+              <form class="ph">
+                <div class="ph input-group">
+                  <label class="ph" for="text1">Firstname</label>
+                  <input
+                    data-lpignore="true"
+                    data-anatomy="outline parent right"
+                    type="text"
+                    id="text1"
+                    class="ph"
+                  />
+                </div>
+                <div class="ph input-group">
+                  <label class="ph" for="text2">Lastname</label>
+                  <input
+                    data-lpignore="true"
+                    data-anatomy="outline parent right"
+                    type="text"
+                    id="text2"
+                    class="ph"
+                  />
+                </div>
+                <div class="ph input-group">
+                  <label class="ph" for="text3">Description</label>
+                  <textarea
+                    data-anatomy="outline parent right"
+                    id="text3"
+                    class="ph"
+                  ></textarea>
+                </div>
+                <div class="ph input-group">
+                  <label class="ph" for="email1">Email</label>
+                  <input
+                    data-lpignore="true"
+                    data-anatomy="outline parent right"
+                    type="email"
+                    id="email1"
+                    class="ph"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      <style type="text/css">
+        div[data-lastpass-icon-root] {
+          display: none;
+        }
+        .ph.input-group {
+          display: flex;
+          flex-direction: column;
+          grid-gap: 0.5rem 0.5rem;
+        }
+        input[type='text'].ph {
+          max-width: 20ch;
+        }
+        input[type='email'].ph {
+          max-width: 32ch;
+        }
+        input[type='text'].ph,
+        input[type='email'].ph,
+        textarea.ph {
+          border: none;
+          margin-bottom: 1rem;
+          background-color: var(--ph-color-well-background);
+          border-radius: 0.375rem;
+          color: var(--ph-color-text);
+          font-size: 1rem;
+          line-height: 1.75rem;
+          padding: 0.5rem;
+        }
+        .ph.well {
+          background-color: var(--ph-color-well-background);
+          border-radius: 0.375rem;
+          color: var(--ph-color-text);
+          font-size: 1rem;
+          line-height: 1.75rem;
+          margin-bottom: 1.5rem;
+          margin-top: 1.5rem;
+          margin-bottom: 2rem;
+          margin-top: 2rem;
+          padding: 1rem 1.5rem;
+        }
+      </style>
+
+      <footer class="ph">
+        <div class="ph container">
+          <p class="ph">
+            Made with <strong class="ph">saturated fat</strong> by
+            <a class="ph" target="_blank" href="https://phun-ky.net"
+              >Alexander Vassbotn Røyne-Helgesen</a
+            >. Buy <strong class="ph">me</strong> some
+            <a class="ph" href="https://www.paypal.me/phunky/20">bacon?</a>
+          </p>
+          <p class="ph">
+            This project created by
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              href="http://phun-ky.net"
+              property="cc:attributionName"
+            >
+              Alexander Vassbotn Røyne-Helgesen</a
+            >
+            is licensed under a
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              href="https://choosealicense.com/licenses/mit/"
+            >
+              MIT License </a
+            >.
+          </p>
+          <p class="ph">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              rel="license"
+              href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >
+              <img
+                alt="Creative Commons Licence"
+                style="border-width: 0"
+                width="88"
+                height="31"
+                src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
+              />
+            </a>
+            <br />Any other creation or work related to this project, if not
+            specified, like templates, logos etc created by
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              href="http://phun-ky.net"
+              property="cc:attributionName"
+              rel="cc:attributionURL"
+            >
+              Alexander Vassbotn Røyne-Helgesen</a
+            >
+            is licensed under a
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              rel="license"
+              href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >
+              Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+              International License </a
+            >.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script data-manual src="/speccer.js" type="text/javascript"></script>
+    <script>
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', window.speccer);
+      } else {
+        // `DOMContentLoaded` already fired
+        window.speccer();
+      }
+      const debounce = function (func, wait, immediate) {
+        var timeout;
+        return function () {
+          var context = this,
+            args = arguments;
+          var later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+          };
+          var callNow = immediate && !timeout;
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+          if (callNow) func.apply(context, args);
+        };
+      };
+      const speccerEventFunc = debounce(() => {
+        window.speccer();
+      }, 100);
+
+      window.removeEventListener('resize', speccerEventFunc);
+      window.addEventListener('resize', speccerEventFunc);
+    </script>
+    <svg
+      class="ph-speccer"
+      viewBox="0 0"
+      id="ph-speccer-svg"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        class="ph-speccer path original"
+        id="ph-speccer-path"
+        fill="none"
+        stroke-width="1"
+        stroke="currentColor"
+      />
+    </svg>
+    <script src="https://codepen.io/phun-ky/pen/RyMyme/d182b0303eaee2f82a93ae3fdcc414a7.js"></script>
+  </body>
+</html>

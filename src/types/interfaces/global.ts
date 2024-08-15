@@ -10,6 +10,10 @@ declare global {
      * Represents the DrawSVGCurlyBracket class for drawing curly brackets.
      */
     DrawSVGCurlyBracket: any;
+    /**
+     * Represents the DrawCircle class for drawing circles.
+     */
+    DrawCircle: any;
 
     /**
      * Represents the DrawSVGLine class for drawing lines.

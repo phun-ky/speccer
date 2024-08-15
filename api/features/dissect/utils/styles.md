@@ -6,7 +6,7 @@
 
 # features/dissect/utils/styles
 
-> Last updated 2024-08-14T10:46:25.837Z
+> Last updated 2024-08-15T07:39:37.320Z
 
 ## Functions
 
@@ -17,6 +17,7 @@ function styles(
   area,
   targetEl,
   dissectionEl,
+  parentElement,
   options?
 ): Promise<SpeccerStylesReturnType>;
 ```
@@ -25,12 +26,13 @@ Get styles for dissected elements based on the specified area and options.
 
 #### Parameters
 
-| Parameter      | Type                                                                            | Description              |
-| -------------- | ------------------------------------------------------------------------------- | ------------------------ |
-| `area`         | `string`                                                                        | The area description.    |
-| `targetEl`     | `HTMLElement`                                                                   | The target element.      |
-| `dissectionEl` | `HTMLElement`                                                                   | The dissection element.  |
-| `options`?     | [`DissectStylesOptionsType`](../../../types/bezier.md#dissectstylesoptionstype) | Optional styles options. |
+| Parameter       | Type                                                                            | Description              |
+| --------------- | ------------------------------------------------------------------------------- | ------------------------ |
+| `area`          | `string`                                                                        | The area description.    |
+| `targetEl`      | `HTMLElement`                                                                   | The target element.      |
+| `dissectionEl`  | `HTMLElement`                                                                   | The dissection element.  |
+| `parentElement` | `HTMLElement`                                                                   | The parent element.      |
+| `options`?      | [`DissectStylesOptionsType`](../../../types/bezier.md#dissectstylesoptionstype) | Optional styles options. |
 
 #### Returns
 
@@ -43,15 +45,22 @@ Get styles for dissected elements based on the specified area and options.
 ```ts
 const area = 'top-left';
 const targetElement = document.getElementById('target');
+const parentElement = document.getElementById('parent');
 const dissectionElement = document.getElementById('dissection');
 const options = { isCurly: true };
-const styles = await styles(area, targetElement, dissectionElement, options);
+const styles = await styles(
+  area,
+  targetElement,
+  dissectionElement,
+  parentElement,
+  options
+);
 console.log(styles);
 ```
 
 #### Defined in
 
-[features/dissect/utils/styles.ts:33](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/styles.ts#L33)
+[features/dissect/utils/styles.ts:37](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/styles.ts#L37)
 
 ---
 

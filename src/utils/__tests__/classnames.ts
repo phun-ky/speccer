@@ -20,30 +20,30 @@ describe('classnames', () => {
 
   it('set should add CSS classes to an HTML element', () => {
     set(dummyElement, 'class1 class2');
-    assert.equal(dummyElement.classList.contains('class1'),true);
-    assert.equal(dummyElement.classList.contains('class2'),true);
+    assert.equal(dummyElement.classList.contains('class1'), true);
+    assert.equal(dummyElement.classList.contains('class2'), true);
   });
 
   it('toggle should toggle CSS classes on an HTML element', () => {
     toggle(dummyElement, 'class1 class2');
-    assert.equal(dummyElement.classList.contains('class1'),true);
-    assert.equal(dummyElement.classList.contains('class2'),true);
+    assert.equal(dummyElement.classList.contains('class1'), true);
+    assert.equal(dummyElement.classList.contains('class2'), true);
 
     toggle(dummyElement, 'class1 class2');
-    assert.equal(dummyElement.classList.contains('class1'),false);
-    assert.equal(dummyElement.classList.contains('class2'),false);
+    assert.equal(dummyElement.classList.contains('class1'), false);
+    assert.equal(dummyElement.classList.contains('class2'), false);
   });
 
   it('remove should remove CSS classes from an HTML element', () => {
     set(dummyElement, 'class1 class2');
     remove(dummyElement, 'class1');
-    assert.equal(dummyElement.classList.contains('class1'),false);
-    assert.equal(dummyElement.classList.contains('class2'),true);
+    assert.equal(dummyElement.classList.contains('class1'), false);
+    assert.equal(dummyElement.classList.contains('class2'), true);
   });
 
   it('cx should generate CSS classes from a string and an object', () => {
     const classNames = cx('class1', { class2: true, class3: false });
 
-    assert.equal(classNames,'class1 class2');
+    assert.equal(classNames, 'class1 class2');
   });
 });

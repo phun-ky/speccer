@@ -8,7 +8,7 @@
 
 ---
 
-> Last updated 2024-08-14T10:46:25.824Z
+> Last updated 2024-08-15T07:39:37.312Z
 
 ## Modules
 
@@ -48,6 +48,7 @@
 - [utils/bezier](utils/bezier.md)
 - [utils/camel-case](utils/camel-case.md)
 - [utils/cardinal](utils/cardinal.md)
+- [utils/classes/DrawCircle](utils/classes/DrawCircle.md)
 - [utils/classes/DrawSVGCurlyBracket](utils/classes/DrawSVGCurlyBracket.md)
 - [utils/classes/DrawSVGLine](utils/classes/DrawSVGLine.md)
 - [utils/classnames](utils/classnames.md)

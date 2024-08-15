@@ -53,8 +53,18 @@ export class DrawSVGLine {
       );
     }
 
+    const body = document.body;
+    const html = document.documentElement;
+    const height = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight
+    );
+
     addStyle(this.#canvas, {
-      height: `${document.body.scrollHeight}px`
+      height: `${height}px`
     });
 
     this.connect();

@@ -22,6 +22,7 @@
     - [Element dimensions](#element-dimensions)
       - [Subtle measure](#subtle-measure)
     - [Highlight the anatomy of an element](#highlight-the-anatomy-of-an-element)
+      - [Align with parent container](#align-with-parent-container)
       - [Custom literals](#custom-literals)
       - [Subtle anatomy](#subtle-anatomy)
       - [Curly brackets](#curly-brackets)
@@ -256,6 +257,40 @@ In your component examples, use the following attribute. Remember to use the `da
 ```
 
 This will place a pin to the outline of the element. Default is `top`.
+
+#### Align with parent container
+
+![Screenshot of the dissection/anatomy feature where the pins are aligned with the parent container](./public/align-parent.png)
+
+You can also align the pins to the parent container.
+
+```html
+<div data-anatomy-section>
+  <div data-anatomy="outline parent [left|right|top|bottom]" class="..."></div>
+</div>
+```
+
+> [!NOTE]  
+> Only works with `outline [left|right|top|bottom]`, and not with `enclose`, `full` or `curly`!
+
+The lines from the element to the pin is drawn with a svg path and circle, so remember to add the following svg into your document:
+
+```html
+<svg
+  class="ph-speccer"
+  viewBox="0 0"
+  id="ph-speccer-svg"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    class="ph-speccer path original"
+    id="ph-speccer-path"
+    fill="none"
+    stroke-width="1"
+    stroke="currentColor"
+  />
+</svg>
+```
 
 #### Custom literals
 

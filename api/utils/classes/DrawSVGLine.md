@@ -6,7 +6,7 @@
 
 # utils/classes/DrawSVGLine
 
-> Last updated 2024-08-14T10:46:25.854Z
+> Last updated 2024-08-15T07:39:37.331Z
 
 ## Classes
 
@@ -63,7 +63,7 @@ Connects and draws the line.
 
 ###### Defined in
 
-[utils/classes/DrawSVGLine.ts:66](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L66)
+[utils/classes/DrawSVGLine.ts:71](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L71)
 
 ##### draw()
 
@@ -89,7 +89,7 @@ Will throw an error if no path is provided.
 
 ###### Defined in
 
-[utils/classes/DrawSVGLine.ts:75](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L75)
+[utils/classes/DrawSVGLine.ts:80](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L80)
 
 ---
 
