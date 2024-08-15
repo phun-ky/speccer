@@ -6,7 +6,7 @@
 
 # utils/resize
 
-> Last updated 2024-08-15T07:44:37.688Z
+> Last updated 2024-08-15T08:03:55.995Z
 
 ## Functions
 
