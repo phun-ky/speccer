@@ -25,10 +25,7 @@ import {
   element as dissectElement,
   dissect as _dissect
 } from './features/dissect';
-import {
-  create as gridCreate,
-  element as gridElement
-} from './features/grid';
+import { create as gridCreate, element as gridElement } from './features/grid';
 import { create as markCreate, element as markElement } from './features/mark';
 import {
   create as measureCreate,

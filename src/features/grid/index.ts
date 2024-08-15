@@ -21,7 +21,10 @@ const SPECCER_FEATURE_GRID = 'grid';
  * }
  * ```
  */
-export const create = (targetElement:HTMLElement, styles: CSSStyleDeclaration) => {
+export const create = (
+  targetElement: HTMLElement,
+  styles: CSSStyleDeclaration
+) => {
   const rect = targetElement.getBoundingClientRect();
   const templateColumns = styles.gridTemplateColumns;
   const gridTemplate = styles.gridTemplate;
@@ -31,10 +34,16 @@ export const create = (targetElement:HTMLElement, styles: CSSStyleDeclaration) =
   const padding = styles.padding;
   const gridContainer = document.createElement('div');
 
-  document.documentElement.style.setProperty('--ph-speccer-grid-gap-original',`${columnGap}px`);
-  document.documentElement.style.setProperty('--ph-speccer-grid-gap',`${columnGap < 24 ? 24 : columnGap}px`);
+  document.documentElement.style.setProperty(
+    '--ph-speccer-grid-gap-original',
+    `${columnGap}px`
+  );
+  document.documentElement.style.setProperty(
+    '--ph-speccer-grid-gap',
+    `${columnGap < 24 ? 24 : columnGap}px`
+  );
 
-  if(columnGap < 24){
+  if (columnGap < 24) {
     gridContainer.classList.add('speccer-small-grid');
   }
 
@@ -54,7 +63,7 @@ export const create = (targetElement:HTMLElement, styles: CSSStyleDeclaration) =
   //gridContainer.style.gridTemplateRows = templateRows; // for a later feature perhaps
   const numberOfItems = templateColumns.split(' ').length;
 
-  for(let i = 0; i < numberOfItems;i++){
+  for (let i = 0; i < numberOfItems; i++) {
     const gridItem = document.createElement('div');
 
     gridItem.classList.add('ph-speccer');
@@ -95,7 +104,10 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
   const styles = window.getComputedStyle(targetElement);
 
-  if(attr === SPECCER_FEATURE_GRID && (styles.display === 'grid' || styles.display.indexOf('grid') !== -1)){
+  if (
+    attr === SPECCER_FEATURE_GRID &&
+    (styles.display === 'grid' || styles.display.indexOf('grid') !== -1)
+  ) {
     const gridContainerElement = create(targetElement, styles);
 
     document.body.appendChild(gridContainerElement);

@@ -1,5 +1,12 @@
 import { DissectAreaEnum } from '../../../types/enums/area';
-import { isCurly, isEncloseArea, isFullArea, isParentArea, isSubtle, useSVG } from '../../../utils/area';
+import {
+  isCurly,
+  isEncloseArea,
+  isFullArea,
+  isParentArea,
+  isSubtle,
+  useSVG
+} from '../../../utils/area';
 import { camelCase } from '../../../utils/camel-case';
 import { DrawCircle } from '../../../utils/classes/DrawCircle';
 import { DrawSVGCurlyBracket } from '../../../utils/classes/DrawSVGCurlyBracket';
@@ -9,8 +16,6 @@ import { add } from '../../../utils/styles';
 
 import { create } from './create';
 import { styles } from './styles';
-
-
 
 /**
  * Create and style the dissection element as needed.
@@ -33,11 +38,15 @@ import { styles } from './styles';
  * });
  * ```
  */
-export const dissect = async (el: HTMLElement, symbol: string, parentElement: HTMLElement, areas = ''): Promise<string|void> => {
+export const dissect = async (
+  el: HTMLElement,
+  symbol: string,
+  parentElement: HTMLElement,
+  areas = ''
+): Promise<string | void> => {
   if (!el) return;
 
   const _areas_string: string = el.getAttribute('data-anatomy') || areas;
-
 
   if (
     !_areas_string ||
@@ -45,7 +54,6 @@ export const dissect = async (el: HTMLElement, symbol: string, parentElement: HT
     !_areas_string.includes(DissectAreaEnum.Outline)
   )
     return;
-
 
   const _dissection_el_id = `speccer-${camelCase(_areas_string)}-${el.getAttribute('id') || uniqueID()}`;
   const _dissection_el = create(symbol, _areas_string, _dissection_el_id);
@@ -56,26 +64,31 @@ export const dissect = async (el: HTMLElement, symbol: string, parentElement: HT
 
   const _dissection_styles = await styles(
     _areas_string,
-        el as HTMLElement,
-        _dissection_el,
-        parentElement,
-        {
-          isCurly: isCurly(_areas_string)
-        }
+    el as HTMLElement,
+    _dissection_el,
+    parentElement,
+    {
+      isCurly: isCurly(_areas_string)
+    }
   );
 
   await add(_dissection_el, _dissection_styles);
 
-  const isParent = isParentArea(_areas_string) && !isEncloseArea(_areas_string) && !isFullArea(_areas_string) && !isSubtle(_areas_string);
-  const isSVGLine = isParent || useSVG(_areas_string) && !isCurly(_areas_string);
+  const isParent =
+    isParentArea(_areas_string) &&
+    !isEncloseArea(_areas_string) &&
+    !isFullArea(_areas_string) &&
+    !isSubtle(_areas_string);
+  const isSVGLine =
+    isParent || (useSVG(_areas_string) && !isCurly(_areas_string));
 
-  if (isSVGLine){
+  if (isSVGLine) {
     new DrawSVGLine(el as HTMLElement, _dissection_el);
 
-    if(isParent){
+    if (isParent) {
       new DrawCircle(el, 5, _areas_string);
     }
-  } else if (isCurly(_areas_string)){
+  } else if (isCurly(_areas_string)) {
     new DrawSVGCurlyBracket(el as HTMLElement, _dissection_el);
   }
 

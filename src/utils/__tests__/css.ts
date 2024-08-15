@@ -37,7 +37,7 @@ describe('css', () => {
   });
 
   it('getSpacing should extract spacing-related properties from a style object', () => {
-    const style =  {
+    const style = {
       marginBottom: undefined,
       marginLeft: '20px',
       marginRight: undefined,
@@ -53,7 +53,7 @@ describe('css', () => {
   });
 
   it('getTypography should extract typography-related properties from a style object', () => {
-    const style =  {
+    const style = {
       fontFamily: undefined,
       fontSize: '16px',
       fontStyle: undefined,
@@ -61,9 +61,10 @@ describe('css', () => {
       fontWeight: 'bold',
       letterSpacing: undefined,
       lineHeight: undefined
-
     };
-    const typography = getTypography(style as unknown as TypographyCSSPropertiesType);
+    const typography = getTypography(
+      style as unknown as TypographyCSSPropertiesType
+    );
 
     assert.deepEqual(typography, style);
   });

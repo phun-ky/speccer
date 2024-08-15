@@ -39,7 +39,6 @@ export class DrawCircle {
       throw new Error('el is not in the DOM');
     }
 
-
     this.el = el;
     this.radius = radius;
     this.areas = areas;
@@ -54,8 +53,13 @@ export class DrawCircle {
 
     const body = document.body;
     const html = document.documentElement;
-    const height = Math.max(body.scrollHeight, body.offsetHeight,
-      html.clientHeight, html.scrollHeight, html.offsetHeight);
+    const height = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight
+    );
 
     addStyle(this.#canvas, {
       height: `${height}px`
@@ -71,7 +75,10 @@ export class DrawCircle {
     const _id = uniqueID();
     const _circle_el_id = `ph_draw-circle-${_id}`;
 
-    this.circle =  document.createElementNS('http://www.w3.org/2000/svg', 'circle') as unknown as SVGCircleElement;
+    this.circle = document.createElementNS(
+      'http://www.w3.org/2000/svg',
+      'circle'
+    ) as unknown as SVGCircleElement;
 
     const _el_ID = this.el.getAttribute('id') || uniqueID();
 
@@ -91,18 +98,18 @@ export class DrawCircle {
 
     let pos = 'top';
 
-    if(isLeftArea(this.areas)) pos = 'left';
+    if (isLeftArea(this.areas)) pos = 'left';
 
-    if(isRightArea(this.areas)) pos = 'right';
+    if (isRightArea(this.areas)) pos = 'right';
 
-    if(isBottomArea(this.areas)) pos = 'bottom';
+    if (isBottomArea(this.areas)) pos = 'bottom';
 
     const { x, y } = await intrinsic_coords(this.el, pos);
 
     this.circle.setAttribute('r', this.radius + ''); // SVG attributes
     this.circle.setAttribute('cx', Math.round(x) + ''); // SVG attributes
     this.circle.setAttribute('cy', Math.round(y) + ''); // SVG attributes
-    this.circle.setAttribute('fill','currentColor'); // SVG attributes
+    this.circle.setAttribute('fill', 'currentColor'); // SVG attributes
   }
 }
 

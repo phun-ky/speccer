@@ -59,8 +59,7 @@ export const styles = async (
     };
   }
 
-
-  if(isParentArea(area) && !isFullArea(area) && !isCurly && !isSubtle(area)){
+  if (isParentArea(area) && !isFullArea(area) && !isCurly && !isSubtle(area)) {
     if (isRightArea(area)) {
       const { top } = _positional_styles.fromRight({
         center: true
@@ -83,7 +82,7 @@ export const styles = async (
 
       await waitForFrame();
 
-      const { top , height } = parentElement.getBoundingClientRect();
+      const { top, height } = parentElement.getBoundingClientRect();
 
       return {
         left: `${left}px`,
@@ -101,7 +100,7 @@ export const styles = async (
       const { left } = parentElement.getBoundingClientRect();
 
       return {
-        left: `${left - (SPECCER_PIN_SPACE * 1.5)}px`,
+        left: `${left - SPECCER_PIN_SPACE * 1.5}px`,
         top: `${top}px`
       };
     }
@@ -112,11 +111,11 @@ export const styles = async (
 
     await waitForFrame();
 
-    const { top} = parentElement.getBoundingClientRect();
+    const { top } = parentElement.getBoundingClientRect();
 
     return {
       left: `${left}px`,
-      top: `${top - (SPECCER_PIN_SPACE * 1.5)}px`
+      top: `${top - SPECCER_PIN_SPACE * 1.5}px`
     };
   }
 

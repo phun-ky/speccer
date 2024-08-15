@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 
 import { SPECCER_LITERALS } from '../../../../utils/constants';
-import {getCharacterToUse} from '../get-character-to-use';
+import { getCharacterToUse } from '../get-character-to-use';
 
 describe('getCharacterToUse', () => {
   it('should return the correct character from SPECCER_LITERALS based on the target index', () => {
@@ -24,7 +24,10 @@ describe('getCharacterToUse', () => {
   it('should reset the internal index when targetIndex is 0', () => {
     const character1 = getCharacterToUse(SPECCER_LITERALS.length + 1); // Exceeding length to increment internal index
 
-    assert.equal(character1, `${SPECCER_LITERALS[1]}${SPECCER_LITERALS[1].toLowerCase()}`);
+    assert.equal(
+      character1,
+      `${SPECCER_LITERALS[1]}${SPECCER_LITERALS[1].toLowerCase()}`
+    );
 
     const character2 = getCharacterToUse(0); // Reset internal index
 
@@ -46,10 +49,16 @@ describe('getCharacterToUse', () => {
   it('should handle multiple calls correctly when exceeding available characters', () => {
     const firstCharacter = getCharacterToUse(SPECCER_LITERALS.length); // Exceeds, should use combined characters
 
-    assert.equal(firstCharacter, `${SPECCER_LITERALS[0]}${SPECCER_LITERALS[0].toLowerCase()}`);
+    assert.equal(
+      firstCharacter,
+      `${SPECCER_LITERALS[0]}${SPECCER_LITERALS[0].toLowerCase()}`
+    );
 
     const secondCharacter = getCharacterToUse(SPECCER_LITERALS.length + 1); // Next in line
 
-    assert.equal(secondCharacter, `${SPECCER_LITERALS[1]}${SPECCER_LITERALS[1].toLowerCase()}`);
+    assert.equal(
+      secondCharacter,
+      `${SPECCER_LITERALS[1]}${SPECCER_LITERALS[1].toLowerCase()}`
+    );
   });
 });

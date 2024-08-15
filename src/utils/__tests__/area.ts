@@ -20,7 +20,7 @@ describe('area', () => {
     it('should split area string into an array', () => {
       const areas = getAreasFromString('left right top');
 
-      assert.deepEqual(areas,['left', 'right', 'top']);
+      assert.deepEqual(areas, ['left', 'right', 'top']);
     });
   });
 
