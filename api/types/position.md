@@ -6,7 +6,7 @@
 
 # types/position
 
-> Last updated 2024-08-15T07:39:37.327Z
+> Last updated 2024-08-15T07:44:37.673Z
 
 ## Type Aliases
 

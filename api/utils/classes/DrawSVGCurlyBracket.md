@@ -6,7 +6,7 @@
 
 # utils/classes/DrawSVGCurlyBracket
 
-> Last updated 2024-08-15T07:39:37.330Z
+> Last updated 2024-08-15T07:44:37.679Z
 
 ## Classes
 
@@ -64,7 +64,7 @@ Connects and draws the curly bracket.
 
 ###### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:72](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L72)
+[utils/classes/DrawSVGCurlyBracket.ts:77](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L77)
 
 ##### draw()
 
@@ -90,7 +90,7 @@ Will throw an error if no path is provided.
 
 ###### Defined in
 
-[utils/classes/DrawSVGCurlyBracket.ts:106](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L106)
+[utils/classes/DrawSVGCurlyBracket.ts:111](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L111)
 
 ---
 

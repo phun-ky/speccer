@@ -6,7 +6,7 @@
 
 # utils/style-property
 
-> Last updated 2024-08-15T07:39:37.334Z
+> Last updated 2024-08-15T07:44:37.688Z
 
 ## Functions
 
@@ -40,7 +40,7 @@ console.log(isElementSticky); // true or false
 
 #### Defined in
 
-[utils/style-property.ts:96](https://github.com/phun-ky/speccer/blob/main/src/utils/style-property.ts#L96)
+[utils/style-property.ts:98](https://github.com/phun-ky/speccer/blob/main/src/utils/style-property.ts#L98)
 
 ---
 

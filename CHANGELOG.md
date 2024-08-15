@@ -1,5 +1,26 @@
 # Changelog
 
+## [9.6.0](https://github.com/phun-ky/speccer/compare/v9.5.6...v9.6.0) (2024-08-15)
+
+
+### Documentation
+
+* ✏️ Regenerate documentation ([b21daa6](https://github.com/phun-ky/speccer/commit/b21daa62fd247e8acbae6bdc315fe85d6593c40f))
+* ✏️ Regenerate documentation ([4c2fcc3](https://github.com/phun-ky/speccer/commit/4c2fcc30c8997a65ec1d639085e824c197f0407a))
+* ✏️ Update `README.md` ([5c32f08](https://github.com/phun-ky/speccer/commit/5c32f089bf90e7012a3d9c201ca6fa241a483151))
+
+
+### Feature
+
+* 🎸 Add feature to align pins to parent container ([3562bb2](https://github.com/phun-ky/speccer/commit/3562bb2f460814b24afb65f5d798cdead523df0b)), closes [#8](https://github.com/phun-ky/speccer/issues/8)
+* 🎸 Polish the feature, and add dev examples ([02fc6f4](https://github.com/phun-ky/speccer/commit/02fc6f424f26715b01f101f63a4dc96d2138f36a)), closes [#8](https://github.com/phun-ky/speccer/issues/8)
+
+
+### Bug
+
+* 🐛 Trim whitespace and remove empty strings ([ee9dbab](https://github.com/phun-ky/speccer/commit/ee9dbab2b6a2ed6ec25b1b1527d17731fffb70b9))
+* 🐛 Use correct height for page ([d8f9319](https://github.com/phun-ky/speccer/commit/d8f93196dd1f68af55784c2484e63651d985e3ea))
+
 ## [9.5.6](https://github.com/phun-ky/speccer/compare/v9.5.5...v9.5.6) (2024-08-14)
 
 

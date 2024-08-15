@@ -6,7 +6,7 @@
 
 # features/dissect/utils/dissect
 
-> Last updated 2024-08-15T07:39:37.319Z
+> Last updated 2024-08-15T07:44:37.659Z
 
 ## Functions
 
@@ -48,7 +48,7 @@ dissect(element, symbol).then(() => {
 
 #### Defined in
 
-[features/dissect/utils/dissect.ts:36](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/dissect.ts#L36)
+[features/dissect/utils/dissect.ts:41](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/dissect.ts#L41)
 
 ---
 

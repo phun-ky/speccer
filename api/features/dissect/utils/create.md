@@ -6,7 +6,7 @@
 
 # features/dissect/utils/create
 
-> Last updated 2024-08-15T07:39:37.319Z
+> Last updated 2024-08-15T07:44:37.659Z
 
 ## Functions
 
@@ -42,7 +42,7 @@ document.body.appendChild(dissectedElement);
 
 #### Defined in
 
-[features/dissect/utils/create.ts:19](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/create.ts#L19)
+[features/dissect/utils/create.ts:25](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/create.ts#L25)
 
 ---
 
