@@ -421,9 +421,12 @@
             area += ` ${value}`;
           }
 
+          const parentElement = el.parentElement;
+
           dissect(
             el,
             '🥰',
+            parentElement,
             area.indexOf('full') == -1 ? area.replace(' curly', '') : area
           );
           el.classList.add('is-specced');
