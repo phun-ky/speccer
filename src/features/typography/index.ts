@@ -25,9 +25,9 @@ export const create = (html: string, area: string | null): HTMLElement => {
   const _extra_class_names = {};
 
   if (area !== null && area !== '') {
-    area.split(' ').forEach((a) => {
+    for (const a of area.split(' ')) {
       _extra_class_names[a] = true;
-    });
+    }
   }
 
   const _class_names = cx('ph-speccer speccer typography', _extra_class_names);

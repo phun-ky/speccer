@@ -30,7 +30,7 @@ export const create = (
 ): HTMLElement => {
   const _el = document.createElement(n);
   const _text_node = document.createTextNode(textContent);
-  const _extra_class_names = {};
+  const _extra_class_names: Record<string, boolean> = {};
 
   if (area !== null && area !== '') _extra_class_names[area] = true;
 
@@ -40,7 +40,7 @@ export const create = (
     !isCurly(area) &&
     !isSubtle(area)
   )
-    _extra_class_names['svg'] = true;
+    _extra_class_names.svg = true;
 
   if (
     (!isFullArea(area) && !isEncloseArea(area)) ||

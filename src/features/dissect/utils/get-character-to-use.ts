@@ -21,9 +21,7 @@ export const getCharacterToUse = (targetIndex: number): string => {
   let _character_to_use = _literals_to_use[targetIndex];
 
   // Reset index to use when we start new elements
-  if (targetIndex === 0) {
-    _index_to_use = 0;
-  }
+  if (targetIndex === 0) _index_to_use = 0;
 
   /**
    * If we're running out of characters to use,

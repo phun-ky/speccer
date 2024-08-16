@@ -40,7 +40,7 @@ export const getNumberValue = (value: string): number => parseInt(value, 10);
  * ```
  */
 export const normalizeNumberValue = (value: string | number): number => {
-  const _value = parseFloat(value + '');
+  const _value = parseFloat(String(value));
 
   return (_value >= 0 && _value < 1) || (_value <= 0 && _value > -1)
     ? 0

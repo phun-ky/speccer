@@ -39,7 +39,7 @@ export const create = (
   });
 
   if (type === 'landmark' && content) {
-    const _text_node = document.createTextNode(content + '');
+    const _text_node = document.createTextNode(String(content));
 
     _el.appendChild(_text_node);
   }
