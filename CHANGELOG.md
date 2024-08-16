@@ -1,5 +1,13 @@
 # Changelog
 
+## [9.6.1](https://github.com/phun-ky/speccer/compare/v9.6.0...v9.6.1) (2024-08-15)
+
+
+### Tasks
+
+* 🤖 Rename triage label workflow ([f323e3e](https://github.com/phun-ky/speccer/commit/f323e3eeb24cc21507b7dd3629f311d1d4b253bf))
+* 🤖 Use custom label for build failed action ([c3ba88b](https://github.com/phun-ky/speccer/commit/c3ba88b17b1611755f38abd00ba54cb8ea434b0d)), closes [#235](https://github.com/phun-ky/speccer/issues/235)
+
 ## [9.6.0](https://github.com/phun-ky/speccer/compare/v9.5.6...v9.6.0) (2024-08-15)
 
 
