@@ -62,4 +62,5 @@ jobs:
       - uses: jayqi/failed-build-issue-action@v1.2
         with:
           github-token: ${{ secrets.GH_TOKEN }}
+          label-name: "problems: build failed"
 

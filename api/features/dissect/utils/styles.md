@@ -6,7 +6,7 @@
 
 # features/dissect/utils/styles
 
-> Last updated 2024-08-15T07:44:37.660Z
+> Last updated 2024-08-15T08:03:55.969Z
 
 ## Functions
 

@@ -6,7 +6,7 @@
 
 # types/css
 
-> Last updated 2024-08-15T07:44:37.669Z
+> Last updated 2024-08-15T08:03:55.977Z
 
 ## Type Aliases
 
