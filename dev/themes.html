@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="ph" lang="en">
   <head>
     <title>@phun-ky/speccer | dark</title>
@@ -10,21 +10,21 @@
     <meta name="application-name" content="@phun-ky/speccer" />
     <style type="text/css">
       .ph-speccer.speccer {
-        --ph-speccer-color-padding: rgba(219, 111, 255, 0.4);
-        --ph-speccer-color-padding-hover: #db6fff;
-        --ph-speccer-color-margin: rgba(255, 247, 111, 0.4);
-        --ph-speccer-color-margin-hover: #fff76f;
+        --ph-speccer-spacing-color-padding: rgba(219, 111, 255, 0.4);
+        --ph-speccer-spacing-color-padding-hover: #db6fff;
+        --ph-speccer-spacing-color-margin: rgba(255, 247, 111, 0.4);
+        --ph-speccer-spacing-color-margin-hover: #fff76f;
         --ph-speccer-color-text-light: #fff;
         --ph-speccer-color-text-dark: #333;
-        --ph-speccer-color-contrast: #05de8b;
-        --ph-speccer-spacing-color: var(--ph-speccer-color-contrast);
+        --ph-speccer-base-color: #05de8b;
+        --ph-speccer-spacing-color: var(--ph-speccer-base-color);
         --ph-speccer-measure-color: #f00;
-        --ph-speccer-pin-color: var(--ph-speccer-color-contrast);
+        --ph-speccer-pin-color: var(--ph-speccer-base-color);
         --ph-speccer-typography-background-color: #fff;
         --ph-speccer-typography-color-property: #3f85f2;
         --ph-speccer-typography-color-text: #57575b;
-        --ph-speccer-typography-color-value: var(--ph-speccer-color-contrast);
-        --ph-speccer-depth-opacity-400: 0.4;
+        --ph-speccer-typography-color-value: var(--ph-speccer-base-color);
+        --ph-speccer-opacity-40: 0.4;
         --ph-speccer-font-family: 'Menlo for Powerline',
           'Menlo Regular for Powerline', 'DejaVu Sans Mono', Consolas, Monaco,
           'Andale Mono', 'Ubuntu Mono', monospace;
@@ -155,7 +155,8 @@
         border-radius: 12px;
         background-image: linear-gradient(125deg, #33373d 20%, #26282c 100%);
         border: none;
-        box-shadow: -8px -8px 16px rgba(192, 194, 202, 0.1),
+        box-shadow:
+          -8px -8px 16px rgba(192, 194, 202, 0.1),
           8px 8px 16px rgba(0, 0, 0, 0.2);
       }
     </style>
