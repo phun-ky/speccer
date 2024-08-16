@@ -27,8 +27,8 @@ export const create = async (
 ): Promise<HTMLDivElement> => {
   await waitForFrame();
 
-  const {height, width, top, left} = targetElement.getBoundingClientRect();
-  const {gridTemplateColumns, gridTemplate, padding} = styles;
+  const { height, width, top, left } = targetElement.getBoundingClientRect();
+  const { gridTemplateColumns, gridTemplate, padding } = styles;
   // const templateRows = styles['gridTemplateRows'];// for a later feature perhaps
   const columnGap = parseInt(styles.columnGap);
   // const rowGap = styles.rowGap;// for a later feature perhaps
