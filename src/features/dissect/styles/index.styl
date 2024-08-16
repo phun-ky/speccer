@@ -1,0 +1,46 @@
+.ph-speccer.speccer.dissection
+  font-family sans-serif
+  height var(--ph-speccer-pin-size)
+  width var(--ph-speccer-pin-size)
+  display flex
+  position absolute
+  border-radius 100%
+  background-color var(--ph-speccer-pin-color)
+  color var(--ph-speccer-color-text-light)
+  font-weight 400
+  align-items center
+  justify-content center
+  line-height 150%
+  font-size 16px
+  z-index 100000
+
+.ph-speccer.speccer.dissection
+  &::after
+    content ""
+    position absolute
+    height var(--ph-speccer-pin-space)
+    top 100%
+    width var(--ph-speccer-line-width)
+    background-color var(--ph-speccer-pin-color)
+    z-index 99999
+
+.ph-speccer.speccer.dissection.svg,
+.ph-speccer.speccer.dissection.curly
+  &::after
+    content none !important
+
+[data-anatomy-section]
+  counter-reset type
+
+
+
+
+
+
+
+
+
+@require './outline.styl'
+@require './enclose.styl'
+@require './full.styl'
+@require './subtle.styl'

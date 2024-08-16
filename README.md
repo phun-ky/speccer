@@ -483,21 +483,21 @@ Allthough the styling works nicely with dark mode, you can use the provided CSS 
 
 ```css
 .ph-speccer.speccer {
-  --ph-speccer-color-padding: rgba(219, 111, 255, 0.4);
-  --ph-speccer-color-padding-hover: #db6fff;
-  --ph-speccer-color-margin: rgba(255, 247, 111, 0.4);
-  --ph-speccer-color-margin-hover: #fff76f;
+  --ph-speccer-spacing-color-padding: rgba(219, 111, 255, 0.4);
+  --ph-speccer-spacing-color-padding-hover: #db6fff;
+  --ph-speccer-spacing-color-margin: rgba(255, 247, 111, 0.4);
+  --ph-speccer-spacing-color-margin-hover: #fff76f;
   --ph-speccer-color-text-light: #fff;
   --ph-speccer-color-text-dark: #333;
-  --ph-speccer-color-contrast: #ff3aa8;
-  --ph-speccer-spacing-color: var(--ph-speccer-color-contrast);
+  --ph-speccer-base-color: #ff3aa8;
+  --ph-speccer-spacing-color: var(--ph-speccer-base-color);
   --ph-speccer-measure-color: #f00;
-  --ph-speccer-pin-color: var(--ph-speccer-color-contrast);
+  --ph-speccer-pin-color: var(--ph-speccer-base-color);
   --ph-speccer-typography-background-color: #fff;
   --ph-speccer-typography-color-property: #3f85f2;
   --ph-speccer-typography-color-text: #57575b;
-  --ph-speccer-typography-color-value: var(--ph-speccer-color-contrast);
-  --ph-speccer-depth-opacity-400: 0.4;
+  --ph-speccer-typography-color-value: var(--ph-speccer-base-color);
+  --ph-speccer-opacity-40: 0.4;
   --ph-speccer-font-family: 'Menlo for Powerline', 'Menlo Regular for Powerline',
     'DejaVu Sans Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
     monospace;

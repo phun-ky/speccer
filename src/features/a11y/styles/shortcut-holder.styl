@@ -1,0 +1,46 @@
+.ph-speccer.speccer.a11y.shortcut-holder
+  position absolute
+  height 48px
+  min-width 120px
+  display flex
+  flex-direction row
+  justify-content flex-start
+  align-items center
+  grid-gap 0.5rem
+
+.ph-speccer.speccer.a11y.shortcut-holder
+  & kbd.ph-speccer.speccer.a11y.shortcut
+    flex-shrink 0
+    position relative
+    background-color var(--ph-speccer-a11y-color-background)
+    border-radius 0.5rem
+    color var(--ph-speccer-color-text-light)
+    font-family var(--ph-speccer-font-family)
+    display inline-flex
+    text-transform uppercase
+    height 48px
+    border 3px solid var(--ph-speccer-a11y-color-background)
+    min-width 48px
+    font-size 1.5rem
+    justify-content center
+    align-items center
+
+.ph-speccer.speccer.a11y.shortcut-holder
+  & kbd.ph-speccer.speccer.a11y.shortcut
+    &.modifier
+      justify-content flex-start
+      align-items flex-end
+      padding 0.25rem
+      font-size 1rem
+      width 80px
+      text-transform lowercase
+
+.ph-speccer.speccer.a11y.shortcut-holder
+  & kbd.ph-speccer.speccer.a11y.shortcut
+    &.physical
+      justify-content flex-start
+      align-items flex-end
+      padding 0.25rem
+      font-size 1rem
+      text-transform lowercase
+

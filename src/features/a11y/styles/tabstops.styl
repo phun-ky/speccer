@@ -1,0 +1,37 @@
+[data-speccer-a11y]
+  counter-reset speccer-a11y-tabstops
+
+.ph-speccer.speccer.a11y.tabstops
+  position absolute
+  height 48px
+  width 48px
+  background-color var(--ph-speccer-a11y-color-background)
+  border-radius 0.5rem
+  color var(--ph-speccer-color-text-light)
+  font-family var(--ph-speccer-font-family)
+  counter-increment speccer-a11y-tabstops
+  border 3px solid var(--ph-speccer-a11y-color-background)
+
+.ph-speccer.speccer.a11y.tabstops
+  &::before
+    position absolute
+    top calc(0.5rem - 2px)
+    left calc(0.5rem - 2px)
+    content counter(speccer-a11y-tabstops)
+    font-size 12px
+    text-align left
+
+.ph-speccer.speccer.a11y.tabstops
+  &::after
+    display flex
+    justify-content flex-end
+    align-items flex-end
+    position absolute
+    left 0.5rem
+    right 0.5rem
+    bottom 0.5rem
+    height 2rem
+    content "⇥"
+    font-size 2rem
+    color var(--ph-speccer-color-text-light)
+    font-family var(--ph-speccer-font-family)
