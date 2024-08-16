@@ -1,63 +1,33 @@
-$ph-speccer-color-padding = rgba(219, 111, 255, 0.4);
-$ph-speccer-color-padding-hover = rgb(219, 111, 255);
-$ph-speccer-color-margin = rgba(255, 247, 111, 0.4);
-$ph-speccer-color-margin-hover = rgb(255, 247, 111);
-$ph-speccer-color-text-light = rgb(255, 255, 255);
-$ph-speccer-color-text-dark = rgb(51,51,51);
-$ph-speccer-color-contrast = rgb(255, 58, 168);
-$ph-speccer-mark-background-color = rgba(255, 58, 168, 0.2);
-$ph-speccer-mark-border-color = rgb(255, 58, 168);
-$ph-speccer-spacing-color = $ph-speccer-color-contrast;
-$ph-speccer-measure-color = rgb(255,0,0);
-$ph-speccer-pin-color = $ph-speccer-color-contrast;
-$ph-speccer-typography-background-color = rgb(255, 255,255);
-$ph-speccer-typography-color-property = #0074e8;
-$ph-speccer-typography-color-text = #ff3aa8;
-$ph-speccer-typography-color-value = $ph-speccer-color-contrast;
-$ph-speccer-depth-opacity-400 = 0.4;
-$ph-speccer-font-family = "Menlo for Powerline", "Menlo Regular for Powerline", "DejaVu Sans Mono", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-$ph-speccer-font-size = 12px;
-$ph-speccer-line-height = 12px;
-$ph-speccer-pin-size = 24px
-$ph-speccer-pin-space = 48px
-$ph-speccer-line-width = 1px
-$ph-speccer-line-width-negative = -1px
-$ph-speccer-measure-size = 8px
-$ph-speccer-a11y-color-bakground = rgb(24, 104, 178)
-$ph-speccer-a11y-landmark-color-background = rgb(126, 96, 197)
-$ph-speccer-transition-default = all 2s cubic-bezier(0.4, 0, 0.2, 1)
-
-
 .ph-speccer.speccer
-  --ph-speccer-color-padding: $ph-speccer-color-padding;
-  --ph-speccer-color-padding-hover: $ph-speccer-color-padding-hover;
-  --ph-speccer-color-margin: $ph-speccer-color-margin;
-  --ph-speccer-color-margin-hover: $ph-speccer-color-margin-hover;
-  --ph-speccer-color-text-light: $ph-speccer-color-text-light;
-  --ph-speccer-color-text-dark: $ph-speccer-color-text-dark;
-  --ph-speccer-color-contrast: $ph-speccer-color-contrast;
-  --ph-speccer-mark-background-color $ph-speccer-mark-background-color;
-  --ph-speccer-mark-border-color $ph-speccer-mark-border-color;
+  --ph-speccer-base-color: var(--accent-color, rgb(255, 58, 168))
+  --ph-speccer-color-padding: rgba(219, 111, 255, 0.4);
+  --ph-speccer-color-padding-hover: rgb(219, 111, 255);
+  --ph-speccer-color-margin: rgba(255, 247, 111, 0.4);
+  --ph-speccer-color-margin-hover: rgb(255, 247, 111);
+  --ph-speccer-color-text-light: rgb(255, 255, 255);
+  --ph-speccer-color-text-dark: rgb(51,51,51);
+  --ph-speccer-color-contrast: var(--ph-speccer-base-color);
+  --ph-speccer-mark-background-color: rgb(from var(--ph-speccer-base-color) r g b / 0.2);;
+  --ph-speccer-mark-border-color: var(--ph-speccer-base-color);
   --ph-speccer-spacing-color: var(--ph-speccer-color-contrast);
-  --ph-speccer-measure-color: $ph-speccer-measure-color;
+  --ph-speccer-measure-color: rgb(255,0,0);
   --ph-speccer-pin-color: var(--ph-speccer-color-contrast);
-  --ph-speccer-typography-background-color: $ph-speccer-typography-background-color;
-  --ph-speccer-typography-color-property: $ph-speccer-typography-color-property;
-  --ph-speccer-typography-color-text: $ph-speccer-typography-color-text;
+  --ph-speccer-typography-background-color: rgb(255, 255,255);
+  --ph-speccer-typography-color-property: #0074e8;
+  --ph-speccer-typography-color-text: var(--ph-speccer-base-color);
   --ph-speccer-typography-color-value: var(--ph-speccer-color-contrast);
-  --ph-speccer-depth-opacity-400: $ph-speccer-depth-opacity-400;
-  --ph-speccer-font-family: $ph-speccer-font-family;
-  --ph-speccer-font-size: $ph-speccer-font-size;
-  --ph-speccer-line-height: $ph-speccer-line-height;
-  --ph-speccer-pin-size: $ph-speccer-pin-size;
-  --ph-speccer-pin-space: $ph-speccer-pin-space;
-  --ph-speccer-line-width: $ph-speccer-line-width;
-  --ph-speccer-line-width-negative: $ph-speccer-line-width-negative;
-  --ph-speccer-measure-size: $ph-speccer-measure-size;
-  --ph-speccer-a11y-color-background: $ph-speccer-a11y-color-bakground;
-  --ph-speccer-a11y-landmark-color-background: $ph-speccer-a11y-landmark-color-background;
-  --ph-speccer-transition-default: $ph-speccer-transition-default;
-
+  --ph-speccer-depth-opacity-400: 0.4;
+  --ph-speccer-font-family: "Menlo for Powerline", "Menlo Regular for Powerline", "DejaVu Sans Mono", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --ph-speccer-font-size: 12px;
+  --ph-speccer-line-height: 12px;
+  --ph-speccer-pin-size: 24px;
+  --ph-speccer-pin-space: 48px;
+  --ph-speccer-line-width: 1px;
+  --ph-speccer-line-width-negative: -1px;
+  --ph-speccer-measure-size: 8px;
+  --ph-speccer-a11y-color-bakground: rgb(24, 104, 178);
+  --ph-speccer-a11y-landmark-color-background: rgb(126, 96, 197);
+  --ph-speccer-transition-default: all 2s cubic-bezier(0.4, 0, 0.2, 1);
 
 svg.ph-speccer,
 .ph-speccer.speccer,
