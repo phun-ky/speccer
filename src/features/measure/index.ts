@@ -6,7 +6,6 @@ import {
   isWidthArea
 } from '../../utils/area';
 import { set as setClassNames } from '../../utils/classnames';
-import { SPECCER_DEFAULT_MEASURE_SIZE_NEG } from '../../utils/constants';
 import { getRec } from '../../utils/position';
 import { get as getStyles, add as addStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
@@ -99,8 +98,7 @@ export const element = async (targetEl: HTMLElement): Promise<void> => {
 
       const _positional_styles = await getRec(_measure_el, targetEl);
       const { left, top, width } = _positional_styles.fromTop({
-        center: false,
-        modifier: SPECCER_DEFAULT_MEASURE_SIZE_NEG
+        center: false
       });
 
       await addStyles(_measure_el, {
@@ -132,8 +130,7 @@ export const element = async (targetEl: HTMLElement): Promise<void> => {
 
       const _positional_styles = await getRec(_measure_el, targetEl);
       const { left, top, height } = _positional_styles.fromLeft({
-        center: false,
-        modifier: SPECCER_DEFAULT_MEASURE_SIZE_NEG
+        center: false
       });
 
       await addStyles(_measure_el, {
