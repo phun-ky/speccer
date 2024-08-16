@@ -66,27 +66,24 @@ export const position = async (
   const _bottom_layout_position_top =
     _el_offset.top + _target_rect.height + SPECCER_PIN_SPACE + 'px';
 
-  let _position = {
+
+  if (area?.includes(SpeccerAreaEnum.Right)) return {
+    left: _right_layout_position_left,
+    top: _right_layout_position_top
+  };
+
+  if (area?.includes(SpeccerAreaEnum.Top)) return {
+    left: _top_layout_position_left,
+    top: _top_layout_position_top
+  };
+
+  if (area?.includes(SpeccerAreaEnum.Bottom)) return {
+    left: _bottom_layout_position_left,
+    top: _bottom_layout_position_top
+  };
+
+  return {
     left: _left_layout_position_left,
     top: _left_layout_position_top
   };
-
-  if (area?.includes(SpeccerAreaEnum.Right)) {
-    _position = {
-      left: _right_layout_position_left,
-      top: _right_layout_position_top
-    };
-  } else if (area?.includes(SpeccerAreaEnum.Top)) {
-    _position = {
-      left: _top_layout_position_left,
-      top: _top_layout_position_top
-    };
-  } else if (area?.includes(SpeccerAreaEnum.Bottom)) {
-    _position = {
-      left: _bottom_layout_position_left,
-      top: _bottom_layout_position_top
-    };
-  }
-
-  return _position;
 };

@@ -26,9 +26,7 @@ export const template = async (
     const _fontFamily = _styles.fontFamily
       .split(',')
       .map((font) => {
-        if (font.indexOf('\'') !== -1) {
-          return `<span class="token string">${font}</span>`;
-        }
+        if (font.includes('\'')) return `<span class="token string">${font}</span>`;
 
         return font;
       })
@@ -37,7 +35,7 @@ export const template = async (
       parseInt(_styles.fontSize, 10) / 16
     }</span><span class="token unit">rem</span>`;
     const _letterSpacing =
-      _styles.letterSpacing.indexOf('px') !== -1
+      _styles.letterSpacing.includes('px')
         ? `<span class="token number">${parseInt(_styles.letterSpacing, 10)}</span><span class="token unit">px</span>`
         : _styles.letterSpacing;
     const _lineHeight =

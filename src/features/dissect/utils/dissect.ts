@@ -85,9 +85,7 @@ export const dissect = async (
   if (isSVGLine) {
     new DrawSVGLine(el as HTMLElement, _dissection_el);
 
-    if (isParent) {
-      new DrawCircle(el, 5, _areas_string);
-    }
+    if (isParent) new DrawCircle(el, 5, _areas_string);
   } else if (isCurly(_areas_string)) {
     new DrawSVGCurlyBracket(el as HTMLElement, _dissection_el);
   }

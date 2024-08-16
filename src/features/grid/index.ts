@@ -9,7 +9,7 @@ const SPECCER_FEATURE_GRID = 'grid';
  *
  * @param {HTMLElement} targetElement - The target element to create the grid overlay for.
  * @param {CSSStyleDeclaration} styles - The computed styles of the target element.
- * @returns {HTMLDivElement} The created grid container element.
+ * @returns {Promise<HTMLDivElement>} The created grid container element.
  *
  * @example
  * ```ts
@@ -21,17 +21,17 @@ const SPECCER_FEATURE_GRID = 'grid';
  * }
  * ```
  */
-export const create = (
+export const create = async (
   targetElement: HTMLElement,
   styles: CSSStyleDeclaration
-) => {
-  const rect = targetElement.getBoundingClientRect();
-  const templateColumns = styles.gridTemplateColumns;
-  const gridTemplate = styles.gridTemplate;
+): Promise<HTMLDivElement> => {
+  await waitForFrame();
+
+  const {height, width, top, left} = targetElement.getBoundingClientRect();
+  const {gridTemplateColumns, gridTemplate, padding} = styles;
   // const templateRows = styles['gridTemplateRows'];// for a later feature perhaps
   const columnGap = parseInt(styles.columnGap);
   // const rowGap = styles.rowGap;// for a later feature perhaps
-  const padding = styles.padding;
   const gridContainer = document.createElement('div');
 
   document.documentElement.style.setProperty(
@@ -43,25 +43,23 @@ export const create = (
     `${columnGap < 24 ? 24 : columnGap}px`
   );
 
-  if (columnGap < 24) {
-    gridContainer.classList.add('speccer-small-grid');
-  }
+  if (columnGap < 24) gridContainer.classList.add('speccer-small-grid');
 
   gridContainer.classList.add('ph-speccer');
   gridContainer.classList.add('speccer');
   gridContainer.classList.add('speccer-grid-container');
 
-  gridContainer.style.height = rect.height + 64 + 'px';
-  gridContainer.style.width = rect.width + 'px';
-  gridContainer.style.left = rect.left + 'px';
-  gridContainer.style.top = rect.top - 32 + 'px';
+  gridContainer.style.height = `${height + 64}px`;
+  gridContainer.style.width = `${width}px`;
+  gridContainer.style.left = `${left}px`;
+  gridContainer.style.top = `${top - 32}px`;
   gridContainer.style.padding = padding;
   // gridContainer.style.columnGap = `${columnGap}px`; // using css vars instead
   gridContainer.style.gridTemplate = gridTemplate;
   gridContainer.style.gridTemplateRows = 'repeat(1, 100%)';
 
   //gridContainer.style.gridTemplateRows = templateRows; // for a later feature perhaps
-  const numberOfItems = templateColumns.split(' ').length;
+  const numberOfItems = gridTemplateColumns.split(' ').length;
 
   for (let i = 0; i < numberOfItems; i++) {
     const gridItem = document.createElement('div');
@@ -106,9 +104,9 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
   if (
     attr === SPECCER_FEATURE_GRID &&
-    (styles.display === 'grid' || styles.display.indexOf('grid') !== -1)
+    (styles.display === 'grid' || styles.display.includes('grid'))
   ) {
-    const gridContainerElement = create(targetElement, styles);
+    const gridContainerElement = await create(targetElement, styles);
 
     document.body.appendChild(gridContainerElement);
   }

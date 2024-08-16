@@ -33,7 +33,7 @@ export const create = (
   const _el = document.createElement(tag);
 
   _el.setAttribute('title', `${text}px`);
-  _el.setAttribute('data-measure', `${parseInt(`${text}`, 10)}px`);
+  _el.setAttribute('data-measure', `${parseInt(String(text), 10)}px`);
 
   setClassNames(_el, `ph-speccer speccer measure ${area}`);
 

@@ -13,4 +13,4 @@
  * ```
  */
 export const decimal = (number: string | number, decimals = 3): string =>
-  parseFloat(number + '').toFixed(decimals);
+  parseFloat(String(number)).toFixed(decimals);

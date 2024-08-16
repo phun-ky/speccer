@@ -27,7 +27,7 @@ export const create = (
   tag = 'span'
 ): HTMLElement => {
   const _el = document.createElement(tag);
-  const _text_content = document.createTextNode(text + '');
+  const _text_content = document.createTextNode(String(text));
 
   _el.appendChild(_text_content);
   _el.setAttribute('title', `${text}px`);
