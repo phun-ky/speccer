@@ -1,5 +1,29 @@
 # Changelog
 
+## [9.6.2](https://github.com/phun-ky/speccer/compare/v9.6.1...v9.6.2) (2024-08-16)
+
+
+### Tasks
+
+* 🤖 Update dev file ([8b5815e](https://github.com/phun-ky/speccer/commit/8b5815eccecc60c62b91d4899c72cc8fe689a5b0))
+
+
+### Documentation
+
+* ✏️ Add build status badge ([c39d35e](https://github.com/phun-ky/speccer/commit/c39d35e8c23a9ae3a5a855540ca63f0f225445fb))
+
+
+### Bug
+
+* 🐛 Fix formatting issues with styling ([4964e3e](https://github.com/phun-ky/speccer/commit/4964e3e9624d230cde476186598b25901480d5dc))
+* 🐛 Make sure stylus can process color functions ([4232894](https://github.com/phun-ky/speccer/commit/4232894d2da72307f346cb39a8fdf2135f24ed96))
+
+
+### Refactoring
+
+* 💡 Remove stylus variables ([0abfba1](https://github.com/phun-ky/speccer/commit/0abfba18e5df859990547e65934d1a69efefa186))
+* 💡 Use putout to format code ([67a8209](https://github.com/phun-ky/speccer/commit/67a8209ef426d86533318acc76278955d7f4a444))
+
 ## [9.6.1](https://github.com/phun-ky/speccer/compare/v9.6.0...v9.6.1) (2024-08-15)
 
 

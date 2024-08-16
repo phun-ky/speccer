@@ -6,14 +6,14 @@
 
 # features/grid
 
-> Last updated 2024-08-15T08:03:55.969Z
+> Last updated 2024-08-16T09:32:06.349Z
 
 ## Functions
 
 ### create()
 
 ```ts
-function create(targetElement, styles): HTMLDivElement;
+function create(targetElement, styles): Promise<HTMLDivElement>;
 ```
 
 Creates a visual grid overlay for a given target element.
@@ -27,7 +27,7 @@ Creates a visual grid overlay for a given target element.
 
 #### Returns
 
-`HTMLDivElement`
+`Promise`\<`HTMLDivElement`>
 
 The created grid container element.
 
@@ -85,7 +85,7 @@ if (targetElement) {
 
 #### Defined in
 
-[features/grid/index.ts:98](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L98)
+[features/grid/index.ts:96](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L96)
 
 ---
 
