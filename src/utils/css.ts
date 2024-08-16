@@ -207,3 +207,4 @@ export const lineWidth = (el: HTMLElement): number =>
   getNumberValue(
     getComputedStyle(el).getPropertyValue('--ph-speccer-line-width')
   ) || SPECCER_DEFAULT_LINE_WIDTH;
+

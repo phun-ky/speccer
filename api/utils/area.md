@@ -6,7 +6,7 @@
 
 # utils/area
 
-> Last updated 2024-08-16T09:32:06.362Z
+> Last updated 2024-08-16T20:29:35.116Z
 
 ## Functions
 
@@ -53,19 +53,45 @@ Checks if 'bottom' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type     | Description                  |
-| ------------ | -------- | ---------------------------- |
-| `areaString` | `string` | The string containing areas. |
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
 
 #### Returns
 
 `boolean`
 
-`true` if 'bottom' is present, otherwise `false`.
+boolean `true` if 'bottom' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:60](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L60)
+[utils/area.ts:66](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L66)
+
+---
+
+### isBracketArea()
+
+```ts
+function isBracketArea(areaString): boolean;
+```
+
+Checks if 'bracket' area is present in the provided areaString.
+
+#### Parameters
+
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
+
+#### Returns
+
+`boolean`
+
+boolean `true` if 'bracket' is present, otherwise `false`.
+
+#### Defined in
+
+[utils/area.ts:80](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L80)
 
 ---
 
@@ -75,23 +101,23 @@ Checks if 'bottom' area is present in the provided areaString.
 function isCurly(areaString): boolean;
 ```
 
-Checks if the provided areaString contains 'curly' and 'full' areas.
+Checks if the provided areaString contains 'curly' and 'bracket' areas.
 
 #### Parameters
 
-| Parameter    | Type     | Description                  |
-| ------------ | -------- | ---------------------------- |
-| `areaString` | `string` | The string containing areas. |
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
 
 #### Returns
 
 `boolean`
 
-`true` if both 'curly' and 'full' are present, otherwise `false`.
+boolean `true` if both 'curly' and 'bracket' are present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:153](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L153)
+[utils/area.ts:178](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L178)
 
 ---
 
@@ -105,45 +131,19 @@ Checks if 'enclose' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type     | Description                  |
-| ------------ | -------- | ---------------------------- |
-| `areaString` | `string` | The string containing areas. |
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
 
 #### Returns
 
 `boolean`
 
-`true` if 'enclose' is present, otherwise `false`.
+boolean `true` if 'enclose' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:84](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L84)
-
----
-
-### isFullArea()
-
-```ts
-function isFullArea(areaString): boolean;
-```
-
-Checks if 'full' area is present in the provided areaString.
-
-#### Parameters
-
-| Parameter    | Type     | Description                  |
-| ------------ | -------- | ---------------------------- |
-| `areaString` | `string` | The string containing areas. |
-
-#### Returns
-
-`boolean`
-
-`true` if 'full' is present, otherwise `false`.
-
-#### Defined in
-
-[utils/area.ts:72](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L72)
+[utils/area.ts:94](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L94)
 
 ---
 
@@ -157,19 +157,19 @@ Checks if 'height' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type     | Description                  |
-| ------------ | -------- | ---------------------------- |
-| `areaString` | `string` | The string containing areas. |
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
 
 #### Returns
 
 `boolean`
 
-`true` if 'height' is present, otherwise `false`.
+boolean `true` if 'height' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:120](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L120)
+[utils/area.ts:136](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L136)
 
 ---
 
@@ -183,15 +183,15 @@ Checks if 'left' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type     | Description                  |
-| ------------ | -------- | ---------------------------- |
-| `areaString` | `string` | The string containing areas. |
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
 
 #### Returns
 
 `boolean`
 
-`true` if 'left' is present, otherwise `false`.
+boolean `true` if 'left' is present, otherwise `false`.
 
 #### Defined in
 
@@ -209,19 +209,19 @@ Checks if 'parent' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type     | Description                  |
-| ------------ | -------- | ---------------------------- |
-| `areaString` | `string` | The string containing areas. |
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
 
 #### Returns
 
 `boolean`
 
-`true` if 'parent' is present, otherwise `false`.
+boolean `true` if 'parent' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:108](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L108)
+[utils/area.ts:122](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L122)
 
 ---
 
@@ -235,19 +235,19 @@ Checks if 'right' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type     | Description                  |
-| ------------ | -------- | ---------------------------- |
-| `areaString` | `string` | The string containing areas. |
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
 
 #### Returns
 
 `boolean`
 
-`true` if 'right' is present, otherwise `false`.
+boolean `true` if 'right' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:36](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L36)
+[utils/area.ts:38](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L38)
 
 ---
 
@@ -261,19 +261,19 @@ Checks if 'subtle' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type     | Description                  |
-| ------------ | -------- | ---------------------------- |
-| `areaString` | `string` | The string containing areas. |
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
 
 #### Returns
 
 `boolean`
 
-`true` if 'subtle' is present, otherwise `false`.
+boolean `true` if 'subtle' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:96](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L96)
+[utils/area.ts:108](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L108)
 
 ---
 
@@ -287,19 +287,176 @@ Checks if 'top' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type     | Description                  |
-| ------------ | -------- | ---------------------------- |
-| `areaString` | `string` | The string containing areas. |
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
 
 #### Returns
 
 `boolean`
 
-`true` if 'top' is present, otherwise `false`.
+boolean `true` if 'top' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:48](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L48)
+[utils/area.ts:52](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L52)
+
+---
+
+### isValidGridElement()
+
+```ts
+function isValidGridElement(areaString, styles): boolean;
+```
+
+Checks if the provided areaString contains 'grid'.
+
+#### Parameters
+
+| Parameter    | Type                  | Description                  |
+| ------------ | --------------------- | ---------------------------- |
+| `areaString` | `null` \| `string`    | The string containing areas. |
+| `styles`     | `CSSStyleDeclaration` | -                            |
+
+#### Returns
+
+`boolean`
+
+boolean `true` if 'grid' are present, otherwise `false`.
+
+#### Defined in
+
+[utils/area.ts:239](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L239)
+
+---
+
+### isValidMarkElement()
+
+```ts
+function isValidMarkElement(areaString): boolean;
+```
+
+Checks if the provided areaString contains 'mark'.
+
+#### Parameters
+
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
+
+#### Returns
+
+`boolean`
+
+boolean `true` if 'mark' are present, otherwise `false`.
+
+#### Defined in
+
+[utils/area.ts:229](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L229)
+
+---
+
+### isValidMeasureElement()
+
+```ts
+function isValidMeasureElement(areaString): boolean;
+```
+
+Checks if the provided areaString contains 'measure'.
+
+#### Parameters
+
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
+
+#### Returns
+
+`boolean`
+
+boolean `true` if 'measure' are present, otherwise `false`.
+
+#### Defined in
+
+[utils/area.ts:211](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L211)
+
+---
+
+### isValidPinElement()
+
+```ts
+function isValidPinElement(areaString): boolean;
+```
+
+Checks if the provided areaString contains 'pin'.
+
+#### Parameters
+
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
+
+#### Returns
+
+`boolean`
+
+boolean `true` if 'pin' are present, otherwise `false`.
+
+#### Defined in
+
+[utils/area.ts:220](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L220)
+
+---
+
+### isValidSpacingElement()
+
+```ts
+function isValidSpacingElement(areaString): boolean;
+```
+
+Checks if the provided areaString contains 'spacing'.
+
+#### Parameters
+
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
+
+#### Returns
+
+`boolean`
+
+boolean `true` if 'spacing' are present, otherwise `false`.
+
+#### Defined in
+
+[utils/area.ts:202](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L202)
+
+---
+
+### isValidTypographyElement()
+
+```ts
+function isValidTypographyElement(areaString): boolean;
+```
+
+Checks if the provided areaString contains 'typography'.
+
+#### Parameters
+
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
+
+#### Returns
+
+`boolean`
+
+boolean `true` if 'typography' are present, otherwise `false`.
+
+#### Defined in
+
+[utils/area.ts:193](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L193)
 
 ---
 
@@ -313,19 +470,19 @@ Checks if 'width' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type     | Description                  |
-| ------------ | -------- | ---------------------------- |
-| `areaString` | `string` | The string containing areas. |
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
 
 #### Returns
 
 `boolean`
 
-`true` if 'width' is present, otherwise `false`.
+boolean `true` if 'width' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:132](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L132)
+[utils/area.ts:150](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L150)
 
 ---
 
@@ -339,19 +496,45 @@ Checks if the provided areaString contains SVG-related areas.
 
 #### Parameters
 
-| Parameter    | Type     | Description                  |
-| ------------ | -------- | ---------------------------- |
-| `areaString` | `string` | The string containing areas. |
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
 
 #### Returns
 
 `boolean`
 
-`true` if any SVG-related area is present, otherwise `false`.
+boolean `true` if any SVG-related area is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:144](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L144)
+[utils/area.ts:164](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L164)
+
+---
+
+### useSyntaxHighlighting()
+
+```ts
+function useSyntaxHighlighting(areaString): boolean;
+```
+
+Checks if the provided areaString contains 'syntax'.
+
+#### Parameters
+
+| Parameter    | Type               | Description                  |
+| ------------ | ------------------ | ---------------------------- |
+| `areaString` | `null` \| `string` | The string containing areas. |
+
+#### Returns
+
+`boolean`
+
+boolean `true` if both 'syntax' are present, otherwise `false`.
+
+#### Defined in
+
+[utils/area.ts:248](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L248)
 
 ---
 

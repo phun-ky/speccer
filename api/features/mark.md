@@ -6,7 +6,7 @@
 
 # features/mark
 
-> Last updated 2024-08-16T09:32:06.350Z
+> Last updated 2024-08-16T20:29:35.107Z
 
 ## Functions
 
@@ -39,14 +39,14 @@ document.body.appendChild(marker);
 
 #### Defined in
 
-[features/mark/index.ts:18](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L18)
+[features/mark/index.ts:21](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L21)
 
 ---
 
 ### element()
 
 ```ts
-function element(elementToMark): Promise<void>;
+function element(targetElement): Promise<void>;
 ```
 
 Create a marker element and add it to the body with styles matching a specified element.
@@ -57,7 +57,7 @@ Create a marker element and add it to the body with styles matching a specified 
 
 | Parameter       | Type          | Description                              |
 | --------------- | ------------- | ---------------------------------------- |
-| `elementToMark` | `HTMLElement` | The target element to match styles with. |
+| `targetElement` | `HTMLElement` | The target element to match styles with. |
 
 #### Returns
 
@@ -68,13 +68,13 @@ Create a marker element and add it to the body with styles matching a specified 
 #### Example
 
 ```typescript
-const elementToMark = document.getElementById('target');
-element(elementToMark);
+const targetElement = document.getElementById('target');
+element(targetElement);
 ```
 
 #### Defined in
 
-[features/mark/index.ts:41](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L41)
+[features/mark/index.ts:44](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L44)
 
 ---
 

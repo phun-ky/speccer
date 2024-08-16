@@ -2,11 +2,11 @@
   <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
 </div>
 
-[@phun-ky/speccer](../../../README.md) / features/dissect/utils/styles
+[@phun-ky/speccer](../../../README.md) / features/pin/utils/styles
 
-# features/dissect/utils/styles
+# features/pin/utils/styles
 
-> Last updated 2024-08-16T09:32:06.348Z
+> Last updated 2024-08-16T20:29:35.109Z
 
 ## Functions
 
@@ -15,24 +15,24 @@
 ```ts
 function styles(
   area,
-  targetEl,
-  dissectionEl,
+  targetElement,
+  pinElement,
   parentElement,
   options?
 ): Promise<SpeccerStylesReturnType>;
 ```
 
-Get styles for dissected elements based on the specified area and options.
+Get styles for pin elements based on the specified area and options.
 
 #### Parameters
 
-| Parameter       | Type                                                                            | Description              |
-| --------------- | ------------------------------------------------------------------------------- | ------------------------ |
-| `area`          | `string`                                                                        | The area description.    |
-| `targetEl`      | `HTMLElement`                                                                   | The target element.      |
-| `dissectionEl`  | `HTMLElement`                                                                   | The dissection element.  |
-| `parentElement` | `HTMLElement`                                                                   | The parent element.      |
-| `options`?      | [`DissectStylesOptionsType`](../../../types/bezier.md#dissectstylesoptionstype) | Optional styles options. |
+| Parameter       | Type                                                                    | Description              |
+| --------------- | ----------------------------------------------------------------------- | ------------------------ |
+| `area`          | `string`                                                                | The area description.    |
+| `targetElement` | `HTMLElement`                                                           | The target element.      |
+| `pinElement`    | `HTMLElement`                                                           | The pin element.         |
+| `parentElement` | `HTMLElement`                                                           | The parent element.      |
+| `options`?      | [`PinStylesOptionsType`](../../../types/bezier.md#pinstylesoptionstype) | Optional styles options. |
 
 #### Returns
 
@@ -46,12 +46,12 @@ Get styles for dissected elements based on the specified area and options.
 const area = 'top-left';
 const targetElement = document.getElementById('target');
 const parentElement = document.getElementById('parent');
-const dissectionElement = document.getElementById('dissection');
+const pinElement = document.getElementById('pin');
 const options = { isCurly: true };
 const styles = await styles(
   area,
   targetElement,
-  dissectionElement,
+  pinElement,
   parentElement,
   options
 );
@@ -60,7 +60,7 @@ console.log(styles);
 
 #### Defined in
 
-[features/dissect/utils/styles.ts:37](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/styles.ts#L37)
+features/pin/utils/styles.ts:37
 
 ---
 

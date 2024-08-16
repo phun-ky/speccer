@@ -1,8 +1,8 @@
 /**
- * Options for dissect styles.
+ * Options for pin styles.
  */
 // eslint-disable-next-line import/no-unused-modules
-export type DissectStylesOptionsType =
+export type PinStylesOptionsType =
   | Record<string, never>
   | {
       /**

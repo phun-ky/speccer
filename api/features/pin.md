@@ -2,33 +2,33 @@
   <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
 </div>
 
-[@phun-ky/speccer](../README.md) / features/dissect
+[@phun-ky/speccer](../README.md) / features/pin
 
-# features/dissect
+# features/pin
 
-> Last updated 2024-08-16T09:32:06.346Z
+> Last updated 2024-08-16T20:29:35.108Z
 
 This feature highlights the anatomy of an element.
 
-![dissect](https://github.com/phun-ky/speccer/blob/main/public/anatomy.png?raw=true)
+![pin](https://github.com/phun-ky/speccer/blob/main/public/anatomy.png?raw=true)
 
-In your component examples, use the following attribute. Remember to use the `data-anatomy-section` as an attribute on a parent element to scope the marking.
+In your component examples, use the following attribute. Remember to use the `data-speccer="pin-area"`-attribute on a parent element to scope the marking.
 
 ## Table of Contents
 
 - [Example](#example)
 - [References](#references)
-  - [create](#create)
-  - [dissect](#dissect)
+  - [createPinElement](#createpinelement)
+  - [pinElement](#pinelement)
 - [Functions](#functions)
-  - [element()](#element)
+  - [pinElements()](#pinelements)
 
 ## Example
 
 ```html
-<div data-anatomy-section>
+<div data-speccer="pin-area">
   <div
-    data-anatomy="outline [full|enclose][curly] [left|right|top|bottom]"
+    data-speccer="pin [bracket|enclose][curly] [left|right|top|bottom]"
     class="..."
   ></div>
 </div>
@@ -36,46 +36,46 @@ In your component examples, use the following attribute. Remember to use the `da
 
 ## References
 
-### create
+### createPinElement
 
-Re-exports [create](dissect/utils/create.md#create)
+Re-exports [createPinElement](pin/utils/create-pin-element.md#createpinelement)
 
-### dissect
+### pinElement
 
-Re-exports [dissect](dissect/utils/dissect.md#dissect)
+Re-exports [pinElement](pin/utils/pin-element.md#pinelement)
 
 ## Functions
 
-### element()
+### pinElements()
 
 ```ts
-function element(sectionEl): Promise<void>;
+function pinElements(sectionElement): Promise<void>;
 ```
 
-Create dissected elements based on the section element and its data-anatomy attributes.
+Create pinned elements based on the section element and its data-speccer attributes.
 
 #### Parameters
 
-| Parameter   | Type          | Description                                        |
-| ----------- | ------------- | -------------------------------------------------- |
-| `sectionEl` | `HTMLElement` | The section element containing dissected elements. |
+| Parameter        | Type          | Description                                     |
+| ---------------- | ------------- | ----------------------------------------------- |
+| `sectionElement` | `HTMLElement` | The section element containing pinned elements. |
 
 #### Returns
 
 `Promise`\<`void`>
 
-- A promise that resolves after creating dissected elements.
+- A promise that resolves after creating pinned elements.
 
 #### Example
 
 ```ts
 const sectionElement = document.getElementById('section');
-element(sectionElement);
+pinElements(sectionElement);
 ```
 
 #### Defined in
 
-[features/dissect/index.ts:41](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/index.ts#L41)
+features/pin/index.ts:43
 
 ---
 

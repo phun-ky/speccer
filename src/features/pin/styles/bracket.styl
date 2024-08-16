@@ -1,100 +1,100 @@
-.ph-speccer.speccer.dissection.outline.full:not(.curly)
+.ph-speccer.speccer.pin.bracket:not(.curly)
   border-radius 0
   background-color transparent
   color var(--ph-speccer-measure-color)
   border var(--ph-speccer-line-width) solid var(--ph-speccer-pin-color)
   border-bottom none
 
-.ph-speccer.speccer.dissection.outline.full:not(.curly)
+.ph-speccer.speccer.pin.bracket:not(.curly)
   &::after
     top calc(-8px - var(--ph-speccer-pin-space))
 
-.ph-speccer.speccer.dissection.outline.full:not(.curly)
+.ph-speccer.speccer.pin.bracket:not(.curly)
   &::before
     bottom 100%
 
-.ph-speccer.speccer.dissection.outline.full:not(.curly)
+.ph-speccer.speccer.pin.bracket:not(.curly)
   &.right
     border var(--ph-speccer-line-width) solid var(--ph-speccer-pin-color)
     border-left none
 
-.ph-speccer.speccer.dissection.outline.full:not(.curly)
+.ph-speccer.speccer.pin.bracket:not(.curly)
   &.right
     &::after
       left calc(8px + var(--ph-speccer-pin-space))
 
-.ph-speccer.speccer.dissection.outline.full:not(.curly)
+.ph-speccer.speccer.pin.bracket:not(.curly)
   &.right
     &::before
       left 100%
       right auto
 
-.ph-speccer.speccer.dissection.outline.full:not(.curly)
+.ph-speccer.speccer.pin.bracket:not(.curly)
   &.left
     border var(--ph-speccer-line-width) solid var(--ph-speccer-pin-color)
     border-right none
 
-.ph-speccer.speccer.dissection.outline.full:not(.curly)
+.ph-speccer.speccer.pin.bracket:not(.curly)
   &.left
     &::after
       left calc(-8px - var(--ph-speccer-pin-space))
 
-.ph-speccer.speccer.dissection.outline.full:not(.curly)
+.ph-speccer.speccer.pin.bracket:not(.curly)
   &.left
     &::before
       right 100%
       left auto
 
-.ph-speccer.speccer.dissection.outline.full:not(.curly)
+.ph-speccer.speccer.pin.bracket:not(.curly)
   &.top
     border var(--ph-speccer-line-width) solid var(--ph-speccer-pin-color)
     border-bottom none
 
-.ph-speccer.speccer.dissection.outline.full:not(.curly)
+.ph-speccer.speccer.pin.bracket:not(.curly)
   &.top
     &::after
       top calc(-8px - var(--ph-speccer-pin-space))
 
-.ph-speccer.speccer.dissection.outline.full:not(.curly)
+.ph-speccer.speccer.pin.bracket:not(.curly)
   &.top
     &::before
       bottom 100%
 
-.ph-speccer.speccer.dissection.outline.full:not(.curly)
+.ph-speccer.speccer.pin.bracket:not(.curly)
   &.bottom
     border var(--ph-speccer-line-width) solid var(--ph-speccer-pin-color)
     border-top none
 
-.ph-speccer.speccer.dissection.outline.full:not(.curly)
+.ph-speccer.speccer.pin.bracket:not(.curly)
   &.bottom
     &::after
       top calc(8px + var(--ph-speccer-pin-space))
 
-.ph-speccer.speccer.dissection.outline.full:not(.curly)
+.ph-speccer.speccer.pin.bracket:not(.curly)
   &.bottom
     &::before
       top 100%
 
-.ph-speccer.speccer.dissection.outline.full
+.ph-speccer.speccer.pin.bracket
   &.right,
   &.left
     &:not(.curly)
       width 8px
 
-.ph-speccer.speccer.dissection.outline.full,
-.ph-speccer.speccer.dissection.outline.full.top,
-.ph-speccer.speccer.dissection.outline.full.bottom
+.ph-speccer.speccer.pin.bracket,
+.ph-speccer.speccer.pin.bracket.top,
+.ph-speccer.speccer.pin.bracket.bottom
   &:not(.curly)
     height 8px
 
-.ph-speccer.speccer.dissection.outline.full,
-.ph-speccer.speccer.dissection.outline.full.right,
-.ph-speccer.speccer.dissection.outline.full.left,
-.ph-speccer.speccer.dissection.outline.full.top,
-.ph-speccer.speccer.dissection.outline.full.bottom
+.ph-speccer.speccer.pin.bracket,
+.ph-speccer.speccer.pin.bracket.right,
+.ph-speccer.speccer.pin.bracket.left,
+.ph-speccer.speccer.pin.bracket.top,
+.ph-speccer.speccer.pin.bracket.bottom
   &:not(.curly)
     &::after
-      content attr(data-dissection-counter)
+      content attr(data-pin-counter)
       height var(--ph-speccer-pin-size)
       width var(--ph-speccer-pin-size)
       display flex
@@ -108,7 +108,7 @@
       font-size 16px
       z-index 100000
 
-.ph-speccer.speccer.dissection.outline.full
+.ph-speccer.speccer.pin.bracket
   &.right,
   &.left
     &:not(.curly)
@@ -116,19 +116,19 @@
         top 50%
         transform translateY(-50%)
 
-.ph-speccer.speccer.dissection.outline.full,
-.ph-speccer.speccer.dissection.outline.full.top,
-.ph-speccer.speccer.dissection.outline.full.bottom
+.ph-speccer.speccer.pin.bracket,
+.ph-speccer.speccer.pin.bracket.top,
+.ph-speccer.speccer.pin.bracket.bottom
   &:not(.curly)
     &::after
       left 50%
       transform translateX(-50%)
 
-.ph-speccer.speccer.dissection.outline.full,
-.ph-speccer.speccer.dissection.outline.full.right,
-.ph-speccer.speccer.dissection.outline.full.left,
-.ph-speccer.speccer.dissection.outline.full.top,
-.ph-speccer.speccer.dissection.outline.full.bottom
+.ph-speccer.speccer.pin.bracket,
+.ph-speccer.speccer.pin.bracket.right,
+.ph-speccer.speccer.pin.bracket.left,
+.ph-speccer.speccer.pin.bracket.top,
+.ph-speccer.speccer.pin.bracket.bottom
   &:not(.curly)
     &::before
       content ""
@@ -137,7 +137,7 @@
       z-index 100000
       display block
 
-.ph-speccer.speccer.dissection.outline.full
+.ph-speccer.speccer.pin.bracket
   &.right,
   &.left
     &:not(.curly)
@@ -147,9 +147,9 @@
         height var(--ph-speccer-line-width)
         width calc(var(--ph-speccer-pin-space) + var(--ph-speccer-line-width))
 
-.ph-speccer.speccer.dissection.outline.full,
-.ph-speccer.speccer.dissection.outline.full.top,
-.ph-speccer.speccer.dissection.outline.full.bottom
+.ph-speccer.speccer.pin.bracket,
+.ph-speccer.speccer.pin.bracket.top,
+.ph-speccer.speccer.pin.bracket.bottom
   &:not(.curly)
     &::before
       left 50%

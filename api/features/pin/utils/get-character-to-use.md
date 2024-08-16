@@ -2,47 +2,45 @@
   <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
 </div>
 
-[@phun-ky/speccer](../../../README.md) / features/dissect/utils/create
+[@phun-ky/speccer](../../../README.md) / features/pin/utils/get-character-to-use
 
-# features/dissect/utils/create
+# features/pin/utils/get-character-to-use
 
-> Last updated 2024-08-16T09:32:06.346Z
+> Last updated 2024-08-16T20:29:35.109Z
 
 ## Functions
 
-### create()
+### getCharacterToUse()
 
 ```ts
-function create(textContent, area, id, n): HTMLElement;
+function getCharacterToUse(targetIndex): string;
 ```
 
-Create a dissected element with optional text content, area description, and element type.
+Returns the character to use at the specified target index.
+If the index exceeds the available characters, it generates a new character by pairing uppercase and lowercase letters.
 
 #### Parameters
 
-| Parameter     | Type     | Default value | Description                             |
-| ------------- | -------- | ------------- | --------------------------------------- |
-| `textContent` | `string` | `''`          | The text content to add to the element. |
-| `area`        | `string` | `undefined`   | The area description for styling.       |
-| `id`          | `string` | `''`          | The id of the dissection element        |
-| `n`           | `string` | `'span'`      | The element type.                       |
+| Parameter     | Type     | Description                             |
+| ------------- | -------- | --------------------------------------- |
+| `targetIndex` | `number` | The index of the character to retrieve. |
 
 #### Returns
 
-`HTMLElement`
+`string`
 
-- The created dissected element.
+The character to use at the specified index.
 
 #### Example
 
 ```ts
-const dissectedElement = create('A', 'outline top', 'div');
-document.body.appendChild(dissectedElement);
+const character = getCharacterToUse(0); // Returns first character from SPECCER_LITERALS
+const nextCharacter = getCharacterToUse(25); // Returns next character or a generated pair if index exceeds literals length
 ```
 
 #### Defined in
 
-[features/dissect/utils/create.ts:25](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/create.ts#L25)
+features/pin/utils/get-character-to-use.ts:18
 
 ---
 

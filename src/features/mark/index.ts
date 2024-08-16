@@ -1,5 +1,8 @@
 /* eslint no-console:0 */
+import { isValidMarkElement } from '../../utils/area';
 import { cx, set } from '../../utils/classnames';
+import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
+import { isElementHidden } from '../../utils/node';
 import { getRec } from '../../utils/position';
 import { add as addStyles } from '../../utils/styles';
 
@@ -29,23 +32,34 @@ export const create = (n = 'span'): HTMLElement => {
  *
  * ![mark](https://github.com/phun-ky/speccer/blob/main/public/mark.png?raw=true)
  *
- * @param {HTMLElement} elementToMark - The target element to match styles with.
+ * @param {HTMLElement} targetElement - The target element to match styles with.
  * @returns {Promise<void>} - A promise that resolves after creating and styling the marker element.
  *
  * @example
  * ```typescript
- * const elementToMark = document.getElementById('target');
- * element(elementToMark);
+ * const targetElement = document.getElementById('target');
+ * element(targetElement);
  * ```
  */
-export const element = async (elementToMark: HTMLElement): Promise<void> => {
-  if (!elementToMark) return;
+export const element = async (targetElement: HTMLElement): Promise<void> => {
+  if (!targetElement) return;
+
+  const _areas_string: string | null = targetElement.getAttribute(
+    SPECCER_DATA_ATTRIBUTE
+  );
+
+  if (!isValidMarkElement(_areas_string)) return;
+
+  if (
+    isElementHidden(targetElement)
+  )
+    return;
 
   const markElement = create();
 
   document.body.appendChild(markElement);
 
-  const positionalStyles = await getRec(markElement, elementToMark);
+  const positionalStyles = await getRec(markElement, targetElement);
   const { left, top, height, width } = positionalStyles.absolute();
   const markStyles = {
     left: `${left}px`,

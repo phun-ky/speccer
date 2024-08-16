@@ -7,8 +7,8 @@ import { waitForFrame } from '../../../utils/wait';
  * Calculates and returns the styles for an accessibility element based on its type.
  *
  * @param {string} type - Type of the accessibility element ('tabstops', 'landmark', 'region', 'shortcut', or default).
- * @param {HTMLElement} targetEl - Target HTML element.
- * @param {HTMLElement} a11yEl - Accessibility HTML element to be styled.
+ * @param {HTMLElement} targetElement - Target HTML element.
+ * @param {HTMLElement} a11yElement - Accessibility HTML element to be styled.
  * @returns {Promise<SpeccerStylesReturnType>} A Promise resolving with the calculated styles.
  *
  * @example
@@ -34,13 +34,13 @@ import { waitForFrame } from '../../../utils/wait';
  */
 export const styles = async (
   type: string,
-  targetEl: HTMLElement,
-  a11yEl: HTMLElement
+  targetElement: HTMLElement,
+  a11yElement: HTMLElement
 ): Promise<SpeccerStylesReturnType> => {
   await waitForFrame();
 
-  const SPECCER_PIN_SPACE = pinSpace(a11yEl);
-  const _positional_styles = await getRec(a11yEl, targetEl);
+  const SPECCER_PIN_SPACE = pinSpace(a11yElement);
+  const _positional_styles = await getRec(a11yElement, targetElement);
 
   if (type === 'tabstops') {
     let { left, top } = _positional_styles.fromTop();

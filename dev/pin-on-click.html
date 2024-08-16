@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="ph" lang="en">
   <head>
-    <title>@phun-ky/speccer | dissect on click</title>
+    <title>@phun-ky/speccer | pin on click</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Language" content="no" />
     <meta name="robots" content="none" />
@@ -143,10 +143,10 @@
       <main class="ph main">
         <section class="ph section">
           <div class="ph container">
-            <h1 class="ph">Dissect elements on click</h1>
+            <h1 class="ph">Pin elements on click</h1>
             <p class="ph lead" style="margin-bottom: 4rem">
-              Uses the `dissect` feature from @phun-ky/speccer to activate
-              dissection on click.
+              Uses the `pin` feature from @phun-ky/speccer to activate pins on
+              click.
             </p>
           </div>
         </section>
@@ -157,12 +157,12 @@
               <span class="ph title"> Curly </span>
               <p class="ph description">
                 Curly only works in combination with the
-                <code class="ph language-">full</code> option
+                <code class="ph language-">bracket</code> option
               </p>
             </div>
             <form
               onsubmit="javascript: return false;"
-              id="dissection-options"
+              id="pin-options"
               class="ph"
               style="
                 display: grid;
@@ -176,32 +176,32 @@
                   <input
                     type="radio"
                     name="type"
-                    id="dissect-outline-type-default"
+                    id="pin-type-default"
                     checked="checked"
                     value="default"
                     class="ph"
                   />
-                  <label class="ph label" for="dissect-outline-type-default">
+                  <label class="ph label" for="pin-type-default">
                     default
                   </label>
                   <input
                     type="radio"
                     name="type"
-                    id="dissect-outline-type-full"
-                    value="full"
+                    id="pin-type-bracket"
+                    value="bracket"
                     class="ph"
                   />
-                  <label class="ph label" for="dissect-outline-type-full">
-                    full
+                  <label class="ph label" for="pin-type-bracket">
+                    bracket
                   </label>
                   <input
                     type="radio"
                     name="type"
-                    id="dissect-outline-type-enclose"
+                    id="pin-type-enclose"
                     value="enclose"
                     class="ph"
                   />
-                  <label class="ph label" for="dissect-outline-type-enclose">
+                  <label class="ph label" for="pin-type-enclose">
                     enclose
                   </label>
                 </div>
@@ -212,13 +212,11 @@
                   <input
                     type="checkbox"
                     name="curly"
-                    id="dissect-outline-curly"
+                    id="pin-curly"
                     value="curly"
                     class="ph"
                   />
-                  <label class="ph label" for="dissect-outline-curly">
-                    curly
-                  </label>
+                  <label class="ph label" for="pin-curly"> curly </label>
                 </div>
               </div>
               <div class="ph">
@@ -228,43 +226,39 @@
                     type="radio"
                     name="position"
                     checked="checked"
-                    id="dissect-outline-position-top"
+                    id="pin-position-top"
                     value="top"
                     class="ph"
                   />
-                  <label class="ph label" for="dissect-outline-position-top">
-                    top
-                  </label>
+                  <label class="ph label" for="pin-position-top"> top </label>
                   <input
                     type="radio"
                     name="position"
-                    id="dissect-outline-position-right"
+                    id="pin-position-right"
                     value="right"
                     class="ph"
                   />
-                  <label class="ph label" for="dissect-outline-position-right">
+                  <label class="ph label" for="pin-position-right">
                     right
                   </label>
                   <input
                     type="radio"
                     name="position"
-                    id="dissect-outline-position-bottom"
+                    id="pin-position-bottom"
                     value="bottom"
                     class="ph"
                   />
-                  <label class="ph label" for="dissect-outline-position-bottom">
+                  <label class="ph label" for="pin-position-bottom">
                     bottom
                   </label>
                   <input
                     type="radio"
                     name="position"
-                    id="dissect-outline-position-left"
+                    id="pin-position-left"
                     value="left"
                     class="ph"
                   />
-                  <label class="ph label" for="dissect-outline-position-left">
-                    left
-                  </label>
+                  <label class="ph label" for="pin-position-left"> left </label>
                 </div>
               </div>
             </form>
@@ -384,10 +378,10 @@
     </div>
 
     <script type="module">
-      import { dissect as d } from '/speccer.esm.js';
-      const { dissect } = d;
+      import { pin } from '/speccer.esm.js';
+      const { pinElement } = pin;
       /**
-       * Handles click events on elements, either dissecting them or removing the dissection based on their current state.
+       * Handles click events on elements, either pin them or removing the pins based on their current state.
        *
        * @param {HTMLElement} el - The element that was clicked.
        */
@@ -399,23 +393,23 @@
 
           if (!selector) return;
 
-          const dissectionElement = document.getElementById(selector);
+          const pinElement = document.getElementById(selector);
 
-          if (!dissectionElement) return;
+          if (!pinElement) return;
 
-          if (dissectionElement.classList.contains('curly')) {
+          if (pinElement.classList.contains('curly')) {
             // We also need to remove the svg paths if it is in use
             document
               .querySelectorAll(`#ph-speccer-svg path[data-start-el="${elId}"]`)
               .forEach((el) => el.remove());
           }
 
-          dissectionElement.remove();
+          pinElement.remove();
           el.classList.remove('is-specced');
         } else {
-          const form = document.getElementById('dissection-options');
+          const form = document.getElementById('pin-options');
           const formData = new FormData(form);
-          let area = 'outline';
+          let area = 'pin';
           for (const value of formData.values()) {
             if (value == 'default') continue;
             area += ` ${value}`;
@@ -423,11 +417,11 @@
 
           const parentElement = el.parentElement;
 
-          dissect(
+          pinElement(
             el,
             '🥰',
             parentElement,
-            area.indexOf('full') == -1 ? area.replace(' curly', '') : area
+            area.indexOf('bracket') == -1 ? area.replace(' curly', '') : area
           );
           el.classList.add('is-specced');
         }

@@ -99,3 +99,46 @@ export const SPECCER_DEFAULT_MEASURE_SIZE_NEG: number =
  * ```
  */
 export const SPECCER_DEFAULT_LINE_WIDTH = 1;
+
+/**
+ * The name of the attribute speccer uses to identify elements to spec
+ * @type {string}
+ */
+export const SPECCER_DATA_ATTRIBUTE = 'data-speccer';
+
+
+/**
+ * The selector for the `spacing` feature
+ * @type {string}
+ */
+export const SPECCER_FEATURE_SPACING = 'spacing';
+
+/**
+ * The selector for the `measure` feature
+ * @type {string}
+ */
+export const SPECCER_FEATURE_MEASURE = 'measure';
+
+/**
+ * The selector for the `typography` feature
+ * @type {string}
+ */
+export const SPECCER_FEATURE_TYPOGRAPHY = 'typography';
+
+/**
+ * The selector for the `mark` feature
+ * @type {string}
+ */
+export const SPECCER_FEATURE_MARK = 'mark';
+
+/**
+ * The selector for the `grid` feature
+ * @type {string}
+ */
+export const SPECCER_FEATURE_GRID = 'grid';
+
+/**
+ * The selector for the container of the `pin` feature
+ * @type {string}
+ */
+export const SPECCER_FEATURE_PIN_AREA = 'pin-area';

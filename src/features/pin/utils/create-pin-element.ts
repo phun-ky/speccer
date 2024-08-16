@@ -1,28 +1,28 @@
 import {
   isCurly,
   isEncloseArea,
-  isFullArea,
+  isBracketArea,
   isParentArea,
   isSubtle
 } from '../../../utils/area';
 import { set as setClassNames, cx } from '../../../utils/classnames';
 
 /**
- * Create a dissected element with optional text content, area description, and element type.
+ * Create a pin element with optional text content, area description, and element type.
  *
  * @param {string} textContent - The text content to add to the element.
  * @param {string} area - The area description for styling.
- * @param {string} id - The id of the dissection element
+ * @param {string} id - The id of the pinned element
  * @param {string} n - The element type.
- * @returns {HTMLElement} - The created dissected element.
+ * @returns {HTMLElement} - The created pin element.
  *
  * @example
  * ```ts
- * const dissectedElement = create('A', 'outline top', 'div');
- * document.body.appendChild(dissectedElement);
+ * const pinElement = createPinElement('A', 'outline top', 'div');
+ * document.body.appendChild(pinElement);
  * ```
  */
-export const create = (
+export const createPinElement = (
   textContent = '',
   area: string,
   id = '',
@@ -36,21 +36,21 @@ export const create = (
 
   if (
     isParentArea(area) &&
-    !isFullArea(area) &&
+    !isBracketArea(area) &&
     !isCurly(area) &&
     !isSubtle(area)
   )
     _extra_class_names.svg = true;
 
   if (
-    (!isFullArea(area) && !isEncloseArea(area)) ||
-    (isFullArea(area) && isCurly(area))
+    (!isBracketArea(area) && !isEncloseArea(area)) ||
+    (isBracketArea(area) && isCurly(area))
   )
     _el.appendChild(_text_node);
-  else if (isFullArea(area) || isEncloseArea(area))
-    _el.setAttribute('data-dissection-counter', textContent);
+  else if (isBracketArea(area) || isEncloseArea(area))
+    _el.setAttribute('data-pin-counter', textContent);
 
-  const _class_names = cx('ph-speccer speccer dissection', _extra_class_names);
+  const _class_names = cx('ph-speccer speccer pin', _extra_class_names);
 
   setClassNames(_el, _class_names);
 

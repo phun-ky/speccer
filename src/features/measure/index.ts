@@ -3,11 +3,13 @@ import {
   isBottomArea,
   isHeightArea,
   isRightArea,
+  isValidMeasureElement,
   isWidthArea
 } from '../../utils/area';
 import { set as setClassNames } from '../../utils/classnames';
+import { isElementHidden } from '../../utils/node';
 import { getRec } from '../../utils/position';
-import { get as getStyles, add as addStyles } from '../../utils/styles';
+import { add as addStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
 
 /**
@@ -44,7 +46,7 @@ export const create = (
  *
  * ![measure](https://github.com/phun-ky/speccer/blob/main/public/measure.png?raw=true)
  *
- * @param {HTMLElement} targetEl - The target element to match styles with.
+ * @param {HTMLElement} targetElement - The target element to match styles with.
  * @returns {Promise<void>} - A promise that resolves after creating and styling the measurement element.
  *
  * @example
@@ -53,27 +55,20 @@ export const create = (
  * element(targetElement);
  * ```
  */
-export const element = async (targetEl: HTMLElement): Promise<void> => {
-  if (!targetEl) return;
+export const element = async (targetElement: HTMLElement): Promise<void> => {
+  if (!targetElement) return;
 
-  const _areas_string: string | null = targetEl.getAttribute(
-    'data-speccer-measure'
+  const _areas_string: string | null = targetElement.getAttribute(
+    'data-speccer'
   );
 
-  if (_areas_string === '' || !_areas_string) return;
+  if(!isValidMeasureElement(_areas_string)) return;
 
-  const _target_styles = await getStyles(targetEl);
-
-  if (
-    _target_styles.display === 'none' ||
-    _target_styles.opacity === '0' ||
-    _target_styles.visibility === 'hidden'
-  )
-    return;
+  if(isElementHidden(targetElement)) return;
 
   await waitForFrame();
 
-  const _target_rect = targetEl.getBoundingClientRect();
+  const _target_rect = targetElement.getBoundingClientRect();
 
   if (isWidthArea(_areas_string)) {
     if (isBottomArea(_areas_string)) {
@@ -81,7 +76,7 @@ export const element = async (targetEl: HTMLElement): Promise<void> => {
 
       document.body.appendChild(_measure_el);
 
-      const _positional_styles = await getRec(_measure_el, targetEl);
+      const _positional_styles = await getRec(_measure_el, targetElement);
       const { left, top, width } = _positional_styles.fromBottom({
         center: false
       });
@@ -96,7 +91,7 @@ export const element = async (targetEl: HTMLElement): Promise<void> => {
 
       document.body.appendChild(_measure_el);
 
-      const _positional_styles = await getRec(_measure_el, targetEl);
+      const _positional_styles = await getRec(_measure_el, targetElement);
       const { left, top, width } = _positional_styles.fromTop({
         center: false
       });
@@ -113,7 +108,7 @@ export const element = async (targetEl: HTMLElement): Promise<void> => {
 
       document.body.appendChild(_measure_el);
 
-      const _positional_styles = await getRec(_measure_el, targetEl);
+      const _positional_styles = await getRec(_measure_el, targetElement);
       const { left, top, height } = _positional_styles.fromRight({
         center: false
       });
@@ -128,7 +123,7 @@ export const element = async (targetEl: HTMLElement): Promise<void> => {
 
       document.body.appendChild(_measure_el);
 
-      const _positional_styles = await getRec(_measure_el, targetEl);
+      const _positional_styles = await getRec(_measure_el, targetElement);
       const { left, top, height } = _positional_styles.fromLeft({
         center: false
       });

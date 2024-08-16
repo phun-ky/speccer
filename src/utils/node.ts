@@ -36,3 +36,22 @@ export const removeAll = (selector: string, el: Document = document): void => {
     e.remove();
   });
 };
+
+/**
+ * Determines if an HTML element is hidden based on its visibility properties.
+ *
+ * @param {HTMLElement} element - The HTML element to check for visibility.
+ * @returns {boolean} True if the element is hidden, false otherwise.
+ *
+ * @example
+ * ```ts
+ * const element = document.getElementById('my-element');
+ * if (element) {
+ *   const hidden = isElementHidden(element);
+ *   console.log(hidden); // true if the element is hidden, false if visible
+ * }
+ * ```
+ */
+export const isElementHidden = (element: HTMLElement):boolean =>  !element.checkVisibility({
+  checkVisibilityCSS: true
+});
