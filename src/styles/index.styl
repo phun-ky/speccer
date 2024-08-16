@@ -1,6 +1,6 @@
 @css{
   .ph-speccer.speccer{
-    --ph-speccer-base-color: var(--accent-color, rgb(255, 58, 168))
+    --ph-speccer-base-color: var(--accent-color, rgb(255, 58, 168));
     --ph-speccer-color-padding: rgba(219, 111, 255, 0.4);
     --ph-speccer-color-padding-hover: rgb(219, 111, 255);
     --ph-speccer-color-margin: rgba(255, 247, 111, 0.4);
@@ -67,7 +67,7 @@ svg.ph-speccer,
 
 svg.ph-speccer .ph-speccer.path,
 svg.ph-speccer .ph-speccer.circle
-  color var(--ph-speccer-color-contrast,$ph-speccer-color-contrast )
+  color var(--ph-speccer-color-contrast,var(--accent-color, rgb(255, 58, 168)) )
 
 @require './anatomy.styl'
 @require './spacing.styl'
