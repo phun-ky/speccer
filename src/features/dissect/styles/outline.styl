@@ -1,0 +1,49 @@
+.ph-speccer.speccer.dissection.outline,
+.ph-speccer.speccer.dissection.outline.top
+  &::after
+    height var(--ph-speccer-pin-space)
+    width var(--ph-speccer-line-width)
+    top 100%
+    right 50%
+
+.ph-speccer.speccer.dissection.outline
+  &.left
+    &::after
+      height var(--ph-speccer-line-width)
+      width var(--ph-speccer-pin-space)
+      top 50%
+      left 100%
+      right auto
+
+.ph-speccer.speccer.dissection.outline
+  &.right
+    &::after
+      height var(--ph-speccer-line-width)
+      width var(--ph-speccer-pin-space)
+      top 50%
+      left auto
+      right 100%
+
+.ph-speccer.speccer.dissection.outline
+  &.bottom
+    &::after
+      height var(--ph-speccer-pin-space)
+      width var(--ph-speccer-line-width)
+      top calc(-100% - (var(--ph-speccer-pin-space) / 2))
+      right 50%
+
+.ph-speccer.speccer.dissection.outline
+  &.left
+    &::after
+      height var(--ph-speccer-line-width)
+      width var(--ph-speccer-pin-space)
+      top 50%
+      left 100%
+
+.ph-speccer.speccer.dissection.outline
+  &.right
+    &::after
+      height var(--ph-speccer-line-width)
+      width var(--ph-speccer-pin-space)
+      top 50%
+      right 100%

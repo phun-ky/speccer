@@ -8,7 +8,6 @@
     border-bottom none
     height var(--ph-speccer-measure-size)
 
-
 .ph-speccer.speccer.measure
   &.width
     &::after
@@ -16,14 +15,12 @@
       position absolute
       top calc(-100% - 10px)
 
-
 .ph-speccer.speccer.measure
   &.width
     &.bottom
       color var(--ph-speccer-measure-color)
       border var(--ph-speccer-line-width) solid var(--ph-speccer-measure-color)
       border-top none
-
 
 .ph-speccer.speccer.measure
   &.width
@@ -33,14 +30,12 @@
         position absolute
         top calc(100% + 5px)
 
-
 .ph-speccer.speccer.measure
   &.width
     &.top
       color var(--ph-speccer-measure-color)
       border var(--ph-speccer-line-width) solid var(--ph-speccer-measure-color)
       border-bottom none
-
 
 .ph-speccer.speccer.measure
   &.width
@@ -50,7 +45,6 @@
         position absolute
         bottom calc(100% + 5px)
 
-
 .ph-speccer.speccer.measure
   &.height
     &.left
@@ -58,7 +52,6 @@
       border var(--ph-speccer-line-width) solid var(--ph-speccer-measure-color)
       border-right none
       width var(--ph-speccer-measure-size)
-
 
 .ph-speccer.speccer.measure
   &.height
@@ -70,7 +63,6 @@
         left calc(-100% - 20px - var(--ph-speccer-line-width))
         transform translateY(-50%) rotate(-90deg)
 
-
 .ph-speccer.speccer.measure
   &.height
     &.right
@@ -78,7 +70,6 @@
       border var(--ph-speccer-line-width) solid var(--ph-speccer-measure-color)
       border-left none
       width var(--ph-speccer-measure-size)
-
 
 .ph-speccer.speccer.measure
   &.height
@@ -90,19 +81,4 @@
         left calc(100% - var(--ph-speccer-measure-size))
         transform translateY(-50%) rotate(90deg)
 
-
-.ph-speccer.speccer.measure.subtle.width.top,
-.ph-speccer.speccer.measure.subtle.width.bottom,
-.ph-speccer.speccer.measure.subtle.height.right,
-.ph-speccer.speccer.measure.subtle.height.left
-  border-style dashed
-
-.ph-speccer.speccer.measure.subtle
-  &.width.top
-    border-bottom none
-  &.width.bottom
-    border-top none
-  &.height.right
-    border-left none
-  &.height.left
-    border-right none
+@require './subtle.styl'
