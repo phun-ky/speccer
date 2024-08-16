@@ -6,7 +6,7 @@
 
 # features/measure
 
-> Last updated 2024-08-16T09:32:06.350Z
+> Last updated 2024-08-16T20:29:35.108Z
 
 ## Functions
 
@@ -41,14 +41,14 @@ document.body.appendChild(measurement);
 
 #### Defined in
 
-[features/measure/index.ts:28](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L28)
+[features/measure/index.ts:29](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L29)
 
 ---
 
 ### element()
 
 ```ts
-function element(targetEl): Promise<void>;
+function element(targetElement): Promise<void>;
 ```
 
 Create a measurement element and add it to the body with styles matching a specified target element.
@@ -57,9 +57,9 @@ Create a measurement element and add it to the body with styles matching a speci
 
 #### Parameters
 
-| Parameter  | Type          | Description                              |
-| ---------- | ------------- | ---------------------------------------- |
-| `targetEl` | `HTMLElement` | The target element to match styles with. |
+| Parameter       | Type          | Description                              |
+| --------------- | ------------- | ---------------------------------------- |
+| `targetElement` | `HTMLElement` | The target element to match styles with. |
 
 #### Returns
 
@@ -76,7 +76,7 @@ element(targetElement);
 
 #### Defined in
 
-[features/measure/index.ts:57](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L57)
+[features/measure/index.ts:58](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L58)
 
 ---
 

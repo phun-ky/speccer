@@ -1,0 +1,80 @@
+.ph-speccer.speccer.pin
+  font-family sans-serif
+  height var(--ph-speccer-pin-size)
+  width var(--ph-speccer-pin-size)
+  display flex
+  position absolute
+  border-radius 100%
+  background-color var(--ph-speccer-pin-color)
+  color var(--ph-speccer-color-text-light)
+  font-weight 400
+  align-items center
+  justify-content center
+  line-height 150%
+  font-size 16px
+  z-index 100000
+
+.ph-speccer.speccer.pin
+  &::after
+    content ""
+    position absolute
+    height var(--ph-speccer-pin-space)
+    top 100%
+    width var(--ph-speccer-line-width)
+    background-color var(--ph-speccer-pin-color)
+    z-index 99999
+
+.ph-speccer.speccer.pin.svg,
+.ph-speccer.speccer.pin.curly
+  &::after
+    content none !important
+
+.ph-speccer.speccer.pin,
+.ph-speccer.speccer.pin.top
+  &::after
+    height var(--ph-speccer-pin-space)
+    width var(--ph-speccer-line-width)
+    top 100%
+    right 50%
+
+.ph-speccer.speccer.pin
+  &.left
+    &::after
+      height var(--ph-speccer-line-width)
+      width var(--ph-speccer-pin-space)
+      top 50%
+      left 100%
+      right auto
+
+.ph-speccer.speccer.pin
+  &.right
+    &::after
+      height var(--ph-speccer-line-width)
+      width var(--ph-speccer-pin-space)
+      top 50%
+      left auto
+      right 100%
+
+.ph-speccer.speccer.pin
+  &.bottom
+    &::after
+      height var(--ph-speccer-pin-space)
+      width var(--ph-speccer-line-width)
+      top calc(-100% - (var(--ph-speccer-pin-space) / 2))
+      right 50%
+
+.ph-speccer.speccer.pin
+  &.left
+    &::after
+      height var(--ph-speccer-line-width)
+      width var(--ph-speccer-pin-space)
+      top 50%
+      left 100%
+
+.ph-speccer.speccer.pin
+  &.right
+    &::after
+      height var(--ph-speccer-line-width)
+      width var(--ph-speccer-pin-space)
+      top 50%
+      right 100%

@@ -27,12 +27,12 @@
     - [Element spacing](#element-spacing)
     - [Element dimensions](#element-dimensions)
       - [Subtle measure](#subtle-measure)
-    - [Highlight the anatomy of an element](#highlight-the-anatomy-of-an-element)
+    - [Pin element to highlight the anatomy](#pin-element-to-highlight-the-anatomy)
       - [Align with parent container](#align-with-parent-container)
       - [Custom literals](#custom-literals)
       - [Subtle anatomy](#subtle-anatomy)
       - [Curly brackets](#curly-brackets)
-      - [Highlight anatomy programatically](#highlight-anatomy-programatically)
+      - [Pin programatically](#pin-programatically)
     - [Element typography](#element-typography)
       - [Syntax highlighting for typography](#syntax-highlighting-for-typography)
     - [Grid spacing](#grid-spacing)
@@ -159,16 +159,7 @@ If no attribute is applied, it will default to `data-dom`, as in, it will initia
 If you're importing speccer instead of with a script tag, [you can use the following approach](https://codepen.io/phun-ky/pen/VwRRLyY) to apply lazy loading:
 
 ```javascript
-import { dissect, ElementDissectionResult } from "https://esm.sh/@phun-ky/speccer";
-
-/**
- * Function to dissect an HTML element
- * @param {Element} target - The element to be dissected
- * @returns {Promise<ElementDissectionResult>} Promise that resolves with the dissection result
- */
-const dissectElement = (target: Element): Promise<ElementDissectionResult> => {
-  return dissect.element(target);
-};
+import { pinElements } from "https://esm.sh/@phun-ky/speccer";
 
 /**
  * Callback function for IntersectionObserver
@@ -179,25 +170,25 @@ const dissectElement = (target: Element): Promise<ElementDissectionResult> => {
 const intersectionCallback: IntersectionObserverCallback = async (entries, observer) => {
   entries.forEach(async (entry) => {
     if (entry.intersectionRatio > 0) {
-      await dissectElement(entry.target);
+      await pinElements(entry.target);
       observer.unobserve(entry.target);
     }
   });
 };
 
 // Creating IntersectionObserver instance with the callback
-const dissectElementObserver = new IntersectionObserver(intersectionCallback);
+const pinElementObserver = new IntersectionObserver(intersectionCallback);
 
 /**
  * Function to observe elements using IntersectionObserver
  * @param {Element} el - The element to be observed
  */
 const observeElement = (el: Element): void => {
-  dissectElementObserver.observe(el);
+  pinElementObserver.observe(el);
 };
 
 // Observing elements with the specified data attribute
-document.querySelectorAll('[data-anatomy-section]').forEach((el) => {
+document.querySelectorAll('[data-speccer="pin-area"]').forEach((el) => {
   observeElement(el);
 });
 ```
@@ -211,7 +202,7 @@ document.querySelectorAll('[data-anatomy-section]').forEach((el) => {
 Use the following attribute to display element padding and margin:
 
 ```html
-<div data-speccer class="..."></div>
+<div data-speccer="spacing" class="..."></div>
 ```
 
 This will display the element _and all of it's children_ padding and margin.
@@ -224,7 +215,7 @@ Display dimensions with:
 
 ```html
 <div
-  data-speccer-measure="[height right|left] | [width top|bottom]"
+  data-speccer="measure [height right|left] | [width top|bottom]"
   class="..."
 ></div>
 ```
@@ -238,21 +229,21 @@ Where `height` and `width` comes with placement flags. Default for `height` is `
 Use a subtle style:
 
 ```html
-<div data-speccer-measure="height left subtle" class="..."></div>
+<div data-speccer="measure height left subtle" class="..."></div>
 ```
 
 This will give a dashed border.
 
-### Highlight the anatomy of an element
+### Pin element to highlight the anatomy
 
 ![Image of speccer](./public/anatomy.png)
 
-In your component examples, use the following attribute. Remember to use the `data-anatomy-section` as an attribute on a parent element to scope the marking.
+In your component examples, use the following attribute. Remember to use the `data-speccer="pin-area"`-attribute on a parent element to scope the marking.
 
 ```html
-<div data-anatomy-section>
+<div data-speccer="pin-area">
   <div
-    data-anatomy="outline [full|enclose][curly] [left|right|top|bottom]"
+    data-speccer="pin [bracket|enclose][curly] [left|right|top|bottom]"
     class="..."
   ></div>
 </div>
@@ -267,13 +258,13 @@ This will place a pin to the outline of the element. Default is `top`.
 You can also align the pins to the parent container.
 
 ```html
-<div data-anatomy-section>
-  <div data-anatomy="outline parent [left|right|top|bottom]" class="..."></div>
+<div data-speccer="pin-area">
+  <div data-speccer="pin parent [left|right|top|bottom]" class="..."></div>
 </div>
 ```
 
 > [!NOTE]  
-> Only works with `outline [left|right|top|bottom]`, and not with `enclose`, `full` or `curly`!
+> Only works with `pin [left|right|top|bottom]`, and not with `enclose`, `bracket` or `curly`!
 
 The lines from the element to the pin is drawn with a svg path and circle, so remember to add the following svg into your document:
 
@@ -321,8 +312,8 @@ window.SPECCER_LITERALS = [
 You can also give a more subtle touch to the anatomy elements.
 
 ```html
-<div data-anatomy-section>
-  <div data-anatomy="outline top subtle" class="..."></div>
+<div data-speccer="pin-area">
+  <div data-speccer="pin top subtle" class="..."></div>
 </div>
 ```
 
@@ -330,10 +321,10 @@ This will give a dashed border, and a more subtle pin style.
 
 #### Curly brackets
 
-You can use curly brackets with the `curly` tag in `data-anatomy` along side `outline full` to provide a more sleek style.
+You can use curly brackets with the `curly` tag in `data-speccer` along side `pin bracket` to provide a more sleek style.
 
 > [!NOTE]  
-> Only works with `outline full`
+> Only works with `pin bracket`
 
 The curly brackets are made with SVG paths, and it is required to have the following snippet on your page for it to render:
 
@@ -354,9 +345,9 @@ The curly brackets are made with SVG paths, and it is required to have the follo
 </svg>
 ```
 
-#### Highlight anatomy programatically
+#### Pin programatically
 
-from v9.5 you can utilize the `dissect` feature to highlight the anatomy of an element programaticaly. [Here is an example with a click event](https://codepen.io/phun-ky/full/LYKOWyP).
+from v9.5 you can utilize the `pin` feature to highlight the anatomy of an element programaticaly. [Here is an example with a click event](https://codepen.io/phun-ky/bracket/LYKOWyP).
 
 [Kazam_screencast_00002.webm](https://github.com/user-attachments/assets/5c78cece-de46-4876-81f2-98c9108a2103)
 
@@ -367,7 +358,7 @@ from v9.5 you can utilize the `dissect` feature to highlight the anatomy of an e
 Display typography details:
 
 ```html
-<p data-speccer-typography="[left|right|top|bottom]" class="...">Some text</p>
+<p data-speccer="typography [left|right|top|bottom]" class="...">Some text</p>
 ```
 
 This will place a box to display typography information. Default is `left`.
@@ -377,12 +368,10 @@ This will place a box to display typography information. Default is `left`.
 
 #### Syntax highlighting for typography
 
-If you want to produce a box that uses `pre` and `code` tags with support for syntax highlighting ([PrismJS](https://prismjs.com/) compatible), add `syntax` to the `data-speccer-typography` attribute.
+If you want to produce a box that uses `pre` and `code` tags with support for syntax highlighting ([PrismJS](https://prismjs.com/) compatible), add `syntax` to the `data-speccer="typography"` attribute.
 
 ```html
-<p data-speccer-typography="[left|right|top|bottom][syntax]" class="...">
-  Some text
-</p>
+<p data-speccer="typography syntax right" class="...">Some text</p>
 ```
 
 You can then override the colors, based on these variables:
@@ -432,7 +421,7 @@ This will highlight the grid spacing in a `display: grid;` element.
 In your component examples, use the following attribute on your grid container.
 
 ```html
-<div data-speccer-grid="grid" …>…</div>
+<div data-speccer="grid" …>…</div>
 ```
 
 ### Mark elements
@@ -444,7 +433,7 @@ This will mark the given elements.
 In your component examples, use the following attribute.
 
 ```html
-<div data-speccer-mark …>…</div>
+<div data-speccer="mark" …>…</div>
 ```
 
 ### A11y notation
@@ -457,22 +446,28 @@ Prior art: [Jeremy Elder](https://twitter.com/JeremyElder)
 
 ![Screenshot of speccer a11y tab stops in use](./public/a11y-tabstop.png)
 
-If you want to display tab stops, append `data-speccer-a11y-tabstops` as an attribute to the container you want to display the tab stops in.
+If you want to display tab stops, append `data-speccer="a11y tabstops"` as an attribute to the container you want to display the tab stops in.
 
 #### Landmarks and regions
 
 ![Screenshot of speccer a11y landmarks in use](./public/a11y-landmark.png)
 
-If you want to display landmarks and regions, append `data-speccer-a11y-landmark` as an attribute to the container you want to display the landmarks and regions in.
+If you want to display landmarks and regions, append `data-speccer="a11y landmark"` as an attribute to the container you want to display the landmarks and regions in.
 
 #### Keys and shortcut
 
 ![Screenshot of speccer a11y shortcuts in use](./public/a11y-shortcut.png)
 
-If you want to display the shortcut with keys used for elements, use `data-speccer-a11y-shortcut="<shortcut>"` on the element that uses this shortcut:
+If you want to display the shortcut with keys used for elements, use `data-speccer="a11y shortcut"` and `data-speccer-a11y-shortcut="<shortcut>"` on the element that uses this shortcut:
 
 ```html
-<button type="button" data-speccer-a11y-shortcut="ctrl + s">Save</button>
+<button
+  type="button"
+  data-speccer="a11y shortcut"
+  data-speccer-a11y-shortcut="ctrl + s"
+>
+  Save
+</button>
 ```
 
 ## Customization
@@ -483,31 +478,60 @@ Allthough the styling works nicely with dark mode, you can use the provided CSS 
 
 ```css
 .ph-speccer.speccer {
-  --ph-speccer-spacing-color-padding: rgba(219, 111, 255, 0.4);
-  --ph-speccer-spacing-color-padding-hover: #db6fff;
-  --ph-speccer-spacing-color-margin: rgba(255, 247, 111, 0.4);
-  --ph-speccer-spacing-color-margin-hover: #fff76f;
-  --ph-speccer-color-text-light: #fff;
-  --ph-speccer-color-text-dark: #333;
-  --ph-speccer-base-color: #ff3aa8;
+  --ph-speccer-color-artificialStrawberry: #ff3aa8;
+  --ph-speccer-color-venusSlipperOrchid: #db6fff;
+  --ph-speccer-color-superBanana: #fff76f;
+  --ph-speccer-color-white: #ffffff;
+  --ph-speccer-color-carbon: #333333;
+  --ph-speccer-color-red: #ff0000;
+  --ph-speccer-color-niuZaiSeDenim: #0074e8;
+  --ph-speccer-color-beautifulBlue: #1868b2;
+  --ph-speccer-color-fuchsiaBlue: #7e60c5;
+  --ph-speccer-base-color: var(--ph-speccer-color-artificialStrawberry);
   --ph-speccer-spacing-color: var(--ph-speccer-base-color);
-  --ph-speccer-measure-color: #f00;
-  --ph-speccer-pin-color: var(--ph-speccer-base-color);
-  --ph-speccer-typography-background-color: #fff;
-  --ph-speccer-typography-color-property: #3f85f2;
-  --ph-speccer-typography-color-text: #57575b;
+  --ph-speccer-spacing-color-padding: rgb(
+    from var(--ph-speccer-color-venusSlipperOrchid) r g b /
+      var(--ph-speccer-opacity-40)
+  );
+  --ph-speccer-spacing-color-padding-hover: var(
+    --ph-speccer-color-venusSlipperOrchid
+  );
+  --ph-speccer-spacing-color-margin: rgb(
+    from var(--ph-speccer-color-superBanana) r g b /
+      var(--ph-speccer-opacity-40)
+  );
+  --ph-speccer-spacing-color-margin-hover: var(--ph-speccer-color-superBanana);
+  --ph-speccer-typography-background-color: var(--ph-speccer-color-white);
+  --ph-speccer-typography-color-property: var(--ph-speccer-color-niuZaiSeDenim);
+  --ph-speccer-typography-color-text: var(--ph-speccer-base-color);
   --ph-speccer-typography-color-value: var(--ph-speccer-base-color);
+  --ph-speccer-mark-background-color: rgb(
+    from var(--ph-speccer-base-color) r g b / var(--ph-speccer-opacity-20)
+  );
+  --ph-speccer-mark-border-color: var(--ph-speccer-base-color);
+  --ph-speccer-mark-border-width: 1px;
+  --ph-speccer-mark-border-style: solid;
+  --ph-speccer-measure-color: var(--ph-speccer-color-red);
+  --ph-speccer-measure-size: 8px;
+  --ph-speccer-a11y-color-bakground: var(--ph-speccer-color-beautifulBlue);
+  --ph-speccer-a11y-landmark-color-background: var(
+    --ph-speccer-color-fuchsiaBlue
+  );
+  --ph-speccer-color-text-light: var(--ph-speccer-color-white);
+  --ph-speccer-color-text-dark: var(--ph-speccer-color-carbon);
+  --ph-speccer-pin-color: var(--ph-speccer-base-color);
+  --ph-speccer-pin-size: 24px;
+  --ph-speccer-pin-space: 48px;
+  --ph-speccer-line-height: 12px;
+  --ph-speccer-line-width: 1px;
+  --ph-speccer-line-width-negative: -1px;
+  --ph-speccer-opacity-20: 0.2;
   --ph-speccer-opacity-40: 0.4;
   --ph-speccer-font-family: 'Menlo for Powerline', 'Menlo Regular for Powerline',
     'DejaVu Sans Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
     monospace;
   --ph-speccer-font-size: 12px;
-  --ph-speccer-line-height: 12px;
-  --ph-speccer-pin-size: 24px;
-  --ph-speccer-pin-space: 48px;
-  --ph-speccer-line-width: 1px;
-  --ph-speccer-line-width-negative: -1px;
-  --ph-speccer-measure-size: 8px;
+  --ph-speccer-transition-default: all 2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 ```
 

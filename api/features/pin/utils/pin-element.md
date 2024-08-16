@@ -2,53 +2,58 @@
   <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
 </div>
 
-[@phun-ky/speccer](../../../README.md) / features/dissect/utils/dissect
+[@phun-ky/speccer](../../../README.md) / features/pin/utils/pin-element
 
-# features/dissect/utils/dissect
+# features/pin/utils/pin-element
 
-> Last updated 2024-08-16T09:32:06.347Z
+> Last updated 2024-08-16T20:29:35.109Z
 
 ## Functions
 
-### dissect()
+### pinElement()
 
 ```ts
-function dissect(el, symbol, parentElement, areas?): Promise<string | void>;
+function pinElement(
+  targetElement,
+  symbol,
+  parentElement,
+  areas?
+): Promise<string | void>;
 ```
 
-Create and style the dissection element as needed.
+Create and style the pin element as needed.
 
-This function appends a new dissection element to the document body based on the anatomy data attribute
-of the target element. It handles different styles, such as curly brackets or lines, based on the anatomy type.
+This function appends a new pin element to the document body based on the `data-speccer="pin"` attribute
+of the target element. It handles different styles, such as curly brackets or lines, based on the pin type.
 
 #### Parameters
 
 | Parameter       | Type          | Default value | Description                                                                        |
 | --------------- | ------------- | ------------- | ---------------------------------------------------------------------------------- |
-| `el`            | `HTMLElement` | `undefined`   | The target element that contains the anatomy data.                                 |
+| `targetElement` | `HTMLElement` | `undefined`   | The target element that contains the pin data.                                     |
 | `symbol`        | `string`      | `undefined`   | The symbol to use.                                                                 |
 | `parentElement` | `HTMLElement` | `undefined`   | The parent element                                                                 |
-| `areas`?        | `string`      | `''`          | Optional areas to use if not \[data-anatomy] is set as an attribute on the element |
+| `areas`?        | `string`      | `''`          | Optional areas to use if not \[data-speccer] is set as an attribute on the element |
 
 #### Returns
 
 `Promise`\<`string` | `void`>
 
-A promise that resolves to the id of the dissection element when the dissection is completed, or `void` if required input is invalid.
+A promise that resolves to the id of the pin element when the process is completed, or `void` if required input is invalid.
 
 #### Example
 
 ```ts
-const element = document.getElementById('target');
+const targetElement = document.getElementById('target');
 const symbol = 0;
-dissect(element, symbol).then(() => {
-  console.log('Dissection completed');
+pinElement(targetElement, symbol).then(() => {
+  console.log('process completed');
 });
 ```
 
 #### Defined in
 
-[features/dissect/utils/dissect.ts:41](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/dissect.ts#L41)
+features/pin/utils/pin-element.ts:41
 
 ---
 

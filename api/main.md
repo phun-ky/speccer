@@ -6,17 +6,17 @@
 
 # main
 
-> Last updated 2024-08-16T09:32:06.353Z
+> Last updated 2024-08-16T20:29:35.111Z
 
 ## Table of Contents
 
 - [Examples](#examples)
 - [Variables](#variables)
-  - [dissect](#dissect)
   - [grid](#grid)
   - [mark](#mark)
   - [measure](#measure)
   - [modes](#modes)
+  - [pin](#pin)
   - [spacing](#spacing)
   - [typography](#typography)
 - [Functions](#functions)
@@ -38,99 +38,6 @@ speccer();
 ```
 
 ## Variables
-
-### dissect
-
-```ts
-const dissect: {
-  create: dissectCreate;
-  dissect: _dissect;
-  element: dissectElement;
-};
-```
-
-#### Type declaration
-
-<table>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default value</th>
-<th>Defined in</th>
-</tr>
-<tr>
-<td>
-
-`create`
-
-</td>
-<td>
-
-(`textContent`, `area`, `id`, `n`) => `HTMLElement`
-
-</td>
-<td>
-
-dissectCreate
-
-</td>
-<td>
-
-[main.ts:55](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L55)
-
-</td>
-</tr>
-<tr>
-<td>
-
-`dissect`
-
-</td>
-<td>
-
-(`el`, `symbol`, `parentElement`, `areas`?) => `Promise`\<`string` | `void`>
-
-</td>
-<td>
-
-\_dissect
-
-</td>
-<td>
-
-[main.ts:57](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L57)
-
-</td>
-</tr>
-<tr>
-<td>
-
-`element`
-
-</td>
-<td>
-
-(`sectionEl`) => `Promise`\<`void`>
-
-</td>
-<td>
-
-dissectElement
-
-</td>
-<td>
-
-[main.ts:56](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L56)
-
-</td>
-</tr>
-</table>
-
-#### Defined in
-
-[main.ts:54](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L54)
-
----
 
 ### grid
 
@@ -168,7 +75,7 @@ gridCreate
 </td>
 <td>
 
-[main.ts:45](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L45)
+[main.ts:46](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L46)
 
 </td>
 </tr>
@@ -190,7 +97,7 @@ gridElement
 </td>
 <td>
 
-[main.ts:46](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L46)
+[main.ts:47](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L47)
 
 </td>
 </tr>
@@ -198,7 +105,7 @@ gridElement
 
 #### Defined in
 
-[main.ts:44](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L44)
+[main.ts:45](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L45)
 
 ---
 
@@ -238,7 +145,7 @@ markCreate
 </td>
 <td>
 
-[main.ts:66](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L66)
+[main.ts:67](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L67)
 
 </td>
 </tr>
@@ -250,7 +157,7 @@ markCreate
 </td>
 <td>
 
-(`elementToMark`) => `Promise`\<`void`>
+(`targetElement`) => `Promise`\<`void`>
 
 </td>
 <td>
@@ -260,7 +167,7 @@ markElement
 </td>
 <td>
 
-[main.ts:67](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L67)
+[main.ts:68](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L68)
 
 </td>
 </tr>
@@ -268,7 +175,7 @@ markElement
 
 #### Defined in
 
-[main.ts:65](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L65)
+[main.ts:66](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L66)
 
 ---
 
@@ -308,7 +215,7 @@ measureCreate
 </td>
 <td>
 
-[main.ts:61](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L61)
+[main.ts:62](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L62)
 
 </td>
 </tr>
@@ -320,7 +227,7 @@ measureCreate
 </td>
 <td>
 
-(`targetEl`) => `Promise`\<`void`>
+(`targetElement`) => `Promise`\<`void`>
 
 </td>
 <td>
@@ -330,7 +237,7 @@ measureElement
 </td>
 <td>
 
-[main.ts:62](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L62)
+[main.ts:63](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L63)
 
 </td>
 </tr>
@@ -338,7 +245,7 @@ measureElement
 
 #### Defined in
 
-[main.ts:60](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L60)
+[main.ts:61](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L61)
 
 ---
 
@@ -374,7 +281,7 @@ const modes: {
 </td>
 <td>
 
-[main.ts:79](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L79)
+[main.ts:80](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L80)
 
 </td>
 </tr>
@@ -391,7 +298,7 @@ const modes: {
 </td>
 <td>
 
-[main.ts:76](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L76)
+[main.ts:77](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L77)
 
 </td>
 </tr>
@@ -408,7 +315,7 @@ const modes: {
 </td>
 <td>
 
-[main.ts:77](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L77)
+[main.ts:78](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L78)
 
 </td>
 </tr>
@@ -425,7 +332,7 @@ const modes: {
 </td>
 <td>
 
-[main.ts:78](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L78)
+[main.ts:79](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L79)
 
 </td>
 </tr>
@@ -433,7 +340,89 @@ const modes: {
 
 #### Defined in
 
-[main.ts:75](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L75)
+[main.ts:76](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L76)
+
+---
+
+### pin
+
+```ts
+const pin: {
+  createPinElement: (textContent, area, id, n) => HTMLElement;
+  pinElement: (
+    targetElement,
+    symbol,
+    parentElement,
+    areas?
+  ) => Promise<string | void>;
+  pinElements: (sectionElement) => Promise<void>;
+};
+```
+
+#### Type declaration
+
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Defined in</th>
+</tr>
+<tr>
+<td>
+
+`createPinElement`
+
+</td>
+<td>
+
+(`textContent`, `area`, `id`, `n`) => `HTMLElement`
+
+</td>
+<td>
+
+[main.ts:56](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L56)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`pinElement`
+
+</td>
+<td>
+
+(`targetElement`, `symbol`, `parentElement`, `areas`?) => `Promise`\<`string` | `void`>
+
+</td>
+<td>
+
+[main.ts:57](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L57)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`pinElements`
+
+</td>
+<td>
+
+(`sectionElement`) => `Promise`\<`void`>
+
+</td>
+<td>
+
+[main.ts:58](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L58)
+
+</td>
+</tr>
+</table>
+
+#### Defined in
+
+[main.ts:55](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L55)
 
 ---
 
@@ -473,7 +462,7 @@ spacingCreate
 </td>
 <td>
 
-[main.ts:50](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L50)
+[main.ts:51](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L51)
 
 </td>
 </tr>
@@ -485,7 +474,7 @@ spacingCreate
 </td>
 <td>
 
-(`targetEl`) => `Promise`\<`void`>
+(`targetElement`) => `Promise`\<`void`>
 
 </td>
 <td>
@@ -495,7 +484,7 @@ spacingElement
 </td>
 <td>
 
-[main.ts:51](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L51)
+[main.ts:52](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L52)
 
 </td>
 </tr>
@@ -503,7 +492,7 @@ spacingElement
 
 #### Defined in
 
-[main.ts:49](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L49)
+[main.ts:50](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L50)
 
 ---
 
@@ -543,7 +532,7 @@ typographyCreate
 </td>
 <td>
 
-[main.ts:71](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L71)
+[main.ts:72](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L72)
 
 </td>
 </tr>
@@ -555,7 +544,7 @@ typographyCreate
 </td>
 <td>
 
-(`targetEl`) => `Promise`\<`void`>
+(`targetElement`) => `Promise`\<`void`>
 
 </td>
 <td>
@@ -565,7 +554,7 @@ typographyElement
 </td>
 <td>
 
-[main.ts:72](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L72)
+[main.ts:73](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L73)
 
 </td>
 </tr>
@@ -573,7 +562,7 @@ typographyElement
 
 #### Defined in
 
-[main.ts:70](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L70)
+[main.ts:71](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L71)
 
 ## Functions
 
@@ -589,7 +578,7 @@ function default(): void
 
 #### Defined in
 
-[main.ts:82](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L82)
+[main.ts:83](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L83)
 
 ---
 

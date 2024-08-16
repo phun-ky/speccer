@@ -6,14 +6,14 @@
 
 # features/typography/utils/template
 
-> Last updated 2024-08-16T09:32:06.353Z
+> Last updated 2024-08-16T20:29:35.111Z
 
 ## Functions
 
 ### template()
 
 ```ts
-function template(targetEl, useHighlighting?): Promise<string>;
+function template(targetElement, useHighlighting?): Promise<string>;
 ```
 
 Generate a HTML string for typography styles of a target element.
@@ -22,7 +22,7 @@ Generate a HTML string for typography styles of a target element.
 
 | Parameter          | Type          | Default value | Description                                                 |
 | ------------------ | ------------- | ------------- | ----------------------------------------------------------- |
-| `targetEl`         | `HTMLElement` | `undefined`   | The target element for which to generate typography styles. |
+| `targetElement`    | `HTMLElement` | `undefined`   | The target element for which to generate typography styles. |
 | `useHighlighting`? | `boolean`     | `false`       | If we should use highlighting markup                        |
 
 #### Returns

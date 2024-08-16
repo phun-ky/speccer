@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="ph" lang="en">
   <head>
-    <title>@phun-ky/speccer | dissect and align to parent</title>
+    <title>@phun-ky/speccer | pin and align to parent</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Language" content="no" />
     <meta name="robots" content="none" />
@@ -115,7 +115,7 @@
       <main class="ph main">
         <section class="ph section">
           <div class="ph container">
-            <h1 class="ph">Dissect with pin alignment to parent</h1>
+            <h1 class="ph">Pin with alignment to parent</h1>
             <p class="ph lead" style="margin-bottom: 4rem">
               Uses the `parent` feature from @phun-ky/speccer to align pins to
               their parent.
@@ -124,14 +124,14 @@
         </section>
         <section class="ph section">
           <div class="ph container">
-            <div class="ph well" data-anatomy-section>
+            <div class="ph well" data-speccer="pin-area">
               <h2 class="ph">Form</h2>
               <form class="ph">
                 <div class="ph input-group">
                   <label class="ph" for="text1">Firstname</label>
                   <input
                     data-lpignore="true"
-                    data-anatomy="outline parent right"
+                    data-speccer="pin parent right"
                     type="text"
                     id="text1"
                     class="ph"
@@ -141,7 +141,7 @@
                   <label class="ph" for="text2">Lastname</label>
                   <input
                     data-lpignore="true"
-                    data-anatomy="outline parent right"
+                    data-speccer="pin parent right"
                     type="text"
                     id="text2"
                     class="ph"
@@ -150,7 +150,7 @@
                 <div class="ph input-group">
                   <label class="ph" for="text3">Description</label>
                   <textarea
-                    data-anatomy="outline parent right"
+                    data-speccer="pin parent right"
                     id="text3"
                     class="ph"
                   ></textarea>
@@ -159,7 +159,7 @@
                   <label class="ph" for="email1">Email</label>
                   <input
                     data-lpignore="true"
-                    data-anatomy="outline parent right"
+                    data-speccer="pin parent right"
                     type="email"
                     id="email1"
                     class="ph"

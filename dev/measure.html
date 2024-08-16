@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="ph" lang="en">
   <head>
     <title>@phun-ky/speccer</title>
@@ -11,7 +11,7 @@
   </head>
   <body class="ph">
     <div
-      data-anatomy-section
+      data-speccer="pin-area"
       class="ph container"
       style="
         position: relative;
@@ -23,22 +23,22 @@
         grid-gap: 2rem 2rem;
       "
     >
-      <div data-speccer-measure="width top" class="ph box"></div>
+      <div data-speccer="measure width top" class="ph box"></div>
       <div
-        data-speccer-measure="height right"
+        data-speccer="measure height right"
         style="grid-row: span 2"
         class="ph box"
       ></div>
-      <div data-speccer-measure="width bottom" class="ph box"></div>
-      <div data-speccer-measure="height left" class="ph box"></div>
-      <div data-speccer-measure="width subtle top" class="ph box"></div>
+      <div data-speccer="measure width bottom" class="ph box"></div>
+      <div data-speccer="measure height left" class="ph box"></div>
+      <div data-speccer="measure width subtle top" class="ph box"></div>
       <div
-        data-speccer-measure="height subtle right"
+        data-speccer="measure height subtle right"
         style="grid-row: span 2"
         class="ph box"
       ></div>
-      <div data-speccer-measure="width subtle bottom" class="ph box"></div>
-      <div data-speccer-measure="height subtle left" class="ph box"></div>
+      <div data-speccer="measure width subtle bottom" class="ph box"></div>
+      <div data-speccer="measure height subtle left" class="ph box"></div>
     </div>
 
     <link async href="/speccer.css" rel="stylesheet" type="text/css" />

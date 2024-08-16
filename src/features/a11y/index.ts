@@ -1,6 +1,7 @@
 /* eslint-disable import/no-unused-modules */
 /* eslint no-console:0 */
 import { set as setClassNames, cx } from '../../utils/classnames';
+import { isElementHidden } from '../../utils/node';
 import { add } from '../../utils/styles';
 
 import {
@@ -166,20 +167,20 @@ export const shortcut = async (
  */
 export const init = () => {
   const _tab_order_elements = document.querySelectorAll(
-    '[data-speccer-a11y-tabstops]'
+    '[data-speccer*="a11y tabstops"]'
   );
   const _landmark_elements = document.querySelectorAll(
-    '[data-speccer-a11y-landmark]'
+    '[data-speccer*="a11y landmark"]'
   );
   const _shortcut_elements = document.querySelectorAll(
-    '[data-speccer-a11y-shortcut]'
+    '[data-speccer*="a11y shortcut"]'
   );
 
   if (_shortcut_elements.length) {
     for (const el of _shortcut_elements) {
       const _shortcut_string = el.getAttribute('data-speccer-a11y-shortcut');
 
-      if (!_shortcut_string || _shortcut_string === '') continue;
+      if (!_shortcut_string || _shortcut_string === '' || isElementHidden(el as HTMLElement)) continue;
 
       shortcut(el as HTMLElement, _shortcut_string);
     }
@@ -192,6 +193,8 @@ export const init = () => {
       );
 
       for (const tabstopsEl of _tabstops_els) {
+        if(isElementHidden(tabstopsEl as HTMLElement)) continue;
+
         element(tabstopsEl as HTMLElement, null, 'tabstops');
       }
     }
@@ -204,6 +207,8 @@ export const init = () => {
       );
 
       for (const [landmarkIndex, landmarkEl] of _landmark_els.entries()) {
+        if(isElementHidden(landmarkEl as HTMLElement)) continue;
+
         element(landmarkEl as HTMLElement, landmarkIndex + 1, 'landmark');
         element(landmarkEl as HTMLElement, null, 'region');
       }

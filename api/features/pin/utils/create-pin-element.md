@@ -2,45 +2,47 @@
   <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
 </div>
 
-[@phun-ky/speccer](../../../README.md) / features/dissect/utils/get-character-to-use
+[@phun-ky/speccer](../../../README.md) / features/pin/utils/create-pin-element
 
-# features/dissect/utils/get-character-to-use
+# features/pin/utils/create-pin-element
 
-> Last updated 2024-08-16T09:32:06.348Z
+> Last updated 2024-08-16T20:29:35.108Z
 
 ## Functions
 
-### getCharacterToUse()
+### createPinElement()
 
 ```ts
-function getCharacterToUse(targetIndex): string;
+function createPinElement(textContent, area, id, n): HTMLElement;
 ```
 
-Returns the character to use at the specified target index.
-If the index exceeds the available characters, it generates a new character by pairing uppercase and lowercase letters.
+Create a pin element with optional text content, area description, and element type.
 
 #### Parameters
 
-| Parameter     | Type     | Description                             |
-| ------------- | -------- | --------------------------------------- |
-| `targetIndex` | `number` | The index of the character to retrieve. |
+| Parameter     | Type     | Default value | Description                             |
+| ------------- | -------- | ------------- | --------------------------------------- |
+| `textContent` | `string` | `''`          | The text content to add to the element. |
+| `area`        | `string` | `undefined`   | The area description for styling.       |
+| `id`          | `string` | `''`          | The id of the pinned element            |
+| `n`           | `string` | `'span'`      | The element type.                       |
 
 #### Returns
 
-`string`
+`HTMLElement`
 
-The character to use at the specified index.
+- The created pin element.
 
 #### Example
 
 ```ts
-const character = getCharacterToUse(0); // Returns first character from SPECCER_LITERALS
-const nextCharacter = getCharacterToUse(25); // Returns next character or a generated pair if index exceeds literals length
+const pinElement = createPinElement('A', 'outline top', 'div');
+document.body.appendChild(pinElement);
 ```
 
 #### Defined in
 
-[features/dissect/utils/get-character-to-use.ts:18](https://github.com/phun-ky/speccer/blob/main/src/features/dissect/utils/get-character-to-use.ts#L18)
+features/pin/utils/create-pin-element.ts:25
 
 ---
 

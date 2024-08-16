@@ -49,8 +49,8 @@
  *
  * @packageDocumentation
  */
-import { element as dissectElement } from '../features/dissect';
 import { element as measureElement } from '../features/measure';
+import { pinElements } from '../features/pin';
 import { element as specElement } from '../features/spacing';
 import { SpeccerFunctionType } from '../types/speccer';
 import { activate as resizeActivate } from '../utils/resize';
@@ -95,7 +95,7 @@ export const lazy = (): void => {
   });
 
   for (const el of document.querySelectorAll(
-    '[data-speccer],[data-speccer] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)'
+    '[data-speccer*="spacing"],[data-speccer*="spacing"] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)'
   )) {
     _spec_observer.observe(el);
   }
@@ -109,20 +109,20 @@ export const lazy = (): void => {
     }
   });
 
-  for (const el of document.querySelectorAll('[data-speccer-measure]')) {
+  for (const el of document.querySelectorAll('[data-speccer*="measure"]')) {
     _measure_observer.observe(el);
   }
 
   const _dissect_observer = new IntersectionObserver(async (els, observer) => {
     for (const el of els) {
       if (el.intersectionRatio > 0) {
-        await dissectElement(el.target as HTMLElement);
+        await pinElements(el.target as HTMLElement);
         observer.unobserve(el.target);
       }
     }
   });
 
-  for (const el of document.querySelectorAll('[data-anatomy-section]')) {
+  for (const el of document.querySelectorAll('[data-speccer="pin-area"]')) {
     _dissect_observer.observe(el);
   }
 };

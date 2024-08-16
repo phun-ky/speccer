@@ -1,6 +1,8 @@
 /* eslint no-console:0 */
+import { isValidTypographyElement, useSyntaxHighlighting } from '../../utils/area';
 import { set as setClassNames, cx } from '../../utils/classnames';
-import { add as addStyles, get as getStyles } from '../../utils/styles';
+import { isElementHidden } from '../../utils/node';
+import { add as addStyles } from '../../utils/styles';
 
 import { position } from './utils/position';
 import { template } from './utils/template';
@@ -44,7 +46,7 @@ export const create = (html: string, area: string | null): HTMLElement => {
  *
  * ![typography](https://github.com/phun-ky/speccer/blob/main/public/typography.png?raw=true)
  *
- * @param {HTMLElement} targetEl - The target element to specc typography for.
+ * @param {HTMLElement} targetElement - The target element to specc typography for.
  * @returns {Promise<void>} - A promise that resolves once typography element is created and positioned.
  *
  * @example
@@ -55,29 +57,30 @@ export const create = (html: string, area: string | null): HTMLElement => {
  * }
  * ```
  */
-export const element = async (targetEl: HTMLElement): Promise<void> => {
-  if (!targetEl) return;
+export const element = async (targetElement: HTMLElement): Promise<void> => {
+  if (!targetElement) return;
 
-  const _area: string | null = targetEl.getAttribute('data-speccer-typography');
-  const _target_styles = await getStyles(targetEl);
+  const _areas_string: string | null = targetElement.getAttribute(
+    'data-speccer'
+  );
+
+  if (!isValidTypographyElement(_areas_string)) return;
 
   if (
-    _target_styles.display === 'none' ||
-    _target_styles.opacity === '0' ||
-    _target_styles.visibility === 'hidden'
+    isElementHidden(targetElement)
   )
     return;
 
-  const _use_highlighting = _area?.includes('syntax');
+  const _use_highlighting = useSyntaxHighlighting(_areas_string);
 
-  targetEl.classList.add('is-specced');
+  targetElement.classList.add('is-specced');
 
-  const _html = await template(targetEl, _use_highlighting);
-  const _speccer_el = create(_html, _area);
+  const _html = await template(targetElement, _use_highlighting);
+  const _speccer_el = create(_html, _areas_string);
 
   document.body.appendChild(_speccer_el);
 
-  const _position = await position(_area, targetEl, _speccer_el);
+  const _position = await position(_areas_string, targetElement, _speccer_el);
 
   addStyles(_speccer_el, _position);
 };

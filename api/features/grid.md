@@ -6,7 +6,7 @@
 
 # features/grid
 
-> Last updated 2024-08-16T09:32:06.349Z
+> Last updated 2024-08-16T20:29:35.107Z
 
 ## Functions
 
@@ -44,7 +44,7 @@ if (targetElement) {
 
 #### Defined in
 
-[features/grid/index.ts:24](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L24)
+[features/grid/index.ts:25](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L25)
 
 ---
 
@@ -85,7 +85,7 @@ if (targetElement) {
 
 #### Defined in
 
-[features/grid/index.ts:96](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L96)
+[features/grid/index.ts:97](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L97)
 
 ---
 

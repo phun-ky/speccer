@@ -4,7 +4,7 @@ import { get as getStyles } from '../../../utils/styles';
 /**
  * Generate a HTML string for typography styles of a target element.
  *
- * @param {HTMLElement} targetEl - The target element for which to generate typography styles.
+ * @param {HTMLElement} targetElement - The target element for which to generate typography styles.
  * @param {boolean} [useHighlighting=false] - If we should use highlighting markup
  * @returns {Promise<string>} - A promise that resolves with the HTML string.
  *
@@ -16,10 +16,10 @@ import { get as getStyles } from '../../../utils/styles';
  * ```
  */
 export const template = async (
-  targetEl: HTMLElement,
+  targetElement: HTMLElement,
   useHighlighting = false
 ): Promise<string> => {
-  const _target_styles = await getStyles(targetEl);
+  const _target_styles = await getStyles(targetElement);
   const _styles = getTypography(_target_styles);
 
   if (useHighlighting) {

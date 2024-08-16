@@ -1,9 +1,9 @@
-import { DissectAreaEnum, MeasureAreaEnum } from '../types/enums/area';
+import { PinAreaEnum, MeasureAreaEnum, TypographyAreaEnum, SpacingAreaEnum, MarkAreaEnum, GridAreaEnum } from '../types/enums/area';
 
 /**
  * Splits a string containing areas into an array of strings.
  *
- * @param areaString - The string containing areas.
+ * @param {string} areaString - The string containing areas.
  * @returns An array of area strings.
  *
  * @example
@@ -18,106 +18,124 @@ export const getAreasFromString = (areaString: string): string[] =>
 /**
  * Checks if 'left' area is present in the provided areaString.
  *
- * @param areaString - The string containing areas.
- * @returns `true` if 'left' is present, otherwise `false`.
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if 'left' is present, otherwise `false`.
  */
-export const isLeftArea = (areaString: string): boolean => {
+export const isLeftArea = (areaString: string|null): boolean => {
+  if(areaString === null) return false;
+
   const areas = getAreasFromString(areaString);
 
-  return areas.includes(DissectAreaEnum.Left);
+  return areas.includes(PinAreaEnum.Left);
 };
 
 /**
  * Checks if 'right' area is present in the provided areaString.
  *
- * @param areaString - The string containing areas.
- * @returns `true` if 'right' is present, otherwise `false`.
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if 'right' is present, otherwise `false`.
  */
-export const isRightArea = (areaString: string): boolean => {
+export const isRightArea = (areaString: string|null): boolean => {
+  if(areaString === null) return false;
+
   const areas = getAreasFromString(areaString);
 
-  return areas.includes(DissectAreaEnum.Right);
+  return areas.includes(PinAreaEnum.Right);
 };
 
 /**
  * Checks if 'top' area is present in the provided areaString.
  *
- * @param areaString - The string containing areas.
- * @returns `true` if 'top' is present, otherwise `false`.
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if 'top' is present, otherwise `false`.
  */
-export const isTopArea = (areaString: string): boolean => {
+export const isTopArea = (areaString: string|null): boolean => {
+  if(areaString === null) return false;
+
   const areas = getAreasFromString(areaString);
 
-  return areas.includes(DissectAreaEnum.Top);
+  return areas.includes(PinAreaEnum.Top);
 };
 
 /**
  * Checks if 'bottom' area is present in the provided areaString.
  *
- * @param areaString - The string containing areas.
- * @returns `true` if 'bottom' is present, otherwise `false`.
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if 'bottom' is present, otherwise `false`.
  */
-export const isBottomArea = (areaString: string): boolean => {
+export const isBottomArea = (areaString: string|null): boolean => {
+  if(areaString === null) return false;
+
   const areas = getAreasFromString(areaString);
 
-  return areas.includes(DissectAreaEnum.Bottom);
+  return areas.includes(PinAreaEnum.Bottom);
 };
 
 /**
- * Checks if 'full' area is present in the provided areaString.
+ * Checks if 'bracket' area is present in the provided areaString.
  *
- * @param areaString - The string containing areas.
- * @returns `true` if 'full' is present, otherwise `false`.
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if 'bracket' is present, otherwise `false`.
  */
-export const isFullArea = (areaString: string): boolean => {
+export const isBracketArea = (areaString: string|null): boolean => {
+  if(areaString === null) return false;
+
   const areas = getAreasFromString(areaString);
 
-  return areas.includes(DissectAreaEnum.Full);
+  return areas.includes(PinAreaEnum.Bracket);
 };
 
 /**
  * Checks if 'enclose' area is present in the provided areaString.
  *
- * @param areaString - The string containing areas.
- * @returns `true` if 'enclose' is present, otherwise `false`.
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if 'enclose' is present, otherwise `false`.
  */
-export const isEncloseArea = (areaString: string): boolean => {
+export const isEncloseArea = (areaString: string|null): boolean => {
+  if(areaString === null) return false;
+
   const areas = getAreasFromString(areaString);
 
-  return areas.includes(DissectAreaEnum.Enclose);
+  return areas.includes(PinAreaEnum.Enclose);
 };
 
 /**
  * Checks if 'subtle' area is present in the provided areaString.
  *
- * @param areaString - The string containing areas.
- * @returns `true` if 'subtle' is present, otherwise `false`.
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if 'subtle' is present, otherwise `false`.
  */
-export const isSubtle = (areaString: string): boolean => {
+export const isSubtle = (areaString: string|null): boolean => {
+  if(areaString === null) return false;
+
   const areas = getAreasFromString(areaString);
 
-  return areas.includes(DissectAreaEnum.Subtle);
+  return areas.includes(PinAreaEnum.Subtle);
 };
 
 /**
  * Checks if 'parent' area is present in the provided areaString.
  *
- * @param areaString - The string containing areas.
- * @returns `true` if 'parent' is present, otherwise `false`.
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if 'parent' is present, otherwise `false`.
  */
-export const isParentArea = (areaString: string): boolean => {
+export const isParentArea = (areaString: string|null): boolean => {
+  if(areaString === null) return false;
+
   const areas = getAreasFromString(areaString);
 
-  return areas.includes(DissectAreaEnum.Parent);
+  return areas.includes(PinAreaEnum.Parent);
 };
 
 /**
  * Checks if 'height' area is present in the provided areaString.
  *
- * @param areaString - The string containing areas.
- * @returns `true` if 'height' is present, otherwise `false`.
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if 'height' is present, otherwise `false`.
  */
-export const isHeightArea = (areaString: string): boolean => {
+export const isHeightArea = (areaString: string|null): boolean => {
+  if(areaString === null) return false;
+
   const areas = getAreasFromString(areaString);
 
   return areas.includes(MeasureAreaEnum.Height);
@@ -126,10 +144,12 @@ export const isHeightArea = (areaString: string): boolean => {
 /**
  * Checks if 'width' area is present in the provided areaString.
  *
- * @param areaString - The string containing areas.
- * @returns `true` if 'width' is present, otherwise `false`.
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if 'width' is present, otherwise `false`.
  */
-export const isWidthArea = (areaString: string): boolean => {
+export const isWidthArea = (areaString: string|null): boolean => {
+  if(areaString === null) return false;
+
   const areas = getAreasFromString(areaString);
 
   return areas.includes(MeasureAreaEnum.Width);
@@ -138,18 +158,95 @@ export const isWidthArea = (areaString: string): boolean => {
 /**
  * Checks if the provided areaString contains SVG-related areas.
  *
- * @param areaString - The string containing areas.
- * @returns `true` if any SVG-related area is present, otherwise `false`.
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if any SVG-related area is present, otherwise `false`.
  */
-export const useSVG = (areaString: string): boolean =>
-  areaString.includes(DissectAreaEnum.SVG);
+export const useSVG = (areaString: string|null): boolean =>{
+  if(areaString === null) return false;
+
+  const areas = getAreasFromString(areaString);
+
+  return areas.includes(PinAreaEnum.SVG);
+};
 
 /**
- * Checks if the provided areaString contains 'curly' and 'full' areas.
+ * Checks if the provided areaString contains 'curly' and 'bracket' areas.
  *
- * @param areaString - The string containing areas.
- * @returns `true` if both 'curly' and 'full' are present, otherwise `false`.
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if both 'curly' and 'bracket' are present, otherwise `false`.
  */
-export const isCurly = (areaString: string): boolean =>
-  areaString.includes(DissectAreaEnum.Curly) &&
-  areaString.includes(DissectAreaEnum.Full);
+export const isCurly = (areaString: string|null): boolean =>{
+  if(areaString === null) return false;
+
+  const areas = getAreasFromString(areaString);
+
+  return   areas.includes(PinAreaEnum.Curly) &&
+  areas.includes(PinAreaEnum.Bracket);
+};
+
+/**
+ * Checks if the provided areaString contains 'typography'.
+ *
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if 'typography' are present, otherwise `false`.
+ */
+export const isValidTypographyElement = (areaString: string|null): boolean =>
+  areaString !== null && areaString.split(' ').includes(TypographyAreaEnum.Typography);
+
+/**
+ * Checks if the provided areaString contains 'spacing'.
+ *
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if 'spacing' are present, otherwise `false`.
+ */
+export const isValidSpacingElement = (areaString: string|null): boolean =>
+  areaString !== null && areaString.split(' ').includes(SpacingAreaEnum.Spacing);
+
+/**
+ * Checks if the provided areaString contains 'measure'.
+ *
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if 'measure' are present, otherwise `false`.
+ */
+export const isValidMeasureElement = (areaString: string|null): boolean =>
+  areaString !== null && areaString.split(' ').includes(MeasureAreaEnum.Measure);
+
+/**
+ * Checks if the provided areaString contains 'pin'.
+ *
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if 'pin' are present, otherwise `false`.
+ */
+export const isValidPinElement = (areaString: string|null): boolean =>
+  areaString !== null && areaString.split(' ').includes(PinAreaEnum.Pin);
+
+/**
+ * Checks if the provided areaString contains 'mark'.
+ *
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if 'mark' are present, otherwise `false`.
+ */
+export const isValidMarkElement = (areaString: string|null): boolean =>
+  areaString !== null && areaString.split(' ').includes(MarkAreaEnum.Mark);
+
+/**
+ * Checks if the provided areaString contains 'grid'.
+ *
+ * @param {string|null} areaString - The string containing areas.
+ * @param {CSSStyleDeclaration} areaString - The string containing areas.
+ * @returns boolean `true` if 'grid' are present, otherwise `false`.
+ */
+export const isValidGridElement = (areaString: string|null, styles: CSSStyleDeclaration): boolean =>
+  areaString !== null && areaString.split(' ').includes(GridAreaEnum.Grid) && (styles.display === 'grid' || styles.display.includes('grid'));
+
+/**
+ * Checks if the provided areaString contains 'syntax'.
+ *
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if both 'syntax' are present, otherwise `false`.
+ */
+export const useSyntaxHighlighting = (areaString: string|null): boolean => {
+  if(areaString) return areaString.split(' ').includes(TypographyAreaEnum.Syntax);
+
+  return false;
+};

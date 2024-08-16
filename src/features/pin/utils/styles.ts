@@ -1,9 +1,9 @@
-import { DissectStylesOptionsType } from '../../../types/bezier';
+import { PinStylesOptionsType } from '../../../types/bezier';
 import { SpeccerStylesReturnType } from '../../../types/styles';
 import {
   isBottomArea,
   isEncloseArea,
-  isFullArea,
+  isBracketArea,
   isLeftArea,
   isParentArea,
   isRightArea,
@@ -14,13 +14,13 @@ import { getRec } from '../../../utils/position';
 import { waitForFrame } from '../../../utils/wait';
 
 /**
- * Get styles for dissected elements based on the specified area and options.
+ * Get styles for pin elements based on the specified area and options.
  *
  * @param {string} area - The area description.
- * @param {HTMLElement} targetEl - The target element.
- * @param {HTMLElement} dissectionEl - The dissection element.
+ * @param {HTMLElement} targetElement - The target element.
+ * @param {HTMLElement} pinElement - The pin element.
  * @param {HTMLElement} parentElement - The parent element.
- * @param {DissectStylesOptionsType} options - Optional styles options.
+ * @param {PinStylesOptionsType} options - Optional styles options.
  * @returns {Promise<SpeccerStylesReturnType>} - The computed styles.
  *
  * @example
@@ -28,25 +28,25 @@ import { waitForFrame } from '../../../utils/wait';
  * const area = 'top-left';
  * const targetElement = document.getElementById('target');
  * const parentElement = document.getElementById('parent');
- * const dissectionElement = document.getElementById('dissection');
+ * const pinElement = document.getElementById('pin');
  * const options = { isCurly: true };
- * const styles = await styles(area, targetElement, dissectionElement, parentElement, options);
+ * const styles = await styles(area, targetElement, pinElement, parentElement, options);
  * console.log(styles);
  * ```
  */
 export const styles = async (
   area: string,
-  targetEl: HTMLElement,
-  dissectionEl: HTMLElement,
+  targetElement: HTMLElement,
+  pinElement: HTMLElement,
   parentElement: HTMLElement,
-  options?: DissectStylesOptionsType
+  options?: PinStylesOptionsType
 ): Promise<SpeccerStylesReturnType> => {
   await waitForFrame();
 
   const { isCurly = false } = options || {};
-  const SPECCER_PIN_SPACE = pinSpace(dissectionEl);
-  const SPECCER_MEASURE_SIZE = measureSize(dissectionEl);
-  const _positional_styles = await getRec(dissectionEl, targetEl);
+  const SPECCER_PIN_SPACE = pinSpace(pinElement);
+  const SPECCER_MEASURE_SIZE = measureSize(pinElement);
+  const _positional_styles = await getRec(pinElement, targetElement);
 
   if (isEncloseArea(area)) {
     const { left, top, height, width } = _positional_styles.absolute();
@@ -59,7 +59,7 @@ export const styles = async (
     };
   }
 
-  if (isParentArea(area) && !isFullArea(area) && !isCurly && !isSubtle(area)) {
+  if (isParentArea(area) && !isBracketArea(area) && !isCurly && !isSubtle(area)) {
     if (isRightArea(area)) {
       const { top } = _positional_styles.fromRight({
         center: true
@@ -120,7 +120,7 @@ export const styles = async (
   }
 
   if (isLeftArea(area)) {
-    if (isFullArea(area) && !isCurly) {
+    if (isBracketArea(area) && !isCurly) {
       const { left, top, height } = _positional_styles.fromLeft({
         sourceWidth: SPECCER_MEASURE_SIZE
       });
@@ -144,7 +144,7 @@ export const styles = async (
   }
 
   if (isRightArea(area)) {
-    if (isFullArea(area) && !isCurly) {
+    if (isBracketArea(area) && !isCurly) {
       const { left, top, height } = _positional_styles.fromRight({
         center: false
       });
@@ -168,7 +168,7 @@ export const styles = async (
   }
 
   if (isBottomArea(area)) {
-    if (isFullArea(area) && !isCurly) {
+    if (isBracketArea(area) && !isCurly) {
       const { left, top, width } = _positional_styles.fromBottom({
         center: false
       });
@@ -191,7 +191,7 @@ export const styles = async (
     };
   }
 
-  if (isFullArea(area) && !isCurly) {
+  if (isBracketArea(area) && !isCurly) {
     const { left, top, width } = _positional_styles.fromTop({
       center: false
     });
