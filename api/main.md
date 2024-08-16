@@ -6,7 +6,7 @@
 
 # main
 
-> Last updated 2024-08-15T08:03:55.974Z
+> Last updated 2024-08-16T09:32:06.353Z
 
 ## Table of Contents
 
@@ -158,7 +158,7 @@ const grid: {
 </td>
 <td>
 
-(`targetElement`, `styles`) => `HTMLDivElement`
+(`targetElement`, `styles`) => `Promise`\<`HTMLDivElement`>
 
 </td>
 <td>
