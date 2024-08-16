@@ -4,7 +4,13 @@
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](http://makeapullrequest.com) [![SemVer 2.0](https://img.shields.io/badge/SemVer-2.0-green.svg)](http://semver.org/spec/v2.0.0.html) ![npm version](https://img.shields.io/npm/v/@phun-ky/speccer) ![issues](https://img.shields.io/github/issues/phun-ky/speccer) ![license](https://img.shields.io/npm/l/@phun-ky/speccer) ![size](https://img.shields.io/bundlephobia/min/@phun-ky/speccer) ![npm](https://img.shields.io/npm/dm/%40phun-ky/speccer) ![GitHub Repo stars](https://img.shields.io/github/stars/phun-ky/speccer) [![codecov](https://codecov.io/gh/phun-ky/speccer/graph/badge.svg?token=VA91DL7ZLZ)](https://codecov.io/gh/phun-ky/speccer) [![build](https://github.com/phun-ky/speccer/actions/workflows/check.yml/badge.svg)](https://github.com/phun-ky/speccer/actions/workflows/check.yml)
 
+## About
+
 ![Image of speccer](./public/speccer.png)
+
+**SPECCER** was originally created to simplify documenting components in a design system, but it can be used to highlight any HTML element on a webpage. If you need to draw attention to elements, **SPECCER** is your tool!
+
+## Table of Contents<!-- omit from toc -->
 
 - [@phun-ky/speccer](#phun-kyspeccer)
   - [About](#about)
@@ -38,10 +44,6 @@
   - [Customization](#customization)
   - [Contributing](#contributing)
   - [Sponsor me](#sponsor-me)
-
-## About
-
-**SPECCER** was originally created to simplify documenting components in a design system, but it can be used to highlight any HTML element on a webpage. If you need to draw attention to elements, **SPECCER** is your tool!
 
 ## Installation
 
