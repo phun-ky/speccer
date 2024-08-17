@@ -6,7 +6,7 @@
 
 # features/pin/utils/create-pin-element
 
-> Last updated 2024-08-16T20:29:35.108Z
+> Last updated 2024-08-17T05:45:48.741Z
 
 ## Functions
 
@@ -42,7 +42,7 @@ document.body.appendChild(pinElement);
 
 #### Defined in
 
-features/pin/utils/create-pin-element.ts:25
+[features/pin/utils/create-pin-element.ts:25](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/create-pin-element.ts#L25)
 
 ---
 

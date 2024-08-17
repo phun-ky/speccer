@@ -6,7 +6,7 @@
 
 # features/pin/utils/pin-element
 
-> Last updated 2024-08-16T20:29:35.109Z
+> Last updated 2024-08-17T05:45:48.742Z
 
 ## Functions
 
@@ -53,7 +53,7 @@ pinElement(targetElement, symbol).then(() => {
 
 #### Defined in
 
-features/pin/utils/pin-element.ts:41
+[features/pin/utils/pin-element.ts:41](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/pin-element.ts#L41)
 
 ---
 
