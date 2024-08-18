@@ -19,10 +19,10 @@
   - [Usage](#usage)
     - [Typescript](#typescript)
     - [ESM](#esm)
+      - [Lazy loading](#lazy-loading)
     - [Script](#script)
+      - [Advanced usage](#advanced-usage)
     - [React](#react)
-  - [Advanced usage](#advanced-usage)
-    - [Lazy](#lazy)
   - [Features](#features)
     - [Element spacing](#element-spacing)
     - [Element dimensions](#element-dimensions)
@@ -75,86 +75,7 @@ import speccer from '@phun-ky/speccer';
 speccer();
 ```
 
-### Script
-
-Or place these `script` and `link` tags in your web page:
-
-```html
-<link rel="stylesheet" href="../path/to/speccer.min.css" />
-<script src="../path/to/speccer.js"></script>
-```
-
-Or with a CDN:
-
-```html
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/@phun-ky/speccer/dist/speccer.min.css"
-/>
-<script src="https://unpkg.com/@phun-ky/speccer/dist/speccer.js"></script>
-```
-
-And then follow the steps below to display the specifications you want :)
-
-### React
-
-If you use React, you can use an effect like this:
-
-```javascript
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
-
-import debounce from './lib/debounce';
-import '@phun-ky/speccer/dist/speccer.min.css';
-
-const Component = () => {
-  let speccerEventFunc;
-
-  useEffect(async () => {
-    const { default: speccer } = await import('@phun-ky/speccer');
-
-    speccer();
-
-    speccerEventFunc = debounce(function () {
-      speccer();
-    }, 300);
-
-    window.addEventListener('resize', speccerEventFunc);
-    return () => {
-      window.removeEventListener('resize', speccerEventFunc);
-    };
-  }, []);
-
-  return <div />;
-};
-
-export default Component;
-```
-
-## Advanced usage
-
-If you want to control speccer a bit more, you have some options. Apply one of these attributes to the script element for different types of initialization:
-
-```html
-<script src="../speccer.js" data-<manual|instant|dom|lazy></script>
-```
-
-Or with a CDN:
-
-```html
-<script src="https://unpkg.com/@phun-ky/speccer/dist/speccer.js" data-<manual|instant|dom|lazy></script>
-```
-
-| Tag            | Description                                                         |
-| -------------- | ------------------------------------------------------------------- |
-| `data-manual`  | Makes `window.speccer()` available to be used when you feel like it |
-| `data-instant` | fires off `speccer()` right away                                    |
-| `data-dom`     | Waits for `DOMContentLoaded`                                        |
-| `data-lazy`    | Lazy loads `speccer()` per specced element                          |
-
-If no attribute is applied, it will default to `data-dom`, as in, it will initialize when `DOMContentLoaded` is fired.
-
-### Lazy
+#### Lazy loading
 
 If you're importing speccer instead of with a script tag, [you can use the following approach](https://codepen.io/phun-ky/pen/VwRRLyY) to apply lazy loading:
 
@@ -191,6 +112,85 @@ const observeElement = (el: Element): void => {
 document.querySelectorAll('[data-speccer="pin-area"]').forEach((el) => {
   observeElement(el);
 });
+```
+
+### Script
+
+Or place these `script` and `link` tags in your web page:
+
+```html
+<link rel="stylesheet" href="../path/to/speccer.min.css" />
+<script src="../path/to/speccer.js"></script>
+```
+
+Or with a CDN:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@phun-ky/speccer/dist/speccer.min.css"
+/>
+<script src="https://unpkg.com/@phun-ky/speccer/dist/speccer.js"></script>
+```
+
+And then follow the steps below to display the specifications you want :)
+
+#### Advanced usage
+
+If you want to control speccer a bit more, you have some options. Apply one of these attributes to the script element for different types of initialization:
+
+```html
+<script src="../speccer.js" data-<manual|instant|dom|lazy></script>
+```
+
+Or with a CDN:
+
+```html
+<script src="https://unpkg.com/@phun-ky/speccer/dist/speccer.js" data-<manual|instant|dom|lazy></script>
+```
+
+| Tag            | Description                                                         |
+| -------------- | ------------------------------------------------------------------- |
+| `data-manual`  | Makes `window.speccer()` available to be used when you feel like it |
+| `data-instant` | fires off `speccer()` right away                                    |
+| `data-dom`     | Waits for `DOMContentLoaded`                                        |
+| `data-lazy`    | Lazy loads `speccer()` per specced element                          |
+
+If no attribute is applied, it will default to `data-dom`, as in, it will initialize when `DOMContentLoaded` is fired.
+
+### React
+
+If you use React, you can use an effect like this:
+
+```javascript
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+
+import debounce from './lib/debounce';
+import '@phun-ky/speccer/dist/speccer.min.css';
+
+const Component = () => {
+  let speccerEventFunc;
+
+  useEffect(async () => {
+    const { default: speccer } = await import('@phun-ky/speccer');
+
+    speccer();
+
+    speccerEventFunc = debounce(function () {
+      speccer();
+    }, 300);
+
+    window.addEventListener('resize', speccerEventFunc);
+    return () => {
+      window.removeEventListener('resize', speccerEventFunc);
+    };
+  }, []);
+
+  return <div />;
+};
+
+export default Component;
 ```
 
 ## Features
