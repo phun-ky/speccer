@@ -15,7 +15,6 @@
 - [@phun-ky/speccer](#phun-kyspeccer)
   - [About](#about)
   - [Installation](#installation)
-  - [API](#api)
   - [Usage](#usage)
     - [Typescript](#typescript)
     - [ESM](#esm)
@@ -41,8 +40,13 @@
       - [Tab stops](#tab-stops)
       - [Landmarks and regions](#landmarks-and-regions)
       - [Keys and shortcut](#keys-and-shortcut)
-  - [Customization](#customization)
+    - [Customization](#customization)
+  - [API](#api)
+  - [Development](#development)
   - [Contributing](#contributing)
+  - [License](#license)
+  - [Changelog](#changelog)
+  - [FAQ](#faq)
   - [Sponsor me](#sponsor-me)
 
 ## Installation
@@ -52,10 +56,6 @@ npm i --save @phun-ky/speccer
 ```
 
 [See a live demo](https://codepen.io/phun-ky/pen/OJejexN).
-
-## API
-
-Full API documentation is available [here](https://github.com/phun-ky/speccer/blob/main/api/README.md).
 
 ## Usage
 
@@ -470,7 +470,7 @@ If you want to display the shortcut with keys used for elements, use `data-specc
 </button>
 ```
 
-## Customization
+### Customization
 
 ![Screenshot of speccer in a dark mode example](./public/darkmode.png)
 
@@ -535,9 +535,36 @@ Allthough the styling works nicely with dark mode, you can use the provided CSS 
 }
 ```
 
+## API
+
+Full API documentation is available [here](https://github.com/phun-ky/speccer/blob/main/api/README.md).
+
+## Development
+
+```
+// Build
+$ npm run build
+// Run dev
+$ npm run dev
+// Test
+$ npm test
+```
+
 ## Contributing
 
 Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/phun-ky/speccer/blob/main/LICENSE) file for details.
+
+## Changelog
+
+See the [CHANGELOG.md](<[link-to-changelog.md](https://github.com/phun-ky/speccer/blob/main/CHANGELOG.md)>) for details on the latest updates.
+
+## FAQ
+
+See the [discussions](https://github.com/phun-ky/speccer/discussions/categories/q-a) for an FAQ or to ask questions if no answer is given.
 
 ## Sponsor me
 
