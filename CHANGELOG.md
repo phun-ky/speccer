@@ -1,5 +1,45 @@
 # Changelog
 
+## [10.0.0](https://github.com/phun-ky/speccer/compare/v9.6.2...v10.0.0) (2024-08-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* 🧨 The API has changed! Please refer to the `README.md` and api
+documentation for this! You should migrate easily to the current version
+by search and replace.
+* 🧨 Placements of the stylus files has now changed!
+* The names of some CSS Variables have been changed. Please update your styling and overrides to reflect this!
+
+### Tasks
+
+* 🤖 Regenerate documentation ([6b04256](https://github.com/phun-ky/speccer/commit/6b04256f95b25d305fc348072d66df226129b2d3))
+* 🤖 Remove `cobertura.xml`, I don't know why it's there ([a432f25](https://github.com/phun-ky/speccer/commit/a432f25bf112116bfbd077745befd73c4fecf40f))
+* 🤖 Update new css variable references ([7eeb0e4](https://github.com/phun-ky/speccer/commit/7eeb0e48a529eaf4e9a67514d16d27e35835a7fb))
+
+
+### Documentation
+
+* ✏️ Add notes about donation for current causes ([34aeb83](https://github.com/phun-ky/speccer/commit/34aeb8330b54d8ad228d10bf9fdeefb58ed51621))
+* ✏️ Fix changelog link in `README.md` ([6cb956b](https://github.com/phun-ky/speccer/commit/6cb956ba2f9859d9817576d57315658b62da86e4))
+* ✏️ Improve `README.md` ([bfac2e5](https://github.com/phun-ky/speccer/commit/bfac2e521d6465b490f8282f4dd2d7cb4b678f19))
+* ✏️ Rearrange some chapters in `README.md` ([5385fb8](https://github.com/phun-ky/speccer/commit/5385fb8c42332eeb0c36ba47e81e0f18dad80900))
+* ✏️ Rearrange start of `README.md` ([b5c07c3](https://github.com/phun-ky/speccer/commit/b5c07c329a35a2c2ea9a231cb87a595cd2614d9b))
+* ✏️ Update `SECURITY.md` ([3b8361e](https://github.com/phun-ky/speccer/commit/3b8361efc360b3ad572d05605cfc7277fcdc488e))
+
+
+### Bug
+
+* 🐛 Use correct left and top position for measure ([87b120a](https://github.com/phun-ky/speccer/commit/87b120a3340386e2a8ca160938a0540e40fa11f3))
+* 🐛 Use css variable with base color fallback for svg els ([38d1bea](https://github.com/phun-ky/speccer/commit/38d1bead5517fe54f4b28a1688a506f7f4445751))
+
+
+### Refactoring
+
+* 💡 Move styles to respective feature, and split out ([ac72215](https://github.com/phun-ky/speccer/commit/ac722150fe15b32529f32300643df22542823468))
+* 💡 Rename files and functions to better reflect what ([7e19c66](https://github.com/phun-ky/speccer/commit/7e19c66bb7e05c1f967374f1d4cb3ceb0270b2ae)), closes [#225](https://github.com/phun-ky/speccer/issues/225)
+* 💡 Untangle some styles, split out some files ([642ce54](https://github.com/phun-ky/speccer/commit/642ce5445898af78822da8c1c3a41de9d81ec5e5)), closes [#29](https://github.com/phun-ky/speccer/issues/29)
+
 ## [9.6.2](https://github.com/phun-ky/speccer/compare/v9.6.1...v9.6.2) (2024-08-16)
 
 
