@@ -26,11 +26,7 @@ import {
   create as measureCreate,
   element as measureElement
 } from './features/measure';
-import {
-  createPinElement,
-  pinElement,
-  pinElements
-} from './features/pin';
+import { createPinElement, pinElement, pinElements } from './features/pin';
 import {
   create as spacingCreate,
   element as spacingElement
@@ -39,7 +35,15 @@ import {
   create as typographyCreate,
   element as typographyElement
 } from './features/typography';
-import { SPECCER_DATA_ATTRIBUTE, SPECCER_FEATURE_GRID, SPECCER_FEATURE_MARK, SPECCER_FEATURE_MEASURE, SPECCER_FEATURE_PIN_AREA, SPECCER_FEATURE_SPACING, SPECCER_FEATURE_TYPOGRAPHY } from './utils/constants';
+import {
+  SPECCER_DATA_ATTRIBUTE,
+  SPECCER_FEATURE_GRID,
+  SPECCER_FEATURE_MARK,
+  SPECCER_FEATURE_MEASURE,
+  SPECCER_FEATURE_PIN_AREA,
+  SPECCER_FEATURE_SPACING,
+  SPECCER_FEATURE_TYPOGRAPHY
+} from './utils/constants';
 import { removeAll } from './utils/node';
 
 export const grid = {
@@ -86,13 +90,21 @@ const speccer = () => {
   const spacingElements = document.querySelectorAll(
     `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"],[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)`
   );
-  const measureElements = document.querySelectorAll(`[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_MEASURE}"]`);
+  const measureElements = document.querySelectorAll(
+    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_MEASURE}"]`
+  );
   const typographyElements = document.querySelectorAll(
     `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_TYPOGRAPHY}"]`
   );
-  const pinSectionElements = document.querySelectorAll(`[${SPECCER_DATA_ATTRIBUTE}="${SPECCER_FEATURE_PIN_AREA}"]`);
-  const markElements = document.querySelectorAll(`[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_MARK}"]`);
-  const gridElements = document.querySelectorAll(`[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_GRID}"]`);
+  const pinSectionElements = document.querySelectorAll(
+    `[${SPECCER_DATA_ATTRIBUTE}="${SPECCER_FEATURE_PIN_AREA}"]`
+  );
+  const markElements = document.querySelectorAll(
+    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_MARK}"]`
+  );
+  const gridElements = document.querySelectorAll(
+    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_GRID}"]`
+  );
 
   for (const el of markElements) {
     markElement(el as HTMLElement);

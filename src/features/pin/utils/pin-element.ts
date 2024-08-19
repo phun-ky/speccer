@@ -46,12 +46,10 @@ export const pinElement = async (
 ): Promise<string | void> => {
   if (!targetElement) return;
 
-  const _areas_string: string = targetElement.getAttribute('data-speccer') || areas;
+  const _areas_string: string =
+    targetElement.getAttribute('data-speccer') || areas;
 
-  if (
-    !isValidPinElement(_areas_string)
-  )
-    return;
+  if (!isValidPinElement(_areas_string)) return;
 
   const _pin_element_id = `speccer-${camelCase(_areas_string)}-${targetElement.getAttribute('id') || uniqueID()}`;
   const _pin_element = createPinElement(symbol, _areas_string, _pin_element_id);
