@@ -1,5 +1,12 @@
 # Changelog
 
+## [10.0.2](https://github.com/phun-ky/speccer/compare/v10.0.1...v10.0.2) (2024-08-19)
+
+
+### Documentation
+
+* ✏️ Update `README.md` ([0ef4046](https://github.com/phun-ky/speccer/commit/0ef4046d2efaa0be99e280cfa8ae7a66d06258da))
+
 ## [10.0.1](https://github.com/phun-ky/speccer/compare/v10.0.0...v10.0.1) (2024-08-19)
 
 
