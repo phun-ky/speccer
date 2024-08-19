@@ -180,7 +180,12 @@ export const init = () => {
     for (const el of _shortcut_elements) {
       const _shortcut_string = el.getAttribute('data-speccer-a11y-shortcut');
 
-      if (!_shortcut_string || _shortcut_string === '' || isElementHidden(el as HTMLElement)) continue;
+      if (
+        !_shortcut_string ||
+        _shortcut_string === '' ||
+        isElementHidden(el as HTMLElement)
+      )
+        continue;
 
       shortcut(el as HTMLElement, _shortcut_string);
     }
@@ -193,7 +198,7 @@ export const init = () => {
       );
 
       for (const tabstopsEl of _tabstops_els) {
-        if(isElementHidden(tabstopsEl as HTMLElement)) continue;
+        if (isElementHidden(tabstopsEl as HTMLElement)) continue;
 
         element(tabstopsEl as HTMLElement, null, 'tabstops');
       }
@@ -207,7 +212,7 @@ export const init = () => {
       );
 
       for (const [landmarkIndex, landmarkEl] of _landmark_els.entries()) {
-        if(isElementHidden(landmarkEl as HTMLElement)) continue;
+        if (isElementHidden(landmarkEl as HTMLElement)) continue;
 
         element(landmarkEl as HTMLElement, landmarkIndex + 1, 'landmark');
         element(landmarkEl as HTMLElement, null, 'region');

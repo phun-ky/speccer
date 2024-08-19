@@ -513,7 +513,7 @@ Allthough the styling works nicely with dark mode, you can use the provided CSS 
   --ph-speccer-mark-border-style: solid;
   --ph-speccer-measure-color: var(--ph-speccer-color-red);
   --ph-speccer-measure-size: 8px;
-  --ph-speccer-a11y-color-bakground: var(--ph-speccer-color-beautifulBlue);
+  --ph-speccer-a11y-color-background: var(--ph-speccer-color-beautifulBlue);
   --ph-speccer-a11y-landmark-color-background: var(
     --ph-speccer-color-fuchsiaBlue
   );

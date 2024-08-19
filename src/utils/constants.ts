@@ -106,7 +106,6 @@ export const SPECCER_DEFAULT_LINE_WIDTH = 1;
  */
 export const SPECCER_DATA_ATTRIBUTE = 'data-speccer';
 
-
 /**
  * The selector for the `spacing` feature
  * @type {string}

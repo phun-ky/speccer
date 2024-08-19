@@ -95,7 +95,7 @@ export const lazy = (): void => {
   });
 
   for (const el of document.querySelectorAll(
-    '[data-speccer*="spacing"],[data-speccer*="spacing"] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)'
+    '[data-speccer^="spacing"],[data-speccer^="spacing"] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)'
   )) {
     _spec_observer.observe(el);
   }
@@ -109,7 +109,7 @@ export const lazy = (): void => {
     }
   });
 
-  for (const el of document.querySelectorAll('[data-speccer*="measure"]')) {
+  for (const el of document.querySelectorAll('[data-speccer^="measure"]')) {
     _measure_observer.observe(el);
   }
 

@@ -40,18 +40,29 @@ import { pinElement } from './utils/pin-element';
  * pinElements(sectionElement);
  * ```
  */
-export const pinElements = async (sectionElement: HTMLElement): Promise<void> => {
+export const pinElements = async (
+  sectionElement: HTMLElement
+): Promise<void> => {
   if (!sectionElement) return;
 
-  const _els_to_be_pinned = sectionElement.querySelectorAll('[data-speccer*="pin"]');
+  const _els_to_be_pinned = sectionElement.querySelectorAll(
+    '[data-speccer^="pin"]'
+  );
 
   if (!_els_to_be_pinned || _els_to_be_pinned.length === 0) return;
 
-  [..._els_to_be_pinned].filter(async (targetElement: HTMLElement) => !isElementHidden(targetElement)).forEach(
-    async (targetElement: HTMLElement, targetIndex: number): Promise<void> => {
-      const _character_to_use = getCharacterToUse(targetIndex);
+  [..._els_to_be_pinned]
+    .filter(
+      async (targetElement: HTMLElement) => !isElementHidden(targetElement)
+    )
+    .forEach(
+      async (
+        targetElement: HTMLElement,
+        targetIndex: number
+      ): Promise<void> => {
+        const _character_to_use = getCharacterToUse(targetIndex);
 
-      await pinElement(targetElement, _character_to_use, sectionElement);
-    }
-  );
+        await pinElement(targetElement, _character_to_use, sectionElement);
+      }
+    );
 };

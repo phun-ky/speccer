@@ -1,5 +1,8 @@
 /* eslint no-console:0 */
-import { isValidTypographyElement, useSyntaxHighlighting } from '../../utils/area';
+import {
+  isValidTypographyElement,
+  useSyntaxHighlighting
+} from '../../utils/area';
 import { set as setClassNames, cx } from '../../utils/classnames';
 import { isElementHidden } from '../../utils/node';
 import { add as addStyles } from '../../utils/styles';
@@ -60,16 +63,12 @@ export const create = (html: string, area: string | null): HTMLElement => {
 export const element = async (targetElement: HTMLElement): Promise<void> => {
   if (!targetElement) return;
 
-  const _areas_string: string | null = targetElement.getAttribute(
-    'data-speccer'
-  );
+  const _areas_string: string | null =
+    targetElement.getAttribute('data-speccer');
 
   if (!isValidTypographyElement(_areas_string)) return;
 
-  if (
-    isElementHidden(targetElement)
-  )
-    return;
+  if (isElementHidden(targetElement)) return;
 
   const _use_highlighting = useSyntaxHighlighting(_areas_string);
 
