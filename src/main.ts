@@ -84,15 +84,15 @@ const speccer = () => {
   removeAll('.ph-speccer.speccer');
 
   const spacingElements = document.querySelectorAll(
-    `[${SPECCER_DATA_ATTRIBUTE}*="${SPECCER_FEATURE_SPACING}"],[${SPECCER_DATA_ATTRIBUTE}*="${SPECCER_FEATURE_SPACING}"] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)`
+    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"],[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)`
   );
-  const measureElements = document.querySelectorAll(`[${SPECCER_DATA_ATTRIBUTE}*="${SPECCER_FEATURE_MEASURE}"]`);
+  const measureElements = document.querySelectorAll(`[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_MEASURE}"]`);
   const typographyElements = document.querySelectorAll(
-    `[${SPECCER_DATA_ATTRIBUTE}*="${SPECCER_FEATURE_TYPOGRAPHY}"]`
+    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_TYPOGRAPHY}"]`
   );
   const pinSectionElements = document.querySelectorAll(`[${SPECCER_DATA_ATTRIBUTE}="${SPECCER_FEATURE_PIN_AREA}"]`);
-  const markElements = document.querySelectorAll(`[${SPECCER_DATA_ATTRIBUTE}*="${SPECCER_FEATURE_MARK}"]`);
-  const gridElements = document.querySelectorAll(`[${SPECCER_DATA_ATTRIBUTE}*="${SPECCER_FEATURE_GRID}"]`);
+  const markElements = document.querySelectorAll(`[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_MARK}"]`);
+  const gridElements = document.querySelectorAll(`[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_GRID}"]`);
 
   for (const el of markElements) {
     markElement(el as HTMLElement);
