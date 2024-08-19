@@ -6,7 +6,7 @@
 
 # features/typography
 
-> Last updated 2024-08-19T11:01:52.722Z
+> Last updated 2024-08-19T12:54:07.229Z
 
 ## Functions
 
@@ -42,7 +42,7 @@ document.body.appendChild(createdElement);
 
 #### Defined in
 
-[features/typography/index.ts:25](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L25)
+[features/typography/index.ts:28](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L28)
 
 ---
 
@@ -79,7 +79,7 @@ if (targetElement) {
 
 #### Defined in
 
-[features/typography/index.ts:60](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L60)
+[features/typography/index.ts:63](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L63)
 
 ---
 

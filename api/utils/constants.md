@@ -6,7 +6,7 @@
 
 # utils/constants
 
-> Last updated 2024-08-19T11:01:52.739Z
+> Last updated 2024-08-19T12:54:07.245Z
 
 ## Variables
 
@@ -144,7 +144,7 @@ The selector for the `grid` feature
 
 #### Defined in
 
-[utils/constants.ts:138](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L138)
+[utils/constants.ts:137](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L137)
 
 ---
 
@@ -158,7 +158,7 @@ The selector for the `mark` feature
 
 #### Defined in
 
-[utils/constants.ts:132](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L132)
+[utils/constants.ts:131](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L131)
 
 ---
 
@@ -172,7 +172,7 @@ The selector for the `measure` feature
 
 #### Defined in
 
-[utils/constants.ts:120](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L120)
+[utils/constants.ts:119](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L119)
 
 ---
 
@@ -186,7 +186,7 @@ The selector for the container of the `pin` feature
 
 #### Defined in
 
-[utils/constants.ts:144](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L144)
+[utils/constants.ts:143](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L143)
 
 ---
 
@@ -200,7 +200,7 @@ The selector for the `spacing` feature
 
 #### Defined in
 
-[utils/constants.ts:114](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L114)
+[utils/constants.ts:113](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L113)
 
 ---
 
@@ -214,7 +214,7 @@ The selector for the `typography` feature
 
 #### Defined in
 
-[utils/constants.ts:126](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L126)
+[utils/constants.ts:125](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L125)
 
 ---
 
