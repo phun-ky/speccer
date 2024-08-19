@@ -1,10 +1,12 @@
 /* eslint no-console:0 */
+import { isValidSpacingElement } from '../../utils/area';
 import { set as setClassNames } from '../../utils/classnames';
 import {
   getSpacing,
   getClassNameFromCSSProperty,
   getNumberValue
 } from '../../utils/css';
+import { isElementHidden } from '../../utils/node';
 import { get as getStyles } from '../../utils/styles';
 
 import { position } from './utils/position';
@@ -41,7 +43,7 @@ export const create = (
  *
  * ![spacing](https://github.com/phun-ky/speccer/blob/main/public/spacing.png?raw=true)
  *
- * @param {HTMLElement} targetEl - The target element to create spacing elements for.
+ * @param {HTMLElement} targetElement - The target element to create spacing elements for.
  * @returns {Promise<void>} - A promise that resolves after creating and positioning the spacing elements.
  *
  * @example
@@ -50,15 +52,19 @@ export const create = (
  * element(targetElement);
  * ```
  */
-export const element = async (targetEl: HTMLElement): Promise<void> => {
-  if (!targetEl) return;
+export const element = async (targetElement: HTMLElement): Promise<void> => {
+  if (!targetElement) return;
 
-  const _target_styles = await getStyles(targetEl);
+  const _areas_string: string | null = targetElement.getAttribute(
+    'data-speccer'
+  );
+
+  if(!isValidSpacingElement(_areas_string)) return;
+
+  const _target_styles = await getStyles(targetElement);
 
   if (
-    _target_styles.display === 'none' ||
-    _target_styles.opacity === '0' ||
-    _target_styles.visibility === 'hidden'
+    isElementHidden(targetElement)
   )
     return;
 
@@ -81,7 +87,7 @@ export const element = async (targetEl: HTMLElement): Promise<void> => {
     setClassNames(_speccer_el, _class_name);
     document.body.appendChild(_speccer_el);
 
-    targetEl.classList.add('is-specced');
-    await position(property, _value, _speccer_el, targetEl);
+    targetElement.classList.add('is-specced');
+    await position(property, _value, _speccer_el, targetElement);
   }
 };

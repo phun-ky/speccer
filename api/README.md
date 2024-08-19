@@ -8,7 +8,7 @@
 
 ---
 
-> Last updated 2024-08-16T09:32:06.336Z
+> Last updated 2024-08-17T05:45:48.734Z
 
 ## Modules
 
@@ -16,14 +16,14 @@
 - [features/a11y](features/a11y.md)
 - [features/a11y/constants](features/a11y/constants.md)
 - [features/a11y/utils/styles](features/a11y/utils/styles.md)
-- [features/dissect](features/dissect.md)
-- [features/dissect/utils/create](features/dissect/utils/create.md)
-- [features/dissect/utils/dissect](features/dissect/utils/dissect.md)
-- [features/dissect/utils/get-character-to-use](features/dissect/utils/get-character-to-use.md)
-- [features/dissect/utils/styles](features/dissect/utils/styles.md)
 - [features/grid](features/grid.md)
 - [features/mark](features/mark.md)
 - [features/measure](features/measure.md)
+- [features/pin](features/pin.md)
+- [features/pin/utils/create-pin-element](features/pin/utils/create-pin-element.md)
+- [features/pin/utils/get-character-to-use](features/pin/utils/get-character-to-use.md)
+- [features/pin/utils/pin-element](features/pin/utils/pin-element.md)
+- [features/pin/utils/styles](features/pin/utils/styles.md)
 - [features/spacing](features/spacing.md)
 - [features/spacing/utils/position](features/spacing/utils/position.md)
 - [features/typography](features/typography.md)

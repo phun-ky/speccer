@@ -6,7 +6,7 @@
 
 # types/bezier
 
-> Last updated 2024-08-16T09:32:06.355Z
+> Last updated 2024-08-17T05:45:48.745Z
 
 ## Type Aliases
 
@@ -413,15 +413,15 @@ The second position.
 
 ---
 
-### DissectStylesOptionsType
+### PinStylesOptionsType
 
 ```ts
-type DissectStylesOptionsType: Record<string, never> | {
+type PinStylesOptionsType: Record<string, never> | {
   isCurly: boolean;
 };
 ```
 
-Options for dissect styles.
+Options for pin styles.
 
 #### Defined in
 

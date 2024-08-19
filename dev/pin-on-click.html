@@ -1,0 +1,464 @@
+<!doctype html>
+<html class="ph" lang="en">
+  <head>
+    <title>@phun-ky/speccer | pin on click</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Language" content="no" />
+    <meta name="robots" content="none" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="application-name" content="@phun-ky/speccer" />
+    <link
+      async
+      href="https://codepen.io/phun-ky/pen/RyMyme/d182b0303eaee2f82a93ae3fdcc414a7.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      async
+      href="https://phun-ky.net/css/ph.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link async href="/speccer.css" rel="stylesheet" type="text/css" />
+    <link
+      async
+      href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i&amp;display=swap&amp;subset=latin-ext"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      async
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;display=swap&amp;subset=latin-ext"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style type="text/css">
+      .ph-speccer.speccer {
+        --ph-speccer-base-color: #ffc72c;
+        --ph-speccer-measure-color: #ffc72c;
+        --ph-speccer-color-text-light: #000000;
+        --ph-speccer-mark-background-color: rgba(255, 247, 111, 0.4);
+        --ph-speccer-mark-border-color: #ffc72c;
+        --ph-speccer-typography-background-color: #38383d;
+      }
+      .theme--light .ph-speccer.speccer {
+        --ph-speccer-base-color: rgb(255, 58, 168);
+        --ph-speccer-measure-color: rgb(255, 58, 168);
+        --ph-speccer-color-text-light: #ffffff;
+        --ph-speccer-mark-background-color: rgb(255, 58, 168, 0.4);
+        --ph-speccer-mark-border-color: rgb(255, 58, 168);
+        --ph-speccer-typography-background-color: #ffffff;
+      }
+      .ph.container {
+        counter-reset: box;
+      }
+      .ph.box {
+        box-sizing: border-box;
+        background-color: var(--ph-color-background-notice-note);
+        min-height: 160px;
+        min-width: 100px;
+        margin: 0;
+        padding: 2rem;
+        border: 1pt solid rgba(51, 51, 51, 0.1);
+        color: var(--ph-color-text);
+        font-family: var(--ph-font-family) !important;
+        font-size: 4rem;
+        box-sizing: border-box;
+        box-shadow: 0 0 10px rgba(51, 51, 51, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 888 !important;
+        border-radius: 0.375rem;
+      }
+
+      .ph.box:after {
+        counter-increment: box;
+        content: counter(box);
+        z-index: 888 !important;
+      }
+    </style>
+  </head>
+  <body class="ph">
+    <div class="ph app project" id="app">
+      <header class="ph header">
+        <a class="ph home" href="https://phun-ky.net" target="_blank">home</a>
+
+        <a
+          class="ph projects-home"
+          href="https://phun-ky.net/projects"
+          target="_blank"
+          >projects</a
+        >
+
+        <div class="ph header-menu">
+          <a
+            class="ph"
+            href="https://www.paypal.me/phunky/20"
+            rel="noopener noreferrer"
+            target="_blank"
+            >buy me a coffee?</a
+          >
+
+          <a
+            class="ph"
+            href="https://github.com/sponsors/phun-ky"
+            rel="noopener noreferrer"
+            target="_blank"
+            >sponsor me!</a
+          >
+
+          <button class="ph darkmode-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Sun Icon"
+              fill="currentColor"
+              stroke="none"
+              class="ph hide-dark"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Moon Icon"
+              fill="currentColor"
+              stroke="none"
+              class="ph hide-light"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main class="ph main">
+        <section class="ph section">
+          <div class="ph container">
+            <h1 class="ph">Pin elements on click</h1>
+            <p class="ph lead" style="margin-bottom: 4rem">
+              Uses the `pin` feature from @phun-ky/speccer to activate pins on
+              click.
+            </p>
+          </div>
+        </section>
+        <section class="ph section">
+          <div class="ph container">
+            <h2 class="ph">Options</h2>
+            <div class="ph message warning color-blind-warning">
+              <span class="ph title"> Curly </span>
+              <p class="ph description">
+                Curly only works in combination with the
+                <code class="ph language-">bracket</code> option
+              </p>
+            </div>
+            <form
+              onsubmit="javascript: return false;"
+              id="pin-options"
+              class="ph"
+              style="
+                display: grid;
+                grid-gap: 2rem;
+                grid-template-columns: 1fr 1fr 1fr;
+              "
+            >
+              <div class="ph">
+                <h3 class="ph">Type</h3>
+                <div class="ph input-group">
+                  <input
+                    type="radio"
+                    name="type"
+                    id="pin-type-default"
+                    checked="checked"
+                    value="default"
+                    class="ph"
+                  />
+                  <label class="ph label" for="pin-type-default">
+                    default
+                  </label>
+                  <input
+                    type="radio"
+                    name="type"
+                    id="pin-type-bracket"
+                    value="bracket"
+                    class="ph"
+                  />
+                  <label class="ph label" for="pin-type-bracket">
+                    bracket
+                  </label>
+                  <input
+                    type="radio"
+                    name="type"
+                    id="pin-type-enclose"
+                    value="enclose"
+                    class="ph"
+                  />
+                  <label class="ph label" for="pin-type-enclose">
+                    enclose
+                  </label>
+                </div>
+              </div>
+              <div class="ph">
+                <h3 class="ph">Curly</h3>
+                <div class="ph input-group">
+                  <input
+                    type="checkbox"
+                    name="curly"
+                    id="pin-curly"
+                    value="curly"
+                    class="ph"
+                  />
+                  <label class="ph label" for="pin-curly"> curly </label>
+                </div>
+              </div>
+              <div class="ph">
+                <h3 class="ph">Position</h3>
+                <div class="ph input-group">
+                  <input
+                    type="radio"
+                    name="position"
+                    checked="checked"
+                    id="pin-position-top"
+                    value="top"
+                    class="ph"
+                  />
+                  <label class="ph label" for="pin-position-top"> top </label>
+                  <input
+                    type="radio"
+                    name="position"
+                    id="pin-position-right"
+                    value="right"
+                    class="ph"
+                  />
+                  <label class="ph label" for="pin-position-right">
+                    right
+                  </label>
+                  <input
+                    type="radio"
+                    name="position"
+                    id="pin-position-bottom"
+                    value="bottom"
+                    class="ph"
+                  />
+                  <label class="ph label" for="pin-position-bottom">
+                    bottom
+                  </label>
+                  <input
+                    type="radio"
+                    name="position"
+                    id="pin-position-left"
+                    value="left"
+                    class="ph"
+                  />
+                  <label class="ph label" for="pin-position-left"> left </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="ph section">
+          <div class="ph container">
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(1, 1fr);
+                grid-auto-flow: dense;
+                grid-gap: 2rem 2rem;
+              "
+            >
+              <div
+                id="2202a8b8-b259-5dad-8008-3670de213cd8"
+                class="ph box"
+              ></div>
+              <div
+                id="3ed666ed-7bb9-56ab-ae91-33058dc3b969"
+                class="ph box"
+                style="grid-column: span 2"
+              ></div>
+              <div
+                id="b19e19e9-ffef-5aff-9de4-d43e1a85536d"
+                class="ph box"
+              ></div>
+              <div
+                id="ece5d053-0e88-5c17-8f40-07ccd229efe7"
+                class="ph box"
+                style="grid-column: span 4"
+              ></div>
+              <div
+                id="06540269-8bc5-5215-9240-f2473f4cde16"
+                class="ph box"
+                style="grid-row: span 2"
+              ></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="ph">
+        <div class="ph container">
+          <p class="ph">
+            Made with <strong class="ph">saturated fat</strong> by
+            <a class="ph" target="_blank" href="https://phun-ky.net"
+              >Alexander Vassbotn Røyne-Helgesen</a
+            >. Buy <strong class="ph">me</strong> some
+            <a class="ph" href="https://www.paypal.me/phunky/20">bacon?</a>
+          </p>
+          <p class="ph">
+            This project created by
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              href="http://phun-ky.net"
+              property="cc:attributionName"
+            >
+              Alexander Vassbotn Røyne-Helgesen</a
+            >
+            is licensed under a
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              href="https://choosealicense.com/licenses/mit/"
+            >
+              MIT License </a
+            >.
+          </p>
+          <p class="ph">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              rel="license"
+              href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >
+              <img
+                alt="Creative Commons Licence"
+                style="border-width: 0"
+                width="88"
+                height="31"
+                src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
+              />
+            </a>
+            <br />Any other creation or work related to this project, if not
+            specified, like templates, logos etc created by
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              href="http://phun-ky.net"
+              property="cc:attributionName"
+              rel="cc:attributionURL"
+            >
+              Alexander Vassbotn Røyne-Helgesen</a
+            >
+            is licensed under a
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              rel="license"
+              href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >
+              Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+              International License </a
+            >.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module">
+      import { pin } from '/speccer.esm.js';
+      const { pinElement } = pin;
+      /**
+       * Handles click events on elements, either pin them or removing the pins based on their current state.
+       *
+       * @param {HTMLElement} el - The element that was clicked.
+       */
+      const onClick = (el) => {
+        // If the element is currently specced, remove speccer elements based on that element
+        if (el.classList.contains('is-specced')) {
+          const selector = el.getAttribute('data-speccer-element-id');
+          const elId = el.getAttribute('id');
+
+          if (!selector) return;
+
+          const pinElement = document.getElementById(selector);
+
+          if (!pinElement) return;
+
+          if (pinElement.classList.contains('curly')) {
+            // We also need to remove the svg paths if it is in use
+            document
+              .querySelectorAll(`#ph-speccer-svg path[data-start-el="${elId}"]`)
+              .forEach((el) => el.remove());
+          }
+
+          pinElement.remove();
+          el.classList.remove('is-specced');
+        } else {
+          const form = document.getElementById('pin-options');
+          const formData = new FormData(form);
+          let area = 'pin';
+          for (const value of formData.values()) {
+            if (value == 'default') continue;
+            area += ` ${value}`;
+          }
+
+          const parentElement = el.parentElement;
+
+          pinElement(
+            el,
+            '🥰',
+            parentElement,
+            area.indexOf('bracket') == -1 ? area.replace(' curly', '') : area
+          );
+          el.classList.add('is-specced');
+        }
+      };
+
+      /**
+       * Event listener function that triggers the onClick function for the target element.
+       *
+       * @param {Event} e - The click event object.
+       */
+      const listener = (e) => {
+        const el = e.target;
+        onClick(el);
+      };
+
+      /**
+       * Attaches the click event listener to all elements with the class 'ph box'.
+       */
+      document.querySelectorAll('.ph.box').forEach((el) => {
+        el.removeEventListener('click', listener);
+        el.addEventListener('click', listener);
+      });
+    </script>
+    <svg
+      class="ph-speccer"
+      viewBox="0 0"
+      id="ph-speccer-svg"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        class="ph-speccer path original"
+        id="ph-speccer-path"
+        fill="none"
+        stroke-width="1"
+        stroke="currentColor"
+      />
+    </svg>
+    <script src="https://codepen.io/phun-ky/pen/RyMyme/d182b0303eaee2f82a93ae3fdcc414a7.js"></script>
+  </body>
+</html>

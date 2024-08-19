@@ -6,9 +6,23 @@
 
 # utils/constants
 
-> Last updated 2024-08-16T09:32:06.369Z
+> Last updated 2024-08-17T05:45:48.752Z
 
 ## Variables
+
+### SPECCER_DATA_ATTRIBUTE
+
+```ts
+const SPECCER_DATA_ATTRIBUTE: 'data-speccer' = 'data-speccer';
+```
+
+The name of the attribute speccer uses to identify elements to spec
+
+#### Defined in
+
+[utils/constants.ts:107](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L107)
+
+---
 
 ### SPECCER_DEFAULT_LINE_WIDTH
 
@@ -117,6 +131,90 @@ console.log(negativeDefaultPinSpace); // Example output: -48
 #### Defined in
 
 [utils/constants.ts:60](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L60)
+
+---
+
+### SPECCER_FEATURE_GRID
+
+```ts
+const SPECCER_FEATURE_GRID: 'grid' = 'grid';
+```
+
+The selector for the `grid` feature
+
+#### Defined in
+
+[utils/constants.ts:138](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L138)
+
+---
+
+### SPECCER_FEATURE_MARK
+
+```ts
+const SPECCER_FEATURE_MARK: 'mark' = 'mark';
+```
+
+The selector for the `mark` feature
+
+#### Defined in
+
+[utils/constants.ts:132](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L132)
+
+---
+
+### SPECCER_FEATURE_MEASURE
+
+```ts
+const SPECCER_FEATURE_MEASURE: 'measure' = 'measure';
+```
+
+The selector for the `measure` feature
+
+#### Defined in
+
+[utils/constants.ts:120](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L120)
+
+---
+
+### SPECCER_FEATURE_PIN_AREA
+
+```ts
+const SPECCER_FEATURE_PIN_AREA: 'pin-area' = 'pin-area';
+```
+
+The selector for the container of the `pin` feature
+
+#### Defined in
+
+[utils/constants.ts:144](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L144)
+
+---
+
+### SPECCER_FEATURE_SPACING
+
+```ts
+const SPECCER_FEATURE_SPACING: 'spacing' = 'spacing';
+```
+
+The selector for the `spacing` feature
+
+#### Defined in
+
+[utils/constants.ts:114](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L114)
+
+---
+
+### SPECCER_FEATURE_TYPOGRAPHY
+
+```ts
+const SPECCER_FEATURE_TYPOGRAPHY: 'typography' = 'typography';
+```
+
+The selector for the `typography` feature
+
+#### Defined in
+
+[utils/constants.ts:126](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L126)
 
 ---
 

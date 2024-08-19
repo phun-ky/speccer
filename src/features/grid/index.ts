@@ -1,8 +1,9 @@
 /* eslint no-console:0 */
+import { isValidGridElement } from '../../utils/area';
+import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
+import { isElementHidden } from '../../utils/node';
+import { get as getStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
-
-const SPECCER_DATA_ATTR = 'data-speccer-grid';
-const SPECCER_FEATURE_GRID = 'grid';
 
 /**
  * Creates a visual grid overlay for a given target element.
@@ -96,18 +97,21 @@ export const create = async (
 export const element = async (targetElement: HTMLElement): Promise<void> => {
   if (!targetElement) return;
 
-  const attr = targetElement.getAttribute(SPECCER_DATA_ATTR);
+  const _areas_string: string | null = targetElement.getAttribute(
+    SPECCER_DATA_ATTRIBUTE
+  );
+  const _target_styles = await getStyles(targetElement);
+
+  if (!isValidGridElement(_areas_string, _target_styles)) return;
+
+  if (
+    isElementHidden(targetElement)
+  )
+    return;
 
   await waitForFrame();
 
-  const styles = window.getComputedStyle(targetElement);
+  const gridContainerElement = await create(targetElement, _target_styles);
 
-  if (
-    attr === SPECCER_FEATURE_GRID &&
-    (styles.display === 'grid' || styles.display.includes('grid'))
-  ) {
-    const gridContainerElement = await create(targetElement, styles);
-
-    document.body.appendChild(gridContainerElement);
-  }
+  document.body.appendChild(gridContainerElement);
 };

@@ -6,7 +6,7 @@
 
 # features/typography
 
-> Last updated 2024-08-16T09:32:06.352Z
+> Last updated 2024-08-17T05:45:48.743Z
 
 ## Functions
 
@@ -42,14 +42,14 @@ document.body.appendChild(createdElement);
 
 #### Defined in
 
-[features/typography/index.ts:23](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L23)
+[features/typography/index.ts:25](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L25)
 
 ---
 
 ### element()
 
 ```ts
-function element(targetEl): Promise<void>;
+function element(targetElement): Promise<void>;
 ```
 
 Create a specced typography element for a given target element.
@@ -58,9 +58,9 @@ Create a specced typography element for a given target element.
 
 #### Parameters
 
-| Parameter  | Type          | Description                                 |
-| ---------- | ------------- | ------------------------------------------- |
-| `targetEl` | `HTMLElement` | The target element to specc typography for. |
+| Parameter       | Type          | Description                                 |
+| --------------- | ------------- | ------------------------------------------- |
+| `targetElement` | `HTMLElement` | The target element to specc typography for. |
 
 #### Returns
 
@@ -79,7 +79,7 @@ if (targetElement) {
 
 #### Defined in
 
-[features/typography/index.ts:58](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L58)
+[features/typography/index.ts:60](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L60)
 
 ---
 

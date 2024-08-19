@@ -1,0 +1,31 @@
+.ph-speccer.speccer.a11y.landmark
+  position absolute
+  height 48px
+  width 48px
+  background-color var(--ph-speccer-a11y-landmark-color-background)
+  border-radius 0.5rem
+  color var(--ph-speccer-color-text-light)
+  font-family var(--ph-speccer-font-family)
+  border 3px solid var(--ph-speccer-a11y-landmark-color-background)
+  box-shadow inset 0 0 0 2px var(--ph-speccer-color-text-light)
+  justify-content center
+  font-size 1rem
+  line-height 100%
+  align-items center
+  padding 0.5rem
+  pointer-events auto
+
+.ph-speccer.speccer.a11y.landmark
+  &::after
+    top 100%
+    left 50%
+    border solid transparent
+    content ""
+    height 0
+    width 0
+    position absolute
+    pointer-events none
+    border-color rgba(126, 96, 197, 0)
+    border-top-color var(--ph-speccer-a11y-landmark-color-background)
+    border-width 12px
+    margin-left -12px

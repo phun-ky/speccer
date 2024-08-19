@@ -20,17 +20,17 @@
 import './types/interfaces/global';
 import { dom, lazy, manual, activate } from './config/browser';
 import { init as initA11y } from './features/a11y';
-import {
-  create as dissectCreate,
-  element as dissectElement,
-  dissect as _dissect
-} from './features/dissect';
 import { create as gridCreate, element as gridElement } from './features/grid';
 import { create as markCreate, element as markElement } from './features/mark';
 import {
   create as measureCreate,
   element as measureElement
 } from './features/measure';
+import {
+  createPinElement,
+  pinElement,
+  pinElements
+} from './features/pin';
 import {
   create as spacingCreate,
   element as spacingElement
@@ -39,6 +39,7 @@ import {
   create as typographyCreate,
   element as typographyElement
 } from './features/typography';
+import { SPECCER_DATA_ATTRIBUTE, SPECCER_FEATURE_GRID, SPECCER_FEATURE_MARK, SPECCER_FEATURE_MEASURE, SPECCER_FEATURE_PIN_AREA, SPECCER_FEATURE_SPACING, SPECCER_FEATURE_TYPOGRAPHY } from './utils/constants';
 import { removeAll } from './utils/node';
 
 export const grid = {
@@ -51,10 +52,10 @@ export const spacing = {
   element: spacingElement
 };
 
-export const dissect = {
-  create: dissectCreate,
-  element: dissectElement,
-  dissect: _dissect
+export const pin = {
+  createPinElement,
+  pinElement,
+  pinElements
 };
 
 export const measure = {
@@ -82,38 +83,34 @@ export const modes = {
 const speccer = () => {
   removeAll('.ph-speccer.speccer');
 
-  const elsToBeSpecced = document.querySelectorAll(
-    '[data-speccer],[data-speccer] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)'
+  const spacingElements = document.querySelectorAll(
+    `[${SPECCER_DATA_ATTRIBUTE}*="${SPECCER_FEATURE_SPACING}"],[${SPECCER_DATA_ATTRIBUTE}*="${SPECCER_FEATURE_SPACING}"] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)`
   );
-  const elsToBeMeasured = document.querySelectorAll('[data-speccer-measure]');
-  const elsToBeTypographySpecced = document.querySelectorAll(
-    '[data-speccer-typography]'
+  const measureElements = document.querySelectorAll(`[${SPECCER_DATA_ATTRIBUTE}*="${SPECCER_FEATURE_MEASURE}"]`);
+  const typographyElements = document.querySelectorAll(
+    `[${SPECCER_DATA_ATTRIBUTE}*="${SPECCER_FEATURE_TYPOGRAPHY}"]`
   );
-  const elsToBeDissected = document.querySelectorAll('[data-anatomy-section]');
-  const elsToBeMarked = document.querySelectorAll('[data-speccer-mark]');
-  const SPECCER_DATA_ATTR = 'data-speccer-grid';
-  const SPECCER_FEATURE_GRID = 'grid';
-  const SPECCER_FEATURE_GRID_SELECTOR = `[${SPECCER_DATA_ATTR}="${SPECCER_FEATURE_GRID}"]`;
-  const elstToBeGrid = document.querySelectorAll(SPECCER_FEATURE_GRID_SELECTOR);
+  const pinSectionElements = document.querySelectorAll(`[${SPECCER_DATA_ATTRIBUTE}="${SPECCER_FEATURE_PIN_AREA}"]`);
+  const markElements = document.querySelectorAll(`[${SPECCER_DATA_ATTRIBUTE}*="${SPECCER_FEATURE_MARK}"]`);
+  const gridElements = document.querySelectorAll(`[${SPECCER_DATA_ATTRIBUTE}*="${SPECCER_FEATURE_GRID}"]`);
 
-  for (const el of elsToBeMarked) {
+  for (const el of markElements) {
     markElement(el as HTMLElement);
   }
-
-  for (const el of elstToBeGrid) {
+  for (const el of gridElements) {
     gridElement(el as HTMLElement);
   }
-  for (const el of elsToBeSpecced) {
+  for (const el of spacingElements) {
     spacingElement(el as HTMLElement);
   }
-  for (const el of elsToBeMeasured) {
+  for (const el of measureElements) {
     measureElement(el as HTMLElement);
   }
-  for (const el of elsToBeTypographySpecced) {
+  for (const el of typographyElements) {
     typographyElement(el as HTMLElement);
   }
-  for (const el of elsToBeDissected) {
-    dissectElement(el as HTMLElement);
+  for (const el of pinSectionElements) {
+    pinElements(el as HTMLElement);
   }
   initA11y();
 };

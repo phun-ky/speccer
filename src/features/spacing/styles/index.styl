@@ -1,0 +1,129 @@
+.ph-speccer.speccer.spacing
+  pointer-events auto
+  transition none
+  border var(--ph-speccer-line-width) solid transparent
+  &:hover
+    border var(--ph-speccer-line-width) solid var(--ph-speccer-color-text-dark)
+
+.ph-speccer.speccer.spacing
+  &.margin
+    background-color var(--ph-speccer-spacing-color-margin)
+    color var(--ph-speccer-color-text-dark)
+
+.ph-speccer.speccer.spacing
+  &.padding
+    background-color var(--ph-speccer-spacing-color-padding)
+    color var(--ph-speccer-spacing-color)
+
+.ph-speccer.speccer.spacing
+  &.margin
+    &.bottom,
+    &.top
+      &::after
+        transition none
+        content ""
+        position absolute
+        height 100%
+        border-top var(--ph-speccer-line-width) solid var(--ph-speccer-color-text-dark)
+        border-bottom var(--ph-speccer-line-width) solid var(--ph-speccer-color-text-dark)
+        width 9px
+        left 40%
+
+.ph-speccer.speccer.spacing
+  &.margin
+    &.bottom,
+    &.top
+      &::before
+        transition none
+        content ""
+        position absolute
+        height 100%
+        border-left var(--ph-speccer-line-width) solid var(--ph-speccer-color-text-dark)
+        margin-left 4px
+        width 0
+        left 40%
+
+.ph-speccer.speccer.spacing
+  &.margin
+    &.left,
+    &.right
+      &::after
+        transition none
+        content ""
+        position absolute
+        height 9px
+        border-right var(--ph-speccer-line-width) solid var(--ph-speccer-color-text-dark)
+        border-left var(--ph-speccer-line-width) solid var(--ph-speccer-color-text-dark)
+        width 100%
+        top 10%
+
+.ph-speccer.speccer.spacing
+  &.margin
+    &.left,
+    &.right
+      &::before
+        transition none
+        content ""
+        position absolute
+        height 0
+        border-top var(--ph-speccer-line-width) solid var(--ph-speccer-color-text-dark)
+        margin-top 4px
+        width 100%
+        top 10%
+
+.ph-speccer.speccer.spacing
+  &.padding
+    &.bottom,
+    &.top
+      &::after
+        transition none
+        content ""
+        position absolute
+        height 100%
+        border-top var(--ph-speccer-line-width) solid var(--ph-speccer-spacing-color)
+        border-bottom var(--ph-speccer-line-width) solid var(--ph-speccer-spacing-color)
+        width 9px
+        left 40%
+
+.ph-speccer.speccer.spacing
+  &.padding
+    &.bottom,
+    &.top
+      &::before
+        transition none
+        content ""
+        position absolute
+        height 100%
+        border-left var(--ph-speccer-line-width) solid var(--ph-speccer-spacing-color)
+        margin-left 4px
+        width 0
+        left 40%
+
+.ph-speccer.speccer.spacing
+  &.padding
+    &.left,
+    &.right
+      &::after
+        transition none
+        content ""
+        position absolute
+        height 9px
+        border-right var(--ph-speccer-line-width) solid var(--ph-speccer-spacing-color)
+        border-left var(--ph-speccer-line-width) solid var(--ph-speccer-spacing-color)
+        width 100%
+        top 10%
+
+.ph-speccer.speccer.spacing
+  &.padding
+    &.left,
+    &.right
+      &::before
+        transition none
+        content ""
+        position absolute
+        height 0
+        border-top var(--ph-speccer-line-width) solid var(--ph-speccer-spacing-color)
+        margin-top 4px
+        width 100%
+        top 10%
+

@@ -6,7 +6,7 @@
 
 # features/spacing
 
-> Last updated 2024-08-16T09:32:06.351Z
+> Last updated 2024-08-17T05:45:48.743Z
 
 ## Functions
 
@@ -40,14 +40,14 @@ document.body.appendChild(spacingElement);
 
 #### Defined in
 
-[features/spacing/index.ts:25](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L25)
+[features/spacing/index.ts:27](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L27)
 
 ---
 
 ### element()
 
 ```ts
-function element(targetEl): Promise<void>;
+function element(targetElement): Promise<void>;
 ```
 
 Create and position spacing elements based on the target element's computed spacing styles.
@@ -56,9 +56,9 @@ Create and position spacing elements based on the target element's computed spac
 
 #### Parameters
 
-| Parameter  | Type          | Description                                        |
-| ---------- | ------------- | -------------------------------------------------- |
-| `targetEl` | `HTMLElement` | The target element to create spacing elements for. |
+| Parameter       | Type          | Description                                        |
+| --------------- | ------------- | -------------------------------------------------- |
+| `targetElement` | `HTMLElement` | The target element to create spacing elements for. |
 
 #### Returns
 
@@ -75,7 +75,7 @@ element(targetElement);
 
 #### Defined in
 
-[features/spacing/index.ts:53](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L53)
+[features/spacing/index.ts:55](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L55)
 
 ---
 

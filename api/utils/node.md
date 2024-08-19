@@ -6,7 +6,7 @@
 
 # utils/node
 
-> Last updated 2024-08-16T09:32:06.372Z
+> Last updated 2024-08-17T05:45:48.754Z
 
 ## Functions
 
@@ -43,11 +43,47 @@ after(referenceElement, newElement);
 
 ***
 
+### isElementHidden()
+
+```ts
+function isElementHidden(element): boolean
+````
+
+Determines if an HTML element is hidden based on its visibility properties.
+
+#### Parameters
+
+| Parameter | Type          | Description                               |
+| --------- | ------------- | ----------------------------------------- |
+| `element` | `HTMLElement` | The HTML element to check for visibility. |
+
+#### Returns
+
+`boolean`
+
+True if the element is hidden, false otherwise.
+
+#### Example
+
+```ts
+const element = document.getElementById('my-element');
+if (element) {
+  const hidden = isElementHidden(element);
+  console.log(hidden); // true if the element is hidden, false if visible
+}
+```
+
+#### Defined in
+
+[utils/node.ts:55](https://github.com/phun-ky/speccer/blob/main/src/utils/node.ts#L55)
+
+---
+
 ### removeAll()
 
 ```ts
-function removeAll(selector, el): void
-````
+function removeAll(selector, el): void;
+```
 
 Removes all elements matching a selector from the DOM.
 

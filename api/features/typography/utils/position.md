@@ -6,7 +6,7 @@
 
 # features/typography/utils/position
 
-> Last updated 2024-08-16T09:32:06.352Z
+> Last updated 2024-08-17T05:45:48.743Z
 
 ## Functions
 
@@ -15,8 +15,8 @@
 ```ts
 function position(
   area,
-  targetEl,
-  speccerEl
+  targetElement,
+  speccerElement
 ): Promise<{
   left: string;
   top: string;
@@ -27,11 +27,11 @@ Calculate the position for the speccer element relative to the target element.
 
 #### Parameters
 
-| Parameter   | Type               | Description                           |
-| ----------- | ------------------ | ------------------------------------- |
-| `area`      | `null` \| `string` | The area information for positioning. |
-| `targetEl`  | `HTMLElement`      | The target element.                   |
-| `speccerEl` | `HTMLElement`      | The speccer element to position.      |
+| Parameter        | Type               | Description                           |
+| ---------------- | ------------------ | ------------------------------------- |
+| `area`           | `null` \| `string` | The area information for positioning. |
+| `targetElement`  | `HTMLElement`      | The target element.                   |
+| `speccerElement` | `HTMLElement`      | The speccer element to position.      |
 
 #### Returns
 

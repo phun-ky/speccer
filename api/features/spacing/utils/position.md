@@ -6,26 +6,31 @@
 
 # features/spacing/utils/position
 
-> Last updated 2024-08-16T09:32:06.351Z
+> Last updated 2024-08-17T05:45:48.743Z
 
 ## Functions
 
 ### position()
 
 ```ts
-function position(property, value, spacingEl, targetEl): Promise<void>;
+function position(
+  property,
+  value,
+  spacingElement,
+  targetElement
+): Promise<void>;
 ```
 
 Set the position and dimensions of a spacing element relative to a target element.
 
 #### Parameters
 
-| Parameter   | Type          | Description                                                      |
-| ----------- | ------------- | ---------------------------------------------------------------- |
-| `property`  | `string`      | The CSS property to set (e.g., 'marginTop', 'marginLeft', etc.). |
-| `value`     | `number`      | The value of the CSS property.                                   |
-| `spacingEl` | `HTMLElement` | The spacing element.                                             |
-| `targetEl`  | `HTMLElement` | The target element.                                              |
+| Parameter        | Type          | Description                                                      |
+| ---------------- | ------------- | ---------------------------------------------------------------- |
+| `property`       | `string`      | The CSS property to set (e.g., 'marginTop', 'marginLeft', etc.). |
+| `value`          | `number`      | The value of the CSS property.                                   |
+| `spacingElement` | `HTMLElement` | The spacing element.                                             |
+| `targetElement`  | `HTMLElement` | The target element.                                              |
 
 #### Returns
 

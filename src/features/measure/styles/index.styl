@@ -1,0 +1,84 @@
+.ph-speccer.speccer.measure
+  display flex
+
+.ph-speccer.speccer.measure
+  &.width
+    color var(--ph-speccer-measure-color)
+    border var(--ph-speccer-line-width) solid var(--ph-speccer-measure-color)
+    border-bottom none
+    height var(--ph-speccer-measure-size)
+
+.ph-speccer.speccer.measure
+  &.width
+    &::after
+      content attr(data-measure)
+      position absolute
+      top calc(-100% - 10px)
+
+.ph-speccer.speccer.measure
+  &.width
+    &.bottom
+      color var(--ph-speccer-measure-color)
+      border var(--ph-speccer-line-width) solid var(--ph-speccer-measure-color)
+      border-top none
+
+.ph-speccer.speccer.measure
+  &.width
+    &.bottom
+      &::after
+        content attr(data-measure)
+        position absolute
+        top calc(100% + 5px)
+
+.ph-speccer.speccer.measure
+  &.width
+    &.top
+      color var(--ph-speccer-measure-color)
+      border var(--ph-speccer-line-width) solid var(--ph-speccer-measure-color)
+      border-bottom none
+
+.ph-speccer.speccer.measure
+  &.width
+    &.top
+      &::after
+        content attr(data-measure)
+        position absolute
+        bottom calc(100% + 5px)
+
+.ph-speccer.speccer.measure
+  &.height
+    &.left
+      color var(--ph-speccer-measure-color)
+      border var(--ph-speccer-line-width) solid var(--ph-speccer-measure-color)
+      border-right none
+      width var(--ph-speccer-measure-size)
+
+.ph-speccer.speccer.measure
+  &.height
+    &.left
+      &::after
+        content attr(data-measure)
+        position absolute
+        top 50%
+        left calc(-100% - 20px - var(--ph-speccer-line-width))
+        transform translateY(-50%) rotate(-90deg)
+
+.ph-speccer.speccer.measure
+  &.height
+    &.right
+      color var(--ph-speccer-measure-color)
+      border var(--ph-speccer-line-width) solid var(--ph-speccer-measure-color)
+      border-left none
+      width var(--ph-speccer-measure-size)
+
+.ph-speccer.speccer.measure
+  &.height
+    &.right
+      &::after
+        content attr(data-measure)
+        position absolute
+        top 50%
+        left calc(100% - var(--ph-speccer-measure-size))
+        transform translateY(-50%) rotate(90deg)
+
+@require './subtle.styl'

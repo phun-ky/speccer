@@ -6,25 +6,29 @@
 
 # features/a11y/utils/styles
 
-> Last updated 2024-08-16T09:32:06.345Z
+> Last updated 2024-08-17T05:45:48.739Z
 
 ## Functions
 
 ### styles()
 
 ```ts
-function styles(type, targetEl, a11yEl): Promise<SpeccerStylesReturnType>;
+function styles(
+  type,
+  targetElement,
+  a11yElement
+): Promise<SpeccerStylesReturnType>;
 ```
 
 Calculates and returns the styles for an accessibility element based on its type.
 
 #### Parameters
 
-| Parameter  | Type          | Description                                                                                   |
-| ---------- | ------------- | --------------------------------------------------------------------------------------------- |
-| `type`     | `string`      | Type of the accessibility element ('tabstops', 'landmark', 'region', 'shortcut', or default). |
-| `targetEl` | `HTMLElement` | Target HTML element.                                                                          |
-| `a11yEl`   | `HTMLElement` | Accessibility HTML element to be styled.                                                      |
+| Parameter       | Type          | Description                                                                                   |
+| --------------- | ------------- | --------------------------------------------------------------------------------------------- |
+| `type`          | `string`      | Type of the accessibility element ('tabstops', 'landmark', 'region', 'shortcut', or default). |
+| `targetElement` | `HTMLElement` | Target HTML element.                                                                          |
+| `a11yElement`   | `HTMLElement` | Accessibility HTML element to be styled.                                                      |
 
 #### Returns
 
