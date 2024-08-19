@@ -2,6 +2,7 @@
 import { isValidGridElement } from '../../utils/area';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { isElementHidden } from '../../utils/node';
+import { offset } from '../../utils/position';
 import { get as getStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
 
@@ -28,7 +29,8 @@ export const create = async (
 ): Promise<HTMLDivElement> => {
   await waitForFrame();
 
-  const { height, width, top, left } = targetElement.getBoundingClientRect();
+  const { height, width } = targetElement.getBoundingClientRect();
+  const {top ,left} = await offset(targetElement);
   const { gridTemplateColumns, gridTemplate, padding } = styles;
   // const templateRows = styles['gridTemplateRows'];// for a later feature perhaps
   const columnGap = parseInt(styles.columnGap);
