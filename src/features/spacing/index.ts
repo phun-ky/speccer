@@ -55,12 +55,6 @@ export const create = (
 export const element = async (targetElement: HTMLElement): Promise<void> => {
   if (!targetElement) return;
 
-  const _areas_string: string | null = targetElement.getAttribute(
-    'data-speccer'
-  );
-
-  if(!isValidSpacingElement(_areas_string)) return;
-
   const _target_styles = await getStyles(targetElement);
 
   if (
