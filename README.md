@@ -80,7 +80,9 @@ speccer();
 If you're importing speccer instead of with a script tag, [you can use the following approach](https://codepen.io/phun-ky/pen/VwRRLyY) to apply lazy loading:
 
 ```javascript
-import { pinElements } from "https://esm.sh/@phun-ky/speccer";
+import { pin } from "https://esm.sh/@phun-ky/speccer";
+
+const { pinElements } = pin;
 
 /**
  * Callback function for IntersectionObserver
@@ -347,7 +349,7 @@ The curly brackets are made with SVG paths, and it is required to have the follo
 
 #### Pin programatically
 
-from v9.5 you can utilize the `pin` feature to highlight the anatomy of an element programaticaly. [Here is an example with a click event](https://codepen.io/phun-ky/bracket/LYKOWyP).
+from v9.5 you can utilize the `pin` feature to highlight the anatomy of an element programaticaly. [Here is an example with a click event](https://codepen.io/phun-ky/pen/LYKOWyP).
 
 [Kazam_screencast_00002.webm](https://github.com/user-attachments/assets/5c78cece-de46-4876-81f2-98c9108a2103)
 
