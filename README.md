@@ -560,7 +560,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 ## Changelog
 
-See the [CHANGELOG.md](<[link-to-changelog.md](https://github.com/phun-ky/speccer/blob/main/CHANGELOG.md)>) for details on the latest updates.
+See the [CHANGELOG.md](https://github.com/phun-ky/speccer/blob/main/CHANGELOG.md) for details on the latest updates.
 
 ## FAQ
 
