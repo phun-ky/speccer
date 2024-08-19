@@ -6,7 +6,7 @@
 
 # utils/area
 
-> Last updated 2024-08-19T11:01:52.733Z
+> Last updated 2024-08-19T12:54:07.239Z
 
 ## Functions
 
@@ -39,7 +39,7 @@ const areas = getAreasFromString('left right top');
 
 #### Defined in
 
-[utils/area.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L15)
+[utils/area.ts:22](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L22)
 
 ---
 
@@ -65,7 +65,7 @@ boolean `true` if 'bottom' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:66](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L66)
+[utils/area.ts:73](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L73)
 
 ---
 
@@ -91,7 +91,7 @@ boolean `true` if 'bracket' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:80](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L80)
+[utils/area.ts:87](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L87)
 
 ---
 
@@ -117,7 +117,7 @@ boolean `true` if both 'curly' and 'bracket' are present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:178](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L178)
+[utils/area.ts:185](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L185)
 
 ---
 
@@ -143,7 +143,7 @@ boolean `true` if 'enclose' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:94](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L94)
+[utils/area.ts:101](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L101)
 
 ---
 
@@ -169,7 +169,7 @@ boolean `true` if 'height' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:136](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L136)
+[utils/area.ts:143](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L143)
 
 ---
 
@@ -195,7 +195,7 @@ boolean `true` if 'left' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:24](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L24)
+[utils/area.ts:31](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L31)
 
 ---
 
@@ -221,7 +221,7 @@ boolean `true` if 'parent' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:122](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L122)
+[utils/area.ts:129](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L129)
 
 ---
 
@@ -247,7 +247,7 @@ boolean `true` if 'right' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:38](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L38)
+[utils/area.ts:45](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L45)
 
 ---
 
@@ -273,7 +273,7 @@ boolean `true` if 'subtle' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:108](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L108)
+[utils/area.ts:115](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L115)
 
 ---
 
@@ -299,7 +299,7 @@ boolean `true` if 'top' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:52](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L52)
+[utils/area.ts:59](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L59)
 
 ---
 
@@ -326,7 +326,7 @@ boolean `true` if 'grid' are present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:239](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L239)
+[utils/area.ts:250](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L250)
 
 ---
 
@@ -352,7 +352,7 @@ boolean `true` if 'mark' are present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:229](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L229)
+[utils/area.ts:240](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L240)
 
 ---
 
@@ -378,7 +378,7 @@ boolean `true` if 'measure' are present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:211](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L211)
+[utils/area.ts:221](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L221)
 
 ---
 
@@ -404,7 +404,7 @@ boolean `true` if 'pin' are present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:220](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L220)
+[utils/area.ts:231](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L231)
 
 ---
 
@@ -430,7 +430,7 @@ boolean `true` if 'spacing' are present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:202](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L202)
+[utils/area.ts:211](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L211)
 
 ---
 
@@ -456,7 +456,7 @@ boolean `true` if 'typography' are present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:193](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L193)
+[utils/area.ts:201](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L201)
 
 ---
 
@@ -482,7 +482,7 @@ boolean `true` if 'width' is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:150](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L150)
+[utils/area.ts:157](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L157)
 
 ---
 
@@ -508,7 +508,7 @@ boolean `true` if any SVG-related area is present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:164](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L164)
+[utils/area.ts:171](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L171)
 
 ---
 
@@ -534,7 +534,7 @@ boolean `true` if both 'syntax' are present, otherwise `false`.
 
 #### Defined in
 
-[utils/area.ts:248](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L248)
+[utils/area.ts:264](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L264)
 
 ---
 

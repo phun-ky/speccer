@@ -30,7 +30,7 @@ export const create = async (
   await waitForFrame();
 
   const { height, width } = targetElement.getBoundingClientRect();
-  const {top ,left} = await offset(targetElement);
+  const { top, left } = await offset(targetElement);
   const { gridTemplateColumns, gridTemplate, padding } = styles;
   // const templateRows = styles['gridTemplateRows'];// for a later feature perhaps
   const columnGap = parseInt(styles.columnGap);
@@ -106,10 +106,7 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
   if (!isValidGridElement(_areas_string, _target_styles)) return;
 
-  if (
-    isElementHidden(targetElement)
-  )
-    return;
+  if (isElementHidden(targetElement)) return;
 
   await waitForFrame();
 

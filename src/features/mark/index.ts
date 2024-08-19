@@ -50,10 +50,7 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
   if (!isValidMarkElement(_areas_string)) return;
 
-  if (
-    isElementHidden(targetElement)
-  )
-    return;
+  if (isElementHidden(targetElement)) return;
 
   const markElement = create();
 

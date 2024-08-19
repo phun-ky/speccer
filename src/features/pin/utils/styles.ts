@@ -59,7 +59,12 @@ export const styles = async (
     };
   }
 
-  if (isParentArea(area) && !isBracketArea(area) && !isCurly && !isSubtle(area)) {
+  if (
+    isParentArea(area) &&
+    !isBracketArea(area) &&
+    !isCurly &&
+    !isSubtle(area)
+  ) {
     if (isRightArea(area)) {
       const { top } = _positional_styles.fromRight({
         center: true

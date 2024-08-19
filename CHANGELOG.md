@@ -1,5 +1,21 @@
 # Changelog
 
+## [10.0.1](https://github.com/phun-ky/speccer/compare/v10.0.0...v10.0.1) (2024-08-19)
+
+
+### Tasks
+
+* 🤖 Add dev file for demo ([09793e6](https://github.com/phun-ky/speccer/commit/09793e61c7e33b2dad3b3988e1bc697c9113a9b2))
+* 🤖 Update demo with correct setup ([7b563cb](https://github.com/phun-ky/speccer/commit/7b563cbcf9c981daf731820bd7f3488cf8d93732))
+
+
+### Bug
+
+* 🐛 Spacing does not have any areas, remove the check ([9687cd8](https://github.com/phun-ky/speccer/commit/9687cd8ee01b22f1f9fca72ad973ba73ba74f305))
+* 🐛 Use correct `top` value ([5db7ac0](https://github.com/phun-ky/speccer/commit/5db7ac07041f68088f127ae7442e9c0d38057bd0))
+* 🐛 Use correct selector ([5aa5e44](https://github.com/phun-ky/speccer/commit/5aa5e445621c5c109b0442c08186d250fa7c9b84))
+* 🐛 Use correct variable name ([5ca11fa](https://github.com/phun-ky/speccer/commit/5ca11faa9b06364deeb8dcc7c9aa98b351eb2c3c))
+
 ## [10.0.0](https://github.com/phun-ky/speccer/compare/v9.6.2...v10.0.0) (2024-08-19)
 
 

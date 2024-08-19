@@ -57,10 +57,7 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
   const _target_styles = await getStyles(targetElement);
 
-  if (
-    isElementHidden(targetElement)
-  )
-    return;
+  if (isElementHidden(targetElement)) return;
 
   const _target_spacing_styles = getSpacing(_target_styles);
   const _target_pruned_spacing_styles = Object.keys(

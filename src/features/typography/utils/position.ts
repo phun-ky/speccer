@@ -34,13 +34,17 @@ export const position = async (
   const _speccer_el_rect = speccerElement.getBoundingClientRect();
   const _el_offset = await offset(targetElement);
 
-  if (area && area.includes(TypographyAreaEnum.Right)){
+  if (area && area.includes(TypographyAreaEnum.Right)) {
     const _right_layout_position_left =
-    _el_offset.left + _target_rect.width + SPECCER_PIN_SPACE + 'px';
+      _el_offset.left + _target_rect.width + SPECCER_PIN_SPACE + 'px';
     const _right_layout_position_top =
-    decimal(
-      get_vertical_center_of_els(_el_offset.top, _speccer_el_rect, _target_rect)
-    ) + 'px';
+      decimal(
+        get_vertical_center_of_els(
+          _el_offset.top,
+          _speccer_el_rect,
+          _target_rect
+        )
+      ) + 'px';
 
     return {
       left: _right_layout_position_left,
@@ -48,17 +52,17 @@ export const position = async (
     };
   }
 
-  if (area && area.includes(TypographyAreaEnum.Top)){
+  if (area && area.includes(TypographyAreaEnum.Top)) {
     const _top_layout_position_left =
-    decimal(
-      get_horizontal_center_of_els(
-        _el_offset.left,
-        _speccer_el_rect,
-        _target_rect
-      )
-    ) + 'px';
+      decimal(
+        get_horizontal_center_of_els(
+          _el_offset.left,
+          _speccer_el_rect,
+          _target_rect
+        )
+      ) + 'px';
     const _top_layout_position_top =
-    _el_offset.top - _speccer_el_rect.height - SPECCER_PIN_SPACE + 'px';
+      _el_offset.top - _speccer_el_rect.height - SPECCER_PIN_SPACE + 'px';
 
     return {
       left: _top_layout_position_left,
@@ -66,17 +70,17 @@ export const position = async (
     };
   }
 
-  if (area && area.includes(TypographyAreaEnum.Bottom)){
+  if (area && area.includes(TypographyAreaEnum.Bottom)) {
     const _bottom_layout_position_left =
-    decimal(
-      get_horizontal_center_of_els(
-        _el_offset.left,
-        _speccer_el_rect,
-        _target_rect
-      )
-    ) + 'px';
+      decimal(
+        get_horizontal_center_of_els(
+          _el_offset.left,
+          _speccer_el_rect,
+          _target_rect
+        )
+      ) + 'px';
     const _bottom_layout_position_top =
-    _el_offset.top + _target_rect.height + SPECCER_PIN_SPACE + 'px';
+      _el_offset.top + _target_rect.height + SPECCER_PIN_SPACE + 'px';
 
     return {
       left: _bottom_layout_position_left,

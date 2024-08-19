@@ -52,6 +52,7 @@ export const removeAll = (selector: string, el: Document = document): void => {
  * }
  * ```
  */
-export const isElementHidden = (element: HTMLElement):boolean =>  !element.checkVisibility({
-  checkVisibilityCSS: true
-});
+export const isElementHidden = (element: HTMLElement): boolean =>
+  !element.checkVisibility({
+    checkVisibilityCSS: true
+  });
