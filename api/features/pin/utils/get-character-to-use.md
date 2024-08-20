@@ -6,7 +6,7 @@
 
 # features/pin/utils/get-character-to-use
 
-> Last updated 2024-08-20T06:35:08.847Z
+> Last updated 2024-08-20T06:40:18.950Z
 
 ## Functions
 

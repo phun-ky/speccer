@@ -1,5 +1,15 @@
 # Changelog
 
+## [10.0.5](https://github.com/phun-ky/speccer/compare/v10.0.4...v10.0.5) (2024-08-20)
+
+
+### Documentation
+
+* ✏️ Add missing typedoc plugin for mdn links ([0f5b76e](https://github.com/phun-ky/speccer/commit/0f5b76edaadcde006ee63f1dc69a54b0474cb7c7))
+* ✏️ Give correct order of `curly` feature in examples ([29e8026](https://github.com/phun-ky/speccer/commit/29e8026fd5943d9f3d16608319f5fd98c8b83eb6))
+* ✏️ Regenerate API documentation ([34cc5e9](https://github.com/phun-ky/speccer/commit/34cc5e9f311650a8374fc3cfa2035b929818acd0))
+* ✏️ Use uniform layout for name ([d4c14e0](https://github.com/phun-ky/speccer/commit/d4c14e0d7967cd2e8a435722070c9e64e8414e18))
+
 ## [10.0.4](https://github.com/phun-ky/speccer/compare/v10.0.3...v10.0.4) (2024-08-20)
 
 
