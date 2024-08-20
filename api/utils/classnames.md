@@ -6,7 +6,7 @@
 
 # utils/classnames
 
-> Last updated 2024-08-20T06:53:38.756Z
+> Last updated 2024-08-20T07:01:27.199Z
 
 ## Functions
 
