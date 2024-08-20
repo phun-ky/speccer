@@ -1,5 +1,17 @@
 # Changelog
 
+## [10.0.6](https://github.com/phun-ky/speccer/compare/v10.0.5...v10.0.6) (2024-08-20)
+
+
+### Tasks
+
+* 🤖 Update `dependabot.yml` ([c59909e](https://github.com/phun-ky/speccer/commit/c59909ea0fd0f27cab06dde80fe77c9bec71810d))
+
+
+### Bug
+
+* 🐛 Add missing level ([da1d882](https://github.com/phun-ky/speccer/commit/da1d8821de6d3401e440562815ab1111dbf753bc))
+
 ## [10.0.5](https://github.com/phun-ky/speccer/compare/v10.0.4...v10.0.5) (2024-08-20)
 
 

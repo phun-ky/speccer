@@ -6,7 +6,7 @@
 
 # features/pin/utils/pin-element
 
-> Last updated 2024-08-20T06:40:18.951Z
+> Last updated 2024-08-20T06:53:38.738Z
 
 ## Functions
 
