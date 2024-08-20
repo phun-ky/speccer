@@ -6,7 +6,7 @@
 
 # features/typography
 
-> Last updated 2024-08-20T06:40:18.952Z
+> Last updated 2024-08-20T06:53:38.740Z
 
 ## Functions
 
