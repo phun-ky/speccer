@@ -6,7 +6,7 @@
 
 # utils/css
 
-> Last updated 2024-08-20T07:01:27.200Z
+> Last updated 2024-08-20T07:17:27.774Z
 
 ## Functions
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [10.0.8](https://github.com/phun-ky/speccer/compare/v10.0.7...v10.0.8) (2024-08-20)
+
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 3 updates ([3ef4778](https://github.com/phun-ky/speccer/commit/3ef477848ca7dd97533f5785f5bd9085f38ffc9a))
+
 ## [10.0.7](https://github.com/phun-ky/speccer/compare/v10.0.6...v10.0.7) (2024-08-20)
 
 
