@@ -245,7 +245,7 @@ In your component examples, use the following attribute. Remember to use the `da
 ```html
 <div data-speccer="pin-area">
   <div
-    data-speccer="pin [bracket|enclose][curly] [left|right|top|bottom]"
+    data-speccer="pin [bracket [curly] |enclose] [left|right|top|bottom]"
     class="..."
   ></div>
 </div>
