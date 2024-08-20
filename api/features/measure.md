@@ -6,7 +6,7 @@
 
 # features/measure
 
-> Last updated 2024-08-20T06:28:48.112Z
+> Last updated 2024-08-20T06:35:08.845Z
 
 ## Functions
 
@@ -28,7 +28,7 @@ Create a measurement element with optional text, area, and element type.
 
 #### Returns
 
-`HTMLElement`
+[`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
 - The created measurement element.
 
@@ -57,13 +57,13 @@ Create a measurement element and add it to the body with styles matching a speci
 
 #### Parameters
 
-| Parameter       | Type          | Description                              |
-| --------------- | ------------- | ---------------------------------------- |
-| `targetElement` | `HTMLElement` | The target element to match styles with. |
+| Parameter       | Type                                                                    | Description                              |
+| --------------- | ----------------------------------------------------------------------- | ---------------------------------------- |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target element to match styles with. |
 
 #### Returns
 
-`Promise`\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 - A promise that resolves after creating and styling the measurement element.
 

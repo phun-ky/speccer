@@ -6,7 +6,7 @@
 
 # features/grid
 
-> Last updated 2024-08-20T06:28:48.110Z
+> Last updated 2024-08-20T06:35:08.844Z
 
 ## Functions
 
@@ -20,14 +20,14 @@ Creates a visual grid overlay for a given target element.
 
 #### Parameters
 
-| Parameter       | Type                  | Description                                        |
-| --------------- | --------------------- | -------------------------------------------------- |
-| `targetElement` | `HTMLElement`         | The target element to create the grid overlay for. |
-| `styles`        | `CSSStyleDeclaration` | The computed styles of the target element.         |
+| Parameter       | Type                                                                                    | Description                                        |
+| --------------- | --------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                 | The target element to create the grid overlay for. |
+| `styles`        | [`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration) | The computed styles of the target element.         |
 
 #### Returns
 
-`Promise`\<`HTMLDivElement`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`HTMLDivElement`](https://developer.mozilla.org/docs/Web/API/HTMLDivElement)>
 
 The created grid container element.
 
@@ -62,13 +62,13 @@ Adds a visual grid overlay to the target element if it has the appropriate data 
 
 #### Parameters
 
-| Parameter       | Type          | Description                                    |
-| --------------- | ------------- | ---------------------------------------------- |
-| `targetElement` | `HTMLElement` | The target element to add the grid overlay to. |
+| Parameter       | Type                                                                    | Description                                    |
+| --------------- | ----------------------------------------------------------------------- | ---------------------------------------------- |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target element to add the grid overlay to. |
 
 #### Returns
 
-`Promise`\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 A promise that resolves once the overlay has been added.
 

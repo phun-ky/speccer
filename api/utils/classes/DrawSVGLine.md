@@ -6,7 +6,7 @@
 
 # utils/classes/DrawSVGLine
 
-> Last updated 2024-08-20T06:28:48.131Z
+> Last updated 2024-08-20T06:35:08.858Z
 
 ## Classes
 
@@ -26,10 +26,10 @@ Creates a new DrawSVGLine instance.
 
 ###### Parameters
 
-| Parameter      | Type          | Description                        |
-| -------------- | ------------- | ---------------------------------- |
-| `startElement` | `HTMLElement` | The starting element for the line. |
-| `stopElement`  | `HTMLElement` | The ending element for the line.   |
+| Parameter      | Type                                                                    | Description                        |
+| -------------- | ----------------------------------------------------------------------- | ---------------------------------- |
+| `startElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The starting element for the line. |
+| `stopElement`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The ending element for the line.   |
 
 ###### Returns
 
@@ -41,11 +41,11 @@ Creates a new DrawSVGLine instance.
 
 #### Properties
 
-| Property       | Type             | Defined in                                                                                                           |
-| -------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `line`         | `SVGPathElement` | [utils/classes/DrawSVGLine.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L14) |
-| `startElement` | `HTMLElement`    | [utils/classes/DrawSVGLine.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L12) |
-| `stopElement`  | `HTMLElement`    | [utils/classes/DrawSVGLine.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L13) |
+| Property       | Type                                                                          | Defined in                                                                                                           |
+| -------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `line`         | [`SVGPathElement`](https://developer.mozilla.org/docs/Web/API/SVGPathElement) | [utils/classes/DrawSVGLine.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L14) |
+| `startElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | [utils/classes/DrawSVGLine.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L12) |
+| `stopElement`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | [utils/classes/DrawSVGLine.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L13) |
 
 #### Methods
 
@@ -75,13 +75,13 @@ Draws the line based on the provided path.
 
 ###### Parameters
 
-| Parameter | Type             | Description                                     |
-| --------- | ---------------- | ----------------------------------------------- |
-| `path`    | `SVGPathElement` | The SVGPathElement to be used as the base path. |
+| Parameter | Type                                                                          | Description                                     |
+| --------- | ----------------------------------------------------------------------------- | ----------------------------------------------- |
+| `path`    | [`SVGPathElement`](https://developer.mozilla.org/docs/Web/API/SVGPathElement) | The SVGPathElement to be used as the base path. |
 
 ###### Returns
 
-`Promise`\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 ###### Throws
 

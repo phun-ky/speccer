@@ -6,7 +6,7 @@
 
 # features/a11y/utils/styles
 
-> Last updated 2024-08-20T06:28:48.110Z
+> Last updated 2024-08-20T06:35:08.844Z
 
 ## Functions
 
@@ -24,15 +24,15 @@ Calculates and returns the styles for an accessibility element based on its type
 
 #### Parameters
 
-| Parameter       | Type          | Description                                                                                   |
-| --------------- | ------------- | --------------------------------------------------------------------------------------------- |
-| `type`          | `string`      | Type of the accessibility element ('tabstops', 'landmark', 'region', 'shortcut', or default). |
-| `targetElement` | `HTMLElement` | Target HTML element.                                                                          |
-| `a11yElement`   | `HTMLElement` | Accessibility HTML element to be styled.                                                      |
+| Parameter       | Type                                                                    | Description                                                                                   |
+| --------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `type`          | `string`                                                                | Type of the accessibility element ('tabstops', 'landmark', 'region', 'shortcut', or default). |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | Target HTML element.                                                                          |
+| `a11yElement`   | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | Accessibility HTML element to be styled.                                                      |
 
 #### Returns
 
-`Promise`\<[`SpeccerStylesReturnType`](../../../types/styles.md#speccerstylesreturntype)>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SpeccerStylesReturnType`](../../../types/styles.md#speccerstylesreturntype)>
 
 A Promise resolving with the calculated styles.
 

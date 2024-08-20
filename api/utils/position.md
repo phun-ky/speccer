@@ -6,7 +6,7 @@
 
 # utils/position
 
-> Last updated 2024-08-20T06:28:48.136Z
+> Last updated 2024-08-20T06:35:08.861Z
 
 ## Functions
 
@@ -20,14 +20,14 @@ Gets various positioning properties between two HTML elements.
 
 #### Parameters
 
-| Parameter  | Type          | Description              |
-| ---------- | ------------- | ------------------------ |
-| `sourceEl` | `HTMLElement` | The source HTML element. |
-| `targetEl` | `HTMLElement` | The target HTML element. |
+| Parameter  | Type                                                                    | Description              |
+| ---------- | ----------------------------------------------------------------------- | ------------------------ |
+| `sourceEl` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The source HTML element. |
+| `targetEl` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target HTML element. |
 
 #### Returns
 
-`Promise`\<[`GetRecPropertiesInterface`](../types/interfaces/position.md#getrecpropertiesinterface)>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`GetRecPropertiesInterface`](../types/interfaces/position.md#getrecpropertiesinterface)>
 
 - A promise that resolves to an object with positioning functions.
 
@@ -60,11 +60,11 @@ Calculates the horizontal center of two elements.
 
 #### Parameters
 
-| Parameter    | Type      | Description                       |
-| ------------ | --------- | --------------------------------- |
-| `modifier`   | `number`  | A modifier value.                 |
-| `startRect`  | `DOMRect` | The starting element's rectangle. |
-| `targetRect` | `DOMRect` | The target element's rectangle.   |
+| Parameter    | Type                                                            | Description                       |
+| ------------ | --------------------------------------------------------------- | --------------------------------- |
+| `modifier`   | `number`                                                        | A modifier value.                 |
+| `startRect`  | [`DOMRect`](https://developer.mozilla.org/docs/Web/API/DOMRect) | The starting element's rectangle. |
+| `targetRect` | [`DOMRect`](https://developer.mozilla.org/docs/Web/API/DOMRect) | The target element's rectangle.   |
 
 #### Returns
 
@@ -95,11 +95,11 @@ Calculates the vertical center of two elements.
 
 #### Parameters
 
-| Parameter    | Type      | Description                       |
-| ------------ | --------- | --------------------------------- |
-| `modifier`   | `number`  | A modifier value.                 |
-| `startRect`  | `DOMRect` | The starting element's rectangle. |
-| `targetRect` | `DOMRect` | The target element's rectangle.   |
+| Parameter    | Type                                                            | Description                       |
+| ------------ | --------------------------------------------------------------- | --------------------------------- |
+| `modifier`   | `number`                                                        | A modifier value.                 |
+| `startRect`  | [`DOMRect`](https://developer.mozilla.org/docs/Web/API/DOMRect) | The starting element's rectangle. |
+| `targetRect` | [`DOMRect`](https://developer.mozilla.org/docs/Web/API/DOMRect) | The target element's rectangle.   |
 
 #### Returns
 
@@ -130,13 +130,13 @@ Gets the offset properties of an HTML element.
 
 #### Parameters
 
-| Parameter  | Type          | Description              |
-| ---------- | ------------- | ------------------------ |
-| `targetEl` | `HTMLElement` | The target HTML element. |
+| Parameter  | Type                                                                    | Description              |
+| ---------- | ----------------------------------------------------------------------- | ------------------------ |
+| `targetEl` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target HTML element. |
 
 #### Returns
 
-`Promise`\<[`PositionPropertiesType`](../types/position.md#positionpropertiestype)>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`PositionPropertiesType`](../types/position.md#positionpropertiestype)>
 
 - A promise that resolves to the offset properties.
 
@@ -163,14 +163,14 @@ Gets the offset properties of an HTML element with its center aligned to another
 
 #### Parameters
 
-| Parameter  | Type          | Description              |
-| ---------- | ------------- | ------------------------ |
-| `sourceEl` | `HTMLElement` | The source HTML element. |
-| `targetEl` | `HTMLElement` | The target HTML element. |
+| Parameter  | Type                                                                    | Description              |
+| ---------- | ----------------------------------------------------------------------- | ------------------------ |
+| `sourceEl` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The source HTML element. |
+| `targetEl` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target HTML element. |
 
 #### Returns
 
-`Promise`\<[`PositionPropertiesType`](../types/position.md#positionpropertiestype)>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`PositionPropertiesType`](../types/position.md#positionpropertiestype)>
 
 - A promise that resolves to the offset properties.
 

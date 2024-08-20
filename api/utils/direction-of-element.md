@@ -6,7 +6,7 @@
 
 # utils/direction-of-element
 
-> Last updated 2024-08-20T06:28:48.135Z
+> Last updated 2024-08-20T06:35:08.860Z
 
 ## Functions
 
@@ -20,16 +20,16 @@ Get the direction of an element based on its position relative to another elemen
 
 #### Parameters
 
-| Parameter        | Type          | Description                                           |
-| ---------------- | ------------- | ----------------------------------------------------- |
-| `options`        | `object`      | Options for direction calculation.                    |
-| `options.crude`? | `boolean`     | If the direction should be calculated crudely (NSEW). |
-| `options.start`  | `HTMLElement` | The starting HTML element.                            |
-| `options.stop`   | `HTMLElement` | The stopping HTML element.                            |
+| Parameter        | Type                                                                    | Description                                           |
+| ---------------- | ----------------------------------------------------------------------- | ----------------------------------------------------- |
+| `options`        | `object`                                                                | Options for direction calculation.                    |
+| `options.crude`? | `boolean`                                                               | If the direction should be calculated crudely (NSEW). |
+| `options.start`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The starting HTML element.                            |
+| `options.stop`   | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The stopping HTML element.                            |
 
 #### Returns
 
-`Promise`\<`string`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`>
 
 - The calculated direction.
 

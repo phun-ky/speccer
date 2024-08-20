@@ -77,7 +77,7 @@ speccer();
 
 #### Lazy loading
 
-If you're importing speccer instead of with a script tag, [you can use the following approach](https://codepen.io/phun-ky/pen/VwRRLyY) to apply lazy loading:
+If you're importing **SPECCER** instead of with a script tag, [you can use the following approach](https://codepen.io/phun-ky/pen/VwRRLyY) to apply lazy loading:
 
 ```javascript
 import { pin } from "https://esm.sh/@phun-ky/speccer";
@@ -139,7 +139,7 @@ And then follow the steps below to display the specifications you want :)
 
 #### Advanced usage
 
-If you want to control speccer a bit more, you have some options. Apply one of these attributes to the script element for different types of initialization:
+If you want to control **SPECCER** a bit more, you have some options. Apply one of these attributes to the script element for different types of initialization:
 
 ```html
 <script src="../speccer.js" data-<manual|instant|dom|lazy></script>
@@ -245,7 +245,7 @@ In your component examples, use the following attribute. Remember to use the `da
 ```html
 <div data-speccer="pin-area">
   <div
-    data-speccer="pin [bracket|enclose][curly] [left|right|top|bottom]"
+    data-speccer="pin [bracket [curly] |enclose] [left|right|top|bottom]"
     class="..."
   ></div>
 </div>
@@ -440,7 +440,7 @@ In your component examples, use the following attribute.
 
 ### A11y notation
 
-With speccer, you can also display accessibility notation, like [Accessibility Bluelines](https://dribbble.com/shots/6269661-Accessibility-Bluelines?utm_source=Clipboard_Shot&utm_campaign=jeremyelder&utm_content=Accessibility%20Bluelines&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=jeremyelder&utm_content=Accessibility%20Bluelines&utm_medium=Social_Share):
+With **SPECCER**, you can also display accessibility notation, like [Accessibility Bluelines](https://dribbble.com/shots/6269661-Accessibility-Bluelines?utm_source=Clipboard_Shot&utm_campaign=jeremyelder&utm_content=Accessibility%20Bluelines&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=jeremyelder&utm_content=Accessibility%20Bluelines&utm_medium=Social_Share):
 
 Prior art: [Jeremy Elder](https://twitter.com/JeremyElder)
 

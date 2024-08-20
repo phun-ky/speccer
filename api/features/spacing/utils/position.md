@@ -6,7 +6,7 @@
 
 # features/spacing/utils/position
 
-> Last updated 2024-08-20T06:28:48.115Z
+> Last updated 2024-08-20T06:35:08.848Z
 
 ## Functions
 
@@ -25,16 +25,16 @@ Set the position and dimensions of a spacing element relative to a target elemen
 
 #### Parameters
 
-| Parameter        | Type          | Description                                                      |
-| ---------------- | ------------- | ---------------------------------------------------------------- |
-| `property`       | `string`      | The CSS property to set (e.g., 'marginTop', 'marginLeft', etc.). |
-| `value`          | `number`      | The value of the CSS property.                                   |
-| `spacingElement` | `HTMLElement` | The spacing element.                                             |
-| `targetElement`  | `HTMLElement` | The target element.                                              |
+| Parameter        | Type                                                                    | Description                                                      |
+| ---------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `property`       | `string`                                                                | The CSS property to set (e.g., 'marginTop', 'marginLeft', etc.). |
+| `value`          | `number`                                                                | The value of the CSS property.                                   |
+| `spacingElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The spacing element.                                             |
+| `targetElement`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target element.                                              |
 
 #### Returns
 
-`Promise`\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 - A promise that resolves after setting the position and dimensions.
 

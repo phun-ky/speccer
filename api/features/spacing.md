@@ -6,7 +6,7 @@
 
 # features/spacing
 
-> Last updated 2024-08-20T06:28:48.115Z
+> Last updated 2024-08-20T06:35:08.847Z
 
 ## Functions
 
@@ -27,7 +27,7 @@ Create a spacing element with optional text content.
 
 #### Returns
 
-`HTMLElement`
+[`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
 - The created spacing element.
 
@@ -56,13 +56,13 @@ Create and position spacing elements based on the target element's computed spac
 
 #### Parameters
 
-| Parameter       | Type          | Description                                        |
-| --------------- | ------------- | -------------------------------------------------- |
-| `targetElement` | `HTMLElement` | The target element to create spacing elements for. |
+| Parameter       | Type                                                                    | Description                                        |
+| --------------- | ----------------------------------------------------------------------- | -------------------------------------------------- |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target element to create spacing elements for. |
 
 #### Returns
 
-`Promise`\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 - A promise that resolves after creating and positioning the spacing elements.
 

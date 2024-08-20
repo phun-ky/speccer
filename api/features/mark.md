@@ -6,7 +6,7 @@
 
 # features/mark
 
-> Last updated 2024-08-20T06:28:48.111Z
+> Last updated 2024-08-20T06:35:08.845Z
 
 ## Functions
 
@@ -26,7 +26,7 @@ Create a marker element with an optional element type.
 
 #### Returns
 
-`HTMLElement`
+[`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
 - The created marker element.
 
@@ -55,13 +55,13 @@ Create a marker element and add it to the body with styles matching a specified 
 
 #### Parameters
 
-| Parameter       | Type          | Description                              |
-| --------------- | ------------- | ---------------------------------------- |
-| `targetElement` | `HTMLElement` | The target element to match styles with. |
+| Parameter       | Type                                                                    | Description                              |
+| --------------- | ----------------------------------------------------------------------- | ---------------------------------------- |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target element to match styles with. |
 
 #### Returns
 
-`Promise`\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 - A promise that resolves after creating and styling the marker element.
 

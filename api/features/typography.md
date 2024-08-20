@@ -6,7 +6,7 @@
 
 # features/typography
 
-> Last updated 2024-08-20T06:28:48.116Z
+> Last updated 2024-08-20T06:35:08.848Z
 
 ## Functions
 
@@ -27,7 +27,7 @@ Create a DOM element with provided HTML and optional CSS class names.
 
 #### Returns
 
-`HTMLElement`
+[`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
 - The created DOM element.
 
@@ -58,13 +58,13 @@ Create a specced typography element for a given target element.
 
 #### Parameters
 
-| Parameter       | Type          | Description                                 |
-| --------------- | ------------- | ------------------------------------------- |
-| `targetElement` | `HTMLElement` | The target element to specc typography for. |
+| Parameter       | Type                                                                    | Description                                 |
+| --------------- | ----------------------------------------------------------------------- | ------------------------------------------- |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target element to specc typography for. |
 
 #### Returns
 
-`Promise`\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 - A promise that resolves once typography element is created and positioned.
 

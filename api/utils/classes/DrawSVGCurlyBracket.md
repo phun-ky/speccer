@@ -6,7 +6,7 @@
 
 # utils/classes/DrawSVGCurlyBracket
 
-> Last updated 2024-08-20T06:28:48.131Z
+> Last updated 2024-08-20T06:35:08.858Z
 
 ## Classes
 
@@ -26,10 +26,10 @@ Creates a new DrawSVGCurlyBracket instance.
 
 ###### Parameters
 
-| Parameter      | Type          | Description                           |
-| -------------- | ------------- | ------------------------------------- |
-| `startElement` | `HTMLElement` | The starting element for the bracket. |
-| `stopElement`  | `HTMLElement` | The ending element for the bracket.   |
+| Parameter      | Type                                                                    | Description                           |
+| -------------- | ----------------------------------------------------------------------- | ------------------------------------- |
+| `startElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The starting element for the bracket. |
+| `stopElement`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The ending element for the bracket.   |
 
 ###### Returns
 
@@ -41,12 +41,12 @@ Creates a new DrawSVGCurlyBracket instance.
 
 #### Properties
 
-| Property            | Type             | Defined in                                                                                                                           |
-| ------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `firstPathElement`  | `SVGPathElement` | [utils/classes/DrawSVGCurlyBracket.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L14) |
-| `secondPathElement` | `SVGPathElement` | [utils/classes/DrawSVGCurlyBracket.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L15) |
-| `startElement`      | `HTMLElement`    | [utils/classes/DrawSVGCurlyBracket.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L12) |
-| `stopElement`       | `HTMLElement`    | [utils/classes/DrawSVGCurlyBracket.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L13) |
+| Property            | Type                                                                          | Defined in                                                                                                                           |
+| ------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `firstPathElement`  | [`SVGPathElement`](https://developer.mozilla.org/docs/Web/API/SVGPathElement) | [utils/classes/DrawSVGCurlyBracket.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L14) |
+| `secondPathElement` | [`SVGPathElement`](https://developer.mozilla.org/docs/Web/API/SVGPathElement) | [utils/classes/DrawSVGCurlyBracket.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L15) |
+| `startElement`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | [utils/classes/DrawSVGCurlyBracket.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L12) |
+| `stopElement`       | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | [utils/classes/DrawSVGCurlyBracket.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L13) |
 
 #### Methods
 
@@ -76,13 +76,13 @@ Draws the curly bracket based on the provided path.
 
 ###### Parameters
 
-| Parameter | Type             | Description                                     |
-| --------- | ---------------- | ----------------------------------------------- |
-| `path`    | `SVGPathElement` | The SVGPathElement to be used as the base path. |
+| Parameter | Type                                                                          | Description                                     |
+| --------- | ----------------------------------------------------------------------------- | ----------------------------------------------- |
+| `path`    | [`SVGPathElement`](https://developer.mozilla.org/docs/Web/API/SVGPathElement) | The SVGPathElement to be used as the base path. |
 
 ###### Returns
 
-`Promise`\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 ###### Throws
 
