@@ -1,5 +1,12 @@
 # Changelog
 
+## [10.0.3](https://github.com/phun-ky/speccer/compare/v10.0.2...v10.0.3) (2024-08-20)
+
+
+### Tasks
+
+* 🤖 bump typedoc-plugin-mdn-links from 3.2.8 to 3.2.9 ([2faa747](https://github.com/phun-ky/speccer/commit/2faa7473122d14c351e0d2cb01ad536ce5d67bf4))
+
 ## [10.0.2](https://github.com/phun-ky/speccer/compare/v10.0.1...v10.0.2) (2024-08-19)
 
 

@@ -6,7 +6,7 @@
 
 # types/interfaces/classnames
 
-> Last updated 2024-08-19T13:10:31.116Z
+> Last updated 2024-08-20T05:49:30.890Z
 
 ## Type Aliases
 
