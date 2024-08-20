@@ -3,6 +3,8 @@
   "plugin": [
     "typedoc-plugin-markdown",
     "typedoc-plugin-remark",
+    "typedoc-plugin-mdn-links",
+    "typedoc-plugin-rename-defaults",
     "./custom-typedoc-plugin.js"
   ],
   "out": "./api",
