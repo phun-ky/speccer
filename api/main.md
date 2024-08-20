@@ -6,7 +6,7 @@
 
 # main
 
-> Last updated 2024-08-20T06:28:48.118Z
+> Last updated 2024-08-20T06:35:08.849Z
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@
   - [spacing](#spacing)
   - [typography](#typography)
 - [Functions](#functions)
-  - [default()](#default)
+  - [speccer()](#speccer)
 
 ## Examples
 
@@ -65,7 +65,7 @@ const grid: {
 </td>
 <td>
 
-(`targetElement`, `styles`) => `Promise`\<`HTMLDivElement`>
+(`targetElement`, `styles`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`HTMLDivElement`](https://developer.mozilla.org/docs/Web/API/HTMLDivElement)>
 
 </td>
 <td>
@@ -87,7 +87,7 @@ gridCreate
 </td>
 <td>
 
-(`targetElement`) => `Promise`\<`void`>
+(`targetElement`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 </td>
 <td>
@@ -135,7 +135,7 @@ const mark: {
 </td>
 <td>
 
-(`n`) => `HTMLElement`
+(`n`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
 </td>
 <td>
@@ -157,7 +157,7 @@ markCreate
 </td>
 <td>
 
-(`targetElement`) => `Promise`\<`void`>
+(`targetElement`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 </td>
 <td>
@@ -205,7 +205,7 @@ const measure: {
 </td>
 <td>
 
-(`text`, `area`, `tag`) => `HTMLElement`
+(`text`, `area`, `tag`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
 </td>
 <td>
@@ -227,7 +227,7 @@ measureCreate
 </td>
 <td>
 
-(`targetElement`) => `Promise`\<`void`>
+(`targetElement`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 </td>
 <td>
@@ -375,7 +375,7 @@ const pin: {
 </td>
 <td>
 
-(`textContent`, `area`, `id`, `n`) => `HTMLElement`
+(`textContent`, `area`, `id`, `n`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
 </td>
 <td>
@@ -392,7 +392,7 @@ const pin: {
 </td>
 <td>
 
-(`targetElement`, `symbol`, `parentElement`, `areas`?) => `Promise`\<`string` | `void`>
+(`targetElement`, `symbol`, `parentElement`, `areas`?) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string` | `void`>
 
 </td>
 <td>
@@ -409,7 +409,7 @@ const pin: {
 </td>
 <td>
 
-(`sectionElement`) => `Promise`\<`void`>
+(`sectionElement`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 </td>
 <td>
@@ -452,7 +452,7 @@ const spacing: {
 </td>
 <td>
 
-(`text`, `tag`) => `HTMLElement`
+(`text`, `tag`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
 </td>
 <td>
@@ -474,7 +474,7 @@ spacingCreate
 </td>
 <td>
 
-(`targetElement`) => `Promise`\<`void`>
+(`targetElement`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 </td>
 <td>
@@ -522,7 +522,7 @@ const typography: {
 </td>
 <td>
 
-(`html`, `area`) => `HTMLElement`
+(`html`, `area`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
 </td>
 <td>
@@ -544,7 +544,7 @@ typographyCreate
 </td>
 <td>
 
-(`targetElement`) => `Promise`\<`void`>
+(`targetElement`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 </td>
 <td>
@@ -566,10 +566,10 @@ typographyElement
 
 ## Functions
 
-### default()
+### speccer()
 
 ```ts
-function default(): void
+function speccer(): void;
 ```
 
 #### Returns

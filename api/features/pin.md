@@ -6,7 +6,7 @@
 
 # features/pin
 
-> Last updated 2024-08-20T06:28:48.112Z
+> Last updated 2024-08-20T06:35:08.846Z
 
 This feature highlights the anatomy of an element.
 
@@ -28,7 +28,7 @@ In your component examples, use the following attribute. Remember to use the `da
 ```html
 <div data-speccer="pin-area">
   <div
-    data-speccer="pin [bracket|enclose][curly] [left|right|top|bottom]"
+    data-speccer="pin [bracket [curly] |enclose] [left|right|top|bottom]"
     class="..."
   ></div>
 </div>
@@ -56,13 +56,13 @@ Create pinned elements based on the section element and its data-speccer attribu
 
 #### Parameters
 
-| Parameter        | Type          | Description                                     |
-| ---------------- | ------------- | ----------------------------------------------- |
-| `sectionElement` | `HTMLElement` | The section element containing pinned elements. |
+| Parameter        | Type                                                                    | Description                                     |
+| ---------------- | ----------------------------------------------------------------------- | ----------------------------------------------- |
+| `sectionElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The section element containing pinned elements. |
 
 #### Returns
 
-`Promise`\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 - A promise that resolves after creating pinned elements.
 

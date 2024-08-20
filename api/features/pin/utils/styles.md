@@ -6,7 +6,7 @@
 
 # features/pin/utils/styles
 
-> Last updated 2024-08-20T06:28:48.115Z
+> Last updated 2024-08-20T06:35:08.847Z
 
 ## Functions
 
@@ -29,14 +29,14 @@ Get styles for pin elements based on the specified area and options.
 | Parameter       | Type                                                                    | Description              |
 | --------------- | ----------------------------------------------------------------------- | ------------------------ |
 | `area`          | `string`                                                                | The area description.    |
-| `targetElement` | `HTMLElement`                                                           | The target element.      |
-| `pinElement`    | `HTMLElement`                                                           | The pin element.         |
-| `parentElement` | `HTMLElement`                                                           | The parent element.      |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target element.      |
+| `pinElement`    | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The pin element.         |
+| `parentElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The parent element.      |
 | `options`?      | [`PinStylesOptionsType`](../../../types/bezier.md#pinstylesoptionstype) | Optional styles options. |
 
 #### Returns
 
-`Promise`\<[`SpeccerStylesReturnType`](../../../types/styles.md#speccerstylesreturntype)>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SpeccerStylesReturnType`](../../../types/styles.md#speccerstylesreturntype)>
 
 - The computed styles.
 

@@ -6,7 +6,7 @@
 
 # utils/bezier
 
-> Last updated 2024-08-20T06:28:48.128Z
+> Last updated 2024-08-20T06:35:08.855Z
 
 ## Functions
 
@@ -112,13 +112,13 @@ Generates an SVG path for a curved line between two HTML elements.
 
 | Parameter | Type                                                                          | Description                              |
 | --------- | ----------------------------------------------------------------------------- | ---------------------------------------- |
-| `startEl` | `HTMLElement`                                                                 | The starting HTML element.               |
-| `stopEl`  | `HTMLElement`                                                                 | The ending HTML element.                 |
+| `startEl` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | The starting HTML element.               |
+| `stopEl`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | The ending HTML element.                 |
 | `options` | [`CurlyBezierPathOptionsType`](../types/bezier.md#curlybezierpathoptionstype) | Options for controlling the curved line. |
 
 #### Returns
 
-`Promise`\<`string`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`>
 
 The SVG path string for the curved line.
 
@@ -245,15 +245,15 @@ Generates an SVG path for a straight line between two HTML elements.
 
 #### Parameters
 
-| Parameter | Type                                                                | Description                                |
-| --------- | ------------------------------------------------------------------- | ------------------------------------------ |
-| `startEl` | `HTMLElement`                                                       | The starting HTML element.                 |
-| `stopEl`  | `HTMLElement`                                                       | The ending HTML element.                   |
-| `options` | [`BezierPathOptionsType`](../types/bezier.md#bezierpathoptionstype) | Options for controlling the straight line. |
+| Parameter | Type                                                                    | Description                                |
+| --------- | ----------------------------------------------------------------------- | ------------------------------------------ |
+| `startEl` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The starting HTML element.                 |
+| `stopEl`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The ending HTML element.                   |
+| `options` | [`BezierPathOptionsType`](../types/bezier.md#bezierpathoptionstype)     | Options for controlling the straight line. |
 
 #### Returns
 
-`Promise`\<`string`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`>
 
 The SVG path string for the straight line.
 

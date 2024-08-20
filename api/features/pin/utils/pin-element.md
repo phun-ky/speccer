@@ -6,7 +6,7 @@
 
 # features/pin/utils/pin-element
 
-> Last updated 2024-08-20T06:28:48.114Z
+> Last updated 2024-08-20T06:35:08.847Z
 
 ## Functions
 
@@ -28,16 +28,16 @@ of the target element. It handles different styles, such as curly brackets or li
 
 #### Parameters
 
-| Parameter       | Type          | Default value | Description                                                                        |
-| --------------- | ------------- | ------------- | ---------------------------------------------------------------------------------- |
-| `targetElement` | `HTMLElement` | `undefined`   | The target element that contains the pin data.                                     |
-| `symbol`        | `string`      | `undefined`   | The symbol to use.                                                                 |
-| `parentElement` | `HTMLElement` | `undefined`   | The parent element                                                                 |
-| `areas`?        | `string`      | `''`          | Optional areas to use if not \[data-speccer] is set as an attribute on the element |
+| Parameter       | Type                                                                    | Default value | Description                                                                        |
+| --------------- | ----------------------------------------------------------------------- | ------------- | ---------------------------------------------------------------------------------- |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | `undefined`   | The target element that contains the pin data.                                     |
+| `symbol`        | `string`                                                                | `undefined`   | The symbol to use.                                                                 |
+| `parentElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | `undefined`   | The parent element                                                                 |
+| `areas`?        | `string`                                                                | `''`          | Optional areas to use if not \[data-speccer] is set as an attribute on the element |
 
 #### Returns
 
-`Promise`\<`string` | `void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string` | `void`>
 
 A promise that resolves to the id of the pin element when the process is completed, or `void` if required input is invalid.
 

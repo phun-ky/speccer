@@ -6,7 +6,7 @@
 
 # utils/id
 
-> Last updated 2024-08-20T06:28:48.135Z
+> Last updated 2024-08-20T06:35:08.860Z
 
 ## Functions
 

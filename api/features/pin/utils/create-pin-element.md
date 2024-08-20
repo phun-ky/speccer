@@ -6,7 +6,7 @@
 
 # features/pin/utils/create-pin-element
 
-> Last updated 2024-08-20T06:28:48.113Z
+> Last updated 2024-08-20T06:35:08.846Z
 
 ## Functions
 
@@ -29,7 +29,7 @@ Create a pin element with optional text content, area description, and element t
 
 #### Returns
 
-`HTMLElement`
+[`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
 - The created pin element.
 

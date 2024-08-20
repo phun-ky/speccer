@@ -6,7 +6,7 @@
 
 # utils/intrinsic-coords
 
-> Last updated 2024-08-20T06:28:48.135Z
+> Last updated 2024-08-20T06:35:08.860Z
 
 ## Functions
 
@@ -26,14 +26,14 @@ Get the intrinsic coordinates of an element based on a specified position.
 
 #### Parameters
 
-| Parameter | Type          | Default value | Description          |
-| --------- | ------------- | ------------- | -------------------- |
-| `el`      | `HTMLElement` | `undefined`   | The HTML element.    |
-| `pos`?    | `string`      | `'center'`    | The position to use. |
+| Parameter | Type                                                                    | Default value | Description          |
+| --------- | ----------------------------------------------------------------------- | ------------- | -------------------- |
+| `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | `undefined`   | The HTML element.    |
+| `pos`?    | `string`                                                                | `'center'`    | The position to use. |
 
 #### Returns
 
-`Promise`\<\{
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<\{
 `x`: `number`;
 `y`: `number`;
 }>

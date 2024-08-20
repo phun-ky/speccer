@@ -6,7 +6,7 @@
 
 # utils/classnames
 
-> Last updated 2024-08-20T06:28:48.132Z
+> Last updated 2024-08-20T06:35:08.858Z
 
 ## Functions
 
@@ -60,11 +60,11 @@ Remove CSS classes from an HTML element.
 
 #### Parameters
 
-| Parameter | Type          | Default value | Description                                            |
-| --------- | ------------- | ------------- | ------------------------------------------------------ |
-| `el`      | `HTMLElement` | `undefined`   | The HTML element from which classes should be removed. |
-| `cls`     | `string`      | `undefined`   | The CSS classes to remove, separated by spaces.        |
-| `avoid`?  | `string`      | `'noop'`      | Classes to avoid removing.                             |
+| Parameter | Type                                                                    | Default value | Description                                            |
+| --------- | ----------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |
+| `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | `undefined`   | The HTML element from which classes should be removed. |
+| `cls`     | `string`                                                                | `undefined`   | The CSS classes to remove, separated by spaces.        |
+| `avoid`?  | `string`                                                                | `'noop'`      | Classes to avoid removing.                             |
 
 #### Returns
 
@@ -94,11 +94,11 @@ Add CSS classes to an HTML element.
 
 #### Parameters
 
-| Parameter | Type          | Default value | Description                                        |
-| --------- | ------------- | ------------- | -------------------------------------------------- |
-| `el`      | `HTMLElement` | `undefined`   | The HTML element to which classes should be added. |
-| `cls`     | `string`      | `undefined`   | The CSS classes to add, separated by spaces.       |
-| `avoid`?  | `string`      | `'noop'`      | Classes to avoid adding.                           |
+| Parameter | Type                                                                    | Default value | Description                                        |
+| --------- | ----------------------------------------------------------------------- | ------------- | -------------------------------------------------- |
+| `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | `undefined`   | The HTML element to which classes should be added. |
+| `cls`     | `string`                                                                | `undefined`   | The CSS classes to add, separated by spaces.       |
+| `avoid`?  | `string`                                                                | `'noop'`      | Classes to avoid adding.                           |
 
 #### Returns
 
@@ -128,11 +128,11 @@ Toggle CSS classes on an HTML element.
 
 #### Parameters
 
-| Parameter | Type          | Default value | Description                                          |
-| --------- | ------------- | ------------- | ---------------------------------------------------- |
-| `el`      | `HTMLElement` | `undefined`   | The HTML element on which classes should be toggled. |
-| `cls`     | `string`      | `undefined`   | The CSS classes to toggle, separated by spaces.      |
-| `avoid`?  | `string`      | `'noop'`      | Classes to avoid toggling.                           |
+| Parameter | Type                                                                    | Default value | Description                                          |
+| --------- | ----------------------------------------------------------------------- | ------------- | ---------------------------------------------------- |
+| `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | `undefined`   | The HTML element on which classes should be toggled. |
+| `cls`     | `string`                                                                | `undefined`   | The CSS classes to toggle, separated by spaces.      |
+| `avoid`?  | `string`                                                                | `'noop'`      | Classes to avoid toggling.                           |
 
 #### Returns
 

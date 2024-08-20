@@ -6,17 +6,14 @@
 
 # utils/debounce
 
-> Last updated 2024-08-20T06:28:48.134Z
+> Last updated 2024-08-20T06:35:08.860Z
 
 ## Functions
 
-### default()
+### debounce()
 
 ```ts
-function default(
-   func,
-   wait,
-   immediate?): DebounceAnyFunctionType
+function debounce(func, wait, immediate?): DebounceAnyFunctionType;
 ```
 
 Creates a debounced version of a function that delays its execution until after a specified waiting time has elapsed since the last time the debounced function was invoked.

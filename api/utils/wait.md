@@ -6,7 +6,7 @@
 
 # utils/wait
 
-> Last updated 2024-08-20T06:28:48.140Z
+> Last updated 2024-08-20T06:35:08.862Z
 
 ## Functions
 
@@ -26,7 +26,7 @@ Waits for the specified amount of time in milliseconds.
 
 #### Returns
 
-`Promise`\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 - A Promise that resolves after the specified time.
 
@@ -53,7 +53,7 @@ Waits for the next animation frame using requestAnimationFrame.
 
 #### Returns
 
-`Promise`\<`number`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`number`>
 
 - A Promise that resolves with the timestamp of the next animation frame.
 

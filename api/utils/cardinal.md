@@ -6,7 +6,7 @@
 
 # utils/cardinal
 
-> Last updated 2024-08-20T06:28:48.130Z
+> Last updated 2024-08-20T06:35:08.856Z
 
 ## Functions
 

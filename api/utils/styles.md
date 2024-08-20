@@ -6,7 +6,7 @@
 
 # utils/styles
 
-> Last updated 2024-08-20T06:28:48.138Z
+> Last updated 2024-08-20T06:35:08.862Z
 
 ## Functions
 
@@ -20,14 +20,14 @@ Adds CSS styles to an HTMLElement.
 
 #### Parameters
 
-| Parameter | Type                                                    | Description                                                      |
-| --------- | ------------------------------------------------------- | ---------------------------------------------------------------- |
-| `el`      | `HTMLElement`                                           | The HTMLElement to apply styles to.                              |
-| `styles`  | `object` \| \{ `key`: `string`; `value`: `string`; }\[] | An object or an array of objects containing CSS styles to apply. |
+| Parameter | Type                                                                    | Description                                                      |
+| --------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The HTMLElement to apply styles to.                              |
+| `styles`  | `object` \| \{ `key`: `string`; `value`: `string`; }\[]                 | An object or an array of objects containing CSS styles to apply. |
 
 #### Returns
 
-`Promise`\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 - A Promise that resolves after styles are applied.
 
@@ -62,13 +62,13 @@ Gets the computed CSS styles of an HTMLElement.
 
 #### Parameters
 
-| Parameter | Type          | Description                                  |
-| --------- | ------------- | -------------------------------------------- |
-| `el`      | `HTMLElement` | The HTMLElement to get computed styles from. |
+| Parameter | Type                                                                    | Description                                  |
+| --------- | ----------------------------------------------------------------------- | -------------------------------------------- |
+| `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The HTMLElement to get computed styles from. |
 
 #### Returns
 
-`Promise`\<`CSSStyleDeclaration`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration)>
 
 - A Promise that resolves with the computed CSS styles.
 

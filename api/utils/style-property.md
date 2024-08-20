@@ -6,7 +6,7 @@
 
 # utils/style-property
 
-> Last updated 2024-08-20T06:28:48.138Z
+> Last updated 2024-08-20T06:35:08.862Z
 
 ## Functions
 
@@ -20,13 +20,13 @@ Checks if an element has 'position: sticky'.
 
 #### Parameters
 
-| Parameter | Type          | Description         |
-| --------- | ------------- | ------------------- |
-| `element` | `HTMLElement` | The target element. |
+| Parameter | Type                                                                    | Description         |
+| --------- | ----------------------------------------------------------------------- | ------------------- |
+| `element` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target element. |
 
 #### Returns
 
-`Promise`\<`boolean`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`boolean`>
 
 - A promise that resolves to true if the element has 'position: sticky', false otherwise.
 

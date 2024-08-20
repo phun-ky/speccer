@@ -6,7 +6,7 @@
 
 # utils/css
 
-> Last updated 2024-08-20T06:28:48.133Z
+> Last updated 2024-08-20T06:35:08.859Z
 
 ## Functions
 
@@ -162,9 +162,9 @@ Retrieves the value of a custom CSS property "--ph-speccer-line-width" from an e
 
 #### Parameters
 
-| Parameter | Type          | Description       |
-| --------- | ------------- | ----------------- |
-| `el`      | `HTMLElement` | The HTML element. |
+| Parameter | Type                                                                    | Description       |
+| --------- | ----------------------------------------------------------------------- | ----------------- |
+| `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The HTML element. |
 
 #### Returns
 
@@ -196,9 +196,9 @@ Retrieves the value of a custom CSS property "--ph-speccer-measure-size" from an
 
 #### Parameters
 
-| Parameter | Type          | Description       |
-| --------- | ------------- | ----------------- |
-| `el`      | `HTMLElement` | The HTML element. |
+| Parameter | Type                                                                    | Description       |
+| --------- | ----------------------------------------------------------------------- | ----------------- |
+| `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The HTML element. |
 
 #### Returns
 
@@ -265,9 +265,9 @@ Retrieves the value of a custom CSS property "--ph-speccer-pin-space" from an el
 
 #### Parameters
 
-| Parameter | Type          | Description       |
-| --------- | ------------- | ----------------- |
-| `el`      | `HTMLElement` | The HTML element. |
+| Parameter | Type                                                                    | Description       |
+| --------- | ----------------------------------------------------------------------- | ----------------- |
+| `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The HTML element. |
 
 #### Returns
 

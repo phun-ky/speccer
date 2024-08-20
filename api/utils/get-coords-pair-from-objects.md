@@ -6,7 +6,7 @@
 
 # utils/get-coords-pair-from-objects
 
-> Last updated 2024-08-20T06:28:48.135Z
+> Last updated 2024-08-20T06:35:08.860Z
 
 ## Functions
 
@@ -30,16 +30,16 @@ Get the x and y coordinates of two elements and return them as an object.
 
 #### Parameters
 
-| Parameter | Type          | Default value | Description                                 |
-| --------- | ------------- | ------------- | ------------------------------------------- |
-| `el1`     | `HTMLElement` | `undefined`   | The first HTML element.                     |
-| `el2`     | `HTMLElement` | `undefined`   | The second HTML element.                    |
-| `pos1`?   | `string`      | `'center'`    | The position to use for the first element.  |
-| `pos2`?   | `string`      | `'center'`    | The position to use for the second element. |
+| Parameter | Type                                                                    | Default value | Description                                 |
+| --------- | ----------------------------------------------------------------------- | ------------- | ------------------------------------------- |
+| `el1`     | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | `undefined`   | The first HTML element.                     |
+| `el2`     | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | `undefined`   | The second HTML element.                    |
+| `pos1`?   | `string`                                                                | `'center'`    | The position to use for the first element.  |
+| `pos2`?   | `string`                                                                | `'center'`    | The position to use for the second element. |
 
 #### Returns
 
-`Promise`\<\{
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<\{
 `x1`: `number`;
 `x2`: `number`;
 `y1`: `number`;

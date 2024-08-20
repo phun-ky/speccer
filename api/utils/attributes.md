@@ -6,7 +6,7 @@
 
 # utils/attributes
 
-> Last updated 2024-08-20T06:28:48.128Z
+> Last updated 2024-08-20T06:35:08.855Z
 
 ## Functions
 
@@ -20,10 +20,10 @@ Removes attributes from an HTML element.
 
 #### Parameters
 
-| Parameter | Type          | Description                                      |
-| --------- | ------------- | ------------------------------------------------ |
-| `el`      | `HTMLElement` | The HTML element to remove attributes from.      |
-| `attrs`?  | `string`\[]   | The attributes to remove as a key-value mapping. |
+| Parameter | Type                                                                    | Description                                      |
+| --------- | ----------------------------------------------------------------------- | ------------------------------------------------ |
+| `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The HTML element to remove attributes from.      |
+| `attrs`?  | `string`\[]                                                             | The attributes to remove as a key-value mapping. |
 
 #### Returns
 
@@ -54,7 +54,7 @@ Sets attributes on an HTML element.
 
 | Parameter | Type                                                                                 | Description                                   |
 | --------- | ------------------------------------------------------------------------------------ | --------------------------------------------- |
-| `el`      | `HTMLElement`                                                                        | The HTML element to set attributes on.        |
+| `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)              | The HTML element to set attributes on.        |
 | `attrs`?  | [`AttributesMapInterface`](../types/interfaces/attributes.md#attributesmapinterface) | The attributes to set as a key-value mapping. |
 
 #### Returns

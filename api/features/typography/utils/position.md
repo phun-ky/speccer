@@ -6,7 +6,7 @@
 
 # features/typography/utils/position
 
-> Last updated 2024-08-20T06:28:48.116Z
+> Last updated 2024-08-20T06:35:08.848Z
 
 ## Functions
 
@@ -27,15 +27,15 @@ Calculate the position for the speccer element relative to the target element.
 
 #### Parameters
 
-| Parameter        | Type               | Description                           |
-| ---------------- | ------------------ | ------------------------------------- |
-| `area`           | `null` \| `string` | The area information for positioning. |
-| `targetElement`  | `HTMLElement`      | The target element.                   |
-| `speccerElement` | `HTMLElement`      | The speccer element to position.      |
+| Parameter        | Type                                                                    | Description                           |
+| ---------------- | ----------------------------------------------------------------------- | ------------------------------------- |
+| `area`           | `null` \| `string`                                                      | The area information for positioning. |
+| `targetElement`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target element.                   |
+| `speccerElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The speccer element to position.      |
 
 #### Returns
 
-`Promise`\<\{
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<\{
 `left`: `string`;
 `top`: `string`;
 }>

@@ -6,7 +6,7 @@
 
 # utils/area
 
-> Last updated 2024-08-20T06:28:48.126Z
+> Last updated 2024-08-20T06:35:08.854Z
 
 ## Functions
 
@@ -313,10 +313,10 @@ Checks if the provided areaString contains 'grid'.
 
 #### Parameters
 
-| Parameter    | Type                  | Description                  |
-| ------------ | --------------------- | ---------------------------- |
-| `areaString` | `null` \| `string`    | The string containing areas. |
-| `styles`     | `CSSStyleDeclaration` | -                            |
+| Parameter    | Type                                                                                    | Description                  |
+| ------------ | --------------------------------------------------------------------------------------- | ---------------------------- |
+| `areaString` | `null` \| `string`                                                                      | The string containing areas. |
+| `styles`     | [`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration) | -                            |
 
 #### Returns
 

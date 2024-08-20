@@ -6,7 +6,7 @@
 
 # utils/node
 
-> Last updated 2024-08-20T06:28:48.136Z
+> Last updated 2024-08-20T06:35:08.861Z
 
 ## Functions
 
@@ -20,14 +20,14 @@ Inserts an HTML element after another element in the DOM.
 
 #### Parameters
 
-| Parameter    | Type                    | Description                                                         |
-| ------------ | ----------------------- | ------------------------------------------------------------------- |
-| `el`         | `null` \| `HTMLElement` | The reference element after which the new element will be inserted. |
-| `newSibling` | `HTMLElement`           | The new element to be inserted.                                     |
+| Parameter    | Type                                                                              | Description                                                         |
+| ------------ | --------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `el`         | `null` \| [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The reference element after which the new element will be inserted. |
+| `newSibling` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)           | The new element to be inserted.                                     |
 
 #### Returns
 
-`undefined` | `null` | `Element`
+`undefined` | `null` | [`Element`](https://developer.mozilla.org/docs/Web/API/Element)
 
 #### Example
 
@@ -53,9 +53,9 @@ Determines if an HTML element is hidden based on its visibility properties.
 
 #### Parameters
 
-| Parameter | Type          | Description                               |
-| --------- | ------------- | ----------------------------------------- |
-| `element` | `HTMLElement` | The HTML element to check for visibility. |
+| Parameter | Type                                                                    | Description                               |
+| --------- | ----------------------------------------------------------------------- | ----------------------------------------- |
+| `element` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The HTML element to check for visibility. |
 
 #### Returns
 
@@ -89,10 +89,10 @@ Removes all elements matching a selector from the DOM.
 
 #### Parameters
 
-| Parameter  | Type       | Default value | Description                                                     |
-| ---------- | ---------- | ------------- | --------------------------------------------------------------- |
-| `selector` | `string`   | `undefined`   | The CSS selector used to select elements for removal.           |
-| `el`       | `Document` | `document`    | The document context (default is the global `document` object). |
+| Parameter  | Type                                                              | Default value | Description                                                     |
+| ---------- | ----------------------------------------------------------------- | ------------- | --------------------------------------------------------------- |
+| `selector` | `string`                                                          | `undefined`   | The CSS selector used to select elements for removal.           |
+| `el`       | [`Document`](https://developer.mozilla.org/docs/Web/API/Document) | `document`    | The document context (default is the global `document` object). |
 
 #### Returns
 
