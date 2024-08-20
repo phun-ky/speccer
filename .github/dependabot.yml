@@ -1,21 +1,22 @@
 version: 2
-- package-ecosystem: "npm"
-  directory: "/"
-  groups:
-    minor-and-patch:
-      applies-to: version-updates
-      update-types:
-      - "minor"
-      - "patch"
-    major-updates:
-      applies-to: version-updates
-      update-types:
-      - "major"
-  schedule:
-    interval: "weekly"
-  commit-message:
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    groups:
+      minor-and-patch:
+        applies-to: version-updates
+        update-types:
+          - 'minor'
+          - 'patch'
+      major-updates:
+        applies-to: version-updates
+        update-types:
+          - 'major'
+    schedule:
+      interval: 'weekly'
+    commit-message:
       prefix: 'chore: 🤖 '
-  open-pull-requests-limit: 2
-  allow:
-  - dependency-type: direct
-  - dependency-type: production
+    open-pull-requests-limit: 2
+    allow:
+      - dependency-type: direct
+      - dependency-type: production
