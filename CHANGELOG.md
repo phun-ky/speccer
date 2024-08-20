@@ -1,5 +1,12 @@
 # Changelog
 
+## [10.0.7](https://github.com/phun-ky/speccer/compare/v10.0.6...v10.0.7) (2024-08-20)
+
+
+### Tasks
+
+* 🤖 bump typedoc from 0.26.5 to 0.26.6 ([e85ec1a](https://github.com/phun-ky/speccer/commit/e85ec1abe1ca7f2b73ebebeaec0b955d79b7f683))
+
 ## [10.0.6](https://github.com/phun-ky/speccer/compare/v10.0.5...v10.0.6) (2024-08-20)
 
 
