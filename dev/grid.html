@@ -8,96 +8,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="application-name" content="@phun-ky/speccer" />
-  </head>
-  <body class="ph">
-    <div
-      data-speccer="grid"
-      class="ph container"
-      style="
-        padding: 5rem;
-        display: grid;
-        grid-template-columns: repeat(5, 160px);
-        grid-template-rows: repeat(1, 160px);
-        grid-auto-flow: dense;
-        grid-gap: 1.5rem 1.5rem;
-      "
-    >
-      <div id="2202a8b8-b259-5dad-8008-3670de213cd8" class="ph box"></div>
-      <div
-        id="3ed666ed-7bb9-56ab-ae91-33058dc3b969"
-        class="ph box"
-        style="grid-column: span 2"
-      ></div>
-      <div id="b19e19e9-ffef-5aff-9de4-d43e1a85536d" class="ph box"></div>
-      <div
-        id="ece5d053-0e88-5c17-8f40-07ccd229efe7"
-        class="ph box"
-        style="grid-column: span 4"
-      ></div>
-      <div
-        id="06540269-8bc5-5215-9240-f2473f4cde16"
-        class="ph box"
-        style="grid-row: span 2"
-      ></div>
-      <div id="cd907a63-0574-5a0f-bd04-b6d10245d74b" class="ph box"></div>
-      <div
-        id="14408f63-4b8d-5044-8b99-8ebcfed058a2"
-        class="ph box"
-        style="grid-column: span 3"
-      ></div>
-      <div
-        id="d35b4ca7-8f87-52e2-9c70-9141e813207b"
-        class="ph box"
-        style="grid-row: span 5"
-      ></div>
-      <div id="73079eb2-7552-5d3e-b425-96412fc4c0bf" class="ph box"></div>
-      <div id="4f840de9-968b-5355-aae1-0c82cf64313c" class="ph box"></div>
-      <div
-        id="239816e0-7572-5e4f-b628-4463677c5f85"
-        class="ph box"
-        style="grid-row: span 3"
-      ></div>
-      <div
-        id="4ff9c957-4765-5ef3-b753-7dc3b2b3be66"
-        class="ph box"
-        style="grid-column: span 5"
-      ></div>
-      <div id="defe2794-ac9d-513a-b90f-942effc7ffcb" class="ph box"></div>
-      <div id="c5132d1e-560f-537f-99c5-b95858d9a2b7" class="ph box"></div>
-      <div id="3d258657-0b40-5e08-b426-f064f4dff940" class="ph box"></div>
-      <div id="efe7d218-5ca1-5c5a-a935-8cd68e732daa" class="ph box"></div>
-      <div id="49eedd56-9a25-53b0-9f73-17f12087e03a" class="ph box"></div>
-      <div id="014df247-51e0-559f-8464-eecf68507004" class="ph box"></div>
-      <div
-        id="38cc034a-8b8f-56d4-8322-03e5bd509b8a"
-        class="ph box"
-        style="grid-column: span 2"
-      ></div>
-      <div id="bc2c0c41-6408-5a17-ab31-b12ba2d2e821" class="ph box"></div>
-      <div id="cc7a8341-29b5-51ba-86be-3d8093b25e5e" class="ph box"></div>
-      <div id="93cd2a3c-0193-55ac-b73b-27f591499a82" class="ph box"></div>
-      <div id="384388e1-4475-584a-8f6c-ffcd0299eec2" class="ph box"></div>
-      <div
-        id="50ba1237-ac81-55ea-b60b-0022ef6f68fe"
-        class="ph box"
-        style="grid-column: span 4"
-      ></div>
-      <div id="d8fbe4d0-b2a8-52d7-b3c5-9a6a24168101" class="ph box"></div>
-      <div
-        id="eb6f2c36-03e4-5838-bde1-2f150b053098"
-        class="ph box"
-        style="grid-row: span 2"
-      ></div>
-      <div id="b737696b-f848-5fc4-b4cd-56529eedf0fd" class="ph box"></div>
-      <div
-        id="91b1cccf-23ea-5b0c-ae9a-debe25922d8e"
-        class="ph box"
-        style="grid-row: span 2"
-      ></div>
-      <div id="66c2a470-8961-5c2b-bdc4-3b82ea4d13f5" class="ph box"></div>
-      <div id="e17df59a-9748-585e-9ee4-d8dc80d18aec" class="ph box"></div>
-    </div>
-
+    <link
+      async
+      href="https://codepen.io/phun-ky/pen/RyMyme/d182b0303eaee2f82a93ae3fdcc414a7.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      async
+      href="https://phun-ky.net/css/ph.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <link async href="/speccer.css" rel="stylesheet" type="text/css" />
     <link
       async
@@ -112,34 +34,280 @@
       type="text/css"
     />
     <style type="text/css">
-      body.ph {
-        background-color: #f5f5f5;
+      .ph-speccer.speccer {
+        --ph-speccer-base-color: #ffc72c;
+        --ph-speccer-measure-color: #ffc72c;
+        --ph-speccer-color-text-light: #000000;
+        --ph-speccer-mark-background-color: rgba(255, 247, 111, 0.4);
+        --ph-speccer-mark-border-color: #ffc72c;
+        --ph-speccer-typography-background-color: #38383d;
+      }
+      .theme--light .ph-speccer.speccer {
+        --ph-speccer-base-color: rgb(255, 58, 168);
+        --ph-speccer-measure-color: rgb(255, 58, 168);
+        --ph-speccer-color-text-light: #ffffff;
+        --ph-speccer-mark-background-color: rgb(255, 58, 168, 0.4);
+        --ph-speccer-mark-border-color: rgb(255, 58, 168);
+        --ph-speccer-typography-background-color: #ffffff;
       }
       .ph.container {
         counter-reset: box;
       }
+
       .ph.box {
-        background-color: white;
+        box-sizing: border-box;
+        /* background-color: var(--ph-color-background-notice-note); */
+        background-repeat: repeat;
+        background-size: cover;
         min-height: 160px;
-        min-width: 160px;
+        min-width: 100px;
         margin: 0;
-        padding: 2rem;
-        border: 1pt solid rgba(51, 51, 51, 0.1);
-        color: #4d4d4d;
-        font-family: Lato, sans-serif;
+        padding: 0;
+        /* border: 1pt solid rgba(51, 51, 51, 0.1); */
+        color: var(--ph-color-text);
+        font-family: var(--ph-font-family) !important;
         font-size: 4rem;
         box-sizing: border-box;
-        box-shadow: 0 0 10px rgba(51, 51, 51, 0.2);
+        /* box-shadow: 0 0 10px rgba(51, 51, 51, 0.2); */
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 888 !important;
+        border-radius: 0.375rem;
+      }
+
+      .ph.box {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 705.48 273.51'%3E%3Cpath fill='none' stroke='rgba(255, 255, 255, 0.3)' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5.16 20.2S25.03 8.65 25.06 8.71c.43.75-17.76 12.63-17.33 13.37.16.29 23.52-13.89 23.66-13.66.29.51-13.12 12.73-12.83 13.25.4.68 17.08-10.7 17.44-10.07.58 1-27.14 31.39-26.61 32.3.84 1.45 62.59-37.91 63.36-36.58C74.23 9.9.25 56.05 1.52 58.25c1.69 2.93 71.07-43.64 72.19-41.68 1.64 2.84-59.21 32.36-57.79 34.8s62.15-37.69 62.93-36.33c1.33 2.3-66.52 47.47-65.57 49.11 1.04 1.8 86.54-54.22 88.38-51.03 2.31 4-85.72 52.69-84.67 54.51 1.63 2.83 109.89-69.59 112.55-64.97 1.97 3.42-101.71 67.2-98.96 71.96 1.78 3.09 93.47-59.53 95.88-55.36 1.33 2.31-103.75 64.54-101.93 67.69C26.92 91.1 169.56-2.98 172.24 1.67 175.11 6.63 17.3 95.78 20.89 101.99c2.66 4.61 141.74-87.64 144.25-83.28 2.95 5.12-137.93 89.85-134.98 94.96C32.72 118.1 214.63 1.08 217.26 5.63 223.36 16.2 7.25 130.46 13.24 140.84c5.07 8.78 220.24-135.39 223.81-129.21C240.4 17.43 2.61 146.85 8.53 157.11 11.88 162.92 266.35-3.66 271.51 5.28S1.52 156.4 6.08 164.31c4.25 7.37 244.5-153.89 250.02-144.35S25.13 154.79 29.93 163.1C36.46 174.42 293.17 2 297.12 8.84 304.27 21.23 4.83 165.01 12.56 178.4 17.63 187.18 305.77-8.86 313.55 4.62c6.03 10.44-296.31 171.72-292.77 177.85C26.79 192.88 308.84-1.89 316.66 11.65 323.88 24.15-4.59 184.88 4.45 200.53 12.74 214.89 323.24 5.68 327.91 13.78S31.22 179.35 35.5 186.77C40.91 196.14 349.65-5.19 354.23 2.75c5.04 8.72-335.44 202.75-329.69 212.72C33.93 231.73 372.23-7.49 381.85 9.18c5.94 10.29-355.86 207.07-349.31 218.4C37.33 235.89 405.32-1.2 411.19 8.97c5.17 8.96-391.25 222.63-382.44 237.89 5.41 9.36 396.34-252.84 406.74-234.83 8.19 14.19-417.71 236.71-412.3 246.1C34.97 278.53 433.56 1.68 442.01 16.32 448.9 28.25 37.84 237.84 47.26 254.15c7.44 12.88 403.6-253 412.25-238.02S68.84 238.93 78.15 255.05C90.34 276.17 490.64-3.15 499.32 11.88 505.93 23.33 71 252.09 78.51 265.1 90.38 285.67 525.74-7.76 532.08 3.23 543.5 23 64.32 256.21 72.86 270.99 79.21 281.98 509.27.86 517.13 14.49c8.2 14.21-430.64 226-420.27 243.97 6.93 12.01 418.19-268.24 429.79-248.14 7.41 12.84-439.62 248.02-433.96 257.82C99.46 279.85 539.51-5.42 546.26 6.28c9.7 16.8-412.38 243.23-405.67 254.86C151.49 280.02 568.95-7.09 578.01 8.59c6.97 12.07-433.58 241.83-427.17 252.93C157.87 273.7 566.22 7 572.59 18.02c5.81 10.07-409.73 223.33-401.41 237.75 12.1 20.96 420.04-267.76 430.98-248.82 8.5 14.73-436.42 254.75-431.11 263.96C183.2 291.95 606.87 4.74 613.17 15.65S198.71 246.2 207.42 261.27C217.46 278.68 621.54-3.35 632.59 15.8S213.63 249.99 221.58 263.76C230.95 280 630.18 2.62 641.11 21.54c7.11 12.32-403.88 222.74-394.14 239.62C255.58 276.08 678.06-2.93 684.64 8.47c10.59 18.34-423.33 231.01-411.93 250.75 7.01 12.15 390.69-248.83 400.76-231.38 7.14 12.37-384.29 205.75-373.71 224.08 9.09 15.75 393.31-246.75 401.83-232 8.64 14.96-433.72 235.46-426.99 247.11 4.73 8.19 401.47-243.63 406.6-234.75 10.27 17.79-364.94 207.51-355.04 224.65 7.83 13.57 356.77-223.06 364.16-210.25 5.24 9.08-364.47 206.54-355.15 222.68 7.83 13.56 358.95-216.59 363-209.58 8.48 14.69-341.1 177.54-332.35 192.71 4.47 7.74 302.94-187.17 308.25-177.97 8.37 14.5-337.96 184.58-331.59 195.61 7.81 13.52 350.87-212.33 355.09-205.01 6.75 11.7-346.5 186.15-338.61 199.81 5.79 10.03 320.77-205.15 329.41-190.19 5.97 10.34-337.56 184.7-332.9 192.76 6.96 12.06 340.42-215.06 348.44-201.17 4.9 8.48-326.98 185.31-320.3 196.89 8.23 14.25 305.94-194.64 313.74-181.14 6.99 12.12-298.42 173.69-293.97 181.4 7.4 12.82 295.48-180.6 299.81-173.09S455.66 248.36 458.6 253.45c3.75 6.5 240.52-145.94 243.59-140.63 3.38 5.85-253.58 137.65-246.52 149.87 5.71 9.89 213.19-133.35 217.63-125.65 2.95 5.11-194.56 117.6-190.82 124.07 3.94 6.82 192.81-123.73 198.19-114.42 3.33 5.77-193.64 106.86-188.58 115.62 4.35 7.54 203.77-128.8 208.6-120.43 3.03 5.25-209.71 117.89-204.7 126.56 2.24 3.88 192.44-120.85 196.66-113.54 3.56 6.17-182.73 110.11-179.54 115.63 2.12 3.67 187.62-113.31 189.78-109.57 2.72 4.7-136.41 93.47-134.04 97.58 3 5.2 119.22-76.44 122.51-70.73 2.53 4.39-100.53 70.45-98.14 74.58 2.02 3.5 94.26-58.57 96.05-55.46 2.4 4.16-77.7 57.15-75.47 61.02 1.19 2.06 88.43-53.91 89.66-51.77 1.66 2.87-78.61 44.6-76.71 47.89 1.4 2.43 48.63-30.58 49.72-28.7.89 1.54-46.54 31.21-45.35 33.28.59 1.03 71.56-43.64 72.57-41.9.58 1.01-28.91 33.77-28.33 34.78.32.56 11.86-7.56 12.16-7.02.29.5-15.96 14.46-15.57 15.14.03.04 15.89-9.27 15.93-9.2'/%3E%3C/svg%3E%0A");
+      }
+      .theme--light .ph.box {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 705.48 273.51'%3E%3Cpath fill='none' stroke='rgba(0, 0, 0, 0.1)' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5.16 20.2S25.03 8.65 25.06 8.71c.43.75-17.76 12.63-17.33 13.37.16.29 23.52-13.89 23.66-13.66.29.51-13.12 12.73-12.83 13.25.4.68 17.08-10.7 17.44-10.07.58 1-27.14 31.39-26.61 32.3.84 1.45 62.59-37.91 63.36-36.58C74.23 9.9.25 56.05 1.52 58.25c1.69 2.93 71.07-43.64 72.19-41.68 1.64 2.84-59.21 32.36-57.79 34.8s62.15-37.69 62.93-36.33c1.33 2.3-66.52 47.47-65.57 49.11 1.04 1.8 86.54-54.22 88.38-51.03 2.31 4-85.72 52.69-84.67 54.51 1.63 2.83 109.89-69.59 112.55-64.97 1.97 3.42-101.71 67.2-98.96 71.96 1.78 3.09 93.47-59.53 95.88-55.36 1.33 2.31-103.75 64.54-101.93 67.69C26.92 91.1 169.56-2.98 172.24 1.67 175.11 6.63 17.3 95.78 20.89 101.99c2.66 4.61 141.74-87.64 144.25-83.28 2.95 5.12-137.93 89.85-134.98 94.96C32.72 118.1 214.63 1.08 217.26 5.63 223.36 16.2 7.25 130.46 13.24 140.84c5.07 8.78 220.24-135.39 223.81-129.21C240.4 17.43 2.61 146.85 8.53 157.11 11.88 162.92 266.35-3.66 271.51 5.28S1.52 156.4 6.08 164.31c4.25 7.37 244.5-153.89 250.02-144.35S25.13 154.79 29.93 163.1C36.46 174.42 293.17 2 297.12 8.84 304.27 21.23 4.83 165.01 12.56 178.4 17.63 187.18 305.77-8.86 313.55 4.62c6.03 10.44-296.31 171.72-292.77 177.85C26.79 192.88 308.84-1.89 316.66 11.65 323.88 24.15-4.59 184.88 4.45 200.53 12.74 214.89 323.24 5.68 327.91 13.78S31.22 179.35 35.5 186.77C40.91 196.14 349.65-5.19 354.23 2.75c5.04 8.72-335.44 202.75-329.69 212.72C33.93 231.73 372.23-7.49 381.85 9.18c5.94 10.29-355.86 207.07-349.31 218.4C37.33 235.89 405.32-1.2 411.19 8.97c5.17 8.96-391.25 222.63-382.44 237.89 5.41 9.36 396.34-252.84 406.74-234.83 8.19 14.19-417.71 236.71-412.3 246.1C34.97 278.53 433.56 1.68 442.01 16.32 448.9 28.25 37.84 237.84 47.26 254.15c7.44 12.88 403.6-253 412.25-238.02S68.84 238.93 78.15 255.05C90.34 276.17 490.64-3.15 499.32 11.88 505.93 23.33 71 252.09 78.51 265.1 90.38 285.67 525.74-7.76 532.08 3.23 543.5 23 64.32 256.21 72.86 270.99 79.21 281.98 509.27.86 517.13 14.49c8.2 14.21-430.64 226-420.27 243.97 6.93 12.01 418.19-268.24 429.79-248.14 7.41 12.84-439.62 248.02-433.96 257.82C99.46 279.85 539.51-5.42 546.26 6.28c9.7 16.8-412.38 243.23-405.67 254.86C151.49 280.02 568.95-7.09 578.01 8.59c6.97 12.07-433.58 241.83-427.17 252.93C157.87 273.7 566.22 7 572.59 18.02c5.81 10.07-409.73 223.33-401.41 237.75 12.1 20.96 420.04-267.76 430.98-248.82 8.5 14.73-436.42 254.75-431.11 263.96C183.2 291.95 606.87 4.74 613.17 15.65S198.71 246.2 207.42 261.27C217.46 278.68 621.54-3.35 632.59 15.8S213.63 249.99 221.58 263.76C230.95 280 630.18 2.62 641.11 21.54c7.11 12.32-403.88 222.74-394.14 239.62C255.58 276.08 678.06-2.93 684.64 8.47c10.59 18.34-423.33 231.01-411.93 250.75 7.01 12.15 390.69-248.83 400.76-231.38 7.14 12.37-384.29 205.75-373.71 224.08 9.09 15.75 393.31-246.75 401.83-232 8.64 14.96-433.72 235.46-426.99 247.11 4.73 8.19 401.47-243.63 406.6-234.75 10.27 17.79-364.94 207.51-355.04 224.65 7.83 13.57 356.77-223.06 364.16-210.25 5.24 9.08-364.47 206.54-355.15 222.68 7.83 13.56 358.95-216.59 363-209.58 8.48 14.69-341.1 177.54-332.35 192.71 4.47 7.74 302.94-187.17 308.25-177.97 8.37 14.5-337.96 184.58-331.59 195.61 7.81 13.52 350.87-212.33 355.09-205.01 6.75 11.7-346.5 186.15-338.61 199.81 5.79 10.03 320.77-205.15 329.41-190.19 5.97 10.34-337.56 184.7-332.9 192.76 6.96 12.06 340.42-215.06 348.44-201.17 4.9 8.48-326.98 185.31-320.3 196.89 8.23 14.25 305.94-194.64 313.74-181.14 6.99 12.12-298.42 173.69-293.97 181.4 7.4 12.82 295.48-180.6 299.81-173.09S455.66 248.36 458.6 253.45c3.75 6.5 240.52-145.94 243.59-140.63 3.38 5.85-253.58 137.65-246.52 149.87 5.71 9.89 213.19-133.35 217.63-125.65 2.95 5.11-194.56 117.6-190.82 124.07 3.94 6.82 192.81-123.73 198.19-114.42 3.33 5.77-193.64 106.86-188.58 115.62 4.35 7.54 203.77-128.8 208.6-120.43 3.03 5.25-209.71 117.89-204.7 126.56 2.24 3.88 192.44-120.85 196.66-113.54 3.56 6.17-182.73 110.11-179.54 115.63 2.12 3.67 187.62-113.31 189.78-109.57 2.72 4.7-136.41 93.47-134.04 97.58 3 5.2 119.22-76.44 122.51-70.73 2.53 4.39-100.53 70.45-98.14 74.58 2.02 3.5 94.26-58.57 96.05-55.46 2.4 4.16-77.7 57.15-75.47 61.02 1.19 2.06 88.43-53.91 89.66-51.77 1.66 2.87-78.61 44.6-76.71 47.89 1.4 2.43 48.63-30.58 49.72-28.7.89 1.54-46.54 31.21-45.35 33.28.59 1.03 71.56-43.64 72.57-41.9.58 1.01-28.91 33.77-28.33 34.78.32.56 11.86-7.56 12.16-7.02.29.5-15.96 14.46-15.57 15.14.03.04 15.89-9.27 15.93-9.2'/%3E%3C/svg%3E%0A");
       }
 
       .ph.box:after {
         counter-increment: box;
         content: counter(box);
+        z-index: 888 !important;
       }
     </style>
+  </head>
+  <body class="ph">
+    <div class="ph app project" id="app">
+      <header class="ph header">
+        <a class="ph home" href="https://phun-ky.net" target="_blank">home</a>
+
+        <a
+          class="ph projects-home"
+          href="https://phun-ky.net/projects"
+          target="_blank"
+          >projects</a
+        >
+
+        <div class="ph header-menu">
+          <a
+            class="ph"
+            href="https://www.paypal.me/phunky/20"
+            rel="noopener noreferrer"
+            target="_blank"
+            >buy me a coffee?</a
+          >
+
+          <a
+            class="ph"
+            href="https://github.com/sponsors/phun-ky"
+            rel="noopener noreferrer"
+            target="_blank"
+            >sponsor me!</a
+          >
+
+          <button class="ph darkmode-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Sun Icon"
+              fill="currentColor"
+              stroke="none"
+              class="ph hide-dark"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Moon Icon"
+              fill="currentColor"
+              stroke="none"
+              class="ph hide-light"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main class="ph main">
+        <section class="ph section">
+          <div class="ph container">
+            <h1 class="ph">Grid</h1>
+            <p class="ph lead" style="margin-bottom: 4rem">
+              Uses the `grid` feature from @phun-ky/speccer
+            </p>
+            <div class="ph actions">
+              <button
+                type="button"
+                class="ph button action"
+                id="toggle-columns"
+              >
+                Toggle columns
+              </button>
+              <button type="button" class="ph button action" id="toggle-rows">
+                Toggle rows
+              </button>
+              <button type="button" class="ph button action" id="toggle-grid">
+                Toggle grid
+              </button>
+            </div>
+          </div>
+        </section>
+        <section
+          class="ph section"
+          style="margin-top: 10rem; margin-bottom: 10rem"
+        >
+          <div class="ph container">
+            <div
+              data-speccer="grid"
+              class="ph"
+              id="grid-example"
+              style="
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-auto-flow: dense;
+                grid-gap: 1.5rem 1.5rem;
+              "
+            >
+              <div
+                id="2202a8b8-b259-5dad-8008-3670de213cd8"
+                class="ph box"
+              ></div>
+              <div
+                id="3ed666ed-7bb9-56ab-ae91-33058dc3b969"
+                class="ph box"
+                style="grid-column: span 2"
+              ></div>
+              <div
+                id="b19e19e9-ffef-5aff-9de4-d43e1a85536d"
+                class="ph box"
+              ></div>
+              <div
+                id="ece5d053-0e88-5c17-8f40-07ccd229efe7"
+                class="ph box"
+                style="grid-column: span 4"
+              ></div>
+              <div
+                id="06540269-8bc5-5215-9240-f2473f4cde16"
+                class="ph box"
+                style="grid-row: span 2"
+              ></div>
+              <div
+                id="cd907a63-0574-5a0f-bd04-b6d10245d74b"
+                class="ph box"
+              ></div>
+              <div
+                id="14408f63-4b8d-5044-8b99-8ebcfed058a2"
+                class="ph box"
+                style="grid-column: span 3"
+              ></div>
+              <div
+                id="d35b4ca7-8f87-52e2-9c70-9141e813207b"
+                class="ph box"
+              ></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="ph">
+        <div class="ph container">
+          <p class="ph">
+            Made with <strong class="ph">saturated fat</strong> by
+            <a class="ph" target="_blank" href="https://phun-ky.net"
+              >Alexander Vassbotn Røyne-Helgesen</a
+            >. Buy <strong class="ph">me</strong> some
+            <a class="ph" href="https://www.paypal.me/phunky/20">bacon?</a>
+          </p>
+          <p class="ph">
+            This project created by
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              href="http://phun-ky.net"
+              property="cc:attributionName"
+            >
+              Alexander Vassbotn Røyne-Helgesen</a
+            >
+            is licensed under a
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              href="https://choosealicense.com/licenses/mit/"
+            >
+              MIT License </a
+            >.
+          </p>
+          <p class="ph">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              rel="license"
+              href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >
+              <img
+                alt="Creative Commons Licence"
+                style="border-width: 0"
+                width="88"
+                height="31"
+                src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
+              />
+            </a>
+            <br />Any other creation or work related to this project, if not
+            specified, like templates, logos etc created by
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              href="http://phun-ky.net"
+              property="cc:attributionName"
+              rel="cc:attributionURL"
+            >
+              Alexander Vassbotn Røyne-Helgesen</a
+            >
+            is licensed under a
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              rel="license"
+              href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >
+              Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+              International License </a
+            >.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <link async href="/speccer.css" rel="stylesheet" type="text/css" />
+
     <script data-manual src="/speccer.js" type="text/javascript"></script>
     <script>
       if (document.readyState === 'loading') {
@@ -169,6 +337,82 @@
 
       window.removeEventListener('resize', speccerEventFunc);
       window.addEventListener('resize', speccerEventFunc);
+
+      const toggleColumnsButtonEl = document.getElementById('toggle-columns');
+      const toggleRowsButtonEl = document.getElementById('toggle-rows');
+      const toggleGridButtonEl = document.getElementById('toggle-grid');
+      const gridExampleEl = document.getElementById('grid-example');
+
+      toggleColumnsButtonEl.addEventListener('click', () => {
+        if (
+          gridExampleEl.hasAttribute('data-speccer') &&
+          gridExampleEl.getAttribute('data-speccer').includes('grid')
+        ) {
+          if (gridExampleEl.getAttribute('data-speccer').includes('columns')) {
+            if (gridExampleEl.getAttribute('data-speccer').includes('rows')) {
+              gridExampleEl.setAttribute('data-speccer', 'grid rows');
+            } else {
+              gridExampleEl.removeAttribute('data-speccer');
+            }
+          } else {
+            if (gridExampleEl.getAttribute('data-speccer').includes('rows')) {
+              gridExampleEl.setAttribute('data-speccer', 'grid');
+            } else {
+              gridExampleEl.removeAttribute('data-speccer');
+            }
+          }
+        } else {
+          gridExampleEl.setAttribute('data-speccer', 'grid columns');
+        }
+        speccer();
+      });
+
+      toggleRowsButtonEl.addEventListener('click', () => {
+        if (
+          gridExampleEl.hasAttribute('data-speccer') &&
+          gridExampleEl.getAttribute('data-speccer').includes('grid')
+        ) {
+          if (gridExampleEl.getAttribute('data-speccer').includes('rows')) {
+            if (
+              gridExampleEl.getAttribute('data-speccer').includes('columns')
+            ) {
+              gridExampleEl.setAttribute('data-speccer', 'grid columns');
+            } else {
+              gridExampleEl.removeAttribute('data-speccer');
+            }
+          } else {
+            if (
+              gridExampleEl.getAttribute('data-speccer').includes('columns')
+            ) {
+              gridExampleEl.setAttribute('data-speccer', 'grid');
+            } else {
+              gridExampleEl.removeAttribute('data-speccer');
+            }
+          }
+        } else {
+          gridExampleEl.setAttribute('data-speccer', 'grid rows');
+        }
+        speccer();
+      });
+
+      toggleGridButtonEl.addEventListener('click', () => {
+        if (
+          gridExampleEl.hasAttribute('data-speccer') &&
+          gridExampleEl.getAttribute('data-speccer').includes('grid')
+        ) {
+          if (
+            gridExampleEl.getAttribute('data-speccer').includes('columns') ||
+            gridExampleEl.getAttribute('data-speccer').includes('rows')
+          ) {
+            gridExampleEl.setAttribute('data-speccer', 'grid');
+          } else {
+            gridExampleEl.removeAttribute('data-speccer');
+          }
+        } else {
+          gridExampleEl.setAttribute('data-speccer', 'grid');
+        }
+        speccer();
+      });
     </script>
     <svg
       class="ph-speccer"
@@ -184,5 +428,6 @@
         stroke="currentColor"
       />
     </svg>
+    <script src="https://codepen.io/phun-ky/pen/RyMyme/d182b0303eaee2f82a93ae3fdcc414a7.js"></script>
   </body>
 </html>
