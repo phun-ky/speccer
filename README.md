@@ -426,6 +426,12 @@ In your component examples, use the following attribute on your grid container.
 <div data-speccer="grid" …>…</div>
 ```
 
+If you only want to display `rows` or `columns`, use this syntax (default is both with `grid` only):
+
+```html
+<div data-speccer="grid [rows|columns]" …>…</div>
+```
+
 ### Mark elements
 
 ![Screenshot of marked elements](./public/mark.png)
