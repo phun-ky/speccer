@@ -26,16 +26,16 @@ import { waitForFrame } from '../../utils/wait';
 export const create = async (
   targetElement: HTMLElement,
   styles: CSSStyleDeclaration,
-  options: Record<string,string>
+  options: Record<string, string>
 ): Promise<void> => {
   await waitForFrame();
 
   const { toggle } = options;
   const { height, width } = targetElement.getBoundingClientRect();
   const { top, left } = await offset(targetElement);
-  const { gridTemplateColumns,gridTemplateRows, padding } = styles;
+  const { gridTemplateColumns, gridTemplateRows, padding } = styles;
 
-  if(toggle === 'columns' || toggle === 'both'){
+  if (toggle === 'columns' || toggle === 'both') {
     const columnGap = parseInt(styles.columnGap);
     const gridColumnContainer = document.createElement('div');
 
@@ -50,7 +50,6 @@ export const create = async (
 
     if (columnGap < 24) gridColumnContainer.classList.add('speccer-small-grid');
 
-
     gridColumnContainer.classList.add('ph-speccer');
     gridColumnContainer.classList.add('speccer');
     gridColumnContainer.classList.add('speccer-grid-container');
@@ -61,9 +60,6 @@ export const create = async (
     gridColumnContainer.style.top = `${top - 32}px`;
     gridColumnContainer.style.padding = padding;
     gridColumnContainer.style.gridTemplateColumns = gridTemplateColumns;
-
-
-
 
     const numberOfColumnItems = gridTemplateColumns.split(' ').length;
 
@@ -78,11 +74,9 @@ export const create = async (
     document.body.appendChild(gridColumnContainer);
   }
 
-  if(toggle === 'rows' || toggle === 'both'){
+  if (toggle === 'rows' || toggle === 'both') {
     const rowGap = parseInt(styles.rowGap);
     const gridRowContainer = document.createElement('div');
-
-
 
     document.documentElement.style.setProperty(
       '--ph-speccer-grid-row-gap-original',
@@ -95,7 +89,6 @@ export const create = async (
 
     if (rowGap < 24) gridRowContainer.classList.add('speccer-small-grid');
 
-
     gridRowContainer.classList.add('ph-speccer');
     gridRowContainer.classList.add('speccer');
     gridRowContainer.classList.add('speccer-grid-row-container');
@@ -107,9 +100,7 @@ export const create = async (
     gridRowContainer.style.padding = padding;
     gridRowContainer.style.gridTemplateRows = gridTemplateRows;
 
-
     const numberOfRowItems = gridTemplateRows.split(' ').length;
-
 
     for (let i = 0; i < numberOfRowItems; i++) {
       const gridItem = document.createElement('div');
@@ -161,9 +152,9 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
     toggle: 'both'
   };
 
-  if(_areas_string?.includes('columns')) options.toggle = 'columns';
+  if (_areas_string?.includes('columns')) options.toggle = 'columns';
 
-  if(_areas_string?.includes('rows')) options.toggle = 'rows';
+  if (_areas_string?.includes('rows')) options.toggle = 'rows';
 
   await create(targetElement, _target_styles, options);
 };
