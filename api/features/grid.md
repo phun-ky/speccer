@@ -6,30 +6,29 @@
 
 # features/grid
 
-> Last updated 2024-08-20T07:17:27.749Z
+> Last updated 2024-08-21T12:47:21.888Z
 
 ## Functions
 
 ### create()
 
 ```ts
-function create(targetElement, styles): Promise<HTMLDivElement>;
+function create(targetElement, styles, options): Promise<void>;
 ```
 
 Creates a visual grid overlay for a given target element.
 
 #### Parameters
 
-| Parameter       | Type                                                                                    | Description                                        |
-| --------------- | --------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                 | The target element to create the grid overlay for. |
-| `styles`        | [`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration) | The computed styles of the target element.         |
+| Parameter       | Type                                                                                                             | Description                                        |
+| --------------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                                          | The target element to create the grid overlay for. |
+| `styles`        | [`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration)                          | The computed styles of the target element.         |
+| `options`       | [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `string`> | Options to determine what to draw                  |
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`HTMLDivElement`](https://developer.mozilla.org/docs/Web/API/HTMLDivElement)>
-
-The created grid container element.
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 #### Example
 
@@ -37,8 +36,7 @@ The created grid container element.
 const targetElement = document.getElementById('target');
 if (targetElement) {
   const styles = window.getComputedStyle(targetElement);
-  const gridOverlay = create(targetElement, styles);
-  document.body.appendChild(gridOverlay);
+  await create(targetElement, styles);
 }
 ```
 
@@ -85,7 +83,7 @@ if (targetElement) {
 
 #### Defined in
 
-[features/grid/index.ts:99](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L99)
+[features/grid/index.ts:137](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L137)
 
 ---
 

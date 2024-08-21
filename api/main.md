@@ -6,7 +6,7 @@
 
 # main
 
-> Last updated 2024-08-20T07:17:27.757Z
+> Last updated 2024-08-21T12:47:21.892Z
 
 ## Table of Contents
 
@@ -65,7 +65,7 @@ const grid: {
 </td>
 <td>
 
-(`targetElement`, `styles`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`HTMLDivElement`](https://developer.mozilla.org/docs/Web/API/HTMLDivElement)>
+(`targetElement`, `styles`, `options`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 </td>
 <td>
