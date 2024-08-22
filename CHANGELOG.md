@@ -1,5 +1,21 @@
 # Changelog
 
+## [10.1.0](https://github.com/phun-ky/speccer/compare/v10.0.8...v10.1.0) (2024-08-22)
+
+
+### Documentation
+
+* ✏️ Add documentation about new feature for grid ([7769d87](https://github.com/phun-ky/speccer/commit/7769d8764e6a0f04fa0ee2dba1a7bb3bb016ff76))
+* ✏️ Add documentation about new feature for grid ([ce5d382](https://github.com/phun-ky/speccer/commit/ce5d38235e67c786563048297b631766654201a5))
+* ✏️ Regenerate documentation ([3075e97](https://github.com/phun-ky/speccer/commit/3075e973e5d51c8311665a2bfce9ce18fe1d6587))
+* ✏️ Regenerate documentation ([6e1fe63](https://github.com/phun-ky/speccer/commit/6e1fe63f8a4560015e6fb303f0391cf748bcc7e1))
+
+
+### Feature
+
+* 🎸 Add feature to grid where you can view row gaps ([ba9398e](https://github.com/phun-ky/speccer/commit/ba9398e01ca2b842ceb819f3464bf0e506e53190)), closes [#255](https://github.com/phun-ky/speccer/issues/255)
+* 🎸 Add feature to grid where you can view row gas ([97488f3](https://github.com/phun-ky/speccer/commit/97488f307528b968634e8756cc19f20a6477d102)), closes [#255](https://github.com/phun-ky/speccer/issues/255)
+
 ## [10.0.8](https://github.com/phun-ky/speccer/compare/v10.0.7...v10.0.8) (2024-08-20)
 
 
