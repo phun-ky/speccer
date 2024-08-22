@@ -307,6 +307,16 @@ window.SPECCER_LITERALS = [
 ];
 ```
 
+> [!TIP]
+> Try it out with emoticons!
+>
+> ```js
+> window.SPECCER_LITERALS = [
+>   '🥰',
+>   …
+> ];
+> ```
+
 #### Subtle anatomy
 
 ![Image of subtle option for anatomy](./public/subtle.png)
@@ -426,11 +436,12 @@ In your component examples, use the following attribute on your grid container.
 <div data-speccer="grid" …>…</div>
 ```
 
-If you only want to display `rows` or `columns`, use this syntax (default is both with `grid` only):
-
-```html
-<div data-speccer="grid [rows|columns]" …>…</div>
-```
+> [!TIP]
+> If you only want to display `rows` or `columns`, use this syntax (default is both with `grid` only):
+>
+> ```html
+> <div data-speccer="grid [rows|columns]" …>…</div>
+> ```
 
 ### Mark elements
 
