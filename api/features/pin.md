@@ -6,7 +6,7 @@
 
 # features/pin
 
-> Last updated 2024-08-20T07:17:27.752Z
+> Last updated 2024-08-21T12:47:21.889Z
 
 This feature highlights the anatomy of an element.
 

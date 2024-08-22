@@ -11,69 +11,107 @@ import { waitForFrame } from '../../utils/wait';
  *
  * @param {HTMLElement} targetElement - The target element to create the grid overlay for.
  * @param {CSSStyleDeclaration} styles - The computed styles of the target element.
- * @returns {Promise<HTMLDivElement>} The created grid container element.
+ * @param {Record<string,string>} options - Options to determine what to draw
+ * @returns {Promise<void>}
  *
  * @example
  * ```ts
  * const targetElement = document.getElementById('target');
  * if (targetElement) {
  *   const styles = window.getComputedStyle(targetElement);
- *   const gridOverlay = create(targetElement, styles);
- *   document.body.appendChild(gridOverlay);
+ *   await create(targetElement, styles);
  * }
  * ```
  */
 export const create = async (
   targetElement: HTMLElement,
-  styles: CSSStyleDeclaration
-): Promise<HTMLDivElement> => {
+  styles: CSSStyleDeclaration,
+  options: Record<string, string>
+): Promise<void> => {
   await waitForFrame();
 
+  const { toggle } = options;
   const { height, width } = targetElement.getBoundingClientRect();
   const { top, left } = await offset(targetElement);
-  const { gridTemplateColumns, gridTemplate, padding } = styles;
-  // const templateRows = styles['gridTemplateRows'];// for a later feature perhaps
-  const columnGap = parseInt(styles.columnGap);
-  // const rowGap = styles.rowGap;// for a later feature perhaps
-  const gridContainer = document.createElement('div');
+  const { gridTemplateColumns, gridTemplateRows, padding } = styles;
 
-  document.documentElement.style.setProperty(
-    '--ph-speccer-grid-gap-original',
-    `${columnGap}px`
-  );
-  document.documentElement.style.setProperty(
-    '--ph-speccer-grid-gap',
-    `${columnGap < 24 ? 24 : columnGap}px`
-  );
+  if (toggle === 'columns' || toggle === 'both') {
+    const columnGap = parseInt(styles.columnGap);
+    const gridColumnContainer = document.createElement('div');
 
-  if (columnGap < 24) gridContainer.classList.add('speccer-small-grid');
+    document.documentElement.style.setProperty(
+      '--ph-speccer-grid-gap-original',
+      `${columnGap}px`
+    );
+    document.documentElement.style.setProperty(
+      '--ph-speccer-grid-gap',
+      `${columnGap < 24 ? 24 : columnGap}px`
+    );
 
-  gridContainer.classList.add('ph-speccer');
-  gridContainer.classList.add('speccer');
-  gridContainer.classList.add('speccer-grid-container');
+    if (columnGap < 24) gridColumnContainer.classList.add('speccer-small-grid');
 
-  gridContainer.style.height = `${height + 64}px`;
-  gridContainer.style.width = `${width}px`;
-  gridContainer.style.left = `${left}px`;
-  gridContainer.style.top = `${top - 32}px`;
-  gridContainer.style.padding = padding;
-  // gridContainer.style.columnGap = `${columnGap}px`; // using css vars instead
-  gridContainer.style.gridTemplate = gridTemplate;
-  gridContainer.style.gridTemplateRows = 'repeat(1, 100%)';
+    gridColumnContainer.classList.add('ph-speccer');
+    gridColumnContainer.classList.add('speccer');
+    gridColumnContainer.classList.add('speccer-grid-container');
 
-  //gridContainer.style.gridTemplateRows = templateRows; // for a later feature perhaps
-  const numberOfItems = gridTemplateColumns.split(' ').length;
+    gridColumnContainer.style.height = `${height + 64}px`;
+    gridColumnContainer.style.width = `${width}px`;
+    gridColumnContainer.style.left = `${left}px`;
+    gridColumnContainer.style.top = `${top - 32}px`;
+    gridColumnContainer.style.padding = padding;
+    gridColumnContainer.style.gridTemplateColumns = gridTemplateColumns;
 
-  for (let i = 0; i < numberOfItems; i++) {
-    const gridItem = document.createElement('div');
+    const numberOfColumnItems = gridTemplateColumns.split(' ').length;
 
-    gridItem.classList.add('ph-speccer');
-    gridItem.classList.add('speccer');
-    gridItem.classList.add('speccer-grid-item');
-    gridContainer.appendChild(gridItem);
+    for (let i = 0; i < numberOfColumnItems; i++) {
+      const gridItem = document.createElement('div');
+
+      gridItem.classList.add('ph-speccer');
+      gridItem.classList.add('speccer');
+      gridItem.classList.add('speccer-grid-item');
+      gridColumnContainer.appendChild(gridItem);
+    }
+    document.body.appendChild(gridColumnContainer);
   }
 
-  return gridContainer;
+  if (toggle === 'rows' || toggle === 'both') {
+    const rowGap = parseInt(styles.rowGap);
+    const gridRowContainer = document.createElement('div');
+
+    document.documentElement.style.setProperty(
+      '--ph-speccer-grid-row-gap-original',
+      `${rowGap}px`
+    );
+    document.documentElement.style.setProperty(
+      '--ph-speccer-grid-row-gap',
+      `${rowGap < 24 ? 24 : rowGap}px`
+    );
+
+    if (rowGap < 24) gridRowContainer.classList.add('speccer-small-grid');
+
+    gridRowContainer.classList.add('ph-speccer');
+    gridRowContainer.classList.add('speccer');
+    gridRowContainer.classList.add('speccer-grid-row-container');
+
+    gridRowContainer.style.width = `${width + 64}px`;
+    gridRowContainer.style.height = `${height}px`;
+    gridRowContainer.style.top = `${top}px`;
+    gridRowContainer.style.left = `${left - 32}px`;
+    gridRowContainer.style.padding = padding;
+    gridRowContainer.style.gridTemplateRows = gridTemplateRows;
+
+    const numberOfRowItems = gridTemplateRows.split(' ').length;
+
+    for (let i = 0; i < numberOfRowItems; i++) {
+      const gridItem = document.createElement('div');
+
+      gridItem.classList.add('ph-speccer');
+      gridItem.classList.add('speccer');
+      gridItem.classList.add('speccer-grid-row-item');
+      gridRowContainer.appendChild(gridItem);
+    }
+    document.body.appendChild(gridRowContainer);
+  }
 };
 
 /**
@@ -110,7 +148,13 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
   await waitForFrame();
 
-  const gridContainerElement = await create(targetElement, _target_styles);
+  const options = {
+    toggle: 'both'
+  };
 
-  document.body.appendChild(gridContainerElement);
+  if (_areas_string?.includes('columns')) options.toggle = 'columns';
+
+  if (_areas_string?.includes('rows')) options.toggle = 'rows';
+
+  await create(targetElement, _target_styles, options);
 };

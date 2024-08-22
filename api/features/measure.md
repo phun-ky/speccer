@@ -6,7 +6,7 @@
 
 # features/measure
 
-> Last updated 2024-08-20T07:17:27.751Z
+> Last updated 2024-08-21T12:47:21.889Z
 
 ## Functions
 

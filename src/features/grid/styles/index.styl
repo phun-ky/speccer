@@ -1,63 +1,109 @@
-.ph-speccer.speccer.speccer-grid-container
-  counter-reset column-gap
+baseGridContainer()
   justify-content initial
   transition var(--ph-speccer-transition-default)
-  column-gap var(--ph-speccer-grid-gap-original)
   display grid
   position absolute
 
-.ph-speccer.speccer.speccer-grid-item
+.ph-speccer.speccer.speccer-grid-container
+  baseGridContainer()
+  counter-reset column-gap
+  column-gap var(--ph-speccer-grid-gap-original)
+  justify-content initial
   transition var(--ph-speccer-transition-default)
-  border-left 1px solid var(--ph-speccer-base-color)
-  border-right 1px solid var(--ph-speccer-base-color)
+  display grid
+  position absolute
+
+.ph-speccer.speccer.speccer-grid-row-container
+  baseGridContainer()
+  counter-reset row-gap
+  row-gap var(--ph-speccer-grid-row-gap-original)
+
+baseGridItem()
+  transition var(--ph-speccer-transition-default)
   position relative
   height 100%
 
 .ph-speccer.speccer.speccer-grid-item
+  baseGridItem()
+  border-left 1px solid var(--ph-speccer-base-color)
+  border-right 1px solid var(--ph-speccer-base-color)
+
+.ph-speccer.speccer.speccer-grid-row-item
+  baseGridItem()
+  border-top 1px solid var(--ph-speccer-base-color)
+  border-bottom 1px solid var(--ph-speccer-base-color)
+  width 100%
+
+basePinGrid()
+  transition var(--ph-speccer-transition-default)
+  font-family var(--ph-speccer-font-family) !important
+  font-size 16px
+  position absolute
+  background-color var(--ph-speccer-base-color)
+  display flex
+  justify-content center
+  align-items center
+  color var(--ph-speccer-color-text-light)
+
+.ph-speccer.speccer.speccer-grid-item
   &::before
-    transition var(--ph-speccer-transition-default)
-    font-family var(--ph-speccer-font-family) !important
+    basePinGrid()
     counter-increment column-gap
-    font-size 16px
     content counter(column-gap)
-    position absolute
     top -32px
     left 100%;
-    background-color var(--ph-speccer-base-color)
     height 32px
     width calc(var(--ph-speccer-grid-gap) + 2px)
-    display flex
-    justify-content center
-    align-items center
-    color var(--ph-speccer-color-text-light)
     border-top-left-radius 50%
     border-top-right-radius 50%
 
+.ph-speccer.speccer.speccer-grid-row-item
+  &::before
+    basePinGrid()
+    counter-increment row-gap
+    content counter(row-gap)
+    left -32px
+    top 100%;
+    width 32px
+    height calc(var(--ph-speccer-grid-gap) + 2px)
+    border-top-left-radius 50%
+    border-bottom-left-radius 50%
+
 .ph-speccer.speccer.speccer-grid-item:first-child
   &::after
-    transition var(--ph-speccer-transition-default)
-    font-family var(--ph-speccer-font-family) !important
+    basePinGrid()
     counter-increment column-gap
-    font-size 16px
     content counter(column-gap)
-    position absolute
     top -32px
     left 100%;
-    background-color var(--ph-speccer-base-color)
     height 32px
     width calc(var(--ph-speccer-grid-gap) + 2px)
-    display flex
-    justify-content center
-    align-items center
-    color var(--ph-speccer-color-text-light)
     border-top-left-radius 50%
     border-top-right-radius 50%
+
+.ph-speccer.speccer.speccer-grid-row-item:first-child
+  &::after
+    basePinGrid()
+    counter-increment row-gap
+    content counter(row-gap)
+    left -32px
+    top 100%;
+    width 32px
+    height calc(var(--ph-speccer-grid-gap) + 2px)
+    border-top-left-radius 50%
+    border-bottom-left-radius 50%
 
 .ph-speccer.speccer.speccer-grid-container
   &.speccer-small-grid
     & .ph-speccer.speccer.speccer-grid-item::before,
     & .ph-speccer.speccer.speccer-grid-item:first-child::after
       left calc(100% - ((var(--ph-speccer-grid-gap) - var(--ph-speccer-grid-gap-original)) / 2))
+
+.ph-speccer.speccer.speccer-grid-row-container
+  &.speccer-small-grid
+    & .ph-speccer.speccer.speccer-grid-row-item::before,
+    & .ph-speccer.speccer.speccer-grid-row-item:first-child::after
+      top calc(100% - ((var(--ph-speccer-grid-row-gap) - var(--ph-speccer-grid-row-gap-original)) / 2))
 
 .ph-speccer.speccer.speccer-grid-container
   & .ph-speccer.speccer.speccer-grid-item
@@ -68,6 +114,15 @@
         right auto
         left calc((var(--ph-speccer-grid-gap) + 2px ) / 2 * -1)
 
+.ph-speccer.speccer.speccer-grid-row-container
+  & .ph-speccer.speccer.speccer-grid-row-item
+    &:first-child
+      &::before
+        position absolute
+        left -32px
+        bottom auto
+        top calc((var(--ph-speccer-grid-row-gap) + 2px ) / 2 * -1)
+
 .ph-speccer.speccer.speccer-grid-container
   & .ph-speccer.speccer.speccer-grid-item
     &:last-child
@@ -76,4 +131,13 @@
         top -32px
         left auto
         right calc((var(--ph-speccer-grid-gap) + 2px ) / 2 * -1)
+
+.ph-speccer.speccer.speccer-grid-row-container
+  & .ph-speccer.speccer.speccer-grid-row-item
+    &:last-child
+      &::before
+        position absolute
+        left -32px
+        top auto
+        bottom calc((var(--ph-speccer-grid-row-gap) + 2px ) / 2 * -1)
 
