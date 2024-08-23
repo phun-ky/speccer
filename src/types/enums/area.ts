@@ -33,6 +33,7 @@ export enum PinAreaEnum {
  */
 export enum MeasureAreaEnum {
   Measure = 'measure', // Represents the measure area
+  Slim = 'slim', // Represents the slim measurement area
   Width = 'width', // Represents the width measurement area
   Height = 'height', // Represents the height measurement area
   Left = 'left', // Represents the left measurement area

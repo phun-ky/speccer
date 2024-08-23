@@ -25,7 +25,7 @@
   - [Features](#features)
     - [Element spacing](#element-spacing)
     - [Element dimensions](#element-dimensions)
-      - [Subtle measure](#subtle-measure)
+      - [Slim measure](#slim-measure)
     - [Pin element to highlight the anatomy](#pin-element-to-highlight-the-anatomy)
       - [Align with parent container](#align-with-parent-container)
       - [Custom literals](#custom-literals)
@@ -224,14 +224,26 @@ Display dimensions with:
 
 Where `height` and `width` comes with placement flags. Default for `height` is `left`, default for `width` is `top`.
 
-#### Subtle measure
+#### Slim measure
+
+![Image of slim option for measure](./public/slim-measure.png)
+
+Use a slim style:
+
+```html
+<div data-speccer="measure slim height left" class="..."></div>
+```
+
+This will give a slimmer look and feel.
+
+##### Subtle slim measure
 
 ![Image of subtle option for measure](./public/subtle-measure.png)
 
 Use a subtle style:
 
 ```html
-<div data-speccer="measure height left subtle" class="..."></div>
+<div data-speccer="measure slim height left subtle" class="..."></div>
 ```
 
 This will give a dashed border.
@@ -531,6 +543,8 @@ Allthough the styling works nicely with dark mode, you can use the provided CSS 
   --ph-speccer-mark-border-width: 1px;
   --ph-speccer-mark-border-style: solid;
   --ph-speccer-measure-color: var(--ph-speccer-color-red);
+  --ph-speccer-measure-line-width: 1.5px;
+  --ph-speccer-measure-border-style: dotted;
   --ph-speccer-measure-size: 8px;
   --ph-speccer-a11y-color-background: var(--ph-speccer-color-beautifulBlue);
   --ph-speccer-a11y-landmark-color-background: var(

@@ -1,0 +1,99 @@
+.ph-speccer.speccer.measure
+  &.slim
+    &.height
+      width var(--ph-speccer-measure-size)
+      &::before
+        content none !important
+
+.ph-speccer.speccer.measure
+  &.slim
+    &.height
+      &.left
+        color var(--ph-speccer-measure-color)
+        border var(--ph-speccer-measure-line-width) solid var(--ph-speccer-measure-color)
+        border-right none
+
+.ph-speccer.speccer.measure
+  &.slim
+    &.height
+      &.right
+        color var(--ph-speccer-measure-color)
+        border var(--ph-speccer-measure-line-width) solid var(--ph-speccer-measure-color)
+        border-left none
+
+.ph-speccer.speccer.measure
+  &.slim
+    &.height
+      &.left
+        &::after
+          position absolute
+          top 50%
+          width auto
+          height auto
+          margin 0
+          white-space nowrap
+          padding 0
+          border none
+          left calc(-100% - 20px - var(--ph-speccer-line-width))
+          transform translateY(-50%) rotate(-90deg)
+
+.ph-speccer.speccer.measure
+  &.slim
+    &.height
+      &.right
+        &::after
+          position absolute
+          width auto
+          height auto
+          border none
+          padding 0
+          margin 0
+          top 50%
+          white-space nowrap
+          left calc(100% - var(--ph-speccer-measure-size))
+          transform translateY(-50%) rotate(90deg)
+
+.ph-speccer.speccer.measure
+  &.slim
+    &.width
+      height var(--ph-speccer-measure-size)
+      &::before
+        content none !important
+
+.ph-speccer.speccer.measure
+  &.slim
+    &.width
+      &.bottom
+        color var(--ph-speccer-measure-color)
+        border var(--ph-speccer-measure-line-width) solid var(--ph-speccer-measure-color)
+        border-top none
+
+.ph-speccer.speccer.measure
+  &.slim
+    &.width
+      &.top
+        color var(--ph-speccer-measure-color)
+        border var(--ph-speccer-measure-line-width) solid var(--ph-speccer-measure-color)
+        border-bottom none
+
+.ph-speccer.speccer.measure
+  &.slim
+    &.width
+      &.top
+        &::after
+          position absolute
+          bottom calc(100% + 5px)
+          padding 0
+          border none
+          height auto
+
+.ph-speccer.speccer.measure
+  &.slim
+    &.width
+      &.bottom
+        &::after
+          position absolute
+          top calc(100% + 5px)
+          padding 0
+          border none
+          height auto
