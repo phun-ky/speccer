@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="ph" lang="en">
   <head>
-    <title>@phun-ky/speccer | measure</title>
+    <title>@phun-ky/speccer | spacing</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Language" content="no" />
     <meta name="robots" content="none" />
@@ -36,6 +36,7 @@
     <style type="text/css">
       .ph-speccer.speccer {
         --ph-speccer-base-color: #ffc72c;
+        --ph-speccer-measure-color: #ffc72c;
         --ph-speccer-spacing-margin-color-background: rgba(255, 153, 0, 0.1);
         --ph-speccer-spacing-margin-color: #ff9900;
         --ph-speccer-spacing-padding-color-background: rgba(70, 219, 0, 0.06);
@@ -57,7 +58,6 @@
         );
         --ph-speccer-measure-color: red;
       }
-
       .ph.box:not(.example) {
         box-sizing: border-box;
         /* background-color: var(--ph-color-background-notice-note); */
@@ -192,13 +192,10 @@
       </header>
       <main class="ph main">
         <section class="ph section">
-          <div
-            class="ph container"
-            style="margin-top: 7rem; margin-bottom: 7rem"
-          >
-            <h1 class="ph">Measure</h1>
+          <div class="ph container">
+            <h1 class="ph">Spacing</h1>
             <p class="ph lead" style="margin-bottom: 4rem">
-              Uses the `measure` feature from @phun-ky/speccer
+              Uses the `spacing` feature from @phun-ky/speccer
             </p>
             <!-- <div class="ph actions">
               <button
@@ -221,139 +218,8 @@
           class="ph section"
           style="margin-top: 7rem; margin-bottom: 7rem"
         >
-          <div
-            class="ph container"
-            style="margin-top: 7rem; margin-bottom: 7rem"
-          >
-            <h2 class="ph" style="margin-bottom: 7rem">Slim variant</h2>
-            <div
-              class="ph"
-              id="grid-example"
-              style="
-                display: flex;
-                flex-direction: column;
-                padding: 2rem 2rem;
-                align-items: center;
-              "
-            >
-              <div
-                id="2202a8b8-b259-512308-3670de213cd123"
-                class="ph box"
-                data-speccer="measure width top slim"
-              ></div>
-            </div>
-          </div>
-          <div
-            class="ph container"
-            style="margin-top: 7rem; margin-bottom: 7rem"
-          >
-            <div
-              class="ph"
-              id="grid-example"
-              style="
-                display: flex;
-                flex-direction: column;
-                padding: 2rem 2rem;
-                align-items: center;
-              "
-            >
-              <div
-                id="2202a8b8-b259-512308-3670de213cd123"
-                class="ph box"
-                data-speccer="measure width bottom slim"
-              ></div>
-            </div>
-          </div>
-          <div
-            class="ph container"
-            style="margin-top: 7rem; margin-bottom: 7rem"
-          >
-            <div
-              class="ph"
-              id="grid-example"
-              style="
-                display: flex;
-                flex-direction: column;
-                padding: 2rem 2rem;
-                align-items: center;
-              "
-            >
-              <div
-                id="2202a8b8-b259-512308-3670de213cd123"
-                class="ph box"
-                data-speccer="measure height right slim"
-              ></div>
-            </div>
-          </div>
-          <div
-            class="ph container"
-            style="margin-top: 7rem; margin-bottom: 7rem"
-          >
-            <h3 class="ph">Subtle slim</h3>
-            <div
-              class="ph"
-              id="grid-example"
-              style="
-                display: flex;
-                flex-direction: column;
-                padding: 2rem 2rem;
-                align-items: center;
-              "
-            >
-              <div
-                id="2202a8b8-b259-512308-3670de213cd123"
-                class="ph box"
-                data-speccer="measure height left slim subtle"
-              ></div>
-            </div>
-          </div>
-          <div
-            class="ph container"
-            style="margin-top: 7rem; margin-bottom: 7rem"
-          >
+          <div class="ph container" style="margin-bottom: 5rem">
             <h2 class="ph" style="margin-bottom: 7rem">Default</h2>
-            <div
-              class="ph"
-              id="grid-example"
-              style="
-                display: flex;
-                flex-direction: column;
-                padding: 2rem 2rem;
-                align-items: center;
-              "
-            >
-              <div
-                id="2202a8b8-b259-512308-3670de213cd123"
-                class="ph box"
-                data-speccer="measure width bottom"
-              ></div>
-            </div>
-          </div>
-          <div
-            class="ph container"
-            style="margin-top: 7rem; margin-bottom: 7rem"
-          >
-            <div
-              class="ph"
-              id="grid-example"
-              style="
-                display: flex;
-                flex-direction: column;
-                padding: 2rem 2rem;
-                align-items: center;
-              "
-            >
-              <div
-                id="2202a8b8-b259-512308-3670de213cd123"
-                class="ph box"
-                data-speccer="measure height right"
-              ></div>
-            </div>
-          </div>
-          <div
-            class="ph container"
-            style="margin-top: 7rem; margin-bottom: 7rem"
-          >
             <div
               class="ph"
               id="grid-example"
@@ -372,13 +238,8 @@
               ></div>
             </div>
           </div>
-          <div
-            class="ph container"
-            style="margin-top: 7rem; margin-bottom: 7rem"
-          >
-            <h2 class="ph" style="margin-bottom: 7rem">
-              Ecample with the spacing feature
-            </h2>
+          <div class="ph container">
+            <h3 class="ph" style="margin-bottom: 7rem">Example with measure</h3>
             <div
               class="ph"
               id="grid-example"
@@ -473,7 +334,7 @@
       </main>
 
       <footer class="ph">
-        <div class="ph container" style="margin-top: 7rem; margin-bottom: 7rem">
+        <div class="ph container">
           <p class="ph">
             Made with <strong class="ph">saturated fat</strong> by
             <a class="ph" target="_blank" href="https://phun-ky.net"
