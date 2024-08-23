@@ -70,7 +70,7 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
   if (!_target_pruned_spacing_styles.length) return;
 
-  _target_pruned_spacing_styles.forEach(async (property) =>{
+  _target_pruned_spacing_styles.forEach(async (property) => {
     const _value = getNumberValue(_target_spacing_styles[property]);
     const _speccer_el = create(_value);
     const _class_name = getClassNameFromCSSProperty(property);

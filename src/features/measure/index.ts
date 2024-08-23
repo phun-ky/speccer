@@ -68,7 +68,7 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
   await waitForFrame();
 
-  const isSlim  = _areas_string?.includes(MeasureAreaEnum.Slim);
+  const isSlim = _areas_string?.includes(MeasureAreaEnum.Slim);
   const _target_rect = targetElement.getBoundingClientRect();
   const widthModifier = !isSlim ? 48 : 0;
   const heightModifier = !isSlim ? 96 : 0;
@@ -81,7 +81,7 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
       const _positional_styles = await getRec(_measure_el, targetElement);
 
-      if(isSlim){
+      if (isSlim) {
         const { left, top, width } = _positional_styles.fromBottom({
           center: false
         });
@@ -92,7 +92,7 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
           width: `${width}px`
         });
       } else {
-        const { left, top, width,height } = _positional_styles.absolute({
+        const { left, top, width, height } = _positional_styles.absolute({
           center: false
         });
 
@@ -110,7 +110,7 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
       const _positional_styles = await getRec(_measure_el, targetElement);
 
-      if(isSlim){
+      if (isSlim) {
         const { left, top, width } = _positional_styles.fromTop({
           center: false
         });
@@ -120,14 +120,14 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
           top: `${top}px`,
           width: `${width}px`
         });
-      } else{
+      } else {
         const { left, top, width, height } = _positional_styles.absolute({
           center: false
         });
 
         await addStyles(_measure_el, {
           left: `${left}px`,
-          top: `${top -widthModifier}px`,
+          top: `${top - widthModifier}px`,
           width: `${width}px`,
           height: `${height + widthModifier}px`
         });
@@ -141,8 +141,8 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
       const _positional_styles = await getRec(_measure_el, targetElement);
 
-      if(isSlim){
-        const { left, top, height} = _positional_styles.fromRight({
+      if (isSlim) {
+        const { left, top, height } = _positional_styles.fromRight({
           center: false
         });
 
@@ -152,7 +152,7 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
           height: `${height}px`
         });
       } else {
-        const { left, top, height, width} = _positional_styles.absolute({
+        const { left, top, height, width } = _positional_styles.absolute({
           center: false
         });
 
@@ -170,7 +170,7 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
       const _positional_styles = await getRec(_measure_el, targetElement);
 
-      if(isSlim){
+      if (isSlim) {
         const { left, top, height } = _positional_styles.fromLeft({
           center: false
         });
