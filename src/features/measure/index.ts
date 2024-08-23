@@ -1,4 +1,5 @@
 /* eslint no-console:0 */
+import { MeasureAreaEnum } from '../../types/enums/area';
 import {
   isBottomArea,
   isHeightArea,
@@ -42,7 +43,7 @@ export const create = (
 };
 
 /**
- * Create a measurement element and add it to the body with styles matching a specified target element.
+ * Create a measurement element and add it to the body with styles matching a specified target element based on the attribute values from `data-speccer`.
  *
  * ![measure](https://github.com/phun-ky/speccer/blob/main/public/measure.png?raw=true)
  *
@@ -67,7 +68,10 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
   await waitForFrame();
 
+  const isSlim  = _areas_string?.includes(MeasureAreaEnum.Slim);
   const _target_rect = targetElement.getBoundingClientRect();
+  const widthModifier = !isSlim ? 48 : 0;
+  const heightModifier = !isSlim ? 96 : 0;
 
   if (isWidthArea(_areas_string)) {
     if (isBottomArea(_areas_string)) {
@@ -76,30 +80,58 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
       document.body.appendChild(_measure_el);
 
       const _positional_styles = await getRec(_measure_el, targetElement);
-      const { left, top, width } = _positional_styles.fromBottom({
-        center: false
-      });
 
-      await addStyles(_measure_el, {
-        left: `${left}px`,
-        top: `${top}px`,
-        width: `${width}px`
-      });
+      if(isSlim){
+        const { left, top, width } = _positional_styles.fromBottom({
+          center: false
+        });
+
+        await addStyles(_measure_el, {
+          left: `${left}px`,
+          top: `${top}px`,
+          width: `${width}px`
+        });
+      } else {
+        const { left, top, width,height } = _positional_styles.absolute({
+          center: false
+        });
+
+        await addStyles(_measure_el, {
+          left: `${left}px`,
+          top: `${top}px`,
+          width: `${width}px`,
+          height: `${height + widthModifier}px`
+        });
+      }
     } else {
       const _measure_el = create(_target_rect.width, _areas_string);
 
       document.body.appendChild(_measure_el);
 
       const _positional_styles = await getRec(_measure_el, targetElement);
-      const { left, top, width } = _positional_styles.fromTop({
-        center: false
-      });
 
-      await addStyles(_measure_el, {
-        left: `${left}px`,
-        top: `${top}px`,
-        width: `${width}px`
-      });
+      if(isSlim){
+        const { left, top, width } = _positional_styles.fromTop({
+          center: false
+        });
+
+        await addStyles(_measure_el, {
+          left: `${left}px`,
+          top: `${top}px`,
+          width: `${width}px`
+        });
+      } else{
+        const { left, top, width, height } = _positional_styles.absolute({
+          center: false
+        });
+
+        await addStyles(_measure_el, {
+          left: `${left}px`,
+          top: `${top -widthModifier}px`,
+          width: `${width}px`,
+          height: `${height + widthModifier}px`
+        });
+      }
     }
   } else if (isHeightArea(_areas_string)) {
     if (isRightArea(_areas_string)) {
@@ -108,30 +140,58 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
       document.body.appendChild(_measure_el);
 
       const _positional_styles = await getRec(_measure_el, targetElement);
-      const { left, top, height } = _positional_styles.fromRight({
-        center: false
-      });
 
-      await addStyles(_measure_el, {
-        left: `${left}px`,
-        top: `${top}px`,
-        height: `${height}px`
-      });
+      if(isSlim){
+        const { left, top, height} = _positional_styles.fromRight({
+          center: false
+        });
+
+        await addStyles(_measure_el, {
+          left: `${left}px`,
+          top: `${top}px`,
+          height: `${height}px`
+        });
+      } else {
+        const { left, top, height, width} = _positional_styles.absolute({
+          center: false
+        });
+
+        await addStyles(_measure_el, {
+          left: `${left}px`,
+          top: `${top}px`,
+          height: `${height}px`,
+          width: `${width + heightModifier}px`
+        });
+      }
     } else {
       const _measure_el = create(_target_rect.height, _areas_string);
 
       document.body.appendChild(_measure_el);
 
       const _positional_styles = await getRec(_measure_el, targetElement);
-      const { left, top, height } = _positional_styles.fromLeft({
-        center: false
-      });
 
-      await addStyles(_measure_el, {
-        left: `${left}px`,
-        top: `${top}px`,
-        height: `${height}px`
-      });
+      if(isSlim){
+        const { left, top, height } = _positional_styles.fromLeft({
+          center: false
+        });
+
+        await addStyles(_measure_el, {
+          left: `${left}px`,
+          top: `${top}px`,
+          height: `${height}px`
+        });
+      } else {
+        const { left, top, height, width } = _positional_styles.absolute({
+          center: false
+        });
+
+        await addStyles(_measure_el, {
+          left: `${left - heightModifier}px`,
+          top: `${top}px`,
+          height: `${height}px`,
+          width: `${width + heightModifier}px`
+        });
+      }
     }
   }
 };

@@ -1,0 +1,63 @@
+.ph-speccer.speccer.measure
+  &.height
+    color var(--ph-speccer-measure-color)
+    border-top var(--ph-speccer-measure-line-width) var(--ph-speccer-measure-border-style)
+    border-bottom var(--ph-speccer-measure-line-width) var(--ph-speccer-measure-border-style)
+
+.ph-speccer.speccer.measure
+  &.height
+    &.left
+      &::before
+        content ''
+        display block
+        height calc(100% + var(--ph-speccer-measure-line-width))
+        background transparent
+        position absolute
+        left calc(64px - 5px)
+        width 10px
+        border-top var(--ph-speccer-measure-line-width) solid
+        border-bottom var(--ph-speccer-measure-line-width) solid
+
+.ph-speccer.speccer.measure
+  &.height
+    &.left
+      &::after
+        position static
+        content attr(data-measure)
+        display flex
+        width 64px
+        height 100%
+        line-height 100%
+        margin-right auto
+        border-right var(--ph-speccer-measure-line-width) solid
+        justify-content flex-end
+        padding-right 8px
+
+.ph-speccer.speccer.measure
+  &.height
+    &.right
+      &::before
+        content ''
+        display block
+        height calc(100% + var(--ph-speccer-measure-line-width))
+        background transparent
+        position absolute
+        left calc(100% - 64px - 5px)
+        width 10px
+        border-top var(--ph-speccer-measure-line-width) solid
+        border-bottom var(--ph-speccer-measure-line-width) solid
+
+.ph-speccer.speccer.measure
+  &.height
+    &.right
+      &::after
+        position static
+        content attr(data-measure)
+        display flex
+        width 64px
+        height 100%
+        line-height 100%
+        margin-left auto
+        border-left var(--ph-speccer-measure-line-width) solid
+        justify-content flex-start
+        padding-left 8px
