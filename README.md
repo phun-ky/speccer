@@ -520,18 +520,17 @@ Allthough the styling works nicely with dark mode, you can use the provided CSS 
   --ph-speccer-color-fuchsiaBlue: #7e60c5;
   --ph-speccer-base-color: var(--ph-speccer-color-artificialStrawberry);
   --ph-speccer-spacing-color: var(--ph-speccer-base-color);
-  --ph-speccer-spacing-color-padding: rgb(
+  --ph-speccer-spacing-padding-color: var(--ph-speccer-color-carbon);
+  --ph-speccer-spacing-padding-color-background: rgb(
     from var(--ph-speccer-color-venusSlipperOrchid) r g b /
       var(--ph-speccer-opacity-40)
   );
-  --ph-speccer-spacing-color-padding-hover: var(
-    --ph-speccer-color-venusSlipperOrchid
-  );
-  --ph-speccer-spacing-color-margin: rgb(
+  --ph-speccer-spacing-margin-color: var(--ph-speccer-color-red);
+  --ph-speccer-spacing-margin-color-background: rgb(
     from var(--ph-speccer-color-superBanana) r g b /
       var(--ph-speccer-opacity-40)
   );
-  --ph-speccer-spacing-color-margin-hover: var(--ph-speccer-color-superBanana);
+  --ph-speccer-spacing-line-width: var(--ph-speccer-line-width);
   --ph-speccer-typography-background-color: var(--ph-speccer-color-white);
   --ph-speccer-typography-color-property: var(--ph-speccer-color-niuZaiSeDenim);
   --ph-speccer-typography-color-text: var(--ph-speccer-base-color);

@@ -1,0 +1,72 @@
+.ph-speccer.speccer.spacing
+  &.padding
+    background-color var(--ph-speccer-spacing-padding-color-background)
+    color var(--ph-speccer-spacing-padding-color)
+
+.ph-speccer.speccer.spacing
+  &.padding
+    &::after,
+    &::before
+      transition none
+      content ""
+      position absolute
+
+.ph-speccer.speccer.spacing
+  &.padding
+    &.bottom,
+    &.top
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 4px;
+
+.ph-speccer.speccer.spacing
+  &.padding
+    &.bottom,
+    &.top
+      &::after
+        left calc(6ch - 5px)
+        height 100%
+        width 10px
+        border-top var(--ph-speccer-spacing-line-width) solid var(--ph-speccer-spacing-padding-color)
+        border-bottom var(--ph-speccer-spacing-line-width) solid var(--ph-speccer-spacing-padding-color)
+
+.ph-speccer.speccer.spacing
+  &.padding
+    &.bottom,
+    &.top
+      &::before
+        left 6ch
+        height 100%
+        border-left var(--ph-speccer-spacing-line-width) solid var(--ph-speccer-spacing-padding-color)
+        width 0
+
+.ph-speccer.speccer.spacing
+  &.padding
+    &.left,
+    &.right
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      padding-bottom: 4px;
+
+.ph-speccer.speccer.spacing
+  &.padding
+    &.left,
+    &.right
+      &::after
+        top calc(100% - 24px - 10px)
+        height 10px
+        width 100%
+        border-right var(--ph-speccer-spacing-line-width) solid var(--ph-speccer-spacing-padding-color)
+        border-left var(--ph-speccer-spacing-line-width) solid var(--ph-speccer-spacing-padding-color)
+
+.ph-speccer.speccer.spacing
+  &.padding
+    &.left,
+    &.right
+      &::before
+        top calc(100% - 24px - 5px)
+        height 0
+        border-top var(--ph-speccer-spacing-line-width) solid var(--ph-speccer-spacing-padding-color)
+        width 100%
+
