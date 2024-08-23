@@ -166,7 +166,15 @@ export const getSVGPath = async (
     pos2
   );
   const { firstPoint, firstControl, lastControl, lastPoint } =
-    createBezierCurveCoordinates({ x1, x2, y1: y1 +document.documentElement.scrollTop, y2: y2 + document.documentElement.scrollTop }, { direction: '' });
+    createBezierCurveCoordinates(
+      {
+        x1,
+        x2,
+        y1: y1 + document.documentElement.scrollTop,
+        y2: y2 + document.documentElement.scrollTop
+      },
+      { direction: '' }
+    );
 
   return (
     `M ${firstPoint.x} ${firstPoint.y}` +

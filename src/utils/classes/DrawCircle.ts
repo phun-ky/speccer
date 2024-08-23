@@ -108,7 +108,10 @@ export class DrawCircle {
 
     this.circle.setAttribute('r', this.radius + ''); // SVG attributes
     this.circle.setAttribute('cx', Math.round(x) + ''); // SVG attributes
-    this.circle.setAttribute('cy', Math.round(y + document.documentElement.scrollTop) + ''); // SVG attributes
+    this.circle.setAttribute(
+      'cy',
+      Math.round(y + document.documentElement.scrollTop) + ''
+    ); // SVG attributes
     this.circle.setAttribute('fill', 'currentColor'); // SVG attributes
   }
 }

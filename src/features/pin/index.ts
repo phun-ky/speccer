@@ -52,7 +52,10 @@ export const pinElements = async (
 
   if (!_els_to_be_pinned || _els_to_be_pinned.length === 0) return;
 
-  const _literals_to_use = sectionElement.getAttribute('data-speccer-literals') as string|null || window.SPECCER_LITERALS || SPECCER_LITERALS;
+  const _literals_to_use =
+    (sectionElement.getAttribute('data-speccer-literals') as string | null) ||
+    window.SPECCER_LITERALS ||
+    SPECCER_LITERALS;
 
   [..._els_to_be_pinned]
     .filter(
@@ -63,7 +66,10 @@ export const pinElements = async (
         targetElement: HTMLElement,
         targetIndex: number
       ): Promise<void> => {
-        const _character_to_use = getCharacterToUse(targetIndex,_literals_to_use);
+        const _character_to_use = getCharacterToUse(
+          targetIndex,
+          _literals_to_use
+        );
 
         await pinElement(targetElement, _character_to_use, sectionElement);
       }

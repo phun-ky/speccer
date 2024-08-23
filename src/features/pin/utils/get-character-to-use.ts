@@ -14,7 +14,10 @@ let _index_to_use = 0;
  * const nextCharacter = getCharacterToUse(25); // Returns next character or a generated pair if index exceeds literals length
  * ```
  */
-export const getCharacterToUse = (targetIndex: number, literalsToUse: string|string[]): string => {
+export const getCharacterToUse = (
+  targetIndex: number,
+  literalsToUse: string | string[]
+): string => {
   let _character_to_use = literalsToUse[targetIndex];
 
   // Reset index to use when we start new elements
