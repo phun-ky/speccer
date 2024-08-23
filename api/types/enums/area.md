@@ -6,7 +6,7 @@
 
 # types/enums/area
 
-> Last updated 2024-08-22T06:56:09.109Z
+> Last updated 2024-08-23T11:58:26.665Z
 
 ## Enumerations
 
@@ -18,7 +18,7 @@ Enum representing different grid areas.
 
 | Enumeration Member | Value    | Defined in                                                                                         |
 | ------------------ | -------- | -------------------------------------------------------------------------------------------------- |
-| `Grid`             | `"grid"` | [types/enums/area.ts:74](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L74) |
+| `Grid`             | `"grid"` | [types/enums/area.ts:75](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L75) |
 
 ---
 
@@ -30,7 +30,7 @@ Enum representing different mark areas.
 
 | Enumeration Member | Value    | Defined in                                                                                         |
 | ------------------ | -------- | -------------------------------------------------------------------------------------------------- |
-| `Mark`             | `"mark"` | [types/enums/area.ts:67](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L67) |
+| `Mark`             | `"mark"` | [types/enums/area.ts:68](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L68) |
 
 ---
 
@@ -42,13 +42,14 @@ Enum representing different measurement areas.
 
 | Enumeration Member | Value       | Defined in                                                                                         |
 | ------------------ | ----------- | -------------------------------------------------------------------------------------------------- |
-| `Bottom`           | `"bottom"`  | [types/enums/area.ts:40](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L40) |
-| `Height`           | `"height"`  | [types/enums/area.ts:37](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L37) |
-| `Left`             | `"left"`    | [types/enums/area.ts:38](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L38) |
+| `Bottom`           | `"bottom"`  | [types/enums/area.ts:41](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L41) |
+| `Height`           | `"height"`  | [types/enums/area.ts:38](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L38) |
+| `Left`             | `"left"`    | [types/enums/area.ts:39](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L39) |
 | `Measure`          | `"measure"` | [types/enums/area.ts:35](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L35) |
-| `Right`            | `"right"`   | [types/enums/area.ts:39](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L39) |
-| `Top`              | `"top"`     | [types/enums/area.ts:41](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L41) |
-| `Width`            | `"width"`   | [types/enums/area.ts:36](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L36) |
+| `Right`            | `"right"`   | [types/enums/area.ts:40](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L40) |
+| `Slim`             | `"slim"`    | [types/enums/area.ts:36](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L36) |
+| `Top`              | `"top"`     | [types/enums/area.ts:42](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L42) |
+| `Width`            | `"width"`   | [types/enums/area.ts:37](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L37) |
 
 ---
 
@@ -82,7 +83,7 @@ Enum representing different spacing areas.
 
 | Enumeration Member | Value       | Defined in                                                                                         |
 | ------------------ | ----------- | -------------------------------------------------------------------------------------------------- |
-| `Spacing`          | `"spacing"` | [types/enums/area.ts:60](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L60) |
+| `Spacing`          | `"spacing"` | [types/enums/area.ts:61](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L61) |
 
 ---
 
@@ -110,12 +111,12 @@ Enum representing different typography areas.
 
 | Enumeration Member | Value          | Defined in                                                                                         |
 | ------------------ | -------------- | -------------------------------------------------------------------------------------------------- |
-| `Bottom`           | `"bottom"`     | [types/enums/area.ts:52](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L52) |
-| `Left`             | `"left"`       | [types/enums/area.ts:50](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L50) |
-| `Right`            | `"right"`      | [types/enums/area.ts:51](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L51) |
-| `Syntax`           | `"syntax"`     | [types/enums/area.ts:49](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L49) |
-| `Top`              | `"top"`        | [types/enums/area.ts:53](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L53) |
-| `Typography`       | `"typography"` | [types/enums/area.ts:48](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L48) |
+| `Bottom`           | `"bottom"`     | [types/enums/area.ts:53](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L53) |
+| `Left`             | `"left"`       | [types/enums/area.ts:51](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L51) |
+| `Right`            | `"right"`      | [types/enums/area.ts:52](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L52) |
+| `Syntax`           | `"syntax"`     | [types/enums/area.ts:50](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L50) |
+| `Top`              | `"top"`        | [types/enums/area.ts:54](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L54) |
+| `Typography`       | `"typography"` | [types/enums/area.ts:49](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L49) |
 
 ---
 

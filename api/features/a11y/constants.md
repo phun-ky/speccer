@@ -6,14 +6,14 @@
 
 # features/a11y/constants
 
-> Last updated 2024-08-22T06:56:09.095Z
+> Last updated 2024-08-23T11:58:26.656Z
 
 ## Variables
 
 ### SPECCER_LANDMARK_ELEMENTS_SELECTOR
 
 ```ts
-const SPECCER_LANDMARK_ELEMENTS_SELECTOR: '\nheader, footer, section, main, nav, aside, [role="section"], [role="banner"],\n[role="complementary"], [role="contentinfo"], [role="form"], [role="main"],\n[role="navigation"], [role="region"], [role="search"]\n';
+const SPECCER_LANDMARK_ELEMENTS_SELECTOR: '\nheader, footer, section, form, main, nav, aside, [role="section"], [role="banner"],\n[role="complementary"], [role="contentinfo"], [role="form"], [role="main"],\n[role="navigation"], [role="region"], [role="search"]\n';
 ```
 
 Selector string for landmark elements.

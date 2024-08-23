@@ -6,7 +6,7 @@
 
 # features/measure
 
-> Last updated 2024-08-22T06:56:09.099Z
+> Last updated 2024-08-23T11:58:26.659Z
 
 ## Functions
 
@@ -41,7 +41,7 @@ document.body.appendChild(measurement);
 
 #### Defined in
 
-[features/measure/index.ts:29](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L29)
+[features/measure/index.ts:30](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L30)
 
 ---
 
@@ -51,7 +51,7 @@ document.body.appendChild(measurement);
 function element(targetElement): Promise<void>;
 ```
 
-Create a measurement element and add it to the body with styles matching a specified target element.
+Create a measurement element and add it to the body with styles matching a specified target element based on the attribute values from `data-speccer`.
 
 ![measure](https://github.com/phun-ky/speccer/blob/main/public/measure.png?raw=true)
 
@@ -76,7 +76,7 @@ element(targetElement);
 
 #### Defined in
 
-[features/measure/index.ts:58](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L58)
+[features/measure/index.ts:59](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L59)
 
 ---
 

@@ -6,14 +6,14 @@
 
 # features/pin/utils/get-character-to-use
 
-> Last updated 2024-08-22T06:56:09.101Z
+> Last updated 2024-08-23T11:58:26.660Z
 
 ## Functions
 
 ### getCharacterToUse()
 
 ```ts
-function getCharacterToUse(targetIndex): string;
+function getCharacterToUse(targetIndex, literalsToUse): string;
 ```
 
 Returns the character to use at the specified target index.
@@ -21,9 +21,10 @@ If the index exceeds the available characters, it generates a new character by p
 
 #### Parameters
 
-| Parameter     | Type     | Description                             |
-| ------------- | -------- | --------------------------------------- |
-| `targetIndex` | `number` | The index of the character to retrieve. |
+| Parameter       | Type                    | Description                             |
+| --------------- | ----------------------- | --------------------------------------- |
+| `targetIndex`   | `number`                | The index of the character to retrieve. |
+| `literalsToUse` | `string` \| `string`\[] | Literals to use                         |
 
 #### Returns
 
@@ -40,7 +41,7 @@ const nextCharacter = getCharacterToUse(25); // Returns next character or a gene
 
 #### Defined in
 
-[features/pin/utils/get-character-to-use.ts:18](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/get-character-to-use.ts#L18)
+[features/pin/utils/get-character-to-use.ts:17](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/get-character-to-use.ts#L17)
 
 ---
 
