@@ -539,7 +539,7 @@ Allthough the styling works nicely with dark mode, you can use the provided CSS 
     from var(--ph-speccer-base-color) r g b / var(--ph-speccer-opacity-20)
   );
   --ph-speccer-mark-border-color: var(--ph-speccer-base-color);
-  --ph-speccer-mark-border-width: 1px;
+  --ph-speccer-mark-border-width: 1.5px;
   --ph-speccer-mark-border-style: solid;
   --ph-speccer-measure-color: var(--ph-speccer-color-red);
   --ph-speccer-measure-line-width: 1.5px;
