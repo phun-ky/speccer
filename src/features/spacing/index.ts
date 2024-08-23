@@ -70,7 +70,7 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
   if (!_target_pruned_spacing_styles.length) return;
 
-  for (const property of _target_pruned_spacing_styles) {
+  _target_pruned_spacing_styles.forEach(async (property) =>{
     const _value = getNumberValue(_target_spacing_styles[property]);
     const _speccer_el = create(_value);
     const _class_name = getClassNameFromCSSProperty(property);
@@ -80,5 +80,5 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
     targetElement.classList.add('is-specced');
     await position(property, _value, _speccer_el, targetElement);
-  }
+  });
 };
