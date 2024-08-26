@@ -46,6 +46,7 @@ export const styles = async (
     let { left, top } = _positional_styles.fromTop();
 
     left -= 32;
+    top += 32;
 
     if (left <= 0) left = 32;
 
