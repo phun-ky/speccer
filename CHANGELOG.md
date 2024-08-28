@@ -1,5 +1,84 @@
 # Changelog
 
+## [11.0.0](https://github.com/phun-ky/speccer/compare/v10.1.0...v11.0.0) (2024-08-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* 🧨 Have changed the API to accept an option object instead of a string.
+Please check the documentation.
+* 🧨 While setting a new default feature seems appropriate, it does not come without consequence. This is a breaking change, since the default of the API has changed. Please use the `slim` version if you want that instead of the new version.
+* 🧨 Have changed the API to accept an option object instead of a string.
+Please check the documentation.
+
+### Tasks
+
+* 🤖 Regenerate docs ([1c696dc](https://github.com/phun-ky/speccer/commit/1c696dc88a1ddfc27378eac85c7b9509163c08d4))
+* 🤖 Regenerate docs ([fb5ec15](https://github.com/phun-ky/speccer/commit/fb5ec152e76aff8252c37f9e9ab5e289bd44e20f))
+* 🤖 Update dev files ([f11e873](https://github.com/phun-ky/speccer/commit/f11e873f84c058fb4b747efba5f7c10ade5612b7))
+* 🤖 Update dev files ([c89f435](https://github.com/phun-ky/speccer/commit/c89f435873ce129e5d7891d6560e464c06e4adb3))
+* 🤖 Update/add dev files ([75c1d84](https://github.com/phun-ky/speccer/commit/75c1d840fa28d2b04cb9e3413bcd76cfd554de69))
+* 🤖 Update/add dev files ([0a0d68f](https://github.com/phun-ky/speccer/commit/0a0d68fe7032e689f8b32901e926f4de2fc5d261))
+
+
+### Documentation
+
+* ✏️ Regenerate API documentation ([366891b](https://github.com/phun-ky/speccer/commit/366891b199a82390c79e21842ad96a659c9fec41))
+* ✏️ Regenerate API documentation ([065a3f6](https://github.com/phun-ky/speccer/commit/065a3f6d8c5d501d8757fc7f0ea1f35606306ee2))
+* ✏️ Update `README.md` ([367f4b8](https://github.com/phun-ky/speccer/commit/367f4b84a323d5e06cc8c05fcc0162556738d2c8))
+* ✏️ Update and correct documentation ([49e3a3b](https://github.com/phun-ky/speccer/commit/49e3a3b70c59968209148d0d848c85ba7c5b3a78))
+* ✏️ Update and correct documentation ([288bdcf](https://github.com/phun-ky/speccer/commit/288bdcf6b026182f8db987d1b7c479770734b4be))
+* ✏️ Update screenshots ([e769793](https://github.com/phun-ky/speccer/commit/e76979333c193cf3bbea765d536567b28484e877)), closes [#233](https://github.com/phun-ky/speccer/issues/233)
+* ✏️ Update screenshots ([152e9d5](https://github.com/phun-ky/speccer/commit/152e9d5ebe752186168c956a99e52810f5d80d77)), closes [#233](https://github.com/phun-ky/speccer/issues/233)
+* ✏️ Update section with lower heading level ([fbb77df](https://github.com/phun-ky/speccer/commit/fbb77df0d5ae941fe2698313ac19bc6158c13aab))
+* ✏️ Update section with lower heading level ([8ec137e](https://github.com/phun-ky/speccer/commit/8ec137e329d77684630451ec87153d462bbfb7dc))
+
+
+### Feature
+
+* 🎸 Add `isSlimArea` to help with the old `measure` feat ([401fc31](https://github.com/phun-ky/speccer/commit/401fc313500447fb7dec33620f4c7302bf9269a5))
+* 🎸 Add `isSlimArea` to help with the old `measure` feat ([dd8e13b](https://github.com/phun-ky/speccer/commit/dd8e13bfbab877cb3ca9abbb8efcbd586fd4be1a))
+* 🎸 Add feature to pin text elements ([601f081](https://github.com/phun-ky/speccer/commit/601f0810cb58eb28c1238332e97756eab766e392)), closes [#258](https://github.com/phun-ky/speccer/issues/258)
+* 🎸 Add feature to pin text elements ([46f88f8](https://github.com/phun-ky/speccer/commit/46f88f8546bec4240608a8f9c2f264c58112e7eb)), closes [#258](https://github.com/phun-ky/speccer/issues/258)
+* 🎸 Add new default measure feature, keep old as `slim` ([6ca32df](https://github.com/phun-ky/speccer/commit/6ca32dfeb5dcda172c9f3a2b92f2ce4fa8d45ae2))
+* 🎸 Add new default measure feature, keep old as `slim`. ([7c74c5e](https://github.com/phun-ky/speccer/commit/7c74c5ebb435b00128d6264462f4a4e58e6f7098)), closes [#124](https://github.com/phun-ky/speccer/issues/124)
+* 🎸 Make it possible to add literals via attribute ([39bb43f](https://github.com/phun-ky/speccer/commit/39bb43f83f633c3eb126e93e63d968653fe4e2df))
+* 🎸 Make it possible to add literals via attribute ([a7d863d](https://github.com/phun-ky/speccer/commit/a7d863df412198f2a64bd06ca3029b83d3145866))
+
+
+### Bug
+
+* 🐛 Add missing landmark, `form` ([c5a30f9](https://github.com/phun-ky/speccer/commit/c5a30f9edef42d34a97858f8fea3ae6d4903c0b1))
+* 🐛 Add missing landmark, `form` ([a8633a2](https://github.com/phun-ky/speccer/commit/a8633a20bcb880daec1314978840624456a6699e))
+* 🐛 Add missing style overrides ([0e4e318](https://github.com/phun-ky/speccer/commit/0e4e318a061a5b2d559b2b3c2c1c618f9b0917b8))
+* 🐛 Add missing style overrides ([bcfce82](https://github.com/phun-ky/speccer/commit/bcfce828c0752a063e3aa704089a5a21e6e9ff6e))
+* 🐛 Use correct `y` value with `scrollTop` ([bd77583](https://github.com/phun-ky/speccer/commit/bd775838de27622750af3115485be4fd38b83e2f))
+* 🐛 Use correct `y` value with `scrollTop` ([dfeff17](https://github.com/phun-ky/speccer/commit/dfeff17d23bdd44efd0b7dc098e8c2e80507855b))
+* 🐛 Use correct variable for height calculation ([8e37555](https://github.com/phun-ky/speccer/commit/8e375553303fdc393488f21e9517494c7190df7d))
+* 🐛 Use correct variable for height calculation ([d31fbba](https://github.com/phun-ky/speccer/commit/d31fbbadcafde25949a378239faa4cf0d51098ea))
+
+
+### Performance change
+
+* ⚡️ Use `forEach` instead of `for...of` for speedier render ([c3ef814](https://github.com/phun-ky/speccer/commit/c3ef81442646761558f358d634f82c500744c719))
+* ⚡️ Use `forEach` instead of `for...of` for speedier render ([6c3dda3](https://github.com/phun-ky/speccer/commit/6c3dda3f72abdcb1a7b2955b5e79a45584dbbea4))
+
+
+### Refactoring
+
+* 💡 Adjust positioning of tabstop ([59e8b27](https://github.com/phun-ky/speccer/commit/59e8b2703f6b9c3a8816e2d48833ef559111830a))
+* 💡 Adjust positioning of tabstop ([2d53f9a](https://github.com/phun-ky/speccer/commit/2d53f9a3b0dff1d2242c66d3c989b1081417d1ac))
+* 💡 Improve spacing feature ([416c378](https://github.com/phun-ky/speccer/commit/416c37805eabe719ff56d00ddeaef138b9ea887a))
+* 💡 Improve spacing feature ([95e7bae](https://github.com/phun-ky/speccer/commit/95e7baedd214bc1f14aa77f14dd7f720c5000a54))
+* 💡 Move out `createA11yElement` function ([d108e4c](https://github.com/phun-ky/speccer/commit/d108e4ce68c93bef38dd093d617bb0c857394449))
+* 💡 Move out `createA11yElement` function ([8ba8591](https://github.com/phun-ky/speccer/commit/8ba8591da4d7235da6365bf82234aed539a3e15e))
+* 💡 Update values for `--ph-speccer-line-width` ([404f11c](https://github.com/phun-ky/speccer/commit/404f11c1bd958030fdb67408409d6149a64daa1b))
+* 💡 Update values for `--ph-speccer-line-width` ([8fe180a](https://github.com/phun-ky/speccer/commit/8fe180a86fbc93726287dd5849057affcc3b4ed8))
+* 💡 Update values for mark ([78b0432](https://github.com/phun-ky/speccer/commit/78b0432aa6eace2b27ef2f0738024b0791cee130))
+* 💡 Update values for mark ([721221d](https://github.com/phun-ky/speccer/commit/721221d43c37b5b6d485d8466f8f14268be618ee))
+* 💡 Use options object instead of area strings ([2b8476b](https://github.com/phun-ky/speccer/commit/2b8476bf0a1136d05ca3b193d627b4f815437124))
+* 💡 Use options object instead of area strings ([3560dda](https://github.com/phun-ky/speccer/commit/3560dda641b48b079230503453969e35e2e60af2))
+
 ## [10.1.0](https://github.com/phun-ky/speccer/compare/v10.0.8...v10.1.0) (2024-08-22)
 
 

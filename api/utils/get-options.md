@@ -6,7 +6,7 @@
 
 # utils/get-options
 
-> Last updated 2024-08-28T09:42:51.088Z
+> Last updated 2024-08-28T10:13:18.065Z
 
 ## Functions
 
