@@ -8,8 +8,8 @@ These are the versions that is updated with security patches.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| >= 10.0 | :white_check_mark: |
-| < 10.0  | :x:                |
+| >= 11.0 | :white_check_mark: |
+| < 11.0  | :x:                |
 
 ## Reporting a Vulnerability
 
