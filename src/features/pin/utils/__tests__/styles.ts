@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 
+import { SpeccerOptionsInterface } from '../../../../types/speccer';
 import { styles } from '../styles';
 
 describe('pin styles', () => {
@@ -8,9 +9,10 @@ describe('pin styles', () => {
     const targetEl = document.createElement('div');
     const pinEl = document.createElement('div');
     const parentElement = document.createElement('div');
-    const area = 'enclose';
-    const options = { isCurly: true };
-    const result = await styles(area, targetEl, pinEl, parentElement, options);
+    const options = {
+      pin: { enclose: true, useCurlyBrackets: true }
+    } as SpeccerOptionsInterface;
+    const result = await styles(targetEl, pinEl, parentElement, options);
 
     assert.ok(result['left'] !== undefined);
     assert.ok(result['top'] !== undefined);
@@ -22,9 +24,11 @@ describe('pin styles', () => {
     const targetEl = document.createElement('div');
     const pinEl = document.createElement('div');
     const parentElement = document.createElement('div');
-    const area = 'left';
-    const options = { isCurly: true };
-    const result = await styles(area, targetEl, pinEl, parentElement, options);
+    const options = {
+      position: 'left',
+      pin: { useCurlyBrackets: true }
+    } as SpeccerOptionsInterface;
+    const result = await styles(targetEl, pinEl, parentElement, options);
 
     assert.ok(result['left'] !== undefined);
     assert.ok(result['top'] !== undefined);
@@ -34,9 +38,11 @@ describe('pin styles', () => {
     const targetEl = document.createElement('div');
     const pinEl = document.createElement('div');
     const parentElement = document.createElement('div');
-    const area = 'left';
-    const options = { isCurly: false };
-    const result = await styles(area, targetEl, pinEl, parentElement, options);
+    const options = {
+      position: 'left',
+      pin: { useCurlyBrackets: false }
+    } as SpeccerOptionsInterface;
+    const result = await styles(targetEl, pinEl, parentElement, options);
 
     assert.ok(result['left'] !== undefined);
     assert.ok(result['top'] !== undefined);
@@ -46,9 +52,11 @@ describe('pin styles', () => {
     const targetEl = document.createElement('div');
     const pinEl = document.createElement('div');
     const parentElement = document.createElement('div');
-    const area = 'left bracket';
-    const options = { isCurly: false };
-    const result = await styles(area, targetEl, pinEl, parentElement, options);
+    const options = {
+      position: 'left',
+      pin: { bracket: true, useCurlyBrackets: false }
+    } as SpeccerOptionsInterface;
+    const result = await styles(targetEl, pinEl, parentElement, options);
 
     assert.ok(result['left'] !== undefined);
     assert.ok(result['top'] !== undefined);
@@ -59,9 +67,11 @@ describe('pin styles', () => {
     const targetEl = document.createElement('div');
     const pinEl = document.createElement('div');
     const parentElement = document.createElement('div');
-    const area = 'right';
-    const options = { isCurly: true };
-    const result = await styles(area, targetEl, pinEl, parentElement, options);
+    const options = {
+      position: 'right',
+      pin: { useCurlyBrackets: true }
+    } as SpeccerOptionsInterface;
+    const result = await styles(targetEl, pinEl, parentElement, options);
 
     assert.ok(result['left'] !== undefined);
     assert.ok(result['top'] !== undefined);
@@ -71,9 +81,11 @@ describe('pin styles', () => {
     const targetEl = document.createElement('div');
     const pinEl = document.createElement('div');
     const parentElement = document.createElement('div');
-    const area = 'right';
-    const options = { isCurly: false };
-    const result = await styles(area, targetEl, pinEl, parentElement, options);
+    const options = {
+      position: 'right',
+      pin: { useCurlyBrackets: false }
+    } as SpeccerOptionsInterface;
+    const result = await styles(targetEl, pinEl, parentElement, options);
 
     assert.ok(result['left'] !== undefined);
     assert.ok(result['top'] !== undefined);
@@ -83,9 +95,11 @@ describe('pin styles', () => {
     const targetEl = document.createElement('div');
     const pinEl = document.createElement('div');
     const parentElement = document.createElement('div');
-    const area = 'right bracket';
-    const options = { isCurly: false };
-    const result = await styles(area, targetEl, pinEl, parentElement, options);
+    const options = {
+      position: 'right',
+      pin: { bracket: true, useCurlyBrackets: false }
+    } as SpeccerOptionsInterface;
+    const result = await styles(targetEl, pinEl, parentElement, options);
 
     assert.ok(result['left'] !== undefined);
     assert.ok(result['top'] !== undefined);
@@ -96,9 +110,11 @@ describe('pin styles', () => {
     const targetEl = document.createElement('div');
     const pinEl = document.createElement('div');
     const parentElement = document.createElement('div');
-    const area = 'bottom';
-    const options = { isCurly: true };
-    const result = await styles(area, targetEl, pinEl, parentElement, options);
+    const options = {
+      position: 'bottom',
+      pin: { useCurlyBrackets: true }
+    } as SpeccerOptionsInterface;
+    const result = await styles(targetEl, pinEl, parentElement, options);
 
     assert.ok(result['left'] !== undefined);
     assert.ok(result['top'] !== undefined);
@@ -108,9 +124,11 @@ describe('pin styles', () => {
     const targetEl = document.createElement('div');
     const pinEl = document.createElement('div');
     const parentElement = document.createElement('div');
-    const area = 'bottom';
-    const options = { isCurly: false };
-    const result = await styles(area, targetEl, pinEl, parentElement, options);
+    const options = {
+      position: 'bottom',
+      pin: { useCurlyBrackets: false }
+    } as SpeccerOptionsInterface;
+    const result = await styles(targetEl, pinEl, parentElement, options);
 
     assert.ok(result['left'] !== undefined);
     assert.ok(result['top'] !== undefined);
@@ -120,9 +138,11 @@ describe('pin styles', () => {
     const targetEl = document.createElement('div');
     const pinEl = document.createElement('div');
     const parentElement = document.createElement('div');
-    const area = 'bottom bracket';
-    const options = { isCurly: false };
-    const result = await styles(area, targetEl, pinEl, parentElement, options);
+    const options = {
+      position: 'bottom',
+      pin: { bracket: true, useCurlyBrackets: false }
+    } as SpeccerOptionsInterface;
+    const result = await styles(targetEl, pinEl, parentElement, options);
 
     assert.ok(result['left'] !== undefined);
     assert.ok(result['top'] !== undefined);
@@ -133,9 +153,10 @@ describe('pin styles', () => {
     const targetEl = document.createElement('div');
     const pinEl = document.createElement('div');
     const parentElement = document.createElement('div');
-    const area = 'bracket';
-    const options = { isCurly: true };
-    const result = await styles(area, targetEl, pinEl, parentElement, options);
+    const options = {
+      pin: { bracket: true, useCurlyBrackets: true }
+    } as SpeccerOptionsInterface;
+    const result = await styles(targetEl, pinEl, parentElement, options);
 
     assert.ok(result['left'] !== undefined);
     assert.ok(result['top'] !== undefined);
@@ -145,9 +166,10 @@ describe('pin styles', () => {
     const targetEl = document.createElement('div');
     const pinEl = document.createElement('div');
     const parentElement = document.createElement('div');
-    const area = 'bracket';
-    const options = { isCurly: false };
-    const result = await styles(area, targetEl, pinEl, parentElement, options);
+    const options = {
+      pin: { bracket: true, useCurlyBrackets: false }
+    } as SpeccerOptionsInterface;
+    const result = await styles(targetEl, pinEl, parentElement, options);
 
     assert.ok(result['left'] !== undefined);
     assert.ok(result['top'] !== undefined);

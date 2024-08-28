@@ -1,14 +1,6 @@
-import { PinStylesOptionsType } from '../../../types/bezier';
+import { PinAreaEnum } from '../../../types/enums/area';
+import { SpeccerOptionsInterface } from '../../../types/speccer';
 import { SpeccerStylesReturnType } from '../../../types/styles';
-import {
-  isBottomArea,
-  isEncloseArea,
-  isBracketArea,
-  isLeftArea,
-  isParentArea,
-  isRightArea,
-  isSubtle
-} from '../../../utils/area';
 import { pinSpace, measureSize } from '../../../utils/css';
 import { getRec } from '../../../utils/position';
 import { waitForFrame } from '../../../utils/wait';
@@ -16,11 +8,10 @@ import { waitForFrame } from '../../../utils/wait';
 /**
  * Get styles for pin elements based on the specified area and options.
  *
- * @param {string} area - The area description.
  * @param {HTMLElement} targetElement - The target element.
  * @param {HTMLElement} pinElement - The pin element.
  * @param {HTMLElement} parentElement - The parent element.
- * @param {PinStylesOptionsType} options - Optional styles options.
+ * @param {SpeccerOptionsInterface} options - The options.
  * @returns {Promise<SpeccerStylesReturnType>} - The computed styles.
  *
  * @example
@@ -29,26 +20,26 @@ import { waitForFrame } from '../../../utils/wait';
  * const targetElement = document.getElementById('target');
  * const parentElement = document.getElementById('parent');
  * const pinElement = document.getElementById('pin');
- * const options = { isCurly: true };
+ * const options = { useCurlyBrackets: true };
  * const styles = await styles(area, targetElement, pinElement, parentElement, options);
  * console.log(styles);
  * ```
  */
 export const styles = async (
-  area: string,
   targetElement: HTMLElement,
   pinElement: HTMLElement,
   parentElement: HTMLElement,
-  options?: PinStylesOptionsType
+  options: SpeccerOptionsInterface
 ): Promise<SpeccerStylesReturnType> => {
   await waitForFrame();
 
-  const { isCurly = false } = options || {};
+  const { pin = {} as Record<string, boolean>, position } = options;
+  const { useCurlyBrackets, subtle, bracket, text, parent, enclose } = pin;
   const SPECCER_PIN_SPACE = pinSpace(pinElement);
   const SPECCER_MEASURE_SIZE = measureSize(pinElement);
   const _positional_styles = await getRec(pinElement, targetElement);
 
-  if (isEncloseArea(area)) {
+  if (enclose) {
     const { left, top, height, width } = _positional_styles.absolute();
 
     return {
@@ -59,13 +50,8 @@ export const styles = async (
     };
   }
 
-  if (
-    isParentArea(area) &&
-    !isBracketArea(area) &&
-    !isCurly &&
-    !isSubtle(area)
-  ) {
-    if (isRightArea(area)) {
+  if ((parent || text) && !bracket && !useCurlyBrackets && !subtle) {
+    if (position === PinAreaEnum.Right) {
       const { top } = _positional_styles.fromRight({
         center: true
       });
@@ -80,7 +66,7 @@ export const styles = async (
       };
     }
 
-    if (isBottomArea(area)) {
+    if (position === PinAreaEnum.Bottom) {
       const { left } = _positional_styles.toBottom({
         center: true
       });
@@ -95,7 +81,7 @@ export const styles = async (
       };
     }
 
-    if (isLeftArea(area)) {
+    if (position === PinAreaEnum.Left) {
       const { top } = _positional_styles.fromLeft({
         center: true
       });
@@ -105,7 +91,8 @@ export const styles = async (
       const { left } = parentElement.getBoundingClientRect();
 
       return {
-        left: `${left - SPECCER_PIN_SPACE * 1.5}px`,
+        // If we're pinning with text only, we need to move the element a bit further to the left
+        left: `${left - SPECCER_PIN_SPACE * 1.5 - (text ? 170 : 0)}px`,
         top: `${top}px`
       };
     }
@@ -124,8 +111,8 @@ export const styles = async (
     };
   }
 
-  if (isLeftArea(area)) {
-    if (isBracketArea(area) && !isCurly) {
+  if (position === PinAreaEnum.Left) {
+    if (bracket && !useCurlyBrackets) {
       const { left, top, height } = _positional_styles.fromLeft({
         sourceWidth: SPECCER_MEASURE_SIZE
       });
@@ -139,7 +126,7 @@ export const styles = async (
 
     const { left, top } = _positional_styles.fromLeft({
       center: true,
-      modifier: isCurly ? SPECCER_PIN_SPACE / 1.5 : SPECCER_PIN_SPACE
+      modifier: useCurlyBrackets ? SPECCER_PIN_SPACE / 1.5 : SPECCER_PIN_SPACE
     });
 
     return {
@@ -148,8 +135,8 @@ export const styles = async (
     };
   }
 
-  if (isRightArea(area)) {
-    if (isBracketArea(area) && !isCurly) {
+  if (position === PinAreaEnum.Right) {
+    if (bracket && !useCurlyBrackets) {
       const { left, top, height } = _positional_styles.fromRight({
         center: false
       });
@@ -163,7 +150,7 @@ export const styles = async (
 
     const { left, top } = _positional_styles.fromRight({
       center: true,
-      modifier: isCurly ? SPECCER_PIN_SPACE / 1.5 : SPECCER_PIN_SPACE
+      modifier: useCurlyBrackets ? SPECCER_PIN_SPACE / 1.5 : SPECCER_PIN_SPACE
     });
 
     return {
@@ -172,8 +159,8 @@ export const styles = async (
     };
   }
 
-  if (isBottomArea(area)) {
-    if (isBracketArea(area) && !isCurly) {
+  if (position === PinAreaEnum.Bottom) {
+    if (bracket && !useCurlyBrackets) {
       const { left, top, width } = _positional_styles.fromBottom({
         center: false
       });
@@ -187,7 +174,7 @@ export const styles = async (
 
     const { left, top } = _positional_styles.fromBottom({
       center: true,
-      modifier: isCurly ? SPECCER_PIN_SPACE / 1.5 : SPECCER_PIN_SPACE
+      modifier: useCurlyBrackets ? SPECCER_PIN_SPACE / 1.5 : SPECCER_PIN_SPACE
     });
 
     return {
@@ -196,7 +183,7 @@ export const styles = async (
     };
   }
 
-  if (isBracketArea(area) && !isCurly) {
+  if (bracket && !useCurlyBrackets) {
     const { left, top, width } = _positional_styles.fromTop({
       center: false
     });
@@ -210,7 +197,7 @@ export const styles = async (
 
   const { left, top } = _positional_styles.fromTop({
     center: true,
-    modifier: isCurly ? SPECCER_PIN_SPACE / 1.5 : SPECCER_PIN_SPACE
+    modifier: useCurlyBrackets ? SPECCER_PIN_SPACE / 1.5 : SPECCER_PIN_SPACE
   });
 
   return {

@@ -1,11 +1,11 @@
+/* eslint-disable import/no-unused-modules */
 /* eslint no-console:0 */
-import {
-  isValidTypographyElement,
-  useSyntaxHighlighting
-} from '../../utils/area';
+import { SpeccerOptionsInterface } from '../../types/speccer';
 import { set as setClassNames, cx } from '../../utils/classnames';
+import { getOptions } from '../../utils/get-options';
 import { isElementHidden } from '../../utils/node';
 import { add as addStyles } from '../../utils/styles';
+import { waitForFrame } from '../../utils/wait';
 
 import { position } from './utils/position';
 import { template } from './utils/template';
@@ -14,7 +14,7 @@ import { template } from './utils/template';
  * Create a DOM element with provided HTML and optional CSS class names.
  *
  * @param {string} html - The HTML content to be set in the created element.
- * @param {string | null} area - The optional CSS class names to add.
+ * @param {SpeccerOptionsInterface} options - Options.
  * @returns {HTMLElement} - The created DOM element.
  *
  * @example
@@ -25,17 +25,16 @@ import { template } from './utils/template';
  * document.body.appendChild(createdElement);
  * ```
  */
-export const create = (html: string, area: string | null): HTMLElement => {
+export const create = (
+  html: string,
+  options: SpeccerOptionsInterface
+): HTMLElement => {
   const _el = document.createElement('div');
-  const _extra_class_names = {};
-
-  if (area !== null && area !== '') {
-    for (const a of area.split(' ')) {
-      _extra_class_names[a] = true;
-    }
-  }
-
-  const _class_names = cx('ph-speccer speccer typography', _extra_class_names);
+  const { typography, position } = options;
+  const _class_names = cx('ph-speccer speccer typography', {
+    syntax: typography?.useSyntaxHighlighting || false,
+    [position]: true
+  });
 
   _el.innerHTML = html;
 
@@ -63,23 +62,28 @@ export const create = (html: string, area: string | null): HTMLElement => {
 export const element = async (targetElement: HTMLElement): Promise<void> => {
   if (!targetElement) return;
 
-  const _areas_string: string | null =
-    targetElement.getAttribute('data-speccer');
+  const _areas_string: string =
+    targetElement.getAttribute('data-speccer') || '';
 
-  if (!isValidTypographyElement(_areas_string)) return;
+  await waitForFrame();
+
+  const _options = getOptions(_areas_string, getComputedStyle(targetElement));
+
+  if (_options.type !== 'typography' || !_options.typography) return;
 
   if (isElementHidden(targetElement)) return;
 
-  const _use_highlighting = useSyntaxHighlighting(_areas_string);
-
   targetElement.classList.add('is-specced');
 
-  const _html = await template(targetElement, _use_highlighting);
-  const _speccer_el = create(_html, _areas_string);
+  const _html = await template(
+    targetElement,
+    _options.typography.useSyntaxHighlighting
+  );
+  const _speccer_el = create(_html, _options);
 
   document.body.appendChild(_speccer_el);
 
-  const _position = await position(_areas_string, targetElement, _speccer_el);
+  const _position = await position(_options, targetElement, _speccer_el);
 
   addStyles(_speccer_el, _position);
 };

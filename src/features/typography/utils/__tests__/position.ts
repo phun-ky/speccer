@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import { describe, it, mock, before } from 'node:test';
 
 import { SpeccerAreaEnum } from '../../../../types/enums/area';
+import { SpeccerOptionsInterface } from '../../../../types/speccer';
 import { position } from '../position';
 
 before(async () => {
@@ -33,19 +34,39 @@ describe('position function', () => {
     document.body.appendChild(speccerElement);
 
     // Call the position function with different areas
-    const leftPosition = await position(null, targetElement, speccerElement);
+    const leftPosition = await position(
+      {
+        type: 'typography',
+        typography: { useSyntaxHighlighting: false },
+        position: 'left'
+      } as SpeccerOptionsInterface,
+      targetElement,
+      speccerElement
+    );
     const rightPosition = await position(
-      SpeccerAreaEnum.Right,
+      {
+        type: 'typography',
+        typography: { useSyntaxHighlighting: false },
+        position: 'right'
+      } as SpeccerOptionsInterface,
       targetElement,
       speccerElement
     );
     const topPosition = await position(
-      SpeccerAreaEnum.Top,
+      {
+        type: 'typography',
+        typography: { useSyntaxHighlighting: false },
+        position: 'top'
+      } as SpeccerOptionsInterface,
       targetElement,
       speccerElement
     );
     const bottomPosition = await position(
-      SpeccerAreaEnum.Bottom,
+      {
+        type: 'typography',
+        typography: { useSyntaxHighlighting: false },
+        position: 'bottom'
+      } as SpeccerOptionsInterface,
       targetElement,
       speccerElement
     );

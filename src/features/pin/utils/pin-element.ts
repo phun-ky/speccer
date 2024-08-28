@@ -1,13 +1,4 @@
-import {
-  isCurly,
-  isEncloseArea,
-  isBracketArea,
-  isParentArea,
-  isSubtle,
-  isValidPinElement,
-  useSVG
-} from '../../../utils/area';
-import { camelCase } from '../../../utils/camel-case';
+import { SpeccerOptionsInterface } from '../../../types/speccer';
 import { DrawCircle } from '../../../utils/classes/DrawCircle';
 import { DrawSVGCurlyBracket } from '../../../utils/classes/DrawSVGCurlyBracket';
 import { DrawSVGLine } from '../../../utils/classes/DrawSVGLine';
@@ -24,65 +15,62 @@ import { styles } from './styles';
  * of the target element. It handles different styles, such as curly brackets or lines, based on the pin type.
  *
  * @param {HTMLElement} targetElement - The target element that contains the pin data.
- * @param {string} symbol - The symbol to use.
  * @param {HTMLElement} parentElement - The parent element
- * @param {string} [areas] - Optional areas to use if not [data-speccer] is set as an attribute on the element
+ * @param {string} content - The content to use.
+ * @param {SpeccerOptionsInterface} options - options
  * @returns {Promise<string|void>} A promise that resolves to the id of the pin element when the process is completed, or `void` if required input is invalid.
  *
  * @example
  * ```ts
  * const targetElement = document.getElementById('target');
- * const symbol = 0;
- * pinElement(targetElement, symbol).then(() => {
+ * const parentElement = document.getElementById('parent');
+ * const content = 0;
+ * const options = { … };
+ * pinElement(targetElement, parentElement, content, options).then(() => {
  *   console.log('process completed');
  * });
  * ```
  */
 export const pinElement = async (
   targetElement: HTMLElement,
-  symbol: string,
   parentElement: HTMLElement,
-  areas = ''
+  content: string,
+  options: SpeccerOptionsInterface
 ): Promise<string | void> => {
   if (!targetElement) return;
 
-  const _areas_string: string =
-    targetElement.getAttribute('data-speccer') || areas;
+  if (options.type !== 'pin' || !options.pin) return;
 
-  if (!isValidPinElement(_areas_string)) return;
-
-  const _pin_element_id = `speccer-${camelCase(_areas_string)}-${targetElement.getAttribute('id') || uniqueID()}`;
-  const _pin_element = createPinElement(symbol, _areas_string, _pin_element_id);
+  const _pin_element_id = `speccer-${options.slug}-${targetElement.getAttribute('id') || uniqueID()}`;
+  const _pin_element = createPinElement(content, options, _pin_element_id);
 
   targetElement.setAttribute('data-speccer-element-id', _pin_element_id);
 
   document.body.appendChild(_pin_element);
 
   const _pin_styles = await styles(
-    _areas_string,
     targetElement as HTMLElement,
     _pin_element,
     parentElement,
-    {
-      isCurly: isCurly(_areas_string)
-    }
+    options
   );
 
   await add(_pin_element, _pin_styles);
 
-  const isParent =
-    isParentArea(_areas_string) &&
-    !isEncloseArea(_areas_string) &&
-    !isBracketArea(_areas_string) &&
-    !isSubtle(_areas_string);
-  const isSVGLine =
-    isParent || (useSVG(_areas_string) && !isCurly(_areas_string));
+  const isText =
+    options.pin.text &&
+    targetElement.getAttribute('data-speccer-title') !== null;
+  const _should_draw_circle =
+    options.pin.parent &&
+    !options.pin.enclose &&
+    !options.pin.bracket &&
+    !isText;
 
-  if (isSVGLine) {
-    new DrawSVGLine(targetElement as HTMLElement, _pin_element);
+  if (options.pin.useSVGLine) {
+    new DrawSVGLine(targetElement as HTMLElement, _pin_element, options);
 
-    if (isParent) new DrawCircle(targetElement, 5, _areas_string);
-  } else if (isCurly(_areas_string)) {
+    if (_should_draw_circle) new DrawCircle(targetElement, 5, options);
+  } else if (options.pin.useCurlyBrackets) {
     new DrawSVGCurlyBracket(targetElement as HTMLElement, _pin_element);
   }
 
