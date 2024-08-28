@@ -6,26 +6,26 @@
 
 # features/pin/utils/create-pin-element
 
-> Last updated 2024-08-23T11:58:26.660Z
+> Last updated 2024-08-28T09:42:51.074Z
 
 ## Functions
 
 ### createPinElement()
 
 ```ts
-function createPinElement(textContent, area, id, n): HTMLElement;
+function createPinElement(content, options, id, n): HTMLElement;
 ```
 
-Create a pin element with optional text content, area description, and element type.
+Create a pin element with optional content, area description, and element type.
 
 #### Parameters
 
-| Parameter     | Type     | Default value | Description                             |
-| ------------- | -------- | ------------- | --------------------------------------- |
-| `textContent` | `string` | `''`          | The text content to add to the element. |
-| `area`        | `string` | `undefined`   | The area description for styling.       |
-| `id`          | `string` | `''`          | The id of the pinned element            |
-| `n`           | `string` | `'span'`      | The element type.                       |
+| Parameter | Type                                                                           | Default value | Description                        |
+| --------- | ------------------------------------------------------------------------------ | ------------- | ---------------------------------- |
+| `content` | `string`                                                                       | `''`          | The content to add to the element. |
+| `options` | [`SpeccerOptionsInterface`](../../../types/speccer.md#specceroptionsinterface) | `undefined`   | The option for styling.            |
+| `id`      | `string`                                                                       | `''`          | The id of the pinned element       |
+| `n`       | `string`                                                                       | `'span'`      | The element type.                  |
 
 #### Returns
 
@@ -42,7 +42,7 @@ document.body.appendChild(pinElement);
 
 #### Defined in
 
-[features/pin/utils/create-pin-element.ts:25](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/create-pin-element.ts#L25)
+[features/pin/utils/create-pin-element.ts:19](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/create-pin-element.ts#L19)
 
 ---
 

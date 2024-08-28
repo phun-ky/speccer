@@ -6,7 +6,7 @@
 
 # features/pin/utils/styles
 
-> Last updated 2024-08-23T11:58:26.660Z
+> Last updated 2024-08-28T09:42:51.075Z
 
 ## Functions
 
@@ -14,11 +14,10 @@
 
 ```ts
 function styles(
-  area,
   targetElement,
   pinElement,
   parentElement,
-  options?
+  options
 ): Promise<SpeccerStylesReturnType>;
 ```
 
@@ -26,13 +25,12 @@ Get styles for pin elements based on the specified area and options.
 
 #### Parameters
 
-| Parameter       | Type                                                                    | Description              |
-| --------------- | ----------------------------------------------------------------------- | ------------------------ |
-| `area`          | `string`                                                                | The area description.    |
-| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target element.      |
-| `pinElement`    | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The pin element.         |
-| `parentElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The parent element.      |
-| `options`?      | [`PinStylesOptionsType`](../../../types/bezier.md#pinstylesoptionstype) | Optional styles options. |
+| Parameter       | Type                                                                           | Description         |
+| --------------- | ------------------------------------------------------------------------------ | ------------------- |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)        | The target element. |
+| `pinElement`    | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)        | The pin element.    |
+| `parentElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)        | The parent element. |
+| `options`       | [`SpeccerOptionsInterface`](../../../types/speccer.md#specceroptionsinterface) | The options.        |
 
 #### Returns
 
@@ -47,7 +45,7 @@ const area = 'top-left';
 const targetElement = document.getElementById('target');
 const parentElement = document.getElementById('parent');
 const pinElement = document.getElementById('pin');
-const options = { isCurly: true };
+const options = { useCurlyBrackets: true };
 const styles = await styles(
   area,
   targetElement,
@@ -60,7 +58,7 @@ console.log(styles);
 
 #### Defined in
 
-[features/pin/utils/styles.ts:37](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/styles.ts#L37)
+[features/pin/utils/styles.ts:28](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/styles.ts#L28)
 
 ---
 

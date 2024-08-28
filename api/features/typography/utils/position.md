@@ -6,7 +6,7 @@
 
 # features/typography/utils/position
 
-> Last updated 2024-08-23T11:58:26.661Z
+> Last updated 2024-08-28T09:42:51.076Z
 
 ## Functions
 
@@ -14,7 +14,7 @@
 
 ```ts
 function position(
-  area,
+  options,
   targetElement,
   speccerElement
 ): Promise<{
@@ -27,11 +27,11 @@ Calculate the position for the speccer element relative to the target element.
 
 #### Parameters
 
-| Parameter        | Type                                                                    | Description                           |
-| ---------------- | ----------------------------------------------------------------------- | ------------------------------------- |
-| `area`           | `null` \| `string`                                                      | The area information for positioning. |
-| `targetElement`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target element.                   |
-| `speccerElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The speccer element to position.      |
+| Parameter        | Type                                                                           | Description                      |
+| ---------------- | ------------------------------------------------------------------------------ | -------------------------------- |
+| `options`        | [`SpeccerOptionsInterface`](../../../types/speccer.md#specceroptionsinterface) | Options.                         |
+| `targetElement`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)        | The target element.              |
+| `speccerElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)        | The speccer element to position. |
 
 #### Returns
 
@@ -44,22 +44,22 @@ Calculate the position for the speccer element relative to the target element.
 
 | Name   | Type     | Defined in                                                                                                                             |
 | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `left` | `string` | [features/typography/utils/position.ts:31](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/position.ts#L31) |
-| `top`  | `string` | [features/typography/utils/position.ts:31](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/position.ts#L31) |
+| `left` | `string` | [features/typography/utils/position.ts:32](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/position.ts#L32) |
+| `top`  | `string` | [features/typography/utils/position.ts:32](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/position.ts#L32) |
 
 #### Example
 
 ```ts
 const targetElement = document.getElementById('target');
 const speccerElement = document.getElementById('speccer');
-const area = 'top';
-const position = await position(area, targetElement, speccerElement);
+const options = {…};
+const position = await position(options, targetElement, speccerElement);
 console.log(position); // { left: '10px', top: '20px' }
 ```
 
 #### Defined in
 
-[features/typography/utils/position.ts:27](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/position.ts#L27)
+[features/typography/utils/position.ts:28](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/position.ts#L28)
 
 ---
 
