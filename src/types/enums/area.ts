@@ -17,6 +17,7 @@ export enum SpeccerAreaEnum {
 export enum PinAreaEnum {
   Pin = 'pin', // Represents an pin area
   Parent = 'parent', // Represents a parent area
+  Text = 'text', // Represents a text area
   Enclose = 'enclose', // Represents an enclose area
   Subtle = 'subtle', // Represents an subtle area
   Bracket = 'bracket', // Represents a bracket area
