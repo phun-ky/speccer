@@ -163,6 +163,20 @@ export const isHeightArea = (areaString: string | null): boolean => {
 };
 
 /**
+ * Checks if 'slim' area is present in the provided areaString.
+ *
+ * @param {string|null} areaString - The string containing areas.
+ * @returns boolean `true` if 'slim' is present, otherwise `false`.
+ */
+export const isSlimArea = (areaString: string | null): boolean => {
+  if (areaString === null) return false;
+
+  const areas = getAreasFromString(areaString);
+
+  return areas.includes(MeasureAreaEnum.Slim);
+};
+
+/**
  * Checks if 'width' area is present in the provided areaString.
  *
  * @param {string|null} areaString - The string containing areas.
@@ -187,7 +201,14 @@ export const useSVG = (areaString: string | null): boolean => {
 
   const areas = getAreasFromString(areaString);
 
-  return areas.includes(PinAreaEnum.SVG);
+  return (
+    ((isParentArea(areaString) &&
+      !isEncloseArea(areaString) &&
+      !isBracketArea(areaString)) ||
+      isTextArea(areaString) ||
+      areas.includes(PinAreaEnum.SVG)) &&
+    !isCurly(areaString)
+  );
 };
 
 /**
