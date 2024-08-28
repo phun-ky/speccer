@@ -27,7 +27,11 @@
     - [Element dimensions](#element-dimensions)
       - [Slim measure](#slim-measure)
     - [Pin element to highlight the anatomy](#pin-element-to-highlight-the-anatomy)
+      - [Default](#default)
+      - [Enclose](#enclose)
+      - [Subtle enclose](#subtle-enclose)
       - [Align with parent container](#align-with-parent-container)
+      - [Pin with text](#pin-with-text)
       - [Custom literals](#custom-literals)
       - [Subtle anatomy](#subtle-anatomy)
       - [Curly brackets](#curly-brackets)
@@ -220,7 +224,7 @@ Display dimensions with:
 
 ```html
 <div
-  data-speccer="measure [height right|left] | [width top|bottom]"
+  data-speccer="measure [height left|right] | [width top|bottom]"
   class="..."
 ></div>
 ```
@@ -243,9 +247,7 @@ This will give a slimmer look and feel.
 
 ##### Subtle slim measure
 
-![Image of subtle option for measure](./public/subtle-measure.png)
-
-Use a subtle style:
+Use a subtle style for the slim option, uses a dashed line instead of a solid line:
 
 ```html
 <div data-speccer="measure slim height left subtle" class="..."></div>

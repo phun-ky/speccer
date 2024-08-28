@@ -124,7 +124,7 @@ export const create = async (
  *
  * Adds a visual grid overlay to the target element if it has the appropriate data attribute and is a grid.
  *
- * ![grid](https://github.com/phun-ky/speccer/blob/main/public/grid.png?raw=true)
+ * ![grid](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-dark.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to add the grid overlay to.
  * @returns {Promise<void>} A promise that resolves once the overlay has been added.
