@@ -1,6 +1,4 @@
 /* eslint-disable import/no-unused-modules */
-/* eslint no-console:0 */
-import { set as setClassNames, cx } from '../../utils/classnames';
 import { isElementHidden } from '../../utils/node';
 import { add } from '../../utils/styles';
 
@@ -10,50 +8,13 @@ import {
   SPECCER_PHYSICAL_KEYS,
   SPECCER_TABBABLE_ELEMENTS_SELECTOR
 } from './constants';
+import { createA11yElement } from './utils/create-a11y-element';
 import { styles } from './utils/styles';
-
-/**
- * Creates an HTML element based on the specified type.
- * *
- * @param {string} [type='tabstops'] - Type of element ('tabstops', 'landmark', 'region').
- * @param {unknown} [content] - Content to be added to the element.
- * @param {string} [n='span'] - HTML tag name (default is 'span').
- * @returns {HTMLElement} The created HTML element.
- *
- * @example
- * ```ts
- * const tabElement = create('tabstops', null, 'div');
- * const landmarkElement = create('landmark', 1, 'div');
- * const regionElement = create('region', null, 'div');
- * ```
- */
-export const create = (
-  type = 'tabstops',
-  content: unknown,
-  n = 'span'
-): HTMLElement => {
-  const _el = document.createElement(n);
-  const _class_names = cx('ph-speccer speccer a11y', {
-    tabstops: type === 'tabstops',
-    landmark: type === 'landmark',
-    region: type === 'region'
-  });
-
-  if (type === 'landmark' && content) {
-    const _text_node = document.createTextNode(String(content));
-
-    _el.appendChild(_text_node);
-  }
-
-  setClassNames(_el, _class_names);
-
-  return _el;
-};
 
 /**
  * Adds an accessibility element to the document body based on the target element and type.
  *
- * ![Screenshot of speccer a11y tab stops in use](https://github.com/phun-ky/speccer/blob/main/public/a11y-tabstop.png?raw=true)
+ * ![Screenshot of speccer a11y tab stops in use](https://github.com/phun-ky/speccer/blob/main/public/speccer-a11y-tabstops-light.png?raw=true)
  * ![Screenshot of speccer a11y landmark in use](https://github.com/phun-ky/speccer/blob/main/public/a11y-landmark.png?raw=true)
  *
  * @param {HTMLElement} targetEl - Target HTML element.
@@ -77,16 +38,16 @@ export const element = async (
 ): Promise<void> => {
   if (!targetEl || !targetEl.checkVisibility()) return;
 
-  const _a11y_el = create(type, content);
+  const _a11y_el = createA11yElement(type, content);
 
   if (type === 'landmark') {
     _a11y_el.setAttribute('data-speccer-nodename', targetEl.nodeName);
 
-    const role =
+    const _role =
       targetEl.role || `semantic role: ${targetEl.nodeName.toLowerCase()}`;
-    const label = targetEl.getAttribute('aria-label') || 'unnamed';
+    const _label = targetEl.getAttribute('aria-label') || 'unnamed';
 
-    _a11y_el.setAttribute('title', `${label}: ${role}`);
+    _a11y_el.setAttribute('title', `${_label}: ${_role}`);
   }
 
   document.body.appendChild(_a11y_el);
