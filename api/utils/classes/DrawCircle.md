@@ -6,7 +6,7 @@
 
 # utils/classes/DrawCircle
 
-> Last updated 2024-08-23T11:58:26.671Z
+> Last updated 2024-08-28T09:42:51.084Z
 
 ## Classes
 
@@ -22,18 +22,18 @@ Class representing a DrawCircle instance.
 new DrawCircle(
    el,
    radius,
-   areas): DrawCircle
+   options): DrawCircle
 ```
 
 Creates a new DrawCircle instance.
 
 ###### Parameters
 
-| Parameter | Type                                                                    | Description                              |
-| --------- | ----------------------------------------------------------------------- | ---------------------------------------- |
-| `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The element used to position the circle. |
-| `radius`  | `number`                                                                | The radius of the circle                 |
-| `areas`   | `string`                                                                | The areas used to identify position      |
+| Parameter | Type                                                                        | Description                              |
+| --------- | --------------------------------------------------------------------------- | ---------------------------------------- |
+| `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)     | The element used to position the circle. |
+| `radius`  | `number`                                                                    | The radius of the circle                 |
+| `options` | [`SpeccerOptionsInterface`](../../types/speccer.md#specceroptionsinterface) | The options used to identify position    |
 
 ###### Returns
 
@@ -45,12 +45,12 @@ Creates a new DrawCircle instance.
 
 #### Properties
 
-| Property | Type                                                                              | Defined in                                                                                                         |
-| -------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `areas`  | `string`                                                                          | [utils/classes/DrawCircle.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L14) |
-| `circle` | [`SVGCircleElement`](https://developer.mozilla.org/docs/Web/API/SVGCircleElement) | [utils/classes/DrawCircle.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L12) |
-| `el`     | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)           | [utils/classes/DrawCircle.ts:11](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L11) |
-| `radius` | `number`                                                                          | [utils/classes/DrawCircle.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L13) |
+| Property  | Type                                                                              | Defined in                                                                                                         |
+| --------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `circle`  | [`SVGCircleElement`](https://developer.mozilla.org/docs/Web/API/SVGCircleElement) | [utils/classes/DrawCircle.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L12) |
+| `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)           | [utils/classes/DrawCircle.ts:11](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L11) |
+| `options` | [`SpeccerOptionsInterface`](../../types/speccer.md#specceroptionsinterface)       | [utils/classes/DrawCircle.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L14) |
+| `radius`  | `number`                                                                          | [utils/classes/DrawCircle.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L13) |
 
 #### Methods
 
@@ -68,7 +68,7 @@ Draws the circle based on the provided el and radius.
 
 ###### Defined in
 
-[utils/classes/DrawCircle.ts:74](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L74)
+[utils/classes/DrawCircle.ts:78](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L78)
 
 ---
 

@@ -6,24 +6,24 @@
 
 # features/typography
 
-> Last updated 2024-08-23T11:58:26.661Z
+> Last updated 2024-08-28T09:42:51.075Z
 
 ## Functions
 
 ### create()
 
 ```ts
-function create(html, area): HTMLElement;
+function create(html, options): HTMLElement;
 ```
 
 Create a DOM element with provided HTML and optional CSS class names.
 
 #### Parameters
 
-| Parameter | Type               | Description                                        |
-| --------- | ------------------ | -------------------------------------------------- |
-| `html`    | `string`           | The HTML content to be set in the created element. |
-| `area`    | `null` \| `string` | The optional CSS class names to add.               |
+| Parameter | Type                                                                     | Description                                        |
+| --------- | ------------------------------------------------------------------------ | -------------------------------------------------- |
+| `html`    | `string`                                                                 | The HTML content to be set in the created element. |
+| `options` | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Options.                                           |
 
 #### Returns
 
@@ -79,7 +79,7 @@ if (targetElement) {
 
 #### Defined in
 
-[features/typography/index.ts:63](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L63)
+[features/typography/index.ts:62](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L62)
 
 ---
 

@@ -6,9 +6,64 @@
 
 # types/speccer
 
-> Last updated 2024-08-23T11:58:26.667Z
+> Last updated 2024-08-28T09:42:51.081Z
+
+## Table of Contents
+
+- [Interfaces](#interfaces)
+  - [SpeccerOptionsInterface](#specceroptionsinterface)
+- [Type Aliases](#type-aliases)
+  - [SpeccerFeatureType](#speccerfeaturetype)
+  - [SpeccerFunctionType()](#speccerfunctiontype)
+  - [SpeccerPositionType](#speccerpositiontype)
+
+## Interfaces
+
+### SpeccerOptionsInterface
+
+#### Properties
+
+| Property                           | Type                                                                                                                                                                  | Defined in                                                                                   |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `grid?`                            | \{ `toggle`: `string`; }                                                                                                                                              | [types/speccer.ts:34](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L34) |
+| `grid.toggle`                      | `string`                                                                                                                                                              | [types/speccer.ts:35](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L35) |
+| `measure?`                         | \{ `height`: `boolean`; `slim`: `boolean`; `width`: `boolean`; }                                                                                                      | [types/speccer.ts:26](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L26) |
+| `measure.height`                   | `boolean`                                                                                                                                                             | [types/speccer.ts:28](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L28) |
+| `measure.slim`                     | `boolean`                                                                                                                                                             | [types/speccer.ts:27](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L27) |
+| `measure.width`                    | `boolean`                                                                                                                                                             | [types/speccer.ts:29](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L29) |
+| `pin?`                             | \{ `bracket`: `boolean`; `enclose`: `boolean`; `parent`: `boolean`; `subtle`: `boolean`; `text`: `boolean`; `useCurlyBrackets`: `boolean`; `useSVGLine`: `boolean`; } | [types/speccer.ts:17](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L17) |
+| `pin.bracket`                      | `boolean`                                                                                                                                                             | [types/speccer.ts:18](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L18) |
+| `pin.enclose`                      | `boolean`                                                                                                                                                             | [types/speccer.ts:19](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L19) |
+| `pin.parent`                       | `boolean`                                                                                                                                                             | [types/speccer.ts:21](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L21) |
+| `pin.subtle`                       | `boolean`                                                                                                                                                             | [types/speccer.ts:20](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L20) |
+| `pin.text`                         | `boolean`                                                                                                                                                             | [types/speccer.ts:22](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L22) |
+| `pin.useCurlyBrackets`             | `boolean`                                                                                                                                                             | [types/speccer.ts:24](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L24) |
+| `pin.useSVGLine`                   | `boolean`                                                                                                                                                             | [types/speccer.ts:23](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L23) |
+| `position`                         | [`SpeccerPositionType`](speccer.md#speccerpositiontype)                                                                                                               | [types/speccer.ts:15](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L15) |
+| `slug`                             | `string`                                                                                                                                                              | [types/speccer.ts:14](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L14) |
+| `type`                             | [`SpeccerFeatureType`](speccer.md#speccerfeaturetype)                                                                                                                 | [types/speccer.ts:16](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L16) |
+| `typography?`                      | \{ `useSyntaxHighlighting`: `boolean`; }                                                                                                                              | [types/speccer.ts:31](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L31) |
+| `typography.useSyntaxHighlighting` | `boolean`                                                                                                                                                             | [types/speccer.ts:32](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L32) |
 
 ## Type Aliases
+
+### SpeccerFeatureType
+
+```ts
+type SpeccerFeatureType:
+  | "pin"
+  | "grid"
+  | "mark"
+  | "typography"
+  | "measure"
+  | "spacing";
+```
+
+#### Defined in
+
+[types/speccer.ts:3](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L3)
+
+---
 
 ### SpeccerFunctionType()
 
@@ -23,6 +78,18 @@ type SpeccerFunctionType: () => void;
 #### Defined in
 
 [types/speccer.ts:1](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L1)
+
+---
+
+### SpeccerPositionType
+
+```ts
+type SpeccerPositionType: "top" | "left" | "right" | "bottom";
+```
+
+#### Defined in
+
+[types/speccer.ts:11](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L11)
 
 ---
 

@@ -2,39 +2,47 @@
   <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
 </div>
 
-[@phun-ky/speccer](../../README.md) / types/interfaces/classnames
+[@phun-ky/speccer](../../../README.md) / features/a11y/utils/create-a11y-element
 
-# types/interfaces/classnames
+# features/a11y/utils/create-a11y-element
 
-> Last updated 2024-08-28T09:42:51.080Z
+> Last updated 2024-08-28T09:42:51.071Z
 
-## Type Aliases
+## Functions
 
-### ClassNamesFirstArgType
+### createA11yElement()
 
 ```ts
-type ClassNamesFirstArgType: string | ClassNamesSecondArgType;
+function createA11yElement(type?, content?, n?): HTMLElement;
 ```
 
-Type for the first argument of the cx function which can be either a string or `ClassNamesSecondArgType`.
+Creates an HTML element based on the specified type. \*
+
+#### Parameters
+
+| Parameter  | Type      | Default value | Description                                         |
+| ---------- | --------- | ------------- | --------------------------------------------------- |
+| `type`?    | `string`  | `'tabstops'`  | Type of element ('tabstops', 'landmark', 'region'). |
+| `content`? | `unknown` | `undefined`   | Content to be added to the element.                 |
+| `n`?       | `string`  | `'span'`      | HTML tag name (default is 'span').                  |
+
+#### Returns
+
+[`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
+
+The created HTML element.
+
+#### Example
+
+```ts
+const tabElement = create('tabstops', null, 'div');
+const landmarkElement = create('landmark', 1, 'div');
+const regionElement = create('region', null, 'div');
+```
 
 #### Defined in
 
-[types/interfaces/classnames.ts:9](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/classnames.ts#L9)
-
----
-
-### ClassNamesSecondArgType
-
-```ts
-type ClassNamesSecondArgType: undefined | Record<string, boolean>;
-```
-
-Type for the optional properties object with boolean values.
-
-#### Defined in
-
-[types/interfaces/classnames.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/classnames.ts#L4)
+[features/a11y/utils/create-a11y-element.ts:18](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/utils/create-a11y-element.ts#L18)
 
 ---
 

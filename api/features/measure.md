@@ -6,25 +6,25 @@
 
 # features/measure
 
-> Last updated 2024-08-23T11:58:26.659Z
+> Last updated 2024-08-28T09:42:51.073Z
 
 ## Functions
 
 ### create()
 
 ```ts
-function create(text, area, tag): HTMLElement;
+function create(text, options, tag): HTMLElement;
 ```
 
 Create a measurement element with optional text, area, and element type.
 
 #### Parameters
 
-| Parameter | Type                 | Default value | Description                         |
-| --------- | -------------------- | ------------- | ----------------------------------- |
-| `text`    | `string` \| `number` | `''`          | The text to display on the element. |
-| `area`    | `null` \| `string`   | `''`          | The area to specify with CSS class. |
-| `tag`     | `string`             | `'span'`      | The element type.                   |
+| Parameter | Type                                                                     | Default value | Description                         |
+| --------- | ------------------------------------------------------------------------ | ------------- | ----------------------------------- |
+| `text`    | `string` \| `number`                                                     | `''`          | The text to display on the element. |
+| `options` | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | `undefined`   | The options.                        |
+| `tag`     | `string`                                                                 | `'span'`      | The element type.                   |
 
 #### Returns
 
@@ -41,7 +41,7 @@ document.body.appendChild(measurement);
 
 #### Defined in
 
-[features/measure/index.ts:30](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L30)
+[features/measure/index.ts:25](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L25)
 
 ---
 
@@ -76,7 +76,7 @@ element(targetElement);
 
 #### Defined in
 
-[features/measure/index.ts:59](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L59)
+[features/measure/index.ts:62](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L62)
 
 ---
 
