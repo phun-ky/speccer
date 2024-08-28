@@ -29,7 +29,6 @@
     - [Pin element to highlight the anatomy](#pin-element-to-highlight-the-anatomy)
       - [Default](#default)
       - [Enclose](#enclose)
-      - [Subtle enclose](#subtle-enclose)
       - [Align with parent container](#align-with-parent-container)
       - [Pin with text](#pin-with-text)
       - [Custom literals](#custom-literals)
@@ -292,7 +291,7 @@ This will place a pin to the outline of the element. Default is `top`.
 </div>
 ```
 
-#### Subtle enclose
+##### Subtle enclose
 
 ![Image of speccer](./public/speccer-pin-enclose-subtle-light.png)
 
