@@ -1,17 +1,11 @@
-import {
-  isCurly,
-  isEncloseArea,
-  isBracketArea,
-  isParentArea,
-  isSubtle
-} from '../../../utils/area';
+import { SpeccerOptionsInterface } from '../../../types/speccer';
 import { set as setClassNames, cx } from '../../../utils/classnames';
 
 /**
- * Create a pin element with optional text content, area description, and element type.
+ * Create a pin element with optional content, area description, and element type.
  *
- * @param {string} textContent - The text content to add to the element.
- * @param {string} area - The area description for styling.
+ * @param {string} content - The content to add to the element.
+ * @param {SpeccerOptionsInterface} options - The option for styling.
  * @param {string} id - The id of the pinned element
  * @param {string} n - The element type.
  * @returns {HTMLElement} - The created pin element.
@@ -23,32 +17,39 @@ import { set as setClassNames, cx } from '../../../utils/classnames';
  * ```
  */
 export const createPinElement = (
-  textContent = '',
-  area: string,
+  content = '',
+  options: SpeccerOptionsInterface,
   id = '',
   n = 'span'
 ): HTMLElement => {
   const _el = document.createElement(n);
-  const _text_node = document.createTextNode(textContent);
   const _extra_class_names: Record<string, boolean> = {};
+  const { position, pin = {} as Record<string, boolean> } = options;
+  const {
+    useSVGLine,
+    useCurlyBrackets,
+    text,
+    parent,
+    bracket,
+    enclose,
+    subtle
+  } = pin;
 
-  if (area !== null && area !== '') _extra_class_names[area] = true;
+  _extra_class_names['text'] = text;
+  _extra_class_names['parent'] = parent;
+  _extra_class_names['bracket'] = bracket;
+  _extra_class_names['enclose'] = enclose;
+  _extra_class_names['subtle'] = subtle;
+  _extra_class_names['svg'] = useSVGLine;
+  _extra_class_names['curly'] = useCurlyBrackets;
+  _extra_class_names[position] = true;
 
-  if (
-    isParentArea(area) &&
-    !isBracketArea(area) &&
-    !isCurly(area) &&
-    !isSubtle(area)
-  )
+  if (parent && !bracket && !useCurlyBrackets && !subtle)
     _extra_class_names.svg = true;
 
-  if (
-    (!isBracketArea(area) && !isEncloseArea(area)) ||
-    (isBracketArea(area) && isCurly(area))
-  )
-    _el.appendChild(_text_node);
-  else if (isBracketArea(area) || isEncloseArea(area))
-    _el.setAttribute('data-pin-counter', textContent);
+  if ((!bracket && !enclose) || (bracket && useCurlyBrackets))
+    _el.innerHTML = content;
+  else if (bracket || enclose) _el.setAttribute('data-pin-counter', content);
 
   const _class_names = cx('ph-speccer speccer pin', _extra_class_names);
 
