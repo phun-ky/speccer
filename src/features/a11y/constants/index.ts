@@ -48,7 +48,7 @@ export const SPECCER_TABBABLE_ELEMENTS_SELECTOR = `
  * @type {string}
  */
 export const SPECCER_LANDMARK_ELEMENTS_SELECTOR = `
-header, footer, section, main, nav, aside, [role="section"], [role="banner"],
+header, footer, section, form, main, nav, aside, [role="section"], [role="banner"],
 [role="complementary"], [role="contentinfo"], [role="form"], [role="main"],
 [role="navigation"], [role="region"], [role="search"]
 `;

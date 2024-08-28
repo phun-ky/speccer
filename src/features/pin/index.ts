@@ -23,9 +23,13 @@ export { createPinElement } from './utils/create-pin-element';
 // eslint-disable-next-line import/no-unused-modules
 export { pinElement } from './utils/pin-element';
 
+import { SPECCER_LITERALS } from '../../utils/constants';
+import { getOptions } from '../../utils/get-options';
 import { isElementHidden } from '../../utils/node';
+import { waitForFrame } from '../../utils/wait';
 
 import { getCharacterToUse } from './utils/get-character-to-use';
+import { getContentForPin } from './utils/get-content-for-pin';
 import { pinElement } from './utils/pin-element';
 
 /**
@@ -51,6 +55,11 @@ export const pinElements = async (
 
   if (!_els_to_be_pinned || _els_to_be_pinned.length === 0) return;
 
+  const _literals_to_use =
+    (sectionElement.getAttribute('data-speccer-literals') as string | null) ||
+    window.SPECCER_LITERALS ||
+    SPECCER_LITERALS;
+
   [..._els_to_be_pinned]
     .filter(
       async (targetElement: HTMLElement) => !isElementHidden(targetElement)
@@ -60,9 +69,16 @@ export const pinElements = async (
         targetElement: HTMLElement,
         targetIndex: number
       ): Promise<void> => {
-        const _character_to_use = getCharacterToUse(targetIndex);
+        const _symbol = getCharacterToUse(targetIndex, _literals_to_use);
+        const _areas_string = targetElement.getAttribute('data-speccer') || '';
 
-        await pinElement(targetElement, _character_to_use, sectionElement);
+        await waitForFrame();
+
+        const _target_style = getComputedStyle(targetElement);
+        const _options = getOptions(_areas_string, _target_style);
+        const _content = getContentForPin(_symbol, targetElement, _options);
+
+        await pinElement(targetElement, sectionElement, _content, _options);
       }
     );
 };

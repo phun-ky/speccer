@@ -6,7 +6,7 @@
 
 # features/mark
 
-> Last updated 2024-08-22T06:56:09.098Z
+> Last updated 2024-08-28T09:42:51.072Z
 
 ## Functions
 
@@ -39,7 +39,7 @@ document.body.appendChild(marker);
 
 #### Defined in
 
-[features/mark/index.ts:21](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L21)
+[features/mark/index.ts:22](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L22)
 
 ---
 
@@ -74,7 +74,7 @@ element(targetElement);
 
 #### Defined in
 
-[features/mark/index.ts:44](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L44)
+[features/mark/index.ts:45](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L45)
 
 ---
 

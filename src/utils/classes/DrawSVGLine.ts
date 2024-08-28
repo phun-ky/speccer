@@ -1,3 +1,4 @@
+import { SpeccerOptionsInterface } from '../../types/speccer';
 import { getPositionsForSVGPath, getSVGPath } from '../bezier';
 import { direction_of_element } from '../direction-of-element';
 import { uniqueID } from '../id';
@@ -11,24 +12,35 @@ export class DrawSVGLine {
   #originalPathElement: HTMLElement | SVGPathElement | null;
   startElement: HTMLElement;
   stopElement: HTMLElement;
+  options: SpeccerOptionsInterface;
   line: SVGPathElement;
 
   /**
    * Creates a new DrawSVGLine instance.
-   * @param startElement - The starting element for the line.
-   * @param stopElement - The ending element for the line.
+   * @param {HTMLElement} startElement - The starting element for the line.
+   * @param {HTMLElement} stopElement - The ending element for the line.
+   * @param {SpeccerOptionsInterface} [options] - The ending element for the line.
    */
-  constructor(startElement: HTMLElement, stopElement: HTMLElement) {
-    this.#init(startElement, stopElement);
+  constructor(
+    startElement: HTMLElement,
+    stopElement: HTMLElement,
+    options: SpeccerOptionsInterface = {} as SpeccerOptionsInterface
+  ) {
+    this.#init(startElement, stopElement, options);
   }
 
   /**
    * Initializes the DrawSVGLine instance.
-   * @param startElement - The starting element for the line.
-   * @param stopElement - The ending element for the line.
+   * @param {HTMLElement} startElement - The starting element for the line.
+   * @param {HTMLElement} stopElement - The ending element for the line.
+   * @param {SpeccerOptionsInterface} [options] - The ending element for the line.
    * @throws Will throw an error if required elements are missing or not in the DOM.
    */
-  #init(startElement: HTMLElement, stopElement: HTMLElement) {
+  #init(
+    startElement: HTMLElement,
+    stopElement: HTMLElement,
+    options: SpeccerOptionsInterface = {} as SpeccerOptionsInterface
+  ) {
     if (!startElement || !stopElement) {
       throw new Error('Missing inputs startElement and stopElement');
     }
@@ -43,6 +55,7 @@ export class DrawSVGLine {
 
     this.startElement = startElement;
     this.stopElement = stopElement;
+    this.options = options;
 
     this.#canvas = document.getElementById('ph-speccer-svg');
     this.#originalPathElement = document.getElementById('ph-speccer-path');
@@ -98,6 +111,12 @@ export class DrawSVGLine {
     _new_path.setAttribute('data-start-el', dataStartElID);
     _new_path.classList.remove('original');
     _new_path.classList.add('speccer');
+
+    const { pin } = this.options;
+
+    if (pin?.text) {
+      _new_path.classList.add('text');
+    }
 
     if (path.parentNode) {
       this.line = path.parentNode.insertBefore(_new_path, path.nextSibling);

@@ -1,6 +1,7 @@
 /* eslint no-console:0 */
-import { isValidGridElement } from '../../utils/area';
+import { SpeccerOptionsInterface } from '../../types/speccer';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
+import { getOptions } from '../../utils/get-options';
 import { isElementHidden } from '../../utils/node';
 import { offset } from '../../utils/position';
 import { get as getStyles } from '../../utils/styles';
@@ -26,11 +27,15 @@ import { waitForFrame } from '../../utils/wait';
 export const create = async (
   targetElement: HTMLElement,
   styles: CSSStyleDeclaration,
-  options: Record<string, string>
+  options: SpeccerOptionsInterface
 ): Promise<void> => {
   await waitForFrame();
 
-  const { toggle } = options;
+  const { grid } = options;
+
+  if (!grid) return;
+
+  const { toggle } = grid;
   const { height, width } = targetElement.getBoundingClientRect();
   const { top, left } = await offset(targetElement);
   const { gridTemplateColumns, gridTemplateRows, padding } = styles;
@@ -119,7 +124,7 @@ export const create = async (
  *
  * Adds a visual grid overlay to the target element if it has the appropriate data attribute and is a grid.
  *
- * ![grid](https://github.com/phun-ky/speccer/blob/main/public/grid.png?raw=true)
+ * ![grid](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-dark.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to add the grid overlay to.
  * @returns {Promise<void>} A promise that resolves once the overlay has been added.
@@ -137,24 +142,16 @@ export const create = async (
 export const element = async (targetElement: HTMLElement): Promise<void> => {
   if (!targetElement) return;
 
-  const _areas_string: string | null = targetElement.getAttribute(
-    SPECCER_DATA_ATTRIBUTE
-  );
-  const _target_styles = await getStyles(targetElement);
+  const _areas_string: string =
+    targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || '';
+  const _target_style = await getStyles(targetElement);
+  const _options = getOptions(_areas_string, _target_style);
 
-  if (!isValidGridElement(_areas_string, _target_styles)) return;
+  if (_options.type !== 'grid' || !_options.grid) return;
 
   if (isElementHidden(targetElement)) return;
 
   await waitForFrame();
 
-  const options = {
-    toggle: 'both'
-  };
-
-  if (_areas_string?.includes('columns')) options.toggle = 'columns';
-
-  if (_areas_string?.includes('rows')) options.toggle = 'rows';
-
-  await create(targetElement, _target_styles, options);
+  await create(targetElement, _target_style, _options);
 };

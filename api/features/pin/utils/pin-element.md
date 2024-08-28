@@ -6,7 +6,7 @@
 
 # features/pin/utils/pin-element
 
-> Last updated 2024-08-22T06:56:09.101Z
+> Last updated 2024-08-28T09:42:51.074Z
 
 ## Functions
 
@@ -15,9 +15,9 @@
 ```ts
 function pinElement(
   targetElement,
-  symbol,
   parentElement,
-  areas?
+  content,
+  options
 ): Promise<string | void>;
 ```
 
@@ -28,12 +28,12 @@ of the target element. It handles different styles, such as curly brackets or li
 
 #### Parameters
 
-| Parameter       | Type                                                                    | Default value | Description                                                                        |
-| --------------- | ----------------------------------------------------------------------- | ------------- | ---------------------------------------------------------------------------------- |
-| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | `undefined`   | The target element that contains the pin data.                                     |
-| `symbol`        | `string`                                                                | `undefined`   | The symbol to use.                                                                 |
-| `parentElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | `undefined`   | The parent element                                                                 |
-| `areas`?        | `string`                                                                | `''`          | Optional areas to use if not \[data-speccer] is set as an attribute on the element |
+| Parameter       | Type                                                                           | Description                                    |
+| --------------- | ------------------------------------------------------------------------------ | ---------------------------------------------- |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)        | The target element that contains the pin data. |
+| `parentElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)        | The parent element                             |
+| `content`       | `string`                                                                       | The content to use.                            |
+| `options`       | [`SpeccerOptionsInterface`](../../../types/speccer.md#specceroptionsinterface) | options                                        |
 
 #### Returns
 
@@ -45,15 +45,17 @@ A promise that resolves to the id of the pin element when the process is complet
 
 ```ts
 const targetElement = document.getElementById('target');
-const symbol = 0;
-pinElement(targetElement, symbol).then(() => {
+const parentElement = document.getElementById('parent');
+const content = 0;
+const options = { … };
+pinElement(targetElement, parentElement, content, options).then(() => {
   console.log('process completed');
 });
 ```
 
 #### Defined in
 
-[features/pin/utils/pin-element.ts:41](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/pin-element.ts#L41)
+[features/pin/utils/pin-element.ts:34](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/pin-element.ts#L34)
 
 ---
 

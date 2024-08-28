@@ -1,5 +1,5 @@
 .ph-speccer.speccer.pin
-  font-family sans-serif
+  font-family var(--ph-speccer-font-family)
   height var(--ph-speccer-pin-size)
   width var(--ph-speccer-pin-size)
   display flex
@@ -25,6 +25,7 @@
     z-index 99999
 
 .ph-speccer.speccer.pin.svg,
+.ph-speccer.speccer.pin.text,
 .ph-speccer.speccer.pin.curly
   &::after
     content none !important
@@ -78,3 +79,60 @@
       width var(--ph-speccer-pin-space)
       top 50%
       right 100%
+
+
+.ph-speccer.path.speccer.text
+  color var(--ph-speccer-color-text-dark)
+
+.ph-speccer.speccer.pin.text
+  font-family var(--ph-speccer-font-family)
+  height auto
+  min-height var(--ph-speccer-pin-size)
+  display flex
+  position absolute
+  border-radius 0
+  background-color transparent
+  color var(--ph-speccer-color-text-dark)
+  font-weight 400
+  align-items flex-start
+  justify-content center
+  line-height 130%
+  z-index 100000
+  flex-direction column
+  width 250px
+  grid-gap 2px
+
+  &.right
+    padding-left 1rem
+
+  &.left
+    padding-right 1rem
+    width 170px
+
+  &.top
+    padding-bottom 1rem
+
+  &.bottom
+    padding-top 1rem
+
+.ph-speccer.speccer.pin.text
+  & .ph-speccer.title
+    text-transform uppercase
+    font-weight 500
+    font-size 11px
+
+.ph-speccer.speccer.pin.text
+  & .ph-speccer.description
+    line-height 130%
+    position relative
+    font-weight 600
+    font-size 0.875rem
+
+.ph-speccer.speccer.pin.text
+  & .ph-speccer.heading
+    line-height 130%
+    position relative
+    font-weight 600
+    font-size 0.875rem
+    text-transform uppercase
+    color var(--ph-speccer-base-color)

@@ -1,5 +1,3 @@
-import { SPECCER_LITERALS } from '../../../utils/constants';
-
 let _index_to_use = 0;
 
 /**
@@ -7,6 +5,7 @@ let _index_to_use = 0;
  * If the index exceeds the available characters, it generates a new character by pairing uppercase and lowercase letters.
  *
  * @param {number} targetIndex - The index of the character to retrieve.
+ * @param {string|string[]} literalsToUse - Literals to use
  * @returns {string} The character to use at the specified index.
  *
  * @example
@@ -15,10 +14,11 @@ let _index_to_use = 0;
  * const nextCharacter = getCharacterToUse(25); // Returns next character or a generated pair if index exceeds literals length
  * ```
  */
-export const getCharacterToUse = (targetIndex: number): string => {
-  const _literals_to_use = window.SPECCER_LITERALS || SPECCER_LITERALS;
-
-  let _character_to_use = _literals_to_use[targetIndex];
+export const getCharacterToUse = (
+  targetIndex: number,
+  literalsToUse: string | string[]
+): string => {
+  let _character_to_use = literalsToUse[targetIndex];
 
   // Reset index to use when we start new elements
   if (targetIndex === 0) _index_to_use = 0;
@@ -28,7 +28,7 @@ export const getCharacterToUse = (targetIndex: number): string => {
    * make a new one with uppercase and lowercase pairs
    */
   if (!_character_to_use) {
-    _character_to_use = `${_literals_to_use[_index_to_use]}${_literals_to_use[
+    _character_to_use = `${literalsToUse[_index_to_use]}${literalsToUse[
       _index_to_use
     ].toLowerCase()}`;
     _index_to_use++;

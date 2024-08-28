@@ -1,17 +1,4 @@
 /**
- * Options for pin styles.
- */
-// eslint-disable-next-line import/no-unused-modules
-export type PinStylesOptionsType =
-  | Record<string, never>
-  | {
-      /**
-       * Indicates whether the style is curly or not.
-       */
-      isCurly?: boolean;
-    };
-
-/**
  * Options for creating a curly bezier path.
  */
 export type CurlyBezierPathOptionsType = {

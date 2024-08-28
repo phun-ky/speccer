@@ -6,7 +6,7 @@
 
 ## About
 
-![Image of speccer](./public/speccer.png)
+![Image of speccer](./public/speccer-pin-parent-align-light.png)
 
 **SPECCER** was originally created to simplify documenting components in a design system, but it can be used to highlight any HTML element on a webpage. If you need to draw attention to elements, **SPECCER** is your tool!
 
@@ -25,9 +25,12 @@
   - [Features](#features)
     - [Element spacing](#element-spacing)
     - [Element dimensions](#element-dimensions)
-      - [Subtle measure](#subtle-measure)
+      - [Slim measure](#slim-measure)
     - [Pin element to highlight the anatomy](#pin-element-to-highlight-the-anatomy)
+      - [Default](#default)
+      - [Enclose](#enclose)
       - [Align with parent container](#align-with-parent-container)
+      - [Pin with text](#pin-with-text)
       - [Custom literals](#custom-literals)
       - [Subtle anatomy](#subtle-anatomy)
       - [Curly brackets](#curly-brackets)
@@ -199,7 +202,7 @@ export default Component;
 
 ### Element spacing
 
-![Image of speccer](./public/spacing.png)
+![Image of the spacing feature](./public/speccer-spacing-light.png)
 
 Use the following attribute to display element padding and margin:
 
@@ -209,29 +212,44 @@ Use the following attribute to display element padding and margin:
 
 This will display the element _and all of it's children_ padding and margin.
 
+![Image of the spacing feature in dark mode](./public/speccer-spacing-dark.png)
+
 ### Element dimensions
 
-![Image of speccer](./public/measure.png)
+![Image of the measure feature](./public/speccer-measure-right-full-light.png)
+![Image of the measure feature](./public/speccer-measure-bottom-dark.png)
 
 Display dimensions with:
 
 ```html
 <div
-  data-speccer="measure [height right|left] | [width top|bottom]"
+  data-speccer="measure [height left|right] | [width top|bottom]"
   class="..."
 ></div>
 ```
 
 Where `height` and `width` comes with placement flags. Default for `height` is `left`, default for `width` is `top`.
 
-#### Subtle measure
+![Image of the measure feature](./public/speccer-measure-spacing-example-dark.png)
 
-![Image of subtle option for measure](./public/subtle-measure.png)
+#### Slim measure
 
-Use a subtle style:
+![Image of slim option for measure](./public/speccer-measure-right-light.png)
+
+Use a slim style:
 
 ```html
-<div data-speccer="measure height left subtle" class="..."></div>
+<div data-speccer="measure slim height left" class="..."></div>
+```
+
+This will give a slimmer look and feel.
+
+##### Subtle slim measure
+
+Use a subtle style for the slim option, uses a dashed line instead of a solid line:
+
+```html
+<div data-speccer="measure slim height left subtle" class="..."></div>
 ```
 
 This will give a dashed border.
@@ -253,9 +271,39 @@ In your component examples, use the following attribute. Remember to use the `da
 
 This will place a pin to the outline of the element. Default is `top`.
 
+#### Default
+
+![Image of speccer](./public/speccer-pin-default-light.png)
+
+```html
+<div data-speccer="pin-area">
+  <div data-speccer="pin" class="..."></div>
+</div>
+```
+
+#### Enclose
+
+![Image of speccer](./public/speccer-pin-enclose-light.png)
+
+```html
+<div data-speccer="pin-area">
+  <div data-speccer="pin enclose" class="..."></div>
+</div>
+```
+
+##### Subtle enclose
+
+![Image of speccer](./public/speccer-pin-enclose-subtle-light.png)
+
+```html
+<div data-speccer="pin-area">
+  <div data-speccer="pin enclose" class="..."></div>
+</div>
+```
+
 #### Align with parent container
 
-![Screenshot of the dissection/anatomy feature where the pins are aligned with the parent container](./public/align-parent.png)
+![Screenshot of the dissection/anatomy feature where the pins are aligned with the parent container](./public/speccer-pin-parent-align-default-light.png)
 
 You can also align the pins to the parent container.
 
@@ -287,9 +335,28 @@ The lines from the element to the pin is drawn with a svg path and circle, so re
 </svg>
 ```
 
+![Screenshot of the dissection/anatomy feature where the pins are aligned with the parent container](./public/speccer-pin-parent-align-light.png)
+
+#### Pin with text
+
+![Image of text pin option](./public/speccer-pin-text-light.png)
+
+If you want _text-in-place_ pinning feature, instead of referencing the pins, you can use the `text` feature:
+
+```html
+<input
+  type="text"
+  …
+  data-speccer="pin left text"
+  data-speccer-title="Static text"
+  data-speccer-description="Document size [xx] by [yy][units]"
+  …
+/>
+```
+
 #### Custom literals
 
-![Image of japanese literals instead of latin characters](./public/literals.png)
+![Image of japanese literals instead of latin characters](./public/speccer-pin-symbols-light.png)
 
 You can use custom literals by assigned a global variable with the literals you want:
 
@@ -307,9 +374,27 @@ window.SPECCER_LITERALS = [
 ];
 ```
 
+Or with a data attribute on the `data-speccer="pin-area"`-element:
+
+```html
+<div data-speccer="pin-area" data-speccer-literals="ऄ|अआइईउऊऋऌऍऎएऐऑऒओऔकखगघङच">
+  …
+</div>
+```
+
+> [!TIP]
+> Try it out with emoticons!
+>
+> ```js
+> window.SPECCER_LITERALS = [
+>   '🥰',
+>   …
+> ];
+> ```
+
 #### Subtle anatomy
 
-![Image of subtle option for anatomy](./public/subtle.png)
+![Image of subtle option for anatomy](./public/speccer-pin-default-subtle-light.png)
 
 You can also give a more subtle touch to the anatomy elements.
 
@@ -324,6 +409,8 @@ This will give a dashed border, and a more subtle pin style.
 #### Curly brackets
 
 You can use curly brackets with the `curly` tag in `data-speccer` along side `pin bracket` to provide a more sleek style.
+
+![Image of curly option for anatomy](./public/speccer-pin-curly-light.png)
 
 > [!NOTE]  
 > Only works with `pin bracket`
@@ -355,7 +442,7 @@ from v9.5 you can utilize the `pin` feature to highlight the anatomy of an eleme
 
 ### Element typography
 
-![Image of typography speccer](./public/typography.png)
+![Image of typography speccer](./public/speccer-typography-light.png)
 
 Display typography details:
 
@@ -412,11 +499,11 @@ Here is an example with these colors and overrides:
 }
 ```
 
-![Screenshot of typgraphy with different syntax theme](./public/typography-syntax.png)
+![Screenshot of typgraphy with different syntax theme](./public/speccer-typography-syntax-light.png)
 
 ### Grid spacing
 
-![Screenshot of grid feature](./public/grid.png)
+![Screenshot of grid feature](./public/speccer-grid-full-light.png)
 
 This will highlight the grid spacing in a `display: grid;` element.
 
@@ -426,15 +513,18 @@ In your component examples, use the following attribute on your grid container.
 <div data-speccer="grid" …>…</div>
 ```
 
-If you only want to display `rows` or `columns`, use this syntax (default is both with `grid` only):
+> [!TIP]
+> If you only want to display `rows` or `columns`, use this syntax (default is both with `grid` only):
+>
+> ```html
+> <div data-speccer="grid [rows|columns]" …>…</div>
+> ```
 
-```html
-<div data-speccer="grid [rows|columns]" …>…</div>
-```
+![Screenshot of grid feature](./public/speccer-grid-full-dark.png)
 
 ### Mark elements
 
-![Screenshot of marked elements](./public/mark.png)
+![Screenshot of marked elements](./public/speccer-pin-mark-light.png)
 
 This will mark the given elements.
 
@@ -452,19 +542,19 @@ Prior art: [Jeremy Elder](https://twitter.com/JeremyElder)
 
 #### Tab stops
 
-![Screenshot of speccer a11y tab stops in use](./public/a11y-tabstop.png)
+![Screenshot of speccer a11y tab stops in use](./public/speccer-a11y-tabstops-light.png)
 
 If you want to display tab stops, append `data-speccer="a11y tabstops"` as an attribute to the container you want to display the tab stops in.
 
 #### Landmarks and regions
 
-![Screenshot of speccer a11y landmarks in use](./public/a11y-landmark.png)
+![Screenshot of speccer a11y landmarks in use](./public/speccer-a11y-landmarks-light.png)
 
 If you want to display landmarks and regions, append `data-speccer="a11y landmark"` as an attribute to the container you want to display the landmarks and regions in.
 
 #### Keys and shortcut
 
-![Screenshot of speccer a11y shortcuts in use](./public/a11y-shortcut.png)
+![Screenshot of speccer a11y shortcuts in use](./public/speccer-a11y-shortcuts-light.png)
 
 If you want to display the shortcut with keys used for elements, use `data-speccer="a11y shortcut"` and `data-speccer-a11y-shortcut="<shortcut>"` on the element that uses this shortcut:
 
@@ -480,7 +570,7 @@ If you want to display the shortcut with keys used for elements, use `data-specc
 
 ### Customization
 
-![Screenshot of speccer in a dark mode example](./public/darkmode.png)
+![Screenshot of speccer in a dark mode example](./public/speccer-measure-spacing-example-dark.png)
 
 Allthough the styling works nicely with dark mode, you can use the provided CSS variables to customize the look and feel. If more control is needed, you can use CSS overrides :)
 
@@ -497,18 +587,17 @@ Allthough the styling works nicely with dark mode, you can use the provided CSS 
   --ph-speccer-color-fuchsiaBlue: #7e60c5;
   --ph-speccer-base-color: var(--ph-speccer-color-artificialStrawberry);
   --ph-speccer-spacing-color: var(--ph-speccer-base-color);
-  --ph-speccer-spacing-color-padding: rgb(
+  --ph-speccer-spacing-padding-color: var(--ph-speccer-color-carbon);
+  --ph-speccer-spacing-padding-color-background: rgb(
     from var(--ph-speccer-color-venusSlipperOrchid) r g b /
       var(--ph-speccer-opacity-40)
   );
-  --ph-speccer-spacing-color-padding-hover: var(
-    --ph-speccer-color-venusSlipperOrchid
-  );
-  --ph-speccer-spacing-color-margin: rgb(
+  --ph-speccer-spacing-margin-color: var(--ph-speccer-color-red);
+  --ph-speccer-spacing-margin-color-background: rgb(
     from var(--ph-speccer-color-superBanana) r g b /
       var(--ph-speccer-opacity-40)
   );
-  --ph-speccer-spacing-color-margin-hover: var(--ph-speccer-color-superBanana);
+  --ph-speccer-spacing-line-width: var(--ph-speccer-line-width);
   --ph-speccer-typography-background-color: var(--ph-speccer-color-white);
   --ph-speccer-typography-color-property: var(--ph-speccer-color-niuZaiSeDenim);
   --ph-speccer-typography-color-text: var(--ph-speccer-base-color);
@@ -517,9 +606,11 @@ Allthough the styling works nicely with dark mode, you can use the provided CSS 
     from var(--ph-speccer-base-color) r g b / var(--ph-speccer-opacity-20)
   );
   --ph-speccer-mark-border-color: var(--ph-speccer-base-color);
-  --ph-speccer-mark-border-width: 1px;
+  --ph-speccer-mark-border-width: 1.5px;
   --ph-speccer-mark-border-style: solid;
   --ph-speccer-measure-color: var(--ph-speccer-color-red);
+  --ph-speccer-measure-line-width: 1.5px;
+  --ph-speccer-measure-border-style: dotted;
   --ph-speccer-measure-size: 8px;
   --ph-speccer-a11y-color-background: var(--ph-speccer-color-beautifulBlue);
   --ph-speccer-a11y-landmark-color-background: var(
@@ -531,8 +622,8 @@ Allthough the styling works nicely with dark mode, you can use the provided CSS 
   --ph-speccer-pin-size: 24px;
   --ph-speccer-pin-space: 48px;
   --ph-speccer-line-height: 12px;
-  --ph-speccer-line-width: 1px;
-  --ph-speccer-line-width-negative: -1px;
+  --ph-speccer-line-width: 1.5px;
+  --ph-speccer-line-width-negative: -1.5px;
   --ph-speccer-opacity-20: 0.2;
   --ph-speccer-opacity-40: 0.4;
   --ph-speccer-font-family: 'Menlo for Powerline', 'Menlo Regular for Powerline',

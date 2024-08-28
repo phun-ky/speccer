@@ -410,19 +410,37 @@
           const form = document.getElementById('pin-options');
           const formData = new FormData(form);
           let area = 'pin';
-          for (const value of formData.values()) {
-            if (value == 'default') continue;
-            area += ` ${value}`;
+          const options = {
+            type: 'pin',
+            position: 'top',
+            pin: {
+              bracket: false,
+              enclose: false,
+              subtle: false,
+              parent: false,
+              text: false,
+              useSVGLine: false,
+              useCurlyBrackets: false
+            }
+          };
+          for (const [setting, value] of formData.entries()) {
+            if (setting == 'position') options.position = value;
+            if (setting == 'type') {
+              if (value === 'bracket') options.pin.bracket = true;
+              if (value === 'enclose') {
+                options.pin.enclose = true;
+                options.pin.useCurlyBrackets = false;
+              }
+              if (value === 'subtle') options.pin.subtle = true;
+            }
+            if (setting === 'curly' && options.pin.bracket) {
+              options.pin.useCurlyBrackets = true;
+            }
           }
 
           const parentElement = el.parentElement;
 
-          pinElement(
-            el,
-            '🥰',
-            parentElement,
-            area.indexOf('bracket') == -1 ? area.replace(' curly', '') : area
-          );
+          pinElement(el, parentElement, '🥰', options);
           el.classList.add('is-specced');
         }
       };

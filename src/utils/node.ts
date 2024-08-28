@@ -54,5 +54,6 @@ export const removeAll = (selector: string, el: Document = document): void => {
  */
 export const isElementHidden = (element: HTMLElement): boolean =>
   !element.checkVisibility({
+    opacityProperty: true,
     checkVisibilityCSS: true
-  });
+  } as Record<string, boolean>);

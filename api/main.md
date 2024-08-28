@@ -6,7 +6,7 @@
 
 # main
 
-> Last updated 2024-08-22T06:56:09.105Z
+> Last updated 2024-08-28T09:42:51.076Z
 
 ## Table of Contents
 
@@ -205,7 +205,7 @@ const measure: {
 </td>
 <td>
 
-(`text`, `area`, `tag`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
+(`text`, `options`, `tag`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
 </td>
 <td>
@@ -348,12 +348,12 @@ const modes: {
 
 ```ts
 const pin: {
-  createPinElement: (textContent, area, id, n) => HTMLElement;
+  createPinElement: (content, options, id, n) => HTMLElement;
   pinElement: (
     targetElement,
-    symbol,
     parentElement,
-    areas?
+    content,
+    options
   ) => Promise<string | void>;
   pinElements: (sectionElement) => Promise<void>;
 };
@@ -375,7 +375,7 @@ const pin: {
 </td>
 <td>
 
-(`textContent`, `area`, `id`, `n`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
+(`content`, `options`, `id`, `n`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
 </td>
 <td>
@@ -392,7 +392,7 @@ const pin: {
 </td>
 <td>
 
-(`targetElement`, `symbol`, `parentElement`, `areas`?) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string` | `void`>
+(`targetElement`, `parentElement`, `content`, `options`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string` | `void`>
 
 </td>
 <td>
@@ -522,7 +522,7 @@ const typography: {
 </td>
 <td>
 
-(`html`, `area`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
+(`html`, `options`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
 </td>
 <td>

@@ -8,13 +8,14 @@
 
 ---
 
-> Last updated 2024-08-22T06:56:09.088Z
+> Last updated 2024-08-28T09:42:51.066Z
 
 ## Modules
 
 - [config/browser](config/browser.md)
 - [features/a11y](features/a11y.md)
 - [features/a11y/constants](features/a11y/constants.md)
+- [features/a11y/utils/create-a11y-element](features/a11y/utils/create-a11y-element.md)
 - [features/a11y/utils/styles](features/a11y/utils/styles.md)
 - [features/grid](features/grid.md)
 - [features/mark](features/mark.md)
@@ -22,6 +23,7 @@
 - [features/pin](features/pin.md)
 - [features/pin/utils/create-pin-element](features/pin/utils/create-pin-element.md)
 - [features/pin/utils/get-character-to-use](features/pin/utils/get-character-to-use.md)
+- [features/pin/utils/get-content-for-pin](features/pin/utils/get-content-for-pin.md)
 - [features/pin/utils/pin-element](features/pin/utils/pin-element.md)
 - [features/pin/utils/styles](features/pin/utils/styles.md)
 - [features/spacing](features/spacing.md)
@@ -58,6 +60,7 @@
 - [utils/debounce](utils/debounce.md)
 - [utils/direction-of-element](utils/direction-of-element.md)
 - [utils/get-coords-pair-from-objects](utils/get-coords-pair-from-objects.md)
+- [utils/get-options](utils/get-options.md)
 - [utils/id](utils/id.md)
 - [utils/intrinsic-coords](utils/intrinsic-coords.md)
 - [utils/node](utils/node.md)

@@ -32,14 +32,14 @@ export const position = async (
   if (property === 'marginTop')
     addStyles(spacingElement, {
       height: `${value}px`,
-      width: _target_rect.width + 'px',
-      left: _target_offset.left + 'px',
+      width: _target_rect.width + 96 + 'px',
+      left: _target_offset.left - 96 + 'px',
       top: _target_offset.top - value + 'px'
     });
 
   if (property === 'marginRight')
     addStyles(spacingElement, {
-      height: _target_rect.height + 'px',
+      height: _target_rect.height + 48 + 'px',
       width: `${value}px`,
       left: _target_offset.left + parseInt(_target_rect.width + '', 10) + 'px',
       top: _target_offset.top + 'px'
@@ -48,14 +48,14 @@ export const position = async (
   if (property === 'marginBottom')
     addStyles(spacingElement, {
       height: `${value}px`,
-      width: _target_rect.width + 'px',
-      left: _target_offset.left + 'px',
+      width: _target_rect.width + 96 + 'px',
+      left: _target_offset.left - 96 + 'px',
       top: _target_offset.top + parseInt(_target_rect.height + '', 10) + 'px'
     });
 
   if (property === 'marginLeft')
     addStyles(spacingElement, {
-      height: _target_rect.height + 'px',
+      height: _target_rect.height + 48 + 'px',
       width: `${value}px`,
       left: _target_offset.left - value + 'px',
       top: _target_offset.top + 'px'
@@ -64,16 +64,16 @@ export const position = async (
   if (property === 'paddingTop')
     addStyles(spacingElement, {
       height: `${value}px`,
-      width: _target_rect.width + 'px',
-      left: _target_offset.left + 'px',
+      width: _target_rect.width + 96 + 'px',
+      left: _target_offset.left - 96 + 'px',
       top: _target_offset.top + 'px'
     });
 
   if (property === 'paddingBottom')
     addStyles(spacingElement, {
       height: `${value}px`,
-      width: _target_rect.width + 'px',
-      left: _target_offset.left + 'px',
+      width: _target_rect.width + 96 + 'px',
+      left: _target_offset.left - 96 + 'px',
       top:
         _target_offset.top +
         (parseInt(_target_rect.height + '', 10) - value) +
@@ -82,7 +82,7 @@ export const position = async (
 
   if (property === 'paddingRight')
     addStyles(spacingElement, {
-      height: _target_rect.height + 'px',
+      height: _target_rect.height + 48 + 'px',
       width: `${value}px`,
       left:
         _target_offset.left +
@@ -93,7 +93,7 @@ export const position = async (
 
   if (property === 'paddingLeft')
     addStyles(spacingElement, {
-      height: _target_rect.height + 'px',
+      height: _target_rect.height + 48 + 'px',
       width: `${value}px`,
       left: _target_offset.left + 'px',
       top: _target_offset.top + 'px'

@@ -1,10 +1,11 @@
 /* eslint no-console:0 */
-import { isValidMarkElement } from '../../utils/area';
 import { cx, set } from '../../utils/classnames';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
+import { getOptions } from '../../utils/get-options';
 import { isElementHidden } from '../../utils/node';
 import { getRec } from '../../utils/position';
 import { add as addStyles } from '../../utils/styles';
+import { waitForFrame } from '../../utils/wait';
 
 /**
  * Create a marker element with an optional element type.
@@ -44,11 +45,14 @@ export const create = (n = 'span'): HTMLElement => {
 export const element = async (targetElement: HTMLElement): Promise<void> => {
   if (!targetElement) return;
 
-  const _areas_string: string | null = targetElement.getAttribute(
-    SPECCER_DATA_ATTRIBUTE
-  );
+  const _areas_string: string =
+    targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || '';
 
-  if (!isValidMarkElement(_areas_string)) return;
+  await waitForFrame();
+
+  const _options = getOptions(_areas_string, getComputedStyle(targetElement));
+
+  if (_options.type !== 'mark') return;
 
   if (isElementHidden(targetElement)) return;
 

@@ -1,4 +1,4 @@
-import { isBottomArea, isLeftArea, isRightArea } from '../area';
+import { SpeccerOptionsInterface } from '../../types/speccer';
 import { uniqueID } from '../id';
 import { intrinsic_coords } from '../intrinsic-coords';
 import { add as addStyle } from '../styles';
@@ -11,28 +11,32 @@ export class DrawCircle {
   el: HTMLElement;
   circle: SVGCircleElement;
   radius: number;
-  areas: string;
+  options: SpeccerOptionsInterface;
 
   /**
    * Creates a new DrawCircle instance.
-   * @param el - The element used to position the circle.
-   * @param radius - The radius of the circle
-   * @param areas - The areas used to identify position
+   * @param {HTMLElement} el - The element used to position the circle.
+   * @param {number} radius - The radius of the circle
+   * @param {SpeccerOptionsInterface} options - The options used to identify position
    */
-  constructor(el: HTMLElement, radius: number, areas: string) {
-    this.#init(el, radius, areas);
+  constructor(
+    el: HTMLElement,
+    radius: number,
+    options: SpeccerOptionsInterface
+  ) {
+    this.#init(el, radius, options);
   }
 
   /**
    * Initializes the DrawCircle instance.
-   * @param el - The element used to position the circle.
-   * @param radius - The radius of the circle
-   * * @param areas - The areas used to identify position
+   * @param {HTMLElement} el - The element used to position the circle.
+   * @param {number} radius - The radius of the circle
+   * @param {SpeccerOptionsInterface} options - The options used to identify position
    * @throws Will throw an error if required elements are missing or not in the DOM.
    */
-  #init(el: HTMLElement, radius: number, areas: string) {
-    if (!el || !radius || !areas) {
-      throw new Error('Missing inputs el or radius or areas');
+  #init(el: HTMLElement, radius: number, options: SpeccerOptionsInterface) {
+    if (!el || !radius || !options) {
+      throw new Error('Missing inputs el or radius or options');
     }
 
     if (!document.body.contains(el)) {
@@ -41,7 +45,7 @@ export class DrawCircle {
 
     this.el = el;
     this.radius = radius;
-    this.areas = areas;
+    this.options = options;
 
     this.#canvas = document.getElementById('ph-speccer-svg');
 
@@ -96,19 +100,14 @@ export class DrawCircle {
       throw new Error('No parentNode found for circle');
     }
 
-    let pos = 'top';
-
-    if (isLeftArea(this.areas)) pos = 'left';
-
-    if (isRightArea(this.areas)) pos = 'right';
-
-    if (isBottomArea(this.areas)) pos = 'bottom';
-
-    const { x, y } = await intrinsic_coords(this.el, pos);
+    const { x, y } = await intrinsic_coords(this.el, this.options.position);
 
     this.circle.setAttribute('r', this.radius + ''); // SVG attributes
     this.circle.setAttribute('cx', Math.round(x) + ''); // SVG attributes
-    this.circle.setAttribute('cy', Math.round(y) + ''); // SVG attributes
+    this.circle.setAttribute(
+      'cy',
+      Math.round(y + document.documentElement.scrollTop) + ''
+    ); // SVG attributes
     this.circle.setAttribute('fill', 'currentColor'); // SVG attributes
   }
 }

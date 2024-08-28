@@ -6,25 +6,25 @@
 
 # features/measure
 
-> Last updated 2024-08-22T06:56:09.099Z
+> Last updated 2024-08-28T09:42:51.073Z
 
 ## Functions
 
 ### create()
 
 ```ts
-function create(text, area, tag): HTMLElement;
+function create(text, options, tag): HTMLElement;
 ```
 
 Create a measurement element with optional text, area, and element type.
 
 #### Parameters
 
-| Parameter | Type                 | Default value | Description                         |
-| --------- | -------------------- | ------------- | ----------------------------------- |
-| `text`    | `string` \| `number` | `''`          | The text to display on the element. |
-| `area`    | `null` \| `string`   | `''`          | The area to specify with CSS class. |
-| `tag`     | `string`             | `'span'`      | The element type.                   |
+| Parameter | Type                                                                     | Default value | Description                         |
+| --------- | ------------------------------------------------------------------------ | ------------- | ----------------------------------- |
+| `text`    | `string` \| `number`                                                     | `''`          | The text to display on the element. |
+| `options` | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | `undefined`   | The options.                        |
+| `tag`     | `string`                                                                 | `'span'`      | The element type.                   |
 
 #### Returns
 
@@ -41,7 +41,7 @@ document.body.appendChild(measurement);
 
 #### Defined in
 
-[features/measure/index.ts:29](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L29)
+[features/measure/index.ts:25](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L25)
 
 ---
 
@@ -51,7 +51,7 @@ document.body.appendChild(measurement);
 function element(targetElement): Promise<void>;
 ```
 
-Create a measurement element and add it to the body with styles matching a specified target element.
+Create a measurement element and add it to the body with styles matching a specified target element based on the attribute values from `data-speccer`.
 
 ![measure](https://github.com/phun-ky/speccer/blob/main/public/measure.png?raw=true)
 
@@ -76,7 +76,7 @@ element(targetElement);
 
 #### Defined in
 
-[features/measure/index.ts:58](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L58)
+[features/measure/index.ts:62](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L62)
 
 ---
 

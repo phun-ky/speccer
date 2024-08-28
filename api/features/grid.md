@@ -6,7 +6,7 @@
 
 # features/grid
 
-> Last updated 2024-08-22T06:56:09.097Z
+> Last updated 2024-08-28T09:42:51.072Z
 
 ## Functions
 
@@ -20,11 +20,11 @@ Creates a visual grid overlay for a given target element.
 
 #### Parameters
 
-| Parameter       | Type                                                                                                             | Description                                        |
-| --------------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                                          | The target element to create the grid overlay for. |
-| `styles`        | [`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration)                          | The computed styles of the target element.         |
-| `options`       | [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `string`> | Options to determine what to draw                  |
+| Parameter       | Type                                                                                    | Description                                        |
+| --------------- | --------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                 | The target element to create the grid overlay for. |
+| `styles`        | [`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration) | The computed styles of the target element.         |
+| `options`       | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface)                | Options to determine what to draw                  |
 
 #### Returns
 
@@ -42,7 +42,7 @@ if (targetElement) {
 
 #### Defined in
 
-[features/grid/index.ts:26](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L26)
+[features/grid/index.ts:27](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L27)
 
 ---
 
@@ -56,7 +56,7 @@ Create a visual overlay to present the column gaps for a grid container
 
 Adds a visual grid overlay to the target element if it has the appropriate data attribute and is a grid.
 
-![grid](https://github.com/phun-ky/speccer/blob/main/public/grid.png?raw=true)
+![grid](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-dark.png?raw=true)
 
 #### Parameters
 
@@ -83,7 +83,7 @@ if (targetElement) {
 
 #### Defined in
 
-[features/grid/index.ts:137](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L137)
+[features/grid/index.ts:142](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L142)
 
 ---
 

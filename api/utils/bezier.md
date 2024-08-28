@@ -6,7 +6,7 @@
 
 # utils/bezier
 
-> Last updated 2024-08-22T06:56:09.116Z
+> Last updated 2024-08-28T09:42:51.083Z
 
 ## Functions
 
@@ -173,10 +173,10 @@ Positions for creating an SVG path for a curved line.
 
 | Name        | Type     | Defined in                                                                                   |
 | ----------- | -------- | -------------------------------------------------------------------------------------------- |
-| `path1pos1` | `string` | [utils/bezier.ts:261](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L261) |
-| `path1pos2` | `string` | [utils/bezier.ts:262](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L262) |
-| `path2pos1` | `string` | [utils/bezier.ts:263](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L263) |
-| `path2pos2` | `string` | [utils/bezier.ts:264](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L264) |
+| `path1pos1` | `string` | [utils/bezier.ts:269](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L269) |
+| `path1pos2` | `string` | [utils/bezier.ts:270](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L270) |
+| `path2pos1` | `string` | [utils/bezier.ts:271](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L271) |
+| `path2pos2` | `string` | [utils/bezier.ts:272](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L272) |
 
 #### Example
 
@@ -186,7 +186,7 @@ const positions = getPositionsForCurlySVGPath('west');
 
 #### Defined in
 
-[utils/bezier.ts:226](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L226)
+[utils/bezier.ts:234](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L234)
 
 ---
 
@@ -220,8 +220,8 @@ Positions for creating an SVG path.
 
 | Name   | Type     | Defined in                                                                                   |
 | ------ | -------- | -------------------------------------------------------------------------------------------- |
-| `pos1` | `string` | [utils/bezier.ts:212](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L212) |
-| `pos2` | `string` | [utils/bezier.ts:212](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L212) |
+| `pos1` | `string` | [utils/bezier.ts:220](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L220) |
+| `pos2` | `string` | [utils/bezier.ts:220](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L220) |
 
 #### Example
 
@@ -231,7 +231,7 @@ const positions = getPositionsForSVGPath('east');
 
 #### Defined in
 
-[utils/bezier.ts:188](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L188)
+[utils/bezier.ts:196](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L196)
 
 ---
 
