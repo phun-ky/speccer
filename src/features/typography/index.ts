@@ -3,6 +3,7 @@
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { set as setClassNames, cx } from '../../utils/classnames';
 import { getOptions } from '../../utils/get-options';
+import { uniqueID } from '../../utils/id';
 import { isElementHidden } from '../../utils/node';
 import { add as addStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
@@ -15,6 +16,7 @@ import { template } from './utils/template';
  *
  * @param {string} html - The HTML content to be set in the created element.
  * @param {SpeccerOptionsInterface} options - Options.
+ * @param {string} id - The id.
  * @returns {HTMLElement} - The created DOM element.
  *
  * @example
@@ -27,7 +29,8 @@ import { template } from './utils/template';
  */
 export const create = (
   html: string,
-  options: SpeccerOptionsInterface
+  options: SpeccerOptionsInterface,
+  id: string
 ): HTMLElement => {
   const _el = document.createElement('div');
   const { typography, position } = options;
@@ -35,6 +38,8 @@ export const create = (
     syntax: typography?.useSyntaxHighlighting || false,
     [position]: true
   });
+
+  _el.setAttribute('id', id);
 
   _el.innerHTML = html;
 
@@ -79,7 +84,11 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
     targetElement,
     _options.typography.useSyntaxHighlighting
   );
-  const _speccer_el = create(_html, _options);
+  const _pin_element_id = `speccer-${_options.slug}-${targetElement.getAttribute('id') || uniqueID()}`;
+
+  targetElement.setAttribute('data-speccer-element-id', _pin_element_id);
+
+  const _speccer_el = create(_html, _options, _pin_element_id);
 
   document.body.appendChild(_speccer_el);
 

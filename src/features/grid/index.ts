@@ -2,6 +2,7 @@
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
+import { uniqueID } from '../../utils/id';
 import { isElementHidden } from '../../utils/node';
 import { offset } from '../../utils/position';
 import { get as getStyles } from '../../utils/styles';
@@ -39,6 +40,9 @@ export const create = async (
   const { height, width } = targetElement.getBoundingClientRect();
   const { top, left } = await offset(targetElement);
   const { gridTemplateColumns, gridTemplateRows, padding } = styles;
+  const _pin_element_id = `speccer-${options.slug}-${targetElement.getAttribute('id') || uniqueID()}`;
+
+  targetElement.setAttribute('data-speccer-element-id', _pin_element_id);
 
   if (toggle === 'columns' || toggle === 'both') {
     const columnGap = parseInt(styles.columnGap);
@@ -55,6 +59,7 @@ export const create = async (
 
     if (columnGap < 24) gridColumnContainer.classList.add('speccer-small-grid');
 
+    gridColumnContainer.setAttribute('data-speccer-id', _pin_element_id);
     gridColumnContainer.classList.add('ph-speccer');
     gridColumnContainer.classList.add('speccer');
     gridColumnContainer.classList.add('speccer-grid-container');
@@ -94,6 +99,7 @@ export const create = async (
 
     if (rowGap < 24) gridRowContainer.classList.add('speccer-small-grid');
 
+    gridRowContainer.setAttribute('data-speccer-id', _pin_element_id);
     gridRowContainer.classList.add('ph-speccer');
     gridRowContainer.classList.add('speccer');
     gridRowContainer.classList.add('speccer-grid-row-container');

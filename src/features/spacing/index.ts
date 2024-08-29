@@ -6,6 +6,7 @@ import {
   getClassNameFromCSSProperty,
   getNumberValue
 } from '../../utils/css';
+import { uniqueID } from '../../utils/id';
 import { isElementHidden } from '../../utils/node';
 import { get as getStyles } from '../../utils/styles';
 
@@ -70,9 +71,16 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
   if (!_target_pruned_spacing_styles.length) return;
 
+  const _pin_element_id = `speccer-spacing-${targetElement.getAttribute('id') || uniqueID()}`;
+
+  targetElement.setAttribute('data-speccer-element-id', _pin_element_id);
+
   _target_pruned_spacing_styles.forEach(async (property) => {
     const _value = getNumberValue(_target_spacing_styles[property]);
     const _speccer_el = create(_value);
+
+    _speccer_el.setAttribute('data-speccer-id', _pin_element_id);
+
     const _class_name = getClassNameFromCSSProperty(property);
 
     setClassNames(_speccer_el, _class_name);

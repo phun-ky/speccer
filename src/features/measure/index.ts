@@ -3,6 +3,7 @@ import { MeasureAreaEnum } from '../../types/enums/area';
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { cx, set as setClassNames } from '../../utils/classnames';
 import { getOptions } from '../../utils/get-options';
+import { uniqueID } from '../../utils/id';
 import { isElementHidden } from '../../utils/node';
 import { getRec } from '../../utils/position';
 import { add as addStyles } from '../../utils/styles';
@@ -13,6 +14,7 @@ import { waitForFrame } from '../../utils/wait';
  *
  * @param {string | number} text - The text to display on the element.
  * @param {SpeccerOptionsInterface} options - The options.
+ * @param {string} id - The element id.
  * @param {string} tag - The element type.
  * @returns {HTMLElement} - The created measurement element.
  *
@@ -25,11 +27,13 @@ import { waitForFrame } from '../../utils/wait';
 export const create = (
   text: string | number = '',
   options: SpeccerOptionsInterface,
+  id: string,
   tag = 'span'
 ): HTMLElement => {
   const _el = document.createElement(tag);
 
   _el.setAttribute('title', `${text}px`);
+  _el.setAttribute('id', id);
   _el.setAttribute('data-measure', `${parseInt(String(text), 10)}px`);
 
   const { measure, position } = options;
@@ -75,14 +79,16 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
   await waitForFrame();
 
-  const { measure, position } = _options;
   const _target_rect = targetElement.getBoundingClientRect();
   const _width_modifier = !measure.slim ? 48 : 0;
   const _height_modifier = !measure.slim ? 96 : 0;
+  const _pin_element_id = `speccer-${_options.slug}-${targetElement.getAttribute('id') || uniqueID()}`;
+
+  targetElement.setAttribute('data-speccer-element-id', _pin_element_id);
 
   if (measure.width) {
     if (position === MeasureAreaEnum.Bottom) {
-      const _measure_el = create(_target_rect.width, _options);
+      const _measure_el = create(_target_rect.width, _options, _pin_element_id);
 
       document.body.appendChild(_measure_el);
 
@@ -111,7 +117,7 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
         });
       }
     } else {
-      const _measure_el = create(_target_rect.width, _options);
+      const _measure_el = create(_target_rect.width, _options, _pin_element_id);
 
       document.body.appendChild(_measure_el);
 
@@ -142,7 +148,11 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
     }
   } else if (measure.height) {
     if (position === MeasureAreaEnum.Right) {
-      const _measure_el = create(_target_rect.height, _options);
+      const _measure_el = create(
+        _target_rect.height,
+        _options,
+        _pin_element_id
+      );
 
       document.body.appendChild(_measure_el);
 
@@ -171,7 +181,11 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
         });
       }
     } else {
-      const _measure_el = create(_target_rect.height, _options);
+      const _measure_el = create(
+        _target_rect.height,
+        _options,
+        _pin_element_id
+      );
 
       document.body.appendChild(_measure_el);
 
