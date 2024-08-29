@@ -23,9 +23,6 @@ export { createPinElement } from './utils/create-pin-element';
 // eslint-disable-next-line import/no-unused-modules
 export { pinElement } from './utils/pin-element';
 
-// eslint-disable-next-line import/no-unused-modules
-export { unpinElement } from './utils/unpin-element';
-
 import { SPECCER_LITERALS } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { isElementHidden } from '../../utils/node';

@@ -46,6 +46,9 @@ import {
 } from './utils/constants';
 import { removeAll } from './utils/node';
 
+// eslint-disable-next-line import/no-unused-modules
+export { removeSpeccerElement } from './utils/remove-speccer-element';
+
 export const grid = {
   create: gridCreate,
   element: gridElement

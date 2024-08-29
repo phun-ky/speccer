@@ -1,7 +1,7 @@
 /**
- * Unpins an HTML element by removing associated pin elements and SVG paths.
+ * Remove a speccer element by removing associated elements and SVG paths.
  *
- * This function removes any pin elements linked to the specified element and
+ * This function removes any speccer elements linked to the specified element and
  * also removes any SVG paths that might be associated with it.
  *
  * @param {HTMLElement} el - The HTML element to unpin.
@@ -11,11 +11,11 @@
  * ```ts
  * const element = document.getElementById('my-element');
  * if (element) {
- *   unpinElement(element);
+ *   removeSpeccerElement(element);
  * }
  * ```
  */
-export const unpinElement = (el: HTMLElement): void => {
+export const removeSpeccerElement = (el: HTMLElement): void => {
   const _selector = el.getAttribute('data-speccer-element-id');
 
 
