@@ -50,6 +50,8 @@ export const create = (id: string, n = 'span'): HTMLElement => {
 export const element = async (targetElement: HTMLElement): Promise<void> => {
   if (!targetElement) return;
 
+  if (isElementHidden(targetElement)) return;
+
   const _areas_string: string =
     targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || '';
 

@@ -66,6 +66,8 @@ export const create = (
 export const element = async (targetElement: HTMLElement): Promise<void> => {
   if (!targetElement) return;
 
+  if (isElementHidden(targetElement)) return;
+
   const _areas_string: string =
     targetElement.getAttribute('data-speccer') || '';
 
@@ -75,7 +77,7 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
   if (_options.type !== 'measure' || !_options.measure) return;
 
-  if (isElementHidden(targetElement)) return;
+  const { measure, position } = _options;
 
   await waitForFrame();
 

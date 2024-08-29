@@ -148,14 +148,14 @@ export const create = async (
 export const element = async (targetElement: HTMLElement): Promise<void> => {
   if (!targetElement) return;
 
+  if (isElementHidden(targetElement)) return;
+
   const _areas_string: string =
     targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || '';
   const _target_style = await getStyles(targetElement);
   const _options = getOptions(_areas_string, _target_style);
 
   if (_options.type !== 'grid' || !_options.grid) return;
-
-  if (isElementHidden(targetElement)) return;
 
   await waitForFrame();
 

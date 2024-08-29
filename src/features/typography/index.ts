@@ -67,6 +67,8 @@ export const create = (
 export const element = async (targetElement: HTMLElement): Promise<void> => {
   if (!targetElement) return;
 
+  if (isElementHidden(targetElement)) return;
+
   const _areas_string: string =
     targetElement.getAttribute('data-speccer') || '';
 
@@ -75,8 +77,6 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
   const _options = getOptions(_areas_string, getComputedStyle(targetElement));
 
   if (_options.type !== 'typography' || !_options.typography) return;
-
-  if (isElementHidden(targetElement)) return;
 
   targetElement.classList.add('is-specced');
 
