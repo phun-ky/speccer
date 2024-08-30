@@ -1,3 +1,4 @@
+import { SpeccerOptionsInterface } from '../../../types/speccer';
 import { offset } from '../../../utils/position';
 import { add as addStyles } from '../../../utils/styles';
 import { waitForFrame } from '../../../utils/wait';
@@ -9,6 +10,7 @@ import { waitForFrame } from '../../../utils/wait';
  * @param {number} value - The value of the CSS property.
  * @param {HTMLElement} spacingElement - The spacing element.
  * @param {HTMLElement} targetElement - The target element.
+ * @param {SpeccerOptionsInterface|undefined} [options] - Options.
  * @returns {Promise<void>} - A promise that resolves after setting the position and dimensions.
  *
  * @example
@@ -22,24 +24,27 @@ export const position = async (
   property: string,
   value: number,
   spacingElement: HTMLElement,
-  targetElement: HTMLElement
+  targetElement: HTMLElement,
+  options?: SpeccerOptionsInterface | undefined
 ): Promise<void> => {
   await waitForFrame();
 
   const _target_rect = targetElement.getBoundingClientRect();
   const _target_offset = await offset(targetElement);
+  const _width_modifier = options?.spacing?.bound ? 0 : 96;
+  const _height_modifier = options?.spacing?.bound ? 0 : 48;
 
   if (property === 'marginTop')
     addStyles(spacingElement, {
       height: `${value}px`,
-      width: _target_rect.width + 96 + 'px',
-      left: _target_offset.left - 96 + 'px',
+      width: _target_rect.width + _width_modifier + 'px',
+      left: _target_offset.left - _width_modifier + 'px',
       top: _target_offset.top - value + 'px'
     });
 
   if (property === 'marginRight')
     addStyles(spacingElement, {
-      height: _target_rect.height + 48 + 'px',
+      height: _target_rect.height + _height_modifier + 'px',
       width: `${value}px`,
       left: _target_offset.left + parseInt(_target_rect.width + '', 10) + 'px',
       top: _target_offset.top + 'px'
@@ -48,14 +53,14 @@ export const position = async (
   if (property === 'marginBottom')
     addStyles(spacingElement, {
       height: `${value}px`,
-      width: _target_rect.width + 96 + 'px',
-      left: _target_offset.left - 96 + 'px',
+      width: _target_rect.width + _width_modifier + 'px',
+      left: _target_offset.left - _width_modifier + 'px',
       top: _target_offset.top + parseInt(_target_rect.height + '', 10) + 'px'
     });
 
   if (property === 'marginLeft')
     addStyles(spacingElement, {
-      height: _target_rect.height + 48 + 'px',
+      height: _target_rect.height + _height_modifier + 'px',
       width: `${value}px`,
       left: _target_offset.left - value + 'px',
       top: _target_offset.top + 'px'
@@ -64,16 +69,16 @@ export const position = async (
   if (property === 'paddingTop')
     addStyles(spacingElement, {
       height: `${value}px`,
-      width: _target_rect.width + 96 + 'px',
-      left: _target_offset.left - 96 + 'px',
+      width: _target_rect.width + _width_modifier + 'px',
+      left: _target_offset.left - _width_modifier + 'px',
       top: _target_offset.top + 'px'
     });
 
   if (property === 'paddingBottom')
     addStyles(spacingElement, {
       height: `${value}px`,
-      width: _target_rect.width + 96 + 'px',
-      left: _target_offset.left - 96 + 'px',
+      width: _target_rect.width + _width_modifier + 'px',
+      left: _target_offset.left - _width_modifier + 'px',
       top:
         _target_offset.top +
         (parseInt(_target_rect.height + '', 10) - value) +
@@ -82,7 +87,7 @@ export const position = async (
 
   if (property === 'paddingRight')
     addStyles(spacingElement, {
-      height: _target_rect.height + 48 + 'px',
+      height: _target_rect.height + _height_modifier + 'px',
       width: `${value}px`,
       left:
         _target_offset.left +
@@ -93,7 +98,7 @@ export const position = async (
 
   if (property === 'paddingLeft')
     addStyles(spacingElement, {
-      height: _target_rect.height + 48 + 'px',
+      height: _target_rect.height + _height_modifier + 'px',
       width: `${value}px`,
       left: _target_offset.left + 'px',
       top: _target_offset.top + 'px'

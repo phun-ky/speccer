@@ -87,9 +87,12 @@ export const create = (
  * ![measure](https://github.com/phun-ky/speccer/blob/main/public/speccer-measure-right-full-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to match styles with.
+ * @param {SpeccerOptionsInterface|undefined} [options] - Options.
  * @returns {Promise<void>} - A promise that resolves after creating and styling the measurement element.
  *
  * @example
+ * ##### Height to the right
+ *
  * ```ts
  * const targetElement = document.getElementById('target');
  * const options = {
@@ -119,7 +122,10 @@ export const create = (
  * measure(targetElement,options);
  * ```
  */
-export const element = async (targetElement: HTMLElement): Promise<void> => {
+export const measure = async (
+  targetElement: HTMLElement,
+  options?: SpeccerOptionsInterface | undefined
+): Promise<void> => {
   if (!targetElement) return;
 
   if (isElementHidden(targetElement)) return;
@@ -129,7 +135,11 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
   await waitForFrame();
 
-  const _options = getOptions(_areas_string, getComputedStyle(targetElement));
+  const _options = getOptions(
+    _areas_string,
+    getComputedStyle(targetElement),
+    options
+  );
 
   if (_options.type !== 'measure' || !_options.measure) return;
 

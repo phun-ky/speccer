@@ -84,20 +84,44 @@ export const create = (
 /**
  * Create a specced typography element for a given target element.
  *
- * ![typography](https://github.com/phun-ky/speccer/blob/main/public/typography.png?raw=true)
+ * ![typography](https://github.com/phun-ky/speccer/blob/main/public/speccer-typography-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to specc typography for.
+ * @param {SpeccerOptionsInterface|undefined} [options] - Custom options
  * @returns {Promise<void>} - A promise that resolves once typography element is created and positioned.
  *
  * @example
+ *
+ * ##### Default
+ *
  * ```ts
  * const targetElement = document.querySelector('.target');
  * if (targetElement) {
  *   element(targetElement);
  * }
  * ```
+ *
+ * ##### With syntax higlight feature
+ *
+ * ![typography](https://github.com/phun-ky/speccer/blob/main/public/speccer-typography-syntax-light.png?raw=true)
+ *
+ * ```ts
+ * const targetElement = document.querySelector('.target');
+ * const options = {
+ *   typography : {
+ *     useSyntaxHighlighting: true
+ *   }
+ * };
+ *
+ * if (targetElement) {
+ *   element(targetElement, options);
+ * }
+ * ```
  */
-export const element = async (targetElement: HTMLElement): Promise<void> => {
+export const typography = async (
+  targetElement: HTMLElement,
+  options?: SpeccerOptionsInterface | undefined
+): Promise<void> => {
   if (!targetElement) return;
 
   if (isElementHidden(targetElement)) return;
@@ -107,7 +131,11 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
   await waitForFrame();
 
-  const _options = getOptions(_areas_string, getComputedStyle(targetElement));
+  const _options = getOptions(
+    _areas_string,
+    getComputedStyle(targetElement),
+    options
+  );
 
   if (_options.type !== 'typography' || !_options.typography) return;
 

@@ -148,10 +148,10 @@ export const shortcut = async (
  *
  * @example
  * ```ts
- * init();
+ * a11y();
  * ```
  */
-export const init = () => {
+export const a11y = () => {
   const _tab_order_elements = document.querySelectorAll(
     '[data-speccer*="a11y tabstops"]'
   );

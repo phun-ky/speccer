@@ -23,6 +23,7 @@ export { createPinElement } from './utils/create-pin-element';
 // eslint-disable-next-line import/no-unused-modules
 export { pinElement } from './utils/pin-element';
 
+import { SpeccerOptionsInterface } from '../../types/speccer';
 import { SPECCER_LITERALS } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { isElementHidden } from '../../utils/node';
@@ -36,6 +37,7 @@ import { pinElement } from './utils/pin-element';
  * Create pinned elements based on the section element and its data-speccer attributes.
  *
  * @param {HTMLElement} sectionElement - The section element containing pinned elements.
+ * @param {SpeccerOptionsInterface|undefined} [options] - Options.
  * @returns {Promise<void>} - A promise that resolves after creating pinned elements.
  *
  * @example
@@ -45,7 +47,8 @@ import { pinElement } from './utils/pin-element';
  * ```
  */
 export const pinElements = async (
-  sectionElement: HTMLElement
+  sectionElement: HTMLElement,
+  options?: SpeccerOptionsInterface | undefined
 ): Promise<void> => {
   if (!sectionElement) return;
 
@@ -75,7 +78,7 @@ export const pinElements = async (
         await waitForFrame();
 
         const _target_style = getComputedStyle(targetElement);
-        const _options = getOptions(_areas_string, _target_style);
+        const _options = getOptions(_areas_string, _target_style, options);
         const _content = getContentForPin(_symbol, targetElement, _options);
 
         await pinElement(targetElement, sectionElement, _content, _options);

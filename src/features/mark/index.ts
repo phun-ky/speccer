@@ -73,10 +73,10 @@ export const create = (id: string, n = 'span'): HTMLElement => {
  * @example
  * ```typescript
  * const targetElement = document.getElementById('target');
- * element(targetElement);
+ * mark(targetElement);
  * ```
  */
-export const element = async (targetElement: HTMLElement): Promise<void> => {
+export const mark = async (targetElement: HTMLElement): Promise<void> => {
   if (!targetElement) return;
 
   if (isElementHidden(targetElement)) return;

@@ -88,6 +88,7 @@ const getSpacingToggleValue = (areaString: string) => {
  *
  * @param {HTMLElement} targetElement - The HTML element for which options are being generated.
  * @param {string} areaString - The string representing different area types.
+ * @param {SpeccerOptionsInterface|undefined} [customOptions] - Custom options
  * @returns {SpeccerOptionsInterface} The generated Speccer options.
  *
  * @example
@@ -99,7 +100,8 @@ const getSpacingToggleValue = (areaString: string) => {
  */
 export const getOptions = (
   areaString: string,
-  targetStyle: CSSStyleDeclaration
+  targetStyle: CSSStyleDeclaration,
+  customOptions?: SpeccerOptionsInterface | undefined
 ): SpeccerOptionsInterface => {
   const type = getFeatureBasedOnArea(areaString, targetStyle);
   const options: SpeccerOptionsInterface = {
@@ -135,16 +137,26 @@ export const getOptions = (
   }
 
   if (type === 'grid') {
-    let toggle = 'both';
-
-    if (areaString?.includes('columns')) toggle = 'columns';
-
-    if (areaString?.includes('rows')) toggle = 'rows';
+    const _toggle_value = getGridToggleValue(areaString);
 
     options['grid'] = {
-      toggle
+      toggle: _toggle_value,
+      both: _toggle_value === 'both',
+      rows: _toggle_value === 'rows',
+      columns: _toggle_value === 'columns'
     };
   }
 
-  return options;
+  if (type === 'spacing') {
+    const _toggle_value = getSpacingToggleValue(areaString);
+
+    options['spacing'] = {
+      both: _toggle_value === 'both',
+      margin: _toggle_value === 'margin',
+      padding: _toggle_value === 'padding',
+      bound: areaString.includes('bound')
+    };
+  }
+
+  return { ...options, ...customOptions };
 };

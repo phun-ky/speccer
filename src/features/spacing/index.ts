@@ -22,13 +22,14 @@
  * @packageDocumentation
  */
 /* eslint no-console:0 */
-import { isValidSpacingElement } from '../../utils/area';
-import { set as setClassNames } from '../../utils/classnames';
+import { SpeccerOptionsInterface } from '../../types/speccer';
+import { cx, set as setClassNames } from '../../utils/classnames';
 import {
   getSpacing,
   getClassNameFromCSSProperty,
   getNumberValue
 } from '../../utils/css';
+import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
 import { isElementHidden } from '../../utils/node';
 import { get as getStyles } from '../../utils/styles';
@@ -68,9 +69,13 @@ export const create = (
  * ![spacing](https://github.com/phun-ky/speccer/blob/main/public/speccer-spacing-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to create spacing elements for.
+ * @param {SpeccerOptionsInterface|undefined} [options] - Options
  * @returns {Promise<void>} - A promise that resolves after creating and positioning the spacing elements.
  *
  * @example
+ *
+ * ##### Default, padding and margin
+ *
  * ```ts
  * const targetElement = document.getElementById('target');
  * element(targetElement);
