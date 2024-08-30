@@ -18,7 +18,6 @@
 export const removeSpeccerElement = (el: HTMLElement): void => {
   const _selector = el.getAttribute('data-speccer-element-id');
 
-
   if (!_selector) return;
 
   const _pin_element =
@@ -28,15 +27,17 @@ export const removeSpeccerElement = (el: HTMLElement): void => {
   if (!_pin_element) return;
 
   if (Object.prototype.isPrototypeOf.call(NodeList.prototype, _pin_element)) {
-    [...(_pin_element as unknown as HTMLElement[])].forEach((el:HTMLElement) => {
-      el.remove();
-      el.classList.remove('is-specced');
-    });
+    [...(_pin_element as unknown as HTMLElement[])].forEach(
+      (el: HTMLElement) => {
+        el.remove();
+        el.classList.remove('is-specced');
+      }
+    );
   } else {
     // We also need to remove the svg paths if it is in use
     if (
       (_pin_element as HTMLElement).classList.contains('curly') ||
-    (_pin_element as HTMLElement).classList.contains('svg')
+      (_pin_element as HTMLElement).classList.contains('svg')
     ) {
       const _el_ID = el.getAttribute('id');
 
