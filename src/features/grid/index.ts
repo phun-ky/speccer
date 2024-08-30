@@ -1,3 +1,35 @@
+/**
+ * This feature will highlight the grid spacing in a `display: grid;` element.
+ *
+ * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-light.png?raw=true)
+ *
+ * @example
+ *
+ * Use the following code, either for html or js:
+ *
+ * ```html
+ * <div
+ *   data-speccer="grid [columns|rows]"
+ *   class="…"
+ * >
+ *   …
+ * </div>
+ * ```
+ *
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * const options = {
+ *   type: 'grid',
+ *   grid: {
+ *     toggle: 'both'
+ *   }
+ * };
+ *
+ * grid(targetElement, options);
+ * ```
+ *
+ * @packageDocumentation
+ */
 /* eslint no-console:0 */
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
@@ -130,7 +162,7 @@ export const create = async (
  *
  * Adds a visual grid overlay to the target element if it has the appropriate data attribute and is a grid.
  *
- * ![grid](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-dark.png?raw=true)
+ * ![grid](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to add the grid overlay to.
  * @returns {Promise<void>} A promise that resolves once the overlay has been added.
@@ -138,11 +170,24 @@ export const create = async (
  * @example
  * ```ts
  * const targetElement = document.getElementById('target');
- * if (targetElement) {
- *   element(targetElement).then(() => {
- *     console.log('Grid overlay added');
- *   });
- * }
+ *
+ * grid(targetElement);
+ * ```
+ *
+ * ##### Only rows
+ *
+ * ![grid](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-dark.png?raw=true)
+ *
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * const options = {
+ *   type: 'grid',
+ *   grid: {
+ *     toggle: 'rows'
+ *   }
+ * };
+ *
+ * grid(targetElement, options);
  * ```
  */
 export const element = async (targetElement: HTMLElement): Promise<void> => {

@@ -1,3 +1,36 @@
+/**
+ * This feature presents typography
+ *
+ * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-typography-light.png?raw=true)
+ *
+ * @example
+ *
+ * Use the following code, either for html or js:
+ *
+ * ```html
+ * <div
+ *   data-speccer="typography [top|right|bottom|left] [syntax]"
+ *   class="..."
+ * >
+ *   …
+ * </div>
+ * ```
+ *
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * const options = {
+ *   position: 'right',
+ *   type: 'typography',
+ *   typography: {
+ *     useSyntaxHighlighting: false
+ *   }
+ * };
+ *
+ * typography(targetElement, options);
+ * ```
+ *
+ * @packageDocumentation
+ */
 /* eslint-disable import/no-unused-modules */
 /* eslint no-console:0 */
 import { SpeccerOptionsInterface } from '../../types/speccer';

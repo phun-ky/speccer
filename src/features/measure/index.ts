@@ -1,3 +1,35 @@
+/**
+ * This feature measures given element
+ *
+ * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-pin-measure-height-light.png?raw=true)
+ *
+ * @example
+ *
+ * Use the following code, either for html or js:
+ *
+ * ```html
+ * <div
+ *   data-speccer="measure [height left|right] | [width top|bottom]"
+ *   class="..."
+ * >
+ *   …
+ * </div>
+ * ```
+ *
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * const options = {
+ *   position: 'right',
+ *   measure: {
+ *     height: true
+ *   }
+ * };
+ *
+ * measure(targetElement, options);
+ * ```
+ *
+ * @packageDocumentation
+ */
 /* eslint no-console:0 */
 import { MeasureAreaEnum } from '../../types/enums/area';
 import { SpeccerOptionsInterface } from '../../types/speccer';
@@ -52,7 +84,7 @@ export const create = (
 /**
  * Create a measurement element and add it to the body with styles matching a specified target element based on the attribute values from `data-speccer`.
  *
- * ![measure](https://github.com/phun-ky/speccer/blob/main/public/measure.png?raw=true)
+ * ![measure](https://github.com/phun-ky/speccer/blob/main/public/speccer-measure-right-full-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to match styles with.
  * @returns {Promise<void>} - A promise that resolves after creating and styling the measurement element.
@@ -60,7 +92,31 @@ export const create = (
  * @example
  * ```ts
  * const targetElement = document.getElementById('target');
- * element(targetElement);
+ * const options = {
+ *   position: 'right',
+ *   measure: {
+ *     height: true
+ *   }
+ * };
+ *
+ * measure(targetElement,options);
+ * ```
+ *
+ * ##### Slim width to the bottom
+ *
+ * ![measure](https://github.com/phun-ky/speccer/blob/main/public/speccer-measure-bottom-dark.png?raw=true)
+ *
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * const options = {
+ *   position: 'bottom',
+ *   measure: {
+ *     slim: true,
+ *     width: true
+ *   }
+ * };
+ *
+ * measure(targetElement,options);
  * ```
  */
 export const element = async (targetElement: HTMLElement): Promise<void> => {

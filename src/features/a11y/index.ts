@@ -1,3 +1,28 @@
+/**
+ * This feature will highlight accessibility areas like landmarks and region. It can also display tab stops/sequence and any keyboard shortcuts assigned
+ *
+ * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-a11y-tabstops-light.png?raw=true)
+ *
+ * @example
+ *
+ * Use the following code, either for html or js:
+ *
+ * ```html
+ * <div
+ *   data-speccer="a11y [shortcuts|tabstops|landmark]"
+ *   class="…"
+ * >
+ *   …
+ * </div>
+ * ```
+ *
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * a11y(targetElement);
+ * ```
+ *
+ * @packageDocumentation
+ */
 /* eslint-disable import/no-unused-modules */
 import { isElementHidden } from '../../utils/node';
 import { add } from '../../utils/styles';
@@ -15,7 +40,7 @@ import { styles } from './utils/styles';
  * Adds an accessibility element to the document body based on the target element and type.
  *
  * ![Screenshot of speccer a11y tab stops in use](https://github.com/phun-ky/speccer/blob/main/public/speccer-a11y-tabstops-light.png?raw=true)
- * ![Screenshot of speccer a11y landmark in use](https://github.com/phun-ky/speccer/blob/main/public/a11y-landmark.png?raw=true)
+ * ![Screenshot of speccer a11y landmark in use](https://github.com/phun-ky/speccer/blob/main/public/speccer-a11y-landmarks-light.png?raw=true)
  *
  * @param {HTMLElement} targetEl - Target HTML element.
  * @param {unknown} [content] - Content to be added to the accessibility element.
@@ -60,7 +85,7 @@ export const element = async (
 /**
  * Adds a shortcut element to the document body based on the provided HTML element and shortcut string.
  *
- * ![Screenshot of speccer a11y shortcuts in use](https://github.com/phun-ky/speccer/blob/main/public/a11y-shortcut.png?raw=true)
+ * ![Screenshot of speccer a11y shortcuts in use](https://github.com/phun-ky/speccer/blob/main/public/speccer-a11y-shortcuts-light.png?raw=true)
  *
  * @param {HTMLElement} el - Target HTML element.
  * @param {string} shortcutString - Shortcut string to be displayed.

@@ -1,3 +1,26 @@
+/**
+ * This feature highlights the spacing of an element.
+ *
+ * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-spacing-dark.png?raw=true)
+ * *
+ * @example
+ *
+ * Use the following code, either for html or js:
+ *
+ * ```html
+ * <div
+ *   data-speccer="spacing [padding|margin][bound]"
+ *   class="…"
+ * >
+ * …
+ * </div>
+ * ```
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * element(targetElement);
+ * ```
+ * @packageDocumentation
+ */
 /* eslint no-console:0 */
 import { isValidSpacingElement } from '../../utils/area';
 import { set as setClassNames } from '../../utils/classnames';
@@ -42,7 +65,7 @@ export const create = (
 /**
  * Create and position spacing elements based on the target element's computed spacing styles.
  *
- * ![spacing](https://github.com/phun-ky/speccer/blob/main/public/spacing.png?raw=true)
+ * ![spacing](https://github.com/phun-ky/speccer/blob/main/public/speccer-spacing-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to create spacing elements for.
  * @returns {Promise<void>} - A promise that resolves after creating and positioning the spacing elements.
@@ -51,6 +74,35 @@ export const create = (
  * ```ts
  * const targetElement = document.getElementById('target');
  * element(targetElement);
+ * ```
+ *
+ * ##### Only padding
+ *
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * const options = {
+ *   spacing: {
+ *     padding: true
+ *   }
+ * };
+ *
+ * element(targetElement, options);
+ *
+ * ##### Bound style, like the old feature
+ *
+ * ![spacing](https://github.com/phun-ky/speccer/blob/main/public/speccer-spacing-bound.png?raw=true)
+ *
+ * This option binds the speccer elements to the bounds of the element container.
+ *
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * const options = {
+ *   spacing: {
+ *     bound: true,
+ *   }
+ * };
+ *
+ * element(targetElement, options);
  * ```
  */
 export const element = async (targetElement: HTMLElement): Promise<void> => {
