@@ -1,7 +1,40 @@
+/**
+ * This feature will highlight the grid spacing in a `display: grid;` element.
+ *
+ * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-light.png?raw=true)
+ *
+ * @example
+ *
+ * Use the following code, either for html or js:
+ *
+ * ```html
+ * <div
+ *   data-speccer="grid [columns|rows]"
+ *   class="…"
+ * >
+ *   …
+ * </div>
+ * ```
+ *
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * const options = {
+ *   type: 'grid',
+ *   grid: {
+ *     toggle: 'both'
+ *   }
+ * };
+ *
+ * grid(targetElement, options);
+ * ```
+ *
+ * @packageDocumentation
+ */
 /* eslint no-console:0 */
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
+import { uniqueID } from '../../utils/id';
 import { isElementHidden } from '../../utils/node';
 import { offset } from '../../utils/position';
 import { get as getStyles } from '../../utils/styles';
@@ -12,7 +45,7 @@ import { waitForFrame } from '../../utils/wait';
  *
  * @param {HTMLElement} targetElement - The target element to create the grid overlay for.
  * @param {CSSStyleDeclaration} styles - The computed styles of the target element.
- * @param {Record<string,string>} options - Options to determine what to draw
+ * @param {SpeccerOptionsInterface} options - Options to determine what to draw
  * @returns {Promise<void>}
  *
  * @example
@@ -39,6 +72,9 @@ export const create = async (
   const { height, width } = targetElement.getBoundingClientRect();
   const { top, left } = await offset(targetElement);
   const { gridTemplateColumns, gridTemplateRows, padding } = styles;
+  const _pin_element_id = `speccer-${options.slug}-${targetElement.getAttribute('id') || uniqueID()}`;
+
+  targetElement.setAttribute('data-speccer-element-id', _pin_element_id);
 
   if (toggle === 'columns' || toggle === 'both') {
     const columnGap = parseInt(styles.columnGap);
@@ -55,6 +91,7 @@ export const create = async (
 
     if (columnGap < 24) gridColumnContainer.classList.add('speccer-small-grid');
 
+    gridColumnContainer.setAttribute('data-speccer-id', _pin_element_id);
     gridColumnContainer.classList.add('ph-speccer');
     gridColumnContainer.classList.add('speccer');
     gridColumnContainer.classList.add('speccer-grid-container');
@@ -94,6 +131,7 @@ export const create = async (
 
     if (rowGap < 24) gridRowContainer.classList.add('speccer-small-grid');
 
+    gridRowContainer.setAttribute('data-speccer-id', _pin_element_id);
     gridRowContainer.classList.add('ph-speccer');
     gridRowContainer.classList.add('speccer');
     gridRowContainer.classList.add('speccer-grid-row-container');
@@ -124,32 +162,49 @@ export const create = async (
  *
  * Adds a visual grid overlay to the target element if it has the appropriate data attribute and is a grid.
  *
- * ![grid](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-dark.png?raw=true)
+ * ![grid](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to add the grid overlay to.
+ * @param {SpeccerOptionsInterface|undefined} [options] - Options.
  * @returns {Promise<void>} A promise that resolves once the overlay has been added.
  *
  * @example
  * ```ts
  * const targetElement = document.getElementById('target');
- * if (targetElement) {
- *   element(targetElement).then(() => {
- *     console.log('Grid overlay added');
- *   });
- * }
+ *
+ * grid(targetElement);
+ * ```
+ *
+ * ##### Only rows
+ *
+ * ![grid](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-dark.png?raw=true)
+ *
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * const options = {
+ *   type: 'grid',
+ *   grid: {
+ *     toggle: 'rows'
+ *   }
+ * };
+ *
+ * grid(targetElement, options);
  * ```
  */
-export const element = async (targetElement: HTMLElement): Promise<void> => {
+export const grid = async (
+  targetElement: HTMLElement,
+  options?: SpeccerOptionsInterface | undefined
+): Promise<void> => {
   if (!targetElement) return;
+
+  if (isElementHidden(targetElement)) return;
 
   const _areas_string: string =
     targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || '';
   const _target_style = await getStyles(targetElement);
-  const _options = getOptions(_areas_string, _target_style);
+  const _options = getOptions(_areas_string, _target_style, options);
 
   if (_options.type !== 'grid' || !_options.grid) return;
-
-  if (isElementHidden(targetElement)) return;
 
   await waitForFrame();
 

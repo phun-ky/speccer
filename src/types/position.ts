@@ -9,6 +9,16 @@ export type PositionPropertiesType = {
 };
 
 /**
+ * Type definition for position properties with units.
+ */
+export type PositionUnitPropertiesType = {
+  top: string;
+  left: string;
+  height: string;
+  width: string;
+};
+
+/**
  * Type definition for input parameters related to positioning.
  */
 export type PositionInputType =

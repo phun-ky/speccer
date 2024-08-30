@@ -1,8 +1,41 @@
+/**
+ * This feature measures given element
+ *
+ * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-pin-measure-height-light.png?raw=true)
+ *
+ * @example
+ *
+ * Use the following code, either for html or js:
+ *
+ * ```html
+ * <div
+ *   data-speccer="measure [height left|right] | [width top|bottom]"
+ *   class="..."
+ * >
+ *   …
+ * </div>
+ * ```
+ *
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * const options = {
+ *   position: 'right',
+ *   measure: {
+ *     height: true
+ *   }
+ * };
+ *
+ * measure(targetElement, options);
+ * ```
+ *
+ * @packageDocumentation
+ */
 /* eslint no-console:0 */
 import { MeasureAreaEnum } from '../../types/enums/area';
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { cx, set as setClassNames } from '../../utils/classnames';
 import { getOptions } from '../../utils/get-options';
+import { uniqueID } from '../../utils/id';
 import { isElementHidden } from '../../utils/node';
 import { getRec } from '../../utils/position';
 import { add as addStyles } from '../../utils/styles';
@@ -13,6 +46,7 @@ import { waitForFrame } from '../../utils/wait';
  *
  * @param {string | number} text - The text to display on the element.
  * @param {SpeccerOptionsInterface} options - The options.
+ * @param {string} id - The element id.
  * @param {string} tag - The element type.
  * @returns {HTMLElement} - The created measurement element.
  *
@@ -25,11 +59,13 @@ import { waitForFrame } from '../../utils/wait';
 export const create = (
   text: string | number = '',
   options: SpeccerOptionsInterface,
+  id: string,
   tag = 'span'
 ): HTMLElement => {
   const _el = document.createElement(tag);
 
   _el.setAttribute('title', `${text}px`);
+  _el.setAttribute('id', id);
   _el.setAttribute('data-measure', `${parseInt(String(text), 10)}px`);
 
   const { measure, position } = options;
@@ -48,41 +84,79 @@ export const create = (
 /**
  * Create a measurement element and add it to the body with styles matching a specified target element based on the attribute values from `data-speccer`.
  *
- * ![measure](https://github.com/phun-ky/speccer/blob/main/public/measure.png?raw=true)
+ * ![measure](https://github.com/phun-ky/speccer/blob/main/public/speccer-measure-right-full-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to match styles with.
+ * @param {SpeccerOptionsInterface|undefined} [options] - Options.
  * @returns {Promise<void>} - A promise that resolves after creating and styling the measurement element.
  *
  * @example
+ * ##### Height to the right
+ *
  * ```ts
  * const targetElement = document.getElementById('target');
- * element(targetElement);
+ * const options = {
+ *   position: 'right',
+ *   measure: {
+ *     height: true
+ *   }
+ * };
+ *
+ * measure(targetElement,options);
+ * ```
+ *
+ * ##### Slim width to the bottom
+ *
+ * ![measure](https://github.com/phun-ky/speccer/blob/main/public/speccer-measure-bottom-dark.png?raw=true)
+ *
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * const options = {
+ *   position: 'bottom',
+ *   measure: {
+ *     slim: true,
+ *     width: true
+ *   }
+ * };
+ *
+ * measure(targetElement,options);
  * ```
  */
-export const element = async (targetElement: HTMLElement): Promise<void> => {
+export const measure = async (
+  targetElement: HTMLElement,
+  options?: SpeccerOptionsInterface | undefined
+): Promise<void> => {
   if (!targetElement) return;
+
+  if (isElementHidden(targetElement)) return;
 
   const _areas_string: string =
     targetElement.getAttribute('data-speccer') || '';
 
   await waitForFrame();
 
-  const _options = getOptions(_areas_string, getComputedStyle(targetElement));
+  const _options = getOptions(
+    _areas_string,
+    getComputedStyle(targetElement),
+    options
+  );
 
   if (_options.type !== 'measure' || !_options.measure) return;
 
-  if (isElementHidden(targetElement)) return;
+  const { measure, position } = _options;
 
   await waitForFrame();
 
-  const { measure, position } = _options;
   const _target_rect = targetElement.getBoundingClientRect();
   const _width_modifier = !measure.slim ? 48 : 0;
   const _height_modifier = !measure.slim ? 96 : 0;
+  const _pin_element_id = `speccer-${_options.slug}-${targetElement.getAttribute('id') || uniqueID()}`;
+
+  targetElement.setAttribute('data-speccer-element-id', _pin_element_id);
 
   if (measure.width) {
     if (position === MeasureAreaEnum.Bottom) {
-      const _measure_el = create(_target_rect.width, _options);
+      const _measure_el = create(_target_rect.width, _options, _pin_element_id);
 
       document.body.appendChild(_measure_el);
 
@@ -111,7 +185,7 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
         });
       }
     } else {
-      const _measure_el = create(_target_rect.width, _options);
+      const _measure_el = create(_target_rect.width, _options, _pin_element_id);
 
       document.body.appendChild(_measure_el);
 
@@ -142,7 +216,11 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
     }
   } else if (measure.height) {
     if (position === MeasureAreaEnum.Right) {
-      const _measure_el = create(_target_rect.height, _options);
+      const _measure_el = create(
+        _target_rect.height,
+        _options,
+        _pin_element_id
+      );
 
       document.body.appendChild(_measure_el);
 
@@ -171,7 +249,11 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
         });
       }
     } else {
-      const _measure_el = create(_target_rect.height, _options);
+      const _measure_el = create(
+        _target_rect.height,
+        _options,
+        _pin_element_id
+      );
 
       document.body.appendChild(_measure_el);
 

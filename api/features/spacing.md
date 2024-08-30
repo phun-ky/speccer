@@ -6,7 +6,31 @@
 
 # features/spacing
 
-> Last updated 2024-08-28T10:13:18.041Z
+> Last updated 2024-08-30T19:21:42.307Z
+
+This feature highlights the spacing of an element.
+
+![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-spacing-dark.png?raw=true) \*
+
+## Table of Contents
+
+- [Example](#example)
+- [Functions](#functions)
+  - [create()](#create)
+  - [spacing()](#spacing)
+
+## Example
+
+Use the following code, either for html or js:
+
+```html
+<div data-speccer="spacing [padding|margin][bound]" class="…">…</div>
+```
+
+```ts
+const targetElement = document.getElementById('target');
+element(targetElement);
+```
 
 ## Functions
 
@@ -40,25 +64,26 @@ document.body.appendChild(spacingElement);
 
 #### Defined in
 
-[features/spacing/index.ts:27](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L27)
+[features/spacing/index.ts:52](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L52)
 
 ---
 
-### element()
+### spacing()
 
 ```ts
-function element(targetElement): Promise<void>;
+function spacing(targetElement, options?): Promise<void>;
 ```
 
 Create and position spacing elements based on the target element's computed spacing styles.
 
-![spacing](https://github.com/phun-ky/speccer/blob/main/public/spacing.png?raw=true)
+![spacing](https://github.com/phun-ky/speccer/blob/main/public/speccer-spacing-light.png?raw=true)
 
 #### Parameters
 
-| Parameter       | Type                                                                    | Description                                        |
-| --------------- | ----------------------------------------------------------------------- | -------------------------------------------------- |
-| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target element to create spacing elements for. |
+| Parameter       | Type                                                                     | Description                                        |
+| --------------- | ------------------------------------------------------------------------ | -------------------------------------------------- |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)  | The target element to create spacing elements for. |
+| `options`?      | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Options                                            |
 
 #### Returns
 
@@ -68,14 +93,45 @@ Create and position spacing elements based on the target element's computed spac
 
 #### Example
 
+##### Default, padding and margin
+
 ```ts
 const targetElement = document.getElementById('target');
 element(targetElement);
 ```
 
+##### Only padding
+
+````ts
+const targetElement = document.getElementById('target');
+const options = {
+  spacing: {
+    padding: true
+  }
+};
+
+element(targetElement, options);
+
+##### Bound style, like the old feature
+
+![spacing](https://github.com/phun-ky/speccer/blob/main/public/speccer-spacing-bound.png?raw=true)
+
+This option binds the speccer elements to the bounds of the element container.
+
+```ts
+const targetElement = document.getElementById('target');
+const options = {
+  spacing: {
+    bound: true,
+  }
+};
+
+element(targetElement, options);
+````
+
 #### Defined in
 
-[features/spacing/index.ts:55](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L55)
+[features/spacing/index.ts:113](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L113)
 
 ---
 

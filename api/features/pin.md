@@ -6,7 +6,7 @@
 
 # features/pin
 
-> Last updated 2024-08-28T10:13:18.037Z
+> Last updated 2024-08-30T19:21:42.305Z
 
 This feature highlights the anatomy of an element.
 
@@ -49,16 +49,17 @@ Re-exports [pinElement](pin/utils/pin-element.md#pinelement)
 ### pinElements()
 
 ```ts
-function pinElements(sectionElement): Promise<void>;
+function pinElements(sectionElement, options?): Promise<void>;
 ```
 
 Create pinned elements based on the section element and its data-speccer attributes.
 
 #### Parameters
 
-| Parameter        | Type                                                                    | Description                                     |
-| ---------------- | ----------------------------------------------------------------------- | ----------------------------------------------- |
-| `sectionElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The section element containing pinned elements. |
+| Parameter        | Type                                                                     | Description                                     |
+| ---------------- | ------------------------------------------------------------------------ | ----------------------------------------------- |
+| `sectionElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)  | The section element containing pinned elements. |
+| `options`?       | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Options.                                        |
 
 #### Returns
 
@@ -75,7 +76,7 @@ pinElements(sectionElement);
 
 #### Defined in
 
-[features/pin/index.ts:47](https://github.com/phun-ky/speccer/blob/main/src/features/pin/index.ts#L47)
+[features/pin/index.ts:49](https://github.com/phun-ky/speccer/blob/main/src/features/pin/index.ts#L49)
 
 ---
 

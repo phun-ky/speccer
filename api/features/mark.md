@@ -6,14 +6,42 @@
 
 # features/mark
 
-> Last updated 2024-08-28T10:13:18.036Z
+> Last updated 2024-08-30T19:21:42.304Z
+
+This feature marks given element
+
+![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-pin-mark-light.png?raw=true)
+
+## Table of Contents
+
+- [Example](#example)
+- [Functions](#functions)
+  - [create()](#create)
+  - [mark()](#mark)
+
+## Example
+
+Use the following code, either for html or js:
+
+```html
+<div data-speccer="mark" class="...">…</div>
+```
+
+```ts
+const targetElement = document.getElementById('target');
+const options = {
+  type: 'mark'
+};
+
+mark(targetElement, options);
+```
 
 ## Functions
 
 ### create()
 
 ```ts
-function create(n): HTMLElement;
+function create(id, n): HTMLElement;
 ```
 
 Create a marker element with an optional element type.
@@ -22,6 +50,7 @@ Create a marker element with an optional element type.
 
 | Parameter | Type     | Default value | Description       |
 | --------- | -------- | ------------- | ----------------- |
+| `id`      | `string` | `undefined`   | The id.           |
 | `n`       | `string` | `'span'`      | The element type. |
 
 #### Returns
@@ -39,19 +68,19 @@ document.body.appendChild(marker);
 
 #### Defined in
 
-[features/mark/index.ts:22](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L22)
+[features/mark/index.ts:53](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L53)
 
 ---
 
-### element()
+### mark()
 
 ```ts
-function element(targetElement): Promise<void>;
+function mark(targetElement): Promise<void>;
 ```
 
 Create a marker element and add it to the body with styles matching a specified element.
 
-![mark](https://github.com/phun-ky/speccer/blob/main/public/mark.png?raw=true)
+![mark](https://github.com/phun-ky/speccer/blob/main/public/speccer-pin-mark-light.png?raw=true)
 
 #### Parameters
 
@@ -69,12 +98,12 @@ Create a marker element and add it to the body with styles matching a specified 
 
 ```typescript
 const targetElement = document.getElementById('target');
-element(targetElement);
+mark(targetElement);
 ```
 
 #### Defined in
 
-[features/mark/index.ts:45](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L45)
+[features/mark/index.ts:79](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L79)
 
 ---
 

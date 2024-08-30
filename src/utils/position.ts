@@ -78,6 +78,7 @@ export const offset = async (
     await waitForFrame();
     _target_rect = targetEl.getBoundingClientRect();
     _el_offset_top = _target_rect.top;
+    await waitForFrame();
     targetEl.style.position = originalPosition;
   }
   // If any of the parents are sticky, we need to account for that
@@ -90,6 +91,7 @@ export const offset = async (
     await waitForFrame();
     _target_rect = targetEl.getBoundingClientRect();
     _el_offset_top = _target_rect.top;
+    await waitForFrame();
     stickyParentElement.style.position = originalPosition;
   }
 
@@ -121,6 +123,9 @@ export const offsetWithCenter = async (
   await waitForFrame();
 
   const _source_rect = sourceEl.getBoundingClientRect();
+
+  await waitForFrame();
+
   const _target_rect = targetEl.getBoundingClientRect();
   const _el_offset_top = _target_rect.top + window.scrollY;
   const _el_offset_left = _target_rect.left + window.scrollX;

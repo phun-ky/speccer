@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 
-import {getOptions } from '../get-options';
+import { getOptions } from '../get-options';
 
 describe('getOptions', () => {
   const mockTargetStyle = {} as CSSStyleDeclaration;
@@ -10,7 +10,7 @@ describe('getOptions', () => {
     const areaString = 'pin';
     const options = getOptions(areaString, mockTargetStyle);
 
-    assert.deepEqual(options,{
+    assert.deepEqual(options, {
       slug: 'pin', // Assuming camelCase('pin') returns 'pin'
       position: 'top',
       type: 'pin',
@@ -30,7 +30,7 @@ describe('getOptions', () => {
     const areaString = 'measure';
     const options = getOptions(areaString, mockTargetStyle);
 
-    assert.deepEqual(options,{
+    assert.deepEqual(options, {
       slug: 'measure', // Assuming camelCase('measure') returns 'measure'
       position: 'top',
       type: 'measure',
@@ -46,7 +46,7 @@ describe('getOptions', () => {
     const areaString = 'typography';
     const options = getOptions(areaString, mockTargetStyle);
 
-    assert.deepEqual(options,{
+    assert.deepEqual(options, {
       slug: 'typography', // Assuming camelCase('typography') returns 'typography'
       position: 'top',
       type: 'typography',
@@ -58,13 +58,19 @@ describe('getOptions', () => {
 
   it('should return options for a grid type with columns', () => {
     const areaString = 'grid columns';
-    const options = getOptions(areaString, {...mockTargetStyle, display: 'grid'});
+    const options = getOptions(areaString, {
+      ...mockTargetStyle,
+      display: 'grid'
+    });
 
-    assert.deepEqual(options,{
+    assert.deepEqual(options, {
       slug: 'gridColumns', // Assuming camelCase('grid columns') returns 'gridColumns'
       position: 'top',
       type: 'grid',
       grid: {
+        both: false,
+        columns: true,
+        rows: false,
         toggle: 'columns'
       }
     });
@@ -72,13 +78,19 @@ describe('getOptions', () => {
 
   it('should return options for a grid type with rows', () => {
     const areaString = 'grid rows';
-    const options = getOptions(areaString, {...mockTargetStyle, display: 'grid'});
+    const options = getOptions(areaString, {
+      ...mockTargetStyle,
+      display: 'grid'
+    });
 
-    assert.deepEqual(options,{
+    assert.deepEqual(options, {
       slug: 'gridRows', // Assuming camelCase('grid rows') returns 'gridRows'
       position: 'top',
       type: 'grid',
       grid: {
+        both: false,
+        columns: false,
+        rows: true,
         toggle: 'rows'
       }
     });
@@ -86,13 +98,19 @@ describe('getOptions', () => {
 
   it('should default to toggle both if no specific grid type is provided', () => {
     const areaString = 'grid';
-    const options = getOptions(areaString, {...mockTargetStyle, display: 'grid'});
+    const options = getOptions(areaString, {
+      ...mockTargetStyle,
+      display: 'grid'
+    });
 
-    assert.deepEqual(options,{
+    assert.deepEqual(options, {
       slug: 'grid', // Assuming camelCase('grid') returns 'grid'
       position: 'top',
       type: 'grid',
       grid: {
+        both: true,
+        columns: false,
+        rows: false,
         toggle: 'both'
       }
     });

@@ -24,6 +24,7 @@
     - [React](#react)
   - [Features](#features)
     - [Element spacing](#element-spacing)
+      - [Bound spacing](#bound-spacing)
     - [Element dimensions](#element-dimensions)
       - [Slim measure](#slim-measure)
     - [Pin element to highlight the anatomy](#pin-element-to-highlight-the-anatomy)
@@ -207,12 +208,22 @@ export default Component;
 Use the following attribute to display element padding and margin:
 
 ```html
-<div data-speccer="spacing" class="..."></div>
+<div data-speccer="spacing [padding|margin] [bound]" class="…"></div>
 ```
 
-This will display the element _and all of it's children_ padding and margin.
+This will display the element _and all of it's children_ padding and margin, unless you specify `padding` and `margin`
 
 ![Image of the spacing feature in dark mode](./public/speccer-spacing-dark.png)
+
+#### Bound spacing
+
+![spacing](./public/speccer-spacing-bound.png)
+
+This option binds the speccer elements to the bounds of the element container.
+
+```html
+<div data-speccer="spacing bound" class="…"></div>
+```
 
 ### Element dimensions
 
@@ -224,7 +235,7 @@ Display dimensions with:
 ```html
 <div
   data-speccer="measure [height left|right] | [width top|bottom]"
-  class="..."
+  class="…"
 ></div>
 ```
 
@@ -239,7 +250,7 @@ Where `height` and `width` comes with placement flags. Default for `height` is `
 Use a slim style:
 
 ```html
-<div data-speccer="measure slim height left" class="..."></div>
+<div data-speccer="measure slim height left" class="…"></div>
 ```
 
 This will give a slimmer look and feel.
@@ -249,7 +260,7 @@ This will give a slimmer look and feel.
 Use a subtle style for the slim option, uses a dashed line instead of a solid line:
 
 ```html
-<div data-speccer="measure slim height left subtle" class="..."></div>
+<div data-speccer="measure slim height left subtle" class="…"></div>
 ```
 
 This will give a dashed border.
@@ -264,7 +275,7 @@ In your component examples, use the following attribute. Remember to use the `da
 <div data-speccer="pin-area">
   <div
     data-speccer="pin [bracket [curly] |enclose] [left|right|top|bottom]"
-    class="..."
+    class="…"
   ></div>
 </div>
 ```
@@ -277,7 +288,7 @@ This will place a pin to the outline of the element. Default is `top`.
 
 ```html
 <div data-speccer="pin-area">
-  <div data-speccer="pin" class="..."></div>
+  <div data-speccer="pin" class="…"></div>
 </div>
 ```
 
@@ -287,7 +298,7 @@ This will place a pin to the outline of the element. Default is `top`.
 
 ```html
 <div data-speccer="pin-area">
-  <div data-speccer="pin enclose" class="..."></div>
+  <div data-speccer="pin enclose" class="…"></div>
 </div>
 ```
 
@@ -297,7 +308,7 @@ This will place a pin to the outline of the element. Default is `top`.
 
 ```html
 <div data-speccer="pin-area">
-  <div data-speccer="pin enclose" class="..."></div>
+  <div data-speccer="pin enclose" class="…"></div>
 </div>
 ```
 
@@ -309,7 +320,7 @@ You can also align the pins to the parent container.
 
 ```html
 <div data-speccer="pin-area">
-  <div data-speccer="pin parent [left|right|top|bottom]" class="..."></div>
+  <div data-speccer="pin parent [left|right|top|bottom]" class="…"></div>
 </div>
 ```
 
@@ -400,7 +411,7 @@ You can also give a more subtle touch to the anatomy elements.
 
 ```html
 <div data-speccer="pin-area">
-  <div data-speccer="pin top subtle" class="..."></div>
+  <div data-speccer="pin top subtle" class="…"></div>
 </div>
 ```
 
@@ -447,7 +458,7 @@ from v9.5 you can utilize the `pin` feature to highlight the anatomy of an eleme
 Display typography details:
 
 ```html
-<p data-speccer="typography [left|right|top|bottom]" class="...">Some text</p>
+<p data-speccer="typography [left|right|top|bottom]" class="…">Some text</p>
 ```
 
 This will place a box to display typography information. Default is `left`.
@@ -460,7 +471,7 @@ This will place a box to display typography information. Default is `left`.
 If you want to produce a box that uses `pre` and `code` tags with support for syntax highlighting ([PrismJS](https://prismjs.com/) compatible), add `syntax` to the `data-speccer="typography"` attribute.
 
 ```html
-<p data-speccer="typography syntax right" class="...">Some text</p>
+<p data-speccer="typography syntax right" class="…">Some text</p>
 ```
 
 You can then override the colors, based on these variables:

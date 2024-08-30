@@ -19,21 +19,21 @@
 /* eslint no-console:0 */
 import './types/interfaces/global';
 import { dom, lazy, manual, activate } from './config/browser';
-import { init as initA11y } from './features/a11y';
-import { create as gridCreate, element as gridElement } from './features/grid';
-import { create as markCreate, element as markElement } from './features/mark';
+import { a11y as initA11y } from './features/a11y';
+import { create as gridCreate, grid as gridElement } from './features/grid';
+import { create as markCreate, mark as markElement } from './features/mark';
 import {
   create as measureCreate,
-  element as measureElement
+  measure as measureElement
 } from './features/measure';
 import { createPinElement, pinElement, pinElements } from './features/pin';
 import {
   create as spacingCreate,
-  element as spacingElement
+  spacing as spacingElement
 } from './features/spacing';
 import {
   create as typographyCreate,
-  element as typographyElement
+  typography as typographyElement
 } from './features/typography';
 import {
   SPECCER_DATA_ATTRIBUTE,
@@ -45,6 +45,9 @@ import {
   SPECCER_FEATURE_TYPOGRAPHY
 } from './utils/constants';
 import { removeAll } from './utils/node';
+
+// eslint-disable-next-line import/no-unused-modules
+export { removeSpeccerElement } from './utils/remove-speccer-element';
 
 export const grid = {
   create: gridCreate,

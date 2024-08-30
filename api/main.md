@@ -6,11 +6,13 @@
 
 # main
 
-> Last updated 2024-08-28T10:13:18.045Z
+> Last updated 2024-08-30T19:21:42.308Z
 
 ## Table of Contents
 
 - [Examples](#examples)
+- [References](#references)
+  - [removeSpeccerElement](#removespeccerelement)
 - [Variables](#variables)
   - [grid](#grid)
   - [mark](#mark)
@@ -36,6 +38,12 @@ speccer();
 <link rel="stylesheet" href="../path/to/speccer.min.css" />
 <script src="../path/to/speccer.js"></script>
 ```
+
+## References
+
+### removeSpeccerElement
+
+Re-exports [removeSpeccerElement](utils/remove-speccer-element.md#removespeccerelement)
 
 ## Variables
 
@@ -75,7 +83,7 @@ gridCreate
 </td>
 <td>
 
-[main.ts:50](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L50)
+[main.ts:53](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L53)
 
 </td>
 </tr>
@@ -87,7 +95,7 @@ gridCreate
 </td>
 <td>
 
-(`targetElement`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+(`targetElement`, `options`?) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 </td>
 <td>
@@ -97,7 +105,7 @@ gridElement
 </td>
 <td>
 
-[main.ts:51](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L51)
+[main.ts:54](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L54)
 
 </td>
 </tr>
@@ -105,7 +113,7 @@ gridElement
 
 #### Defined in
 
-[main.ts:49](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L49)
+[main.ts:52](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L52)
 
 ---
 
@@ -135,7 +143,7 @@ const mark: {
 </td>
 <td>
 
-(`n`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
+(`id`, `n`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
 </td>
 <td>
@@ -145,7 +153,7 @@ markCreate
 </td>
 <td>
 
-[main.ts:71](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L71)
+[main.ts:74](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L74)
 
 </td>
 </tr>
@@ -167,7 +175,7 @@ markElement
 </td>
 <td>
 
-[main.ts:72](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L72)
+[main.ts:75](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L75)
 
 </td>
 </tr>
@@ -175,7 +183,7 @@ markElement
 
 #### Defined in
 
-[main.ts:70](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L70)
+[main.ts:73](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L73)
 
 ---
 
@@ -205,7 +213,7 @@ const measure: {
 </td>
 <td>
 
-(`text`, `options`, `tag`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
+(`text`, `options`, `id`, `tag`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
 </td>
 <td>
@@ -215,7 +223,7 @@ measureCreate
 </td>
 <td>
 
-[main.ts:66](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L66)
+[main.ts:69](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L69)
 
 </td>
 </tr>
@@ -227,7 +235,7 @@ measureCreate
 </td>
 <td>
 
-(`targetElement`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+(`targetElement`, `options`?) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 </td>
 <td>
@@ -237,7 +245,7 @@ measureElement
 </td>
 <td>
 
-[main.ts:67](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L67)
+[main.ts:70](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L70)
 
 </td>
 </tr>
@@ -245,7 +253,7 @@ measureElement
 
 #### Defined in
 
-[main.ts:65](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L65)
+[main.ts:68](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L68)
 
 ---
 
@@ -281,7 +289,7 @@ const modes: {
 </td>
 <td>
 
-[main.ts:84](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L84)
+[main.ts:87](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L87)
 
 </td>
 </tr>
@@ -298,7 +306,7 @@ const modes: {
 </td>
 <td>
 
-[main.ts:81](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L81)
+[main.ts:84](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L84)
 
 </td>
 </tr>
@@ -315,7 +323,7 @@ const modes: {
 </td>
 <td>
 
-[main.ts:82](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L82)
+[main.ts:85](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L85)
 
 </td>
 </tr>
@@ -332,7 +340,7 @@ const modes: {
 </td>
 <td>
 
-[main.ts:83](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L83)
+[main.ts:86](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L86)
 
 </td>
 </tr>
@@ -340,7 +348,7 @@ const modes: {
 
 #### Defined in
 
-[main.ts:80](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L80)
+[main.ts:83](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L83)
 
 ---
 
@@ -355,7 +363,7 @@ const pin: {
     content,
     options
   ) => Promise<string | void>;
-  pinElements: (sectionElement) => Promise<void>;
+  pinElements: (sectionElement, options?) => Promise<void>;
 };
 ```
 
@@ -380,7 +388,7 @@ const pin: {
 </td>
 <td>
 
-[main.ts:60](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L60)
+[main.ts:63](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L63)
 
 </td>
 </tr>
@@ -397,7 +405,7 @@ const pin: {
 </td>
 <td>
 
-[main.ts:61](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L61)
+[main.ts:64](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L64)
 
 </td>
 </tr>
@@ -409,12 +417,12 @@ const pin: {
 </td>
 <td>
 
-(`sectionElement`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+(`sectionElement`, `options`?) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 </td>
 <td>
 
-[main.ts:62](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L62)
+[main.ts:65](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L65)
 
 </td>
 </tr>
@@ -422,7 +430,7 @@ const pin: {
 
 #### Defined in
 
-[main.ts:59](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L59)
+[main.ts:62](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L62)
 
 ---
 
@@ -462,7 +470,7 @@ spacingCreate
 </td>
 <td>
 
-[main.ts:55](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L55)
+[main.ts:58](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L58)
 
 </td>
 </tr>
@@ -474,7 +482,7 @@ spacingCreate
 </td>
 <td>
 
-(`targetElement`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+(`targetElement`, `options`?) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 </td>
 <td>
@@ -484,7 +492,7 @@ spacingElement
 </td>
 <td>
 
-[main.ts:56](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L56)
+[main.ts:59](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L59)
 
 </td>
 </tr>
@@ -492,7 +500,7 @@ spacingElement
 
 #### Defined in
 
-[main.ts:54](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L54)
+[main.ts:57](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L57)
 
 ---
 
@@ -522,7 +530,7 @@ const typography: {
 </td>
 <td>
 
-(`html`, `options`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
+(`html`, `options`, `id`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
 </td>
 <td>
@@ -532,7 +540,7 @@ typographyCreate
 </td>
 <td>
 
-[main.ts:76](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L76)
+[main.ts:79](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L79)
 
 </td>
 </tr>
@@ -544,7 +552,7 @@ typographyCreate
 </td>
 <td>
 
-(`targetElement`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+(`targetElement`, `options`?) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
 </td>
 <td>
@@ -554,7 +562,7 @@ typographyElement
 </td>
 <td>
 
-[main.ts:77](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L77)
+[main.ts:80](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L80)
 
 </td>
 </tr>
@@ -562,7 +570,7 @@ typographyElement
 
 #### Defined in
 
-[main.ts:75](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L75)
+[main.ts:78](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L78)
 
 ## Functions
 
@@ -578,7 +586,7 @@ function speccer(): void;
 
 #### Defined in
 
-[main.ts:87](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L87)
+[main.ts:90](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L90)
 
 ---
 

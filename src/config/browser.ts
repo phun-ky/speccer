@@ -49,10 +49,22 @@
  *
  * @packageDocumentation
  */
-import { element as measureElement } from '../features/measure';
+import { grid as gridElement } from '../features/grid';
+import { mark as markElement } from '../features/mark';
+import { measure as measureElement } from '../features/measure';
 import { pinElements } from '../features/pin';
-import { element as specElement } from '../features/spacing';
+import { spacing as spacingElement } from '../features/spacing';
+import { typography as typographyElement } from '../features/typography';
 import { SpeccerFunctionType } from '../types/speccer';
+import {
+  SPECCER_DATA_ATTRIBUTE,
+  SPECCER_FEATURE_GRID,
+  SPECCER_FEATURE_MARK,
+  SPECCER_FEATURE_MEASURE,
+  SPECCER_FEATURE_PIN_AREA,
+  SPECCER_FEATURE_SPACING,
+  SPECCER_FEATURE_TYPOGRAPHY
+} from '../utils/constants';
 import { activate as resizeActivate } from '../utils/resize';
 
 /**
@@ -85,19 +97,19 @@ export const dom = (speccer: SpeccerFunctionType): void => {
  * ```
  */
 export const lazy = (): void => {
-  const _spec_observer = new IntersectionObserver((els, observer) => {
+  const _spacing_observer = new IntersectionObserver((els, observer) => {
     for (const el of els) {
       if (el.intersectionRatio > 0) {
-        specElement(el.target as HTMLElement);
+        spacingElement(el.target as HTMLElement);
         observer.unobserve(el.target);
       }
     }
   });
 
   for (const el of document.querySelectorAll(
-    '[data-speccer^="spacing"],[data-speccer^="spacing"] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)'
+    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"],[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)`
   )) {
-    _spec_observer.observe(el);
+    _spacing_observer.observe(el);
   }
 
   const _measure_observer = new IntersectionObserver((els, observer) => {
@@ -109,11 +121,58 @@ export const lazy = (): void => {
     }
   });
 
-  for (const el of document.querySelectorAll('[data-speccer^="measure"]')) {
+  for (const el of document.querySelectorAll(
+    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_MEASURE}"]`
+  )) {
     _measure_observer.observe(el);
   }
 
-  const _dissect_observer = new IntersectionObserver(async (els, observer) => {
+  const _mark_observer = new IntersectionObserver((els, observer) => {
+    for (const el of els) {
+      if (el.intersectionRatio > 0) {
+        markElement(el.target as HTMLElement);
+        observer.unobserve(el.target);
+      }
+    }
+  });
+
+  for (const el of document.querySelectorAll(
+    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_MARK}"]`
+  )) {
+    _mark_observer.observe(el);
+  }
+
+  const _typography_observer = new IntersectionObserver((els, observer) => {
+    for (const el of els) {
+      if (el.intersectionRatio > 0) {
+        typographyElement(el.target as HTMLElement);
+        observer.unobserve(el.target);
+      }
+    }
+  });
+
+  for (const el of document.querySelectorAll(
+    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_TYPOGRAPHY}"]`
+  )) {
+    _typography_observer.observe(el);
+  }
+
+  const _grid_observer = new IntersectionObserver((els, observer) => {
+    for (const el of els) {
+      if (el.intersectionRatio > 0) {
+        gridElement(el.target as HTMLElement);
+        observer.unobserve(el.target);
+      }
+    }
+  });
+
+  for (const el of document.querySelectorAll(
+    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_GRID}"]`
+  )) {
+    _grid_observer.observe(el);
+  }
+
+  const _pin_observer = new IntersectionObserver(async (els, observer) => {
     for (const el of els) {
       if (el.intersectionRatio > 0) {
         await pinElements(el.target as HTMLElement);
@@ -122,8 +181,10 @@ export const lazy = (): void => {
     }
   });
 
-  for (const el of document.querySelectorAll('[data-speccer="pin-area"]')) {
-    _dissect_observer.observe(el);
+  for (const el of document.querySelectorAll(
+    `[${SPECCER_DATA_ATTRIBUTE}="${SPECCER_FEATURE_PIN_AREA}"]`
+  )) {
+    _pin_observer.observe(el);
   }
 };
 

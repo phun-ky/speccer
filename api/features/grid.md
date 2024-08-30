@@ -6,7 +6,38 @@
 
 # features/grid
 
-> Last updated 2024-08-28T10:13:18.035Z
+> Last updated 2024-08-30T19:21:42.303Z
+
+This feature will highlight the grid spacing in a `display: grid;` element.
+
+![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-light.png?raw=true)
+
+## Table of Contents
+
+- [Example](#example)
+- [Functions](#functions)
+  - [create()](#create)
+  - [grid()](#grid)
+
+## Example
+
+Use the following code, either for html or js:
+
+```html
+<div data-speccer="grid [columns|rows]" class="…">…</div>
+```
+
+```ts
+const targetElement = document.getElementById('target');
+const options = {
+  type: 'grid',
+  grid: {
+    toggle: 'both'
+  }
+};
+
+grid(targetElement, options);
+```
 
 ## Functions
 
@@ -42,27 +73,28 @@ if (targetElement) {
 
 #### Defined in
 
-[features/grid/index.ts:27](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L27)
+[features/grid/index.ts:60](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L60)
 
 ---
 
-### element()
+### grid()
 
 ```ts
-function element(targetElement): Promise<void>;
+function grid(targetElement, options?): Promise<void>;
 ```
 
 Create a visual overlay to present the column gaps for a grid container
 
 Adds a visual grid overlay to the target element if it has the appropriate data attribute and is a grid.
 
-![grid](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-dark.png?raw=true)
+![grid](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-light.png?raw=true)
 
 #### Parameters
 
-| Parameter       | Type                                                                    | Description                                    |
-| --------------- | ----------------------------------------------------------------------- | ---------------------------------------------- |
-| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target element to add the grid overlay to. |
+| Parameter       | Type                                                                     | Description                                    |
+| --------------- | ------------------------------------------------------------------------ | ---------------------------------------------- |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)  | The target element to add the grid overlay to. |
+| `options`?      | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Options.                                       |
 
 #### Returns
 
@@ -74,16 +106,29 @@ A promise that resolves once the overlay has been added.
 
 ```ts
 const targetElement = document.getElementById('target');
-if (targetElement) {
-  element(targetElement).then(() => {
-    console.log('Grid overlay added');
-  });
-}
+
+grid(targetElement);
+```
+
+##### Only rows
+
+![grid](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-dark.png?raw=true)
+
+```ts
+const targetElement = document.getElementById('target');
+const options = {
+  type: 'grid',
+  grid: {
+    toggle: 'rows'
+  }
+};
+
+grid(targetElement, options);
 ```
 
 #### Defined in
 
-[features/grid/index.ts:142](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L142)
+[features/grid/index.ts:194](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L194)
 
 ---
 

@@ -3,6 +3,7 @@ import {
   SpacingCSSPropertiesType,
   TypographyCSSPropertiesType
 } from '../types/css';
+import { SpeccerOptionsInterface } from '../types/speccer';
 
 import {
   SPECCER_DEFAULT_PIN_SPACE,
@@ -76,6 +77,7 @@ export const getClassNameFromCSSProperty = (property: string): string => {
  * Extracts spacing-related CSS properties from a style object.
  *
  * @param {SpacingCSSPropertiesType} style - The style object.
+ * @param {SpeccerOptionsInterface|undefined} [options] - Options
  * @returns {SpacingCSSPropertiesType} - The extracted spacing-related properties.
  *
  * @example
@@ -89,7 +91,8 @@ export const getClassNameFromCSSProperty = (property: string): string => {
  * ```
  */
 export const getSpacing = (
-  style: SpacingCSSPropertiesType
+  style: SpacingCSSPropertiesType,
+  options?: SpeccerOptionsInterface | undefined
 ): SpacingCSSPropertiesType => {
   const {
     marginTop,
@@ -101,6 +104,24 @@ export const getSpacing = (
     paddingLeft,
     paddingRight
   } = style;
+
+  if (options?.spacing?.padding) {
+    return {
+      paddingTop,
+      paddingBottom,
+      paddingLeft,
+      paddingRight
+    };
+  }
+
+  if (options?.spacing?.margin) {
+    return {
+      marginTop,
+      marginBottom,
+      marginLeft,
+      marginRight
+    };
+  }
 
   return {
     marginTop,
