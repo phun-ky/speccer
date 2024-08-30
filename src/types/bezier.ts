@@ -38,6 +38,18 @@ export type BezierPathOptionsType = {
   pos2: string;
 };
 
+export type CoordinatesType = {
+  x: number;
+  y: number;
+};
+
+export type CoordinatesForBezierObjectType = {
+  firstPoint: CoordinatesType;
+  firstControl: CoordinatesType;
+  lastPoint: CoordinatesType;
+  lastControl: CoordinatesType;
+};
+
 /**
  * Parameters for creating coordinates for a curve.
  */
