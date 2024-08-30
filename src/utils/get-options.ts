@@ -68,6 +68,20 @@ const getPositionBasedOnArea = (areaString: string): SpeccerPositionType => {
 
   return 'top';
 };
+const getGridToggleValue = (areaString: string) => {
+  if (areaString?.includes('columns')) return 'columns';
+
+  if (areaString?.includes('rows')) return 'rows';
+
+  return 'both';
+};
+const getSpacingToggleValue = (areaString: string) => {
+  if (areaString?.includes('margin')) return 'margin';
+
+  if (areaString?.includes('padding')) return 'padding';
+
+  return 'both';
+};
 
 /**
  * Generates Speccer options based on the target element and the specified area string.

@@ -24,6 +24,7 @@
     - [React](#react)
   - [Features](#features)
     - [Element spacing](#element-spacing)
+      - [Bound spacing](#bound-spacing)
     - [Element dimensions](#element-dimensions)
       - [Slim measure](#slim-measure)
     - [Pin element to highlight the anatomy](#pin-element-to-highlight-the-anatomy)
@@ -207,12 +208,22 @@ export default Component;
 Use the following attribute to display element padding and margin:
 
 ```html
-<div data-speccer="spacing" class="..."></div>
+<div data-speccer="spacing [padding|margin] [bound]" class="…"></div>
 ```
 
-This will display the element _and all of it's children_ padding and margin.
+This will display the element _and all of it's children_ padding and margin, unless you specify `padding` and `margin`
 
 ![Image of the spacing feature in dark mode](./public/speccer-spacing-dark.png)
+
+#### Bound spacing
+
+![spacing](./public/speccer-spacing-bound.png)
+
+This option binds the speccer elements to the bounds of the element container.
+
+```html
+<div data-speccer="spacing bound" class="…"></div>
+```
 
 ### Element dimensions
 

@@ -89,7 +89,8 @@ export const getClassNameFromCSSProperty = (property: string): string => {
  * ```
  */
 export const getSpacing = (
-  style: SpacingCSSPropertiesType
+  style: SpacingCSSPropertiesType,
+  options?: SpeccerOptionsInterface | undefined
 ): SpacingCSSPropertiesType => {
   const {
     marginTop,
@@ -101,6 +102,24 @@ export const getSpacing = (
     paddingLeft,
     paddingRight
   } = style;
+
+  if (options?.spacing?.padding) {
+    return {
+      paddingTop,
+      paddingBottom,
+      paddingLeft,
+      paddingRight
+    };
+  }
+
+  if (options?.spacing?.margin) {
+    return {
+      marginTop,
+      marginBottom,
+      marginLeft,
+      marginRight
+    };
+  }
 
   return {
     marginTop,

@@ -5,42 +5,42 @@ export type SpacingCSSPropertiesType = {
   /**
    * The margin top property.
    */
-  marginTop: string;
+  marginTop?: string;
 
   /**
    * The margin bottom property.
    */
-  marginBottom: string;
+  marginBottom?: string;
 
   /**
    * The margin left property.
    */
-  marginLeft: string;
+  marginLeft?: string;
 
   /**
    * The margin right property.
    */
-  marginRight: string;
+  marginRight?: string;
 
   /**
    * The padding top property.
    */
-  paddingTop: string;
+  paddingTop?: string;
 
   /**
    * The padding bottom property.
    */
-  paddingBottom: string;
+  paddingBottom?: string;
 
   /**
    * The padding left property.
    */
-  paddingLeft: string;
+  paddingLeft?: string;
 
   /**
    * The padding right property.
    */
-  paddingRight: string;
+  paddingRight?: string;
 };
 
 /**

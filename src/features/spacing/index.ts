@@ -105,13 +105,22 @@ export const create = (
  * element(targetElement, options);
  * ```
  */
-export const element = async (targetElement: HTMLElement): Promise<void> => {
+export const spacing = async (
+  targetElement: HTMLElement,
+  options?: SpeccerOptionsInterface | undefined
+): Promise<void> => {
   if (!targetElement) return;
 
   if (isElementHidden(targetElement)) return;
 
+  const _areas_string: string =
+    targetElement.getAttribute('data-speccer') || '';
   const _target_styles = await getStyles(targetElement);
-  const _target_spacing_styles = getSpacing(_target_styles);
+  const _options = getOptions(_areas_string, _target_styles, options);
+
+  if (_options.type !== 'spacing' || !_options.spacing) return;
+
+  const _target_spacing_styles = getSpacing(_target_styles, _options);
   const _target_pruned_spacing_styles = Object.keys(
     _target_spacing_styles
   ).filter((property) => {
@@ -121,6 +130,8 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
   });
 
   if (!_target_pruned_spacing_styles.length) return;
+
+  targetElement.classList.add('is-specced');
 
   const _pin_element_id = `speccer-spacing-${targetElement.getAttribute('id') || uniqueID()}`;
 
@@ -134,10 +145,14 @@ export const element = async (targetElement: HTMLElement): Promise<void> => {
 
     const _class_name = getClassNameFromCSSProperty(property);
 
-    setClassNames(_speccer_el, _class_name);
+    setClassNames(
+      _speccer_el,
+      cx(_class_name, {
+        bound: _options?.spacing?.bound ? true : false
+      })
+    );
     document.body.appendChild(_speccer_el);
 
-    targetElement.classList.add('is-specced');
-    await position(property, _value, _speccer_el, targetElement);
+    await position(property, _value, _speccer_el, targetElement, _options);
   });
 };

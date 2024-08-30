@@ -31,7 +31,16 @@ export interface SpeccerOptionsInterface {
   typography?: {
     useSyntaxHighlighting: boolean;
   };
+  spacing?: {
+    margin?: boolean;
+    padding?: boolean;
+    both?: boolean;
+    bound?: boolean;
+  };
   grid?: {
     toggle: string;
+    both?: boolean;
+    rows?: boolean;
+    columns?: boolean;
   };
 }
