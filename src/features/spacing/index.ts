@@ -32,7 +32,7 @@ import {
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
 import { isElementHidden } from '../../utils/node';
-import { get as getStyles } from '../../utils/styles';
+import { get as getStyles, add as addStyles } from '../../utils/styles';
 
 import { position } from './utils/position';
 
@@ -158,6 +158,8 @@ export const spacing = async (
     );
     document.body.appendChild(_speccer_el);
 
-    await position(property, _value, _speccer_el, targetElement, _options);
+    const _styles = await position(property, _value, targetElement, _options);
+
+    await addStyles(_speccer_el, _styles as object);
   });
 };
