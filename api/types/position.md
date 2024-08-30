@@ -6,7 +6,7 @@
 
 # types/position
 
-> Last updated 2024-08-30T19:21:42.313Z
+> Last updated 2024-08-30T20:17:22.369Z
 
 ## Type Aliases
 
@@ -27,7 +27,7 @@ Type definition for input parameters related to positioning.
 
 #### Defined in
 
-[types/position.ts:14](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L14)
+[types/position.ts:24](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L24)
 
 ---
 
@@ -125,6 +125,103 @@ Type definition for position properties.
 #### Defined in
 
 [types/position.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L4)
+
+---
+
+### PositionUnitPropertiesType
+
+```ts
+type PositionUnitPropertiesType: {
+  height: string;
+  left: string;
+  top: string;
+  width: string;
+};
+```
+
+Type definition for position properties with units.
+
+#### Type declaration
+
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Defined in</th>
+</tr>
+<tr>
+<td>
+
+`height`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+[types/position.ts:17](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L17)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`left`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+[types/position.ts:16](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L16)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`top`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+[types/position.ts:15](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L15)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`width`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+[types/position.ts:18](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L18)
+
+</td>
+</tr>
+</table>
+
+#### Defined in
+
+[types/position.ts:14](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L14)
 
 ---
 

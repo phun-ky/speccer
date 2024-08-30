@@ -1,5 +1,46 @@
 # Changelog
 
+## [11.1.0](https://github.com/phun-ky/speccer/compare/v11.0.0...v11.1.0) (2024-08-30)
+
+
+### Tasks
+
+* 🤖 Update `SECURITY.md` ([884ac79](https://github.com/phun-ky/speccer/commit/884ac79b5b4e2c4b7fef8857b51eda6f7032fed3))
+
+
+### Documentation
+
+* ✏️ Regenerate API documentation ([b34036f](https://github.com/phun-ky/speccer/commit/b34036fa1180b1945927ba0f6153849546fc033e))
+* ✏️ Update screenshots and add more feature documentation ([095e9a1](https://github.com/phun-ky/speccer/commit/095e9a10c41261516fed0b8cbaefbf51d5d84f13))
+* ✏️ use `…` instead of `...` ([3869cf0](https://github.com/phun-ky/speccer/commit/3869cf0fae86aac1640714f7c8cdb9bec0e9ec6c))
+
+
+### Feature
+
+* 🎸 Add `bound` option to the `spacing` feature ([65e7314](https://github.com/phun-ky/speccer/commit/65e7314e4e4b07840f43a41c324f1d9e7ae49517))
+* 🎸 Add function to remove given speccer elements ([1078ca4](https://github.com/phun-ky/speccer/commit/1078ca4699497b221912c18f91676d600cc4c795))
+* 🎸 Add missing stylesheet to `bound` option for `spacing` ([81bdfda](https://github.com/phun-ky/speccer/commit/81bdfda0e30b24bd0fbda321e2a923fe563b1839))
+* 🎸 Add possibility to pass options programatically ([dd5a49e](https://github.com/phun-ky/speccer/commit/dd5a49e77144b593f14c9382f4eec9762244c4bc))
+
+
+### Bug
+
+* 🐛 Add missing features to lazy loading ([f97802e](https://github.com/phun-ky/speccer/commit/f97802e89bb7676fe8d465c7f624dd6bf0c20ca9))
+
+
+### Performance change
+
+* ⚡️ Return early if the element is hidden ([b09cecd](https://github.com/phun-ky/speccer/commit/b09cecd66158bdd3f4825a1b81efdc8fb26a423b))
+* ⚡️ Use `waitForFrame` just in case ([70ca641](https://github.com/phun-ky/speccer/commit/70ca6410912d6e8d7e07470f6635a6d44aeafb5c))
+
+
+### Refactoring
+
+* 💡 Add missing types and refactor function ([470a77b](https://github.com/phun-ky/speccer/commit/470a77b934b5312b7fbbf6c637c0303b1038d398))
+* 💡 Make position function return styles ([cf875f4](https://github.com/phun-ky/speccer/commit/cf875f49fe93a4d5b3a23e2028690ee96e331d95))
+* 💡 Make sure we set a relation id to target elements ([b16054d](https://github.com/phun-ky/speccer/commit/b16054dd3d0fc9915da6a7cafb0fcdab77215400))
+* 💡 Rename function, and move it to correct location ([79f532c](https://github.com/phun-ky/speccer/commit/79f532cdf7d7ab2e87282097ce98d1016e9054f9))
+
 ## [11.0.0](https://github.com/phun-ky/speccer/compare/v10.1.0...v11.0.0) (2024-08-28)
 
 

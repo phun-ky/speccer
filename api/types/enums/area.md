@@ -6,7 +6,7 @@
 
 # types/enums/area
 
-> Last updated 2024-08-30T19:21:42.311Z
+> Last updated 2024-08-30T20:17:22.364Z
 
 ## Enumerations
 

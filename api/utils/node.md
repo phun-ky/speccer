@@ -6,7 +6,7 @@
 
 # utils/node
 
-> Last updated 2024-08-30T19:21:42.320Z
+> Last updated 2024-08-30T20:17:22.382Z
 
 ## Functions
 
