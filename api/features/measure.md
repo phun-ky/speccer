@@ -6,14 +6,50 @@
 
 # features/measure
 
-> Last updated 2024-08-28T10:13:18.037Z
+> Last updated 2024-08-30T19:21:42.304Z
+
+This feature measures given element
+
+![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-pin-measure-height-light.png?raw=true)
+
+## Table of Contents
+
+- [Example](#example)
+- [Functions](#functions)
+  - [create()](#create)
+  - [measure()](#measure)
+
+## Example
+
+Use the following code, either for html or js:
+
+```html
+<div
+  data-speccer="measure [height left|right] | [width top|bottom]"
+  class="..."
+>
+  …
+</div>
+```
+
+```ts
+const targetElement = document.getElementById('target');
+const options = {
+  position: 'right',
+  measure: {
+    height: true
+  }
+};
+
+measure(targetElement, options);
+```
 
 ## Functions
 
 ### create()
 
 ```ts
-function create(text, options, tag): HTMLElement;
+function create(text, options, id, tag): HTMLElement;
 ```
 
 Create a measurement element with optional text, area, and element type.
@@ -24,6 +60,7 @@ Create a measurement element with optional text, area, and element type.
 | --------- | ------------------------------------------------------------------------ | ------------- | ----------------------------------- |
 | `text`    | `string` \| `number`                                                     | `''`          | The text to display on the element. |
 | `options` | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | `undefined`   | The options.                        |
+| `id`      | `string`                                                                 | `undefined`   | The element id.                     |
 | `tag`     | `string`                                                                 | `'span'`      | The element type.                   |
 
 #### Returns
@@ -41,25 +78,26 @@ document.body.appendChild(measurement);
 
 #### Defined in
 
-[features/measure/index.ts:25](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L25)
+[features/measure/index.ts:59](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L59)
 
 ---
 
-### element()
+### measure()
 
 ```ts
-function element(targetElement): Promise<void>;
+function measure(targetElement, options?): Promise<void>;
 ```
 
 Create a measurement element and add it to the body with styles matching a specified target element based on the attribute values from `data-speccer`.
 
-![measure](https://github.com/phun-ky/speccer/blob/main/public/measure.png?raw=true)
+![measure](https://github.com/phun-ky/speccer/blob/main/public/speccer-measure-right-full-light.png?raw=true)
 
 #### Parameters
 
-| Parameter       | Type                                                                    | Description                              |
-| --------------- | ----------------------------------------------------------------------- | ---------------------------------------- |
-| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target element to match styles with. |
+| Parameter       | Type                                                                     | Description                              |
+| --------------- | ------------------------------------------------------------------------ | ---------------------------------------- |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)  | The target element to match styles with. |
+| `options`?      | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Options.                                 |
 
 #### Returns
 
@@ -69,14 +107,40 @@ Create a measurement element and add it to the body with styles matching a speci
 
 #### Example
 
+##### Height to the right
+
 ```ts
 const targetElement = document.getElementById('target');
-element(targetElement);
+const options = {
+  position: 'right',
+  measure: {
+    height: true
+  }
+};
+
+measure(targetElement, options);
+```
+
+##### Slim width to the bottom
+
+![measure](https://github.com/phun-ky/speccer/blob/main/public/speccer-measure-bottom-dark.png?raw=true)
+
+```ts
+const targetElement = document.getElementById('target');
+const options = {
+  position: 'bottom',
+  measure: {
+    slim: true,
+    width: true
+  }
+};
+
+measure(targetElement, options);
 ```
 
 #### Defined in
 
-[features/measure/index.ts:62](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L62)
+[features/measure/index.ts:125](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L125)
 
 ---
 

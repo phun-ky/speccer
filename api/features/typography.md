@@ -6,14 +6,48 @@
 
 # features/typography
 
-> Last updated 2024-08-28T10:13:18.043Z
+> Last updated 2024-08-30T19:21:42.307Z
+
+This feature presents typography
+
+![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-typography-light.png?raw=true)
+
+## Table of Contents
+
+- [Example](#example)
+- [Functions](#functions)
+  - [create()](#create)
+  - [typography()](#typography)
+
+## Example
+
+Use the following code, either for html or js:
+
+```html
+<div data-speccer="typography [top|right|bottom|left] [syntax]" class="...">
+  …
+</div>
+```
+
+```ts
+const targetElement = document.getElementById('target');
+const options = {
+  position: 'right',
+  type: 'typography',
+  typography: {
+    useSyntaxHighlighting: false
+  }
+};
+
+typography(targetElement, options);
+```
 
 ## Functions
 
 ### create()
 
 ```ts
-function create(html, options): HTMLElement;
+function create(html, options, id): HTMLElement;
 ```
 
 Create a DOM element with provided HTML and optional CSS class names.
@@ -24,6 +58,7 @@ Create a DOM element with provided HTML and optional CSS class names.
 | --------- | ------------------------------------------------------------------------ | -------------------------------------------------- |
 | `html`    | `string`                                                                 | The HTML content to be set in the created element. |
 | `options` | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Options.                                           |
+| `id`      | `string`                                                                 | The id.                                            |
 
 #### Returns
 
@@ -42,25 +77,26 @@ document.body.appendChild(createdElement);
 
 #### Defined in
 
-[features/typography/index.ts:28](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L28)
+[features/typography/index.ts:63](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L63)
 
 ---
 
-### element()
+### typography()
 
 ```ts
-function element(targetElement): Promise<void>;
+function typography(targetElement, options?): Promise<void>;
 ```
 
 Create a specced typography element for a given target element.
 
-![typography](https://github.com/phun-ky/speccer/blob/main/public/typography.png?raw=true)
+![typography](https://github.com/phun-ky/speccer/blob/main/public/speccer-typography-light.png?raw=true)
 
 #### Parameters
 
-| Parameter       | Type                                                                    | Description                                 |
-| --------------- | ----------------------------------------------------------------------- | ------------------------------------------- |
-| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target element to specc typography for. |
+| Parameter       | Type                                                                     | Description                                 |
+| --------------- | ------------------------------------------------------------------------ | ------------------------------------------- |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)  | The target element to specc typography for. |
+| `options`?      | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Custom options                              |
 
 #### Returns
 
@@ -70,6 +106,8 @@ Create a specced typography element for a given target element.
 
 #### Example
 
+##### Default
+
 ```ts
 const targetElement = document.querySelector('.target');
 if (targetElement) {
@@ -77,9 +115,26 @@ if (targetElement) {
 }
 ```
 
+##### With syntax higlight feature
+
+![typography](https://github.com/phun-ky/speccer/blob/main/public/speccer-typography-syntax-light.png?raw=true)
+
+```ts
+const targetElement = document.querySelector('.target');
+const options = {
+  typography: {
+    useSyntaxHighlighting: true
+  }
+};
+
+if (targetElement) {
+  element(targetElement, options);
+}
+```
+
 #### Defined in
 
-[features/typography/index.ts:62](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L62)
+[features/typography/index.ts:121](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L121)
 
 ---
 

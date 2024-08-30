@@ -6,7 +6,7 @@
 
 # features/spacing/utils/position
 
-> Last updated 2024-08-28T10:13:18.043Z
+> Last updated 2024-08-30T19:21:42.307Z
 
 ## Functions
 
@@ -17,7 +17,8 @@ function position(
   property,
   value,
   spacingElement,
-  targetElement
+  targetElement,
+  options?
 ): Promise<void>;
 ```
 
@@ -25,12 +26,13 @@ Set the position and dimensions of a spacing element relative to a target elemen
 
 #### Parameters
 
-| Parameter        | Type                                                                    | Description                                                      |
-| ---------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `property`       | `string`                                                                | The CSS property to set (e.g., 'marginTop', 'marginLeft', etc.). |
-| `value`          | `number`                                                                | The value of the CSS property.                                   |
-| `spacingElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The spacing element.                                             |
-| `targetElement`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target element.                                              |
+| Parameter        | Type                                                                           | Description                                                      |
+| ---------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| `property`       | `string`                                                                       | The CSS property to set (e.g., 'marginTop', 'marginLeft', etc.). |
+| `value`          | `number`                                                                       | The value of the CSS property.                                   |
+| `spacingElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)        | The spacing element.                                             |
+| `targetElement`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)        | The target element.                                              |
+| `options`?       | [`SpeccerOptionsInterface`](../../../types/speccer.md#specceroptionsinterface) | Options.                                                         |
 
 #### Returns
 
@@ -48,7 +50,7 @@ position('marginTop', 20, spacingElement, targetElement);
 
 #### Defined in
 
-[features/spacing/utils/position.ts:21](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/utils/position.ts#L21)
+[features/spacing/utils/position.ts:23](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/utils/position.ts#L23)
 
 ---
 

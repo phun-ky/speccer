@@ -6,7 +6,7 @@
 
 # utils/bezier
 
-> Last updated 2024-08-28T10:13:18.057Z
+> Last updated 2024-08-30T19:21:42.315Z
 
 ## Functions
 
@@ -16,24 +16,7 @@
 function createBezierCurveCoordinates(
   coords,
   options
-): {
-  firstControl: {
-    x: number;
-    y: y1;
-  };
-  firstPoint: {
-    x: x1;
-    y: y1;
-  };
-  lastControl: {
-    x: number;
-    y: y2;
-  };
-  lastPoint: {
-    x: x2;
-    y: y2;
-  };
-};
+): CoordinatesForBezierObjectType;
 ```
 
 Calculates coordinates for a Bezier curve between two points.
@@ -47,43 +30,9 @@ Calculates coordinates for a Bezier curve between two points.
 
 #### Returns
 
-```ts
-{
-  firstControl: {
-    x: number;
-    y: y1;
-  }
-  firstPoint: {
-    x: x1;
-    y: y1;
-  }
-  lastControl: {
-    x: number;
-    y: y2;
-  }
-  lastPoint: {
-    x: x2;
-    y: y2;
-  }
-}
-```
+[`CoordinatesForBezierObjectType`](../types/bezier.md#coordinatesforbezierobjecttype)
 
 Coordinates for the Bezier curve.
-
-| Name             | Type                           | Default value | Defined in                                                                                 |
-| ---------------- | ------------------------------ | ------------- | ------------------------------------------------------------------------------------------ |
-| `firstControl`   | \{ `x`: `number`; `y`: `y1`; } | -             | [utils/bezier.ts:71](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L71) |
-| `firstControl.x` | `number`                       | -             | [utils/bezier.ts:34](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L34) |
-| `firstControl.y` | `number`                       | y1            | [utils/bezier.ts:34](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L34) |
-| `firstPoint`     | \{ `x`: `x1`; `y`: `y1`; }     | -             | [utils/bezier.ts:70](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L70) |
-| `firstPoint.x`   | `number`                       | x1            | [utils/bezier.ts:31](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L31) |
-| `firstPoint.y`   | `number`                       | y1            | [utils/bezier.ts:31](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L31) |
-| `lastControl`    | \{ `x`: `number`; `y`: `y2`; } | -             | [utils/bezier.ts:73](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L73) |
-| `lastControl.x`  | `number`                       | -             | [utils/bezier.ts:35](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L35) |
-| `lastControl.y`  | `number`                       | y2            | [utils/bezier.ts:35](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L35) |
-| `lastPoint`      | \{ `x`: `x2`; `y`: `y2`; }     | -             | [utils/bezier.ts:72](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L72) |
-| `lastPoint.x`    | `number`                       | x2            | [utils/bezier.ts:32](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L32) |
-| `lastPoint.y`    | `number`                       | y2            | [utils/bezier.ts:32](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L32) |
 
 #### Example
 
@@ -96,7 +45,7 @@ const coordinates = createBezierCurveCoordinates(
 
 #### Defined in
 
-[utils/bezier.ts:25](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L25)
+[utils/bezier.ts:26](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L26)
 
 ---
 
@@ -135,7 +84,7 @@ const svgPath = getCurlySVGPath(startElement, stopElement, {
 
 #### Defined in
 
-[utils/bezier.ts:95](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L95)
+[utils/bezier.ts:125](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L125)
 
 ---
 
@@ -173,10 +122,10 @@ Positions for creating an SVG path for a curved line.
 
 | Name        | Type     | Defined in                                                                                   |
 | ----------- | -------- | -------------------------------------------------------------------------------------------- |
-| `path1pos1` | `string` | [utils/bezier.ts:269](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L269) |
-| `path1pos2` | `string` | [utils/bezier.ts:270](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L270) |
-| `path2pos1` | `string` | [utils/bezier.ts:271](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L271) |
-| `path2pos2` | `string` | [utils/bezier.ts:272](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L272) |
+| `path1pos1` | `string` | [utils/bezier.ts:299](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L299) |
+| `path1pos2` | `string` | [utils/bezier.ts:300](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L300) |
+| `path2pos1` | `string` | [utils/bezier.ts:301](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L301) |
+| `path2pos2` | `string` | [utils/bezier.ts:302](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L302) |
 
 #### Example
 
@@ -186,7 +135,7 @@ const positions = getPositionsForCurlySVGPath('west');
 
 #### Defined in
 
-[utils/bezier.ts:234](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L234)
+[utils/bezier.ts:264](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L264)
 
 ---
 
@@ -220,8 +169,8 @@ Positions for creating an SVG path.
 
 | Name   | Type     | Defined in                                                                                   |
 | ------ | -------- | -------------------------------------------------------------------------------------------- |
-| `pos1` | `string` | [utils/bezier.ts:220](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L220) |
-| `pos2` | `string` | [utils/bezier.ts:220](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L220) |
+| `pos1` | `string` | [utils/bezier.ts:250](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L250) |
+| `pos2` | `string` | [utils/bezier.ts:250](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L250) |
 
 #### Example
 
@@ -231,7 +180,7 @@ const positions = getPositionsForSVGPath('east');
 
 #### Defined in
 
-[utils/bezier.ts:196](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L196)
+[utils/bezier.ts:226](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L226)
 
 ---
 
@@ -268,7 +217,7 @@ const svgPath = getSVGPath(startElement, stopElement, {
 
 #### Defined in
 
-[utils/bezier.ts:156](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L156)
+[utils/bezier.ts:186](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L186)
 
 ---
 

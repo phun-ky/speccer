@@ -6,24 +6,29 @@
 
 # utils/get-options
 
-> Last updated 2024-08-28T10:13:18.065Z
+> Last updated 2024-08-30T19:21:42.319Z
 
 ## Functions
 
 ### getOptions()
 
 ```ts
-function getOptions(areaString, targetStyle): SpeccerOptionsInterface;
+function getOptions(
+  areaString,
+  targetStyle,
+  customOptions?
+): SpeccerOptionsInterface;
 ```
 
 Generates Speccer options based on the target element and the specified area string.
 
 #### Parameters
 
-| Parameter     | Type                                                                                    | Description                                   |
-| ------------- | --------------------------------------------------------------------------------------- | --------------------------------------------- |
-| `areaString`  | `string`                                                                                | The string representing different area types. |
-| `targetStyle` | [`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration) | -                                             |
+| Parameter        | Type                                                                                    | Description                                   |
+| ---------------- | --------------------------------------------------------------------------------------- | --------------------------------------------- |
+| `areaString`     | `string`                                                                                | The string representing different area types. |
+| `targetStyle`    | [`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration) | -                                             |
+| `customOptions`? | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface)                | Custom options                                |
 
 #### Returns
 
@@ -44,7 +49,7 @@ console.log(options);
 
 #### Defined in
 
-[utils/get-options.ts:86](https://github.com/phun-ky/speccer/blob/main/src/utils/get-options.ts#L86)
+[utils/get-options.ts:101](https://github.com/phun-ky/speccer/blob/main/src/utils/get-options.ts#L101)
 
 ---
 

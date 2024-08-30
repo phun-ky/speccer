@@ -6,7 +6,7 @@
 
 # utils/css
 
-> Last updated 2024-08-28T10:13:18.062Z
+> Last updated 2024-08-30T19:21:42.318Z
 
 ## Functions
 
@@ -40,7 +40,7 @@ console.log(className); // Example output: "margin top"
 
 #### Defined in
 
-[utils/css.ts:63](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L63)
+[utils/css.ts:64](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L64)
 
 ---
 
@@ -74,23 +74,24 @@ console.log(intValue); // Example output: 42
 
 #### Defined in
 
-[utils/css.ts:26](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L26)
+[utils/css.ts:27](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L27)
 
 ---
 
 ### getSpacing()
 
 ```ts
-function getSpacing(style): SpacingCSSPropertiesType;
+function getSpacing(style, options?): SpacingCSSPropertiesType;
 ```
 
 Extracts spacing-related CSS properties from a style object.
 
 #### Parameters
 
-| Parameter | Type                                                                   | Description       |
-| --------- | ---------------------------------------------------------------------- | ----------------- |
-| `style`   | [`SpacingCSSPropertiesType`](../types/css.md#spacingcsspropertiestype) | The style object. |
+| Parameter  | Type                                                                     | Description       |
+| ---------- | ------------------------------------------------------------------------ | ----------------- |
+| `style`    | [`SpacingCSSPropertiesType`](../types/css.md#spacingcsspropertiestype)   | The style object. |
+| `options`? | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Options           |
 
 #### Returns
 
@@ -111,7 +112,7 @@ console.log(spacing); // Example output: { marginTop: "10px", marginLeft: "20px"
 
 #### Defined in
 
-[utils/css.ts:91](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L91)
+[utils/css.ts:93](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L93)
 
 ---
 
@@ -148,7 +149,7 @@ console.log(typography); // Example output: { fontSize: "16px", fontWeight: "bol
 
 #### Defined in
 
-[utils/css.ts:133](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L133)
+[utils/css.ts:154](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L154)
 
 ---
 
@@ -182,7 +183,7 @@ console.log(value); // Example output: 1.5
 
 #### Defined in
 
-[utils/css.ts:206](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L206)
+[utils/css.ts:227](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L227)
 
 ---
 
@@ -216,7 +217,7 @@ console.log(value); // Example output: 20
 
 #### Defined in
 
-[utils/css.ts:188](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L188)
+[utils/css.ts:209](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L209)
 
 ---
 
@@ -251,7 +252,7 @@ console.log(normalizedValue); // Example output: 0.5
 
 #### Defined in
 
-[utils/css.ts:42](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L42)
+[utils/css.ts:43](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L43)
 
 ---
 
@@ -285,7 +286,7 @@ console.log(value); // Example output: 10
 
 #### Defined in
 
-[utils/css.ts:170](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L170)
+[utils/css.ts:191](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L191)
 
 ---
 

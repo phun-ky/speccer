@@ -8,7 +8,7 @@
 
 ---
 
-> Last updated 2024-08-28T10:13:18.025Z
+> Last updated 2024-08-30T19:21:42.296Z
 
 ## Modules
 
@@ -66,6 +66,7 @@
 - [utils/node](utils/node.md)
 - [utils/number](utils/number.md)
 - [utils/position](utils/position.md)
+- [utils/remove-speccer-element](utils/remove-speccer-element.md)
 - [utils/resize](utils/resize.md)
 - [utils/style-property](utils/style-property.md)
 - [utils/styles](utils/styles.md)

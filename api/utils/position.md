@@ -6,7 +6,7 @@
 
 # utils/position
 
-> Last updated 2024-08-28T10:13:18.067Z
+> Last updated 2024-08-30T19:21:42.320Z
 
 ## Functions
 
@@ -46,7 +46,7 @@ const aboveProps = recProps.toTop();
 
 #### Defined in
 
-[utils/position.ts:159](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L159)
+[utils/position.ts:164](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L164)
 
 ---
 
@@ -183,7 +183,7 @@ const offsetProps = await offsetWithCenter(sourceElement, targetElement);
 
 #### Defined in
 
-[utils/position.ts:117](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L117)
+[utils/position.ts:119](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L119)
 
 ---
 

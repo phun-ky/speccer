@@ -6,7 +6,7 @@
 
 # types/bezier
 
-> Last updated 2024-08-28T10:13:18.048Z
+> Last updated 2024-08-30T19:21:42.310Z
 
 ## Type Aliases
 
@@ -82,6 +82,160 @@ The second position.
 
 ---
 
+### CoordinatesForBezierObjectType
+
+```ts
+type CoordinatesForBezierObjectType: {
+  firstControl: CoordinatesType;
+  firstPoint: CoordinatesType;
+  lastControl: CoordinatesType;
+  lastPoint: CoordinatesType;
+};
+```
+
+#### Type declaration
+
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Defined in</th>
+</tr>
+<tr>
+<td>
+
+`firstControl`
+
+</td>
+<td>
+
+[`CoordinatesType`](bezier.md#coordinatestype)
+
+</td>
+<td>
+
+[types/bezier.ts:48](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L48)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`firstPoint`
+
+</td>
+<td>
+
+[`CoordinatesType`](bezier.md#coordinatestype)
+
+</td>
+<td>
+
+[types/bezier.ts:47](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L47)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`lastControl`
+
+</td>
+<td>
+
+[`CoordinatesType`](bezier.md#coordinatestype)
+
+</td>
+<td>
+
+[types/bezier.ts:50](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L50)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`lastPoint`
+
+</td>
+<td>
+
+[`CoordinatesType`](bezier.md#coordinatestype)
+
+</td>
+<td>
+
+[types/bezier.ts:49](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L49)
+
+</td>
+</tr>
+</table>
+
+#### Defined in
+
+[types/bezier.ts:46](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L46)
+
+---
+
+### CoordinatesType
+
+```ts
+type CoordinatesType: {
+  x: number;
+  y: number;
+};
+```
+
+#### Type declaration
+
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Defined in</th>
+</tr>
+<tr>
+<td>
+
+`x`
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+[types/bezier.ts:42](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L42)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`y`
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+[types/bezier.ts:43](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L43)
+
+</td>
+</tr>
+</table>
+
+#### Defined in
+
+[types/bezier.ts:41](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L41)
+
+---
+
 ### CreateCoordinatesForCurveCoordParamType
 
 ```ts
@@ -122,7 +276,7 @@ The x-coordinate of the first point.
 </td>
 <td>
 
-[types/bezier.ts:48](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L48)
+[types/bezier.ts:60](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L60)
 
 </td>
 </tr>
@@ -144,7 +298,7 @@ The x-coordinate of the second point.
 </td>
 <td>
 
-[types/bezier.ts:53](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L53)
+[types/bezier.ts:65](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L65)
 
 </td>
 </tr>
@@ -166,7 +320,7 @@ The y-coordinate of the first point.
 </td>
 <td>
 
-[types/bezier.ts:58](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L58)
+[types/bezier.ts:70](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L70)
 
 </td>
 </tr>
@@ -188,7 +342,7 @@ The y-coordinate of the second point.
 </td>
 <td>
 
-[types/bezier.ts:63](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L63)
+[types/bezier.ts:75](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L75)
 
 </td>
 </tr>
@@ -196,7 +350,7 @@ The y-coordinate of the second point.
 
 #### Defined in
 
-[types/bezier.ts:44](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L44)
+[types/bezier.ts:56](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L56)
 
 ---
 
@@ -239,7 +393,7 @@ Indicates whether the curve is direct.
 </td>
 <td>
 
-[types/bezier.ts:73](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L73)
+[types/bezier.ts:85](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L85)
 
 </td>
 </tr>
@@ -261,7 +415,7 @@ The direction of the curve.
 </td>
 <td>
 
-[types/bezier.ts:83](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L83)
+[types/bezier.ts:95](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L95)
 
 </td>
 </tr>
@@ -283,7 +437,7 @@ Indicates if this is the first set of coordinates.
 </td>
 <td>
 
-[types/bezier.ts:78](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L78)
+[types/bezier.ts:90](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L90)
 
 </td>
 </tr>
@@ -291,7 +445,7 @@ Indicates if this is the first set of coordinates.
 
 #### Defined in
 
-[types/bezier.ts:69](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L69)
+[types/bezier.ts:81](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L81)
 
 ---
 

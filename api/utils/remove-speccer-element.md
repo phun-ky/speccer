@@ -2,22 +2,49 @@
   <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
 </div>
 
-[@phun-ky/speccer](../README.md) / types/xy
+[@phun-ky/speccer](../README.md) / utils/remove-speccer-element
 
-# types/xy
+# utils/remove-speccer-element
 
-> Last updated 2024-08-30T19:21:42.314Z
+> Last updated 2024-08-30T19:21:42.320Z
 
-## Interfaces
+## Functions
 
-### SpeccerCoordinatesInterface
+### removeSpeccerElement()
 
-#### Properties
+```ts
+function removeSpeccerElement(el): void;
+```
 
-| Property | Type     | Defined in                                                                       |
-| -------- | -------- | -------------------------------------------------------------------------------- |
-| `x`      | `number` | [types/xy.ts:2](https://github.com/phun-ky/speccer/blob/main/src/types/xy.ts#L2) |
-| `y`      | `number` | [types/xy.ts:3](https://github.com/phun-ky/speccer/blob/main/src/types/xy.ts#L3) |
+Remove a speccer element by removing associated elements and SVG paths.
+
+This function removes any speccer elements linked to the specified element and
+also removes any SVG paths that might be associated with it.
+
+#### Parameters
+
+| Parameter | Type                                                                    | Description                |
+| --------- | ----------------------------------------------------------------------- | -------------------------- |
+| `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The HTML element to unpin. |
+
+#### Returns
+
+`void`
+
+This function does not return a value.
+
+#### Example
+
+```ts
+const element = document.getElementById('my-element');
+if (element) {
+  removeSpeccerElement(element);
+}
+```
+
+#### Defined in
+
+[utils/remove-speccer-element.ts:18](https://github.com/phun-ky/speccer/blob/main/src/utils/remove-speccer-element.ts#L18)
 
 ---
 
