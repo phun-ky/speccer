@@ -68,6 +68,9 @@ describe('getOptions', () => {
       position: 'top',
       type: 'grid',
       grid: {
+        both: false,
+        columns: true,
+        rows: false,
         toggle: 'columns'
       }
     });
@@ -85,6 +88,9 @@ describe('getOptions', () => {
       position: 'top',
       type: 'grid',
       grid: {
+        both: false,
+        columns: false,
+        rows: true,
         toggle: 'rows'
       }
     });
@@ -102,6 +108,9 @@ describe('getOptions', () => {
       position: 'top',
       type: 'grid',
       grid: {
+        both: true,
+        columns: false,
+        rows: false,
         toggle: 'both'
       }
     });
