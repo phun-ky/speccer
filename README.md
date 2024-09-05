@@ -1,6 +1,6 @@
 # @phun-ky/speccer
 
-![Speccer hero, with logo and slogan: A zero dependency package to highlight elements](./public/speccer-hero.png)
+![Speccer hero, with logo and slogan: A zero dependency package to annotate or highlight elements](./public/speccer-hero.png)
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](http://makeapullrequest.com) [![SemVer 2.0](https://img.shields.io/badge/SemVer-2.0-green.svg)](http://semver.org/spec/v2.0.0.html) ![npm version](https://img.shields.io/npm/v/@phun-ky/speccer) ![issues](https://img.shields.io/github/issues/phun-ky/speccer) ![license](https://img.shields.io/npm/l/@phun-ky/speccer) ![size](https://img.shields.io/bundlephobia/min/@phun-ky/speccer) ![npm](https://img.shields.io/npm/dm/%40phun-ky/speccer) ![GitHub Repo stars](https://img.shields.io/github/stars/phun-ky/speccer) [![codecov](https://codecov.io/gh/phun-ky/speccer/graph/badge.svg?token=VA91DL7ZLZ)](https://codecov.io/gh/phun-ky/speccer) [![build](https://github.com/phun-ky/speccer/actions/workflows/check.yml/badge.svg)](https://github.com/phun-ky/speccer/actions/workflows/check.yml)
 
@@ -8,7 +8,7 @@
 
 ![Image of speccer](./public/speccer-pin-parent-align-light.png)
 
-**SPECCER** was originally created to simplify documenting components in a design system, but it can be used to highlight any HTML element on a webpage. If you need to draw attention to elements, **SPECCER** is your tool!
+**SPECCER** was originally created to simplify documenting components in a design system, but it can be used to annotate or highlight any HTML element on a webpage. If you need to draw attention to elements, **SPECCER** is your tool!
 
 ## Table of Contents<!-- omit from toc -->
 
@@ -27,7 +27,7 @@
       - [Bound spacing](#bound-spacing)
     - [Element dimensions](#element-dimensions)
       - [Slim measure](#slim-measure)
-    - [Pin element to highlight the anatomy](#pin-element-to-highlight-the-anatomy)
+    - [Pin element to annotate or highlight the anatomy](#pin-element-to-annotate-or-highlight-the-anatomy)
       - [Default](#default)
       - [Enclose](#enclose)
       - [Align with parent container](#align-with-parent-container)
@@ -265,7 +265,7 @@ Use a subtle style for the slim option, uses a dashed line instead of a solid li
 
 This will give a dashed border.
 
-### Pin element to highlight the anatomy
+### Pin element to annotate or highlight the anatomy
 
 ![Image of speccer](./public/anatomy.png)
 
@@ -447,7 +447,7 @@ The curly brackets are made with SVG paths, and it is required to have the follo
 
 #### Pin programatically
 
-from v9.5 you can utilize the `pin` feature to highlight the anatomy of an element programaticaly. [Here is an example with a click event](https://codepen.io/phun-ky/pen/LYKOWyP).
+from v9.5 you can utilize the `pin` feature to annotate or highlight the anatomy of an element programaticaly. [Here is an example with a click event](https://codepen.io/phun-ky/pen/LYKOWyP).
 
 [Kazam_screencast_00002.webm](https://github.com/user-attachments/assets/5c78cece-de46-4876-81f2-98c9108a2103)
 
@@ -684,6 +684,6 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
-![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](./public/speccer-banner.png)
+![Speccer banner, with logo and slogan: A zero dependency package to annotate or highlight elements](./public/speccer-banner.png)
 
 p.s. **Ukraine is still under brutal Russian invasion. A lot of Ukrainian people are hurt, without shelter and need help**. You can help in various ways, for instance, directly helping refugees, spreading awareness, putting pressure on your local government or companies. You can also support Ukraine by donating e.g. to [Red Cross](https://www.icrc.org/en/donate/ukraine), [Ukraine humanitarian organisation](https://savelife.in.ua/en/donate-en/#donate-army-card-weekly) or [donate Ambulances for Ukraine](https://www.gofundme.com/f/help-to-save-the-lives-of-civilians-in-a-war-zone).

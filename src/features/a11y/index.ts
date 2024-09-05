@@ -1,5 +1,5 @@
 /**
- * This feature will highlight accessibility areas like landmarks and region. It can also display tab stops/sequence and any keyboard shortcuts assigned
+ * This feature will annotate or highlight accessibility areas like landmarks and region. It can also display tab stops/sequence and any keyboard shortcuts assigned
  *
  * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-a11y-tabstops-light.png?raw=true)
  *

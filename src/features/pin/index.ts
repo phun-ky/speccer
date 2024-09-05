@@ -1,5 +1,5 @@
 /**
- * This feature highlights the anatomy of an element.
+ * This feature annotate or highlight the anatomy of an element.
  *
  * ![pin](https://github.com/phun-ky/speccer/blob/main/public/anatomy.png?raw=true)
  *

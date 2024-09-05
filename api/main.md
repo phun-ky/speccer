@@ -10,19 +10,37 @@
 
 ## Table of Contents
 
-- [Examples](#examples)
-- [References](#references)
-  - [removeSpeccerElement](#removespeccerelement)
-- [Variables](#variables)
-  - [grid](#grid)
-  - [mark](#mark)
-  - [measure](#measure)
-  - [modes](#modes)
-  - [pin](#pin)
-  - [spacing](#spacing)
-  - [typography](#typography)
-- [Functions](#functions)
-  - [speccer()](#speccer)
+- [main](#main)
+  - [Table of Contents](#table-of-contents)
+  - [Examples](#examples)
+  - [References](#references)
+    - [removeSpeccerElement](#removespeccerelement)
+  - [Variables](#variables)
+    - [grid](#grid)
+      - [Type declaration](#type-declaration)
+      - [Defined in](#defined-in)
+    - [mark](#mark)
+      - [Type declaration](#type-declaration-1)
+      - [Defined in](#defined-in-1)
+    - [measure](#measure)
+      - [Type declaration](#type-declaration-2)
+      - [Defined in](#defined-in-2)
+    - [modes](#modes)
+      - [Type declaration](#type-declaration-3)
+      - [Defined in](#defined-in-3)
+    - [pin](#pin)
+      - [Type declaration](#type-declaration-4)
+      - [Defined in](#defined-in-4)
+    - [spacing](#spacing)
+      - [Type declaration](#type-declaration-5)
+      - [Defined in](#defined-in-5)
+    - [typography](#typography)
+      - [Type declaration](#type-declaration-6)
+      - [Defined in](#defined-in-6)
+  - [Functions](#functions)
+    - [speccer()](#speccer)
+      - [Returns](#returns)
+      - [Defined in](#defined-in-7)
 
 ## Examples
 
@@ -602,7 +620,7 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
-![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
+![Speccer banner, with logo and slogan: A zero dependency package to annotate or highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
 
 ---
 
