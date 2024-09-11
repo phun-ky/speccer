@@ -6,7 +6,7 @@
 
 # utils/angle
 
-> Last updated 2024-08-30T20:17:22.371Z
+> Last updated 2024-09-08T20:24:15.662Z
 
 ## Functions
 
