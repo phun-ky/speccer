@@ -24,6 +24,7 @@
  * @packageDocumentation
  */
 /* eslint-disable import/no-unused-modules */
+import { cx, set as setClassNames } from '../../utils/classnames';
 import { isElementHidden } from '../../utils/node';
 import { add } from '../../utils/styles';
 
@@ -106,26 +107,19 @@ export const shortcut = async (
   const _regex = /\s\+\s/;
   const _keys = shortcutString.split(_regex).map((str) => str.trim());
   const _shortcut_holder = document.createElement('div');
+  const _shortcut_holder_class_names = cx('ph-speccer speccer a11y shortcut-holder');
 
-  _shortcut_holder.classList.add('ph-speccer');
-  _shortcut_holder.classList.add('speccer');
-  _shortcut_holder.classList.add('a11y');
-  _shortcut_holder.classList.add('shortcut-holder');
+  setClassNames(_shortcut_holder, _shortcut_holder_class_names);
 
   for (const key of _keys) {
     const _key_element = document.createElement('kbd');
     const _key_text_node = document.createTextNode(key);
+    const _key_element_class_names = cx('ph-speccer speccer a11y shortcut', {
+      modifier: SPECCER_MODIFIER_KEYS.includes(key.toLowerCase()),
+      physical: SPECCER_PHYSICAL_KEYS.includes(key.toLowerCase())
+    });
 
-    _key_element.classList.add('ph-speccer');
-    _key_element.classList.add('speccer');
-    _key_element.classList.add('a11y');
-    _key_element.classList.add('shortcut');
-
-    if (SPECCER_MODIFIER_KEYS.includes(key.toLowerCase()))
-      _key_element.classList.add('modifier');
-
-    if (SPECCER_PHYSICAL_KEYS.includes(key.toLowerCase()))
-      _key_element.classList.add('physical');
+    setClassNames(_key_element, _key_element_class_names);
 
     _key_element.appendChild(_key_text_node);
 

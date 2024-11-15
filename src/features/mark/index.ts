@@ -28,7 +28,7 @@
  * @packageDocumentation
  */
 /* eslint no-console:0 */
-import { cx, set } from '../../utils/classnames';
+import { set as setClassNames } from '../../utils/classnames';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
@@ -55,9 +55,7 @@ export const create = (id: string, n = 'span'): HTMLElement => {
 
   _mark_element.setAttribute('id', id);
 
-  const _class_names = cx('ph-speccer speccer mark');
-
-  set(_mark_element, _class_names);
+  setClassNames(_mark_element, 'ph-speccer speccer mark');
 
   return _mark_element;
 };

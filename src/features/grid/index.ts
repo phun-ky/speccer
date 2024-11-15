@@ -32,12 +32,13 @@
  */
 /* eslint no-console:0 */
 import { SpeccerOptionsInterface } from '../../types/speccer';
+import { set as setClassNames } from '../../utils/classnames';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
 import { isElementHidden } from '../../utils/node';
 import { offset } from '../../utils/position';
-import { get as getStyles } from '../../utils/styles';
+import { add as addStyles, get as getStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
 
 /**
@@ -92,25 +93,25 @@ export const create = async (
     if (columnGap < 24) gridColumnContainer.classList.add('speccer-small-grid');
 
     gridColumnContainer.setAttribute('data-speccer-id', _pin_element_id);
-    gridColumnContainer.classList.add('ph-speccer');
-    gridColumnContainer.classList.add('speccer');
-    gridColumnContainer.classList.add('speccer-grid-container');
 
-    gridColumnContainer.style.height = `${height + 64}px`;
-    gridColumnContainer.style.width = `${width}px`;
-    gridColumnContainer.style.left = `${left}px`;
-    gridColumnContainer.style.top = `${top - 32}px`;
-    gridColumnContainer.style.padding = padding;
-    gridColumnContainer.style.gridTemplateColumns = gridTemplateColumns;
+
+    setClassNames(gridColumnContainer, 'ph-speccer speccer speccer-grid-container');
+
+    addStyles(gridColumnContainer, {
+      height: `${height + 64}px`,
+      width: `${width}px`,
+      left: `${left}px`,
+      top: `${top - 32}px`,
+      padding: padding,
+      gridTemplateColumns: gridTemplateColumns
+    });
 
     const numberOfColumnItems = gridTemplateColumns.split(' ').length;
 
     for (let i = 0; i < numberOfColumnItems; i++) {
       const gridItem = document.createElement('div');
 
-      gridItem.classList.add('ph-speccer');
-      gridItem.classList.add('speccer');
-      gridItem.classList.add('speccer-grid-item');
+      setClassNames(gridItem, 'ph-speccer speccer speccer-grid-item');
       gridColumnContainer.appendChild(gridItem);
     }
     document.body.appendChild(gridColumnContainer);
@@ -136,21 +137,23 @@ export const create = async (
     gridRowContainer.classList.add('speccer');
     gridRowContainer.classList.add('speccer-grid-row-container');
 
-    gridRowContainer.style.width = `${width + 64}px`;
-    gridRowContainer.style.height = `${height}px`;
-    gridRowContainer.style.top = `${top}px`;
-    gridRowContainer.style.left = `${left - 32}px`;
-    gridRowContainer.style.padding = padding;
-    gridRowContainer.style.gridTemplateRows = gridTemplateRows;
+    setClassNames(gridRowContainer, 'ph-speccer speccer speccer-grid-row-container');
+
+    addStyles(gridRowContainer, {
+      width:  `${width + 64}px`,
+      height:  `${height}px`,
+      top:  `${top}px`,
+      left:  `${left - 32}px`,
+      padding:  padding,
+      gridTemplateRows:  gridTemplateRows
+    });
 
     const numberOfRowItems = gridTemplateRows.split(' ').length;
 
     for (let i = 0; i < numberOfRowItems; i++) {
       const gridItem = document.createElement('div');
 
-      gridItem.classList.add('ph-speccer');
-      gridItem.classList.add('speccer');
-      gridItem.classList.add('speccer-grid-row-item');
+      setClassNames(gridItem, 'ph-speccer speccer speccer-grid-row-item');
       gridRowContainer.appendChild(gridItem);
     }
     document.body.appendChild(gridRowContainer);
