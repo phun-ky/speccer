@@ -5,7 +5,7 @@ import dts from 'rollup-plugin-dts';
 import ts from 'rollup-plugin-typescript2';
 import typescript from 'typescript';
 
-import pack from './package.json' assert { type: 'json' };
+import pack from './package.json' with { type: 'json' };
 
 const banner = `/**
 * ${pack.name}
