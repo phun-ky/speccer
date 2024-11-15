@@ -6,7 +6,7 @@
 
 # features/grid
 
-> Last updated 2024-09-08T20:24:15.642Z
+> Last updated 2024-11-15T12:19:16.329Z
 
 This feature will highlight the grid spacing in a `display: grid;` element.
 
@@ -73,7 +73,7 @@ if (targetElement) {
 
 #### Defined in
 
-[features/grid/index.ts:60](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L60)
+[features/grid/index.ts:61](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L61)
 
 ---
 
@@ -128,7 +128,7 @@ grid(targetElement, options);
 
 #### Defined in
 
-[features/grid/index.ts:194](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L194)
+[features/grid/index.ts:197](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L197)
 
 ---
 
@@ -144,7 +144,7 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
-![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
+![Speccer banner, with logo and slogan: A zero dependency package to annotate or highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
 
 ---
 

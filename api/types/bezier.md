@@ -6,7 +6,7 @@
 
 # types/bezier
 
-> Last updated 2024-09-08T20:24:15.653Z
+> Last updated 2024-11-15T12:19:16.340Z
 
 ## Type Aliases
 
@@ -24,12 +24,15 @@ Options for creating a bezier path.
 #### Type declaration
 
 <table>
+<thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
 <th>Description</th>
 <th>Defined in</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>
 
@@ -74,6 +77,7 @@ The second position.
 
 </td>
 </tr>
+</tbody>
 </table>
 
 #### Defined in
@@ -96,11 +100,14 @@ type CoordinatesForBezierObjectType: {
 #### Type declaration
 
 <table>
+<thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
 <th>Defined in</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>
 
@@ -169,6 +176,7 @@ type CoordinatesForBezierObjectType: {
 
 </td>
 </tr>
+</tbody>
 </table>
 
 #### Defined in
@@ -189,11 +197,14 @@ type CoordinatesType: {
 #### Type declaration
 
 <table>
+<thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
 <th>Defined in</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>
 
@@ -228,6 +239,7 @@ type CoordinatesType: {
 
 </td>
 </tr>
+</tbody>
 </table>
 
 #### Defined in
@@ -252,12 +264,15 @@ Parameters for creating coordinates for a curve.
 #### Type declaration
 
 <table>
+<thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
 <th>Description</th>
 <th>Defined in</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>
 
@@ -346,6 +361,7 @@ The y-coordinate of the second point.
 
 </td>
 </tr>
+</tbody>
 </table>
 
 #### Defined in
@@ -369,16 +385,19 @@ Options for creating coordinates for a curve.
 #### Type declaration
 
 <table>
+<thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
 <th>Description</th>
 <th>Defined in</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>
 
-`direct`
+`direct`?
 
 </td>
 <td>
@@ -422,7 +441,7 @@ The direction of the curve.
 <tr>
 <td>
 
-`firstSet`
+`firstSet`?
 
 </td>
 <td>
@@ -441,6 +460,7 @@ Indicates if this is the first set of coordinates.
 
 </td>
 </tr>
+</tbody>
 </table>
 
 #### Defined in
@@ -465,12 +485,15 @@ Options for creating a curly bezier path.
 #### Type declaration
 
 <table>
+<thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
 <th>Description</th>
 <th>Defined in</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>
 
@@ -496,7 +519,7 @@ The direction of the path.
 <tr>
 <td>
 
-`firstSet`
+`firstSet`?
 
 </td>
 <td>
@@ -559,6 +582,7 @@ The second position.
 
 </td>
 </tr>
+</tbody>
 </table>
 
 #### Defined in
@@ -579,7 +603,7 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
-![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
+![Speccer banner, with logo and slogan: A zero dependency package to annotate or highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
 
 ---
 

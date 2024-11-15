@@ -4,11 +4,11 @@
 
 # SPECCER API Documentation
 
-![Speccer hero, with logo and slogan: A zero dependency package to annotate or highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-hero.png?raw=true)
+![Speccer hero, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-hero.png?raw=true)
 
 ---
 
-> Last updated 2024-09-08T20:24:15.629Z
+> Last updated 2024-11-15T12:19:16.319Z
 
 ## Modules
 

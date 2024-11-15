@@ -1,5 +1,30 @@
 # Changelog
 
+## [11.1.2](https://github.com/phun-ky/speccer/compare/v11.1.1...v11.1.2) (2024-11-15)
+
+
+### Tasks
+
+* 🤖 reinstall ([4856392](https://github.com/phun-ky/speccer/commit/485639218ffdb416a27057ffd7dd43bd16039501))
+* 🤖 Update node engine and reinstall ([c311d8f](https://github.com/phun-ky/speccer/commit/c311d8f37dcd59677b6fafb11dd305f14ce32524))
+* 🤖 Use correct node version ([ef1c06f](https://github.com/phun-ky/speccer/commit/ef1c06fca2f53f3e70dd3f366d9c991a6514797f))
+
+
+### Documentation
+
+* ✏️ Add missing "Used by" chapter ([5269b3b](https://github.com/phun-ky/speccer/commit/5269b3b7165e2f44e2d07939c82c19d5ef5eebb3))
+* ✏️ Add words about annotation ([3207bf7](https://github.com/phun-ky/speccer/commit/3207bf74f52e6c993f3e853258cba2046d67a4f4))
+
+
+### Bug
+
+* 🐛 Use correct prefix ([d1b0e55](https://github.com/phun-ky/speccer/commit/d1b0e550f2c0fdd44efac28a1cd4b0e4cf7ba016))
+
+
+### Performance change
+
+* ⚡️ Improve reflow issues ([14419ff](https://github.com/phun-ky/speccer/commit/14419ffb75b1f7c148e138f5d0fca6b0e7a5b00c))
+
 ## [11.1.1](https://github.com/phun-ky/speccer/compare/v11.1.0...v11.1.1) (2024-09-08)
 
 
