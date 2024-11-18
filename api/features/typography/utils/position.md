@@ -6,7 +6,7 @@
 
 # features/typography/utils/position
 
-> Last updated 2024-11-15T12:19:16.336Z
+> Last updated 2024-11-18T09:12:16.678Z
 
 ## Functions
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [11.1.3](https://github.com/phun-ky/speccer/compare/v11.1.2...v11.1.3) (2024-11-18)
+
+
+### Tasks
+
+* 🤖 bump rollup in the npm_and_yarn group across 1 directory ([d999fe5](https://github.com/phun-ky/speccer/commit/d999fe53cbcd52e0a3500e268898408f90457698))
+
 ## [11.1.2](https://github.com/phun-ky/speccer/compare/v11.1.1...v11.1.2) (2024-11-15)
 
 

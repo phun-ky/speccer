@@ -6,7 +6,7 @@
 
 # utils/classes/DrawSVGLine
 
-> Last updated 2024-11-15T12:19:16.351Z
+> Last updated 2024-11-18T09:12:16.693Z
 
 ## Classes
 
