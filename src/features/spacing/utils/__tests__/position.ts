@@ -8,8 +8,10 @@ import { position } from '../position';
 
 describe('position', () => {
   test('position should correctly calculate properties for marginTop', async () => {
-  // Set up JSDOM environment
-    const { window } = new JSDOM('<!DOCTYPE html><body><div id="target"></div></body>');
+    // Set up JSDOM environment
+    const { window } = new JSDOM(
+      '<!DOCTYPE html><body><div id="target"></div></body>'
+    );
     const document = window.document;
     const targetElement = document.getElementById('target');
 
@@ -23,7 +25,6 @@ describe('position', () => {
       bottom: 70
     });
 
-
     const result = await position('marginTop', 20, targetElement);
 
     assert.deepEqual(result, {
@@ -35,7 +36,9 @@ describe('position', () => {
   });
 
   test('position should correctly calculate properties for marginRight', async () => {
-    const { window } = new JSDOM('<!DOCTYPE html><body><div id="target"></div></body>');
+    const { window } = new JSDOM(
+      '<!DOCTYPE html><body><div id="target"></div></body>'
+    );
     const document = window.document;
     const targetElement = document.getElementById('target');
 
@@ -47,8 +50,6 @@ describe('position', () => {
       right: 110,
       bottom: 70
     });
-
-
 
     const result = await position('marginRight', 20, targetElement);
 
@@ -61,7 +62,9 @@ describe('position', () => {
   });
 
   test('position should correctly calculate properties for marginBottom with options', async () => {
-    const { window } = new JSDOM('<!DOCTYPE html><body><div id="target"></div></body>');
+    const { window } = new JSDOM(
+      '<!DOCTYPE html><body><div id="target"></div></body>'
+    );
     const document = window.document;
     const targetElement = document.getElementById('target');
 
@@ -74,9 +77,9 @@ describe('position', () => {
       bottom: 70
     });
 
-
-
-    const result = await position('marginBottom', 30, targetElement, { spacing: { bound: true } } as unknown as SpeccerOptionsInterface);
+    const result = await position('marginBottom', 30, targetElement, {
+      spacing: { bound: true }
+    } as unknown as SpeccerOptionsInterface);
 
     assert.deepEqual(result, {
       height: '30px',
@@ -87,7 +90,9 @@ describe('position', () => {
   });
 
   test('position should return undefined for unsupported properties', async () => {
-    const { window } = new JSDOM('<!DOCTYPE html><body><div id="target"></div></body>');
+    const { window } = new JSDOM(
+      '<!DOCTYPE html><body><div id="target"></div></body>'
+    );
     const document = window.document;
     const targetElement = document.getElementById('target');
 
@@ -99,8 +104,6 @@ describe('position', () => {
       right: 110,
       bottom: 70
     });
-
-
 
     const result = await position('unsupportedProperty', 20, targetElement);
 
@@ -108,7 +111,9 @@ describe('position', () => {
   });
 
   test('position should correctly calculate properties for marginLeft', async () => {
-    const { window } = new JSDOM('<!DOCTYPE html><body><div id="target"></div></body>');
+    const { window } = new JSDOM(
+      '<!DOCTYPE html><body><div id="target"></div></body>'
+    );
     const document = window.document;
     const targetElement = document.getElementById('target');
 
@@ -120,7 +125,6 @@ describe('position', () => {
       right: 110,
       bottom: 70
     });
-
 
     const result = await position('marginLeft', 20, targetElement);
 
@@ -133,7 +137,9 @@ describe('position', () => {
   });
 
   test('position should correctly calculate properties for paddingTop', async () => {
-    const { window } = new JSDOM('<!DOCTYPE html><body><div id="target"></div></body>');
+    const { window } = new JSDOM(
+      '<!DOCTYPE html><body><div id="target"></div></body>'
+    );
     const document = window.document;
     const targetElement = document.getElementById('target');
 
@@ -145,7 +151,6 @@ describe('position', () => {
       right: 110,
       bottom: 70
     });
-
 
     const result = await position('paddingTop', 30, targetElement);
 
@@ -158,7 +163,9 @@ describe('position', () => {
   });
 
   test('position should correctly calculate properties for paddingBottom with options', async () => {
-    const { window } = new JSDOM('<!DOCTYPE html><body><div id="target"></div></body>');
+    const { window } = new JSDOM(
+      '<!DOCTYPE html><body><div id="target"></div></body>'
+    );
     const document = window.document;
     const targetElement = document.getElementById('target');
 
@@ -171,8 +178,9 @@ describe('position', () => {
       bottom: 70
     });
 
-
-    const result = await position('paddingBottom', 30, targetElement, { spacing: { bound: true } } as unknown as SpeccerOptionsInterface);
+    const result = await position('paddingBottom', 30, targetElement, {
+      spacing: { bound: true }
+    } as unknown as SpeccerOptionsInterface);
 
     assert.deepEqual(result, {
       height: '30px',
@@ -183,7 +191,9 @@ describe('position', () => {
   });
 
   test('position should correctly calculate properties for paddingRight', async () => {
-    const { window } = new JSDOM('<!DOCTYPE html><body><div id="target"></div></body>');
+    const { window } = new JSDOM(
+      '<!DOCTYPE html><body><div id="target"></div></body>'
+    );
     const document = window.document;
     const targetElement = document.getElementById('target');
 
@@ -195,7 +205,6 @@ describe('position', () => {
       right: 110,
       bottom: 70
     });
-
 
     const result = await position('paddingRight', 40, targetElement);
 
@@ -208,7 +217,9 @@ describe('position', () => {
   });
 
   test('position should correctly calculate properties for paddingLeft', async () => {
-    const { window } = new JSDOM('<!DOCTYPE html><body><div id="target"></div></body>');
+    const { window } = new JSDOM(
+      '<!DOCTYPE html><body><div id="target"></div></body>'
+    );
     const document = window.document;
     const targetElement = document.getElementById('target');
 
@@ -220,7 +231,6 @@ describe('position', () => {
       right: 110,
       bottom: 70
     });
-
 
     const result = await position('paddingLeft', 40, targetElement);
 
@@ -233,7 +243,9 @@ describe('position', () => {
   });
 
   test('position should correctly handle bound spacing option', async () => {
-    const { window } = new JSDOM('<!DOCTYPE html><body><div id="target"></div></body>');
+    const { window } = new JSDOM(
+      '<!DOCTYPE html><body><div id="target"></div></body>'
+    );
     const document = window.document;
     const targetElement = document.getElementById('target');
 
@@ -246,8 +258,9 @@ describe('position', () => {
       bottom: 70
     });
 
-
-    const result = await position('paddingTop', 30, targetElement, { spacing: { bound: true } } as unknown as SpeccerOptionsInterface);
+    const result = await position('paddingTop', 30, targetElement, {
+      spacing: { bound: true }
+    } as unknown as SpeccerOptionsInterface);
 
     assert.deepEqual(result, {
       height: '30px',
