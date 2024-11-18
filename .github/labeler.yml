@@ -21,7 +21,6 @@
               - '.renovate.json'
               - '.npmrc'
               - '.prettierrc'
-              - 'tslint.json'
 'context: github':
   - any:
       - changed-files:
