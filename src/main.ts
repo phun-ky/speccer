@@ -91,7 +91,7 @@ const speccer = () => {
   removeAll('.ph-speccer.speccer');
 
   const spacingElements = document.querySelectorAll(
-    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"],[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)`
+    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"]`
   );
   const measureElements = document.querySelectorAll(
     `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_MEASURE}"]`
@@ -117,6 +117,18 @@ const speccer = () => {
   }
   for (const el of spacingElements) {
     spacingElement(el as HTMLElement);
+
+    if(el.hasChildNodes()){
+      const _child_spacing_elements = el.querySelectorAll('*:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody):not([data-speccer])');
+      const _areas_string: string =  el.getAttribute('data-speccer') || '';
+
+      if(_child_spacing_elements && _child_spacing_elements.length){
+        for (const childEl of _child_spacing_elements) {
+          childEl.setAttribute('data-speccer',_areas_string);
+          spacingElement(childEl as HTMLElement);
+        }
+      }
+    }
   }
   for (const el of measureElements) {
     measureElement(el as HTMLElement);
