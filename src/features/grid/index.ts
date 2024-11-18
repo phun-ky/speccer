@@ -94,8 +94,10 @@ export const create = async (
 
     gridColumnContainer.setAttribute('data-speccer-id', _pin_element_id);
 
-
-    setClassNames(gridColumnContainer, 'ph-speccer speccer speccer-grid-container');
+    setClassNames(
+      gridColumnContainer,
+      'ph-speccer speccer speccer-grid-container'
+    );
 
     addStyles(gridColumnContainer, {
       height: `${height + 64}px`,
@@ -137,15 +139,18 @@ export const create = async (
     gridRowContainer.classList.add('speccer');
     gridRowContainer.classList.add('speccer-grid-row-container');
 
-    setClassNames(gridRowContainer, 'ph-speccer speccer speccer-grid-row-container');
+    setClassNames(
+      gridRowContainer,
+      'ph-speccer speccer speccer-grid-row-container'
+    );
 
     addStyles(gridRowContainer, {
-      width:  `${width + 64}px`,
-      height:  `${height}px`,
-      top:  `${top}px`,
-      left:  `${left - 32}px`,
-      padding:  padding,
-      gridTemplateRows:  gridTemplateRows
+      width: `${width + 64}px`,
+      height: `${height}px`,
+      top: `${top}px`,
+      left: `${left - 32}px`,
+      padding: padding,
+      gridTemplateRows: gridTemplateRows
     });
 
     const numberOfRowItems = gridTemplateRows.split(' ').length;

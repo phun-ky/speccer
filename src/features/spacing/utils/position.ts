@@ -23,7 +23,7 @@ export const position = async (
   value: number,
   targetElement: HTMLElement,
   options?: SpeccerOptionsInterface | undefined
-): Promise<PositionUnitPropertiesType|undefined> => {
+): Promise<PositionUnitPropertiesType | undefined> => {
   await waitForFrame();
 
   const _target_rect = targetElement.getBoundingClientRect();

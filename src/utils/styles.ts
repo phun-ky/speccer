@@ -40,7 +40,7 @@ export const add = async (
 
   await waitForFrame();
 
-  if (Array.isArray(styles)){
+  if (Array.isArray(styles)) {
     styles = styles.reduce((acc, st) => {
       acc[st.key] = st.value;
 

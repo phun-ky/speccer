@@ -118,13 +118,15 @@ const speccer = () => {
   for (const el of spacingElements) {
     spacingElement(el as HTMLElement);
 
-    if(el.hasChildNodes()){
-      const _child_spacing_elements = el.querySelectorAll('*:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody):not([data-speccer])');
-      const _areas_string: string =  el.getAttribute('data-speccer') || '';
+    if (el.hasChildNodes()) {
+      const _child_spacing_elements = el.querySelectorAll(
+        '*:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody):not([data-speccer])'
+      );
+      const _areas_string: string = el.getAttribute('data-speccer') || '';
 
-      if(_child_spacing_elements && _child_spacing_elements.length){
+      if (_child_spacing_elements && _child_spacing_elements.length) {
         for (const childEl of _child_spacing_elements) {
-          childEl.setAttribute('data-speccer',_areas_string);
+          childEl.setAttribute('data-speccer', _areas_string);
           spacingElement(childEl as HTMLElement);
         }
       }
