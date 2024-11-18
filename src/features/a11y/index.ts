@@ -107,7 +107,9 @@ export const shortcut = async (
   const _regex = /\s\+\s/;
   const _keys = shortcutString.split(_regex).map((str) => str.trim());
   const _shortcut_holder = document.createElement('div');
-  const _shortcut_holder_class_names = cx('ph-speccer speccer a11y shortcut-holder');
+  const _shortcut_holder_class_names = cx(
+    'ph-speccer speccer a11y shortcut-holder'
+  );
 
   setClassNames(_shortcut_holder, _shortcut_holder_class_names);
 

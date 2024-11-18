@@ -6,7 +6,7 @@
 
 # features/typography/utils/template
 
-> Last updated 2024-11-18T09:12:16.679Z
+> Last updated 2024-11-18T11:00:02.727Z
 
 ## Functions
 
