@@ -6,7 +6,7 @@
 
 # utils/constants
 
-> Last updated 2024-11-19T08:01:30.493Z
+> Last updated 2024-11-19T19:54:48.976Z
 
 ## Variables
 

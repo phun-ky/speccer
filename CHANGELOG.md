@@ -1,5 +1,18 @@
 # Changelog
 
+## [11.1.6](https://github.com/phun-ky/speccer/compare/v11.1.5...v11.1.6) (2024-11-19)
+
+
+### Tasks
+
+* 🤖 tslint is deprecated, built into eslint since 2019 ([3ed5108](https://github.com/phun-ky/speccer/commit/3ed51089d6a169f89f16bc950e98d7a7fcb042ad))
+* 🤖 Update license year ([ea695ed](https://github.com/phun-ky/speccer/commit/ea695ed694962871a06cd3d974cedc1ad6cfccfb))
+
+
+### Documentation
+
+* ✏️ Upate `README.md` with correct logo for if ([4e7f972](https://github.com/phun-ky/speccer/commit/4e7f97211a7f0efd9e600ec4b28f8f1555c227fa))
+
 ## [11.1.5](https://github.com/phun-ky/speccer/compare/v11.1.4...v11.1.5) (2024-11-19)
 
 
