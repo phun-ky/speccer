@@ -1,5 +1,12 @@
 # Changelog
 
+## [11.1.4](https://github.com/phun-ky/speccer/compare/v11.1.3...v11.1.4) (2024-11-18)
+
+
+### Bug
+
+* 🐛 Make sure spacing is including children again ([749e1b1](https://github.com/phun-ky/speccer/commit/749e1b1f13e7e8ebbf6d790018a026c501fc1feb))
+
 ## [11.1.3](https://github.com/phun-ky/speccer/compare/v11.1.2...v11.1.3) (2024-11-18)
 
 

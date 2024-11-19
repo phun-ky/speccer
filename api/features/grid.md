@@ -6,7 +6,7 @@
 
 # features/grid
 
-> Last updated 2024-11-18T09:12:16.671Z
+> Last updated 2024-11-18T11:00:02.719Z
 
 This feature will highlight the grid spacing in a `display: grid;` element.
 
@@ -128,7 +128,7 @@ grid(targetElement, options);
 
 #### Defined in
 
-[features/grid/index.ts:197](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L197)
+[features/grid/index.ts:202](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L202)
 
 ---
 
