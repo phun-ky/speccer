@@ -6,7 +6,7 @@
 
 # utils/direction-of-element
 
-> Last updated 2024-11-18T11:00:02.744Z
+> Last updated 2024-11-19T08:01:30.495Z
 
 ## Functions
 
