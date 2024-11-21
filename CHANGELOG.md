@@ -1,5 +1,12 @@
 # Changelog
 
+## [11.2.1](https://github.com/phun-ky/speccer/compare/v11.2.0...v11.2.1) (2024-11-21)
+
+
+### Documentation
+
+* ✏️ Update screenshots ([dc4394f](https://github.com/phun-ky/speccer/commit/dc4394fd3b1a5a34676f5466bf168f6cfb2f332a))
+
 ## [11.2.0](https://github.com/phun-ky/speccer/compare/v11.1.6...v11.2.0) (2024-11-21)
 
 

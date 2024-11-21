@@ -6,7 +6,7 @@
 
 # features/measure
 
-> Last updated 2024-11-21T13:02:17.733Z
+> Last updated 2024-11-21T13:26:40.766Z
 
 This feature measures given element
 
