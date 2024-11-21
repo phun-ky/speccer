@@ -43,6 +43,8 @@
     - [A11y notation](#a11y-notation)
       - [Tab stops](#tab-stops)
       - [Landmarks and regions](#landmarks-and-regions)
+      - [Headings](#headings)
+      - [Autocomplete](#autocomplete)
       - [Keys and shortcut](#keys-and-shortcut)
     - [Customization](#customization)
   - [API](#api)
@@ -548,9 +550,9 @@ In your component examples, use the following attribute.
 
 ### A11y notation
 
-With **SPECCER**, you can also display accessibility notation, like [Accessibility Bluelines](https://dribbble.com/shots/6269661-Accessibility-Bluelines?utm_source=Clipboard_Shot&utm_campaign=jeremyelder&utm_content=Accessibility%20Bluelines&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=jeremyelder&utm_content=Accessibility%20Bluelines&utm_medium=Social_Share):
+With **SPECCER**, you can also display accessibility notation, like [Accessibility Bluelines](https://dribbble.com/shots/6269661-Accessibility-Bluelines?utm_source=Clipboard_Shot&utm_campaign=jeremyelder&utm_content=Accessibility%20Bluelines&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=jeremyelder&utm_content=Accessibility%20Bluelines&utm_medium=Social_Share) or [A11y Annotation Kit](https://www.figma.com/community/file/953682768192596304):
 
-Prior art: [Jeremy Elder](https://twitter.com/JeremyElder)
+Prior art: [Jeremy Elder](https://twitter.com/JeremyElder) and [Stephanie Hagadorn](https://shagadorn.work/)
 
 #### Tab stops
 
@@ -563,6 +565,18 @@ If you want to display tab stops, append `data-speccer="a11y tabstops"` as an at
 ![Screenshot of speccer a11y landmarks in use](./public/speccer-a11y-landmarks-light.png)
 
 If you want to display landmarks and regions, append `data-speccer="a11y landmark"` as an attribute to the container you want to display the landmarks and regions in.
+
+#### Headings
+
+![Screenshot of speccer a11y headings in use](./public/speccer-a11y-headings-light.png)
+
+If you want to display headings, append `data-speccer="a11y headings"` as an attribute to the container you want to display the headings in.
+
+#### Autocomplete
+
+![Screenshot of speccer a11y autocomplete in use](./public/speccer-a11y-autocomplete-light.png)
+
+If you want to display autocomplete, append `data-speccer="a11y autocomplete"` as an attribute to the container you want to display the autocomplete in.
 
 #### Keys and shortcut
 
