@@ -1,3 +1,4 @@
+/* node:coverage disable */
 /**
  * This feature marks given element
  *
@@ -28,6 +29,7 @@
  * @packageDocumentation
  */
 /* eslint no-console:0 */
+/* node:coverage enable */
 import { set as setClassNames } from '../../utils/classnames';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';

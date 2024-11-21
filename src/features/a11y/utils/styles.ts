@@ -58,15 +58,18 @@ export const styles = async (
     };
   }
 
-  if (type === 'landmark') {
-    let { left, top } = _positional_styles.fromTop();
+  if (type === 'landmark' || type === 'autocomplete' || type === 'headings'  ) {
+    let { left, top } = _positional_styles.fromLeft();
 
-    left -= 16;
-    top -= 16;
 
-    if (left <= 0) left = 32;
 
-    if (top <= 0) top = 32;
+
+    left -= SPECCER_PIN_SPACE;
+
+
+    if (left <= 0) left = SPECCER_PIN_SPACE;
+
+    if (top <= 0) top = SPECCER_PIN_SPACE;
 
     return {
       left: `${left}px`,

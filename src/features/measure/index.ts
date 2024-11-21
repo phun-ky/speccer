@@ -1,3 +1,4 @@
+/* node:coverage disable */
 /**
  * This feature measures given element
  *
@@ -31,6 +32,7 @@
  * @packageDocumentation
  */
 /* eslint no-console:0 */
+/* node:coverage enable */
 import { MeasureAreaEnum } from '../../types/enums/area';
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { cx, set as setClassNames } from '../../utils/classnames';

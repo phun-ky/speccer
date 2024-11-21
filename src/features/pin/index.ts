@@ -1,3 +1,4 @@
+/* node:coverage disable */
 /**
  * This feature annotate or highlight the anatomy of an element.
  *
@@ -18,6 +19,7 @@
  * @packageDocumentation
  */
 // eslint-disable-next-line import/no-unused-modules
+/* node:coverage enable */
 export { createPinElement } from './utils/create-pin-element';
 
 // eslint-disable-next-line import/no-unused-modules

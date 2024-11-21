@@ -1,3 +1,4 @@
+/* node:coverage disable */
 /* eslint no-console:0 */
 /**
  * Converts a number to a string with a specified number of decimal places.
@@ -12,5 +13,5 @@
  * const formattedNumber = decimal(12.3456, 2); // "12.34"
  * ```
  */
-export const decimal = (number: string | number, decimals = 3): string =>
-  parseFloat(String(number)).toFixed(decimals);
+/* node:coverage enable */
+export const decimal = (number: string | number, decimals = 3): string => parseFloat(String(number)).toFixed(decimals);

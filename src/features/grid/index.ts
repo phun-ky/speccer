@@ -1,3 +1,4 @@
+/* node:coverage disable */
 /**
  * This feature will highlight the grid spacing in a `display: grid;` element.
  *
@@ -31,6 +32,7 @@
  * @packageDocumentation
  */
 /* eslint no-console:0 */
+/* node:coverage enable */
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { set as setClassNames } from '../../utils/classnames';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';

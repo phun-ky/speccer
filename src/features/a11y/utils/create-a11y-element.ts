@@ -24,6 +24,8 @@ export const createA11yElement = (
   const _class_names = cx('ph-speccer speccer a11y', {
     tabstops: type === 'tabstops',
     landmark: type === 'landmark',
+    autocomplete: type === 'autocomplete',
+    headings: type === 'headings',
     region: type === 'region'
   });
 
