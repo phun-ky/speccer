@@ -9,7 +9,7 @@
  *
  * ```html
  * <div
- *   data-speccer="a11y [shortcuts|tabstops|landmark]"
+ *   data-speccer="a11y [shortcuts|tabstops|landmark|headings|autocomplete]"
  *   class="…"
  * >
  *   …
