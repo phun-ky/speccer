@@ -6,7 +6,7 @@
 
 # features/pin
 
-> Last updated 2024-11-19T19:54:48.956Z
+> Last updated 2024-11-21T13:02:17.734Z
 
 This feature annotate or highlight the anatomy of an element.
 
@@ -76,7 +76,7 @@ pinElements(sectionElement);
 
 #### Defined in
 
-[features/pin/index.ts:49](https://github.com/phun-ky/speccer/blob/main/src/features/pin/index.ts#L49)
+[features/pin/index.ts:51](https://github.com/phun-ky/speccer/blob/main/src/features/pin/index.ts#L51)
 
 ---
 

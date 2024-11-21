@@ -6,7 +6,7 @@
 
 # config/browser
 
-> Last updated 2024-11-19T19:54:48.946Z
+> Last updated 2024-11-21T13:02:17.723Z
 
 Contains the helper functions to activate SPECCER via a script tag, based on attributes:
 
@@ -102,7 +102,7 @@ A function to activate speccer based on script attributes.
 
 #### Defined in
 
-[config/browser.ts:217](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L217)
+[config/browser.ts:219](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L219)
 
 ---
 
@@ -133,7 +133,7 @@ A function to initialize speccer when the DOM is ready.
 
 #### Defined in
 
-[config/browser.ts:81](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L81)
+[config/browser.ts:83](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L83)
 
 ---
 
@@ -158,7 +158,7 @@ A function to initialize lazy speccer functionality.
 
 #### Defined in
 
-[config/browser.ts:99](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L99)
+[config/browser.ts:101](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L101)
 
 ---
 
@@ -189,7 +189,7 @@ A function to manually activate speccer.
 
 #### Defined in
 
-[config/browser.ts:202](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L202)
+[config/browser.ts:204](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L204)
 
 ---
 

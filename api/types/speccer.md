@@ -6,7 +6,7 @@
 
 # types/speccer
 
-> Last updated 2024-11-19T19:54:48.969Z
+> Last updated 2024-11-21T13:02:17.747Z
 
 ## Table of Contents
 

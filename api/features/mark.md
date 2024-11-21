@@ -6,7 +6,7 @@
 
 # features/mark
 
-> Last updated 2024-11-19T19:54:48.955Z
+> Last updated 2024-11-21T13:02:17.733Z
 
 This feature marks given element
 
@@ -68,7 +68,7 @@ document.body.appendChild(marker);
 
 #### Defined in
 
-[features/mark/index.ts:53](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L53)
+[features/mark/index.ts:55](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L55)
 
 ---
 
@@ -103,7 +103,7 @@ mark(targetElement);
 
 #### Defined in
 
-[features/mark/index.ts:77](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L77)
+[features/mark/index.ts:79](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L79)
 
 ---
 

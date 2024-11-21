@@ -6,7 +6,7 @@
 
 # features/measure
 
-> Last updated 2024-11-19T19:54:48.955Z
+> Last updated 2024-11-21T13:02:17.733Z
 
 This feature measures given element
 
@@ -78,7 +78,7 @@ document.body.appendChild(measurement);
 
 #### Defined in
 
-[features/measure/index.ts:59](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L59)
+[features/measure/index.ts:61](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L61)
 
 ---
 
@@ -140,7 +140,7 @@ measure(targetElement, options);
 
 #### Defined in
 
-[features/measure/index.ts:125](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L125)
+[features/measure/index.ts:127](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L127)
 
 ---
 

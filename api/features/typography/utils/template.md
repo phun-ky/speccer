@@ -6,7 +6,7 @@
 
 # features/typography/utils/template
 
-> Last updated 2024-11-19T19:54:48.961Z
+> Last updated 2024-11-21T13:02:17.739Z
 
 ## Functions
 
@@ -41,7 +41,7 @@ console.log(typographyStyles);
 
 #### Defined in
 
-[features/typography/utils/template.ts:18](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/template.ts#L18)
+[features/typography/utils/template.ts:20](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/template.ts#L20)
 
 ---
 

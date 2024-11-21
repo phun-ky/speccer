@@ -6,7 +6,7 @@
 
 # utils/number
 
-> Last updated 2024-11-19T19:54:48.980Z
+> Last updated 2024-11-21T13:02:17.758Z
 
 ## Functions
 
@@ -40,7 +40,7 @@ const formattedNumber = decimal(12.3456, 2); // "12.34"
 
 #### Defined in
 
-[utils/number.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/number.ts#L15)
+[utils/number.ts:17](https://github.com/phun-ky/speccer/blob/main/src/utils/number.ts#L17)
 
 ---
 

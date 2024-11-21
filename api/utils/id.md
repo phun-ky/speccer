@@ -6,7 +6,7 @@
 
 # utils/id
 
-> Last updated 2024-11-19T19:54:48.979Z
+> Last updated 2024-11-21T13:02:17.757Z
 
 ## Functions
 
@@ -34,7 +34,7 @@ console.log(id); // Example output: "_abc123def"
 
 #### Defined in
 
-[utils/id.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/id.ts#L14)
+[utils/id.ts:16](https://github.com/phun-ky/speccer/blob/main/src/utils/id.ts#L16)
 
 ---
 

@@ -8,14 +8,17 @@
 
 ---
 
-> Last updated 2024-11-19T19:54:48.944Z
+> Last updated 2024-11-21T13:02:17.721Z
 
 ## Modules
 
 - [config/browser](config/browser.md)
 - [features/a11y](features/a11y.md)
 - [features/a11y/constants](features/a11y/constants.md)
+- [features/a11y/utils/add-a11y-element](features/a11y/utils/add-a11y-element.md)
+- [features/a11y/utils/add-shortcut-element](features/a11y/utils/add-shortcut-element.md)
 - [features/a11y/utils/create-a11y-element](features/a11y/utils/create-a11y-element.md)
+- [features/a11y/utils/get-role](features/a11y/utils/get-role.md)
 - [features/a11y/utils/styles](features/a11y/utils/styles.md)
 - [features/grid](features/grid.md)
 - [features/mark](features/mark.md)

@@ -1,5 +1,29 @@
 # Changelog
 
+## [11.2.0](https://github.com/phun-ky/speccer/compare/v11.1.6...v11.2.0) (2024-11-21)
+
+
+### Tasks
+
+* 🤖 Upate dev file for a11y ([6ab6bc9](https://github.com/phun-ky/speccer/commit/6ab6bc9c210c0efb4114d24ecfcc90a28f75af5a))
+* 🤖 Update after merge from main ([31400dc](https://github.com/phun-ky/speccer/commit/31400dc076aa1f96dfd81fbf5bc56df0e94165dc))
+
+
+### Feature
+
+* 🎸 Add and update a11y features ([29c70ba](https://github.com/phun-ky/speccer/commit/29c70ba2dda6eae3439cc9bc3aea876fea0873b2))
+
+
+### Bug
+
+* 🐛 Use correct prefix for import ([e142ffb](https://github.com/phun-ky/speccer/commit/e142ffbfe984baa4da9207a992b2accd67c76c7e))
+* 🐛 Use given content to proper contain numbers ([5472419](https://github.com/phun-ky/speccer/commit/5472419137efd201e8e92a22b456c263fc58fdcf))
+
+
+### Refactoring
+
+* 💡 Adjust styling for tabstops ([d14f3c2](https://github.com/phun-ky/speccer/commit/d14f3c2accdc9cbd54f76ab3f4da16d53bc64d4b))
+
 ## [11.1.6](https://github.com/phun-ky/speccer/compare/v11.1.5...v11.1.6) (2024-11-19)
 
 

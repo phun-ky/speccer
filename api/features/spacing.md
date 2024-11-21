@@ -6,7 +6,7 @@
 
 # features/spacing
 
-> Last updated 2024-11-19T19:54:48.958Z
+> Last updated 2024-11-21T13:02:17.736Z
 
 This feature highlights the spacing of an element.
 
@@ -64,7 +64,7 @@ document.body.appendChild(spacingElement);
 
 #### Defined in
 
-[features/spacing/index.ts:52](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L52)
+[features/spacing/index.ts:54](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L54)
 
 ---
 
@@ -131,7 +131,7 @@ element(targetElement, options);
 
 #### Defined in
 
-[features/spacing/index.ts:113](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L113)
+[features/spacing/index.ts:115](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L115)
 
 ---
 

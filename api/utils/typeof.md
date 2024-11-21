@@ -6,7 +6,7 @@
 
 # utils/typeof
 
-> Last updated 2024-11-19T19:54:48.982Z
+> Last updated 2024-11-21T13:02:17.760Z
 
 ## Functions
 
