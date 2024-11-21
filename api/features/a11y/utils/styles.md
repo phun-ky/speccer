@@ -6,7 +6,7 @@
 
 # features/a11y/utils/styles
 
-> Last updated 2024-11-21T13:26:40.764Z
+> Last updated 2024-11-21T14:05:20.004Z
 
 ## Functions
 

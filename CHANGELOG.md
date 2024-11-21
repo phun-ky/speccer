@@ -1,5 +1,12 @@
 # Changelog
 
+## [11.2.2](https://github.com/phun-ky/speccer/compare/v11.2.1...v11.2.2) (2024-11-21)
+
+
+### Tasks
+
+* 🤖 Reduce size of images, and make screenshots larger ([d477a2f](https://github.com/phun-ky/speccer/commit/d477a2f9e252f51596181f89613bf240ffef6a3c))
+
 ## [11.2.1](https://github.com/phun-ky/speccer/compare/v11.2.0...v11.2.1) (2024-11-21)
 
 

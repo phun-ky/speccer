@@ -6,7 +6,7 @@
 
 # features/pin/utils/styles
 
-> Last updated 2024-11-21T13:26:40.768Z
+> Last updated 2024-11-21T14:05:20.009Z
 
 ## Functions
 
