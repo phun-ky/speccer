@@ -6,7 +6,7 @@
 
 # types/interfaces/global
 
-> Last updated 2024-09-08T20:24:15.657Z
+> Last updated 2024-11-19T19:54:48.967Z
 
 ## Interfaces
 
@@ -19,8 +19,8 @@
 | `DrawCircle`          | `any`       | Represents the DrawCircle class for drawing circles.                                                                                                                                                                                                                                                                                                             | [types/interfaces/global.ts:16](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/global.ts#L16) |
 | `DrawSVGCurlyBracket` | `any`       | Represents the DrawSVGCurlyBracket class for drawing curly brackets.                                                                                                                                                                                                                                                                                             | [types/interfaces/global.ts:12](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/global.ts#L12) |
 | `DrawSVGLine`         | `any`       | Represents the DrawSVGLine class for drawing lines.                                                                                                                                                                                                                                                                                                              | [types/interfaces/global.ts:21](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/global.ts#L21) |
-| `SPECCER_LITERALS`    | `string`\[] | Represents the custom literals to be used. ![Screenshot of speccer with custom literals](https://github.com/phun-ky/speccer/blob/main/public/literals.png?raw=true) **Example** `window.SPECCER_LITERALS = [あ,い,う,え,お,か,き,く,け,こ,さ,し,す,せ,そ,た,ち,つ,て,と,な,に,ぬ,ね,の,は,ひ,ふ,へ,ほ,ま,み,む,め,も,や,ゆ,よ,ら,り,る,れ,ろ,わ,を]; speccer();` | [types/interfaces/global.ts:37](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/global.ts#L37) |
 | `speccer`             | `any`       | Represents the speccer object for additional functionality.                                                                                                                                                                                                                                                                                                      | [types/interfaces/global.ts:26](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/global.ts#L26) |
+| `SPECCER_LITERALS`    | `string`\[] | Represents the custom literals to be used. ![Screenshot of speccer with custom literals](https://github.com/phun-ky/speccer/blob/main/public/literals.png?raw=true) **Example** `window.SPECCER_LITERALS = [あ,い,う,え,お,か,き,く,け,こ,さ,し,す,せ,そ,た,ち,つ,て,と,な,に,ぬ,ね,の,は,ひ,ふ,へ,ほ,ま,み,む,め,も,や,ゆ,よ,ら,り,る,れ,ろ,わ,を]; speccer();` | [types/interfaces/global.ts:37](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/global.ts#L37) |
 
 ---
 
@@ -36,7 +36,7 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
-![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
+![Speccer banner, with logo and slogan: A zero dependency package to annotate or highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
 
 ---
 

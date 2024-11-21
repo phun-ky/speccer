@@ -6,7 +6,7 @@
 
 # types/css
 
-> Last updated 2024-09-08T20:24:15.654Z
+> Last updated 2024-11-19T19:54:48.965Z
 
 ## Type Aliases
 
@@ -30,16 +30,19 @@ CSS properties for spacing.
 #### Type declaration
 
 <table>
+<thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
 <th>Description</th>
 <th>Defined in</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>
 
-`marginBottom`
+`marginBottom`?
 
 </td>
 <td>
@@ -61,7 +64,7 @@ The margin bottom property.
 <tr>
 <td>
 
-`marginLeft`
+`marginLeft`?
 
 </td>
 <td>
@@ -83,7 +86,7 @@ The margin left property.
 <tr>
 <td>
 
-`marginRight`
+`marginRight`?
 
 </td>
 <td>
@@ -105,7 +108,7 @@ The margin right property.
 <tr>
 <td>
 
-`marginTop`
+`marginTop`?
 
 </td>
 <td>
@@ -127,7 +130,7 @@ The margin top property.
 <tr>
 <td>
 
-`paddingBottom`
+`paddingBottom`?
 
 </td>
 <td>
@@ -149,7 +152,7 @@ The padding bottom property.
 <tr>
 <td>
 
-`paddingLeft`
+`paddingLeft`?
 
 </td>
 <td>
@@ -171,7 +174,7 @@ The padding left property.
 <tr>
 <td>
 
-`paddingRight`
+`paddingRight`?
 
 </td>
 <td>
@@ -193,7 +196,7 @@ The padding right property.
 <tr>
 <td>
 
-`paddingTop`
+`paddingTop`?
 
 </td>
 <td>
@@ -212,6 +215,7 @@ The padding top property.
 
 </td>
 </tr>
+</tbody>
 </table>
 
 #### Defined in
@@ -239,12 +243,15 @@ CSS properties for typography.
 #### Type declaration
 
 <table>
+<thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
 <th>Description</th>
 <th>Defined in</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>
 
@@ -399,6 +406,7 @@ The line height property.
 
 </td>
 </tr>
+</tbody>
 </table>
 
 #### Defined in
@@ -419,7 +427,7 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
-![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
+![Speccer banner, with logo and slogan: A zero dependency package to annotate or highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
 
 ---
 

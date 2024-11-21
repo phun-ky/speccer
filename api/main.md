@@ -6,41 +6,23 @@
 
 # main
 
-> Last updated 2024-09-08T20:24:15.650Z
+> Last updated 2024-11-19T19:54:48.961Z
 
 ## Table of Contents
 
-- [main](#main)
-  - [Table of Contents](#table-of-contents)
-  - [Examples](#examples)
-  - [References](#references)
-    - [removeSpeccerElement](#removespeccerelement)
-  - [Variables](#variables)
-    - [grid](#grid)
-      - [Type declaration](#type-declaration)
-      - [Defined in](#defined-in)
-    - [mark](#mark)
-      - [Type declaration](#type-declaration-1)
-      - [Defined in](#defined-in-1)
-    - [measure](#measure)
-      - [Type declaration](#type-declaration-2)
-      - [Defined in](#defined-in-2)
-    - [modes](#modes)
-      - [Type declaration](#type-declaration-3)
-      - [Defined in](#defined-in-3)
-    - [pin](#pin)
-      - [Type declaration](#type-declaration-4)
-      - [Defined in](#defined-in-4)
-    - [spacing](#spacing)
-      - [Type declaration](#type-declaration-5)
-      - [Defined in](#defined-in-5)
-    - [typography](#typography)
-      - [Type declaration](#type-declaration-6)
-      - [Defined in](#defined-in-6)
-  - [Functions](#functions)
-    - [speccer()](#speccer)
-      - [Returns](#returns)
-      - [Defined in](#defined-in-7)
+- [Examples](#examples)
+- [References](#references)
+  - [removeSpeccerElement](#removespeccerelement)
+- [Variables](#variables)
+  - [grid](#grid)
+  - [mark](#mark)
+  - [measure](#measure)
+  - [modes](#modes)
+  - [pin](#pin)
+  - [spacing](#spacing)
+  - [typography](#typography)
+- [Functions](#functions)
+  - [speccer()](#speccer)
 
 ## Examples
 
@@ -77,12 +59,15 @@ const grid: {
 #### Type declaration
 
 <table>
+<thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
 <th>Default value</th>
 <th>Defined in</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>
 
@@ -127,6 +112,7 @@ gridElement
 
 </td>
 </tr>
+</tbody>
 </table>
 
 #### Defined in
@@ -147,12 +133,15 @@ const mark: {
 #### Type declaration
 
 <table>
+<thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
 <th>Default value</th>
 <th>Defined in</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>
 
@@ -197,6 +186,7 @@ markElement
 
 </td>
 </tr>
+</tbody>
 </table>
 
 #### Defined in
@@ -217,12 +207,15 @@ const measure: {
 #### Type declaration
 
 <table>
+<thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
 <th>Default value</th>
 <th>Defined in</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>
 
@@ -267,6 +260,7 @@ measureElement
 
 </td>
 </tr>
+</tbody>
 </table>
 
 #### Defined in
@@ -289,11 +283,14 @@ const modes: {
 #### Type declaration
 
 <table>
+<thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
 <th>Defined in</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>
 
@@ -362,6 +359,7 @@ const modes: {
 
 </td>
 </tr>
+</tbody>
 </table>
 
 #### Defined in
@@ -388,11 +386,14 @@ const pin: {
 #### Type declaration
 
 <table>
+<thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
 <th>Defined in</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>
 
@@ -444,6 +445,7 @@ const pin: {
 
 </td>
 </tr>
+</tbody>
 </table>
 
 #### Defined in
@@ -464,12 +466,15 @@ const spacing: {
 #### Type declaration
 
 <table>
+<thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
 <th>Default value</th>
 <th>Defined in</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>
 
@@ -514,6 +519,7 @@ spacingElement
 
 </td>
 </tr>
+</tbody>
 </table>
 
 #### Defined in
@@ -534,12 +540,15 @@ const typography: {
 #### Type declaration
 
 <table>
+<thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
 <th>Default value</th>
 <th>Defined in</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>
 
@@ -584,6 +593,7 @@ typographyElement
 
 </td>
 </tr>
+</tbody>
 </table>
 
 #### Defined in

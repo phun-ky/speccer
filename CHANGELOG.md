@@ -1,5 +1,64 @@
 # Changelog
 
+## [11.1.6](https://github.com/phun-ky/speccer/compare/v11.1.5...v11.1.6) (2024-11-19)
+
+
+### Tasks
+
+* 🤖 tslint is deprecated, built into eslint since 2019 ([3ed5108](https://github.com/phun-ky/speccer/commit/3ed51089d6a169f89f16bc950e98d7a7fcb042ad))
+* 🤖 Update license year ([ea695ed](https://github.com/phun-ky/speccer/commit/ea695ed694962871a06cd3d974cedc1ad6cfccfb))
+
+
+### Documentation
+
+* ✏️ Upate `README.md` with correct logo for if ([4e7f972](https://github.com/phun-ky/speccer/commit/4e7f97211a7f0efd9e600ec4b28f8f1555c227fa))
+
+## [11.1.5](https://github.com/phun-ky/speccer/compare/v11.1.4...v11.1.5) (2024-11-19)
+
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 3 updates ([c1f63af](https://github.com/phun-ky/speccer/commit/c1f63afac9300423645be81dfa11f93a6441c6fb))
+
+## [11.1.4](https://github.com/phun-ky/speccer/compare/v11.1.3...v11.1.4) (2024-11-18)
+
+
+### Bug
+
+* 🐛 Make sure spacing is including children again ([749e1b1](https://github.com/phun-ky/speccer/commit/749e1b1f13e7e8ebbf6d790018a026c501fc1feb))
+
+## [11.1.3](https://github.com/phun-ky/speccer/compare/v11.1.2...v11.1.3) (2024-11-18)
+
+
+### Tasks
+
+* 🤖 bump rollup in the npm_and_yarn group across 1 directory ([d999fe5](https://github.com/phun-ky/speccer/commit/d999fe53cbcd52e0a3500e268898408f90457698))
+
+## [11.1.2](https://github.com/phun-ky/speccer/compare/v11.1.1...v11.1.2) (2024-11-15)
+
+
+### Tasks
+
+* 🤖 reinstall ([4856392](https://github.com/phun-ky/speccer/commit/485639218ffdb416a27057ffd7dd43bd16039501))
+* 🤖 Update node engine and reinstall ([c311d8f](https://github.com/phun-ky/speccer/commit/c311d8f37dcd59677b6fafb11dd305f14ce32524))
+* 🤖 Use correct node version ([ef1c06f](https://github.com/phun-ky/speccer/commit/ef1c06fca2f53f3e70dd3f366d9c991a6514797f))
+
+
+### Documentation
+
+* ✏️ Add missing "Used by" chapter ([5269b3b](https://github.com/phun-ky/speccer/commit/5269b3b7165e2f44e2d07939c82c19d5ef5eebb3))
+* ✏️ Add words about annotation ([3207bf7](https://github.com/phun-ky/speccer/commit/3207bf74f52e6c993f3e853258cba2046d67a4f4))
+
+
+### Bug
+
+* 🐛 Use correct prefix ([d1b0e55](https://github.com/phun-ky/speccer/commit/d1b0e550f2c0fdd44efac28a1cd4b0e4cf7ba016))
+
+
+### Performance change
+
+* ⚡️ Improve reflow issues ([14419ff](https://github.com/phun-ky/speccer/commit/14419ffb75b1f7c148e138f5d0fca6b0e7a5b00c))
+
 ## [11.1.1](https://github.com/phun-ky/speccer/compare/v11.1.0...v11.1.1) (2024-09-08)
 
 

@@ -6,7 +6,7 @@
 
 # utils/camel-case
 
-> Last updated 2024-09-08T20:24:15.665Z
+> Last updated 2024-11-19T19:54:48.973Z
 
 ## Functions
 
@@ -48,7 +48,7 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
-![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
+![Speccer banner, with logo and slogan: A zero dependency package to annotate or highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
 
 ---
 

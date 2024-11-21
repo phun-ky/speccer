@@ -40,14 +40,15 @@ export const add = async (
 
   await waitForFrame();
 
-  if (Array.isArray(styles))
-    for (const style of styles) {
-      el.style[style.key] = style.value;
-    }
-  else
-    for (const key of Object.keys(styles)) {
-      el.style[key] = styles[key];
-    }
+  if (Array.isArray(styles)) {
+    styles = styles.reduce((acc, st) => {
+      acc[st.key] = st.value;
+
+      return acc;
+    }, {});
+  }
+
+  Object.assign(el.style, styles);
 };
 
 /**

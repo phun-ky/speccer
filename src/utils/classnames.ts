@@ -20,17 +20,19 @@ import { isNotString } from './typeof';
  * set(element, 'class1 class2');
  * ```
  */
-export const set = (el: HTMLElement, cls: string, avoid = 'noop') => {
+export const set = (el: HTMLElement, cls: string, avoid = 'noop'): void => {
   if (!el) return;
 
   if (!cls || (cls && !cls.length)) return;
 
-  cls
+  const preparedClassNames = cls
     .trim()
     .split(' ')
     .filter((cl) => cl !== avoid)
     .filter((cl) => cl !== '')
-    .forEach((cl) => el.classList.add(cl.trim()));
+    .map((cl) => cl.trim());
+
+  el.classList.add(...preparedClassNames);
 };
 
 /**
@@ -79,12 +81,14 @@ export const remove = (el: HTMLElement, cls: string, avoid = 'noop') => {
 
   if (!cls || (cls && !cls.length)) return;
 
-  cls
+  const preparedClassNames = cls
     .trim()
     .split(' ')
     .filter((cl) => cl !== avoid)
     .filter((cl) => cl !== '')
-    .forEach((cl) => el.classList.remove(cl.trim()));
+    .map((cl) => cl.trim());
+
+  el.classList.remove(...preparedClassNames);
 };
 
 /**

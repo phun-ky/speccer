@@ -6,7 +6,7 @@
 
 # types/enums/area
 
-> Last updated 2024-09-08T20:24:15.655Z
+> Last updated 2024-11-19T19:54:48.966Z
 
 ## Enumerations
 
@@ -69,8 +69,8 @@ Enum representing different areas for the pin feature.
 | `Parent`           | `"parent"`  | [types/enums/area.ts:19](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L19) |
 | `Pin`              | `"pin"`     | [types/enums/area.ts:18](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L18) |
 | `Right`            | `"right"`   | [types/enums/area.ts:25](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L25) |
-| `SVG`              | `"svg"`     | [types/enums/area.ts:28](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L28) |
 | `Subtle`           | `"subtle"`  | [types/enums/area.ts:22](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L22) |
+| `SVG`              | `"svg"`     | [types/enums/area.ts:28](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L28) |
 | `Text`             | `"text"`    | [types/enums/area.ts:20](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L20) |
 | `Top`              | `"top"`     | [types/enums/area.ts:27](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L27) |
 
@@ -133,7 +133,7 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
-![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
+![Speccer banner, with logo and slogan: A zero dependency package to annotate or highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
 
 ---
 

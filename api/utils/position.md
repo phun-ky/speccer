@@ -6,49 +6,9 @@
 
 # utils/position
 
-> Last updated 2024-09-08T20:24:15.673Z
+> Last updated 2024-11-19T19:54:48.980Z
 
 ## Functions
-
-### getRec()
-
-```ts
-function getRec(sourceEl, targetEl): Promise<GetRecPropertiesInterface>;
-```
-
-Gets various positioning properties between two HTML elements.
-
-#### Parameters
-
-| Parameter  | Type                                                                    | Description              |
-| ---------- | ----------------------------------------------------------------------- | ------------------------ |
-| `sourceEl` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The source HTML element. |
-| `targetEl` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target HTML element. |
-
-#### Returns
-
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`GetRecPropertiesInterface`](../types/interfaces/position.md#getrecpropertiesinterface)>
-
-- A promise that resolves to an object with positioning functions.
-
-#### Example
-
-```ts
-// Get positioning properties between two elements
-const recProps = await getRec(sourceElement, targetElement);
-
-// Get the absolute position properties
-const absoluteProps = recProps.absolute();
-
-// Get the position properties with the source element above the target element
-const aboveProps = recProps.toTop();
-```
-
-#### Defined in
-
-[utils/position.ts:164](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L164)
-
----
 
 ### get_horizontal_center_of_els()
 
@@ -117,6 +77,46 @@ const center = get_vertical_center_of_els(0, startRect, targetRect);
 #### Defined in
 
 [utils/position.ts:41](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L41)
+
+---
+
+### getRec()
+
+```ts
+function getRec(sourceEl, targetEl): Promise<GetRecPropertiesInterface>;
+```
+
+Gets various positioning properties between two HTML elements.
+
+#### Parameters
+
+| Parameter  | Type                                                                    | Description              |
+| ---------- | ----------------------------------------------------------------------- | ------------------------ |
+| `sourceEl` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The source HTML element. |
+| `targetEl` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target HTML element. |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`GetRecPropertiesInterface`](../types/interfaces/position.md#getrecpropertiesinterface)>
+
+- A promise that resolves to an object with positioning functions.
+
+#### Example
+
+```ts
+// Get positioning properties between two elements
+const recProps = await getRec(sourceElement, targetElement);
+
+// Get the absolute position properties
+const absoluteProps = recProps.absolute();
+
+// Get the position properties with the source element above the target element
+const aboveProps = recProps.toTop();
+```
+
+#### Defined in
+
+[utils/position.ts:164](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L164)
 
 ---
 
@@ -199,7 +199,7 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
-![Speccer banner, with logo and slogan: A zero dependency package to highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
+![Speccer banner, with logo and slogan: A zero dependency package to annotate or highlight elements](https://github.com/phun-ky/speccer/blob/main/public/speccer-banner.png?raw=true)
 
 ---
 
