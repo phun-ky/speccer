@@ -1,3 +1,4 @@
+/* node:coverage disable */
 /**
  * This feature highlights the spacing of an element.
  *
@@ -22,6 +23,7 @@
  * @packageDocumentation
  */
 /* eslint no-console:0 */
+/* node:coverage enable */
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { cx, set as setClassNames } from '../../utils/classnames';
 import {

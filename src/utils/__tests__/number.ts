@@ -12,6 +12,13 @@ describe('number', () => {
       // Check if the result has the default number of decimal places (3)
       assert.equal(result, '12.346'); // Rounding should be applied
     });
+    it('should convert a string with numbers to a string with default decimal places', () => {
+      // Call the decimal function without specifying decimals
+      const result = decimal('3.14some non-digit characters');
+
+      // Check if the result has the default number of decimal places (3)
+      assert.equal(result, '3.140'); // Rounding should be applied
+    });
 
     it('should convert a number to a string with the specified number of decimal places', () => {
       // Call the decimal function with 2 decimal places

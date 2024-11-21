@@ -1,3 +1,4 @@
+/* node:coverage disable */
 /* eslint no-console:0 */
 /**
  * Contains the helper functions to activate SPECCER via a script tag, based on attributes:
@@ -49,6 +50,7 @@
  *
  * @packageDocumentation
  */
+/* node:coverage enable */
 import { grid as gridElement } from '../features/grid';
 import { mark as markElement } from '../features/mark';
 import { measure as measureElement } from '../features/measure';

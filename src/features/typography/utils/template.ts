@@ -1,6 +1,7 @@
 import { getTypography } from '../../../utils/css';
 import { get as getStyles } from '../../../utils/styles';
 
+/* node:coverage disable */
 /**
  * Generate a HTML string for typography styles of a target element.
  *
@@ -15,6 +16,7 @@ import { get as getStyles } from '../../../utils/styles';
  * console.log(typographyStyles);
  * ```
  */
+/* node:coverage enable */
 export const template = async (
   targetElement: HTMLElement,
   useHighlighting = false
