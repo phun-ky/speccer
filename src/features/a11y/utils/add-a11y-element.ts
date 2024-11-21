@@ -49,6 +49,11 @@ export const addA11yElement = async (
 
   if (type === 'headings') {
     _a11y_el.innerHTML = targetEl.nodeName;
+    _a11y_el.classList.add(targetEl.nodeName.toLowerCase());
+  }
+
+  if (type === 'tabstops') {
+    _a11y_el.setAttribute('data-speccer-a11y-tabstops', content as string);
   }
 
   document.body.appendChild(_a11y_el);

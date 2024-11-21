@@ -77,9 +77,9 @@ export const a11y = () => {
     for (const el of _tab_order_elements) {
       const _tabstops_els = el.querySelectorAll(SPECCER_TABBABLE_ELEMENTS_SELECTOR);
 
-      for (const tabstopsEl of _tabstops_els) {
+      for (const [tabstopsIndex, tabstopsEl] of _tabstops_els.entries()) {
         if (!isElementHidden(tabstopsEl as HTMLElement)) {
-          addA11yElement(tabstopsEl as HTMLElement, null, 'tabstops');
+          addA11yElement(tabstopsEl as HTMLElement, tabstopsIndex + 1, 'tabstops');
           continue;
         }
 
@@ -92,7 +92,7 @@ export const a11y = () => {
         if (!potentialLabelElement || isElementHidden(potentialLabelElement as HTMLElement)) continue;
 
         // This could be a fake element, like a toggle checkbox, so we use the labelElement
-        addA11yElement(potentialLabelElement as HTMLElement, null, 'tabstops');
+        addA11yElement(potentialLabelElement as HTMLElement, tabstopsIndex + 1, 'tabstops');
       }
     }
   }
