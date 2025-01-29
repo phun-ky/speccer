@@ -6,7 +6,12 @@
 
 # features/a11y/utils/create-a11y-element
 
-> Last updated 2024-11-21T14:05:20.003Z
+> Last updated 2025-01-29T08:54:31.590Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [createA11yElement()](#createa11yelement)
 
 ## Functions
 
@@ -15,6 +20,8 @@
 ```ts
 function createA11yElement(type?, content?, n?): HTMLElement;
 ```
+
+Defined in: [src/features/a11y/utils/create-a11y-element.ts:18](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/utils/create-a11y-element.ts#L18)
 
 Creates an HTML element based on the specified type. \*
 
@@ -39,10 +46,6 @@ const tabElement = create('tabstops', null, 'div');
 const landmarkElement = create('landmark', 1, 'div');
 const regionElement = create('region', null, 'div');
 ```
-
-#### Defined in
-
-[features/a11y/utils/create-a11y-element.ts:18](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/utils/create-a11y-element.ts#L18)
 
 ---
 

@@ -6,7 +6,12 @@
 
 # utils/debounce
 
-> Last updated 2024-11-21T14:05:20.030Z
+> Last updated 2025-01-29T08:54:31.626Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [debounce()](#debounce)
 
 ## Functions
 
@@ -15,6 +20,8 @@
 ```ts
 function debounce(func, wait, immediate?): DebounceAnyFunctionType;
 ```
+
+Defined in: [src/utils/debounce.ts:24](https://github.com/phun-ky/speccer/blob/main/src/utils/debounce.ts#L24)
 
 Creates a debounced version of a function that delays its execution until after a specified waiting time has elapsed since the last time the debounced function was invoked.
 
@@ -44,10 +51,6 @@ const debouncedFn = debounce((value) => {
 debouncedFn('Hello'); // This will not trigger immediate execution
 debouncedFn('World'); // This will trigger immediate execution
 ```
-
-#### Defined in
-
-[utils/debounce.ts:24](https://github.com/phun-ky/speccer/blob/main/src/utils/debounce.ts#L24)
 
 ---
 

@@ -6,7 +6,12 @@
 
 # utils/intrinsic-coords
 
-> Last updated 2024-11-21T14:05:20.032Z
+> Last updated 2025-01-29T08:54:31.628Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [intrinsic_coords()](#intrinsic_coords)
 
 ## Functions
 
@@ -21,6 +26,8 @@ function intrinsic_coords(
   y: number;
 }>;
 ```
+
+Defined in: [src/utils/intrinsic-coords.ts:20](https://github.com/phun-ky/speccer/blob/main/src/utils/intrinsic-coords.ts#L20)
 
 Get the intrinsic coordinates of an element based on a specified position.
 
@@ -40,11 +47,6 @@ Get the intrinsic coordinates of an element based on a specified position.
 
 - An object containing the coordinates.
 
-| Name | Type     | Defined in                                                                                                     |
-| ---- | -------- | -------------------------------------------------------------------------------------------------------------- |
-| `x`  | `number` | [utils/intrinsic-coords.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/intrinsic-coords.ts#L23) |
-| `y`  | `number` | [utils/intrinsic-coords.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/intrinsic-coords.ts#L23) |
-
 #### Throws
 
 No position given.
@@ -60,10 +62,6 @@ The position given is not the required type.
 const element = document.getElementById('example');
 const coordinates = await intrinsic_coords(element, 'top-left');
 ```
-
-#### Defined in
-
-[utils/intrinsic-coords.ts:20](https://github.com/phun-ky/speccer/blob/main/src/utils/intrinsic-coords.ts#L20)
 
 ---
 

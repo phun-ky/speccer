@@ -6,7 +6,12 @@
 
 # utils/coords
 
-> Last updated 2024-11-21T14:05:20.029Z
+> Last updated 2025-01-29T08:54:31.625Z
+
+## Table of Contents
+
+- [Variables](#variables)
+  - [coords](#coords)
 
 ## Variables
 
@@ -23,200 +28,175 @@ const coords: {
 };
 ```
 
+Defined in: [src/utils/coords.ts:4](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L4)
+
 A set of functions to retrieve specific coordinates from a DOMRect.
 
 #### Type declaration
 
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Defined in</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Defined in</th>
+    </tr>
+  </thead>
 
-`bottom`
+  <tbody>
+    <tr>
+      <td>
+        <a id="bottom" /> `bottom`
+      </td>
 
-</td>
-<td>
+      <td>
+        (`rect`) => `number`
+      </td>
 
-(`rect`) => `number`
+      <td>
+        Get the bottom coordinate of a DOMRect.
 
-</td>
-<td>
+        **Example**
 
-Get the bottom coordinate of a DOMRect.
+        ```ts
+        const rect = element.getBoundingClientRect();
+        const bottomCoordinate = coords.bottom(rect);
+        ```
+      </td>
 
-**Example**
+      <td>
+        [src/utils/coords.ts:39](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L39)
+      </td>
+    </tr>
 
-```ts
-const rect = element.getBoundingClientRect();
-const bottomCoordinate = coords.bottom(rect);
-```
+    <tr>
+      <td>
+        <a id="center_x" /> `center_x`
+      </td>
 
-</td>
-<td>
+      <td>
+        (`rect`) => `number`
+      </td>
 
-[utils/coords.ts:39](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L39)
+      <td>
+        Get the x-coordinate of the center of a DOMRect.
 
-</td>
-</tr>
-<tr>
-<td>
+        **Example**
 
-`center_x`
+        ```ts
+        const rect = element.getBoundingClientRect();
+        const centerXCoordinate = coords.center_x(rect);
+        ```
+      </td>
 
-</td>
-<td>
+      <td>
+        [src/utils/coords.ts:63](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L63)
+      </td>
+    </tr>
 
-(`rect`) => `number`
+    <tr>
+      <td>
+        <a id="center_y" /> `center_y`
+      </td>
 
-</td>
-<td>
+      <td>
+        (`rect`) => `number`
+      </td>
 
-Get the x-coordinate of the center of a DOMRect.
+      <td>
+        Get the y-coordinate of the center of a DOMRect.
 
-**Example**
+        **Example**
 
-```ts
-const rect = element.getBoundingClientRect();
-const centerXCoordinate = coords.center_x(rect);
-```
+        ```ts
+        const rect = element.getBoundingClientRect();
+        const centerYCoordinate = coords.center_y(rect);
+        ```
+      </td>
 
-</td>
-<td>
+      <td>
+        [src/utils/coords.ts:75](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L75)
+      </td>
+    </tr>
 
-[utils/coords.ts:63](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L63)
+    <tr>
+      <td>
+        <a id="left" /> `left`
+      </td>
 
-</td>
-</tr>
-<tr>
-<td>
+      <td>
+        (`rect`) => `number`
+      </td>
 
-`center_y`
+      <td>
+        Get the left coordinate of a DOMRect.
 
-</td>
-<td>
+        **Example**
 
-(`rect`) => `number`
+        ```ts
+        const rect = element.getBoundingClientRect();
+        const leftCoordinate = coords.left(rect);
+        ```
+      </td>
 
-</td>
-<td>
+      <td>
+        [src/utils/coords.ts:51](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L51)
+      </td>
+    </tr>
 
-Get the y-coordinate of the center of a DOMRect.
+    <tr>
+      <td>
+        <a id="right" /> `right`
+      </td>
 
-**Example**
+      <td>
+        (`rect`) => `number`
+      </td>
 
-```ts
-const rect = element.getBoundingClientRect();
-const centerYCoordinate = coords.center_y(rect);
-```
+      <td>
+        Get the right coordinate of a DOMRect.
 
-</td>
-<td>
+        **Example**
 
-[utils/coords.ts:75](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L75)
+        ```ts
+        const rect = element.getBoundingClientRect();
+        const rightCoordinate = coords.right(rect);
+        ```
+      </td>
 
-</td>
-</tr>
-<tr>
-<td>
+      <td>
+        [src/utils/coords.ts:27](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L27)
+      </td>
+    </tr>
 
-`left`
+    <tr>
+      <td>
+        <a id="top" /> `top`
+      </td>
 
-</td>
-<td>
+      <td>
+        (`rect`) => `number`
+      </td>
 
-(`rect`) => `number`
+      <td>
+        Get the top coordinate of a DOMRect.
 
-</td>
-<td>
+        **Example**
 
-Get the left coordinate of a DOMRect.
+        ```ts
+        const rect = element.getBoundingClientRect();
+        const topCoordinate = coords.top(rect);
+        ```
+      </td>
 
-**Example**
+      <td>
+        [src/utils/coords.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L15)
+      </td>
+    </tr>
 
-```ts
-const rect = element.getBoundingClientRect();
-const leftCoordinate = coords.left(rect);
-```
-
-</td>
-<td>
-
-[utils/coords.ts:51](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L51)
-
-</td>
-</tr>
-<tr>
-<td>
-
-`right`
-
-</td>
-<td>
-
-(`rect`) => `number`
-
-</td>
-<td>
-
-Get the right coordinate of a DOMRect.
-
-**Example**
-
-```ts
-const rect = element.getBoundingClientRect();
-const rightCoordinate = coords.right(rect);
-```
-
-</td>
-<td>
-
-[utils/coords.ts:27](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L27)
-
-</td>
-</tr>
-<tr>
-<td>
-
-`top`
-
-</td>
-<td>
-
-(`rect`) => `number`
-
-</td>
-<td>
-
-Get the top coordinate of a DOMRect.
-
-**Example**
-
-```ts
-const rect = element.getBoundingClientRect();
-const topCoordinate = coords.top(rect);
-```
-
-</td>
-<td>
-
-[utils/coords.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L15)
-
-</td>
-</tr>
-</tbody>
+  </tbody>
 </table>
-
-#### Defined in
-
-[utils/coords.ts:4](https://github.com/phun-ky/speccer/blob/main/src/utils/coords.ts#L4)
 
 ---
 

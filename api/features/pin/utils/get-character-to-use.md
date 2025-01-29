@@ -6,7 +6,12 @@
 
 # features/pin/utils/get-character-to-use
 
-> Last updated 2024-11-21T14:05:20.008Z
+> Last updated 2025-01-29T08:54:31.597Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [getCharacterToUse()](#getcharactertouse)
 
 ## Functions
 
@@ -15,6 +20,8 @@
 ```ts
 function getCharacterToUse(targetIndex, literalsToUse): string;
 ```
+
+Defined in: [src/features/pin/utils/get-character-to-use.ts:17](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/get-character-to-use.ts#L17)
 
 Returns the character to use at the specified target index.
 If the index exceeds the available characters, it generates a new character by pairing uppercase and lowercase letters.
@@ -38,10 +45,6 @@ The character to use at the specified index.
 const character = getCharacterToUse(0); // Returns first character from SPECCER_LITERALS
 const nextCharacter = getCharacterToUse(25); // Returns next character or a generated pair if index exceeds literals length
 ```
-
-#### Defined in
-
-[features/pin/utils/get-character-to-use.ts:17](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/get-character-to-use.ts#L17)
 
 ---
 

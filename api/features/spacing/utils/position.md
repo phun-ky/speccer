@@ -6,7 +6,12 @@
 
 # features/spacing/utils/position
 
-> Last updated 2024-11-21T14:05:20.010Z
+> Last updated 2025-01-29T08:54:31.598Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [position()](#position)
 
 ## Functions
 
@@ -21,6 +26,8 @@ function position(
 ): Promise<undefined | PositionUnitPropertiesType>;
 ```
 
+Defined in: [src/features/spacing/utils/position.ts:21](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/utils/position.ts#L21)
+
 Set the position and dimensions of a spacing element relative to a target element.
 
 #### Parameters
@@ -34,7 +41,9 @@ Set the position and dimensions of a spacing element relative to a target elemen
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`undefined` | [`PositionUnitPropertiesType`](../../../types/position.md#positionunitpropertiestype)>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<
+\| `undefined`
+\| [`PositionUnitPropertiesType`](../../../types/position.md#positionunitpropertiestype)>
 
 - A promise that resolves after setting the position and dimensions.
 
@@ -44,10 +53,6 @@ Set the position and dimensions of a spacing element relative to a target elemen
 const targetElement = document.getElementById('target');
 position('marginTop', 20, targetElement);
 ```
-
-#### Defined in
-
-[features/spacing/utils/position.ts:21](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/utils/position.ts#L21)
 
 ---
 

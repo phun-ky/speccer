@@ -6,11 +6,18 @@
 
 # types/interfaces/attributes
 
-> Last updated 2024-11-21T14:05:20.018Z
+> Last updated 2025-01-29T08:54:31.606Z
+
+## Table of Contents
+
+- [Interfaces](#interfaces)
+  - [AttributesMapInterface](#attributesmapinterface)
 
 ## Interfaces
 
 ### AttributesMapInterface
+
+Defined in: [src/types/interfaces/attributes.ts:9](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/attributes.ts#L9)
 
 Interface representing a map of attributes with string keys and string values.
 
@@ -21,7 +28,9 @@ key-value pairs.
 
 #### Indexable
 
-\[`key`: `string`]: `string`
+```ts
+[key: string]: string
+```
 
 ---
 

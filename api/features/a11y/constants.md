@@ -6,7 +6,15 @@
 
 # features/a11y/constants
 
-> Last updated 2024-11-21T14:05:20.000Z
+> Last updated 2025-01-29T08:54:31.587Z
+
+## Table of Contents
+
+- [Variables](#variables)
+  - [SPECCER_LANDMARK_ELEMENTS_SELECTOR](#speccer_landmark_elements_selector)
+  - [SPECCER_MODIFIER_KEYS](#speccer_modifier_keys)
+  - [SPECCER_PHYSICAL_KEYS](#speccer_physical_keys)
+  - [SPECCER_TABBABLE_ELEMENTS_SELECTOR](#speccer_tabbable_elements_selector)
 
 ## Variables
 
@@ -16,11 +24,9 @@
 const SPECCER_LANDMARK_ELEMENTS_SELECTOR: '\nheader, footer, section, form, main, nav, aside, [role="section"], [role="banner"],\n[role="complementary"], [role="contentinfo"], [role="form"], [role="main"],\n[role="navigation"], [role="region"], [role="search"]\n';
 ```
 
+Defined in: [src/features/a11y/constants/index.ts:50](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/constants/index.ts#L50)
+
 Selector string for landmark elements.
-
-#### Defined in
-
-[features/a11y/constants/index.ts:50](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/constants/index.ts#L50)
 
 ---
 
@@ -30,11 +36,9 @@ Selector string for landmark elements.
 const SPECCER_MODIFIER_KEYS: string[];
 ```
 
+Defined in: [src/features/a11y/constants/index.ts:5](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/constants/index.ts#L5)
+
 Array of keys considered as modifiers in shortcuts.
-
-#### Defined in
-
-[features/a11y/constants/index.ts:5](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/constants/index.ts#L5)
 
 ---
 
@@ -44,9 +48,7 @@ Array of keys considered as modifiers in shortcuts.
 const SPECCER_PHYSICAL_KEYS: string[];
 ```
 
-#### Defined in
-
-[features/a11y/constants/index.ts:26](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/constants/index.ts#L26)
+Defined in: [src/features/a11y/constants/index.ts:26](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/constants/index.ts#L26)
 
 ---
 
@@ -56,11 +58,9 @@ const SPECCER_PHYSICAL_KEYS: string[];
 const SPECCER_TABBABLE_ELEMENTS_SELECTOR: "\n  a[href], area[href], input:not([disabled]):not([tabindex='-1']),\n  button:not([disabled]):not([tabindex='-1']),select:not([disabled]):not([tabindex='-1']),\n  textarea:not([disabled]):not([tabindex='-1']),\n  iframe, object, embed, *[tabindex]:not([tabindex='-1']), *[contenteditable=true]\n";
 ```
 
+Defined in: [src/features/a11y/constants/index.ts:39](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/constants/index.ts#L39)
+
 Selector string for tabbable elements.
-
-#### Defined in
-
-[features/a11y/constants/index.ts:39](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/constants/index.ts#L39)
 
 ---
 

@@ -6,7 +6,12 @@
 
 # utils/resize
 
-> Last updated 2024-11-21T14:05:20.036Z
+> Last updated 2025-01-29T08:54:31.629Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [activate()](#activate)
 
 ## Functions
 
@@ -15,6 +20,8 @@
 ```ts
 function activate(speccer): void;
 ```
+
+Defined in: [src/utils/resize.ts:22](https://github.com/phun-ky/speccer/blob/main/src/utils/resize.ts#L22)
 
 Attaches a debounced event listener to the window's resize event that triggers the provided function.
 
@@ -40,10 +47,6 @@ const mySpeccer = () => {
 // Activate the debounced event listener
 activate(mySpeccer);
 ```
-
-#### Defined in
-
-[utils/resize.ts:22](https://github.com/phun-ky/speccer/blob/main/src/utils/resize.ts#L22)
 
 ---
 

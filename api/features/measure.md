@@ -6,7 +6,7 @@
 
 # features/measure
 
-> Last updated 2024-11-21T14:05:20.006Z
+> Last updated 2025-01-29T08:54:31.593Z
 
 This feature measures given element
 
@@ -52,6 +52,8 @@ measure(targetElement, options);
 function create(text, options, id, tag): HTMLElement;
 ```
 
+Defined in: [src/features/measure/index.ts:61](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L61)
+
 Create a measurement element with optional text, area, and element type.
 
 #### Parameters
@@ -76,10 +78,6 @@ const measurement = create(100, 'width bottom', 'div');
 document.body.appendChild(measurement);
 ```
 
-#### Defined in
-
-[features/measure/index.ts:61](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L61)
-
 ---
 
 ### measure()
@@ -87,6 +85,8 @@ document.body.appendChild(measurement);
 ```ts
 function measure(targetElement, options?): Promise<void>;
 ```
+
+Defined in: [src/features/measure/index.ts:127](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L127)
 
 Create a measurement element and add it to the body with styles matching a specified target element based on the attribute values from `data-speccer`.
 
@@ -137,10 +137,6 @@ const options = {
 
 measure(targetElement, options);
 ```
-
-#### Defined in
-
-[features/measure/index.ts:127](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L127)
 
 ---
 

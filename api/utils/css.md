@@ -6,7 +6,19 @@
 
 # utils/css
 
-> Last updated 2024-11-21T14:05:20.029Z
+> Last updated 2025-01-29T08:54:31.625Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [getClassNameFromCSSProperty()](#getclassnamefromcssproperty)
+  - [getNumberValue()](#getnumbervalue)
+  - [getSpacing()](#getspacing)
+  - [getTypography()](#gettypography)
+  - [lineWidth()](#linewidth)
+  - [measureSize()](#measuresize)
+  - [normalizeNumberValue()](#normalizenumbervalue)
+  - [pinSpace()](#pinspace)
 
 ## Functions
 
@@ -15,6 +27,8 @@
 ```ts
 function getClassNameFromCSSProperty(property): string;
 ```
+
+Defined in: [src/utils/css.ts:64](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L64)
 
 Converts a CSS property name with "Top", "Right", "Bottom", or "Left" into a class name.
 
@@ -38,10 +52,6 @@ const className = getClassNameFromCSSProperty('marginTop');
 console.log(className); // Example output: "margin top"
 ```
 
-#### Defined in
-
-[utils/css.ts:64](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L64)
-
 ---
 
 ### getNumberValue()
@@ -49,6 +59,8 @@ console.log(className); // Example output: "margin top"
 ```ts
 function getNumberValue(value): number;
 ```
+
+Defined in: [src/utils/css.ts:27](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L27)
 
 Parses a string value into an integer.
 
@@ -72,10 +84,6 @@ const intValue = getNumberValue('42');
 console.log(intValue); // Example output: 42
 ```
 
-#### Defined in
-
-[utils/css.ts:27](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L27)
-
 ---
 
 ### getSpacing()
@@ -83,6 +91,8 @@ console.log(intValue); // Example output: 42
 ```ts
 function getSpacing(style, options?): SpacingCSSPropertiesType;
 ```
+
+Defined in: [src/utils/css.ts:93](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L93)
 
 Extracts spacing-related CSS properties from a style object.
 
@@ -110,10 +120,6 @@ const spacing = getSpacing({
 console.log(spacing); // Example output: { marginTop: "10px", marginLeft: "20px" }
 ```
 
-#### Defined in
-
-[utils/css.ts:93](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L93)
-
 ---
 
 ### getTypography()
@@ -121,6 +127,8 @@ console.log(spacing); // Example output: { marginTop: "10px", marginLeft: "20px"
 ```ts
 function getTypography(style): TypographyCSSPropertiesType;
 ```
+
+Defined in: [src/utils/css.ts:154](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L154)
 
 Extracts typography-related CSS properties from a style object.
 
@@ -147,10 +155,6 @@ const typography = getTypography({
 console.log(typography); // Example output: { fontSize: "16px", fontWeight: "bold" }
 ```
 
-#### Defined in
-
-[utils/css.ts:154](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L154)
-
 ---
 
 ### lineWidth()
@@ -158,6 +162,8 @@ console.log(typography); // Example output: { fontSize: "16px", fontWeight: "bol
 ```ts
 function lineWidth(el): number;
 ```
+
+Defined in: [src/utils/css.ts:227](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L227)
 
 Retrieves the value of a custom CSS property "--ph-speccer-line-width" from an element.
 
@@ -181,10 +187,6 @@ const value = lineWidth(document.body);
 console.log(value); // Example output: 1.5
 ```
 
-#### Defined in
-
-[utils/css.ts:227](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L227)
-
 ---
 
 ### measureSize()
@@ -192,6 +194,8 @@ console.log(value); // Example output: 1.5
 ```ts
 function measureSize(el): number;
 ```
+
+Defined in: [src/utils/css.ts:209](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L209)
 
 Retrieves the value of a custom CSS property "--ph-speccer-measure-size" from an element.
 
@@ -215,10 +219,6 @@ const value = measureSize(document.body);
 console.log(value); // Example output: 20
 ```
 
-#### Defined in
-
-[utils/css.ts:209](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L209)
-
 ---
 
 ### normalizeNumberValue()
@@ -226,6 +226,8 @@ console.log(value); // Example output: 20
 ```ts
 function normalizeNumberValue(value): number;
 ```
+
+Defined in: [src/utils/css.ts:43](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L43)
 
 Normalizes a string or number value to ensure it's a valid number.
 If the value is within the range \[0, 1] or \[-1, 0), it's normalized to 0.
@@ -250,10 +252,6 @@ const normalizedValue = normalizeNumberValue('0.5');
 console.log(normalizedValue); // Example output: 0.5
 ```
 
-#### Defined in
-
-[utils/css.ts:43](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L43)
-
 ---
 
 ### pinSpace()
@@ -261,6 +259,8 @@ console.log(normalizedValue); // Example output: 0.5
 ```ts
 function pinSpace(el): number;
 ```
+
+Defined in: [src/utils/css.ts:191](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L191)
 
 Retrieves the value of a custom CSS property "--ph-speccer-pin-space" from an element.
 
@@ -283,10 +283,6 @@ Retrieves the value of a custom CSS property "--ph-speccer-pin-space" from an el
 const value = pinSpace(document.body);
 console.log(value); // Example output: 10
 ```
-
-#### Defined in
-
-[utils/css.ts:191](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L191)
 
 ---
 

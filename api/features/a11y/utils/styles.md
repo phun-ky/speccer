@@ -6,7 +6,12 @@
 
 # features/a11y/utils/styles
 
-> Last updated 2024-11-21T14:05:20.004Z
+> Last updated 2025-01-29T08:54:31.591Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [styles()](#styles)
 
 ## Functions
 
@@ -19,6 +24,8 @@ function styles(
   a11yElement
 ): Promise<SpeccerStylesReturnType>;
 ```
+
+Defined in: [src/features/a11y/utils/styles.ts:35](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/utils/styles.ts#L35)
 
 Calculates and returns the styles for an accessibility element based on its type.
 
@@ -57,10 +64,6 @@ const shortcutStyles = await styles('shortcut', targetElement, a11yElement);
 // Example for default styles
 const defaultStyles = await styles('default', targetElement, a11yElement);
 ```
-
-#### Defined in
-
-[features/a11y/utils/styles.ts:35](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/utils/styles.ts#L35)
 
 ---
 

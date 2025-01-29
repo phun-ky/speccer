@@ -6,11 +6,18 @@
 
 # utils/classes/DrawSVGCurlyBracket
 
-> Last updated 2024-11-21T14:05:20.026Z
+> Last updated 2025-01-29T08:54:31.622Z
+
+## Table of Contents
+
+- [Classes](#classes)
+  - [DrawSVGCurlyBracket](#drawsvgcurlybracket)
 
 ## Classes
 
 ### DrawSVGCurlyBracket
+
+Defined in: [src/utils/classes/DrawSVGCurlyBracket.ts:9](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L9)
 
 Class representing a DrawSVGCurlyBracket instance.
 
@@ -21,6 +28,8 @@ Class representing a DrawSVGCurlyBracket instance.
 ```ts
 new DrawSVGCurlyBracket(startElement, stopElement): DrawSVGCurlyBracket
 ```
+
+Defined in: [src/utils/classes/DrawSVGCurlyBracket.ts:22](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L22)
 
 Creates a new DrawSVGCurlyBracket instance.
 
@@ -35,18 +44,14 @@ Creates a new DrawSVGCurlyBracket instance.
 
 [`DrawSVGCurlyBracket`](DrawSVGCurlyBracket.md#drawsvgcurlybracket)
 
-###### Defined in
-
-[utils/classes/DrawSVGCurlyBracket.ts:22](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L22)
-
 #### Properties
 
-| Property            | Type                                                                          | Defined in                                                                                                                           |
-| ------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `firstPathElement`  | [`SVGPathElement`](https://developer.mozilla.org/docs/Web/API/SVGPathElement) | [utils/classes/DrawSVGCurlyBracket.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L14) |
-| `secondPathElement` | [`SVGPathElement`](https://developer.mozilla.org/docs/Web/API/SVGPathElement) | [utils/classes/DrawSVGCurlyBracket.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L15) |
-| `startElement`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | [utils/classes/DrawSVGCurlyBracket.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L12) |
-| `stopElement`       | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | [utils/classes/DrawSVGCurlyBracket.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L13) |
+| Property                                         | Type                                                                          | Defined in                                                                                                                               |
+| ------------------------------------------------ | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| <a id="firstpathelement" /> `firstPathElement`   | [`SVGPathElement`](https://developer.mozilla.org/docs/Web/API/SVGPathElement) | [src/utils/classes/DrawSVGCurlyBracket.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L14) |
+| <a id="secondpathelement" /> `secondPathElement` | [`SVGPathElement`](https://developer.mozilla.org/docs/Web/API/SVGPathElement) | [src/utils/classes/DrawSVGCurlyBracket.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L15) |
+| <a id="startelement" /> `startElement`           | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | [src/utils/classes/DrawSVGCurlyBracket.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L12) |
+| <a id="stopelement" /> `stopElement`             | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | [src/utils/classes/DrawSVGCurlyBracket.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L13) |
 
 #### Methods
 
@@ -56,21 +61,21 @@ Creates a new DrawSVGCurlyBracket instance.
 connect(): void
 ```
 
+Defined in: [src/utils/classes/DrawSVGCurlyBracket.ts:77](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L77)
+
 Connects and draws the curly bracket.
 
 ###### Returns
 
 `void`
 
-###### Defined in
-
-[utils/classes/DrawSVGCurlyBracket.ts:77](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L77)
-
 ##### draw()
 
 ```ts
 draw(path): Promise<void>
 ```
+
+Defined in: [src/utils/classes/DrawSVGCurlyBracket.ts:111](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L111)
 
 Draws the curly bracket based on the provided path.
 
@@ -87,10 +92,6 @@ Draws the curly bracket based on the provided path.
 ###### Throws
 
 Will throw an error if no path is provided.
-
-###### Defined in
-
-[utils/classes/DrawSVGCurlyBracket.ts:111](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L111)
 
 ---
 

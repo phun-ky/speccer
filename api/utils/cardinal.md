@@ -6,7 +6,13 @@
 
 # utils/cardinal
 
-> Last updated 2024-11-21T14:05:20.025Z
+> Last updated 2025-01-29T08:54:31.622Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [cardinal_direction()](#cardinal_direction)
+  - [cardinal_direction_crude()](#cardinal_direction_crude)
 
 ## Functions
 
@@ -15,6 +21,8 @@
 ```ts
 function cardinal_direction(degrees): string;
 ```
+
+Defined in: [src/utils/cardinal.ts:18](https://github.com/phun-ky/speccer/blob/main/src/utils/cardinal.ts#L18)
 
 Gives you the cardinal direction based on degrees.
 Note: The degrees start at 0, which is EAST (originally, north should be 0, but here, north is 270),
@@ -47,10 +55,6 @@ Parameter cannot be lower than 0.
 const direction = cardinal_direction(45);
 ```
 
-#### Defined in
-
-[utils/cardinal.ts:18](https://github.com/phun-ky/speccer/blob/main/src/utils/cardinal.ts#L18)
-
 ---
 
 ### cardinal_direction_crude()
@@ -58,6 +62,8 @@ const direction = cardinal_direction(45);
 ```ts
 function cardinal_direction_crude(degrees): string;
 ```
+
+Defined in: [src/utils/cardinal.ts:57](https://github.com/phun-ky/speccer/blob/main/src/utils/cardinal.ts#L57)
 
 Gives you the cardinal direction based on degrees (crude version).
 Note: The degrees start at 0, which is EAST (originally, north should be 0, but here, north is 270),
@@ -89,10 +95,6 @@ Parameter cannot be lower than 0.
 // Get the cardinal direction (crude) for an angle in degrees
 const direction = cardinal_direction_crude(45);
 ```
-
-#### Defined in
-
-[utils/cardinal.ts:57](https://github.com/phun-ky/speccer/blob/main/src/utils/cardinal.ts#L57)
 
 ---
 

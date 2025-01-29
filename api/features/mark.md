@@ -6,7 +6,7 @@
 
 # features/mark
 
-> Last updated 2024-11-21T14:05:20.006Z
+> Last updated 2025-01-29T08:54:31.593Z
 
 This feature marks given element
 
@@ -44,6 +44,8 @@ mark(targetElement, options);
 function create(id, n): HTMLElement;
 ```
 
+Defined in: [src/features/mark/index.ts:55](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L55)
+
 Create a marker element with an optional element type.
 
 #### Parameters
@@ -66,10 +68,6 @@ const marker = create('div');
 document.body.appendChild(marker);
 ```
 
-#### Defined in
-
-[features/mark/index.ts:55](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L55)
-
 ---
 
 ### mark()
@@ -77,6 +75,8 @@ document.body.appendChild(marker);
 ```ts
 function mark(targetElement): Promise<void>;
 ```
+
+Defined in: [src/features/mark/index.ts:79](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L79)
 
 Create a marker element and add it to the body with styles matching a specified element.
 
@@ -100,10 +100,6 @@ Create a marker element and add it to the body with styles matching a specified 
 const targetElement = document.getElementById('target');
 mark(targetElement);
 ```
-
-#### Defined in
-
-[features/mark/index.ts:79](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L79)
 
 ---
 

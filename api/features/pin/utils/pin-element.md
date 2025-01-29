@@ -6,7 +6,12 @@
 
 # features/pin/utils/pin-element
 
-> Last updated 2024-11-21T14:05:20.008Z
+> Last updated 2025-01-29T08:54:31.597Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [pinElement()](#pinelement)
 
 ## Functions
 
@@ -20,6 +25,8 @@ function pinElement(
   options
 ): Promise<string | void>;
 ```
+
+Defined in: [src/features/pin/utils/pin-element.ts:34](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/pin-element.ts#L34)
 
 Create and style the pin element as needed.
 
@@ -52,10 +59,6 @@ pinElement(targetElement, parentElement, content, options).then(() => {
   console.log('process completed');
 });
 ```
-
-#### Defined in
-
-[features/pin/utils/pin-element.ts:34](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/pin-element.ts#L34)
 
 ---
 

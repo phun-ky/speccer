@@ -6,7 +6,12 @@
 
 # utils/number
 
-> Last updated 2024-11-21T14:05:20.035Z
+> Last updated 2025-01-29T08:54:31.628Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [decimal()](#decimal)
 
 ## Functions
 
@@ -15,6 +20,8 @@
 ```ts
 function decimal(number, decimals): string;
 ```
+
+Defined in: [src/utils/number.ts:17](https://github.com/phun-ky/speccer/blob/main/src/utils/number.ts#L17)
 
 Converts a number to a string with a specified number of decimal places.
 
@@ -37,10 +44,6 @@ Converts a number to a string with a specified number of decimal places.
 // Convert a number to a string with 2 decimal places
 const formattedNumber = decimal(12.3456, 2); // "12.34"
 ```
-
-#### Defined in
-
-[utils/number.ts:17](https://github.com/phun-ky/speccer/blob/main/src/utils/number.ts#L17)
 
 ---
 

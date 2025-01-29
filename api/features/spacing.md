@@ -6,7 +6,7 @@
 
 # features/spacing
 
-> Last updated 2024-11-21T14:05:20.009Z
+> Last updated 2025-01-29T08:54:31.598Z
 
 This feature highlights the spacing of an element.
 
@@ -40,6 +40,8 @@ element(targetElement);
 function create(text, tag): HTMLElement;
 ```
 
+Defined in: [src/features/spacing/index.ts:54](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L54)
+
 Create a spacing element with optional text content.
 
 #### Parameters
@@ -62,10 +64,6 @@ const spacingElement = create(20, 'div');
 document.body.appendChild(spacingElement);
 ```
 
-#### Defined in
-
-[features/spacing/index.ts:54](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L54)
-
 ---
 
 ### spacing()
@@ -73,6 +71,8 @@ document.body.appendChild(spacingElement);
 ```ts
 function spacing(targetElement, options?): Promise<void>;
 ```
+
+Defined in: [src/features/spacing/index.ts:115](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L115)
 
 Create and position spacing elements based on the target element's computed spacing styles.
 
@@ -128,10 +128,6 @@ const options = {
 
 element(targetElement, options);
 ````
-
-#### Defined in
-
-[features/spacing/index.ts:115](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L115)
 
 ---
 

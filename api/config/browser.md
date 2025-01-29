@@ -6,7 +6,7 @@
 
 # config/browser
 
-> Last updated 2024-11-21T14:05:19.995Z
+> Last updated 2025-01-29T08:54:31.583Z
 
 Contains the helper functions to activate SPECCER via a script tag, based on attributes:
 
@@ -81,6 +81,8 @@ Lazy loads `speccer()` per specced element
 function activate(speccer): void;
 ```
 
+Defined in: [src/config/browser.ts:219](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L219)
+
 A function to activate speccer based on script attributes.
 
 #### Parameters
@@ -100,10 +102,6 @@ A function to activate speccer based on script attributes.
 // activate(mySpeccer);
 ```
 
-#### Defined in
-
-[config/browser.ts:219](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L219)
-
 ---
 
 ### dom()
@@ -111,6 +109,8 @@ A function to activate speccer based on script attributes.
 ```ts
 function dom(speccer): void;
 ```
+
+Defined in: [src/config/browser.ts:83](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L83)
 
 A function to initialize speccer when the DOM is ready.
 
@@ -131,10 +131,6 @@ A function to initialize speccer when the DOM is ready.
 // dom(mySpeccer);
 ```
 
-#### Defined in
-
-[config/browser.ts:83](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L83)
-
 ---
 
 ### lazy()
@@ -142,6 +138,8 @@ A function to initialize speccer when the DOM is ready.
 ```ts
 function lazy(): void;
 ```
+
+Defined in: [src/config/browser.ts:101](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L101)
 
 A function to initialize lazy speccer functionality.
 
@@ -156,10 +154,6 @@ A function to initialize lazy speccer functionality.
 // lazy();
 ```
 
-#### Defined in
-
-[config/browser.ts:101](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L101)
-
 ---
 
 ### manual()
@@ -167,6 +161,8 @@ A function to initialize lazy speccer functionality.
 ```ts
 function manual(speccer): void;
 ```
+
+Defined in: [src/config/browser.ts:204](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L204)
 
 A function to manually activate speccer.
 
@@ -186,10 +182,6 @@ A function to manually activate speccer.
 // Usage example:
 // manual(mySpeccer);
 ```
-
-#### Defined in
-
-[config/browser.ts:204](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L204)
 
 ---
 

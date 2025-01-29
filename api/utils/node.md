@@ -6,7 +6,13 @@
 
 # utils/node
 
-> Last updated 2024-11-21T14:05:20.034Z
+> Last updated 2025-01-29T08:54:31.628Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [after()](#after)
+  - [removeAll()](#removeall)
 
 ## Functions
 
@@ -16,18 +22,22 @@
 function after(el, newSibling): undefined | null | Element;
 ```
 
+Defined in: [src/utils/node.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/node.ts#L15)
+
 Inserts an HTML element after another element in the DOM.
 
 #### Parameters
 
-| Parameter    | Type                                                                              | Description                                                         |
-| ------------ | --------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `el`         | `null` \| [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The reference element after which the new element will be inserted. |
-| `newSibling` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)           | The new element to be inserted.                                     |
+| Parameter    | Type                                                                                 | Description                                                         |
+| ------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
+| `el`         | \| `null` \| [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The reference element after which the new element will be inserted. |
+| `newSibling` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)              | The new element to be inserted.                                     |
 
 #### Returns
 
-`undefined` | `null` | [`Element`](https://developer.mozilla.org/docs/Web/API/Element)
+\| `undefined`
+\| `null`
+\| [`Element`](https://developer.mozilla.org/docs/Web/API/Element)
 
 #### Example
 
@@ -37,10 +47,6 @@ const referenceElement = document.getElementById('reference-element');
 const newElement = document.createElement('div');
 after(referenceElement, newElement);
 
-#### Defined in
-
-[utils/node.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/node.ts#L15)
-
 ***
 
 ### isElementHidden()
@@ -48,6 +54,8 @@ after(referenceElement, newElement);
 ```ts
 function isElementHidden(element): boolean
 ````
+
+Defined in: [src/utils/node.ts:55](https://github.com/phun-ky/speccer/blob/main/src/utils/node.ts#L55)
 
 Determines if an HTML element is hidden based on its visibility properties.
 
@@ -73,10 +81,6 @@ if (element) {
 }
 ```
 
-#### Defined in
-
-[utils/node.ts:55](https://github.com/phun-ky/speccer/blob/main/src/utils/node.ts#L55)
-
 ---
 
 ### removeAll()
@@ -84,6 +88,8 @@ if (element) {
 ```ts
 function removeAll(selector, el): void;
 ```
+
+Defined in: [src/utils/node.ts:34](https://github.com/phun-ky/speccer/blob/main/src/utils/node.ts#L34)
 
 Removes all elements matching a selector from the DOM.
 
@@ -104,10 +110,6 @@ Removes all elements matching a selector from the DOM.
 // Remove all elements with a specific class from the document
 removeAll('.my-class');
 ```
-
-#### Defined in
-
-[utils/node.ts:34](https://github.com/phun-ky/speccer/blob/main/src/utils/node.ts#L34)
 
 ---
 

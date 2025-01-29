@@ -6,7 +6,12 @@
 
 # features/typography/utils/position
 
-> Last updated 2024-11-21T14:05:20.011Z
+> Last updated 2025-01-29T08:54:31.599Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [position()](#position)
 
 ## Functions
 
@@ -22,6 +27,8 @@ function position(
   top: string;
 }>;
 ```
+
+Defined in: [src/features/typography/utils/position.ts:28](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/position.ts#L28)
 
 Calculate the position for the speccer element relative to the target element.
 
@@ -42,11 +49,6 @@ Calculate the position for the speccer element relative to the target element.
 
 - A promise that resolves with the calculated position.
 
-| Name   | Type     | Defined in                                                                                                                             |
-| ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `left` | `string` | [features/typography/utils/position.ts:32](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/position.ts#L32) |
-| `top`  | `string` | [features/typography/utils/position.ts:32](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/position.ts#L32) |
-
 #### Example
 
 ```ts
@@ -56,10 +58,6 @@ const options = {…};
 const position = await position(options, targetElement, speccerElement);
 console.log(position); // { left: '10px', top: '20px' }
 ```
-
-#### Defined in
-
-[features/typography/utils/position.ts:28](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/position.ts#L28)
 
 ---
 

@@ -6,7 +6,12 @@
 
 # utils/get-options
 
-> Last updated 2024-11-21T14:05:20.031Z
+> Last updated 2025-01-29T08:54:31.627Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [getOptions()](#getoptions)
 
 ## Functions
 
@@ -19,6 +24,8 @@ function getOptions(
   customOptions?
 ): SpeccerOptionsInterface;
 ```
+
+Defined in: [src/utils/get-options.ts:101](https://github.com/phun-ky/speccer/blob/main/src/utils/get-options.ts#L101)
 
 Generates Speccer options based on the target element and the specified area string.
 
@@ -46,10 +53,6 @@ const options = getOptions(
 console.log(options);
 // Output: { position: { left: true, right: true, top: false, bottom: false }, type: 'pin', pin: { bracket: false, enclose: false, subtle: false, parent: false, text: false, useSVGLine: false, useCurlyBrackets: false } }
 ```
-
-#### Defined in
-
-[utils/get-options.ts:101](https://github.com/phun-ky/speccer/blob/main/src/utils/get-options.ts#L101)
 
 ---
 

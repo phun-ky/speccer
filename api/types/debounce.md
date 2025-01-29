@@ -6,15 +6,22 @@
 
 # types/debounce
 
-> Last updated 2024-11-21T14:05:20.016Z
+> Last updated 2025-01-29T08:54:31.605Z
+
+## Table of Contents
+
+- [Type Aliases](#type-aliases)
+  - [DebounceAnyFunctionType()](#debounceanyfunctiontype)
 
 ## Type Aliases
 
 ### DebounceAnyFunctionType()
 
 ```ts
-type DebounceAnyFunctionType: (...args) => void;
+type DebounceAnyFunctionType = (...args) => void;
 ```
+
+Defined in: [src/types/debounce.ts:8](https://github.com/phun-ky/speccer/blob/main/src/types/debounce.ts#L8)
 
 Type definition for a debounced function that accepts any arguments.
 
@@ -27,10 +34,6 @@ Type definition for a debounced function that accepts any arguments.
 #### Returns
 
 `void`
-
-#### Defined in
-
-[types/debounce.ts:8](https://github.com/phun-ky/speccer/blob/main/src/types/debounce.ts#L8)
 
 ---
 

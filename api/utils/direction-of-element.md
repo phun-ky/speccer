@@ -6,7 +6,12 @@
 
 # utils/direction-of-element
 
-> Last updated 2024-11-21T14:05:20.030Z
+> Last updated 2025-01-29T08:54:31.627Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [direction_of_element()](#direction_of_element)
 
 ## Functions
 
@@ -16,16 +21,18 @@
 function direction_of_element(options): Promise<string>;
 ```
 
+Defined in: [src/utils/direction-of-element.ts:21](https://github.com/phun-ky/speccer/blob/main/src/utils/direction-of-element.ts#L21)
+
 Get the direction of an element based on its position relative to another element.
 
 #### Parameters
 
-| Parameter        | Type                                                                    | Description                                           |
-| ---------------- | ----------------------------------------------------------------------- | ----------------------------------------------------- |
-| `options`        | `object`                                                                | Options for direction calculation.                    |
-| `options.crude`? | `boolean`                                                               | If the direction should be calculated crudely (NSEW). |
-| `options.start`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The starting HTML element.                            |
-| `options.stop`   | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The stopping HTML element.                            |
+| Parameter        | Type                                                                                                                                                                                        | Description                                           |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| `options`        | \{ `crude`: `boolean`; `start`: [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement); `stop`: [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement); } | Options for direction calculation.                    |
+| `options.crude`? | `boolean`                                                                                                                                                                                   | If the direction should be calculated crudely (NSEW). |
+| `options.start`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                                                                                                                     | The starting HTML element.                            |
+| `options.stop`   | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                                                                                                                     | The stopping HTML element.                            |
 
 #### Returns
 
@@ -44,10 +51,6 @@ const direction = await direction_of_element({
   stop: stopElement
 });
 ```
-
-#### Defined in
-
-[utils/direction-of-element.ts:21](https://github.com/phun-ky/speccer/blob/main/src/utils/direction-of-element.ts#L21)
 
 ---
 

@@ -6,7 +6,15 @@
 
 # utils/classnames
 
-> Last updated 2024-11-21T14:05:20.027Z
+> Last updated 2025-01-29T08:54:31.624Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [cx()](#cx)
+  - [remove()](#remove)
+  - [set()](#set)
+  - [toggle()](#toggle)
 
 ## Functions
 
@@ -15,6 +23,8 @@
 ```ts
 function cx(cls, cls_obj?): string;
 ```
+
+Defined in: [src/utils/classnames.ts:112](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L112)
 
 Combines class names and optional properties object into a single string of class names.
 
@@ -44,10 +54,6 @@ const classNames = cx('class1', { class2: true, class3: false });
 console.log(classNames); // Example output: 'class1 class2'
 ```
 
-#### Defined in
-
-[utils/classnames.ts:112](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L112)
-
 ---
 
 ### remove()
@@ -55,6 +61,8 @@ console.log(classNames); // Example output: 'class1 class2'
 ```ts
 function remove(el, cls, avoid?): void;
 ```
+
+Defined in: [src/utils/classnames.ts:79](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L79)
 
 Remove CSS classes from an HTML element.
 
@@ -78,10 +86,6 @@ const element = document.getElementById('example');
 remove(element, 'class1 class2');
 ```
 
-#### Defined in
-
-[utils/classnames.ts:79](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L79)
-
 ---
 
 ### set()
@@ -89,6 +93,8 @@ remove(element, 'class1 class2');
 ```ts
 function set(el, cls, avoid?): void;
 ```
+
+Defined in: [src/utils/classnames.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L23)
 
 Add CSS classes to an HTML element.
 
@@ -112,10 +118,6 @@ const element = document.getElementById('example');
 set(element, 'class1 class2');
 ```
 
-#### Defined in
-
-[utils/classnames.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L23)
-
 ---
 
 ### toggle()
@@ -123,6 +125,8 @@ set(element, 'class1 class2');
 ```ts
 function toggle(el, cls, avoid?): void;
 ```
+
+Defined in: [src/utils/classnames.ts:52](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L52)
 
 Toggle CSS classes on an HTML element.
 
@@ -145,10 +149,6 @@ Toggle CSS classes on an HTML element.
 const element = document.getElementById('example');
 toggle(element, 'class1 class2');
 ```
-
-#### Defined in
-
-[utils/classnames.ts:52](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L52)
 
 ---
 

@@ -6,7 +6,12 @@
 
 # utils/angle
 
-> Last updated 2024-11-21T14:05:20.021Z
+> Last updated 2025-01-29T08:54:31.618Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [angle()](#angle)
 
 ## Functions
 
@@ -15,6 +20,8 @@
 ```ts
 function angle(cx, cy, ex, ey, normalize?): number;
 ```
+
+Defined in: [src/utils/angle.ts:20](https://github.com/phun-ky/speccer/blob/main/src/utils/angle.ts#L20)
 
 Returns the angle between two sets of coordinates.
 
@@ -48,10 +55,6 @@ Parameters for `angle` do not have the required type.
 // Calculate the angle between two points
 const angleValue = angle(0, 0, 3, 4);
 ```
-
-#### Defined in
-
-[utils/angle.ts:20](https://github.com/phun-ky/speccer/blob/main/src/utils/angle.ts#L20)
 
 ---
 

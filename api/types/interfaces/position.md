@@ -6,27 +6,34 @@
 
 # types/interfaces/position
 
-> Last updated 2024-11-21T14:05:20.019Z
+> Last updated 2025-01-29T08:54:31.616Z
+
+## Table of Contents
+
+- [Interfaces](#interfaces)
+  - [GetRecPropertiesInterface](#getrecpropertiesinterface)
 
 ## Interfaces
 
 ### GetRecPropertiesInterface
 
+Defined in: [src/types/interfaces/position.ts:9](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L9)
+
 Interface for functions that calculate position properties based on input.
 
 #### Properties
 
-| Property     | Type                                                                                                                                   | Description                                                | Defined in                                                                                                           |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `absolute`   | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates absolute position properties.                   | [types/interfaces/position.ts:16](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L16) |
-| `fromBottom` | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates position properties for moving from the bottom. | [types/interfaces/position.ts:48](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L48) |
-| `fromLeft`   | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates position properties for moving from the left.   | [types/interfaces/position.ts:64](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L64) |
-| `fromRight`  | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates position properties for moving from the right.  | [types/interfaces/position.ts:80](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L80) |
-| `fromTop`    | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates position properties for moving from the top.    | [types/interfaces/position.ts:32](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L32) |
-| `toBottom`   | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates position properties for moving to the bottom.   | [types/interfaces/position.ts:40](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L40) |
-| `toLeft`     | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates position properties for moving to the left.     | [types/interfaces/position.ts:56](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L56) |
-| `toRight`    | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates position properties for moving to the right.    | [types/interfaces/position.ts:72](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L72) |
-| `toTop`      | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates position properties for moving to the top.      | [types/interfaces/position.ts:24](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L24) |
+| Property                           | Type                                                                                                                                   | Description                                                | Defined in                                                                                                               |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| <a id="absolute" /> `absolute`     | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates absolute position properties.                   | [src/types/interfaces/position.ts:16](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L16) |
+| <a id="frombottom" /> `fromBottom` | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates position properties for moving from the bottom. | [src/types/interfaces/position.ts:48](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L48) |
+| <a id="fromleft" /> `fromLeft`     | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates position properties for moving from the left.   | [src/types/interfaces/position.ts:64](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L64) |
+| <a id="fromright" /> `fromRight`   | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates position properties for moving from the right.  | [src/types/interfaces/position.ts:80](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L80) |
+| <a id="fromtop" /> `fromTop`       | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates position properties for moving from the top.    | [src/types/interfaces/position.ts:32](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L32) |
+| <a id="tobottom" /> `toBottom`     | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates position properties for moving to the bottom.   | [src/types/interfaces/position.ts:40](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L40) |
+| <a id="toleft" /> `toLeft`         | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates position properties for moving to the left.     | [src/types/interfaces/position.ts:56](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L56) |
+| <a id="toright" /> `toRight`       | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates position properties for moving to the right.    | [src/types/interfaces/position.ts:72](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L72) |
+| <a id="totop" /> `toTop`           | (`inp`?: [`PositionInputType`](../position.md#positioninputtype)) => [`PositionPropertiesType`](../position.md#positionpropertiestype) | Calculates position properties for moving to the top.      | [src/types/interfaces/position.ts:24](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/position.ts#L24) |
 
 ---
 

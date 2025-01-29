@@ -6,18 +6,25 @@
 
 # types/xy
 
-> Last updated 2024-11-21T14:05:20.021Z
+> Last updated 2025-01-29T08:54:31.618Z
+
+## Table of Contents
+
+- [Interfaces](#interfaces)
+  - [SpeccerCoordinatesInterface](#speccercoordinatesinterface)
 
 ## Interfaces
 
 ### SpeccerCoordinatesInterface
 
+Defined in: [src/types/xy.ts:1](https://github.com/phun-ky/speccer/blob/main/src/types/xy.ts#L1)
+
 #### Properties
 
-| Property | Type     | Defined in                                                                       |
-| -------- | -------- | -------------------------------------------------------------------------------- |
-| `x`      | `number` | [types/xy.ts:2](https://github.com/phun-ky/speccer/blob/main/src/types/xy.ts#L2) |
-| `y`      | `number` | [types/xy.ts:3](https://github.com/phun-ky/speccer/blob/main/src/types/xy.ts#L3) |
+| Property         | Type     | Defined in                                                                           |
+| ---------------- | -------- | ------------------------------------------------------------------------------------ |
+| <a id="x" /> `x` | `number` | [src/types/xy.ts:2](https://github.com/phun-ky/speccer/blob/main/src/types/xy.ts#L2) |
+| <a id="y" /> `y` | `number` | [src/types/xy.ts:3](https://github.com/phun-ky/speccer/blob/main/src/types/xy.ts#L3) |
 
 ---
 

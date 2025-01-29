@@ -6,7 +6,12 @@
 
 # utils/camel-case
 
-> Last updated 2024-11-21T14:05:20.025Z
+> Last updated 2025-01-29T08:54:31.621Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [camelCase()](#camelcase)
 
 ## Functions
 
@@ -15,6 +20,8 @@
 ```ts
 function camelCase(str): string;
 ```
+
+Defined in: [src/utils/camel-case.ts:6](https://github.com/phun-ky/speccer/blob/main/src/utils/camel-case.ts#L6)
 
 Converts a string to camel case.
 
@@ -29,10 +36,6 @@ Converts a string to camel case.
 `string`
 
 - The string converted to camel case.
-
-#### Defined in
-
-[utils/camel-case.ts:6](https://github.com/phun-ky/speccer/blob/main/src/utils/camel-case.ts#L6)
 
 ---
 

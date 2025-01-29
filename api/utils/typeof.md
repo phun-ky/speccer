@@ -6,7 +6,19 @@
 
 # utils/typeof
 
-> Last updated 2024-11-21T14:05:20.037Z
+> Last updated 2025-01-29T08:54:31.630Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [isBoolean()](#isboolean)
+  - [isNotBoolean()](#isnotboolean)
+  - [isNotNumber()](#isnotnumber)
+  - [isNotString()](#isnotstring)
+  - [isNotUndefined()](#isnotundefined)
+  - [isNumber()](#isnumber)
+  - [isString()](#isstring)
+  - [isUndefined()](#isundefined)
 
 ## Functions
 
@@ -15,6 +27,8 @@
 ```ts
 function isBoolean(variable): boolean;
 ```
+
+Defined in: [src/utils/typeof/index.ts:42](https://github.com/phun-ky/speccer/blob/main/src/utils/typeof/index.ts#L42)
 
 Checks if the given variable is a boolean.
 
@@ -30,10 +44,6 @@ Checks if the given variable is a boolean.
 
 True if the variable is a boolean, false otherwise.
 
-#### Defined in
-
-[utils/typeof/index.ts:42](https://github.com/phun-ky/speccer/blob/main/src/utils/typeof/index.ts#L42)
-
 ---
 
 ### isNotBoolean()
@@ -41,6 +51,8 @@ True if the variable is a boolean, false otherwise.
 ```ts
 function isNotBoolean(variable): boolean;
 ```
+
+Defined in: [src/utils/typeof/index.ts:51](https://github.com/phun-ky/speccer/blob/main/src/utils/typeof/index.ts#L51)
 
 Checks if the given variable is not a boolean.
 
@@ -56,10 +68,6 @@ Checks if the given variable is not a boolean.
 
 True if the variable is not a boolean, false otherwise.
 
-#### Defined in
-
-[utils/typeof/index.ts:51](https://github.com/phun-ky/speccer/blob/main/src/utils/typeof/index.ts#L51)
-
 ---
 
 ### isNotNumber()
@@ -67,6 +75,8 @@ True if the variable is not a boolean, false otherwise.
 ```ts
 function isNotNumber(variable): boolean;
 ```
+
+Defined in: [src/utils/typeof/index.ts:34](https://github.com/phun-ky/speccer/blob/main/src/utils/typeof/index.ts#L34)
 
 Checks if the given variable is not a number.
 
@@ -82,10 +92,6 @@ Checks if the given variable is not a number.
 
 True if the variable is not a number, false otherwise.
 
-#### Defined in
-
-[utils/typeof/index.ts:34](https://github.com/phun-ky/speccer/blob/main/src/utils/typeof/index.ts#L34)
-
 ---
 
 ### isNotString()
@@ -93,6 +99,8 @@ True if the variable is not a number, false otherwise.
 ```ts
 function isNotString(variable): boolean;
 ```
+
+Defined in: [src/utils/typeof/index.ts:17](https://github.com/phun-ky/speccer/blob/main/src/utils/typeof/index.ts#L17)
 
 Checks if the given variable is not a string.
 
@@ -108,10 +116,6 @@ Checks if the given variable is not a string.
 
 True if the variable is not a string, false otherwise.
 
-#### Defined in
-
-[utils/typeof/index.ts:17](https://github.com/phun-ky/speccer/blob/main/src/utils/typeof/index.ts#L17)
-
 ---
 
 ### isNotUndefined()
@@ -119,6 +123,8 @@ True if the variable is not a string, false otherwise.
 ```ts
 function isNotUndefined(variable): boolean;
 ```
+
+Defined in: [src/utils/typeof/index.ts:69](https://github.com/phun-ky/speccer/blob/main/src/utils/typeof/index.ts#L69)
 
 Checks if the given variable is not undefined.
 
@@ -134,10 +140,6 @@ Checks if the given variable is not undefined.
 
 True if the variable is not undefined, false otherwise.
 
-#### Defined in
-
-[utils/typeof/index.ts:69](https://github.com/phun-ky/speccer/blob/main/src/utils/typeof/index.ts#L69)
-
 ---
 
 ### isNumber()
@@ -145,6 +147,8 @@ True if the variable is not undefined, false otherwise.
 ```ts
 function isNumber(variable): boolean;
 ```
+
+Defined in: [src/utils/typeof/index.ts:25](https://github.com/phun-ky/speccer/blob/main/src/utils/typeof/index.ts#L25)
 
 Checks if the given variable is a number.
 
@@ -160,10 +164,6 @@ Checks if the given variable is a number.
 
 True if the variable is a number, false otherwise.
 
-#### Defined in
-
-[utils/typeof/index.ts:25](https://github.com/phun-ky/speccer/blob/main/src/utils/typeof/index.ts#L25)
-
 ---
 
 ### isString()
@@ -171,6 +171,8 @@ True if the variable is a number, false otherwise.
 ```ts
 function isString(variable): boolean;
 ```
+
+Defined in: [src/utils/typeof/index.ts:8](https://github.com/phun-ky/speccer/blob/main/src/utils/typeof/index.ts#L8)
 
 Checks if the given variable is a string.
 
@@ -186,10 +188,6 @@ Checks if the given variable is a string.
 
 True if the variable is a string, false otherwise.
 
-#### Defined in
-
-[utils/typeof/index.ts:8](https://github.com/phun-ky/speccer/blob/main/src/utils/typeof/index.ts#L8)
-
 ---
 
 ### isUndefined()
@@ -197,6 +195,8 @@ True if the variable is a string, false otherwise.
 ```ts
 function isUndefined(variable): boolean;
 ```
+
+Defined in: [src/utils/typeof/index.ts:60](https://github.com/phun-ky/speccer/blob/main/src/utils/typeof/index.ts#L60)
 
 Checks if the given variable is undefined.
 
@@ -211,10 +211,6 @@ Checks if the given variable is undefined.
 `boolean`
 
 True if the variable is undefined, false otherwise.
-
-#### Defined in
-
-[utils/typeof/index.ts:60](https://github.com/phun-ky/speccer/blob/main/src/utils/typeof/index.ts#L60)
 
 ---
 

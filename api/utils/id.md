@@ -6,7 +6,12 @@
 
 # utils/id
 
-> Last updated 2024-11-21T14:05:20.032Z
+> Last updated 2025-01-29T08:54:31.627Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [uniqueID()](#uniqueid)
 
 ## Functions
 
@@ -15,6 +20,8 @@
 ```ts
 function uniqueID(): string;
 ```
+
+Defined in: [src/utils/id.ts:16](https://github.com/phun-ky/speccer/blob/main/src/utils/id.ts#L16)
 
 Generates a unique ID consisting of an underscore followed by a random alphanumeric string.
 
@@ -31,10 +38,6 @@ Generates a unique ID consisting of an underscore followed by a random alphanume
 const id = uniqueID();
 console.log(id); // Example output: "_abc123def"
 ```
-
-#### Defined in
-
-[utils/id.ts:16](https://github.com/phun-ky/speccer/blob/main/src/utils/id.ts#L16)
 
 ---
 

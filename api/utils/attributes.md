@@ -6,7 +6,13 @@
 
 # utils/attributes
 
-> Last updated 2024-11-21T14:05:20.024Z
+> Last updated 2025-01-29T08:54:31.620Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [removeAttributes()](#removeattributes)
+  - [setAttributes()](#setattributes)
 
 ## Functions
 
@@ -15,6 +21,8 @@
 ```ts
 function removeAttributes(el, attrs?): void;
 ```
+
+Defined in: [src/utils/attributes.ts:44](https://github.com/phun-ky/speccer/blob/main/src/utils/attributes.ts#L44)
 
 Removes attributes from an HTML element.
 
@@ -36,10 +44,6 @@ const element = document.getElementById('myElement');
 removeAttributes(element, ['class', 'data-value']);
 ```
 
-#### Defined in
-
-[utils/attributes.ts:44](https://github.com/phun-ky/speccer/blob/main/src/utils/attributes.ts#L44)
-
 ---
 
 ### setAttributes()
@@ -47,6 +51,8 @@ removeAttributes(element, ['class', 'data-value']);
 ```ts
 function setAttributes(el, attrs?): void;
 ```
+
+Defined in: [src/utils/attributes.ts:19](https://github.com/phun-ky/speccer/blob/main/src/utils/attributes.ts#L19)
 
 Sets attributes on an HTML element.
 
@@ -70,10 +76,6 @@ setAttributes(element, {
   'data-value': '123'
 });
 ```
-
-#### Defined in
-
-[utils/attributes.ts:19](https://github.com/phun-ky/speccer/blob/main/src/utils/attributes.ts#L19)
 
 ---
 

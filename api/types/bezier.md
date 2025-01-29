@@ -6,90 +6,91 @@
 
 # types/bezier
 
-> Last updated 2024-11-21T14:05:20.015Z
+> Last updated 2025-01-29T08:54:31.603Z
+
+## Table of Contents
+
+- [Type Aliases](#type-aliases)
+  - [BezierPathOptionsType](#bezierpathoptionstype)
+  - [CoordinatesForBezierObjectType](#coordinatesforbezierobjecttype)
+  - [CoordinatesType](#coordinatestype)
+  - [CreateCoordinatesForCurveCoordParamType](#createcoordinatesforcurvecoordparamtype)
+  - [CreateCoordinatesForCurveOptionsParamType](#createcoordinatesforcurveoptionsparamtype)
+  - [CurlyBezierPathOptionsType](#curlybezierpathoptionstype)
 
 ## Type Aliases
 
 ### BezierPathOptionsType
 
 ```ts
-type BezierPathOptionsType: {
+type BezierPathOptionsType = {
   pos1: string;
   pos2: string;
 };
 ```
+
+Defined in: [src/types/bezier.ts:29](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L29)
 
 Options for creating a bezier path.
 
 #### Type declaration
 
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Defined in</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Defined in</th>
+    </tr>
+  </thead>
 
-`pos1`
+  <tbody>
+    <tr>
+      <td>
+        <a id="pos1" /> `pos1`
+      </td>
 
-</td>
-<td>
+      <td>
+        `string`
+      </td>
 
-`string`
+      <td>
+        The first position.
+      </td>
 
-</td>
-<td>
+      <td>
+        [src/types/bezier.ts:33](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L33)
+      </td>
+    </tr>
 
-The first position.
+    <tr>
+      <td>
+        <a id="pos2" /> `pos2`
+      </td>
 
-</td>
-<td>
+      <td>
+        `string`
+      </td>
 
-[types/bezier.ts:33](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L33)
+      <td>
+        The second position.
+      </td>
 
-</td>
-</tr>
-<tr>
-<td>
+      <td>
+        [src/types/bezier.ts:38](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L38)
+      </td>
+    </tr>
 
-`pos2`
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-The second position.
-
-</td>
-<td>
-
-[types/bezier.ts:38](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L38)
-
-</td>
-</tr>
-</tbody>
+  </tbody>
 </table>
-
-#### Defined in
-
-[types/bezier.ts:29](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L29)
 
 ---
 
 ### CoordinatesForBezierObjectType
 
 ```ts
-type CoordinatesForBezierObjectType: {
+type CoordinatesForBezierObjectType = {
   firstControl: CoordinatesType;
   firstPoint: CoordinatesType;
   lastControl: CoordinatesType;
@@ -97,161 +98,141 @@ type CoordinatesForBezierObjectType: {
 };
 ```
 
+Defined in: [src/types/bezier.ts:46](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L46)
+
 #### Type declaration
 
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Defined in</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Defined in</th>
+    </tr>
+  </thead>
 
-`firstControl`
+  <tbody>
+    <tr>
+      <td>
+        <a id="firstcontrol" /> `firstControl`
+      </td>
 
-</td>
-<td>
+      <td>
+        [`CoordinatesType`](bezier.md#coordinatestype)
+      </td>
 
-[`CoordinatesType`](bezier.md#coordinatestype)
+      <td>
+        [src/types/bezier.ts:48](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L48)
+      </td>
+    </tr>
 
-</td>
-<td>
+    <tr>
+      <td>
+        <a id="firstpoint" /> `firstPoint`
+      </td>
 
-[types/bezier.ts:48](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L48)
+      <td>
+        [`CoordinatesType`](bezier.md#coordinatestype)
+      </td>
 
-</td>
-</tr>
-<tr>
-<td>
+      <td>
+        [src/types/bezier.ts:47](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L47)
+      </td>
+    </tr>
 
-`firstPoint`
+    <tr>
+      <td>
+        <a id="lastcontrol" /> `lastControl`
+      </td>
 
-</td>
-<td>
+      <td>
+        [`CoordinatesType`](bezier.md#coordinatestype)
+      </td>
 
-[`CoordinatesType`](bezier.md#coordinatestype)
+      <td>
+        [src/types/bezier.ts:50](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L50)
+      </td>
+    </tr>
 
-</td>
-<td>
+    <tr>
+      <td>
+        <a id="lastpoint" /> `lastPoint`
+      </td>
 
-[types/bezier.ts:47](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L47)
+      <td>
+        [`CoordinatesType`](bezier.md#coordinatestype)
+      </td>
 
-</td>
-</tr>
-<tr>
-<td>
+      <td>
+        [src/types/bezier.ts:49](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L49)
+      </td>
+    </tr>
 
-`lastControl`
-
-</td>
-<td>
-
-[`CoordinatesType`](bezier.md#coordinatestype)
-
-</td>
-<td>
-
-[types/bezier.ts:50](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L50)
-
-</td>
-</tr>
-<tr>
-<td>
-
-`lastPoint`
-
-</td>
-<td>
-
-[`CoordinatesType`](bezier.md#coordinatestype)
-
-</td>
-<td>
-
-[types/bezier.ts:49](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L49)
-
-</td>
-</tr>
-</tbody>
+  </tbody>
 </table>
-
-#### Defined in
-
-[types/bezier.ts:46](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L46)
 
 ---
 
 ### CoordinatesType
 
 ```ts
-type CoordinatesType: {
+type CoordinatesType = {
   x: number;
   y: number;
 };
 ```
 
+Defined in: [src/types/bezier.ts:41](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L41)
+
 #### Type declaration
 
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Defined in</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Defined in</th>
+    </tr>
+  </thead>
 
-`x`
+  <tbody>
+    <tr>
+      <td>
+        <a id="x" /> `x`
+      </td>
 
-</td>
-<td>
+      <td>
+        `number`
+      </td>
 
-`number`
+      <td>
+        [src/types/bezier.ts:42](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L42)
+      </td>
+    </tr>
 
-</td>
-<td>
+    <tr>
+      <td>
+        <a id="y" /> `y`
+      </td>
 
-[types/bezier.ts:42](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L42)
+      <td>
+        `number`
+      </td>
 
-</td>
-</tr>
-<tr>
-<td>
+      <td>
+        [src/types/bezier.ts:43](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L43)
+      </td>
+    </tr>
 
-`y`
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-[types/bezier.ts:43](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L43)
-
-</td>
-</tr>
-</tbody>
+  </tbody>
 </table>
-
-#### Defined in
-
-[types/bezier.ts:41](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L41)
 
 ---
 
 ### CreateCoordinatesForCurveCoordParamType
 
 ```ts
-type CreateCoordinatesForCurveCoordParamType: {
+type CreateCoordinatesForCurveCoordParamType = {
   x1: number;
   x2: number;
   y1: number;
@@ -259,220 +240,190 @@ type CreateCoordinatesForCurveCoordParamType: {
 };
 ```
 
+Defined in: [src/types/bezier.ts:56](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L56)
+
 Parameters for creating coordinates for a curve.
 
 #### Type declaration
 
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Defined in</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Defined in</th>
+    </tr>
+  </thead>
 
-`x1`
+  <tbody>
+    <tr>
+      <td>
+        <a id="x1" /> `x1`
+      </td>
 
-</td>
-<td>
+      <td>
+        `number`
+      </td>
 
-`number`
+      <td>
+        The x-coordinate of the first point.
+      </td>
 
-</td>
-<td>
+      <td>
+        [src/types/bezier.ts:60](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L60)
+      </td>
+    </tr>
 
-The x-coordinate of the first point.
+    <tr>
+      <td>
+        <a id="x2" /> `x2`
+      </td>
 
-</td>
-<td>
+      <td>
+        `number`
+      </td>
 
-[types/bezier.ts:60](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L60)
+      <td>
+        The x-coordinate of the second point.
+      </td>
 
-</td>
-</tr>
-<tr>
-<td>
+      <td>
+        [src/types/bezier.ts:65](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L65)
+      </td>
+    </tr>
 
-`x2`
+    <tr>
+      <td>
+        <a id="y1" /> `y1`
+      </td>
 
-</td>
-<td>
+      <td>
+        `number`
+      </td>
 
-`number`
+      <td>
+        The y-coordinate of the first point.
+      </td>
 
-</td>
-<td>
+      <td>
+        [src/types/bezier.ts:70](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L70)
+      </td>
+    </tr>
 
-The x-coordinate of the second point.
+    <tr>
+      <td>
+        <a id="y2" /> `y2`
+      </td>
 
-</td>
-<td>
+      <td>
+        `number`
+      </td>
 
-[types/bezier.ts:65](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L65)
+      <td>
+        The y-coordinate of the second point.
+      </td>
 
-</td>
-</tr>
-<tr>
-<td>
+      <td>
+        [src/types/bezier.ts:75](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L75)
+      </td>
+    </tr>
 
-`y1`
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The y-coordinate of the first point.
-
-</td>
-<td>
-
-[types/bezier.ts:70](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L70)
-
-</td>
-</tr>
-<tr>
-<td>
-
-`y2`
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The y-coordinate of the second point.
-
-</td>
-<td>
-
-[types/bezier.ts:75](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L75)
-
-</td>
-</tr>
-</tbody>
+  </tbody>
 </table>
-
-#### Defined in
-
-[types/bezier.ts:56](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L56)
 
 ---
 
 ### CreateCoordinatesForCurveOptionsParamType
 
 ```ts
-type CreateCoordinatesForCurveOptionsParamType: {
+type CreateCoordinatesForCurveOptionsParamType = {
   direct: boolean;
   direction: string;
   firstSet: boolean;
 };
 ```
 
+Defined in: [src/types/bezier.ts:81](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L81)
+
 Options for creating coordinates for a curve.
 
 #### Type declaration
 
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Defined in</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Defined in</th>
+    </tr>
+  </thead>
 
-`direct`?
+  <tbody>
+    <tr>
+      <td>
+        <a id="direct" /> `direct`?
+      </td>
 
-</td>
-<td>
+      <td>
+        `boolean`
+      </td>
 
-`boolean`
+      <td>
+        Indicates whether the curve is direct.
+      </td>
 
-</td>
-<td>
+      <td>
+        [src/types/bezier.ts:85](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L85)
+      </td>
+    </tr>
 
-Indicates whether the curve is direct.
+    <tr>
+      <td>
+        <a id="direction" /> `direction`
+      </td>
 
-</td>
-<td>
+      <td>
+        `string`
+      </td>
 
-[types/bezier.ts:85](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L85)
+      <td>
+        The direction of the curve.
+      </td>
 
-</td>
-</tr>
-<tr>
-<td>
+      <td>
+        [src/types/bezier.ts:95](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L95)
+      </td>
+    </tr>
 
-`direction`
+    <tr>
+      <td>
+        <a id="firstset" /> `firstSet`?
+      </td>
 
-</td>
-<td>
+      <td>
+        `boolean`
+      </td>
 
-`string`
+      <td>
+        Indicates if this is the first set of coordinates.
+      </td>
 
-</td>
-<td>
+      <td>
+        [src/types/bezier.ts:90](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L90)
+      </td>
+    </tr>
 
-The direction of the curve.
-
-</td>
-<td>
-
-[types/bezier.ts:95](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L95)
-
-</td>
-</tr>
-<tr>
-<td>
-
-`firstSet`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Indicates if this is the first set of coordinates.
-
-</td>
-<td>
-
-[types/bezier.ts:90](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L90)
-
-</td>
-</tr>
-</tbody>
+  </tbody>
 </table>
-
-#### Defined in
-
-[types/bezier.ts:81](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L81)
 
 ---
 
 ### CurlyBezierPathOptionsType
 
 ```ts
-type CurlyBezierPathOptionsType: {
+type CurlyBezierPathOptionsType = {
   direction: string;
   firstSet: boolean;
   pos1: string;
@@ -480,114 +431,97 @@ type CurlyBezierPathOptionsType: {
 };
 ```
 
+Defined in: [src/types/bezier.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L4)
+
 Options for creating a curly bezier path.
 
 #### Type declaration
 
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Defined in</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Defined in</th>
+    </tr>
+  </thead>
 
-`direction`
+  <tbody>
+    <tr>
+      <td>
+        <a id="direction-1" /> `direction`
+      </td>
 
-</td>
-<td>
+      <td>
+        `string`
+      </td>
 
-`string`
+      <td>
+        The direction of the path.
+      </td>
 
-</td>
-<td>
+      <td>
+        [src/types/bezier.ts:23](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L23)
+      </td>
+    </tr>
 
-The direction of the path.
+    <tr>
+      <td>
+        <a id="firstset-1" /> `firstSet`?
+      </td>
 
-</td>
-<td>
+      <td>
+        `boolean`
+      </td>
 
-[types/bezier.ts:23](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L23)
+      <td>
+        Indicates if this is the first part of the curly bracket or not.
+      </td>
 
-</td>
-</tr>
-<tr>
-<td>
+      <td>
+        [src/types/bezier.ts:18](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L18)
+      </td>
+    </tr>
 
-`firstSet`?
+    <tr>
+      <td>
+        <a id="pos1-1" /> `pos1`
+      </td>
 
-</td>
-<td>
+      <td>
+        `string`
+      </td>
 
-`boolean`
+      <td>
+        The first position.
+      </td>
 
-</td>
-<td>
+      <td>
+        [src/types/bezier.ts:8](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L8)
+      </td>
+    </tr>
 
-Indicates if this is the first part of the curly bracket or not.
+    <tr>
+      <td>
+        <a id="pos2-1" /> `pos2`
+      </td>
 
-</td>
-<td>
+      <td>
+        `string`
+      </td>
 
-[types/bezier.ts:18](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L18)
+      <td>
+        The second position.
+      </td>
 
-</td>
-</tr>
-<tr>
-<td>
+      <td>
+        [src/types/bezier.ts:13](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L13)
+      </td>
+    </tr>
 
-`pos1`
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-The first position.
-
-</td>
-<td>
-
-[types/bezier.ts:8](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L8)
-
-</td>
-</tr>
-<tr>
-<td>
-
-`pos2`
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-The second position.
-
-</td>
-<td>
-
-[types/bezier.ts:13](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L13)
-
-</td>
-</tr>
-</tbody>
+  </tbody>
 </table>
-
-#### Defined in
-
-[types/bezier.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L4)
 
 ---
 

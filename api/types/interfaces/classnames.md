@@ -6,35 +6,37 @@
 
 # types/interfaces/classnames
 
-> Last updated 2024-11-21T14:05:20.018Z
+> Last updated 2025-01-29T08:54:31.606Z
+
+## Table of Contents
+
+- [Type Aliases](#type-aliases)
+  - [ClassNamesFirstArgType](#classnamesfirstargtype)
+  - [ClassNamesSecondArgType](#classnamessecondargtype)
 
 ## Type Aliases
 
 ### ClassNamesFirstArgType
 
 ```ts
-type ClassNamesFirstArgType: string | ClassNamesSecondArgType;
+type ClassNamesFirstArgType = string | ClassNamesSecondArgType;
 ```
 
+Defined in: [src/types/interfaces/classnames.ts:9](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/classnames.ts#L9)
+
 Type for the first argument of the cx function which can be either a string or `ClassNamesSecondArgType`.
-
-#### Defined in
-
-[types/interfaces/classnames.ts:9](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/classnames.ts#L9)
 
 ---
 
 ### ClassNamesSecondArgType
 
 ```ts
-type ClassNamesSecondArgType: undefined | Record<string, boolean>;
+type ClassNamesSecondArgType = undefined | Record<string, boolean>;
 ```
 
+Defined in: [src/types/interfaces/classnames.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/classnames.ts#L4)
+
 Type for the optional properties object with boolean values.
-
-#### Defined in
-
-[types/interfaces/classnames.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/classnames.ts#L4)
 
 ---
 

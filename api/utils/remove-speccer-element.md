@@ -6,7 +6,12 @@
 
 # utils/remove-speccer-element
 
-> Last updated 2024-11-21T14:05:20.036Z
+> Last updated 2025-01-29T08:54:31.629Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [removeSpeccerElement()](#removespeccerelement)
 
 ## Functions
 
@@ -15,6 +20,8 @@
 ```ts
 function removeSpeccerElement(el): void;
 ```
+
+Defined in: [src/utils/remove-speccer-element.ts:18](https://github.com/phun-ky/speccer/blob/main/src/utils/remove-speccer-element.ts#L18)
 
 Remove a speccer element by removing associated elements and SVG paths.
 
@@ -41,10 +48,6 @@ if (element) {
   removeSpeccerElement(element);
 }
 ```
-
-#### Defined in
-
-[utils/remove-speccer-element.ts:18](https://github.com/phun-ky/speccer/blob/main/src/utils/remove-speccer-element.ts#L18)
 
 ---
 

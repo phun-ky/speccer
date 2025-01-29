@@ -6,7 +6,7 @@
 
 # features/grid
 
-> Last updated 2024-11-21T14:05:20.005Z
+> Last updated 2025-01-29T08:54:31.592Z
 
 This feature will highlight the grid spacing in a `display: grid;` element.
 
@@ -47,6 +47,8 @@ grid(targetElement, options);
 function create(targetElement, styles, options): Promise<void>;
 ```
 
+Defined in: [src/features/grid/index.ts:63](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L63)
+
 Creates a visual grid overlay for a given target element.
 
 #### Parameters
@@ -71,10 +73,6 @@ if (targetElement) {
 }
 ```
 
-#### Defined in
-
-[features/grid/index.ts:63](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L63)
-
 ---
 
 ### grid()
@@ -82,6 +80,8 @@ if (targetElement) {
 ```ts
 function grid(targetElement, options?): Promise<void>;
 ```
+
+Defined in: [src/features/grid/index.ts:204](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L204)
 
 Create a visual overlay to present the column gaps for a grid container
 
@@ -125,10 +125,6 @@ const options = {
 
 grid(targetElement, options);
 ```
-
-#### Defined in
-
-[features/grid/index.ts:204](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L204)
 
 ---
 

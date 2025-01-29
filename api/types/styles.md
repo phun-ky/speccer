@@ -6,14 +6,19 @@
 
 # types/styles
 
-> Last updated 2024-11-21T14:05:20.021Z
+> Last updated 2025-01-29T08:54:31.618Z
+
+## Table of Contents
+
+- [Type Aliases](#type-aliases)
+  - [SpeccerStylesReturnType](#speccerstylesreturntype)
 
 ## Type Aliases
 
 ### SpeccerStylesReturnType
 
 ```ts
-type SpeccerStylesReturnType: {
+type SpeccerStylesReturnType = {
   height: string;
   left: string;
   top: string;
@@ -21,91 +26,78 @@ type SpeccerStylesReturnType: {
 };
 ```
 
+Defined in: [src/types/styles.ts:1](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L1)
+
 #### Type declaration
 
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Defined in</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Defined in</th>
+    </tr>
+  </thead>
 
-`height`?
+  <tbody>
+    <tr>
+      <td>
+        <a id="height" /> `height`?
+      </td>
 
-</td>
-<td>
+      <td>
+        `string`
+      </td>
 
-`string`
+      <td>
+        [src/types/styles.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L4)
+      </td>
+    </tr>
 
-</td>
-<td>
+    <tr>
+      <td>
+        <a id="left" /> `left`
+      </td>
 
-[types/styles.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L4)
+      <td>
+        `string`
+      </td>
 
-</td>
-</tr>
-<tr>
-<td>
+      <td>
+        [src/types/styles.ts:2](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L2)
+      </td>
+    </tr>
 
-`left`
+    <tr>
+      <td>
+        <a id="top" /> `top`
+      </td>
 
-</td>
-<td>
+      <td>
+        `string`
+      </td>
 
-`string`
+      <td>
+        [src/types/styles.ts:3](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L3)
+      </td>
+    </tr>
 
-</td>
-<td>
+    <tr>
+      <td>
+        <a id="width" /> `width`?
+      </td>
 
-[types/styles.ts:2](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L2)
+      <td>
+        `string`
+      </td>
 
-</td>
-</tr>
-<tr>
-<td>
+      <td>
+        [src/types/styles.ts:5](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L5)
+      </td>
+    </tr>
 
-`top`
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-[types/styles.ts:3](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L3)
-
-</td>
-</tr>
-<tr>
-<td>
-
-`width`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-[types/styles.ts:5](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L5)
-
-</td>
-</tr>
-</tbody>
+  </tbody>
 </table>
-
-#### Defined in
-
-[types/styles.ts:1](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L1)
 
 ---
 

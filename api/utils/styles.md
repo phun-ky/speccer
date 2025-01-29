@@ -6,7 +6,13 @@
 
 # utils/styles
 
-> Last updated 2024-11-21T14:05:20.036Z
+> Last updated 2025-01-29T08:54:31.630Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [add()](#add)
+  - [get()](#get)
 
 ## Functions
 
@@ -16,6 +22,8 @@
 function add(el, styles): Promise<void>;
 ```
 
+Defined in: [src/utils/styles.ts:26](https://github.com/phun-ky/speccer/blob/main/src/utils/styles.ts#L26)
+
 Adds CSS styles to an HTMLElement.
 
 #### Parameters
@@ -23,7 +31,7 @@ Adds CSS styles to an HTMLElement.
 | Parameter | Type                                                                    | Description                                                      |
 | --------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The HTMLElement to apply styles to.                              |
-| `styles`  | `object` \| \{ `key`: `string`; `value`: `string`; }\[]                 | An object or an array of objects containing CSS styles to apply. |
+| `styles`  | \| `object` \| \{ `key`: `string`; `value`: `string`; }\[]              | An object or an array of objects containing CSS styles to apply. |
 
 #### Returns
 
@@ -46,10 +54,6 @@ const styles = [
 await add(element, styles);
 ```
 
-#### Defined in
-
-[utils/styles.ts:26](https://github.com/phun-ky/speccer/blob/main/src/utils/styles.ts#L26)
-
 ---
 
 ### get()
@@ -57,6 +61,8 @@ await add(element, styles);
 ```ts
 function get(el): Promise<CSSStyleDeclaration>;
 ```
+
+Defined in: [src/utils/styles.ts:68](https://github.com/phun-ky/speccer/blob/main/src/utils/styles.ts#L68)
 
 Gets the computed CSS styles of an HTMLElement.
 
@@ -80,10 +86,6 @@ const element = document.getElementById('my-element');
 const computedStyles = await get(element);
 console.log(computedStyles.color); // Logs the color property value
 ```
-
-#### Defined in
-
-[utils/styles.ts:68](https://github.com/phun-ky/speccer/blob/main/src/utils/styles.ts#L68)
 
 ---
 

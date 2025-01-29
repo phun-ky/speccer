@@ -6,7 +6,7 @@
 
 # features/pin
 
-> Last updated 2024-11-21T14:05:20.007Z
+> Last updated 2025-01-29T08:54:31.594Z
 
 This feature annotate or highlight the anatomy of an element.
 
@@ -17,11 +17,11 @@ In your component examples, use the following attribute. Remember to use the `da
 ## Table of Contents
 
 - [Example](#example)
+- [Functions](#functions)
+  - [pinElements()](#pinelements)
 - [References](#references)
   - [createPinElement](#createpinelement)
   - [pinElement](#pinelement)
-- [Functions](#functions)
-  - [pinElements()](#pinelements)
 
 ## Example
 
@@ -34,16 +34,6 @@ In your component examples, use the following attribute. Remember to use the `da
 </div>
 ```
 
-## References
-
-### createPinElement
-
-Re-exports [createPinElement](pin/utils/create-pin-element.md#createpinelement)
-
-### pinElement
-
-Re-exports [pinElement](pin/utils/pin-element.md#pinelement)
-
 ## Functions
 
 ### pinElements()
@@ -51,6 +41,8 @@ Re-exports [pinElement](pin/utils/pin-element.md#pinelement)
 ```ts
 function pinElements(sectionElement, options?): Promise<void>;
 ```
+
+Defined in: [src/features/pin/index.ts:51](https://github.com/phun-ky/speccer/blob/main/src/features/pin/index.ts#L51)
 
 Create pinned elements based on the section element and its data-speccer attributes.
 
@@ -74,9 +66,15 @@ const sectionElement = document.getElementById('section');
 pinElements(sectionElement);
 ```
 
-#### Defined in
+## References
 
-[features/pin/index.ts:51](https://github.com/phun-ky/speccer/blob/main/src/features/pin/index.ts#L51)
+### createPinElement
+
+Re-exports [createPinElement](pin/utils/create-pin-element.md#createpinelement)
+
+### pinElement
+
+Re-exports [pinElement](pin/utils/pin-element.md#pinelement)
 
 ---
 

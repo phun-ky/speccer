@@ -6,7 +6,12 @@
 
 # features/typography/utils/template
 
-> Last updated 2024-11-21T14:05:20.012Z
+> Last updated 2025-01-29T08:54:31.600Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [template()](#template)
 
 ## Functions
 
@@ -15,6 +20,8 @@
 ```ts
 function template(targetElement, useHighlighting?): Promise<string>;
 ```
+
+Defined in: [src/features/typography/utils/template.ts:20](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/template.ts#L20)
 
 Generate a HTML string for typography styles of a target element.
 
@@ -38,10 +45,6 @@ const targetElement = document.getElementById('target');
 const typographyStyles = await template(targetElement, true);
 console.log(typographyStyles);
 ```
-
-#### Defined in
-
-[features/typography/utils/template.ts:20](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/template.ts#L20)
 
 ---
 

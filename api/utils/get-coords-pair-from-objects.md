@@ -6,7 +6,12 @@
 
 # utils/get-coords-pair-from-objects
 
-> Last updated 2024-11-21T14:05:20.031Z
+> Last updated 2025-01-29T08:54:31.627Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [getCoordsPairFromObjects()](#getcoordspairfromobjects)
 
 ## Functions
 
@@ -25,6 +30,8 @@ function getCoordsPairFromObjects(
   y2: number;
 }>;
 ```
+
+Defined in: [src/utils/get-coords-pair-from-objects.ts:20](https://github.com/phun-ky/speccer/blob/main/src/utils/get-coords-pair-from-objects.ts#L20)
 
 Get the x and y coordinates of two elements and return them as an object.
 
@@ -48,13 +55,6 @@ Get the x and y coordinates of two elements and return them as an object.
 
 - An object containing the coordinates.
 
-| Name | Type     | Defined in                                                                                                                             |
-| ---- | -------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `x1` | `number` | [utils/get-coords-pair-from-objects.ts:25](https://github.com/phun-ky/speccer/blob/main/src/utils/get-coords-pair-from-objects.ts#L25) |
-| `x2` | `number` | [utils/get-coords-pair-from-objects.ts:25](https://github.com/phun-ky/speccer/blob/main/src/utils/get-coords-pair-from-objects.ts#L25) |
-| `y1` | `number` | [utils/get-coords-pair-from-objects.ts:25](https://github.com/phun-ky/speccer/blob/main/src/utils/get-coords-pair-from-objects.ts#L25) |
-| `y2` | `number` | [utils/get-coords-pair-from-objects.ts:25](https://github.com/phun-ky/speccer/blob/main/src/utils/get-coords-pair-from-objects.ts#L25) |
-
 #### Throws
 
 No element given.
@@ -67,10 +67,6 @@ const element1 = document.getElementById('element1');
 const element2 = document.getElementById('element2');
 const coordinates = await get_coords_pair_from_objects(element1, element2);
 ```
-
-#### Defined in
-
-[utils/get-coords-pair-from-objects.ts:20](https://github.com/phun-ky/speccer/blob/main/src/utils/get-coords-pair-from-objects.ts#L20)
 
 ---
 

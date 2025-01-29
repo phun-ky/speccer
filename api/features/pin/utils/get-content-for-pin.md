@@ -6,7 +6,12 @@
 
 # features/pin/utils/get-content-for-pin
 
-> Last updated 2024-11-21T14:05:20.008Z
+> Last updated 2025-01-29T08:54:31.597Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [getContentForPin()](#getcontentforpin)
 
 ## Functions
 
@@ -15,6 +20,8 @@
 ```ts
 function getContentForPin(symbol, targetElement, options): string;
 ```
+
+Defined in: [src/features/pin/utils/get-content-for-pin.ts:21](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/get-content-for-pin.ts#L21)
 
 Generates the content for a pin element based on the provided symbol, target element, and options.
 
@@ -42,10 +49,6 @@ const content = getContentForPin(symbol, targetElement, options);
 console.log(content);
 // Output: '<span class="ph-speccer title">Title Text</span>'
 ```
-
-#### Defined in
-
-[features/pin/utils/get-content-for-pin.ts:21](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/get-content-for-pin.ts#L21)
 
 ---
 

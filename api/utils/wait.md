@@ -6,7 +6,13 @@
 
 # utils/wait
 
-> Last updated 2024-11-21T14:05:20.037Z
+> Last updated 2025-01-29T08:54:31.631Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [waitFor()](#waitfor)
+  - [waitForFrame()](#waitforframe)
 
 ## Functions
 
@@ -15,6 +21,8 @@
 ```ts
 function waitFor(ms): Promise<void>;
 ```
+
+Defined in: [src/utils/wait.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/wait.ts#L13)
 
 Waits for the specified amount of time in milliseconds.
 
@@ -37,10 +45,6 @@ Waits for the specified amount of time in milliseconds.
 await waitFor(1000);
 ```
 
-#### Defined in
-
-[utils/wait.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/wait.ts#L13)
-
 ---
 
 ### waitForFrame()
@@ -48,6 +52,8 @@ await waitFor(1000);
 ```ts
 function waitForFrame(): Promise<number>;
 ```
+
+Defined in: [src/utils/wait.ts:30](https://github.com/phun-ky/speccer/blob/main/src/utils/wait.ts#L30)
 
 Waits for the next animation frame using requestAnimationFrame.
 
@@ -66,10 +72,6 @@ const rect = el.getBoundingClientRect();
 // Wait for the next animation frame and get the timestamp
 const timestamp = await waitForFrame();
 ```
-
-#### Defined in
-
-[utils/wait.ts:30](https://github.com/phun-ky/speccer/blob/main/src/utils/wait.ts#L30)
 
 ---
 

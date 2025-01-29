@@ -6,7 +6,16 @@
 
 # utils/position
 
-> Last updated 2024-11-21T14:05:20.035Z
+> Last updated 2025-01-29T08:54:31.628Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [get_horizontal_center_of_els()](#get_horizontal_center_of_els)
+  - [get_vertical_center_of_els()](#get_vertical_center_of_els)
+  - [getRec()](#getrec)
+  - [offset()](#offset)
+  - [offsetWithCenter()](#offsetwithcenter)
 
 ## Functions
 
@@ -15,6 +24,8 @@
 ```ts
 function get_horizontal_center_of_els(modifier, startRect, targetRect): number;
 ```
+
+Defined in: [src/utils/position.ts:21](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L21)
 
 Calculates the horizontal center of two elements.
 
@@ -39,10 +50,6 @@ Calculates the horizontal center of two elements.
 const center = get_horizontal_center_of_els(0, startRect, targetRect);
 ```
 
-#### Defined in
-
-[utils/position.ts:21](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L21)
-
 ---
 
 ### get_vertical_center_of_els()
@@ -50,6 +57,8 @@ const center = get_horizontal_center_of_els(0, startRect, targetRect);
 ```ts
 function get_vertical_center_of_els(modifier, startRect, targetRect): number;
 ```
+
+Defined in: [src/utils/position.ts:41](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L41)
 
 Calculates the vertical center of two elements.
 
@@ -74,10 +83,6 @@ Calculates the vertical center of two elements.
 const center = get_vertical_center_of_els(0, startRect, targetRect);
 ```
 
-#### Defined in
-
-[utils/position.ts:41](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L41)
-
 ---
 
 ### getRec()
@@ -85,6 +90,8 @@ const center = get_vertical_center_of_els(0, startRect, targetRect);
 ```ts
 function getRec(sourceEl, targetEl): Promise<GetRecPropertiesInterface>;
 ```
+
+Defined in: [src/utils/position.ts:164](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L164)
 
 Gets various positioning properties between two HTML elements.
 
@@ -114,10 +121,6 @@ const absoluteProps = recProps.absolute();
 const aboveProps = recProps.toTop();
 ```
 
-#### Defined in
-
-[utils/position.ts:164](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L164)
-
 ---
 
 ### offset()
@@ -125,6 +128,8 @@ const aboveProps = recProps.toTop();
 ```ts
 function offset(targetEl): Promise<PositionPropertiesType>;
 ```
+
+Defined in: [src/utils/position.ts:59](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L59)
 
 Gets the offset properties of an HTML element.
 
@@ -147,10 +152,6 @@ Gets the offset properties of an HTML element.
 const offsetProps = await offset(targetElement);
 ```
 
-#### Defined in
-
-[utils/position.ts:59](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L59)
-
 ---
 
 ### offsetWithCenter()
@@ -158,6 +159,8 @@ const offsetProps = await offset(targetElement);
 ```ts
 function offsetWithCenter(sourceEl, targetEl): Promise<PositionPropertiesType>;
 ```
+
+Defined in: [src/utils/position.ts:119](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L119)
 
 Gets the offset properties of an HTML element with its center aligned to another element.
 
@@ -180,10 +183,6 @@ Gets the offset properties of an HTML element with its center aligned to another
 // Get the offset properties of an element with its center aligned to another element
 const offsetProps = await offsetWithCenter(sourceElement, targetElement);
 ```
-
-#### Defined in
-
-[utils/position.ts:119](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L119)
 
 ---
 

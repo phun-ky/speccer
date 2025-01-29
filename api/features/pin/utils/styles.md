@@ -6,7 +6,12 @@
 
 # features/pin/utils/styles
 
-> Last updated 2024-11-21T14:05:20.009Z
+> Last updated 2025-01-29T08:54:31.598Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [styles()](#styles)
 
 ## Functions
 
@@ -20,6 +25,8 @@ function styles(
   options
 ): Promise<SpeccerStylesReturnType>;
 ```
+
+Defined in: [src/features/pin/utils/styles.ts:28](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/styles.ts#L28)
 
 Get styles for pin elements based on the specified area and options.
 
@@ -55,10 +62,6 @@ const styles = await styles(
 );
 console.log(styles);
 ```
-
-#### Defined in
-
-[features/pin/utils/styles.ts:28](https://github.com/phun-ky/speccer/blob/main/src/features/pin/utils/styles.ts#L28)
 
 ---
 

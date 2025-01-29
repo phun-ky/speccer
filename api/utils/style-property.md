@@ -6,7 +6,12 @@
 
 # utils/style-property
 
-> Last updated 2024-11-21T14:05:20.036Z
+> Last updated 2025-01-29T08:54:31.630Z
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [isSticky()](#issticky)
 
 ## Functions
 
@@ -15,6 +20,8 @@
 ```ts
 function isSticky(element): Promise<boolean>;
 ```
+
+Defined in: [src/utils/style-property.ts:98](https://github.com/phun-ky/speccer/blob/main/src/utils/style-property.ts#L98)
 
 Checks if an element has 'position: sticky'.
 
@@ -37,10 +44,6 @@ Checks if an element has 'position: sticky'.
 const isElementSticky = await isSticky(myElement);
 console.log(isElementSticky); // true or false
 ```
-
-#### Defined in
-
-[utils/style-property.ts:98](https://github.com/phun-ky/speccer/blob/main/src/utils/style-property.ts#L98)
 
 ---
 

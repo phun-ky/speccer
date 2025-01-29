@@ -6,7 +6,7 @@
 
 # features/typography
 
-> Last updated 2024-11-21T14:05:20.010Z
+> Last updated 2025-01-29T08:54:31.599Z
 
 This feature presents typography
 
@@ -50,6 +50,8 @@ typography(targetElement, options);
 function create(html, options, id): HTMLElement;
 ```
 
+Defined in: [src/features/typography/index.ts:63](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L63)
+
 Create a DOM element with provided HTML and optional CSS class names.
 
 #### Parameters
@@ -75,10 +77,6 @@ const createdElement = create(htmlContent, cssClass);
 document.body.appendChild(createdElement);
 ```
 
-#### Defined in
-
-[features/typography/index.ts:63](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L63)
-
 ---
 
 ### typography()
@@ -86,6 +84,8 @@ document.body.appendChild(createdElement);
 ```ts
 function typography(targetElement, options?): Promise<void>;
 ```
+
+Defined in: [src/features/typography/index.ts:121](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L121)
 
 Create a specced typography element for a given target element.
 
@@ -131,10 +131,6 @@ if (targetElement) {
   element(targetElement, options);
 }
 ```
-
-#### Defined in
-
-[features/typography/index.ts:121](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L121)
 
 ---
 
