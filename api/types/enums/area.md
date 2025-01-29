@@ -6,7 +6,7 @@
 
 # types/enums/area
 
-> Last updated 2025-01-29T08:54:31.605Z
+> Last updated 2025-01-29T10:42:53.387Z
 
 ## Table of Contents
 

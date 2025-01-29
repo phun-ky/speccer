@@ -2,75 +2,51 @@
   <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
 </div>
 
-[@phun-ky/speccer](../README.md) / utils/wait
+[@phun-ky/speccer](../../../README.md) / features/a11y/utils/add-shortcut-element
 
-# utils/wait
+# features/a11y/utils/add-shortcut-element
 
-> Last updated 2025-01-29T10:42:53.404Z
+> Last updated 2025-01-29T10:42:53.377Z
 
 ## Table of Contents
 
 - [Functions](#functions)
-  - [waitFor()](#waitfor)
-  - [waitForFrame()](#waitforframe)
+  - [addShortcutElement()](#addshortcutelement)
 
 ## Functions
 
-### waitFor()
+### addShortcutElement()
 
 ```ts
-function waitFor(ms): Promise<void>;
+function addShortcutElement(el, shortcutString): Promise<void>;
 ```
 
-Defined in: [src/utils/wait.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/wait.ts#L13)
+Defined in: [src/features/a11y/utils/add-shortcut-element.ts:24](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/utils/add-shortcut-element.ts#L24)
 
-Waits for the specified amount of time in milliseconds.
+Adds a shortcut element to the document body based on the provided HTML element and shortcut string.
+
+![Screenshot of speccer a11y shortcuts in use](https://github.com/phun-ky/speccer/blob/main/public/speccer-a11y-shortcuts-light.png?raw=true)
 
 #### Parameters
 
-| Parameter | Type     | Description                         |
-| --------- | -------- | ----------------------------------- |
-| `ms`      | `number` | The number of milliseconds to wait. |
+| Parameter        | Type                                                                    | Description                      |
+| ---------------- | ----------------------------------------------------------------------- | -------------------------------- |
+| `el`             | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | Target HTML element.             |
+| `shortcutString` | `string`                                                                | Shortcut string to be displayed. |
 
 #### Returns
 
 [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
 
-- A Promise that resolves after the specified time.
+A Promise resolving when the operation is complete.
 
 #### Example
 
 ```ts
-// Wait for 1 second (1000 milliseconds)
-await waitFor(1000);
-```
-
----
-
-### waitForFrame()
-
-```ts
-function waitForFrame(): Promise<number>;
-```
-
-Defined in: [src/utils/wait.ts:30](https://github.com/phun-ky/speccer/blob/main/src/utils/wait.ts#L30)
-
-Waits for the next animation frame using requestAnimationFrame.
-
-#### Returns
-
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`number`>
-
-- A Promise that resolves with the timestamp of the next animation frame.
-
-#### Example
-
-```ts
-// Wait for the next animation frame and get the rect
-await waitForFrame();
-const rect = el.getBoundingClientRect();
-// Wait for the next animation frame and get the timestamp
-const timestamp = await waitForFrame();
+const shortcutElement = document.getElementById('shortcutElement');
+if (shortcutElement) {
+  await addShortcutElement(shortcutElement, 'Ctrl + Shift + A');
+}
 ```
 
 ---
