@@ -6,7 +6,7 @@
 
 # types/xy
 
-> Last updated 2025-01-29T10:42:53.397Z
+> Last updated 2025-01-29T10:54:55.260Z
 
 ## Table of Contents
 

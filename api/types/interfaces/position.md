@@ -6,7 +6,7 @@
 
 # types/interfaces/position
 
-> Last updated 2025-01-29T10:42:53.395Z
+> Last updated 2025-01-29T10:54:55.258Z
 
 ## Table of Contents
 

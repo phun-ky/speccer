@@ -1,5 +1,16 @@
 # Changelog
 
+## [11.2.4](https://github.com/phun-ky/speccer/compare/v11.2.3...v11.2.4) (2025-01-29)
+
+### Tasks
+
+* 🤖 bump the major-updates group across 1 directory with 8 updates ([91adcb5](https://github.com/phun-ky/speccer/commit/91adcb5d182ef8bac6c686f8a992e2fe969a7c33))
+* 🤖 reinstall deps ([dfcbf63](https://github.com/phun-ky/speccer/commit/dfcbf639ebb092751143e28634e48d5a1830f386))
+
+### Documentation
+
+* ✏️ Regenerate documentation ([b2417b7](https://github.com/phun-ky/speccer/commit/b2417b7ef0f4f64a36f14a3f9c171377a03f1d20))
+
 ## [11.2.3](https://github.com/phun-ky/speccer/compare/v11.2.2...v11.2.3) (2025-01-29)
 
 

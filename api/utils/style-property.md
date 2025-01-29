@@ -6,7 +6,7 @@
 
 # utils/style-property
 
-> Last updated 2025-01-29T10:42:53.404Z
+> Last updated 2025-01-29T10:54:55.273Z
 
 ## Table of Contents
 
