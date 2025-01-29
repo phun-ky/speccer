@@ -6,7 +6,7 @@
 
 # utils/attributes
 
-> Last updated 2025-01-29T08:54:31.620Z
+> Last updated 2025-01-29T10:42:53.398Z
 
 ## Table of Contents
 
