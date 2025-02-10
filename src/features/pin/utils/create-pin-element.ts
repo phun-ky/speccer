@@ -56,6 +56,7 @@ export const createPinElement = (
   setClassNames(_el, _class_names);
 
   _el.setAttribute('id', id);
+  _el.setAttribute('data-speccer-id', id);
 
   return _el;
 };

@@ -1,4 +1,5 @@
 import { cx, set as setClassNames } from '../../../utils/classnames';
+import { uniqueID } from '../../../utils/id';
 import { add } from '../../../utils/styles';
 import { SPECCER_MODIFIER_KEYS, SPECCER_PHYSICAL_KEYS } from '../constants';
 
@@ -46,6 +47,9 @@ export const addShortcutElement = async (
 
     _key_element.appendChild(_key_text_node);
 
+    const _pin_element_id = `speccer-a11y-shortcut-${uniqueID()}`;
+
+    _shortcut_holder.setAttribute('data-speccer-id', _pin_element_id);
     _shortcut_holder.appendChild(_key_element);
   }
 

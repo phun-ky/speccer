@@ -68,6 +68,7 @@ export const create = (
 
   _el.setAttribute('title', `${text}px`);
   _el.setAttribute('id', id);
+  _el.setAttribute('data-speccer-id', id);
   _el.setAttribute('data-measure', `${parseInt(String(text), 10)}px`);
 
   const { measure, position } = options;
