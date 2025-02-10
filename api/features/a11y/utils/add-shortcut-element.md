@@ -6,7 +6,7 @@
 
 # features/a11y/utils/add-shortcut-element
 
-> Last updated 2025-02-10T10:55:58.570Z
+> Last updated 2025-02-10T13:30:30.510Z
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@
 function addShortcutElement(el, shortcutString): Promise<void>;
 ```
 
-Defined in: [src/features/a11y/utils/add-shortcut-element.ts:24](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/utils/add-shortcut-element.ts#L24)
+Defined in: [src/features/a11y/utils/add-shortcut-element.ts:25](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/utils/add-shortcut-element.ts#L25)
 
 Adds a shortcut element to the document body based on the provided HTML element and shortcut string.
 

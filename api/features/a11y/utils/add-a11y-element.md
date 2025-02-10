@@ -6,7 +6,7 @@
 
 # features/a11y/utils/add-a11y-element
 
-> Last updated 2025-02-10T10:55:58.569Z
+> Last updated 2025-02-10T13:30:30.509Z
 
 ## Table of Contents
 
@@ -18,10 +18,10 @@
 ### addA11yElement()
 
 ```ts
-function addA11yElement(targetEl, content?, type?): Promise<void>;
+function addA11yElement(targetElement, content?, type?): Promise<void>;
 ```
 
-Defined in: [src/features/a11y/utils/add-a11y-element.ts:28](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/utils/add-a11y-element.ts#L28)
+Defined in: [src/features/a11y/utils/add-a11y-element.ts:29](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/utils/add-a11y-element.ts#L29)
 
 Adds an accessibility element to the document body based on the target element and type.
 
@@ -30,11 +30,11 @@ Adds an accessibility element to the document body based on the target element a
 
 #### Parameters
 
-| Parameter  | Type                                                                    | Description                                               |
-| ---------- | ----------------------------------------------------------------------- | --------------------------------------------------------- |
-| `targetEl` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | Target HTML element.                                      |
-| `content`? | `unknown`                                                               | Content to be added to the accessibility element.         |
-| `type`?    | `string`                                                                | Type of accessibility element ('tabstops' or 'landmark'). |
+| Parameter       | Type                                                                    | Description                                               |
+| --------------- | ----------------------------------------------------------------------- | --------------------------------------------------------- |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | Target HTML element.                                      |
+| `content`?      | `unknown`                                                               | Content to be added to the accessibility element.         |
+| `type`?         | `string`                                                                | Type of accessibility element ('tabstops' or 'landmark'). |
 
 #### Returns
 

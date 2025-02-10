@@ -6,7 +6,7 @@
 
 # features/typography
 
-> Last updated 2025-02-10T10:55:58.578Z
+> Last updated 2025-02-10T13:30:30.518Z
 
 This feature presents typography
 
@@ -85,7 +85,7 @@ document.body.appendChild(createdElement);
 function typography(targetElement, options?): Promise<void>;
 ```
 
-Defined in: [src/features/typography/index.ts:121](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L121)
+Defined in: [src/features/typography/index.ts:122](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L122)
 
 Create a specced typography element for a given target element.
 

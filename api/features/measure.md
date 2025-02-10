@@ -6,7 +6,7 @@
 
 # features/measure
 
-> Last updated 2025-02-10T10:55:58.574Z
+> Last updated 2025-02-10T13:30:30.514Z
 
 This feature measures given element
 
@@ -86,7 +86,7 @@ document.body.appendChild(measurement);
 function measure(targetElement, options?): Promise<void>;
 ```
 
-Defined in: [src/features/measure/index.ts:127](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L127)
+Defined in: [src/features/measure/index.ts:128](https://github.com/phun-ky/speccer/blob/main/src/features/measure/index.ts#L128)
 
 Create a measurement element and add it to the body with styles matching a specified target element based on the attribute values from `data-speccer`.
 

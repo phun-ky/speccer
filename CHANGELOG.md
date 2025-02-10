@@ -1,5 +1,7 @@
 # Changelog
 
+## [11.2.6](https://github.com/phun-ky/speccer/compare/v11.2.5...v11.2.6) (2025-02-10)
+
 ## [11.2.5](https://github.com/phun-ky/speccer/compare/v11.2.4...v11.2.5) (2025-02-10)
 
 ### Tasks

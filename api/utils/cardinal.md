@@ -6,7 +6,7 @@
 
 # utils/cardinal
 
-> Last updated 2025-02-10T10:55:58.603Z
+> Last updated 2025-02-10T13:30:30.544Z
 
 ## Table of Contents
 
