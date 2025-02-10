@@ -31,7 +31,7 @@
  *
  * @packageDocumentation
  */
-/* eslint-disable import/no-unused-modules */
+ 
 /* eslint no-console:0 */
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { set as setClassNames, cx } from '../../utils/classnames';
@@ -73,6 +73,7 @@ export const create = (
   });
 
   _el.setAttribute('id', id);
+  _el.setAttribute('data-speccer-id', id);
 
   _el.innerHTML = html;
 

@@ -96,6 +96,8 @@ export const mark = async (targetElement: HTMLElement): Promise<void> => {
 
   const _mark_element = create(_pin_element_id);
 
+  _mark_element.setAttribute('data-speccer-id', _pin_element_id);
+
   document.body.appendChild(_mark_element);
 
   const _positional_styles = await getRec(_mark_element, targetElement);
