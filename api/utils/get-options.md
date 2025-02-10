@@ -6,7 +6,7 @@
 
 # utils/get-options
 
-> Last updated 2025-01-29T10:54:55.270Z
+> Last updated 2025-02-10T10:55:58.609Z
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@
 function getOptions(
   areaString,
   targetStyle,
-  customOptions?
+  customOptions?,
 ): SpeccerOptionsInterface;
 ```
 
@@ -47,8 +47,8 @@ The generated Speccer options.
 
 ```ts
 const options = getOptions(
-  document.getElementById('myElement'),
-  'left right pin'
+  document.getElementById("myElement"),
+  "left right pin",
 );
 console.log(options);
 // Output: { position: { left: true, right: true, top: false, bottom: false }, type: 'pin', pin: { bracket: false, enclose: false, subtle: false, parent: false, text: false, useSVGLine: false, useCurlyBrackets: false } }

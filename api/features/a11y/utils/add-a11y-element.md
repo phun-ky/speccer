@@ -6,7 +6,7 @@
 
 # features/a11y/utils/add-a11y-element
 
-> Last updated 2025-01-29T10:54:55.233Z
+> Last updated 2025-02-10T10:55:58.569Z
 
 ## Table of Contents
 
@@ -45,10 +45,10 @@ A Promise resolving when the operation is complete.
 #### Example
 
 ```ts
-const targetElement = document.getElementById('myElement');
+const targetElement = document.getElementById("myElement");
 if (targetElement) {
-  await addA11yElement(targetElement, 1, 'landmark');
-  await addA11yElement(targetElement, null, 'tabstops');
+  await addA11yElement(targetElement, 1, "landmark");
+  await addA11yElement(targetElement, null, "tabstops");
 }
 ```
 

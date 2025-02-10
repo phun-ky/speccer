@@ -6,7 +6,7 @@
 
 # features/measure
 
-> Last updated 2025-01-29T10:54:55.237Z
+> Last updated 2025-02-10T10:55:58.574Z
 
 This feature measures given element
 
@@ -33,12 +33,12 @@ Use the following code, either for html or js:
 ```
 
 ```ts
-const targetElement = document.getElementById('target');
+const targetElement = document.getElementById("target");
 const options = {
-  position: 'right',
+  position: "right",
   measure: {
-    height: true
-  }
+    height: true,
+  },
 };
 
 measure(targetElement, options);
@@ -74,7 +74,7 @@ Create a measurement element with optional text, area, and element type.
 #### Example
 
 ```ts
-const measurement = create(100, 'width bottom', 'div');
+const measurement = create(100, "width bottom", "div");
 document.body.appendChild(measurement);
 ```
 
@@ -110,12 +110,12 @@ Create a measurement element and add it to the body with styles matching a speci
 ##### Height to the right
 
 ```ts
-const targetElement = document.getElementById('target');
+const targetElement = document.getElementById("target");
 const options = {
-  position: 'right',
+  position: "right",
   measure: {
-    height: true
-  }
+    height: true,
+  },
 };
 
 measure(targetElement, options);
@@ -126,13 +126,13 @@ measure(targetElement, options);
 ![measure](https://github.com/phun-ky/speccer/blob/main/public/speccer-measure-bottom-dark.png?raw=true)
 
 ```ts
-const targetElement = document.getElementById('target');
+const targetElement = document.getElementById("target");
 const options = {
-  position: 'bottom',
+  position: "bottom",
   measure: {
     slim: true,
-    width: true
-  }
+    width: true,
+  },
 };
 
 measure(targetElement, options);

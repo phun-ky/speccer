@@ -6,7 +6,7 @@
 
 # utils/css
 
-> Last updated 2025-01-29T10:54:55.268Z
+> Last updated 2025-02-10T10:55:58.607Z
 
 ## Table of Contents
 
@@ -48,7 +48,7 @@ Converts a CSS property name with "Top", "Right", "Bottom", or "Left" into a cla
 
 ```ts
 // Convert a CSS property name to a class name
-const className = getClassNameFromCSSProperty('marginTop');
+const className = getClassNameFromCSSProperty("marginTop");
 console.log(className); // Example output: "margin top"
 ```
 
@@ -80,7 +80,7 @@ Parses a string value into an integer.
 
 ```ts
 // Parse a string value into an integer
-const intValue = getNumberValue('42');
+const intValue = getNumberValue("42");
 console.log(intValue); // Example output: 42
 ```
 
@@ -114,8 +114,8 @@ Extracts spacing-related CSS properties from a style object.
 ```ts
 // Extract spacing-related properties from a style object
 const spacing = getSpacing({
-  marginTop: '10px',
-  marginLeft: '20px'
+  marginTop: "10px",
+  marginLeft: "20px",
 });
 console.log(spacing); // Example output: { marginTop: "10px", marginLeft: "20px" }
 ```
@@ -149,8 +149,8 @@ Extracts typography-related CSS properties from a style object.
 ```ts
 // Extract typography-related properties from a style object
 const typography = getTypography({
-  fontSize: '16px',
-  fontWeight: 'bold'
+  fontSize: "16px",
+  fontWeight: "bold",
 });
 console.log(typography); // Example output: { fontSize: "16px", fontWeight: "bold" }
 ```
@@ -248,7 +248,7 @@ If the value is within the range \[0, 1] or \[-1, 0), it's normalized to 0.
 
 ```ts
 // Normalize a value to ensure it's a valid number
-const normalizedValue = normalizeNumberValue('0.5');
+const normalizedValue = normalizeNumberValue("0.5");
 console.log(normalizedValue); // Example output: 0.5
 ```
 

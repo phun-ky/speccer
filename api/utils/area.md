@@ -6,7 +6,7 @@
 
 # utils/area
 
-> Last updated 2025-01-29T10:54:55.261Z
+> Last updated 2025-02-10T10:55:58.600Z
 
 ## Table of Contents
 
@@ -61,7 +61,7 @@ An array of area strings.
 #### Example
 
 ```ts
-const areas = getAreasFromString('left right top');
+const areas = getAreasFromString("left right top");
 // areas: ['left', 'right', 'top']
 ```
 

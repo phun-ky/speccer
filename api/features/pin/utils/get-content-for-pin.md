@@ -6,7 +6,7 @@
 
 # features/pin/utils/get-content-for-pin
 
-> Last updated 2025-01-29T10:54:55.239Z
+> Last updated 2025-02-10T10:55:58.576Z
 
 ## Table of Contents
 
@@ -42,8 +42,8 @@ The generated content for the pin element.
 #### Example
 
 ```ts
-const symbol = '★';
-const targetElement = document.getElementById('myElement');
+const symbol = "★";
+const targetElement = document.getElementById("myElement");
 const options = { pin: { text: true } };
 const content = getContentForPin(symbol, targetElement, options);
 console.log(content);

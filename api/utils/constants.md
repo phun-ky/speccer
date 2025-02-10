@@ -6,7 +6,7 @@
 
 # utils/constants
 
-> Last updated 2025-01-29T10:54:55.266Z
+> Last updated 2025-02-10T10:55:58.606Z
 
 ## Table of Contents
 
@@ -31,7 +31,7 @@
 ### SPECCER_DATA_ATTRIBUTE
 
 ```ts
-const SPECCER_DATA_ATTRIBUTE: 'data-speccer' = 'data-speccer';
+const SPECCER_DATA_ATTRIBUTE: "data-speccer" = "data-speccer";
 ```
 
 Defined in: [src/utils/constants.ts:107](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L107)
@@ -143,7 +143,7 @@ console.log(negativeDefaultPinSpace); // Example output: -48
 ### SPECCER_FEATURE_GRID
 
 ```ts
-const SPECCER_FEATURE_GRID: 'grid' = 'grid';
+const SPECCER_FEATURE_GRID: "grid" = "grid";
 ```
 
 Defined in: [src/utils/constants.ts:137](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L137)
@@ -155,7 +155,7 @@ The selector for the `grid` feature
 ### SPECCER_FEATURE_MARK
 
 ```ts
-const SPECCER_FEATURE_MARK: 'mark' = 'mark';
+const SPECCER_FEATURE_MARK: "mark" = "mark";
 ```
 
 Defined in: [src/utils/constants.ts:131](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L131)
@@ -167,7 +167,7 @@ The selector for the `mark` feature
 ### SPECCER_FEATURE_MEASURE
 
 ```ts
-const SPECCER_FEATURE_MEASURE: 'measure' = 'measure';
+const SPECCER_FEATURE_MEASURE: "measure" = "measure";
 ```
 
 Defined in: [src/utils/constants.ts:119](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L119)
@@ -179,7 +179,7 @@ The selector for the `measure` feature
 ### SPECCER_FEATURE_PIN_AREA
 
 ```ts
-const SPECCER_FEATURE_PIN_AREA: 'pin-area' = 'pin-area';
+const SPECCER_FEATURE_PIN_AREA: "pin-area" = "pin-area";
 ```
 
 Defined in: [src/utils/constants.ts:143](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L143)
@@ -191,7 +191,7 @@ The selector for the container of the `pin` feature
 ### SPECCER_FEATURE_SPACING
 
 ```ts
-const SPECCER_FEATURE_SPACING: 'spacing' = 'spacing';
+const SPECCER_FEATURE_SPACING: "spacing" = "spacing";
 ```
 
 Defined in: [src/utils/constants.ts:113](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L113)
@@ -203,7 +203,7 @@ The selector for the `spacing` feature
 ### SPECCER_FEATURE_TYPOGRAPHY
 
 ```ts
-const SPECCER_FEATURE_TYPOGRAPHY: 'typography' = 'typography';
+const SPECCER_FEATURE_TYPOGRAPHY: "typography" = "typography";
 ```
 
 Defined in: [src/utils/constants.ts:125](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L125)

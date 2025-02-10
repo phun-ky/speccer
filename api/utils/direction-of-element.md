@@ -6,7 +6,7 @@
 
 # utils/direction-of-element
 
-> Last updated 2025-01-29T10:54:55.270Z
+> Last updated 2025-02-10T10:55:58.608Z
 
 ## Table of Contents
 
@@ -44,11 +44,11 @@ Get the direction of an element based on its position relative to another elemen
 
 ```ts
 // Get the direction of one element relative to another
-const startElement = document.getElementById('startElement');
-const stopElement = document.getElementById('stopElement');
+const startElement = document.getElementById("startElement");
+const stopElement = document.getElementById("stopElement");
 const direction = await direction_of_element({
   start: startElement,
-  stop: stopElement
+  stop: stopElement,
 });
 ```
 

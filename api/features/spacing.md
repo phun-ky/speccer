@@ -6,7 +6,7 @@
 
 # features/spacing
 
-> Last updated 2025-01-29T10:54:55.240Z
+> Last updated 2025-02-10T10:55:58.577Z
 
 This feature highlights the spacing of an element.
 
@@ -28,7 +28,7 @@ Use the following code, either for html or js:
 ```
 
 ```ts
-const targetElement = document.getElementById('target');
+const targetElement = document.getElementById("target");
 element(targetElement);
 ```
 
@@ -60,7 +60,7 @@ Create a spacing element with optional text content.
 #### Example
 
 ```ts
-const spacingElement = create(20, 'div');
+const spacingElement = create(20, "div");
 document.body.appendChild(spacingElement);
 ```
 
@@ -96,7 +96,7 @@ Create and position spacing elements based on the target element's computed spac
 ##### Default, padding and margin
 
 ```ts
-const targetElement = document.getElementById('target');
+const targetElement = document.getElementById("target");
 element(targetElement);
 ```
 

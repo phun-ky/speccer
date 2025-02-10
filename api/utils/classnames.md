@@ -6,7 +6,7 @@
 
 # utils/classnames
 
-> Last updated 2025-01-29T10:54:55.266Z
+> Last updated 2025-02-10T10:55:58.605Z
 
 ## Table of Contents
 
@@ -50,7 +50,7 @@ properties set to `true` or `false`, allowing for conditional inclusion of class
 
 ```ts
 // Generate CSS classes from a string and an object
-const classNames = cx('class1', { class2: true, class3: false });
+const classNames = cx("class1", { class2: true, class3: false });
 console.log(classNames); // Example output: 'class1 class2'
 ```
 
@@ -82,8 +82,8 @@ Remove CSS classes from an HTML element.
 
 ```ts
 // Remove classes from an HTML element
-const element = document.getElementById('example');
-remove(element, 'class1 class2');
+const element = document.getElementById("example");
+remove(element, "class1 class2");
 ```
 
 ---
@@ -114,8 +114,8 @@ Add CSS classes to an HTML element.
 
 ```ts
 // Add classes to an HTML element
-const element = document.getElementById('example');
-set(element, 'class1 class2');
+const element = document.getElementById("example");
+set(element, "class1 class2");
 ```
 
 ---
@@ -146,8 +146,8 @@ Toggle CSS classes on an HTML element.
 
 ```ts
 // Toggle classes on an HTML element
-const element = document.getElementById('example');
-toggle(element, 'class1 class2');
+const element = document.getElementById("example");
+toggle(element, "class1 class2");
 ```
 
 ---

@@ -6,7 +6,7 @@
 
 # features/a11y/utils/get-role
 
-> Last updated 2025-01-29T10:54:55.235Z
+> Last updated 2025-02-10T10:55:58.571Z
 
 ## Table of Contents
 
@@ -44,16 +44,16 @@ The role of the element, or `'N/A'` if no role is applicable.
 #### Example
 
 ```ts
-const element = document.createElement('header');
+const element = document.createElement("header");
 const role = getRole(element);
 console.log(role); // Output: 'header'
 
-const divElement = document.createElement('div');
-divElement.setAttribute('role', 'button');
+const divElement = document.createElement("div");
+divElement.setAttribute("role", "button");
 const divRole = getRole(divElement);
 console.log(divRole); // Output: 'button'
 
-const spanElement = document.createElement('span');
+const spanElement = document.createElement("span");
 const spanRole = getRole(spanElement);
 console.log(spanRole); // Output: 'N/A'
 ```

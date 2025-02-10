@@ -6,7 +6,7 @@
 
 # utils/node
 
-> Last updated 2025-01-29T10:54:55.271Z
+> Last updated 2025-02-10T10:55:58.609Z
 
 ## Table of Contents
 
@@ -74,7 +74,7 @@ True if the element is hidden, false otherwise.
 #### Example
 
 ```ts
-const element = document.getElementById('my-element');
+const element = document.getElementById("my-element");
 if (element) {
   const hidden = isElementHidden(element);
   console.log(hidden); // true if the element is hidden, false if visible
@@ -108,7 +108,7 @@ Removes all elements matching a selector from the DOM.
 
 ```ts
 // Remove all elements with a specific class from the document
-removeAll('.my-class');
+removeAll(".my-class");
 ```
 
 ---

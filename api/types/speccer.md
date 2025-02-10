@@ -6,7 +6,7 @@
 
 # types/speccer
 
-> Last updated 2025-01-29T10:54:55.259Z
+> Last updated 2025-02-10T10:55:58.599Z
 
 ## Table of Contents
 
@@ -61,12 +61,12 @@ Defined in: [src/types/speccer.ts:13](https://github.com/phun-ky/speccer/blob/ma
 
 ```ts
 type SpeccerFeatureType =
-  | 'pin'
-  | 'grid'
-  | 'mark'
-  | 'typography'
-  | 'measure'
-  | 'spacing';
+  | "pin"
+  | "grid"
+  | "mark"
+  | "typography"
+  | "measure"
+  | "spacing";
 ```
 
 Defined in: [src/types/speccer.ts:3](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L3)
@@ -90,7 +90,7 @@ Defined in: [src/types/speccer.ts:1](https://github.com/phun-ky/speccer/blob/mai
 ### SpeccerPositionType
 
 ```ts
-type SpeccerPositionType = 'top' | 'left' | 'right' | 'bottom';
+type SpeccerPositionType = "top" | "left" | "right" | "bottom";
 ```
 
 Defined in: [src/types/speccer.ts:11](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L11)

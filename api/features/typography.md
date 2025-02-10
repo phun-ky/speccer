@@ -6,7 +6,7 @@
 
 # features/typography
 
-> Last updated 2025-01-29T10:54:55.241Z
+> Last updated 2025-02-10T10:55:58.578Z
 
 This feature presents typography
 
@@ -30,13 +30,13 @@ Use the following code, either for html or js:
 ```
 
 ```ts
-const targetElement = document.getElementById('target');
+const targetElement = document.getElementById("target");
 const options = {
-  position: 'right',
-  type: 'typography',
+  position: "right",
+  type: "typography",
   typography: {
-    useSyntaxHighlighting: false
-  }
+    useSyntaxHighlighting: false,
+  },
 };
 
 typography(targetElement, options);
@@ -71,8 +71,8 @@ Create a DOM element with provided HTML and optional CSS class names.
 #### Example
 
 ```ts
-const htmlContent = '<p>This is some HTML content.</p>';
-const cssClass = 'custom-class';
+const htmlContent = "<p>This is some HTML content.</p>";
+const cssClass = "custom-class";
 const createdElement = create(htmlContent, cssClass);
 document.body.appendChild(createdElement);
 ```
@@ -109,7 +109,7 @@ Create a specced typography element for a given target element.
 ##### Default
 
 ```ts
-const targetElement = document.querySelector('.target');
+const targetElement = document.querySelector(".target");
 if (targetElement) {
   element(targetElement);
 }
@@ -120,11 +120,11 @@ if (targetElement) {
 ![typography](https://github.com/phun-ky/speccer/blob/main/public/speccer-typography-syntax-light.png?raw=true)
 
 ```ts
-const targetElement = document.querySelector('.target');
+const targetElement = document.querySelector(".target");
 const options = {
   typography: {
-    useSyntaxHighlighting: true
-  }
+    useSyntaxHighlighting: true,
+  },
 };
 
 if (targetElement) {

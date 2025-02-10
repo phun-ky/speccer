@@ -6,7 +6,7 @@
 
 # utils/resize
 
-> Last updated 2025-01-29T10:54:55.272Z
+> Last updated 2025-02-10T10:55:58.611Z
 
 ## Table of Contents
 
@@ -41,7 +41,7 @@ Attaches a debounced event listener to the window's resize event that triggers t
 // Define a function to be triggered on window resize
 const mySpeccer = () => {
   // Your logic here
-  console.log('Window resized');
+  console.log("Window resized");
 };
 
 // Activate the debounced event listener

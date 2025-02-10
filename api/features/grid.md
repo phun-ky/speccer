@@ -6,7 +6,7 @@
 
 # features/grid
 
-> Last updated 2025-01-29T10:54:55.236Z
+> Last updated 2025-02-10T10:55:58.573Z
 
 This feature will highlight the grid spacing in a `display: grid;` element.
 
@@ -28,12 +28,12 @@ Use the following code, either for html or js:
 ```
 
 ```ts
-const targetElement = document.getElementById('target');
+const targetElement = document.getElementById("target");
 const options = {
-  type: 'grid',
+  type: "grid",
   grid: {
-    toggle: 'both'
-  }
+    toggle: "both",
+  },
 };
 
 grid(targetElement, options);
@@ -66,7 +66,7 @@ Creates a visual grid overlay for a given target element.
 #### Example
 
 ```ts
-const targetElement = document.getElementById('target');
+const targetElement = document.getElementById("target");
 if (targetElement) {
   const styles = window.getComputedStyle(targetElement);
   await create(targetElement, styles);
@@ -105,7 +105,7 @@ A promise that resolves once the overlay has been added.
 #### Example
 
 ```ts
-const targetElement = document.getElementById('target');
+const targetElement = document.getElementById("target");
 
 grid(targetElement);
 ```
@@ -115,12 +115,12 @@ grid(targetElement);
 ![grid](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-dark.png?raw=true)
 
 ```ts
-const targetElement = document.getElementById('target');
+const targetElement = document.getElementById("target");
 const options = {
-  type: 'grid',
+  type: "grid",
   grid: {
-    toggle: 'rows'
-  }
+    toggle: "rows",
+  },
 };
 
 grid(targetElement, options);

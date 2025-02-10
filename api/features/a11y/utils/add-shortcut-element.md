@@ -6,7 +6,7 @@
 
 # features/a11y/utils/add-shortcut-element
 
-> Last updated 2025-01-29T10:54:55.233Z
+> Last updated 2025-02-10T10:55:58.570Z
 
 ## Table of Contents
 
@@ -43,9 +43,9 @@ A Promise resolving when the operation is complete.
 #### Example
 
 ```ts
-const shortcutElement = document.getElementById('shortcutElement');
+const shortcutElement = document.getElementById("shortcutElement");
 if (shortcutElement) {
-  await addShortcutElement(shortcutElement, 'Ctrl + Shift + A');
+  await addShortcutElement(shortcutElement, "Ctrl + Shift + A");
 }
 ```
 

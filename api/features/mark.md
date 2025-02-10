@@ -6,7 +6,7 @@
 
 # features/mark
 
-> Last updated 2025-01-29T10:54:55.237Z
+> Last updated 2025-02-10T10:55:58.574Z
 
 This feature marks given element
 
@@ -28,9 +28,9 @@ Use the following code, either for html or js:
 ```
 
 ```ts
-const targetElement = document.getElementById('target');
+const targetElement = document.getElementById("target");
 const options = {
-  type: 'mark'
+  type: "mark",
 };
 
 mark(targetElement, options);
@@ -64,7 +64,7 @@ Create a marker element with an optional element type.
 #### Example
 
 ```typescript
-const marker = create('div');
+const marker = create("div");
 document.body.appendChild(marker);
 ```
 
@@ -97,7 +97,7 @@ Create a marker element and add it to the body with styles matching a specified 
 #### Example
 
 ```typescript
-const targetElement = document.getElementById('target');
+const targetElement = document.getElementById("target");
 mark(targetElement);
 ```
 

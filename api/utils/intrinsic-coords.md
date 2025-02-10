@@ -6,7 +6,7 @@
 
 # utils/intrinsic-coords
 
-> Last updated 2025-01-29T10:54:55.271Z
+> Last updated 2025-02-10T10:55:58.609Z
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@
 ```ts
 function intrinsic_coords(
   el,
-  pos?
+  pos?,
 ): Promise<{
   x: number;
   y: number;
@@ -59,8 +59,8 @@ The position given is not the required type.
 
 ```ts
 // Get intrinsic coordinates for an element
-const element = document.getElementById('example');
-const coordinates = await intrinsic_coords(element, 'top-left');
+const element = document.getElementById("example");
+const coordinates = await intrinsic_coords(element, "top-left");
 ```
 
 ---

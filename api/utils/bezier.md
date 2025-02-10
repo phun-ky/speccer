@@ -6,7 +6,7 @@
 
 # utils/bezier
 
-> Last updated 2025-01-29T10:54:55.263Z
+> Last updated 2025-02-10T10:55:58.602Z
 
 ## Table of Contents
 
@@ -24,7 +24,7 @@
 ```ts
 function createBezierCurveCoordinates(
   coords,
-  options
+  options,
 ): CoordinatesForBezierObjectType;
 ```
 
@@ -50,7 +50,7 @@ Coordinates for the Bezier curve.
 ```ts
 const coordinates = createBezierCurveCoordinates(
   { x1: 0, x2: 100, y1: 0, y2: 100 },
-  { direct: true, firstSet: true, direction: 'west' }
+  { direct: true, firstSet: true, direction: "west" },
 );
 ```
 
@@ -84,10 +84,10 @@ The SVG path string for the curved line.
 
 ```ts
 const svgPath = getCurlySVGPath(startElement, stopElement, {
-  pos1: 'top',
-  pos2: 'bottom',
+  pos1: "top",
+  pos2: "bottom",
   firstSet: true,
-  direction: 'south'
+  direction: "south",
 });
 ```
 
@@ -137,7 +137,7 @@ Positions for creating an SVG path for a curved line.
 #### Example
 
 ```ts
-const positions = getPositionsForCurlySVGPath('west');
+const positions = getPositionsForCurlySVGPath("west");
 ```
 
 ---
@@ -180,7 +180,7 @@ Positions for creating an SVG path.
 #### Example
 
 ```ts
-const positions = getPositionsForSVGPath('east');
+const positions = getPositionsForSVGPath("east");
 ```
 
 ---
@@ -213,8 +213,8 @@ The SVG path string for the straight line.
 
 ```ts
 const svgPath = getSVGPath(startElement, stopElement, {
-  pos1: 'left',
-  pos2: 'right'
+  pos1: "left",
+  pos2: "right",
 });
 ```
 

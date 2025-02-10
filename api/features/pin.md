@@ -6,7 +6,7 @@
 
 # features/pin
 
-> Last updated 2025-01-29T10:54:55.238Z
+> Last updated 2025-02-10T10:55:58.575Z
 
 This feature annotate or highlight the anatomy of an element.
 
@@ -62,7 +62,7 @@ Create pinned elements based on the section element and its data-speccer attribu
 #### Example
 
 ```ts
-const sectionElement = document.getElementById('section');
+const sectionElement = document.getElementById("section");
 pinElements(sectionElement);
 ```
 

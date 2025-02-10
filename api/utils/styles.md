@@ -6,7 +6,7 @@
 
 # utils/styles
 
-> Last updated 2025-01-29T10:54:55.273Z
+> Last updated 2025-02-10T10:55:58.611Z
 
 ## Table of Contents
 
@@ -43,13 +43,13 @@ Adds CSS styles to an HTMLElement.
 
 ```ts
 // Apply styles as an object
-const element = document.getElementById('my-element');
-await add(element, { color: 'red', fontSize: '16px' });
+const element = document.getElementById("my-element");
+await add(element, { color: "red", fontSize: "16px" });
 
 // Apply styles as an array of objects
 const styles = [
-  { key: 'color', value: 'blue' },
-  { key: 'backgroundColor', value: 'yellow' }
+  { key: "color", value: "blue" },
+  { key: "backgroundColor", value: "yellow" },
 ];
 await add(element, styles);
 ```
@@ -82,7 +82,7 @@ Gets the computed CSS styles of an HTMLElement.
 
 ```ts
 // Get computed styles of an element
-const element = document.getElementById('my-element');
+const element = document.getElementById("my-element");
 const computedStyles = await get(element);
 console.log(computedStyles.color); // Logs the color property value
 ```

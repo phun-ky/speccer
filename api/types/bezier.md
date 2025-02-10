@@ -6,7 +6,7 @@
 
 # types/bezier
 
-> Last updated 2025-01-29T10:54:55.245Z
+> Last updated 2025-02-10T10:55:58.582Z
 
 ## Table of Contents
 

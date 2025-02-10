@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.2.5](https://github.com/phun-ky/speccer/compare/v11.2.4...v11.2.5) (2025-02-10)
+
+### Tasks
+
+* 🤖 Upgrade ESLint to v9, remove Prettier, not required ([a49b5c5](https://github.com/phun-ky/speccer/commit/a49b5c585dc6856aceeb3ac57ca653bfcf9c452a)), closes [#308](https://github.com/phun-ky/speccer/issues/308)
+
 ## [11.2.4](https://github.com/phun-ky/speccer/compare/v11.2.3...v11.2.4) (2025-01-29)
 
 ### Tasks

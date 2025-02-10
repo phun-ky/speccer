@@ -6,7 +6,7 @@
 
 # features/spacing/utils/position
 
-> Last updated 2025-01-29T10:54:55.240Z
+> Last updated 2025-02-10T10:55:58.577Z
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@ function position(
   property,
   value,
   targetElement,
-  options?
+  options?,
 ): Promise<undefined | PositionUnitPropertiesType>;
 ```
 
@@ -50,8 +50,8 @@ Set the position and dimensions of a spacing element relative to a target elemen
 #### Example
 
 ```ts
-const targetElement = document.getElementById('target');
-position('marginTop', 20, targetElement);
+const targetElement = document.getElementById("target");
+position("marginTop", 20, targetElement);
 ```
 
 ---

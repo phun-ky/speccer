@@ -6,7 +6,7 @@
 
 # utils/attributes
 
-> Last updated 2025-01-29T10:54:55.262Z
+> Last updated 2025-02-10T10:55:58.602Z
 
 ## Table of Contents
 
@@ -40,8 +40,8 @@ Removes attributes from an HTML element.
 #### Example
 
 ```ts
-const element = document.getElementById('myElement');
-removeAttributes(element, ['class', 'data-value']);
+const element = document.getElementById("myElement");
+removeAttributes(element, ["class", "data-value"]);
 ```
 
 ---
@@ -70,10 +70,10 @@ Sets attributes on an HTML element.
 #### Example
 
 ```ts
-const element = document.getElementById('myElement');
+const element = document.getElementById("myElement");
 setAttributes(element, {
-  class: 'active',
-  'data-value': '123'
+  class: "active",
+  "data-value": "123",
 });
 ```
 

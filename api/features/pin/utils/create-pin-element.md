@@ -6,7 +6,7 @@
 
 # features/pin/utils/create-pin-element
 
-> Last updated 2025-01-29T10:54:55.238Z
+> Last updated 2025-02-10T10:55:58.575Z
 
 ## Table of Contents
 
@@ -43,7 +43,7 @@ Create a pin element with optional content, area description, and element type.
 #### Example
 
 ```ts
-const pinElement = createPinElement('A', 'outline top', 'div');
+const pinElement = createPinElement("A", "outline top", "div");
 document.body.appendChild(pinElement);
 ```
 

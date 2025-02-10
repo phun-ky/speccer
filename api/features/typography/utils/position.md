@@ -6,7 +6,7 @@
 
 # features/typography/utils/position
 
-> Last updated 2025-01-29T10:54:55.241Z
+> Last updated 2025-02-10T10:55:58.578Z
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@
 function position(
   options,
   targetElement,
-  speccerElement
+  speccerElement,
 ): Promise<{
   left: string;
   top: string;
