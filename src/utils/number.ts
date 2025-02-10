@@ -14,4 +14,5 @@
  * ```
  */
 /* node:coverage enable */
-export const decimal = (number: string | number, decimals = 3): string => parseFloat(String(number)).toFixed(decimals);
+export const decimal = (number: string | number, decimals = 3): string =>
+  parseFloat(String(number)).toFixed(decimals);

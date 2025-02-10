@@ -23,7 +23,7 @@
  *
  * @packageDocumentation
  */
-/* eslint-disable import/no-unused-modules */
+
 import { isElementHidden } from '../../utils/node';
 
 import {
@@ -75,7 +75,9 @@ export const a11y = () => {
 
   if (_tab_order_elements.length) {
     for (const el of _tab_order_elements) {
-      const _tabstops_els = el.querySelectorAll(SPECCER_TABBABLE_ELEMENTS_SELECTOR);
+      const _tabstops_els = el.querySelectorAll(
+        SPECCER_TABBABLE_ELEMENTS_SELECTOR
+      );
 
       for (const [tabstopsIndex, tabstopsEl] of _tabstops_els.entries()) {
         if (!isElementHidden(tabstopsEl as HTMLElement)) {
@@ -89,7 +91,10 @@ export const a11y = () => {
 
         const potentialLabelElement = document.querySelector(`[for="${id}"]`);
 
-        if (!potentialLabelElement || isElementHidden(potentialLabelElement as HTMLElement)) continue;
+        if (
+          !potentialLabelElement ||
+          isElementHidden(potentialLabelElement as HTMLElement)
+        ) continue;
 
         // This could be a fake element, like a toggle checkbox, so we use the labelElement
         addA11yElement(potentialLabelElement as HTMLElement, tabstopsIndex + 1, 'tabstops');
