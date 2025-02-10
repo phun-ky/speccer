@@ -14,13 +14,13 @@
           - any-glob-to-any-file:
               - '.editorconfig'
               - '.eslintignore'
+              - 'eslint.config.mjs'
               - '.eslintrc.json'
               - '.eslintrc.js'
               - '.gitignore'
               - '.release-it.json'
               - '.renovate.json'
               - '.npmrc'
-              - '.prettierrc'
 'context: github':
   - any:
       - changed-files:
