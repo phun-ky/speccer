@@ -6,7 +6,7 @@
 
 # types/styles
 
-> Last updated 2025-01-29T08:54:31.618Z
+> Last updated 2025-01-29T10:54:55.260Z
 
 ## Table of Contents
 
