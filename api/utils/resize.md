@@ -6,7 +6,7 @@
 
 # utils/resize
 
-> Last updated 2025-02-10T13:30:30.552Z
+> Last updated 2025-02-11T10:43:47.974Z
 
 ## Table of Contents
 
