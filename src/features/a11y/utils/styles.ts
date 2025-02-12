@@ -58,14 +58,10 @@ export const styles = async (
     };
   }
 
-  if (type === 'landmark' || type === 'autocomplete' || type === 'headings'  ) {
+  if (type === 'landmark' || type === 'autocomplete' || type === 'headings') {
     let { left, top } = _positional_styles.fromLeft();
 
-
-
-
     left -= SPECCER_PIN_SPACE;
-
 
     if (left <= 0) left = SPECCER_PIN_SPACE;
 

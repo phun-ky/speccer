@@ -18,11 +18,10 @@
  *
  * @packageDocumentation
  */
-// eslint-disable-next-line import/no-unused-modules
+
 /* node:coverage enable */
 export { createPinElement } from './utils/create-pin-element';
 
-// eslint-disable-next-line import/no-unused-modules
 export { pinElement } from './utils/pin-element';
 
 import { SpeccerOptionsInterface } from '../../types/speccer';

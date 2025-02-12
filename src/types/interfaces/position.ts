@@ -12,7 +12,7 @@ export interface GetRecPropertiesInterface {
    * @param inp - Optional position input.
    * @returns Position properties.
    */
-  // eslint-disable-next-line no-unused-vars
+
   absolute: (inp?: PositionInputType) => PositionPropertiesType;
 
   /**
@@ -20,7 +20,7 @@ export interface GetRecPropertiesInterface {
    * @param inp - Optional position input.
    * @returns Position properties.
    */
-  // eslint-disable-next-line no-unused-vars
+
   toTop: (inp?: PositionInputType) => PositionPropertiesType;
 
   /**
@@ -28,7 +28,7 @@ export interface GetRecPropertiesInterface {
    * @param inp - Optional position input.
    * @returns Position properties.
    */
-  // eslint-disable-next-line no-unused-vars
+
   fromTop: (inp?: PositionInputType) => PositionPropertiesType;
 
   /**
@@ -36,7 +36,7 @@ export interface GetRecPropertiesInterface {
    * @param inp - Optional position input.
    * @returns Position properties.
    */
-  // eslint-disable-next-line no-unused-vars
+
   toBottom: (inp?: PositionInputType) => PositionPropertiesType;
 
   /**
@@ -44,7 +44,7 @@ export interface GetRecPropertiesInterface {
    * @param inp - Optional position input.
    * @returns Position properties.
    */
-  // eslint-disable-next-line no-unused-vars
+
   fromBottom: (inp?: PositionInputType) => PositionPropertiesType;
 
   /**
@@ -52,7 +52,7 @@ export interface GetRecPropertiesInterface {
    * @param inp - Optional position input.
    * @returns Position properties.
    */
-  // eslint-disable-next-line no-unused-vars
+
   toLeft: (inp?: PositionInputType) => PositionPropertiesType;
 
   /**
@@ -60,7 +60,7 @@ export interface GetRecPropertiesInterface {
    * @param inp - Optional position input.
    * @returns Position properties.
    */
-  // eslint-disable-next-line no-unused-vars
+
   fromLeft: (inp?: PositionInputType) => PositionPropertiesType;
 
   /**
@@ -68,7 +68,7 @@ export interface GetRecPropertiesInterface {
    * @param inp - Optional position input.
    * @returns Position properties.
    */
-  // eslint-disable-next-line no-unused-vars
+
   toRight: (inp?: PositionInputType) => PositionPropertiesType;
 
   /**
@@ -76,6 +76,6 @@ export interface GetRecPropertiesInterface {
    * @param inp - Optional position input.
    * @returns Position properties.
    */
-  // eslint-disable-next-line no-unused-vars
+
   fromRight: (inp?: PositionInputType) => PositionPropertiesType;
 }

@@ -124,8 +124,8 @@ export const cx = (
   return `${(cls as string).trim()} ${
     cls_obj
       ? Object.keys(cls_obj)
-        .filter((classname) => cls_obj[classname])
-        .join(' ')
+          .filter((classname) => cls_obj[classname])
+          .join(' ')
       : ''
   }`.trim();
 };

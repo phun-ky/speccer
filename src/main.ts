@@ -15,7 +15,7 @@
  * ```
  * @packageDocumentation
  */
-/* eslint-disable import/no-unused-modules */
+
 /* eslint no-console:0 */
 import './types/interfaces/global';
 import { dom, lazy, manual, activate } from './config/browser';
@@ -46,7 +46,6 @@ import {
 } from './utils/constants';
 import { removeAll } from './utils/node';
 
-// eslint-disable-next-line import/no-unused-modules
 export { removeSpeccerElement } from './utils/remove-speccer-element';
 
 export const grid = {

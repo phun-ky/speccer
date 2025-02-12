@@ -31,7 +31,7 @@
  *
  * @packageDocumentation
  */
- 
+
 /* eslint no-console:0 */
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { set as setClassNames, cx } from '../../utils/classnames';

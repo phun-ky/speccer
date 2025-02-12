@@ -81,7 +81,11 @@ export const a11y = () => {
 
       for (const [tabstopsIndex, tabstopsEl] of _tabstops_els.entries()) {
         if (!isElementHidden(tabstopsEl as HTMLElement)) {
-          addA11yElement(tabstopsEl as HTMLElement, tabstopsIndex + 1, 'tabstops');
+          addA11yElement(
+            tabstopsEl as HTMLElement,
+            tabstopsIndex + 1,
+            'tabstops'
+          );
           continue;
         }
 
@@ -94,19 +98,22 @@ export const a11y = () => {
         if (
           !potentialLabelElement ||
           isElementHidden(potentialLabelElement as HTMLElement)
-        ) continue;
+        )
+          continue;
 
         // This could be a fake element, like a toggle checkbox, so we use the labelElement
-        addA11yElement(potentialLabelElement as HTMLElement, tabstopsIndex + 1, 'tabstops');
+        addA11yElement(
+          potentialLabelElement as HTMLElement,
+          tabstopsIndex + 1,
+          'tabstops'
+        );
       }
     }
   }
 
   if (_autocomplete_elements.length) {
     for (const el of _autocomplete_elements) {
-      const _autocomplete_els = el.querySelectorAll(
-        '[autocomplete]'
-      );
+      const _autocomplete_els = el.querySelectorAll('[autocomplete]');
 
       for (const _autocomplete_el of _autocomplete_els) {
         if (isElementHidden(_autocomplete_el as HTMLElement)) continue;
@@ -139,7 +146,11 @@ export const a11y = () => {
       for (const [landmarkIndex, landmarkEl] of _landmark_els.entries()) {
         if (isElementHidden(landmarkEl as HTMLElement)) continue;
 
-        addA11yElement(landmarkEl as HTMLElement, landmarkIndex + 1, 'landmark');
+        addA11yElement(
+          landmarkEl as HTMLElement,
+          landmarkIndex + 1,
+          'landmark'
+        );
         addA11yElement(landmarkEl as HTMLElement, null, 'region');
       }
     }
