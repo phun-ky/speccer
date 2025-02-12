@@ -2,6 +2,7 @@ import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import compat from 'eslint-plugin-compat';
 import importPlugin from 'eslint-plugin-import';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
 import { configs as tsConfigs } from 'typescript-eslint';
 
@@ -23,6 +24,7 @@ export default [
   importPlugin.flatConfigs.typescript,
   compat.configs['flat/recommended'],
   ...tsConfigs.recommended,
+  eslintPluginPrettierRecommended,
   {
     plugins: {
       '@stylistic': stylistic
@@ -198,7 +200,8 @@ export default [
           MemberExpression: 1,
           SwitchCase: 1,
           ArrayExpression: 1,
-          ObjectExpression: 1
+          ObjectExpression: 1,
+          offsetTernaryExpressions: true
         }
       ],
       '@stylistic/object-curly-spacing': ['error', 'always'],
