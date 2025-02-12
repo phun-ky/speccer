@@ -23,6 +23,7 @@ export const SPECCER_LITERALS: string[] = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
  * console.log(tagsToAvoid); // Example output: ['TR', 'TH', 'TD', ...]
  * ```
  */
+// eslint-disable-next-line import/no-unused-modules
 export const SPECCER_TAGS_TO_AVOID: string[] = [
   'TR',
   'TH',
@@ -56,6 +57,7 @@ export const SPECCER_DEFAULT_PIN_SPACE = 48;
  * console.log(negativeDefaultPinSpace); // Example output: -48
  * ```
  */
+// eslint-disable-next-line import/no-unused-modules
 export const SPECCER_DEFAULT_PIN_SPACE_NEG: number =
   SPECCER_DEFAULT_PIN_SPACE * -1;
 
@@ -83,6 +85,7 @@ export const SPECCER_DEFAULT_MEASURE_SIZE = 8;
  * console.log(negativeDefaultMeasureSize); // Example output: -8
  * ```
  */
+// eslint-disable-next-line import/no-unused-modules
 export const SPECCER_DEFAULT_MEASURE_SIZE_NEG: number =
   SPECCER_DEFAULT_MEASURE_SIZE * -1;
 

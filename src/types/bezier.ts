@@ -38,7 +38,7 @@ export type BezierPathOptionsType = {
   pos2: string;
 };
 
-export type CoordinatesType = {
+type CoordinatesType = {
   x: number;
   y: number;
 };

@@ -49,12 +49,12 @@ export default [
 
     rules: {
       'import/no-named-as-default': 0,
-      // 'import/no-unused-modules': [
-      //   1,
-      //   {
-      //     unusedExports: true
-      //   }
-      // ],
+      'import/no-unused-modules': [
+        1,
+        {
+          unusedExports: true
+        }
+      ],
       'import/order': [
         'error',
         {
@@ -85,13 +85,16 @@ export default [
       'prefer-const': 'error',
       'one-var': ['error', 'never'],
       '@stylistic/array-bracket-newline': ['error', 'consistent'],
-      '@stylistic/max-len': ['error', {
-        code: 80,
-        tabWidth: 2,
-        ignoreComments: true,
-        ignoreStrings: true,
-        ignoreTemplateLiterals: true
-      }],
+      '@stylistic/max-len': [
+        'error',
+        {
+          code: 80,
+          tabWidth: 2,
+          ignoreComments: true,
+          ignoreStrings: true,
+          ignoreTemplateLiterals: true
+        }
+      ],
       '@stylistic/quotes': [1, 'single'],
       '@stylistic/padded-blocks': ['error', 'never'],
       '@stylistic/comma-dangle': 'error',
