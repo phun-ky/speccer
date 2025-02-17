@@ -11,9 +11,10 @@
     "access": "public"
   },
   "scripts": {
-    "test": "glob -c \"node --import tsx --import global-jsdom/register --test --no-warnings\" \"./src/**/__tests__/**/*.spec.[jt]s\"",
-    "pretest-ci": "rm -rf coverage && mkdir -p coverage",
-    "test-ci": "glob -c \"node --import tsx --import global-jsdom/register --test --no-warnings --experimental-test-coverage --test-reporter=cobertura --test-reporter-destination=coverage/cobertura-coverage.xml --test-reporter=spec --test-reporter-destination=stdout\" \"./src/**/__tests__/**/*.spec.[jt]s\"",
+    "test": "npm run test:unit",
+    "test:unit": "glob -c \"node --import tsx --import global-jsdom/register --test --no-warnings\" \"./src/**/__tests__/**/*.spec.[jt]s\"",
+    "pretest:ci": "rm -rf coverage && mkdir -p coverage",
+    "test:ci": "glob -c \"node --import tsx --import global-jsdom/register --test --no-warnings --experimental-test-coverage --test-reporter=cobertura --test-reporter-destination=coverage/cobertura-coverage.xml --test-reporter=spec --test-reporter-destination=stdout\" \"./src/**/__tests__/**/*.spec.[jt]s\"",
     "pretest:e2e": "rm -rf test-results && npm run build",
     "test:e2e": "npx playwright test",
     "rollup": "rollup -c",
