@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unused-modules */
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import compat from 'eslint-plugin-compat';
@@ -15,6 +16,7 @@ export default [
       '**/coverage',
       '**/dist',
       '**/__tests__',
+      'tests/**',
       '**/__mocks__'
     ]
   },

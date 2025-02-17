@@ -20,7 +20,7 @@
     "node_modules",
     "build",
     "dist",
-    "**/tests/**",
+    "tests/**",
     "scripts",
     "dts",
     "**/__tests__/**"

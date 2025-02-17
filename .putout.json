@@ -9,5 +9,5 @@
     "esm/remove-empty-export": "off",
     "apply-overrides": "off"
   },
-  "ignore": ["**/src/test", "**/__tests__"]
+  "ignore": ["**/tests", "**/__tests__"]
 }
