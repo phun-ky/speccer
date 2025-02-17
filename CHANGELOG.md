@@ -1,5 +1,25 @@
 # Changelog
 
+## [11.2.8](https://github.com/phun-ky/speccer/compare/v11.2.7...v11.2.8) (2025-02-17)
+
+### Tasks
+
+* 🤖 Add back prettier ([2aa57bc](https://github.com/phun-ky/speccer/commit/2aa57bc9498e28adb50566e11d214eed1f458577))
+* 🤖 Add empty `.eslintrc` file to make unusedModules run ([61c0abe](https://github.com/phun-ky/speccer/commit/61c0abe54e591eb9d9f3b7f221c2f2b411fe85ef))
+* 🤖 reinstall ([0e54766](https://github.com/phun-ky/speccer/commit/0e54766f43b2608e44e2bb2a14fbdeaa8364eb66))
+* 🤖 reinstall after upgrading engines ([480a5c6](https://github.com/phun-ky/speccer/commit/480a5c6316bd5869bb1aac69e23cb8aee13dee98))
+
+### Documentation
+
+* ✏️ Regenerate documentation ([1fbe689](https://github.com/phun-ky/speccer/commit/1fbe689eece1379a4f4e6dc9cf87c76e00f8651b))
+
+### Refactoring
+
+* 💡 Move `get-options.ts` into separate folder ([2bd8ed8](https://github.com/phun-ky/speccer/commit/2bd8ed84c5302ad3a52240d1b2ae8ff1e2cf9d82))
+* 💡 Move out function to get max height of document ([b738b87](https://github.com/phun-ky/speccer/commit/b738b873ccd857587ca81f20b43a757807573ced))
+* 💡 Use dot notation ([92b288c](https://github.com/phun-ky/speccer/commit/92b288c178a7a5212cde67c8d988f008b06193db))
+* 💡 Use proper types ([27d2964](https://github.com/phun-ky/speccer/commit/27d2964f4af85e65c04aca384e2d407820bbd66e))
+
 ## [11.2.7](https://github.com/phun-ky/speccer/compare/v11.2.6...v11.2.7) (2025-02-11)
 
 ### Tasks
