@@ -35,13 +35,13 @@ export const createPinElement = (
     subtle
   } = pin;
 
-  _extra_class_names['text'] = text;
-  _extra_class_names['parent'] = parent;
-  _extra_class_names['bracket'] = bracket;
-  _extra_class_names['enclose'] = enclose;
-  _extra_class_names['subtle'] = subtle;
-  _extra_class_names['svg'] = useSVGLine;
-  _extra_class_names['curly'] = useCurlyBrackets;
+  _extra_class_names.text = text;
+  _extra_class_names.parent = parent;
+  _extra_class_names.bracket = bracket;
+  _extra_class_names.enclose = enclose;
+  _extra_class_names.subtle = subtle;
+  _extra_class_names.svg = useSVGLine;
+  _extra_class_names.curly = useCurlyBrackets;
   _extra_class_names[position] = true;
 
   if (parent && !bracket && !useCurlyBrackets && !subtle)

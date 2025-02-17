@@ -111,7 +111,7 @@ export const getOptions = (
   };
 
   if (type === 'pin') {
-    options['pin'] = {
+    options.pin = {
       bracket: isBracketArea(areaString),
       enclose: isEncloseArea(areaString),
       subtle: isSubtle(areaString),
@@ -123,7 +123,7 @@ export const getOptions = (
   }
 
   if (type === 'measure') {
-    options['measure'] = {
+    options.measure = {
       slim: isSlimArea(areaString),
       height: isHeightArea(areaString),
       width: isWidthArea(areaString)
@@ -131,7 +131,7 @@ export const getOptions = (
   }
 
   if (type === 'typography') {
-    options['typography'] = {
+    options.typography = {
       useSyntaxHighlighting: useSyntaxHighlighting(areaString)
     };
   }
@@ -139,7 +139,7 @@ export const getOptions = (
   if (type === 'grid') {
     const _toggle_value = getGridToggleValue(areaString);
 
-    options['grid'] = {
+    options.grid = {
       toggle: _toggle_value,
       both: _toggle_value === 'both',
       rows: _toggle_value === 'rows',
@@ -150,7 +150,7 @@ export const getOptions = (
   if (type === 'spacing') {
     const _toggle_value = getSpacingToggleValue(areaString);
 
-    options['spacing'] = {
+    options.spacing = {
       both: _toggle_value === 'both',
       margin: _toggle_value === 'margin',
       padding: _toggle_value === 'padding',
