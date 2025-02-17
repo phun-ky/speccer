@@ -53,11 +53,12 @@ export const add = async (
   Object.assign(el.style, styles);
 };
 
+/* node:coverage disable */
 /**
  * Gets the computed CSS styles of an HTMLElement.
  *
  * @param {HTMLElement} el - The HTMLElement to get computed styles from.
- * @returns {Promise<CSSStyleDeclaration>} - A Promise that resolves with the computed CSS styles.
+ * @returns {Promise<Partial<CSSStyleDeclaration>>} - A Promise that resolves with the computed CSS styles, can be partial.
  *
  * @example
  * ```ts

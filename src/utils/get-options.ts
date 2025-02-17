@@ -32,7 +32,7 @@ import { camelCase } from './camel-case';
  * Determines the Speccer feature type based on the given area string and target element.
  *
  * @param {string} areaString - The string representing different area types.
- * @param {CSSStyleDeclaration} targetStyle - The target HTML element being evaluated.
+ * @param {Partial<CSSStyleDeclaration>} targetStyle - The target HTML element being evaluated.
  * @returns {SpeccerFeatureType} The determined Speccer feature type.
  *
  * @example
@@ -43,7 +43,7 @@ import { camelCase } from './camel-case';
  */
 const getFeatureBasedOnArea = (
   areaString: string,
-  targetStyle: CSSStyleDeclaration
+  targetStyle: Partial<CSSStyleDeclaration>
 ): SpeccerFeatureType => {
   if (isValidPinElement(areaString)) return 'pin';
 
@@ -85,24 +85,33 @@ const getSpacingToggleValue = (areaString: string) => {
 
 /* node:coverage disable */
 /**
- * Generates Speccer options based on the target element and the specified area string.
+ * Generates Speccer options based on the provided area string and target style.
  *
- * @param {HTMLElement} targetElement - The HTML element for which options are being generated.
- * @param {string} areaString - The string representing different area types.
- * @param {SpeccerOptionsInterface|undefined} [customOptions] - Custom options
- * @returns {SpeccerOptionsInterface} The generated Speccer options.
+ * This function determines the type of feature (pin, measure, typography, grid, or spacing)
+ * and assigns the relevant properties accordingly. It merges custom options if provided.
+ *
+ * @param {string} areaString - The string defining the area type.
+ * @param {Partial<CSSStyleDeclaration>} targetStyle - The computed style of the target element.
+ * @param {SpeccerOptionsInterface} [customOptions] - Optional custom options to override defaults.
+ * @returns {SpeccerOptionsInterface} The generated Speccer options object.
  *
  * @example
  * ```ts
- * const options = getOptions(document.getElementById('myElement'), 'left right pin');
+ * const areaString = 'pin bracket subtle';
+ * const options = getOptions(areaString, element.style);
  * console.log(options);
- * // Output: { position: { left: true, right: true, top: false, bottom: false }, type: 'pin', pin: { bracket: false, enclose: false, subtle: false, parent: false, text: false, useSVGLine: false, useCurlyBrackets: false } }
+ * // Output: {
+ * //   slug: 'pinBracketSubtle',
+ * //   position: { left: true, right: false, top: false, bottom: false },
+ * //   type: 'pin',
+ * //   pin: { bracket: true, enclose: false, subtle: true, ... }
+ * // }
  * ```
  */
 /* node:coverage enable */
 export const getOptions = (
   areaString: string,
-  targetStyle: CSSStyleDeclaration,
+  targetStyle: Partial<CSSStyleDeclaration>,
   customOptions?: SpeccerOptionsInterface | undefined
 ): SpeccerOptionsInterface => {
   const type = getFeatureBasedOnArea(areaString, targetStyle);

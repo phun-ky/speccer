@@ -6,6 +6,10 @@ import {
   CurlyBezierPathOptionsType
 } from '../types/bezier';
 
+import {
+  SPECCER_DEFAULT_MEASURE_SIZE,
+  SPECCER_DEFAULT_MEASURE_SIZE_NEG
+} from './constants';
 import { getCoordsPairFromObjects } from './get-coords-pair-from-objects';
 
 /* node:coverage disable */
@@ -153,10 +157,10 @@ export const getCurlySVGPath = async (
   let y2modifier = 0;
 
   // Create a gap between the pin and the bracket center
-  if (direction === 'north') y2modifier = 8;
-  else if (direction === 'west') x2modifier = 8;
-  else if (direction === 'east') x2modifier = -8;
-  else if (direction === 'south') y2modifier = -8;
+  if (direction === 'north') y2modifier = SPECCER_DEFAULT_MEASURE_SIZE;
+  else if (direction === 'west') x2modifier = SPECCER_DEFAULT_MEASURE_SIZE;
+  else if (direction === 'east') x2modifier = SPECCER_DEFAULT_MEASURE_SIZE_NEG;
+  else if (direction === 'south') y2modifier = SPECCER_DEFAULT_MEASURE_SIZE_NEG;
 
   const { firstPoint, firstControl, lastControl, lastPoint } =
     createBezierCurveCoordinates(

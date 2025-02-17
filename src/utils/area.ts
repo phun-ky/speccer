@@ -279,16 +279,17 @@ export const isValidMarkElement = (areaString: string | null): boolean =>
  * Checks if the provided areaString contains 'grid'.
  *
  * @param {string|null} areaString - The string containing areas.
- * @param {CSSStyleDeclaration} areaString - The string containing areas.
+ * @param {Partial<CSSStyleDeclaration>} areaString - The string containing areas.
  * @returns boolean `true` if 'grid' are present, otherwise `false`.
  */
 export const isValidGridElement = (
   areaString: string | null,
-  styles: CSSStyleDeclaration
+  styles: Partial<CSSStyleDeclaration>
 ): boolean =>
   areaString !== null &&
   areaString.split(' ').includes(GridAreaEnum.Grid) &&
-  (styles.display === 'grid' || styles.display.includes('grid'));
+  isString(styles.display) &&
+  (styles.display === 'grid' || (styles.display || '').includes('grid'));
 
 /**
  * Checks if the provided areaString contains 'syntax'.
