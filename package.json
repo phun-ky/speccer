@@ -72,7 +72,9 @@
     "a11y",
     "accessibility",
     "grid",
-    "grid-layout"
+    "grid-layout",
+    "typography",
+    "typescript"
   ],
   "author": "Alexander Vassbotn Røyne-Helgesen <alexander@phun-ky.net>",
   "license": "MIT",
