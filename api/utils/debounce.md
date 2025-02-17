@@ -6,7 +6,7 @@
 
 # utils/debounce
 
-> Last updated 2025-02-11T10:43:47.971Z
+> Last updated 2025-02-17T12:33:43.818Z
 
 ## Table of Contents
 
@@ -48,8 +48,8 @@ const debouncedFn = debounce((value) => {
 }, 500);
 
 // Call the debounced function
-debouncedFn("Hello"); // This will not trigger immediate execution
-debouncedFn("World"); // This will trigger immediate execution
+debouncedFn('Hello'); // This will not trigger immediate execution
+debouncedFn('World'); // This will trigger immediate execution
 ```
 
 ---

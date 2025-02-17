@@ -6,7 +6,7 @@
 
 # features/a11y/utils/add-a11y-element
 
-> Last updated 2025-02-11T10:43:47.935Z
+> Last updated 2025-02-17T12:33:43.794Z
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@
 function addA11yElement(targetElement, content?, type?): Promise<void>;
 ```
 
-Defined in: [src/features/a11y/utils/add-a11y-element.ts:29](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/utils/add-a11y-element.ts#L29)
+Defined in: [src/features/a11y/utils/add-a11y-element.ts:28](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/utils/add-a11y-element.ts#L28)
 
 Adds an accessibility element to the document body based on the target element and type.
 
@@ -45,10 +45,10 @@ A Promise resolving when the operation is complete.
 #### Example
 
 ```ts
-const targetElement = document.getElementById("myElement");
+const targetElement = document.getElementById('myElement');
 if (targetElement) {
-  await addA11yElement(targetElement, 1, "landmark");
-  await addA11yElement(targetElement, null, "tabstops");
+  await addA11yElement(targetElement, 1, 'landmark');
+  await addA11yElement(targetElement, null, 'tabstops');
 }
 ```
 

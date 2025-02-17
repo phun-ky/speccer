@@ -6,7 +6,7 @@
 
 # utils/styles
 
-> Last updated 2025-02-11T10:43:47.975Z
+> Last updated 2025-02-17T12:33:43.820Z
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@
 function add(el, styles): Promise<void>;
 ```
 
-Defined in: [src/utils/styles.ts:26](https://github.com/phun-ky/speccer/blob/main/src/utils/styles.ts#L26)
+Defined in: [src/utils/styles.ts:28](https://github.com/phun-ky/speccer/blob/main/src/utils/styles.ts#L28)
 
 Adds CSS styles to an HTMLElement.
 
@@ -43,13 +43,13 @@ Adds CSS styles to an HTMLElement.
 
 ```ts
 // Apply styles as an object
-const element = document.getElementById("my-element");
-await add(element, { color: "red", fontSize: "16px" });
+const element = document.getElementById('my-element');
+await add(element, { color: 'red', fontSize: '16px' });
 
 // Apply styles as an array of objects
 const styles = [
-  { key: "color", value: "blue" },
-  { key: "backgroundColor", value: "yellow" },
+  { key: 'color', value: 'blue' },
+  { key: 'backgroundColor', value: 'yellow' }
 ];
 await add(element, styles);
 ```
@@ -59,10 +59,10 @@ await add(element, styles);
 ### get()
 
 ```ts
-function get(el): Promise<CSSStyleDeclaration>;
+function get(el): Promise<Partial<CSSStyleDeclaration>>;
 ```
 
-Defined in: [src/utils/styles.ts:68](https://github.com/phun-ky/speccer/blob/main/src/utils/styles.ts#L68)
+Defined in: [src/utils/styles.ts:72](https://github.com/phun-ky/speccer/blob/main/src/utils/styles.ts#L72)
 
 Gets the computed CSS styles of an HTMLElement.
 
@@ -74,15 +74,15 @@ Gets the computed CSS styles of an HTMLElement.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration)>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)\<[`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration)>>
 
-- A Promise that resolves with the computed CSS styles.
+- A Promise that resolves with the computed CSS styles, can be partial.
 
 #### Example
 
 ```ts
 // Get computed styles of an element
-const element = document.getElementById("my-element");
+const element = document.getElementById('my-element');
 const computedStyles = await get(element);
 console.log(computedStyles.color); // Logs the color property value
 ```

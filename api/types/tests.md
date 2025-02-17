@@ -2,31 +2,51 @@
   <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
 </div>
 
-[@phun-ky/speccer](../README.md) / types/styles
+[@phun-ky/speccer](../README.md) / types/tests
 
-# types/styles
+# types/tests
 
 > Last updated 2025-02-17T12:33:43.812Z
 
 ## Table of Contents
 
 - [Type Aliases](#type-aliases)
-  - [SpeccerStylesReturnType](#speccerstylesreturntype)
+  - [AnyFunction()](#anyfunction)
+  - [MockedFunction\<T>](#mockedfunctiont)
 
 ## Type Aliases
 
-### SpeccerStylesReturnType
+### AnyFunction()
 
 ```ts
-type SpeccerStylesReturnType = {
-  height: string;
-  left: string;
-  top: string;
-  width: string;
+type AnyFunction = (...args) => any;
+```
+
+Defined in: [src/types/tests.ts:2](https://github.com/phun-ky/speccer/blob/main/src/types/tests.ts#L2)
+
+#### Parameters
+
+| Parameter | Type     |
+| --------- | -------- |
+| ...`args` | `any`\[] |
+
+#### Returns
+
+`any`
+
+---
+
+### MockedFunction\<T>
+
+```ts
+type MockedFunction<T> = T & {
+  mock: {
+    calls: Call[];
+  };
 };
 ```
 
-Defined in: [src/types/styles.ts:1](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L1)
+Defined in: [src/types/tests.ts:11](https://github.com/phun-ky/speccer/blob/main/src/types/tests.ts#L11)
 
 #### Type declaration
 
@@ -42,62 +62,42 @@ Defined in: [src/types/styles.ts:1](https://github.com/phun-ky/speccer/blob/main
   <tbody>
     <tr>
       <td>
-        <a id="height" /> `height`?
+        `mock`?
       </td>
 
       <td>
-        `string`
+        \{
+        `calls`: `Call`\[];
+        }
       </td>
 
       <td>
-        [src/types/styles.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L4)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <a id="left" /> `left`
-      </td>
-
-      <td>
-        `string`
-      </td>
-
-      <td>
-        [src/types/styles.ts:2](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L2)
+        [src/types/tests.ts:12](https://github.com/phun-ky/speccer/blob/main/src/types/tests.ts#L12)
       </td>
     </tr>
 
     <tr>
       <td>
-        <a id="top" /> `top`
+        `mock.calls`
       </td>
 
       <td>
-        `string`
+        `Call`\[]
       </td>
 
       <td>
-        [src/types/styles.ts:3](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L3)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <a id="width" /> `width`?
-      </td>
-
-      <td>
-        `string`
-      </td>
-
-      <td>
-        [src/types/styles.ts:5](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L5)
+        [src/types/tests.ts:12](https://github.com/phun-ky/speccer/blob/main/src/types/tests.ts#L12)
       </td>
     </tr>
 
   </tbody>
 </table>
+
+#### Type Parameters
+
+| Type Parameter                                      |
+| --------------------------------------------------- |
+| `T` _extends_ [`AnyFunction`](tests.md#anyfunction) |
 
 ---
 

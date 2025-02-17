@@ -2,50 +2,42 @@
   <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
 </div>
 
-[@phun-ky/speccer](../README.md) / utils/resize
+[@phun-ky/speccer](../README.md) / utils/get-max-document-height
 
-# utils/resize
+# utils/get-max-document-height
 
-> Last updated 2025-02-17T12:33:43.820Z
+> Last updated 2025-02-17T12:33:43.818Z
 
 ## Table of Contents
 
 - [Functions](#functions)
-  - [activate()](#activate)
+  - [getMaxDocumentHeight()](#getmaxdocumentheight)
 
 ## Functions
 
-### activate()
+### getMaxDocumentHeight()
 
 ```ts
-function activate(speccer): void;
+function getMaxDocumentHeight(): number;
 ```
 
-Defined in: [src/utils/resize.ts:24](https://github.com/phun-ky/speccer/blob/main/src/utils/resize.ts#L24)
+Defined in: [src/utils/get-max-document-height.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/get-max-document-height.ts#L14)
 
-Attaches a debounced event listener to the window's resize event that triggers the provided function.
+Retrieves the maximum document height.
 
-#### Parameters
-
-| Parameter | Type                                                             | Description                                         |
-| --------- | ---------------------------------------------------------------- | --------------------------------------------------- |
-| `speccer` | [`SpeccerFunctionType`](../types/speccer.md#speccerfunctiontype) | The function to trigger when the window is resized. |
+This function calculates the maximum height of the document by considering
+various properties of both the `<body>` and `<html>` elements.
 
 #### Returns
 
-`void`
+`number`
+
+The maximum height of the document in pixels.
 
 #### Example
 
 ```ts
-// Define a function to be triggered on window resize
-const mySpeccer = () => {
-  // Your logic here
-  console.log('Window resized');
-};
-
-// Activate the debounced event listener
-activate(mySpeccer);
+console.log(getMaxDocumentHeight()); // Output: Maximum height of the document (in pixels)
 ```
 
 ---

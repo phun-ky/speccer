@@ -6,7 +6,7 @@
 
 # features/pin/utils/styles
 
-> Last updated 2025-02-11T10:43:47.942Z
+> Last updated 2025-02-17T12:33:43.798Z
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@ function styles(
   targetElement,
   pinElement,
   parentElement,
-  options,
+  options
 ): Promise<SpeccerStylesReturnType>;
 ```
 
@@ -48,17 +48,17 @@ Get styles for pin elements based on the specified area and options.
 #### Example
 
 ```ts
-const area = "top-left";
-const targetElement = document.getElementById("target");
-const parentElement = document.getElementById("parent");
-const pinElement = document.getElementById("pin");
+const area = 'top-left';
+const targetElement = document.getElementById('target');
+const parentElement = document.getElementById('parent');
+const pinElement = document.getElementById('pin');
 const options = { useCurlyBrackets: true };
 const styles = await styles(
   area,
   targetElement,
   pinElement,
   parentElement,
-  options,
+  options
 );
 console.log(styles);
 ```

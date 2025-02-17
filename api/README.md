@@ -8,7 +8,7 @@
 
 ---
 
-> Last updated 2025-02-11T10:43:47.928Z
+> Last updated 2025-02-17T12:33:43.789Z
 
 ## Modules
 
@@ -46,6 +46,7 @@
 - [types/position](types/position.md)
 - [types/speccer](types/speccer.md)
 - [types/styles](types/styles.md)
+- [types/tests](types/tests.md)
 - [types/xy](types/xy.md)
 - [utils/angle](utils/angle.md)
 - [utils/area](utils/area.md)
@@ -63,7 +64,9 @@
 - [utils/debounce](utils/debounce.md)
 - [utils/direction-of-element](utils/direction-of-element.md)
 - [utils/get-coords-pair-from-objects](utils/get-coords-pair-from-objects.md)
+- [utils/get-max-document-height](utils/get-max-document-height.md)
 - [utils/get-options](utils/get-options.md)
+- [utils/get-options/utils](utils/get-options/utils.md)
 - [utils/id](utils/id.md)
 - [utils/intrinsic-coords](utils/intrinsic-coords.md)
 - [utils/node](utils/node.md)

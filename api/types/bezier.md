@@ -6,14 +6,13 @@
 
 # types/bezier
 
-> Last updated 2025-02-11T10:43:47.949Z
+> Last updated 2025-02-17T12:33:43.802Z
 
 ## Table of Contents
 
 - [Type Aliases](#type-aliases)
   - [BezierPathOptionsType](#bezierpathoptionstype)
   - [CoordinatesForBezierObjectType](#coordinatesforbezierobjecttype)
-  - [CoordinatesType](#coordinatestype)
   - [CreateCoordinatesForCurveCoordParamType](#createcoordinatesforcurvecoordparamtype)
   - [CreateCoordinatesForCurveOptionsParamType](#createcoordinatesforcurveoptionsparamtype)
   - [CurlyBezierPathOptionsType](#curlybezierpathoptionstype)
@@ -118,7 +117,7 @@ Defined in: [src/types/bezier.ts:46](https://github.com/phun-ky/speccer/blob/mai
       </td>
 
       <td>
-        [`CoordinatesType`](bezier.md#coordinatestype)
+        `CoordinatesType`
       </td>
 
       <td>
@@ -132,7 +131,7 @@ Defined in: [src/types/bezier.ts:46](https://github.com/phun-ky/speccer/blob/mai
       </td>
 
       <td>
-        [`CoordinatesType`](bezier.md#coordinatestype)
+        `CoordinatesType`
       </td>
 
       <td>
@@ -146,7 +145,7 @@ Defined in: [src/types/bezier.ts:46](https://github.com/phun-ky/speccer/blob/mai
       </td>
 
       <td>
-        [`CoordinatesType`](bezier.md#coordinatestype)
+        `CoordinatesType`
       </td>
 
       <td>
@@ -160,67 +159,11 @@ Defined in: [src/types/bezier.ts:46](https://github.com/phun-ky/speccer/blob/mai
       </td>
 
       <td>
-        [`CoordinatesType`](bezier.md#coordinatestype)
+        `CoordinatesType`
       </td>
 
       <td>
         [src/types/bezier.ts:49](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L49)
-      </td>
-    </tr>
-
-  </tbody>
-</table>
-
----
-
-### CoordinatesType
-
-```ts
-type CoordinatesType = {
-  x: number;
-  y: number;
-};
-```
-
-Defined in: [src/types/bezier.ts:41](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L41)
-
-#### Type declaration
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        <a id="x" /> `x`
-      </td>
-
-      <td>
-        `number`
-      </td>
-
-      <td>
-        [src/types/bezier.ts:42](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L42)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <a id="y" /> `y`
-      </td>
-
-      <td>
-        `number`
-      </td>
-
-      <td>
-        [src/types/bezier.ts:43](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L43)
       </td>
     </tr>
 

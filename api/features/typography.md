@@ -6,7 +6,7 @@
 
 # features/typography
 
-> Last updated 2025-02-11T10:43:47.943Z
+> Last updated 2025-02-17T12:33:43.799Z
 
 This feature presents typography
 
@@ -30,13 +30,13 @@ Use the following code, either for html or js:
 ```
 
 ```ts
-const targetElement = document.getElementById("target");
+const targetElement = document.getElementById('target');
 const options = {
-  position: "right",
-  type: "typography",
+  position: 'right',
+  type: 'typography',
   typography: {
-    useSyntaxHighlighting: false,
-  },
+    useSyntaxHighlighting: false
+  }
 };
 
 typography(targetElement, options);
@@ -50,7 +50,7 @@ typography(targetElement, options);
 function create(html, options, id): HTMLElement;
 ```
 
-Defined in: [src/features/typography/index.ts:63](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L63)
+Defined in: [src/features/typography/index.ts:66](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L66)
 
 Create a DOM element with provided HTML and optional CSS class names.
 
@@ -71,8 +71,8 @@ Create a DOM element with provided HTML and optional CSS class names.
 #### Example
 
 ```ts
-const htmlContent = "<p>This is some HTML content.</p>";
-const cssClass = "custom-class";
+const htmlContent = '<p>This is some HTML content.</p>';
+const cssClass = 'custom-class';
 const createdElement = create(htmlContent, cssClass);
 document.body.appendChild(createdElement);
 ```
@@ -85,7 +85,7 @@ document.body.appendChild(createdElement);
 function typography(targetElement, options?): Promise<void>;
 ```
 
-Defined in: [src/features/typography/index.ts:122](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L122)
+Defined in: [src/features/typography/index.ts:127](https://github.com/phun-ky/speccer/blob/main/src/features/typography/index.ts#L127)
 
 Create a specced typography element for a given target element.
 
@@ -109,7 +109,7 @@ Create a specced typography element for a given target element.
 ##### Default
 
 ```ts
-const targetElement = document.querySelector(".target");
+const targetElement = document.querySelector('.target');
 if (targetElement) {
   element(targetElement);
 }
@@ -120,11 +120,11 @@ if (targetElement) {
 ![typography](https://github.com/phun-ky/speccer/blob/main/public/speccer-typography-syntax-light.png?raw=true)
 
 ```ts
-const targetElement = document.querySelector(".target");
+const targetElement = document.querySelector('.target');
 const options = {
   typography: {
-    useSyntaxHighlighting: true,
-  },
+    useSyntaxHighlighting: true
+  }
 };
 
 if (targetElement) {

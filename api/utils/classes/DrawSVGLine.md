@@ -6,7 +6,7 @@
 
 # utils/classes/DrawSVGLine
 
-> Last updated 2025-02-11T10:43:47.968Z
+> Last updated 2025-02-17T12:33:43.815Z
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@
 
 ### DrawSVGLine
 
-Defined in: [src/utils/classes/DrawSVGLine.ts:10](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L10)
+Defined in: [src/utils/classes/DrawSVGLine.ts:11](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L11)
 
 Class representing a DrawSVGLine instance.
 
@@ -32,7 +32,7 @@ new DrawSVGLine(
    options?): DrawSVGLine
 ```
 
-Defined in: [src/utils/classes/DrawSVGLine.ts:24](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L24)
+Defined in: [src/utils/classes/DrawSVGLine.ts:25](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L25)
 
 Creates a new DrawSVGLine instance.
 
@@ -52,10 +52,10 @@ Creates a new DrawSVGLine instance.
 
 | Property                               | Type                                                                          | Defined in                                                                                                               |
 | -------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| <a id="line" /> `line`                 | [`SVGPathElement`](https://developer.mozilla.org/docs/Web/API/SVGPathElement) | [src/utils/classes/DrawSVGLine.ts:16](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L16) |
-| <a id="options" /> `options`           | [`SpeccerOptionsInterface`](../../types/speccer.md#specceroptionsinterface)   | [src/utils/classes/DrawSVGLine.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L15) |
-| <a id="startelement" /> `startElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | [src/utils/classes/DrawSVGLine.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L13) |
-| <a id="stopelement" /> `stopElement`   | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | [src/utils/classes/DrawSVGLine.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L14) |
+| <a id="line" /> `line`                 | [`SVGPathElement`](https://developer.mozilla.org/docs/Web/API/SVGPathElement) | [src/utils/classes/DrawSVGLine.ts:17](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L17) |
+| <a id="options" /> `options`           | [`SpeccerOptionsInterface`](../../types/speccer.md#specceroptionsinterface)   | [src/utils/classes/DrawSVGLine.ts:16](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L16) |
+| <a id="startelement" /> `startElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | [src/utils/classes/DrawSVGLine.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L14) |
+| <a id="stopelement" /> `stopElement`   | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | [src/utils/classes/DrawSVGLine.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L15) |
 
 #### Methods
 
@@ -65,7 +65,7 @@ Creates a new DrawSVGLine instance.
 connect(): void
 ```
 
-Defined in: [src/utils/classes/DrawSVGLine.ts:89](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L89)
+Defined in: [src/utils/classes/DrawSVGLine.ts:82](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L82)
 
 Connects and draws the line.
 
@@ -79,7 +79,7 @@ Connects and draws the line.
 draw(path): Promise<void>
 ```
 
-Defined in: [src/utils/classes/DrawSVGLine.ts:98](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L98)
+Defined in: [src/utils/classes/DrawSVGLine.ts:91](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGLine.ts#L91)
 
 Draws the line based on the provided path.
 

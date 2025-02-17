@@ -6,7 +6,7 @@
 
 # features/mark
 
-> Last updated 2025-02-11T10:43:47.939Z
+> Last updated 2025-02-17T12:33:43.797Z
 
 This feature marks given element
 
@@ -28,9 +28,9 @@ Use the following code, either for html or js:
 ```
 
 ```ts
-const targetElement = document.getElementById("target");
+const targetElement = document.getElementById('target');
 const options = {
-  type: "mark",
+  type: 'mark'
 };
 
 mark(targetElement, options);
@@ -44,7 +44,7 @@ mark(targetElement, options);
 function create(id, n): HTMLElement;
 ```
 
-Defined in: [src/features/mark/index.ts:55](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L55)
+Defined in: [src/features/mark/index.ts:57](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L57)
 
 Create a marker element with an optional element type.
 
@@ -64,7 +64,7 @@ Create a marker element with an optional element type.
 #### Example
 
 ```typescript
-const marker = create("div");
+const marker = create('div');
 document.body.appendChild(marker);
 ```
 
@@ -76,7 +76,7 @@ document.body.appendChild(marker);
 function mark(targetElement): Promise<void>;
 ```
 
-Defined in: [src/features/mark/index.ts:79](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L79)
+Defined in: [src/features/mark/index.ts:83](https://github.com/phun-ky/speccer/blob/main/src/features/mark/index.ts#L83)
 
 Create a marker element and add it to the body with styles matching a specified element.
 
@@ -97,7 +97,7 @@ Create a marker element and add it to the body with styles matching a specified 
 #### Example
 
 ```typescript
-const targetElement = document.getElementById("target");
+const targetElement = document.getElementById('target');
 mark(targetElement);
 ```
 

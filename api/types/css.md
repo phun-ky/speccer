@@ -6,7 +6,7 @@
 
 # types/css
 
-> Last updated 2025-02-11T10:43:47.950Z
+> Last updated 2025-02-17T12:33:43.803Z
 
 ## Table of Contents
 
@@ -230,7 +230,7 @@ CSS properties for typography.
   <tbody>
     <tr>
       <td>
-        <a id="fontfamily" /> `fontFamily`
+        <a id="fontfamily" /> `fontFamily`?
       </td>
 
       <td>
@@ -248,7 +248,7 @@ CSS properties for typography.
 
     <tr>
       <td>
-        <a id="fontsize" /> `fontSize`
+        <a id="fontsize" /> `fontSize`?
       </td>
 
       <td>
@@ -266,7 +266,7 @@ CSS properties for typography.
 
     <tr>
       <td>
-        <a id="fontstyle" /> `fontStyle`
+        <a id="fontstyle" /> `fontStyle`?
       </td>
 
       <td>
@@ -284,7 +284,7 @@ CSS properties for typography.
 
     <tr>
       <td>
-        <a id="fontvariationsettings" /> `fontVariationSettings`
+        <a id="fontvariationsettings" /> `fontVariationSettings`?
       </td>
 
       <td>
@@ -302,7 +302,7 @@ CSS properties for typography.
 
     <tr>
       <td>
-        <a id="fontweight" /> `fontWeight`
+        <a id="fontweight" /> `fontWeight`?
       </td>
 
       <td>
@@ -320,7 +320,7 @@ CSS properties for typography.
 
     <tr>
       <td>
-        <a id="letterspacing" /> `letterSpacing`
+        <a id="letterspacing" /> `letterSpacing`?
       </td>
 
       <td>
@@ -338,7 +338,7 @@ CSS properties for typography.
 
     <tr>
       <td>
-        <a id="lineheight" /> `lineHeight`
+        <a id="lineheight" /> `lineHeight`?
       </td>
 
       <td>

@@ -6,7 +6,7 @@
 
 # features/a11y/utils/create-a11y-element
 
-> Last updated 2025-02-11T10:43:47.936Z
+> Last updated 2025-02-17T12:33:43.795Z
 
 ## Table of Contents
 
@@ -42,9 +42,9 @@ The created HTML element.
 #### Example
 
 ```ts
-const tabElement = create("tabstops", null, "div");
-const landmarkElement = create("landmark", 1, "div");
-const regionElement = create("region", null, "div");
+const tabElement = create('tabstops', null, 'div');
+const landmarkElement = create('landmark', 1, 'div');
+const regionElement = create('region', null, 'div');
 ```
 
 ---

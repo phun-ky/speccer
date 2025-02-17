@@ -6,7 +6,7 @@
 
 # features/typography/utils/template
 
-> Last updated 2025-02-11T10:43:47.944Z
+> Last updated 2025-02-17T12:33:43.800Z
 
 ## Table of Contents
 
@@ -41,7 +41,7 @@ Generate a HTML string for typography styles of a target element.
 #### Example
 
 ```ts
-const targetElement = document.getElementById("target");
+const targetElement = document.getElementById('target');
 const typographyStyles = await template(targetElement, true);
 console.log(typographyStyles);
 ```
