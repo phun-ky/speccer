@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /**
  * Type definition for position properties.
  */

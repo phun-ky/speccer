@@ -6,7 +6,7 @@
 
 # features/grid
 
-> Last updated 2025-02-11T10:43:47.938Z
+> Last updated 2025-02-17T12:33:43.796Z
 
 This feature will highlight the grid spacing in a `display: grid;` element.
 
@@ -28,12 +28,12 @@ Use the following code, either for html or js:
 ```
 
 ```ts
-const targetElement = document.getElementById("target");
+const targetElement = document.getElementById('target');
 const options = {
-  type: "grid",
+  type: 'grid',
   grid: {
-    toggle: "both",
-  },
+    toggle: 'both'
+  }
 };
 
 grid(targetElement, options);
@@ -47,17 +47,17 @@ grid(targetElement, options);
 function create(targetElement, styles, options): Promise<void>;
 ```
 
-Defined in: [src/features/grid/index.ts:63](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L63)
+Defined in: [src/features/grid/index.ts:65](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L65)
 
 Creates a visual grid overlay for a given target element.
 
 #### Parameters
 
-| Parameter       | Type                                                                                    | Description                                        |
-| --------------- | --------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                 | The target element to create the grid overlay for. |
-| `styles`        | [`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration) | The computed styles of the target element.         |
-| `options`       | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface)                | Options to determine what to draw                  |
+| Parameter       | Type                                                                                                                                                                               | Description                                        |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                                                                                                            | The target element to create the grid overlay for. |
+| `styles`        | [`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)\<[`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration)> | The computed styles of the target element.         |
+| `options`       | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface)                                                                                                           | Options to determine what to draw                  |
 
 #### Returns
 
@@ -66,7 +66,7 @@ Creates a visual grid overlay for a given target element.
 #### Example
 
 ```ts
-const targetElement = document.getElementById("target");
+const targetElement = document.getElementById('target');
 if (targetElement) {
   const styles = window.getComputedStyle(targetElement);
   await create(targetElement, styles);
@@ -81,7 +81,7 @@ if (targetElement) {
 function grid(targetElement, options?): Promise<void>;
 ```
 
-Defined in: [src/features/grid/index.ts:204](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L204)
+Defined in: [src/features/grid/index.ts:208](https://github.com/phun-ky/speccer/blob/main/src/features/grid/index.ts#L208)
 
 Create a visual overlay to present the column gaps for a grid container
 
@@ -105,7 +105,7 @@ A promise that resolves once the overlay has been added.
 #### Example
 
 ```ts
-const targetElement = document.getElementById("target");
+const targetElement = document.getElementById('target');
 
 grid(targetElement);
 ```
@@ -115,12 +115,12 @@ grid(targetElement);
 ![grid](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-dark.png?raw=true)
 
 ```ts
-const targetElement = document.getElementById("target");
+const targetElement = document.getElementById('target');
 const options = {
-  type: "grid",
+  type: 'grid',
   grid: {
-    toggle: "rows",
-  },
+    toggle: 'rows'
+  }
 };
 
 grid(targetElement, options);

@@ -6,7 +6,7 @@
 
 # utils/get-options
 
-> Last updated 2025-02-11T10:43:47.972Z
+> Last updated 2025-02-17T12:33:43.818Z
 
 ## Table of Contents
 
@@ -21,37 +21,43 @@
 function getOptions(
   areaString,
   targetStyle,
-  customOptions?,
+  customOptions?
 ): SpeccerOptionsInterface;
 ```
 
-Defined in: [src/utils/get-options.ts:101](https://github.com/phun-ky/speccer/blob/main/src/utils/get-options.ts#L101)
+Defined in: [src/utils/get-options/index.ts:46](https://github.com/phun-ky/speccer/blob/main/src/utils/get-options/index.ts#L46)
 
-Generates Speccer options based on the target element and the specified area string.
+Generates Speccer options based on the provided area string and target style.
+
+This function determines the type of feature (pin, measure, typography, grid, or spacing)
+and assigns the relevant properties accordingly. It merges custom options if provided.
 
 #### Parameters
 
-| Parameter        | Type                                                                                    | Description                                   |
-| ---------------- | --------------------------------------------------------------------------------------- | --------------------------------------------- |
-| `areaString`     | `string`                                                                                | The string representing different area types. |
-| `targetStyle`    | [`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration) | -                                             |
-| `customOptions`? | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface)                | Custom options                                |
+| Parameter        | Type                                                                                                                                                                               | Description                                   |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| `areaString`     | `string`                                                                                                                                                                           | The string defining the area type.            |
+| `targetStyle`    | [`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)\<[`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration)> | The computed style of the target element.     |
+| `customOptions`? | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface)                                                                                                           | Optional custom options to override defaults. |
 
 #### Returns
 
 [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface)
 
-The generated Speccer options.
+The generated Speccer options object.
 
 #### Example
 
 ```ts
-const options = getOptions(
-  document.getElementById("myElement"),
-  "left right pin",
-);
+const areaString = 'pin bracket subtle';
+const options = getOptions(areaString, element.style);
 console.log(options);
-// Output: { position: { left: true, right: true, top: false, bottom: false }, type: 'pin', pin: { bracket: false, enclose: false, subtle: false, parent: false, text: false, useSVGLine: false, useCurlyBrackets: false } }
+// Output: {
+//   slug: 'pinBracketSubtle',
+//   position: { left: true, right: false, top: false, bottom: false },
+//   type: 'pin',
+//   pin: { bracket: true, enclose: false, subtle: true, ... }
+// }
 ```
 
 ---

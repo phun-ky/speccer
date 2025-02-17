@@ -6,7 +6,7 @@
 
 # features/spacing
 
-> Last updated 2025-02-11T10:43:47.942Z
+> Last updated 2025-02-17T12:33:43.799Z
 
 This feature highlights the spacing of an element.
 
@@ -28,7 +28,7 @@ Use the following code, either for html or js:
 ```
 
 ```ts
-const targetElement = document.getElementById("target");
+const targetElement = document.getElementById('target');
 element(targetElement);
 ```
 
@@ -40,7 +40,7 @@ element(targetElement);
 function create(text, tag): HTMLElement;
 ```
 
-Defined in: [src/features/spacing/index.ts:54](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L54)
+Defined in: [src/features/spacing/index.ts:56](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L56)
 
 Create a spacing element with optional text content.
 
@@ -60,7 +60,7 @@ Create a spacing element with optional text content.
 #### Example
 
 ```ts
-const spacingElement = create(20, "div");
+const spacingElement = create(20, 'div');
 document.body.appendChild(spacingElement);
 ```
 
@@ -72,7 +72,7 @@ document.body.appendChild(spacingElement);
 function spacing(targetElement, options?): Promise<void>;
 ```
 
-Defined in: [src/features/spacing/index.ts:115](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L115)
+Defined in: [src/features/spacing/index.ts:119](https://github.com/phun-ky/speccer/blob/main/src/features/spacing/index.ts#L119)
 
 Create and position spacing elements based on the target element's computed spacing styles.
 
@@ -96,7 +96,7 @@ Create and position spacing elements based on the target element's computed spac
 ##### Default, padding and margin
 
 ```ts
-const targetElement = document.getElementById("target");
+const targetElement = document.getElementById('target');
 element(targetElement);
 ```
 

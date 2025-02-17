@@ -6,7 +6,7 @@
 
 # utils/bezier
 
-> Last updated 2025-02-11T10:43:47.966Z
+> Last updated 2025-02-17T12:33:43.813Z
 
 ## Table of Contents
 
@@ -24,11 +24,11 @@
 ```ts
 function createBezierCurveCoordinates(
   coords,
-  options,
+  options
 ): CoordinatesForBezierObjectType;
 ```
 
-Defined in: [src/utils/bezier.ts:26](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L26)
+Defined in: [src/utils/bezier.ts:32](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L32)
 
 Calculates coordinates for a Bezier curve between two points.
 
@@ -50,7 +50,7 @@ Coordinates for the Bezier curve.
 ```ts
 const coordinates = createBezierCurveCoordinates(
   { x1: 0, x2: 100, y1: 0, y2: 100 },
-  { direct: true, firstSet: true, direction: "west" },
+  { direct: true, firstSet: true, direction: 'west' }
 );
 ```
 
@@ -62,7 +62,7 @@ const coordinates = createBezierCurveCoordinates(
 function getCurlySVGPath(startEl, stopEl, options): Promise<string>;
 ```
 
-Defined in: [src/utils/bezier.ts:125](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L125)
+Defined in: [src/utils/bezier.ts:141](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L141)
 
 Generates an SVG path for a curved line between two HTML elements.
 
@@ -84,10 +84,10 @@ The SVG path string for the curved line.
 
 ```ts
 const svgPath = getCurlySVGPath(startElement, stopElement, {
-  pos1: "top",
-  pos2: "bottom",
+  pos1: 'top',
+  pos2: 'bottom',
   firstSet: true,
-  direction: "south",
+  direction: 'south'
 });
 ```
 
@@ -104,7 +104,7 @@ function getPositionsForCurlySVGPath(direction): {
 };
 ```
 
-Defined in: [src/utils/bezier.ts:264](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L264)
+Defined in: [src/utils/bezier.ts:286](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L286)
 
 Returns positions for creating an SVG path for a curved line based on a cardinal direction.
 
@@ -129,15 +129,15 @@ Positions for creating an SVG path for a curved line.
 
 | Name        | Type     | Defined in                                                                                       |
 | ----------- | -------- | ------------------------------------------------------------------------------------------------ |
-| `path1pos1` | `string` | [src/utils/bezier.ts:299](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L299) |
-| `path1pos2` | `string` | [src/utils/bezier.ts:300](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L300) |
-| `path2pos1` | `string` | [src/utils/bezier.ts:301](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L301) |
-| `path2pos2` | `string` | [src/utils/bezier.ts:302](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L302) |
+| `path1pos1` | `string` | [src/utils/bezier.ts:321](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L321) |
+| `path1pos2` | `string` | [src/utils/bezier.ts:322](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L322) |
+| `path2pos1` | `string` | [src/utils/bezier.ts:323](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L323) |
+| `path2pos2` | `string` | [src/utils/bezier.ts:324](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L324) |
 
 #### Example
 
 ```ts
-const positions = getPositionsForCurlySVGPath("west");
+const positions = getPositionsForCurlySVGPath('west');
 ```
 
 ---
@@ -151,7 +151,7 @@ function getPositionsForSVGPath(direction): {
 };
 ```
 
-Defined in: [src/utils/bezier.ts:226](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L226)
+Defined in: [src/utils/bezier.ts:246](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L246)
 
 Returns positions for creating an SVG path based on a cardinal direction.
 
@@ -174,13 +174,13 @@ Positions for creating an SVG path.
 
 | Name   | Type     | Defined in                                                                                       |
 | ------ | -------- | ------------------------------------------------------------------------------------------------ |
-| `pos1` | `string` | [src/utils/bezier.ts:250](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L250) |
-| `pos2` | `string` | [src/utils/bezier.ts:250](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L250) |
+| `pos1` | `string` | [src/utils/bezier.ts:270](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L270) |
+| `pos2` | `string` | [src/utils/bezier.ts:270](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L270) |
 
 #### Example
 
 ```ts
-const positions = getPositionsForSVGPath("east");
+const positions = getPositionsForSVGPath('east');
 ```
 
 ---
@@ -191,7 +191,7 @@ const positions = getPositionsForSVGPath("east");
 function getSVGPath(startEl, stopEl, options): Promise<string>;
 ```
 
-Defined in: [src/utils/bezier.ts:186](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L186)
+Defined in: [src/utils/bezier.ts:204](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L204)
 
 Generates an SVG path for a straight line between two HTML elements.
 
@@ -213,8 +213,8 @@ The SVG path string for the straight line.
 
 ```ts
 const svgPath = getSVGPath(startElement, stopElement, {
-  pos1: "left",
-  pos2: "right",
+  pos1: 'left',
+  pos2: 'right'
 });
 ```
 

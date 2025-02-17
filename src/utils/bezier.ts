@@ -6,8 +6,13 @@ import {
   CurlyBezierPathOptionsType
 } from '../types/bezier';
 
+import {
+  SPECCER_DEFAULT_MEASURE_SIZE,
+  SPECCER_DEFAULT_MEASURE_SIZE_NEG
+} from './constants';
 import { getCoordsPairFromObjects } from './get-coords-pair-from-objects';
 
+/* node:coverage disable */
 /**
  * Calculates coordinates for a Bezier curve between two points.
  *
@@ -23,6 +28,7 @@ import { getCoordsPairFromObjects } from './get-coords-pair-from-objects';
  * );
  * ```
  */
+/* node:coverage enable */
 export const createBezierCurveCoordinates = (
   coords: CreateCoordinatesForCurveCoordParamType,
   options: CreateCoordinatesForCurveOptionsParamType
@@ -49,61 +55,70 @@ export const createBezierCurveCoordinates = (
         lastPoint,
         lastControl: { x: x2 + 32, y: y2 }
       };
-    } else if (direction === 'south') {
+    }
+
+    if (direction === 'south') {
       return {
         firstPoint,
         firstControl: { x: x1 - 16 / 2, y: y1 + 32 },
         lastPoint,
         lastControl: { x: x2, y: y2 - 32 }
       };
-    } else if (direction === 'east') {
+    }
+
+    if (direction === 'east') {
       return {
         firstPoint,
         firstControl: { x: x1 + 32, y: y1 - 16 / 2 },
         lastPoint,
         lastControl: { x: x2 - 32, y: y2 }
       };
-    } else {
-      return {
-        firstPoint,
-        firstControl: { x: x1 - 16 / 2, y: y1 - 32 },
-        lastPoint,
-        lastControl: { x: x2, y: y2 + 32 }
-      };
     }
-  } else {
-    if (direction === 'west') {
-      return {
-        firstPoint,
-        firstControl: { x: x1 - 32, y: y1 + 16 / 2 },
-        lastPoint,
-        lastControl: { x: x2 + 32, y: y2 }
-      };
-    } else if (direction === 'south') {
-      return {
-        firstPoint,
-        firstControl: { x: x1 + 16 / 2, y: y1 + 32 },
-        lastPoint,
-        lastControl: { x: x2, y: y2 - 32 }
-      };
-    } else if (direction === 'east') {
-      return {
-        firstPoint,
-        firstControl: { x: x1 + 32, y: y1 + 16 / 2 },
-        lastPoint,
-        lastControl: { x: x2 - 32, y: y2 }
-      };
-    } else {
-      return {
-        firstPoint,
-        firstControl: { x: x1 + 16 / 2, y: y1 - 32 },
-        lastPoint,
-        lastControl: { x: x2, y: y2 + 32 }
-      };
-    }
+
+    return {
+      firstPoint,
+      firstControl: { x: x1 - 16 / 2, y: y1 - 32 },
+      lastPoint,
+      lastControl: { x: x2, y: y2 + 32 }
+    };
   }
+
+  if (direction === 'west') {
+    return {
+      firstPoint,
+      firstControl: { x: x1 - 32, y: y1 + 16 / 2 },
+      lastPoint,
+      lastControl: { x: x2 + 32, y: y2 }
+    };
+  }
+
+  if (direction === 'south') {
+    return {
+      firstPoint,
+      firstControl: { x: x1 + 16 / 2, y: y1 + 32 },
+      lastPoint,
+      lastControl: { x: x2, y: y2 - 32 }
+    };
+  }
+
+  if (direction === 'east') {
+    return {
+      firstPoint,
+      firstControl: { x: x1 + 32, y: y1 + 16 / 2 },
+      lastPoint,
+      lastControl: { x: x2 - 32, y: y2 }
+    };
+  }
+
+  return {
+    firstPoint,
+    firstControl: { x: x1 + 16 / 2, y: y1 - 32 },
+    lastPoint,
+    lastControl: { x: x2, y: y2 + 32 }
+  };
 };
 
+/* node:coverage disable */
 /**
  * Generates an SVG path for a curved line between two HTML elements.
  *
@@ -122,6 +137,7 @@ export const createBezierCurveCoordinates = (
  * });
  * ```
  */
+/* node:coverage enable */
 export const getCurlySVGPath = async (
   startEl: HTMLElement,
   stopEl: HTMLElement,
@@ -141,10 +157,10 @@ export const getCurlySVGPath = async (
   let y2modifier = 0;
 
   // Create a gap between the pin and the bracket center
-  if (direction === 'north') y2modifier = 8;
-  else if (direction === 'west') x2modifier = 8;
-  else if (direction === 'east') x2modifier = -8;
-  else if (direction === 'south') y2modifier = -8;
+  if (direction === 'north') y2modifier = SPECCER_DEFAULT_MEASURE_SIZE;
+  else if (direction === 'west') x2modifier = SPECCER_DEFAULT_MEASURE_SIZE;
+  else if (direction === 'east') x2modifier = SPECCER_DEFAULT_MEASURE_SIZE_NEG;
+  else if (direction === 'south') y2modifier = SPECCER_DEFAULT_MEASURE_SIZE_NEG;
 
   const { firstPoint, firstControl, lastControl, lastPoint } =
     createBezierCurveCoordinates(
@@ -167,6 +183,7 @@ export const getCurlySVGPath = async (
   );
 };
 
+/* node:coverage disable */
 /**
  * Generates an SVG path for a straight line between two HTML elements.
  *
@@ -183,6 +200,7 @@ export const getCurlySVGPath = async (
  * });
  * ```
  */
+/* node:coverage enable */
 export const getSVGPath = async (
   startEl: HTMLElement,
   stopEl: HTMLElement,
@@ -212,6 +230,7 @@ export const getSVGPath = async (
   );
 };
 
+/* node:coverage disable */
 /**
  * Returns positions for creating an SVG path based on a cardinal direction.
  *
@@ -223,6 +242,7 @@ export const getSVGPath = async (
  * const positions = getPositionsForSVGPath('east');
  * ```
  */
+/* node:coverage enable */
 export const getPositionsForSVGPath = (direction: string) => {
   let pos1: string;
   let pos2: string;
@@ -250,6 +270,7 @@ export const getPositionsForSVGPath = (direction: string) => {
   return { pos1, pos2 };
 };
 
+/* node:coverage disable */
 /**
  * Returns positions for creating an SVG path for a curved line based on a cardinal direction.
  *
@@ -261,6 +282,7 @@ export const getPositionsForSVGPath = (direction: string) => {
  * const positions = getPositionsForCurlySVGPath('west');
  * ```
  */
+/* node:coverage enable */
 export const getPositionsForCurlySVGPath = (direction: string) => {
   let path1pos1: string;
   let path1pos2: string;

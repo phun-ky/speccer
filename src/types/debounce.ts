@@ -4,5 +4,5 @@
  *
  * @param args - Arguments of any type.
  */
-// eslint-disable-next-line no-unused-vars
+
 export type DebounceAnyFunctionType = (...args: any[]) => void;

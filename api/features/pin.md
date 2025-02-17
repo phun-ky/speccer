@@ -6,7 +6,7 @@
 
 # features/pin
 
-> Last updated 2025-02-11T10:43:47.940Z
+> Last updated 2025-02-17T12:33:43.797Z
 
 This feature annotate or highlight the anatomy of an element.
 
@@ -42,7 +42,7 @@ In your component examples, use the following attribute. Remember to use the `da
 function pinElements(sectionElement, options?): Promise<void>;
 ```
 
-Defined in: [src/features/pin/index.ts:51](https://github.com/phun-ky/speccer/blob/main/src/features/pin/index.ts#L51)
+Defined in: [src/features/pin/index.ts:52](https://github.com/phun-ky/speccer/blob/main/src/features/pin/index.ts#L52)
 
 Create pinned elements based on the section element and its data-speccer attributes.
 
@@ -62,7 +62,7 @@ Create pinned elements based on the section element and its data-speccer attribu
 #### Example
 
 ```ts
-const sectionElement = document.getElementById("section");
+const sectionElement = document.getElementById('section');
 pinElements(sectionElement);
 ```
 

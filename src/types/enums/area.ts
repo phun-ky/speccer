@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 /**
  * Enum representing different areas in Speccer.
  */

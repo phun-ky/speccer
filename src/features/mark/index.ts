@@ -39,6 +39,7 @@ import { getRec } from '../../utils/position';
 import { add as addStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
 
+/* node:coverage disable */
 /**
  * Create a marker element with an optional element type.
  *
@@ -52,6 +53,7 @@ import { waitForFrame } from '../../utils/wait';
  * document.body.appendChild(marker);
  * ```
  */
+/* node:coverage enable */
 export const create = (id: string, n = 'span'): HTMLElement => {
   const _mark_element = document.createElement(n);
 
@@ -62,6 +64,7 @@ export const create = (id: string, n = 'span'): HTMLElement => {
   return _mark_element;
 };
 
+/* node:coverage disable */
 /**
  * Create a marker element and add it to the body with styles matching a specified element.
  *
@@ -76,6 +79,7 @@ export const create = (id: string, n = 'span'): HTMLElement => {
  * mark(targetElement);
  * ```
  */
+/* node:coverage enable */
 export const mark = async (targetElement: HTMLElement): Promise<void> => {
   if (!targetElement) return;
 

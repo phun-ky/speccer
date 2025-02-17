@@ -1,6 +1,7 @@
 import { SpeccerOptionsInterface } from '../../../types/speccer';
 import { set as setClassNames, cx } from '../../../utils/classnames';
 
+/* node:coverage disable */
 /**
  * Create a pin element with optional content, area description, and element type.
  *
@@ -16,6 +17,7 @@ import { set as setClassNames, cx } from '../../../utils/classnames';
  * document.body.appendChild(pinElement);
  * ```
  */
+/* node:coverage enable */
 export const createPinElement = (
   content = '',
   options: SpeccerOptionsInterface,
@@ -35,13 +37,13 @@ export const createPinElement = (
     subtle
   } = pin;
 
-  _extra_class_names['text'] = text;
-  _extra_class_names['parent'] = parent;
-  _extra_class_names['bracket'] = bracket;
-  _extra_class_names['enclose'] = enclose;
-  _extra_class_names['subtle'] = subtle;
-  _extra_class_names['svg'] = useSVGLine;
-  _extra_class_names['curly'] = useCurlyBrackets;
+  _extra_class_names.text = text;
+  _extra_class_names.parent = parent;
+  _extra_class_names.bracket = bracket;
+  _extra_class_names.enclose = enclose;
+  _extra_class_names.subtle = subtle;
+  _extra_class_names.svg = useSVGLine;
+  _extra_class_names.curly = useCurlyBrackets;
   _extra_class_names[position] = true;
 
   if (parent && !bracket && !useCurlyBrackets && !subtle)

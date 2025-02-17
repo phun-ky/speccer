@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unused-modules */
 /* eslint no-console:0 */
 /**
  * Array of uppercase letters.
@@ -24,6 +23,7 @@ export const SPECCER_LITERALS: string[] = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
  * console.log(tagsToAvoid); // Example output: ['TR', 'TH', 'TD', ...]
  * ```
  */
+// eslint-disable-next-line import/no-unused-modules
 export const SPECCER_TAGS_TO_AVOID: string[] = [
   'TR',
   'TH',
@@ -57,6 +57,7 @@ export const SPECCER_DEFAULT_PIN_SPACE = 48;
  * console.log(negativeDefaultPinSpace); // Example output: -48
  * ```
  */
+// eslint-disable-next-line import/no-unused-modules
 export const SPECCER_DEFAULT_PIN_SPACE_NEG: number =
   SPECCER_DEFAULT_PIN_SPACE * -1;
 

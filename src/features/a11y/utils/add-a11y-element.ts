@@ -5,7 +5,6 @@ import { createA11yElement } from './create-a11y-element';
 import { getRole } from './get-role';
 import { styles } from './styles';
 
-
 /**
  * Adds an accessibility element to the document body based on the target element and type.
  *
@@ -64,7 +63,8 @@ export const addA11yElement = async (
   document.body.appendChild(_a11y_el);
 
   const _a11y_styles = await styles(
-    type, targetElement as HTMLElement,
+    type,
+    targetElement as HTMLElement,
     _a11y_el
   );
 

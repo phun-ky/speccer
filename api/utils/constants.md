@@ -6,7 +6,7 @@
 
 # utils/constants
 
-> Last updated 2025-02-11T10:43:47.970Z
+> Last updated 2025-02-17T12:33:43.816Z
 
 ## Table of Contents
 
@@ -31,10 +31,10 @@
 ### SPECCER_DATA_ATTRIBUTE
 
 ```ts
-const SPECCER_DATA_ATTRIBUTE: "data-speccer" = "data-speccer";
+const SPECCER_DATA_ATTRIBUTE: 'data-speccer' = 'data-speccer';
 ```
 
-Defined in: [src/utils/constants.ts:107](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L107)
+Defined in: [src/utils/constants.ts:108](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L108)
 
 The name of the attribute speccer uses to identify elements to spec
 
@@ -46,7 +46,7 @@ The name of the attribute speccer uses to identify elements to spec
 const SPECCER_DEFAULT_LINE_WIDTH: 1 = 1;
 ```
 
-Defined in: [src/utils/constants.ts:101](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L101)
+Defined in: [src/utils/constants.ts:102](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L102)
 
 Default line width value.
 
@@ -66,7 +66,7 @@ console.log(defaultLineWidth); // Example output: 1
 const SPECCER_DEFAULT_MEASURE_SIZE: 8 = 8;
 ```
 
-Defined in: [src/utils/constants.ts:74](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L74)
+Defined in: [src/utils/constants.ts:75](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L75)
 
 Default value for measure size.
 
@@ -86,7 +86,7 @@ console.log(defaultMeasureSize); // Example output: 8
 const SPECCER_DEFAULT_MEASURE_SIZE_NEG: number;
 ```
 
-Defined in: [src/utils/constants.ts:87](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L87)
+Defined in: [src/utils/constants.ts:88](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L88)
 
 Negative default value for measure size.
 
@@ -126,7 +126,7 @@ console.log(defaultPinSpace); // Example output: 48
 const SPECCER_DEFAULT_PIN_SPACE_NEG: number;
 ```
 
-Defined in: [src/utils/constants.ts:60](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L60)
+Defined in: [src/utils/constants.ts:61](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L61)
 
 Negative default value for pin space.
 
@@ -143,10 +143,10 @@ console.log(negativeDefaultPinSpace); // Example output: -48
 ### SPECCER_FEATURE_GRID
 
 ```ts
-const SPECCER_FEATURE_GRID: "grid" = "grid";
+const SPECCER_FEATURE_GRID: 'grid' = 'grid';
 ```
 
-Defined in: [src/utils/constants.ts:137](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L137)
+Defined in: [src/utils/constants.ts:138](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L138)
 
 The selector for the `grid` feature
 
@@ -155,10 +155,10 @@ The selector for the `grid` feature
 ### SPECCER_FEATURE_MARK
 
 ```ts
-const SPECCER_FEATURE_MARK: "mark" = "mark";
+const SPECCER_FEATURE_MARK: 'mark' = 'mark';
 ```
 
-Defined in: [src/utils/constants.ts:131](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L131)
+Defined in: [src/utils/constants.ts:132](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L132)
 
 The selector for the `mark` feature
 
@@ -167,10 +167,10 @@ The selector for the `mark` feature
 ### SPECCER_FEATURE_MEASURE
 
 ```ts
-const SPECCER_FEATURE_MEASURE: "measure" = "measure";
+const SPECCER_FEATURE_MEASURE: 'measure' = 'measure';
 ```
 
-Defined in: [src/utils/constants.ts:119](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L119)
+Defined in: [src/utils/constants.ts:120](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L120)
 
 The selector for the `measure` feature
 
@@ -179,10 +179,10 @@ The selector for the `measure` feature
 ### SPECCER_FEATURE_PIN_AREA
 
 ```ts
-const SPECCER_FEATURE_PIN_AREA: "pin-area" = "pin-area";
+const SPECCER_FEATURE_PIN_AREA: 'pin-area' = 'pin-area';
 ```
 
-Defined in: [src/utils/constants.ts:143](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L143)
+Defined in: [src/utils/constants.ts:144](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L144)
 
 The selector for the container of the `pin` feature
 
@@ -191,10 +191,10 @@ The selector for the container of the `pin` feature
 ### SPECCER_FEATURE_SPACING
 
 ```ts
-const SPECCER_FEATURE_SPACING: "spacing" = "spacing";
+const SPECCER_FEATURE_SPACING: 'spacing' = 'spacing';
 ```
 
-Defined in: [src/utils/constants.ts:113](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L113)
+Defined in: [src/utils/constants.ts:114](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L114)
 
 The selector for the `spacing` feature
 
@@ -203,10 +203,10 @@ The selector for the `spacing` feature
 ### SPECCER_FEATURE_TYPOGRAPHY
 
 ```ts
-const SPECCER_FEATURE_TYPOGRAPHY: "typography" = "typography";
+const SPECCER_FEATURE_TYPOGRAPHY: 'typography' = 'typography';
 ```
 
-Defined in: [src/utils/constants.ts:125](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L125)
+Defined in: [src/utils/constants.ts:126](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L126)
 
 The selector for the `typography` feature
 
@@ -218,7 +218,7 @@ The selector for the `typography` feature
 const SPECCER_LITERALS: string[];
 ```
 
-Defined in: [src/utils/constants.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L14)
+Defined in: [src/utils/constants.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/constants.ts#L13)
 
 Array of uppercase letters.
 

@@ -43,11 +43,12 @@ import { offset } from '../../utils/position';
 import { add as addStyles, get as getStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
 
+/* node:coverage disable */
 /**
  * Creates a visual grid overlay for a given target element.
  *
  * @param {HTMLElement} targetElement - The target element to create the grid overlay for.
- * @param {CSSStyleDeclaration} styles - The computed styles of the target element.
+ * @param {Partial<CSSStyleDeclaration>} styles - The computed styles of the target element.
  * @param {SpeccerOptionsInterface} options - Options to determine what to draw
  * @returns {Promise<void>}
  *
@@ -60,9 +61,10 @@ import { waitForFrame } from '../../utils/wait';
  * }
  * ```
  */
+/* node:coverage enable */
 export const create = async (
   targetElement: HTMLElement,
-  styles: CSSStyleDeclaration,
+  styles: Partial<CSSStyleDeclaration>,
   options: SpeccerOptionsInterface
 ): Promise<void> => {
   await waitForFrame();
@@ -80,7 +82,7 @@ export const create = async (
   targetElement.setAttribute('data-speccer-element-id', _pin_element_id);
 
   if (toggle === 'columns' || toggle === 'both') {
-    const columnGap = parseInt(styles.columnGap);
+    const columnGap = parseInt(styles.columnGap || '0');
     const gridColumnContainer = document.createElement('div');
 
     document.documentElement.style.setProperty(
@@ -106,11 +108,11 @@ export const create = async (
       width: `${width}px`,
       left: `${left}px`,
       top: `${top - 32}px`,
-      padding: padding,
-      gridTemplateColumns: gridTemplateColumns
+      padding,
+      gridTemplateColumns
     });
 
-    const numberOfColumnItems = gridTemplateColumns.split(' ').length;
+    const numberOfColumnItems = gridTemplateColumns?.split(' ').length || 0;
 
     for (let i = 0; i < numberOfColumnItems; i++) {
       const gridItem = document.createElement('div');
@@ -122,7 +124,7 @@ export const create = async (
   }
 
   if (toggle === 'rows' || toggle === 'both') {
-    const rowGap = parseInt(styles.rowGap);
+    const rowGap = parseInt(styles.rowGap || '0');
     const gridRowContainer = document.createElement('div');
 
     document.documentElement.style.setProperty(
@@ -151,11 +153,11 @@ export const create = async (
       height: `${height}px`,
       top: `${top}px`,
       left: `${left - 32}px`,
-      padding: padding,
-      gridTemplateRows: gridTemplateRows
+      padding,
+      gridTemplateRows
     });
 
-    const numberOfRowItems = gridTemplateRows.split(' ').length;
+    const numberOfRowItems = gridTemplateRows?.split(' ').length || 0;
 
     for (let i = 0; i < numberOfRowItems; i++) {
       const gridItem = document.createElement('div');
@@ -167,6 +169,7 @@ export const create = async (
   }
 };
 
+/* node:coverage disable */
 /**
  * Create a visual overlay to present the column gaps for a grid container
  *
@@ -201,6 +204,7 @@ export const create = async (
  * grid(targetElement, options);
  * ```
  */
+/* node:coverage enable */
 export const grid = async (
   targetElement: HTMLElement,
   options?: SpeccerOptionsInterface | undefined

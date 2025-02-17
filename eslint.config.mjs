@@ -1,7 +1,9 @@
+/* eslint-disable import/no-unused-modules */
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import compat from 'eslint-plugin-compat';
 import importPlugin from 'eslint-plugin-import';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
 import { configs as tsConfigs } from 'typescript-eslint';
 
@@ -14,6 +16,7 @@ export default [
       '**/coverage',
       '**/dist',
       '**/__tests__',
+      'tests/**',
       '**/__mocks__'
     ]
   },
@@ -23,6 +26,7 @@ export default [
   importPlugin.flatConfigs.typescript,
   compat.configs['flat/recommended'],
   ...tsConfigs.recommended,
+  eslintPluginPrettierRecommended,
   {
     plugins: {
       '@stylistic': stylistic
@@ -47,12 +51,12 @@ export default [
 
     rules: {
       'import/no-named-as-default': 0,
-      // 'import/no-unused-modules': [
-      //   1,
-      //   {
-      //     unusedExports: true
-      //   }
-      // ],
+      'import/no-unused-modules': [
+        1,
+        {
+          unusedExports: true
+        }
+      ],
       'import/order': [
         'error',
         {
@@ -83,13 +87,16 @@ export default [
       'prefer-const': 'error',
       'one-var': ['error', 'never'],
       '@stylistic/array-bracket-newline': ['error', 'consistent'],
-      '@stylistic/max-len': ['error', {
-        code: 80,
-        tabWidth: 2,
-        ignoreComments: true,
-        ignoreStrings: true,
-        ignoreTemplateLiterals: true
-      }],
+      '@stylistic/max-len': [
+        'error',
+        {
+          code: 80,
+          tabWidth: 2,
+          ignoreComments: true,
+          ignoreStrings: true,
+          ignoreTemplateLiterals: true
+        }
+      ],
       '@stylistic/quotes': [1, 'single'],
       '@stylistic/padded-blocks': ['error', 'never'],
       '@stylistic/comma-dangle': 'error',
@@ -198,7 +205,8 @@ export default [
           MemberExpression: 1,
           SwitchCase: 1,
           ArrayExpression: 1,
-          ObjectExpression: 1
+          ObjectExpression: 1,
+          offsetTernaryExpressions: true
         }
       ],
       '@stylistic/object-curly-spacing': ['error', 'always'],

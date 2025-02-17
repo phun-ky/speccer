@@ -1,3 +1,4 @@
+/* node:coverage disable */
 /**
  * This feature presents typography
  *
@@ -31,8 +32,8 @@
  *
  * @packageDocumentation
  */
- 
 /* eslint no-console:0 */
+/* node:coverage enable */
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { set as setClassNames, cx } from '../../utils/classnames';
 import { getOptions } from '../../utils/get-options';
@@ -44,6 +45,7 @@ import { waitForFrame } from '../../utils/wait';
 import { position } from './utils/position';
 import { template } from './utils/template';
 
+/* node:coverage disable */
 /**
  * Create a DOM element with provided HTML and optional CSS class names.
  *
@@ -60,6 +62,7 @@ import { template } from './utils/template';
  * document.body.appendChild(createdElement);
  * ```
  */
+/* node:coverage enable */
 export const create = (
   html: string,
   options: SpeccerOptionsInterface,
@@ -82,6 +85,7 @@ export const create = (
   return _el;
 };
 
+/* node:coverage disable */
 /**
  * Create a specced typography element for a given target element.
  *
@@ -119,6 +123,7 @@ export const create = (
  * }
  * ```
  */
+/* node:coverage enable */
 export const typography = async (
   targetElement: HTMLElement,
   options?: SpeccerOptionsInterface | undefined

@@ -6,7 +6,7 @@
 
 # types/position
 
-> Last updated 2025-02-11T10:43:47.962Z
+> Last updated 2025-02-17T12:33:43.811Z
 
 ## Table of Contents
 
@@ -32,7 +32,7 @@ type PositionInputType =
     };
 ```
 
-Defined in: [src/types/position.ts:24](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L24)
+Defined in: [src/types/position.ts:25](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L25)
 
 Type definition for input parameters related to positioning.
 
@@ -49,7 +49,7 @@ type PositionPropertiesType = {
 };
 ```
 
-Defined in: [src/types/position.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L4)
+Defined in: [src/types/position.ts:5](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L5)
 
 Type definition for position properties.
 
@@ -75,7 +75,7 @@ Type definition for position properties.
       </td>
 
       <td>
-        [src/types/position.ts:7](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L7)
+        [src/types/position.ts:8](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L8)
       </td>
     </tr>
 
@@ -89,7 +89,7 @@ Type definition for position properties.
       </td>
 
       <td>
-        [src/types/position.ts:6](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L6)
+        [src/types/position.ts:7](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L7)
       </td>
     </tr>
 
@@ -103,7 +103,7 @@ Type definition for position properties.
       </td>
 
       <td>
-        [src/types/position.ts:5](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L5)
+        [src/types/position.ts:6](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L6)
       </td>
     </tr>
 
@@ -117,7 +117,7 @@ Type definition for position properties.
       </td>
 
       <td>
-        [src/types/position.ts:8](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L8)
+        [src/types/position.ts:9](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L9)
       </td>
     </tr>
 
@@ -137,7 +137,7 @@ type PositionUnitPropertiesType = {
 };
 ```
 
-Defined in: [src/types/position.ts:14](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L14)
+Defined in: [src/types/position.ts:15](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L15)
 
 Type definition for position properties with units.
 
@@ -163,7 +163,7 @@ Type definition for position properties with units.
       </td>
 
       <td>
-        [src/types/position.ts:17](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L17)
+        [src/types/position.ts:18](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L18)
       </td>
     </tr>
 
@@ -177,7 +177,7 @@ Type definition for position properties with units.
       </td>
 
       <td>
-        [src/types/position.ts:16](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L16)
+        [src/types/position.ts:17](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L17)
       </td>
     </tr>
 
@@ -191,7 +191,7 @@ Type definition for position properties with units.
       </td>
 
       <td>
-        [src/types/position.ts:15](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L15)
+        [src/types/position.ts:16](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L16)
       </td>
     </tr>
 
@@ -205,7 +205,7 @@ Type definition for position properties with units.
       </td>
 
       <td>
-        [src/types/position.ts:18](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L18)
+        [src/types/position.ts:19](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L19)
       </td>
     </tr>
 

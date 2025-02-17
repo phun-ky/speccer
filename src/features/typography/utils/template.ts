@@ -25,27 +25,28 @@ export const template = async (
   const _styles = getTypography(_target_styles);
 
   if (useHighlighting) {
-    const _fontFamily = _styles.fontFamily
+    const _fontFamily = (_styles.fontFamily || '')
       .split(',')
       .map((font) => {
-        if (font.includes('\''))
+        if (font.includes('"\'"'))
           return `<span class="token string">${font}</span>`;
 
         return font;
       })
       .join('<span class="token punctuation">, </span>');
-    const _fontSize = `<span class="token number">${parseInt(_styles.fontSize, 10)}</span><span class="token unit">px</span> <span class="token operator">/</span> <span class="token number">${
-      parseInt(_styles.fontSize, 10) / 16
+    const _fontSize = `<span class="token number">${parseInt(_styles.fontSize || 'NaN', 10)}</span><span class="token unit">px</span> <span class="token operator">/</span> <span class="token number">${
+      parseInt(_styles.fontSize || 'NaN', 10) / 16
     }</span><span class="token unit">rem</span>`;
-    const _letterSpacing = _styles.letterSpacing.includes('px')
-      ? `<span class="token number">${parseInt(_styles.letterSpacing, 10)}</span><span class="token unit">px</span>`
-      : _styles.letterSpacing;
-    const _lineHeight =
-      _styles.lineHeight !== 'normal'
-        ? `<span class="token number">${parseInt(_styles.lineHeight, 10)}</span><span class="token unit">px</span> <span class="token operator">/</span> <span class="token number">${
-          parseInt(_styles.lineHeight, 10) / 16
-        }</span><span class="token unit">rem</span>`
-        : 'normal';
+    const _letterSpacing = _styles.letterSpacing
+      ? _styles.letterSpacing.includes('px')
+        ? `<span class="token number">${parseInt(_styles.letterSpacing, 10)}</span><span class="token unit">px</span>`
+        : _styles.letterSpacing
+      : '';
+    const _lineHeight = _styles.lineHeight
+      ? _styles.lineHeight !== 'normal'
+        ? `<span class="token number">${parseInt(_styles.lineHeight, 10)}</span><span class="token unit">px</span> <span class="token operator">/</span> <span class="token number">${parseInt(_styles.lineHeight, 10) / 16}</span><span class="token unit">rem</span>`
+        : 'normal'
+      : '';
 
     return `
 <pre class="language-css" tabindex="-1"><code class="language-css"><span class="token selector"><span class="token class">.typography</span></span> <span class="token punctuation">{</span>
@@ -66,13 +67,13 @@ export const template = async (
     '<ul class="speccer-styles">' +
     `  <li><span class="property">font-family:</span> ${_styles.fontFamily};</li>` +
     `  <li><span class="property">font-size:</span> ${_styles.fontSize} / ${
-      parseInt(_styles.fontSize, 10) / 16
+      parseInt(_styles.fontSize || 'NaN', 10) / 16
     }rem;</li>` +
     `  <li><span class="property">font-weight:</span> ${_styles.fontWeight};</li>` +
     `  <li><span class="property">font-variation-settings:</span> ${_styles.fontVariationSettings};</li>` +
     `  <li><span class="property">line-height:</span> ${
       _styles.lineHeight !== 'normal'
-        ? `${parseInt(_styles.lineHeight, 10)}px / ${parseInt(_styles.lineHeight, 10) / 16}rem`
+        ? `${parseInt(_styles.lineHeight || 'NaN', 10)}px / ${parseInt(_styles.lineHeight || 'NaN', 10) / 16}rem`
         : 'normal'
     };</li>` +
     `  <li><span class="property">letter-spacing:</span> ${_styles.letterSpacing};</li>` +

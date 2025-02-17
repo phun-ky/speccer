@@ -6,7 +6,7 @@
 
 # utils/remove-speccer-element
 
-> Last updated 2025-02-11T10:43:47.974Z
+> Last updated 2025-02-17T12:33:43.820Z
 
 ## Table of Contents
 
@@ -43,7 +43,7 @@ This function does not return a value.
 #### Example
 
 ```ts
-const element = document.getElementById("my-element");
+const element = document.getElementById('my-element');
 if (element) {
   removeSpeccerElement(element);
 }

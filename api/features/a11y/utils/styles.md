@@ -6,7 +6,7 @@
 
 # features/a11y/utils/styles
 
-> Last updated 2025-02-11T10:43:47.938Z
+> Last updated 2025-02-17T12:33:43.796Z
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@
 function styles(
   type,
   targetElement,
-  a11yElement,
+  a11yElement
 ): Promise<SpeccerStylesReturnType>;
 ```
 
@@ -46,23 +46,23 @@ A Promise resolving with the calculated styles.
 #### Example
 
 ```ts
-const targetElement = document.getElementById("targetElement");
-const a11yElement = document.createElement("div");
+const targetElement = document.getElementById('targetElement');
+const a11yElement = document.createElement('div');
 
 // Example for tab order element styles
-const tabstopsStyles = await styles("tabstops", targetElement, a11yElement);
+const tabstopsStyles = await styles('tabstops', targetElement, a11yElement);
 
 // Example for landmark element styles
-const landmarkStyles = await styles("landmark", targetElement, a11yElement);
+const landmarkStyles = await styles('landmark', targetElement, a11yElement);
 
 // Example for region element styles
-const regionStyles = await styles("region", targetElement, a11yElement);
+const regionStyles = await styles('region', targetElement, a11yElement);
 
 // Example for shortcut element styles
-const shortcutStyles = await styles("shortcut", targetElement, a11yElement);
+const shortcutStyles = await styles('shortcut', targetElement, a11yElement);
 
 // Example for default styles
-const defaultStyles = await styles("default", targetElement, a11yElement);
+const defaultStyles = await styles('default', targetElement, a11yElement);
 ```
 
 ---

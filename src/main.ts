@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unused-modules */
 /**
  *
  * @example
@@ -15,7 +16,7 @@
  * ```
  * @packageDocumentation
  */
-/* eslint-disable import/no-unused-modules */
+
 /* eslint no-console:0 */
 import './types/interfaces/global';
 import { dom, lazy, manual, activate } from './config/browser';
@@ -46,7 +47,6 @@ import {
 } from './utils/constants';
 import { removeAll } from './utils/node';
 
-// eslint-disable-next-line import/no-unused-modules
 export { removeSpeccerElement } from './utils/remove-speccer-element';
 
 export const grid = {
@@ -124,7 +124,7 @@ const speccer = () => {
       );
       const _areas_string: string = el.getAttribute('data-speccer') || '';
 
-      if (_child_spacing_elements && _child_spacing_elements.length) {
+      if (_child_spacing_elements?.length) {
         for (const childEl of _child_spacing_elements) {
           childEl.setAttribute('data-speccer', _areas_string);
           spacingElement(childEl as HTMLElement);

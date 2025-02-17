@@ -6,7 +6,7 @@
 
 # utils/position
 
-> Last updated 2025-02-11T10:43:47.974Z
+> Last updated 2025-02-17T12:33:43.820Z
 
 ## Table of Contents
 
@@ -25,7 +25,7 @@
 function get_horizontal_center_of_els(modifier, startRect, targetRect): number;
 ```
 
-Defined in: [src/utils/position.ts:21](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L21)
+Defined in: [src/utils/position.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L23)
 
 Calculates the horizontal center of two elements.
 
@@ -58,7 +58,7 @@ const center = get_horizontal_center_of_els(0, startRect, targetRect);
 function get_vertical_center_of_els(modifier, startRect, targetRect): number;
 ```
 
-Defined in: [src/utils/position.ts:41](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L41)
+Defined in: [src/utils/position.ts:45](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L45)
 
 Calculates the vertical center of two elements.
 
@@ -91,7 +91,7 @@ const center = get_vertical_center_of_els(0, startRect, targetRect);
 function getRec(sourceEl, targetEl): Promise<GetRecPropertiesInterface>;
 ```
 
-Defined in: [src/utils/position.ts:164](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L164)
+Defined in: [src/utils/position.ts:174](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L174)
 
 Gets various positioning properties between two HTML elements.
 
@@ -129,7 +129,7 @@ const aboveProps = recProps.toTop();
 function offset(targetEl): Promise<PositionPropertiesType>;
 ```
 
-Defined in: [src/utils/position.ts:59](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L59)
+Defined in: [src/utils/position.ts:65](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L65)
 
 Gets the offset properties of an HTML element.
 
@@ -160,7 +160,7 @@ const offsetProps = await offset(targetElement);
 function offsetWithCenter(sourceEl, targetEl): Promise<PositionPropertiesType>;
 ```
 
-Defined in: [src/utils/position.ts:119](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L119)
+Defined in: [src/utils/position.ts:127](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L127)
 
 Gets the offset properties of an HTML element with its center aligned to another element.
 

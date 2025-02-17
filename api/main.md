@@ -6,7 +6,7 @@
 
 # main
 
-> Last updated 2025-02-11T10:43:47.945Z
+> Last updated 2025-02-17T12:33:43.800Z
 
 ## Table of Contents
 
@@ -27,8 +27,8 @@
 ## Examples
 
 ```typescript
-import "@phun-ky/speccer/dist/speccer.min.css";
-import speccer from "@phun-ky/speccer";
+import '@phun-ky/speccer/dist/speccer.min.css';
+import speccer from '@phun-ky/speccer';
 
 // do stuff
 speccer();
@@ -331,7 +331,7 @@ const pin: {
     targetElement,
     parentElement,
     content,
-    options,
+    options
   ) => Promise<string | void>;
   pinElements: (sectionElement, options?) => Promise<void>;
 };

@@ -38,6 +38,7 @@ import { get as getStyles, add as addStyles } from '../../utils/styles';
 
 import { position } from './utils/position';
 
+/* node:coverage disable */
 /**
  * Create a spacing element with optional text content.
  *
@@ -51,6 +52,7 @@ import { position } from './utils/position';
  * document.body.appendChild(spacingElement);
  * ```
  */
+/* node:coverage enable */
 export const create = (
   text: string | number = '',
   tag = 'span'
@@ -65,6 +67,7 @@ export const create = (
   return _el;
 };
 
+/* node:coverage disable */
 /**
  * Create and position spacing elements based on the target element's computed spacing styles.
  *
@@ -112,6 +115,7 @@ export const create = (
  * element(targetElement, options);
  * ```
  */
+/* node:coverage enable */
 export const spacing = async (
   targetElement: HTMLElement,
   options?: SpeccerOptionsInterface | undefined

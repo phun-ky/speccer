@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unused-modules */
 /**
  * Checks if the given variable is a string.
  *

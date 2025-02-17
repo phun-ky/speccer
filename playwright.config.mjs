@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unused-modules */
 /* eslint-disable no-undef */
 import { defineConfig, devices } from '@playwright/test';
 
@@ -14,6 +15,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests/e2e',
+  testMatch: '**/*.@(spec|test|e2e).?(c|m)[jt]s?(x)',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -45,7 +47,6 @@ export default defineConfig({
       use: { ...devices['Desktop Firefox'] }
     }
 
-
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
@@ -69,6 +70,7 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
+    // eslint-disable-next-line prettier/prettier
     command: 'npx browser-sync start --server \'dev\' --files \'dist\' --ss \'dist\'',
     url: 'http://127.0.0.1:3000',
     reuseExistingServer: !process.env.CI

@@ -6,7 +6,7 @@
 
 # utils/get-coords-pair-from-objects
 
-> Last updated 2025-02-11T10:43:47.972Z
+> Last updated 2025-02-17T12:33:43.818Z
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@ function getCoordsPairFromObjects(
   el1,
   el2,
   pos1?,
-  pos2?,
+  pos2?
 ): Promise<{
   x1: number;
   x2: number;
@@ -63,8 +63,8 @@ No element given.
 
 ```ts
 // Get coordinates for two elements
-const element1 = document.getElementById("element1");
-const element2 = document.getElementById("element2");
+const element1 = document.getElementById('element1');
+const element2 = document.getElementById('element2');
 const coordinates = await get_coords_pair_from_objects(element1, element2);
 ```
 
