@@ -124,7 +124,7 @@ const speccer = () => {
       );
       const _areas_string: string = el.getAttribute('data-speccer') || '';
 
-      if (_child_spacing_elements && _child_spacing_elements.length) {
+      if (_child_spacing_elements?.length) {
         for (const childEl of _child_spacing_elements) {
           childEl.setAttribute('data-speccer', _areas_string);
           spacingElement(childEl as HTMLElement);

@@ -1,12 +1,12 @@
 {
   "rules": {
-    "sort-imports-by-specifiers": "off",
-    "remove-empty/import": "off",
+    "esm/sort-imports-by-specifiers": "off",
+    "esm/remove-empty-import": "off",
     "regexp/optimize": "off",
     "conditions/remove-zero": "off",
     "convert-to-arrow-function": "off",
     "conditions/apply-consistent-blocks": "off",
-    "remove-empty/export": "off",
+    "esm/remove-empty-export": "off",
     "apply-overrides": "off"
   },
   "ignore": ["**/src/test", "**/__tests__"]

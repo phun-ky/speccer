@@ -36,11 +36,11 @@ export class DrawCircle {
    */
   #init(el: HTMLElement, radius: number, options: SpeccerOptionsInterface) {
     if (!el || !radius || !options) {
-      throw new Error('Missing inputs el or radius or options');
+      throw Error('Missing inputs el or radius or options');
     }
 
     if (!document.body.contains(el)) {
-      throw new Error('el is not in the DOM');
+      throw Error('el is not in the DOM');
     }
 
     this.el = el;
@@ -50,13 +50,12 @@ export class DrawCircle {
     this.#canvas = document.getElementById('ph-speccer-svg');
 
     if (!this.#canvas) {
-      throw new Error(
+      throw Error(
         'Missing required SVG element to draw circles. Please see the documentation'
       );
     }
 
-    const body = document.body;
-    const html = document.documentElement;
+    const { body, documentElement: html } = document;
     const height = Math.max(
       body.scrollHeight,
       body.offsetHeight,
@@ -97,7 +96,7 @@ export class DrawCircle {
     if (this.#canvas) {
       this.#canvas.appendChild(this.circle);
     } else {
-      throw new Error('No parentNode found for circle');
+      throw Error('No parentNode found for circle');
     }
 
     const { x, y } = await intrinsic_coords(this.el, this.options.position);

@@ -106,8 +106,8 @@ export const create = async (
       width: `${width}px`,
       left: `${left}px`,
       top: `${top - 32}px`,
-      padding: padding,
-      gridTemplateColumns: gridTemplateColumns
+      padding,
+      gridTemplateColumns
     });
 
     const numberOfColumnItems = gridTemplateColumns.split(' ').length;
@@ -151,8 +151,8 @@ export const create = async (
       height: `${height}px`,
       top: `${top}px`,
       left: `${left - 32}px`,
-      padding: padding,
-      gridTemplateRows: gridTemplateRows
+      padding,
+      gridTemplateRows
     });
 
     const numberOfRowItems = gridTemplateRows.split(' ').length;

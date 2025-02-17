@@ -31,15 +31,15 @@ export class DrawSVGCurlyBracket {
    */
   #init(startElement: HTMLElement, stopElement: HTMLElement) {
     if (!startElement || !stopElement) {
-      throw new Error('Missing inputs startElement and stopElement');
+      throw Error('Missing inputs startElement and stopElement');
     }
 
     if (!document.body.contains(stopElement)) {
-      throw new Error('stopElement is not in the DOM');
+      throw Error('stopElement is not in the DOM');
     }
 
     if (!document.body.contains(startElement)) {
-      throw new Error('startElement is not in the DOM');
+      throw Error('startElement is not in the DOM');
     }
 
     this.startElement = startElement;
@@ -49,13 +49,12 @@ export class DrawSVGCurlyBracket {
     this.#originalPathElement = document.getElementById('ph-speccer-path');
 
     if (!this.#originalPathElement || !this.#canvas) {
-      throw new Error(
+      throw Error(
         'Missing required SVG element to draw lines. Please see the documentation'
       );
     }
 
-    const body = document.body;
-    const html = document.documentElement;
+    const { body, documentElement: html } = document;
     const height = Math.max(
       body.scrollHeight,
       body.offsetHeight,
@@ -86,7 +85,7 @@ export class DrawSVGCurlyBracket {
    */
   #getPathElement(path: SVGPathElement) {
     if (!path) {
-      throw new Error('No path given to #getPathElement!');
+      throw Error('No path given to #getPathElement!');
     }
 
     const _id = uniqueID();
@@ -110,7 +109,7 @@ export class DrawSVGCurlyBracket {
    */
   async draw(path: SVGPathElement) {
     if (!path) {
-      throw new Error('No path given to draw!');
+      throw Error('No path given to draw!');
     }
 
     const _first_path_element = this.#getPathElement(path);
@@ -126,7 +125,7 @@ export class DrawSVGCurlyBracket {
         path.nextSibling
       );
     } else {
-      throw new Error('No parentNode found for path');
+      throw Error('No parentNode found for path');
     }
 
     const _direction = await direction_of_element({

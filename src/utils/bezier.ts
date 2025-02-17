@@ -49,59 +49,67 @@ export const createBezierCurveCoordinates = (
         lastPoint,
         lastControl: { x: x2 + 32, y: y2 }
       };
-    } else if (direction === 'south') {
+    }
+
+    if (direction === 'south') {
       return {
         firstPoint,
         firstControl: { x: x1 - 16 / 2, y: y1 + 32 },
         lastPoint,
         lastControl: { x: x2, y: y2 - 32 }
       };
-    } else if (direction === 'east') {
+    }
+
+    if (direction === 'east') {
       return {
         firstPoint,
         firstControl: { x: x1 + 32, y: y1 - 16 / 2 },
         lastPoint,
         lastControl: { x: x2 - 32, y: y2 }
       };
-    } else {
-      return {
-        firstPoint,
-        firstControl: { x: x1 - 16 / 2, y: y1 - 32 },
-        lastPoint,
-        lastControl: { x: x2, y: y2 + 32 }
-      };
     }
-  } else {
-    if (direction === 'west') {
-      return {
-        firstPoint,
-        firstControl: { x: x1 - 32, y: y1 + 16 / 2 },
-        lastPoint,
-        lastControl: { x: x2 + 32, y: y2 }
-      };
-    } else if (direction === 'south') {
-      return {
-        firstPoint,
-        firstControl: { x: x1 + 16 / 2, y: y1 + 32 },
-        lastPoint,
-        lastControl: { x: x2, y: y2 - 32 }
-      };
-    } else if (direction === 'east') {
-      return {
-        firstPoint,
-        firstControl: { x: x1 + 32, y: y1 + 16 / 2 },
-        lastPoint,
-        lastControl: { x: x2 - 32, y: y2 }
-      };
-    } else {
-      return {
-        firstPoint,
-        firstControl: { x: x1 + 16 / 2, y: y1 - 32 },
-        lastPoint,
-        lastControl: { x: x2, y: y2 + 32 }
-      };
-    }
+
+    return {
+      firstPoint,
+      firstControl: { x: x1 - 16 / 2, y: y1 - 32 },
+      lastPoint,
+      lastControl: { x: x2, y: y2 + 32 }
+    };
   }
+
+  if (direction === 'west') {
+    return {
+      firstPoint,
+      firstControl: { x: x1 - 32, y: y1 + 16 / 2 },
+      lastPoint,
+      lastControl: { x: x2 + 32, y: y2 }
+    };
+  }
+
+  if (direction === 'south') {
+    return {
+      firstPoint,
+      firstControl: { x: x1 + 16 / 2, y: y1 + 32 },
+      lastPoint,
+      lastControl: { x: x2, y: y2 - 32 }
+    };
+  }
+
+  if (direction === 'east') {
+    return {
+      firstPoint,
+      firstControl: { x: x1 + 32, y: y1 + 16 / 2 },
+      lastPoint,
+      lastControl: { x: x2 - 32, y: y2 }
+    };
+  }
+
+  return {
+    firstPoint,
+    firstControl: { x: x1 + 16 / 2, y: y1 - 32 },
+    lastPoint,
+    lastControl: { x: x2, y: y2 + 32 }
+  };
 };
 
 /**
