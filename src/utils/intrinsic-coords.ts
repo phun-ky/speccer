@@ -2,6 +2,7 @@ import { isNotString } from './typeof';
 import { waitForFrame } from './wait';
 import { xy } from './xy';
 
+/* node:coverage disable */
 /**
  * Get the intrinsic coordinates of an element based on a specified position.
  *
@@ -17,6 +18,7 @@ import { xy } from './xy';
  * const coordinates = await intrinsic_coords(element, 'top-left');
  * ```
  */
+/* node:coverage enable */
 export const intrinsic_coords = async (
   el: HTMLElement,
   pos = 'center'
