@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 
-import { getOptions } from '../get-options';
+import { getOptions } from '..';
 
 describe('getOptions', () => {
   const mockTargetStyle = {} as CSSStyleDeclaration;

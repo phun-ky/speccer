@@ -1,87 +1,21 @@
 import {
-  SpeccerFeatureType,
   SpeccerOptionsInterface,
-  SpeccerPositionType
-} from '../types/speccer';
-
+} from '../../types/speccer';
 import {
-  isBottomArea,
   isBracketArea,
   isCurly,
   isEncloseArea,
   isHeightArea,
-  isLeftArea,
   isParentArea,
-  isRightArea,
   isSlimArea,
   isSubtle,
   isTextArea,
-  isValidGridElement,
-  isValidMarkElement,
-  isValidMeasureElement,
-  isValidPinElement,
-  isValidSpacingElement,
-  isValidTypographyElement,
   isWidthArea,
   useSVG,
   useSyntaxHighlighting
-} from './area';
-import { camelCase } from './camel-case';
-
-/**
- * Determines the Speccer feature type based on the given area string and target element.
- *
- * @param {string} areaString - The string representing different area types.
- * @param {Partial<CSSStyleDeclaration>} targetStyle - The target HTML element being evaluated.
- * @returns {SpeccerFeatureType} The determined Speccer feature type.
- *
- * @example
- * ```ts
- * const feature = getFeatureBasedOnArea('left right pin', document.getElementById('myElement'));
- * console.log(feature); // Output: 'pin'
- * ```
- */
-const getFeatureBasedOnArea = (
-  areaString: string,
-  targetStyle: Partial<CSSStyleDeclaration>
-): SpeccerFeatureType => {
-  if (isValidPinElement(areaString)) return 'pin';
-
-  if (isValidGridElement(areaString, targetStyle)) return 'grid';
-
-  if (isValidMarkElement(areaString)) return 'mark';
-
-  if (isValidMeasureElement(areaString)) return 'measure';
-
-  if (isValidSpacingElement(areaString)) return 'spacing';
-
-  if (isValidTypographyElement(areaString)) return 'typography';
-
-  return 'pin';
-};
-const getPositionBasedOnArea = (areaString: string): SpeccerPositionType => {
-  if (isLeftArea(areaString)) return 'left';
-
-  if (isRightArea(areaString)) return 'right';
-
-  if (isBottomArea(areaString)) return 'bottom';
-
-  return 'top';
-};
-const getGridToggleValue = (areaString: string) => {
-  if (areaString?.includes('columns')) return 'columns';
-
-  if (areaString?.includes('rows')) return 'rows';
-
-  return 'both';
-};
-const getSpacingToggleValue = (areaString: string) => {
-  if (areaString?.includes('margin')) return 'margin';
-
-  if (areaString?.includes('padding')) return 'padding';
-
-  return 'both';
-};
+} from '../area';
+import { camelCase } from '../camel-case';
+import { getFeatureBasedOnArea, getGridToggleValue, getPositionBasedOnArea, getSpacingToggleValue } from './utils';
 
 /* node:coverage disable */
 /**
