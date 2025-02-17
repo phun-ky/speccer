@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unused-modules */
 /* eslint-disable no-undef */
 import { defineConfig, devices } from '@playwright/test';
 
@@ -14,6 +15,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests/e2e',
+  testMatch: '**/*.@(spec|test|e2e).?(c|m)[jt]s?(x)',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -44,7 +46,6 @@ export default defineConfig({
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] }
     }
-
 
     /* Test against mobile viewports. */
     // {
