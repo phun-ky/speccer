@@ -34,6 +34,7 @@ import { getCharacterToUse } from './utils/get-character-to-use';
 import { getContentForPin } from './utils/get-content-for-pin';
 import { pinElement } from './utils/pin-element';
 
+/* node:coverage disable */
 /**
  * Create pinned elements based on the section element and its data-speccer attributes.
  *
@@ -47,6 +48,7 @@ import { pinElement } from './utils/pin-element';
  * pinElements(sectionElement);
  * ```
  */
+/* node:coverage enable */
 export const pinElements = async (
   sectionElement: HTMLElement,
   options?: SpeccerOptionsInterface | undefined

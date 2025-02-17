@@ -43,6 +43,7 @@ import { offset } from '../../utils/position';
 import { add as addStyles, get as getStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
 
+/* node:coverage disable */
 /**
  * Creates a visual grid overlay for a given target element.
  *
@@ -60,6 +61,7 @@ import { waitForFrame } from '../../utils/wait';
  * }
  * ```
  */
+/* node:coverage enable */
 export const create = async (
   targetElement: HTMLElement,
   styles: CSSStyleDeclaration,
@@ -167,6 +169,7 @@ export const create = async (
   }
 };
 
+/* node:coverage disable */
 /**
  * Create a visual overlay to present the column gaps for a grid container
  *
@@ -201,6 +204,7 @@ export const create = async (
  * grid(targetElement, options);
  * ```
  */
+/* node:coverage enable */
 export const grid = async (
   targetElement: HTMLElement,
   options?: SpeccerOptionsInterface | undefined

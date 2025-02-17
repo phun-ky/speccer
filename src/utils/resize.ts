@@ -2,6 +2,7 @@ import { SpeccerFunctionType } from '../types/speccer';
 
 import debounce from './debounce';
 
+/* node:coverage disable */
 /**
  * Attaches a debounced event listener to the window's resize event that triggers the provided function.
  *
@@ -19,6 +20,7 @@ import debounce from './debounce';
  * activate(mySpeccer);
  * ```
  */
+/* node:coverage enable */
 export const activate = (speccer: SpeccerFunctionType): void => {
   /**
    * The debounced event listener function.

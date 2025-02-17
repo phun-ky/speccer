@@ -4,6 +4,7 @@ import { PositionPropertiesType, PositionInputType } from '../types/position';
 import { getParentThatIsSticky, isSticky } from './style-property';
 import { waitForFrame } from './wait';
 
+/* node:coverage disable */
 /**
  * Calculates the horizontal center of two elements.
  *
@@ -18,12 +19,14 @@ import { waitForFrame } from './wait';
  * const center = get_horizontal_center_of_els(0, startRect, targetRect);
  * ```
  */
+/* node:coverage enable */
 export const get_horizontal_center_of_els = (
   modifier: number,
   startRect: DOMRect,
   targetRect: DOMRect
 ): number => modifier - startRect.width / 2 + targetRect.width / 2;
 
+/* node:coverage disable */
 /**
  * Calculates the vertical center of two elements.
  *
@@ -38,12 +41,14 @@ export const get_horizontal_center_of_els = (
  * const center = get_vertical_center_of_els(0, startRect, targetRect);
  * ```
  */
+/* node:coverage enable */
 export const get_vertical_center_of_els = (
   modifier: number,
   startRect: DOMRect,
   targetRect: DOMRect
 ): number => modifier - startRect.height / 2 + targetRect.height / 2;
 
+/* node:coverage disable */
 /**
  * Gets the offset properties of an HTML element.
  *
@@ -56,6 +61,7 @@ export const get_vertical_center_of_els = (
  * const offsetProps = await offset(targetElement);
  * ```
  */
+/* node:coverage enable */
 export const offset = async (
   targetEl: HTMLElement
 ): Promise<PositionPropertiesType> => {
@@ -103,6 +109,7 @@ export const offset = async (
   };
 };
 
+/* node:coverage disable */
 /**
  * Gets the offset properties of an HTML element with its center aligned to another element.
  *
@@ -116,6 +123,7 @@ export const offset = async (
  * const offsetProps = await offsetWithCenter(sourceElement, targetElement);
  * ```
  */
+/* node:coverage enable */
 export const offsetWithCenter = async (
   sourceEl: HTMLElement,
   targetEl: HTMLElement
@@ -142,6 +150,7 @@ export const offsetWithCenter = async (
   };
 };
 
+/* node:coverage disable */
 /**
  * Gets various positioning properties between two HTML elements.
  *
@@ -161,6 +170,7 @@ export const offsetWithCenter = async (
  * const aboveProps = recProps.toTop();
  * ```
  */
+/* node:coverage enable */
 export const getRec = async (
   sourceEl: HTMLElement,
   targetEl: HTMLElement

@@ -1,6 +1,7 @@
 import { SpeccerOptionsInterface } from '../../../types/speccer';
 import { set as setClassNames, cx } from '../../../utils/classnames';
 
+/* node:coverage disable */
 /**
  * Create a pin element with optional content, area description, and element type.
  *
@@ -16,6 +17,7 @@ import { set as setClassNames, cx } from '../../../utils/classnames';
  * document.body.appendChild(pinElement);
  * ```
  */
+/* node:coverage enable */
 export const createPinElement = (
   content = '',
   options: SpeccerOptionsInterface,

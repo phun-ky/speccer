@@ -2,6 +2,7 @@
 import { isBoolean, isNumber, isString } from './typeof';
 import { waitForFrame } from './wait';
 
+/* node:coverage disable */
 /**
  * Adds CSS styles to an HTMLElement.
  *
@@ -23,6 +24,7 @@ import { waitForFrame } from './wait';
  * await add(element, styles);
  * ```
  */
+/* node:coverage enable */
 export const add = async (
   el: HTMLElement,
   styles: object | { key: string; value: string }[]
@@ -65,7 +67,10 @@ export const add = async (
  * console.log(computedStyles.color); // Logs the color property value
  * ```
  */
-export const get = async (el: HTMLElement): Promise<CSSStyleDeclaration> => {
+/* node:coverage enable */
+export const get = async (
+  el: HTMLElement
+): Promise<Partial<CSSStyleDeclaration>> => {
   await waitForFrame();
 
   return getComputedStyle(el, null);

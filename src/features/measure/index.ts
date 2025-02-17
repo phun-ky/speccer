@@ -43,6 +43,7 @@ import { getRec } from '../../utils/position';
 import { add as addStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
 
+/* node:coverage disable */
 /**
  * Create a measurement element with optional text, area, and element type.
  *
@@ -58,6 +59,7 @@ import { waitForFrame } from '../../utils/wait';
  * document.body.appendChild(measurement);
  * ```
  */
+/* node:coverage enable */
 export const create = (
   text: string | number = '',
   options: SpeccerOptionsInterface,
@@ -84,6 +86,7 @@ export const create = (
   return _el;
 };
 
+/* node:coverage disable */
 /**
  * Create a measurement element and add it to the body with styles matching a specified target element based on the attribute values from `data-speccer`.
  *
@@ -125,6 +128,7 @@ export const create = (
  * measure(targetElement,options);
  * ```
  */
+/* node:coverage enable */
 export const measure = async (
   targetElement: HTMLElement,
   options?: SpeccerOptionsInterface | undefined

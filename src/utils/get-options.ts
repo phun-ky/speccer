@@ -83,6 +83,7 @@ const getSpacingToggleValue = (areaString: string) => {
   return 'both';
 };
 
+/* node:coverage disable */
 /**
  * Generates Speccer options based on the target element and the specified area string.
  *
@@ -98,6 +99,7 @@ const getSpacingToggleValue = (areaString: string) => {
  * // Output: { position: { left: true, right: true, top: false, bottom: false }, type: 'pin', pin: { bracket: false, enclose: false, subtle: false, parent: false, text: false, useSVGLine: false, useCurlyBrackets: false } }
  * ```
  */
+/* node:coverage enable */
 export const getOptions = (
   areaString: string,
   targetStyle: CSSStyleDeclaration,

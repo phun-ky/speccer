@@ -8,6 +8,7 @@ import {
 
 import { getCoordsPairFromObjects } from './get-coords-pair-from-objects';
 
+/* node:coverage disable */
 /**
  * Calculates coordinates for a Bezier curve between two points.
  *
@@ -23,6 +24,7 @@ import { getCoordsPairFromObjects } from './get-coords-pair-from-objects';
  * );
  * ```
  */
+/* node:coverage enable */
 export const createBezierCurveCoordinates = (
   coords: CreateCoordinatesForCurveCoordParamType,
   options: CreateCoordinatesForCurveOptionsParamType
@@ -112,6 +114,7 @@ export const createBezierCurveCoordinates = (
   };
 };
 
+/* node:coverage disable */
 /**
  * Generates an SVG path for a curved line between two HTML elements.
  *
@@ -130,6 +133,7 @@ export const createBezierCurveCoordinates = (
  * });
  * ```
  */
+/* node:coverage enable */
 export const getCurlySVGPath = async (
   startEl: HTMLElement,
   stopEl: HTMLElement,
@@ -175,6 +179,7 @@ export const getCurlySVGPath = async (
   );
 };
 
+/* node:coverage disable */
 /**
  * Generates an SVG path for a straight line between two HTML elements.
  *
@@ -191,6 +196,7 @@ export const getCurlySVGPath = async (
  * });
  * ```
  */
+/* node:coverage enable */
 export const getSVGPath = async (
   startEl: HTMLElement,
   stopEl: HTMLElement,
@@ -220,6 +226,7 @@ export const getSVGPath = async (
   );
 };
 
+/* node:coverage disable */
 /**
  * Returns positions for creating an SVG path based on a cardinal direction.
  *
@@ -231,6 +238,7 @@ export const getSVGPath = async (
  * const positions = getPositionsForSVGPath('east');
  * ```
  */
+/* node:coverage enable */
 export const getPositionsForSVGPath = (direction: string) => {
   let pos1: string;
   let pos2: string;
@@ -258,6 +266,7 @@ export const getPositionsForSVGPath = (direction: string) => {
   return { pos1, pos2 };
 };
 
+/* node:coverage disable */
 /**
  * Returns positions for creating an SVG path for a curved line based on a cardinal direction.
  *
@@ -269,6 +278,7 @@ export const getPositionsForSVGPath = (direction: string) => {
  * const positions = getPositionsForCurlySVGPath('west');
  * ```
  */
+/* node:coverage enable */
 export const getPositionsForCurlySVGPath = (direction: string) => {
   let path1pos1: string;
   let path1pos2: string;
