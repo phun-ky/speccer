@@ -50,35 +50,35 @@ export type TypographyCSSPropertiesType = {
   /**
    * The line height property.
    */
-  lineHeight: string;
+  lineHeight?: string | undefined;
 
   /**
    * The letter spacing property.
    */
-  letterSpacing: string;
+  letterSpacing?: string | undefined;
 
   /**
    * The font family property.
    */
-  fontFamily: string;
+  fontFamily?: string | undefined;
 
   /**
    * The font size property.
    */
-  fontSize: string;
+  fontSize?: string | undefined;
 
   /**
    * The font style property.
    */
-  fontStyle: string;
+  fontStyle?: string | undefined;
 
   /**
    * The font variation settings property.
    */
-  fontVariationSettings: string;
+  fontVariationSettings?: string | undefined;
 
   /**
    * The font weight property.
    */
-  fontWeight: string;
+  fontWeight?: string | undefined;
 };
