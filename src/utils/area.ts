@@ -7,6 +7,8 @@ import {
   GridAreaEnum
 } from '../types/enums/area';
 
+import { isString } from './typeof';
+
 /**
  * Splits a string containing areas into an array of strings.
  *

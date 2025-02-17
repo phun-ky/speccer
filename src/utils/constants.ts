@@ -85,7 +85,6 @@ export const SPECCER_DEFAULT_MEASURE_SIZE = 8;
  * console.log(negativeDefaultMeasureSize); // Example output: -8
  * ```
  */
-// eslint-disable-next-line import/no-unused-modules
 export const SPECCER_DEFAULT_MEASURE_SIZE_NEG: number =
   SPECCER_DEFAULT_MEASURE_SIZE * -1;
 
