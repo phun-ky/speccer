@@ -1,6 +1,7 @@
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { getPositionsForSVGPath, getSVGPath } from '../bezier';
 import { direction_of_element } from '../direction-of-element';
+import { getMaxDocumentHeight } from '../get-max-document-height';
 import { uniqueID } from '../id';
 import { add as addStyle } from '../styles';
 
@@ -66,14 +67,7 @@ export class DrawSVGLine {
       );
     }
 
-    const { body, documentElement: html } = document;
-    const height = Math.max(
-      body.scrollHeight,
-      body.offsetHeight,
-      html.clientHeight,
-      html.scrollHeight,
-      html.offsetHeight
-    );
+    const height = getMaxDocumentHeight();
 
     addStyle(this.#canvas, {
       height: `${height}px`

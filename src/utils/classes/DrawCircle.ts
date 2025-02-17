@@ -1,4 +1,5 @@
 import { SpeccerOptionsInterface } from '../../types/speccer';
+import { getMaxDocumentHeight } from '../get-max-document-height';
 import { uniqueID } from '../id';
 import { intrinsic_coords } from '../intrinsic-coords';
 import { add as addStyle } from '../styles';
@@ -55,14 +56,7 @@ export class DrawCircle {
       );
     }
 
-    const { body, documentElement: html } = document;
-    const height = Math.max(
-      body.scrollHeight,
-      body.offsetHeight,
-      html.clientHeight,
-      html.scrollHeight,
-      html.offsetHeight
-    );
+    const height = getMaxDocumentHeight();
 
     addStyle(this.#canvas, {
       height: `${height}px`
