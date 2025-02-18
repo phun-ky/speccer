@@ -677,7 +677,7 @@ $ npm test
 
 ## Used by
 
-![](./public/used-by-if.png)
+![if logo](./public/used-by-if.png)
 
 ## Contributing
 
