@@ -25,10 +25,10 @@ export type PositionUnitPropertiesType = {
 export type PositionInputType =
   | Record<string, never>
   | {
-    center?: boolean; // Indicates whether to center the position.
-    sourceHeight?: number; // Height of the source element.
-    sourceWidth?: number; // Width of the source element.
-    targetHeight?: number; // Height of the target element.
-    targetWidth?: number; // Width of the target element.
-    modifier?: number; // A modifier value for positioning.
-  };
+      center?: boolean; // Indicates whether to center the position.
+      sourceHeight?: number; // Height of the source element.
+      sourceWidth?: number; // Width of the source element.
+      targetHeight?: number; // Height of the target element.
+      targetWidth?: number; // Width of the target element.
+      modifier?: number; // A modifier value for positioning.
+    };
