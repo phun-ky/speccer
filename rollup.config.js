@@ -13,7 +13,7 @@ const banner = `/**
 * @author ${pack.author}
 * @version ${pack.version}
 * @license
-* Copyright (c) 2018 Alexander Vassbotn Røyne-Helgesen
+* Copyright (c) 2018-${new Date().getFullYear()} Alexander Vassbotn Røyne-Helgesen
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
@@ -42,7 +42,7 @@ export default [
         name: 'speccer',
         file: './dist/speccer.js',
         format: 'umd',
-        sourcemap: true,
+        sourcemap: false,
         banner,
         exports: 'named',
         assetFileNames: '[name][extname]'
@@ -51,7 +51,7 @@ export default [
         name: 'speccer',
         file: './dist/speccer.esm.js',
         format: 'esm',
-        sourcemap: true,
+        sourcemap: false,
         banner,
         exports: 'named',
         assetFileNames: '[name][extname]'
