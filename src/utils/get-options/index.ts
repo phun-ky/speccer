@@ -1,6 +1,4 @@
-import {
-  SpeccerOptionsInterface,
-} from '../../types/speccer';
+import { SpeccerOptionsInterface } from '../../types/speccer';
 import {
   isBracketArea,
   isCurly,
@@ -15,7 +13,13 @@ import {
   useSyntaxHighlighting
 } from '../area';
 import { camelCase } from '../camel-case';
-import { getFeatureBasedOnArea, getGridToggleValue, getPositionBasedOnArea, getSpacingToggleValue } from './utils';
+
+import {
+  getFeatureBasedOnArea,
+  getGridToggleValue,
+  getPositionBasedOnArea,
+  getSpacingToggleValue
+} from './utils';
 
 /* node:coverage disable */
 /**
