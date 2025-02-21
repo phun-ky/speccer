@@ -50,9 +50,7 @@
     "/dist/speccer.css",
     "/dist/speccer.d.ts",
     "/dist/speccer.esm.js",
-    "/dist/speccer.esm.js.map",
     "/dist/speccer.js",
-    "/dist/speccer.js.map",
     "/dist/speccer.min.css"
   ],
   "scripts": {
