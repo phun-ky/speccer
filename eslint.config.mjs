@@ -1,5 +1,6 @@
 /* eslint-disable import/no-unused-modules */
 import eslint from '@eslint/js';
+import markdown from '@eslint/markdown';
 import stylistic from '@stylistic/eslint-plugin';
 import compat from 'eslint-plugin-compat';
 import importPlugin from 'eslint-plugin-import';
@@ -20,7 +21,8 @@ export default [
       '**/__mocks__'
     ]
   },
-  { files: ['**/*.{js,mjs,cjs,ts}'] },
+  { files: ['**/*.{js,mjs,cjs,ts,md}'] },
+  ...markdown.configs.recommended,
   eslint.configs.recommended,
   importPlugin.flatConfigs.recommended,
   importPlugin.flatConfigs.typescript,
