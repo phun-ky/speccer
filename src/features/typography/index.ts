@@ -106,7 +106,7 @@ export const create = (
  * }
  * ```
  *
- * ##### With syntax higlight feature
+ * ##### With syntax highlight feature
  *
  * ![typography](https://github.com/phun-ky/speccer/blob/main/public/speccer-typography-syntax-light.png?raw=true)
  *
