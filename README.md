@@ -2,13 +2,25 @@
 
 ![Speccer hero, with logo and slogan: A zero dependency package to annotate or highlight elements](./public/speccer-hero.png)
 
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](http://makeapullrequest.com) [![SemVer 2.0](https://img.shields.io/badge/SemVer-2.0-green.svg)](http://semver.org/spec/v2.0.0.html) ![npm version](https://img.shields.io/npm/v/@phun-ky/speccer) ![issues](https://img.shields.io/github/issues/phun-ky/speccer) ![license](https://img.shields.io/npm/l/@phun-ky/speccer) ![size](https://img.shields.io/bundlephobia/min/@phun-ky/speccer) ![npm](https://img.shields.io/npm/dm/%40phun-ky/speccer) ![GitHub Repo stars](https://img.shields.io/github/stars/phun-ky/speccer) [![codecov](https://codecov.io/gh/phun-ky/speccer/graph/badge.svg?token=VA91DL7ZLZ)](https://codecov.io/gh/phun-ky/speccer) [![build](https://github.com/phun-ky/speccer/actions/workflows/check.yml/badge.svg)](https://github.com/phun-ky/speccer/actions/workflows/check.yml)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](http://makeapullrequest.com)
+[![SemVer 2.0](https://img.shields.io/badge/SemVer-2.0-green.svg)](http://semver.org/spec/v2.0.0.html)
+![npm version](https://img.shields.io/npm/v/@phun-ky/speccer)
+![issues](https://img.shields.io/github/issues/phun-ky/speccer)
+![license](https://img.shields.io/npm/l/@phun-ky/speccer)
+![size](https://img.shields.io/bundlephobia/min/@phun-ky/speccer)
+![npm](https://img.shields.io/npm/dm/%40phun-ky/speccer)
+![GitHub Repo stars](https://img.shields.io/github/stars/phun-ky/speccer)
+[![codecov](https://codecov.io/gh/phun-ky/speccer/graph/badge.svg?token=VA91DL7ZLZ)](https://codecov.io/gh/phun-ky/speccer)
+[![build](https://github.com/phun-ky/speccer/actions/workflows/check.yml/badge.svg)](https://github.com/phun-ky/speccer/actions/workflows/check.yml)
 
 ## About
 
 ![Image of speccer](./public/speccer-pin-parent-align-light.png)
 
-**SPECCER** was originally created to simplify documenting components in a design system, but it can be used to annotate or highlight any HTML element on a webpage. If you need to draw attention to elements, **SPECCER** is your tool!
+**SPECCER** was originally created to simplify documenting components in a
+design system, but it can be used to annotate or highlight any HTML element on a
+webpage. If you need to draw attention to elements, **SPECCER** is your tool!
 
 ## Table of Contents<!-- omit from toc -->
 
@@ -35,7 +47,7 @@
       - [Custom literals](#custom-literals)
       - [Subtle anatomy](#subtle-anatomy)
       - [Curly brackets](#curly-brackets)
-      - [Pin programatically](#pin-programatically)
+      - [Pin programmatically](#pin-programmatically)
     - [Element typography](#element-typography)
       - [Syntax highlighting for typography](#syntax-highlighting-for-typography)
     - [Grid spacing](#grid-spacing)
@@ -84,7 +96,9 @@ speccer();
 
 #### Lazy loading
 
-If you're importing **SPECCER** instead of with a script tag, [you can use the following approach](https://codepen.io/phun-ky/pen/VwRRLyY) to apply lazy loading:
+If you're importing **SPECCER** instead of with a script tag,
+[you can use the following approach](https://codepen.io/phun-ky/pen/VwRRLyY) to
+apply lazy loading:
 
 ```javascript
 import { pin } from "https://esm.sh/@phun-ky/speccer";
@@ -146,7 +160,8 @@ And then follow the steps below to display the specifications you want :)
 
 #### Advanced usage
 
-If you want to control **SPECCER** a bit more, you have some options. Apply one of these attributes to the script element for different types of initialization:
+If you want to control **SPECCER** a bit more, you have some options. Apply one
+of these attributes to the script element for different types of initialization:
 
 ```html
 <script src="../speccer.js" data-<manual|instant|dom|lazy></script>
@@ -165,7 +180,8 @@ Or with a CDN:
 | `data-dom`     | Waits for `DOMContentLoaded`                                        |
 | `data-lazy`    | Lazy loads `speccer()` per specced element                          |
 
-If no attribute is applied, it will default to `data-dom`, as in, it will initialize when `DOMContentLoaded` is fired.
+If no attribute is applied, it will default to `data-dom`, as in, it will
+initialize when `DOMContentLoaded` is fired.
 
 ### React
 
@@ -214,7 +230,8 @@ Use the following attribute to display element padding and margin:
 <div data-speccer="spacing [padding|margin] [bound]" class="…"></div>
 ```
 
-This will display the element _and all of it's children_ padding and margin, unless you specify `padding` and `margin`
+This will display the element _and all of it's children_ padding and margin,
+unless you specify `padding` and `margin`
 
 ![Image of the spacing feature in dark mode](./public/speccer-spacing-dark.png)
 
@@ -242,7 +259,8 @@ Display dimensions with:
 ></div>
 ```
 
-Where `height` and `width` comes with placement flags. Default for `height` is `left`, default for `width` is `top`.
+Where `height` and `width` comes with placement flags. Default for `height` is
+`left`, default for `width` is `top`.
 
 ![Image of the measure feature](./public/speccer-measure-spacing-example-dark.png)
 
@@ -260,7 +278,8 @@ This will give a slimmer look and feel.
 
 ##### Subtle slim measure
 
-Use a subtle style for the slim option, uses a dashed line instead of a solid line:
+Use a subtle style for the slim option, uses a dashed line instead of a solid
+line:
 
 ```html
 <div data-speccer="measure slim height left subtle" class="…"></div>
@@ -272,7 +291,8 @@ This will give a dashed border.
 
 ![Image of speccer](./public/anatomy.png)
 
-In your component examples, use the following attribute. Remember to use the `data-speccer="pin-area"`-attribute on a parent element to scope the marking.
+In your component examples, use the following attribute. Remember to use the
+`data-speccer="pin-area"`-attribute on a parent element to scope the marking.
 
 ```html
 <div data-speccer="pin-area">
@@ -327,10 +347,11 @@ You can also align the pins to the parent container.
 </div>
 ```
 
-> [!NOTE]  
-> Only works with `pin [left|right|top|bottom]`, and not with `enclose`, `bracket` or `curly`!
+> [!NOTE] Only works with `pin [left|right|top|bottom]`, and not with `enclose`,
+> `bracket` or `curly`!
 
-The lines from the element to the pin is drawn with a svg path and circle, so remember to add the following svg into your document:
+The lines from the element to the pin is drawn with a svg path and circle, so
+remember to add the following svg into your document:
 
 ```html
 <svg
@@ -355,7 +376,8 @@ The lines from the element to the pin is drawn with a svg path and circle, so re
 
 ![Image of text pin option](./public/speccer-pin-text-light.png)
 
-If you want _text-in-place_ pinning feature, instead of referencing the pins, you can use the `text` feature:
+If you want _text-in-place_ pinning feature, instead of referencing the pins,
+you can use the `text` feature:
 
 ```html
 <input
@@ -372,7 +394,8 @@ If you want _text-in-place_ pinning feature, instead of referencing the pins, yo
 
 ![Image of japanese literals instead of latin characters](./public/speccer-pin-symbols-light.png)
 
-You can use custom literals by assigned a global variable with the literals you want:
+You can use custom literals by assigned a global variable with the literals you
+want:
 
 ```js
 window.SPECCER_LITERALS = [
@@ -396,8 +419,7 @@ Or with a data attribute on the `data-speccer="pin-area"`-element:
 </div>
 ```
 
-> [!TIP]
-> Try it out with emoticons!
+> [!TIP] Try it out with emoticons!
 >
 > ```js
 > window.SPECCER_LITERALS = [
@@ -422,14 +444,15 @@ This will give a dashed border, and a more subtle pin style.
 
 #### Curly brackets
 
-You can use curly brackets with the `curly` tag in `data-speccer` along side `pin bracket` to provide a more sleek style.
+You can use curly brackets with the `curly` tag in `data-speccer` along side
+`pin bracket` to provide a more sleek style.
 
 ![Image of curly option for anatomy](./public/speccer-pin-curly-light.png)
 
-> [!NOTE]  
-> Only works with `pin bracket`
+> [!NOTE] Only works with `pin bracket`
 
-The curly brackets are made with SVG paths, and it is required to have the following snippet on your page for it to render:
+The curly brackets are made with SVG paths, and it is required to have the
+following snippet on your page for it to render:
 
 ```html
 <svg
@@ -448,9 +471,11 @@ The curly brackets are made with SVG paths, and it is required to have the follo
 </svg>
 ```
 
-#### Pin programatically
+#### Pin programmatically
 
-from v9.5 you can utilize the `pin` feature to annotate or highlight the anatomy of an element programaticaly. [Here is an example with a click event](https://codepen.io/phun-ky/pen/LYKOWyP).
+from v9.5 you can utilize the `pin` feature to annotate or highlight the anatomy
+of an element programmatically.
+[Here is an example with a click event](https://codepen.io/phun-ky/pen/LYKOWyP).
 
 [Kazam_screencast_00002.webm](https://github.com/user-attachments/assets/5c78cece-de46-4876-81f2-98c9108a2103)
 
@@ -466,12 +491,15 @@ Display typography details:
 
 This will place a box to display typography information. Default is `left`.
 
-> [!NOTE]  
-> `getComputedStyles` are used to get the _computed_ values, so for example, a `line-height` set to `1.5` will be presented in pixels, like `96px` if the `font-size` is set to `64px`.
+> [!NOTE] > `getComputedStyles` are used to get the _computed_ values, so for
+> example, a `line-height` set to `1.5` will be presented in pixels, like `96px`
+> if the `font-size` is set to `64px`.
 
 #### Syntax highlighting for typography
 
-If you want to produce a box that uses `pre` and `code` tags with support for syntax highlighting ([PrismJS](https://prismjs.com/) compatible), add `syntax` to the `data-speccer="typography"` attribute.
+If you want to produce a box that uses `pre` and `code` tags with support for
+syntax highlighting ([PrismJS](https://prismjs.com/) compatible), add `syntax`
+to the `data-speccer="typography"` attribute.
 
 ```html
 <p data-speccer="typography syntax right" class="…">Some text</p>
@@ -513,7 +541,7 @@ Here is an example with these colors and overrides:
 }
 ```
 
-![Screenshot of typgraphy with different syntax theme](./public/speccer-typography-syntax-light.png)
+![Screenshot of typography with different syntax theme](./public/speccer-typography-syntax-light.png)
 
 ### Grid spacing
 
@@ -527,8 +555,8 @@ In your component examples, use the following attribute on your grid container.
 <div data-speccer="grid" …>…</div>
 ```
 
-> [!TIP]
-> If you only want to display `rows` or `columns`, use this syntax (default is both with `grid` only):
+> [!TIP] If you only want to display `rows` or `columns`, use this syntax
+> (default is both with `grid` only):
 >
 > ```html
 > <div data-speccer="grid [rows|columns]" …>…</div>
@@ -550,39 +578,50 @@ In your component examples, use the following attribute.
 
 ### A11y notation
 
-With **SPECCER**, you can also display accessibility notation, like [Accessibility Bluelines](https://dribbble.com/shots/6269661-Accessibility-Bluelines?utm_source=Clipboard_Shot&utm_campaign=jeremyelder&utm_content=Accessibility%20Bluelines&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=jeremyelder&utm_content=Accessibility%20Bluelines&utm_medium=Social_Share) or [A11y Annotation Kit](https://www.figma.com/community/file/953682768192596304):
+With **SPECCER**, you can also display accessibility notation, like
+[Accessibility Bluelines](https://dribbble.com/shots/6269661-Accessibility-Bluelines?utm_source=Clipboard_Shot&utm_campaign=jeremyelder&utm_content=Accessibility%20Bluelines&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=jeremyelder&utm_content=Accessibility%20Bluelines&utm_medium=Social_Share)
+or
+[A11y Annotation Kit](https://www.figma.com/community/file/953682768192596304):
 
-Prior art: [Jeremy Elder](https://twitter.com/JeremyElder) and [Stephanie Hagadorn](https://shagadorn.work/)
+Prior art: [Jeremy Elder](https://twitter.com/JeremyElder) and
+[Stephanie Hagadorn](https://shagadorn.work/)
 
 #### Tab stops
 
 ![Screenshot of speccer a11y tab stops in use](./public/speccer-a11y-tabstops-light.png)
 
-If you want to display tab stops, append `data-speccer="a11y tabstops"` as an attribute to the container you want to display the tab stops in.
+If you want to display tab stops, append `data-speccer="a11y tabstops"` as an
+attribute to the container you want to display the tab stops in.
 
 #### Landmarks and regions
 
 ![Screenshot of speccer a11y landmarks in use](./public/speccer-a11y-landmarks-light.png)
 
-If you want to display landmarks and regions, append `data-speccer="a11y landmark"` as an attribute to the container you want to display the landmarks and regions in.
+If you want to display landmarks and regions, append
+`data-speccer="a11y landmark"` as an attribute to the container you want to
+display the landmarks and regions in.
 
 #### Headings
 
 ![Screenshot of speccer a11y headings in use](./public/speccer-a11y-headings-light.png)
 
-If you want to display headings, append `data-speccer="a11y headings"` as an attribute to the container you want to display the headings in.
+If you want to display headings, append `data-speccer="a11y headings"` as an
+attribute to the container you want to display the headings in.
 
 #### Autocomplete
 
 ![Screenshot of speccer a11y autocomplete in use](./public/speccer-a11y-autocomplete-light.png)
 
-If you want to display autocomplete, append `data-speccer="a11y autocomplete"` as an attribute to the container you want to display the autocomplete in.
+If you want to display autocomplete, append `data-speccer="a11y autocomplete"`
+as an attribute to the container you want to display the autocomplete in.
 
 #### Keys and shortcut
 
 ![Screenshot of speccer a11y shortcuts in use](./public/speccer-a11y-shortcuts-light.png)
 
-If you want to display the shortcut with keys used for elements, use `data-speccer="a11y shortcut"` and `data-speccer-a11y-shortcut="<shortcut>"` on the element that uses this shortcut:
+If you want to display the shortcut with keys used for elements, use
+`data-speccer="a11y shortcut"` and `data-speccer-a11y-shortcut="<shortcut>"` on
+the element that uses this shortcut:
 
 ```html
 <button
@@ -598,7 +637,9 @@ If you want to display the shortcut with keys used for elements, use `data-specc
 
 ![Screenshot of speccer in a dark mode example](./public/speccer-measure-spacing-example-dark.png)
 
-Allthough the styling works nicely with dark mode, you can use the provided CSS variables to customize the look and feel. If more control is needed, you can use CSS overrides :)
+Although the styling works nicely with dark mode, you can use the provided CSS
+variables to customize the look and feel. If more control is needed, you can use
+CSS overrides :)
 
 ```css
 .ph-speccer.speccer {
@@ -652,9 +693,9 @@ Allthough the styling works nicely with dark mode, you can use the provided CSS 
   --ph-speccer-line-width-negative: -1.5px;
   --ph-speccer-opacity-20: 0.2;
   --ph-speccer-opacity-40: 0.4;
-  --ph-speccer-font-family: 'Menlo for Powerline', 'Menlo Regular for Powerline',
-    'DejaVu Sans Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
-    monospace;
+  --ph-speccer-font-family:
+    'Menlo for Powerline', 'Menlo Regular for Powerline', 'DejaVu Sans Mono',
+    Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   --ph-speccer-font-size: 12px;
   --ph-speccer-transition-default: all 2s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -662,7 +703,8 @@ Allthough the styling works nicely with dark mode, you can use the provided CSS 
 
 ## API
 
-Full API documentation is available [here](https://github.com/phun-ky/speccer/blob/main/api/README.md).
+Full API documentation is available
+[here](https://github.com/phun-ky/speccer/blob/main/api/README.md).
 
 ## Development
 
@@ -681,28 +723,48 @@ $ npm test
 
 ## Contributing
 
-Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the
+[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
+and
+[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/phun-ky/speccer/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the
+[LICENSE](https://github.com/phun-ky/speccer/blob/main/LICENSE) file for
+details.
 
 ## Changelog
 
-See the [CHANGELOG.md](https://github.com/phun-ky/speccer/blob/main/CHANGELOG.md) for details on the latest updates.
+See the
+[CHANGELOG.md](https://github.com/phun-ky/speccer/blob/main/CHANGELOG.md) for
+details on the latest updates.
 
 ## FAQ
 
-See the [discussions](https://github.com/phun-ky/speccer/discussions/categories/q-a) for an FAQ or to ask questions if no answer is given.
+See the
+[discussions](https://github.com/phun-ky/speccer/discussions/categories/q-a) for
+an FAQ or to ask questions if no answer is given.
 
 ## Sponsor me
 
-I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+I'm an Open Source evangelist, creating stuff that does not exist yet to help
+get rid of secondary activities and to enhance systems already in place, be it
+documentation or web sites.
 
-The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+The sponsorship is an unique opportunity to alleviate more hours for me to
+maintain my projects, create new ones and contribute to the large community
+we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
 ![Speccer banner, with logo and slogan: A zero dependency package to annotate or highlight elements](./public/speccer-banner.png)
 
-p.s. **Ukraine is still under brutal Russian invasion. A lot of Ukrainian people are hurt, without shelter and need help**. You can help in various ways, for instance, directly helping refugees, spreading awareness, putting pressure on your local government or companies. You can also support Ukraine by donating e.g. to [Red Cross](https://www.icrc.org/en/donate/ukraine), [Ukraine humanitarian organisation](https://savelife.in.ua/en/donate-en/#donate-army-card-weekly) or [donate Ambulances for Ukraine](https://www.gofundme.com/f/help-to-save-the-lives-of-civilians-in-a-war-zone).
+p.s. **Ukraine is still under brutal Russian invasion. A lot of Ukrainian people
+are hurt, without shelter and need help**. You can help in various ways, for
+instance, directly helping refugees, spreading awareness, putting pressure on
+your local government or companies. You can also support Ukraine by donating
+e.g. to [Red Cross](https://www.icrc.org/en/donate/ukraine),
+[Ukraine humanitarian organisation](https://savelife.in.ua/en/donate-en/#donate-army-card-weekly)
+or
+[donate Ambulances for Ukraine](https://www.gofundme.com/f/help-to-save-the-lives-of-civilians-in-a-war-zone).
