@@ -6,7 +6,7 @@
 
 # main
 
-> Last updated 2025-02-21T09:17:08.275Z
+> Last updated 2025-02-26T10:30:33.231Z
 
 ## Table of Contents
 
@@ -50,7 +50,8 @@ const grid: {
 };
 ```
 
-Defined in: [src/main.ts:52](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L52)
+Defined in:
+[src/main.ts:52](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L52)
 
 #### Type declaration
 
@@ -115,7 +116,8 @@ const mark: {
 };
 ```
 
-Defined in: [src/main.ts:73](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L73)
+Defined in:
+[src/main.ts:73](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L73)
 
 #### Type declaration
 
@@ -180,7 +182,8 @@ const measure: {
 };
 ```
 
-Defined in: [src/main.ts:68](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L68)
+Defined in:
+[src/main.ts:68](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L68)
 
 #### Type declaration
 
@@ -247,7 +250,8 @@ const modes: {
 };
 ```
 
-Defined in: [src/main.ts:83](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L83)
+Defined in:
+[src/main.ts:83](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L83)
 
 #### Type declaration
 
@@ -337,7 +341,8 @@ const pin: {
 };
 ```
 
-Defined in: [src/main.ts:62](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L62)
+Defined in:
+[src/main.ts:62](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L62)
 
 #### Type declaration
 
@@ -407,7 +412,8 @@ const spacing: {
 };
 ```
 
-Defined in: [src/main.ts:57](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L57)
+Defined in:
+[src/main.ts:57](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L57)
 
 #### Type declaration
 
@@ -472,7 +478,8 @@ const typography: {
 };
 ```
 
-Defined in: [src/main.ts:78](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L78)
+Defined in:
+[src/main.ts:78](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L78)
 
 #### Type declaration
 
@@ -534,7 +541,8 @@ Defined in: [src/main.ts:78](https://github.com/phun-ky/speccer/blob/main/src/ma
 function speccer(): void;
 ```
 
-Defined in: [src/main.ts:90](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L90)
+Defined in:
+[src/main.ts:90](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L90)
 
 #### Returns
 
@@ -544,19 +552,27 @@ Defined in: [src/main.ts:90](https://github.com/phun-ky/speccer/blob/main/src/ma
 
 ### removeSpeccerElement
 
-Re-exports [removeSpeccerElement](utils/remove-speccer-element.md#removespeccerelement)
+Re-exports
+[removeSpeccerElement](utils/remove-speccer-element.md#removespeccerelement)
 
 ---
 
 **Contributing**
 
-Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the
+[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
+and
+[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 **Sponsor me**
 
-I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+I'm an Open Source evangelist, creating stuff that does not exist yet to help
+get rid of secondary activities and to enhance systems already in place, be it
+documentation or web sites.
 
-The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+The sponsorship is an unique opportunity to alleviate more hours for me to
+maintain my projects, create new ones and contribute to the large community
+we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
@@ -564,4 +580,5 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ---
 
-This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net)
+is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

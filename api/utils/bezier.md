@@ -6,7 +6,7 @@
 
 # utils/bezier
 
-> Last updated 2025-02-21T09:17:08.297Z
+> Last updated 2025-02-26T10:30:33.254Z
 
 ## Table of Contents
 
@@ -28,7 +28,8 @@ function createBezierCurveCoordinates(
 ): CoordinatesForBezierObjectType;
 ```
 
-Defined in: [src/utils/bezier.ts:32](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L32)
+Defined in:
+[src/utils/bezier.ts:32](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L32)
 
 Calculates coordinates for a Bezier curve between two points.
 
@@ -62,7 +63,8 @@ const coordinates = createBezierCurveCoordinates(
 function getCurlySVGPath(startEl, stopEl, options): Promise<string>;
 ```
 
-Defined in: [src/utils/bezier.ts:141](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L141)
+Defined in:
+[src/utils/bezier.ts:141](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L141)
 
 Generates an SVG path for a curved line between two HTML elements.
 
@@ -104,9 +106,11 @@ function getPositionsForCurlySVGPath(direction): {
 };
 ```
 
-Defined in: [src/utils/bezier.ts:286](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L286)
+Defined in:
+[src/utils/bezier.ts:286](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L286)
 
-Returns positions for creating an SVG path for a curved line based on a cardinal direction.
+Returns positions for creating an SVG path for a curved line based on a cardinal
+direction.
 
 #### Parameters
 
@@ -151,7 +155,8 @@ function getPositionsForSVGPath(direction): {
 };
 ```
 
-Defined in: [src/utils/bezier.ts:246](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L246)
+Defined in:
+[src/utils/bezier.ts:246](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L246)
 
 Returns positions for creating an SVG path based on a cardinal direction.
 
@@ -191,7 +196,8 @@ const positions = getPositionsForSVGPath('east');
 function getSVGPath(startEl, stopEl, options): Promise<string>;
 ```
 
-Defined in: [src/utils/bezier.ts:204](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L204)
+Defined in:
+[src/utils/bezier.ts:204](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L204)
 
 Generates an SVG path for a straight line between two HTML elements.
 
@@ -222,13 +228,20 @@ const svgPath = getSVGPath(startElement, stopElement, {
 
 **Contributing**
 
-Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the
+[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
+and
+[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 **Sponsor me**
 
-I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+I'm an Open Source evangelist, creating stuff that does not exist yet to help
+get rid of secondary activities and to enhance systems already in place, be it
+documentation or web sites.
 
-The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+The sponsorship is an unique opportunity to alleviate more hours for me to
+maintain my projects, create new ones and contribute to the large community
+we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
@@ -236,4 +249,5 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ---
 
-This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net)
+is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

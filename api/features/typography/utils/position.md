@@ -6,7 +6,7 @@
 
 # features/typography/utils/position
 
-> Last updated 2025-02-21T09:17:08.274Z
+> Last updated 2025-02-26T10:30:33.230Z
 
 ## Table of Contents
 
@@ -28,7 +28,8 @@ function position(
 }>;
 ```
 
-Defined in: [src/features/typography/utils/position.ts:28](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/position.ts#L28)
+Defined in:
+[src/features/typography/utils/position.ts:28](https://github.com/phun-ky/speccer/blob/main/src/features/typography/utils/position.ts#L28)
 
 Calculate the position for the speccer element relative to the target element.
 
@@ -43,9 +44,7 @@ Calculate the position for the speccer element relative to the target element.
 #### Returns
 
 [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<\{
-`left`: `string`;
-`top`: `string`;
-}>
+`left`: `string`; `top`: `string`; }>
 
 - A promise that resolves with the calculated position.
 
@@ -63,13 +62,20 @@ console.log(position); // { left: '10px', top: '20px' }
 
 **Contributing**
 
-Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the
+[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
+and
+[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 **Sponsor me**
 
-I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+I'm an Open Source evangelist, creating stuff that does not exist yet to help
+get rid of secondary activities and to enhance systems already in place, be it
+documentation or web sites.
 
-The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+The sponsorship is an unique opportunity to alleviate more hours for me to
+maintain my projects, create new ones and contribute to the large community
+we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
@@ -77,4 +83,5 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ---
 
-This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net)
+is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

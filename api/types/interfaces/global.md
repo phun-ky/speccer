@@ -6,7 +6,7 @@
 
 # types/interfaces/global
 
-> Last updated 2025-02-21T09:17:08.281Z
+> Last updated 2025-02-26T10:30:33.237Z
 
 ## Table of Contents
 
@@ -21,7 +21,8 @@
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:26280
 
-A window containing a DOM document; the document property points to the DOM document loaded in that window.
+A window containing a DOM document; the document property points to the DOM
+document loaded in that window.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window)
 
@@ -266,21 +267,35 @@ addEventListener<K>(
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:26544
 
-Appends an event listener for events whose type attribute value is type. The callback argument sets the callback that will be invoked when the event is dispatched.
+Appends an event listener for events whose type attribute value is type. The
+callback argument sets the callback that will be invoked when the event is
+dispatched.
 
-The options argument sets listener-specific options. For compatibility this can be a boolean, in which case the method behaves exactly as if the value was specified as options's capture.
+The options argument sets listener-specific options. For compatibility this can
+be a boolean, in which case the method behaves exactly as if the value was
+specified as options's capture.
 
-When set to true, options's capture prevents callback from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE. When false (or not present), callback will not be invoked when event's eventPhase attribute value is CAPTURING_PHASE. Either way, callback will be invoked if event's eventPhase attribute value is AT_TARGET.
+When set to true, options's capture prevents callback from being invoked when
+the event's eventPhase attribute value is BUBBLING_PHASE. When false (or not
+present), callback will not be invoked when event's eventPhase attribute value
+is CAPTURING_PHASE. Either way, callback will be invoked if event's eventPhase
+attribute value is AT_TARGET.
 
-When set to true, options's passive indicates that the callback will not cancel the event by invoking preventDefault(). This is used to enable performance optimizations described in § 2.8 Observing event listeners.
+When set to true, options's passive indicates that the callback will not cancel
+the event by invoking preventDefault(). This is used to enable performance
+optimizations described in § 2.8 Observing event listeners.
 
-When set to true, options's once indicates that the callback will only be invoked once after which the event listener will be removed.
+When set to true, options's once indicates that the callback will only be
+invoked once after which the event listener will be removed.
 
-If an AbortSignal is passed for options's signal, then the event listener will be removed when signal is aborted.
+If an AbortSignal is passed for options's signal, then the event listener will
+be removed when signal is aborted.
 
-The event listener is appended to target's event listener list and is not appended if it has the same type, callback, and capture.
+The event listener is appended to target's event listener list and is not
+appended if it has the same type, callback, and capture.
 
-[MDN Reference](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener)
+[MDN
+Reference](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener)
 
 ###### Type Parameters
 
@@ -317,21 +332,35 @@ addEventListener(
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:26545
 
-Appends an event listener for events whose type attribute value is type. The callback argument sets the callback that will be invoked when the event is dispatched.
+Appends an event listener for events whose type attribute value is type. The
+callback argument sets the callback that will be invoked when the event is
+dispatched.
 
-The options argument sets listener-specific options. For compatibility this can be a boolean, in which case the method behaves exactly as if the value was specified as options's capture.
+The options argument sets listener-specific options. For compatibility this can
+be a boolean, in which case the method behaves exactly as if the value was
+specified as options's capture.
 
-When set to true, options's capture prevents callback from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE. When false (or not present), callback will not be invoked when event's eventPhase attribute value is CAPTURING_PHASE. Either way, callback will be invoked if event's eventPhase attribute value is AT_TARGET.
+When set to true, options's capture prevents callback from being invoked when
+the event's eventPhase attribute value is BUBBLING_PHASE. When false (or not
+present), callback will not be invoked when event's eventPhase attribute value
+is CAPTURING_PHASE. Either way, callback will be invoked if event's eventPhase
+attribute value is AT_TARGET.
 
-When set to true, options's passive indicates that the callback will not cancel the event by invoking preventDefault(). This is used to enable performance optimizations described in § 2.8 Observing event listeners.
+When set to true, options's passive indicates that the callback will not cancel
+the event by invoking preventDefault(). This is used to enable performance
+optimizations described in § 2.8 Observing event listeners.
 
-When set to true, options's once indicates that the callback will only be invoked once after which the event listener will be removed.
+When set to true, options's once indicates that the callback will only be
+invoked once after which the event listener will be removed.
 
-If an AbortSignal is passed for options's signal, then the event listener will be removed when signal is aborted.
+If an AbortSignal is passed for options's signal, then the event listener will
+be removed when signal is aborted.
 
-The event listener is appended to target's event listener list and is not appended if it has the same type, callback, and capture.
+The event listener is appended to target's event listener list and is not
+appended if it has the same type, callback, and capture.
 
-[MDN Reference](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener)
+[MDN
+Reference](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener)
 
 ###### Parameters
 
@@ -447,7 +476,8 @@ cancelAnimationFrame(handle): void
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:2743
 
-[MDN Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/cancelAnimationFrame)
+[MDN
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/cancelAnimationFrame)
 
 ###### Parameters
 
@@ -473,7 +503,8 @@ cancelIdleCallback(handle): void
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:26465
 
-[MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/cancelIdleCallback)
+[MDN
+Reference](https://developer.mozilla.org/docs/Web/API/Window/cancelIdleCallback)
 
 ###### Parameters
 
@@ -661,9 +692,12 @@ dispatchEvent(event): boolean
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:8719
 
-Dispatches a synthetic event event to target and returns true if either event's cancelable attribute value is false or its preventDefault() method was not invoked, and false otherwise.
+Dispatches a synthetic event event to target and returns true if either event's
+cancelable attribute value is false or its preventDefault() method was not
+invoked, and false otherwise.
 
-[MDN Reference](https://developer.mozilla.org/docs/Web/API/EventTarget/dispatchEvent)
+[MDN
+Reference](https://developer.mozilla.org/docs/Web/API/EventTarget/dispatchEvent)
 
 ###### Parameters
 
@@ -732,7 +766,8 @@ getComputedStyle(elt, pseudoElt?): CSSStyleDeclaration
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:26487
 
-[MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/getComputedStyle)
+[MDN
+Reference](https://developer.mozilla.org/docs/Web/API/Window/getComputedStyle)
 
 ###### Parameters
 
@@ -759,8 +794,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:26489
 
 ###### Returns
 
-\| `null`
-\| [`Selection`](https://developer.mozilla.org/docs/Web/API/Selection)
+\| `null` \| [`Selection`](https://developer.mozilla.org/docs/Web/API/Selection)
 
 ##### matchMedia()
 
@@ -862,15 +896,24 @@ postMessage(
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:26511
 
-Posts a message to the given window. Messages can be structured objects, e.g. nested objects and arrays, can contain JavaScript values (strings, numbers, Date objects, etc), and can contain certain data objects such as File Blob, FileList, and ArrayBuffer objects.
+Posts a message to the given window. Messages can be structured objects, e.g.
+nested objects and arrays, can contain JavaScript values (strings, numbers, Date
+objects, etc), and can contain certain data objects such as File Blob, FileList,
+and ArrayBuffer objects.
 
-Objects listed in the transfer member of options are transferred, not just cloned, meaning that they are no longer usable on the sending side.
+Objects listed in the transfer member of options are transferred, not just
+cloned, meaning that they are no longer usable on the sending side.
 
-A target origin can be specified using the targetOrigin member of options. If not provided, it defaults to "/". This default restricts the message to same-origin targets only.
+A target origin can be specified using the targetOrigin member of options. If
+not provided, it defaults to "/". This default restricts the message to
+same-origin targets only.
 
-If the origin of the target window doesn't match the given target origin, the message is discarded, to avoid information leakage. To send the message to the target regardless of origin, set the target origin to "\*".
+If the origin of the target window doesn't match the given target origin, the
+message is discarded, to avoid information leakage. To send the message to the
+target regardless of origin, set the target origin to "\*".
 
-Throws a "DataCloneError" DOMException if transfer array contains duplicate objects or if message could not be cloned.
+Throws a "DataCloneError" DOMException if transfer array contains duplicate
+objects or if message could not be cloned.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/postMessage)
 
@@ -995,9 +1038,11 @@ removeEventListener<K>(
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:26546
 
-Removes the event listener in target's event listener list with the same type, callback, and options.
+Removes the event listener in target's event listener list with the same type,
+callback, and options.
 
-[MDN Reference](https://developer.mozilla.org/docs/Web/API/EventTarget/removeEventListener)
+[MDN
+Reference](https://developer.mozilla.org/docs/Web/API/EventTarget/removeEventListener)
 
 ###### Type Parameters
 
@@ -1034,9 +1079,11 @@ removeEventListener(
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:26547
 
-Removes the event listener in target's event listener list with the same type, callback, and options.
+Removes the event listener in target's event listener list with the same type,
+callback, and options.
 
-[MDN Reference](https://developer.mozilla.org/docs/Web/API/EventTarget/removeEventListener)
+[MDN
+Reference](https://developer.mozilla.org/docs/Web/API/EventTarget/removeEventListener)
 
 ###### Parameters
 
@@ -1090,7 +1137,8 @@ requestAnimationFrame(callback): number
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:2745
 
-[MDN Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/requestAnimationFrame)
+[MDN
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/requestAnimationFrame)
 
 ###### Parameters
 
@@ -1116,7 +1164,8 @@ requestIdleCallback(callback, options?): number
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:26524
 
-[MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/requestIdleCallback)
+[MDN
+Reference](https://developer.mozilla.org/docs/Web/API/Window/requestIdleCallback)
 
 ###### Parameters
 
@@ -1452,13 +1501,20 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:26280
 
 **Contributing**
 
-Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the
+[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
+and
+[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 **Sponsor me**
 
-I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+I'm an Open Source evangelist, creating stuff that does not exist yet to help
+get rid of secondary activities and to enhance systems already in place, be it
+documentation or web sites.
 
-The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+The sponsorship is an unique opportunity to alleviate more hours for me to
+maintain my projects, create new ones and contribute to the large community
+we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
@@ -1466,4 +1522,5 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ---
 
-This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net)
+is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

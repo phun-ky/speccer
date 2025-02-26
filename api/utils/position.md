@@ -6,7 +6,7 @@
 
 # utils/position
 
-> Last updated 2025-02-21T09:17:08.305Z
+> Last updated 2025-02-26T10:30:33.262Z
 
 ## Table of Contents
 
@@ -25,7 +25,8 @@
 function get_horizontal_center_of_els(modifier, startRect, targetRect): number;
 ```
 
-Defined in: [src/utils/position.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L23)
+Defined in:
+[src/utils/position.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L23)
 
 Calculates the horizontal center of two elements.
 
@@ -58,7 +59,8 @@ const center = get_horizontal_center_of_els(0, startRect, targetRect);
 function get_vertical_center_of_els(modifier, startRect, targetRect): number;
 ```
 
-Defined in: [src/utils/position.ts:45](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L45)
+Defined in:
+[src/utils/position.ts:45](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L45)
 
 Calculates the vertical center of two elements.
 
@@ -91,7 +93,8 @@ const center = get_vertical_center_of_els(0, startRect, targetRect);
 function getRec(sourceEl, targetEl): Promise<GetRecPropertiesInterface>;
 ```
 
-Defined in: [src/utils/position.ts:174](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L174)
+Defined in:
+[src/utils/position.ts:174](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L174)
 
 Gets various positioning properties between two HTML elements.
 
@@ -129,7 +132,8 @@ const aboveProps = recProps.toTop();
 function offset(targetEl): Promise<PositionPropertiesType>;
 ```
 
-Defined in: [src/utils/position.ts:65](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L65)
+Defined in:
+[src/utils/position.ts:65](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L65)
 
 Gets the offset properties of an HTML element.
 
@@ -160,9 +164,11 @@ const offsetProps = await offset(targetElement);
 function offsetWithCenter(sourceEl, targetEl): Promise<PositionPropertiesType>;
 ```
 
-Defined in: [src/utils/position.ts:127](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L127)
+Defined in:
+[src/utils/position.ts:127](https://github.com/phun-ky/speccer/blob/main/src/utils/position.ts#L127)
 
-Gets the offset properties of an HTML element with its center aligned to another element.
+Gets the offset properties of an HTML element with its center aligned to another
+element.
 
 #### Parameters
 
@@ -188,13 +194,20 @@ const offsetProps = await offsetWithCenter(sourceElement, targetElement);
 
 **Contributing**
 
-Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the
+[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
+and
+[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 **Sponsor me**
 
-I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+I'm an Open Source evangelist, creating stuff that does not exist yet to help
+get rid of secondary activities and to enhance systems already in place, be it
+documentation or web sites.
 
-The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+The sponsorship is an unique opportunity to alleviate more hours for me to
+maintain my projects, create new ones and contribute to the large community
+we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
@@ -202,4 +215,5 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ---
 
-This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net)
+is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

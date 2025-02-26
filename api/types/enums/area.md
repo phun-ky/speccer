@@ -6,7 +6,7 @@
 
 # types/enums/area
 
-> Last updated 2025-02-21T09:17:08.280Z
+> Last updated 2025-02-26T10:30:33.235Z
 
 ## Table of Contents
 
@@ -23,7 +23,8 @@
 
 ### GridAreaEnum
 
-Defined in: [src/types/enums/area.ts:73](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L73)
+Defined in:
+[src/types/enums/area.ts:73](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L73)
 
 Enum representing different grid areas.
 
@@ -37,7 +38,8 @@ Enum representing different grid areas.
 
 ### MarkAreaEnum
 
-Defined in: [src/types/enums/area.ts:66](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L66)
+Defined in:
+[src/types/enums/area.ts:66](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L66)
 
 Enum representing different mark areas.
 
@@ -51,7 +53,8 @@ Enum representing different mark areas.
 
 ### MeasureAreaEnum
 
-Defined in: [src/types/enums/area.ts:33](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L33)
+Defined in:
+[src/types/enums/area.ts:33](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L33)
 
 Enum representing different measurement areas.
 
@@ -72,7 +75,8 @@ Enum representing different measurement areas.
 
 ### PinAreaEnum
 
-Defined in: [src/types/enums/area.ts:15](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L15)
+Defined in:
+[src/types/enums/area.ts:15](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L15)
 
 Enum representing different areas for the pin feature.
 
@@ -97,7 +101,8 @@ Enum representing different areas for the pin feature.
 
 ### SpacingAreaEnum
 
-Defined in: [src/types/enums/area.ts:59](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L59)
+Defined in:
+[src/types/enums/area.ts:59](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L59)
 
 Enum representing different spacing areas.
 
@@ -111,7 +116,8 @@ Enum representing different spacing areas.
 
 ### SpeccerAreaEnum
 
-Defined in: [src/types/enums/area.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L4)
+Defined in:
+[src/types/enums/area.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L4)
 
 Enum representing different areas in Speccer.
 
@@ -129,7 +135,8 @@ Enum representing different areas in Speccer.
 
 ### TypographyAreaEnum
 
-Defined in: [src/types/enums/area.ts:47](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L47)
+Defined in:
+[src/types/enums/area.ts:47](https://github.com/phun-ky/speccer/blob/main/src/types/enums/area.ts#L47)
 
 Enum representing different typography areas.
 
@@ -148,13 +155,20 @@ Enum representing different typography areas.
 
 **Contributing**
 
-Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the
+[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
+and
+[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 **Sponsor me**
 
-I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+I'm an Open Source evangelist, creating stuff that does not exist yet to help
+get rid of secondary activities and to enhance systems already in place, be it
+documentation or web sites.
 
-The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+The sponsorship is an unique opportunity to alleviate more hours for me to
+maintain my projects, create new ones and contribute to the large community
+we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
@@ -162,4 +176,5 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ---
 
-This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net)
+is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

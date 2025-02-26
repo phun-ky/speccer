@@ -6,7 +6,7 @@
 
 # utils/area
 
-> Last updated 2025-02-21T09:17:08.295Z
+> Last updated 2025-02-26T10:30:33.250Z
 
 ## Table of Contents
 
@@ -42,7 +42,8 @@
 function getAreasFromString(areaString): string[];
 ```
 
-Defined in: [src/utils/area.ts:24](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L24)
+Defined in:
+[src/utils/area.ts:24](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L24)
 
 Splits a string containing areas into an array of strings.
 
@@ -73,7 +74,8 @@ const areas = getAreasFromString('left right top');
 function isBottomArea(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:75](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L75)
+Defined in:
+[src/utils/area.ts:75](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L75)
 
 Checks if 'bottom' area is present in the provided areaString.
 
@@ -97,7 +99,8 @@ boolean `true` if 'bottom' is present, otherwise `false`.
 function isBracketArea(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:89](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L89)
+Defined in:
+[src/utils/area.ts:89](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L89)
 
 Checks if 'bracket' area is present in the provided areaString.
 
@@ -121,7 +124,8 @@ boolean `true` if 'bracket' is present, otherwise `false`.
 function isCurly(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:222](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L222)
+Defined in:
+[src/utils/area.ts:222](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L222)
 
 Checks if the provided areaString contains 'curly' and 'bracket' areas.
 
@@ -145,7 +149,8 @@ boolean `true` if both 'curly' and 'bracket' are present, otherwise `false`.
 function isEncloseArea(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:103](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L103)
+Defined in:
+[src/utils/area.ts:103](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L103)
 
 Checks if 'enclose' area is present in the provided areaString.
 
@@ -169,7 +174,8 @@ boolean `true` if 'enclose' is present, otherwise `false`.
 function isHeightArea(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:159](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L159)
+Defined in:
+[src/utils/area.ts:159](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L159)
 
 Checks if 'height' area is present in the provided areaString.
 
@@ -193,7 +199,8 @@ boolean `true` if 'height' is present, otherwise `false`.
 function isLeftArea(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:33](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L33)
+Defined in:
+[src/utils/area.ts:33](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L33)
 
 Checks if 'left' area is present in the provided areaString.
 
@@ -217,7 +224,8 @@ boolean `true` if 'left' is present, otherwise `false`.
 function isParentArea(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:131](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L131)
+Defined in:
+[src/utils/area.ts:131](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L131)
 
 Checks if 'parent' area is present in the provided areaString.
 
@@ -241,7 +249,8 @@ boolean `true` if 'parent' is present, otherwise `false`.
 function isRightArea(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:47](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L47)
+Defined in:
+[src/utils/area.ts:47](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L47)
 
 Checks if 'right' area is present in the provided areaString.
 
@@ -265,7 +274,8 @@ boolean `true` if 'right' is present, otherwise `false`.
 function isSlimArea(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:173](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L173)
+Defined in:
+[src/utils/area.ts:173](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L173)
 
 Checks if 'slim' area is present in the provided areaString.
 
@@ -289,7 +299,8 @@ boolean `true` if 'slim' is present, otherwise `false`.
 function isSubtle(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:117](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L117)
+Defined in:
+[src/utils/area.ts:117](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L117)
 
 Checks if 'subtle' area is present in the provided areaString.
 
@@ -313,7 +324,8 @@ boolean `true` if 'subtle' is present, otherwise `false`.
 function isTextArea(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:145](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L145)
+Defined in:
+[src/utils/area.ts:145](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L145)
 
 Checks if 'text' area is present in the provided areaString.
 
@@ -337,7 +349,8 @@ boolean `true` if 'text' is present, otherwise `false`.
 function isTopArea(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:61](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L61)
+Defined in:
+[src/utils/area.ts:61](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L61)
 
 Checks if 'top' area is present in the provided areaString.
 
@@ -361,7 +374,8 @@ boolean `true` if 'top' is present, otherwise `false`.
 function isValidGridElement(areaString, styles): boolean;
 ```
 
-Defined in: [src/utils/area.ts:287](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L287)
+Defined in:
+[src/utils/area.ts:287](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L287)
 
 Checks if the provided areaString contains 'grid'.
 
@@ -386,7 +400,8 @@ boolean `true` if 'grid' are present, otherwise `false`.
 function isValidMarkElement(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:277](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L277)
+Defined in:
+[src/utils/area.ts:277](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L277)
 
 Checks if the provided areaString contains 'mark'.
 
@@ -410,7 +425,8 @@ boolean `true` if 'mark' are present, otherwise `false`.
 function isValidMeasureElement(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:258](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L258)
+Defined in:
+[src/utils/area.ts:258](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L258)
 
 Checks if the provided areaString contains 'measure'.
 
@@ -434,7 +450,8 @@ boolean `true` if 'measure' are present, otherwise `false`.
 function isValidPinElement(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:268](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L268)
+Defined in:
+[src/utils/area.ts:268](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L268)
 
 Checks if the provided areaString contains 'pin'.
 
@@ -458,7 +475,8 @@ boolean `true` if 'pin' are present, otherwise `false`.
 function isValidSpacingElement(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:248](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L248)
+Defined in:
+[src/utils/area.ts:248](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L248)
 
 Checks if the provided areaString contains 'spacing'.
 
@@ -482,7 +500,8 @@ boolean `true` if 'spacing' are present, otherwise `false`.
 function isValidTypographyElement(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:238](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L238)
+Defined in:
+[src/utils/area.ts:238](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L238)
 
 Checks if the provided areaString contains 'typography'.
 
@@ -506,7 +525,8 @@ boolean `true` if 'typography' are present, otherwise `false`.
 function isWidthArea(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:187](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L187)
+Defined in:
+[src/utils/area.ts:187](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L187)
 
 Checks if 'width' area is present in the provided areaString.
 
@@ -530,7 +550,8 @@ boolean `true` if 'width' is present, otherwise `false`.
 function useSVG(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:201](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L201)
+Defined in:
+[src/utils/area.ts:201](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L201)
 
 Checks if the provided areaString contains SVG-related areas.
 
@@ -554,7 +575,8 @@ boolean `true` if any SVG-related area is present, otherwise `false`.
 function useSyntaxHighlighting(areaString): boolean;
 ```
 
-Defined in: [src/utils/area.ts:302](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L302)
+Defined in:
+[src/utils/area.ts:302](https://github.com/phun-ky/speccer/blob/main/src/utils/area.ts#L302)
 
 Checks if the provided areaString contains 'syntax'.
 
@@ -574,13 +596,20 @@ boolean `true` if both 'syntax' are present, otherwise `false`.
 
 **Contributing**
 
-Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the
+[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
+and
+[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 **Sponsor me**
 
-I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+I'm an Open Source evangelist, creating stuff that does not exist yet to help
+get rid of secondary activities and to enhance systems already in place, be it
+documentation or web sites.
 
-The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+The sponsorship is an unique opportunity to alleviate more hours for me to
+maintain my projects, create new ones and contribute to the large community
+we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
@@ -588,4 +617,5 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ---
 
-This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net)
+is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

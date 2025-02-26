@@ -6,7 +6,7 @@
 
 # types/position
 
-> Last updated 2025-02-21T09:17:08.293Z
+> Last updated 2025-02-26T10:30:33.248Z
 
 ## Table of Contents
 
@@ -23,7 +23,8 @@
 type PositionInputType = Record<string, never> | PositionInputInterface;
 ```
 
-Defined in: [src/types/position.ts:33](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L33)
+Defined in:
+[src/types/position.ts:33](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L33)
 
 Type definition for input parameters related to positioning.
 
@@ -40,7 +41,8 @@ type PositionPropertiesType = {
 };
 ```
 
-Defined in: [src/types/position.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L4)
+Defined in:
+[src/types/position.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L4)
 
 Type definition for position properties.
 
@@ -128,7 +130,8 @@ type PositionUnitPropertiesType = {
 };
 ```
 
-Defined in: [src/types/position.ts:14](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L14)
+Defined in:
+[src/types/position.ts:14](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L14)
 
 Type definition for position properties with units.
 
@@ -207,13 +210,20 @@ Type definition for position properties with units.
 
 **Contributing**
 
-Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the
+[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
+and
+[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 **Sponsor me**
 
-I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+I'm an Open Source evangelist, creating stuff that does not exist yet to help
+get rid of secondary activities and to enhance systems already in place, be it
+documentation or web sites.
 
-The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+The sponsorship is an unique opportunity to alleviate more hours for me to
+maintain my projects, create new ones and contribute to the large community
+we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
@@ -221,4 +231,5 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ---
 
-This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net)
+is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

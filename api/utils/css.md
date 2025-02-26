@@ -6,7 +6,7 @@
 
 # utils/css
 
-> Last updated 2025-02-21T09:17:08.301Z
+> Last updated 2025-02-26T10:30:33.258Z
 
 ## Table of Contents
 
@@ -28,9 +28,11 @@
 function getClassNameFromCSSProperty(property): string;
 ```
 
-Defined in: [src/utils/css.ts:64](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L64)
+Defined in:
+[src/utils/css.ts:64](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L64)
 
-Converts a CSS property name with "Top", "Right", "Bottom", or "Left" into a class name.
+Converts a CSS property name with "Top", "Right", "Bottom", or "Left" into a
+class name.
 
 #### Parameters
 
@@ -60,7 +62,8 @@ console.log(className); // Example output: "margin top"
 function getNumberValue(value): number;
 ```
 
-Defined in: [src/utils/css.ts:27](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L27)
+Defined in:
+[src/utils/css.ts:27](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L27)
 
 Parses a string value into an integer.
 
@@ -92,7 +95,8 @@ console.log(intValue); // Example output: 42
 function getSpacing(style, options?): SpacingCSSPropertiesType;
 ```
 
-Defined in: [src/utils/css.ts:93](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L93)
+Defined in:
+[src/utils/css.ts:93](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L93)
 
 Extracts spacing-related CSS properties from a style object.
 
@@ -128,7 +132,8 @@ console.log(spacing); // Example output: { marginTop: "10px", marginLeft: "20px"
 function getTypography(style): TypographyCSSPropertiesType;
 ```
 
-Defined in: [src/utils/css.ts:154](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L154)
+Defined in:
+[src/utils/css.ts:154](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L154)
 
 Extracts typography-related CSS properties from a style object.
 
@@ -163,9 +168,11 @@ console.log(typography); // Example output: { fontSize: "16px", fontWeight: "bol
 function lineWidth(el): number;
 ```
 
-Defined in: [src/utils/css.ts:227](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L227)
+Defined in:
+[src/utils/css.ts:227](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L227)
 
-Retrieves the value of a custom CSS property "--ph-speccer-line-width" from an element.
+Retrieves the value of a custom CSS property "--ph-speccer-line-width" from an
+element.
 
 #### Parameters
 
@@ -195,9 +202,11 @@ console.log(value); // Example output: 1.5
 function measureSize(el): number;
 ```
 
-Defined in: [src/utils/css.ts:209](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L209)
+Defined in:
+[src/utils/css.ts:209](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L209)
 
-Retrieves the value of a custom CSS property "--ph-speccer-measure-size" from an element.
+Retrieves the value of a custom CSS property "--ph-speccer-measure-size" from an
+element.
 
 #### Parameters
 
@@ -227,10 +236,11 @@ console.log(value); // Example output: 20
 function normalizeNumberValue(value): number;
 ```
 
-Defined in: [src/utils/css.ts:43](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L43)
+Defined in:
+[src/utils/css.ts:43](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L43)
 
-Normalizes a string or number value to ensure it's a valid number.
-If the value is within the range \[0, 1] or \[-1, 0), it's normalized to 0.
+Normalizes a string or number value to ensure it's a valid number. If the value
+is within the range \[0, 1] or \[-1, 0), it's normalized to 0.
 
 #### Parameters
 
@@ -260,9 +270,11 @@ console.log(normalizedValue); // Example output: 0.5
 function pinSpace(el): number;
 ```
 
-Defined in: [src/utils/css.ts:191](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L191)
+Defined in:
+[src/utils/css.ts:191](https://github.com/phun-ky/speccer/blob/main/src/utils/css.ts#L191)
 
-Retrieves the value of a custom CSS property "--ph-speccer-pin-space" from an element.
+Retrieves the value of a custom CSS property "--ph-speccer-pin-space" from an
+element.
 
 #### Parameters
 
@@ -288,13 +300,20 @@ console.log(value); // Example output: 10
 
 **Contributing**
 
-Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the
+[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
+and
+[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 **Sponsor me**
 
-I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+I'm an Open Source evangelist, creating stuff that does not exist yet to help
+get rid of secondary activities and to enhance systems already in place, be it
+documentation or web sites.
 
-The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+The sponsorship is an unique opportunity to alleviate more hours for me to
+maintain my projects, create new ones and contribute to the large community
+we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
@@ -302,4 +321,5 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ---
 
-This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net)
+is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

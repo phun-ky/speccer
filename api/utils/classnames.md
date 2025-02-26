@@ -6,7 +6,7 @@
 
 # utils/classnames
 
-> Last updated 2025-02-21T09:17:08.300Z
+> Last updated 2025-02-26T10:30:33.257Z
 
 ## Table of Contents
 
@@ -24,14 +24,17 @@
 function cx(cls, cls_obj?): string;
 ```
 
-Defined in: [src/utils/classnames.ts:112](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L112)
+Defined in:
+[src/utils/classnames.ts:112](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L112)
 
-Combines class names and optional properties object into a single string of class names.
+Combines class names and optional properties object into a single string of
+class names.
 
-The `cx` function takes two parameters: `cls` and `cls_obj`.
-The `cls` parameter can be either a string representing class names or an object with
-properties set to `true` or `false`. The `cls_obj` parameter is an optional object with
-properties set to `true` or `false`, allowing for conditional inclusion of class names.
+The `cx` function takes two parameters: `cls` and `cls_obj`. The `cls` parameter
+can be either a string representing class names or an object with properties set
+to `true` or `false`. The `cls_obj` parameter is an optional object with
+properties set to `true` or `false`, allowing for conditional inclusion of class
+names.
 
 #### Parameters
 
@@ -62,7 +65,8 @@ console.log(classNames); // Example output: 'class1 class2'
 function remove(el, cls, avoid?): void;
 ```
 
-Defined in: [src/utils/classnames.ts:79](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L79)
+Defined in:
+[src/utils/classnames.ts:79](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L79)
 
 Remove CSS classes from an HTML element.
 
@@ -94,7 +98,8 @@ remove(element, 'class1 class2');
 function set(el, cls, avoid?): void;
 ```
 
-Defined in: [src/utils/classnames.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L23)
+Defined in:
+[src/utils/classnames.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L23)
 
 Add CSS classes to an HTML element.
 
@@ -126,7 +131,8 @@ set(element, 'class1 class2');
 function toggle(el, cls, avoid?): void;
 ```
 
-Defined in: [src/utils/classnames.ts:52](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L52)
+Defined in:
+[src/utils/classnames.ts:52](https://github.com/phun-ky/speccer/blob/main/src/utils/classnames.ts#L52)
 
 Toggle CSS classes on an HTML element.
 
@@ -154,13 +160,20 @@ toggle(element, 'class1 class2');
 
 **Contributing**
 
-Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the
+[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
+and
+[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 **Sponsor me**
 
-I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+I'm an Open Source evangelist, creating stuff that does not exist yet to help
+get rid of secondary activities and to enhance systems already in place, be it
+documentation or web sites.
 
-The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+The sponsorship is an unique opportunity to alleviate more hours for me to
+maintain my projects, create new ones and contribute to the large community
+we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
@@ -168,4 +181,5 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ---
 
-This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net)
+is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

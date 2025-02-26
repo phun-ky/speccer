@@ -6,7 +6,7 @@
 
 # types/bezier
 
-> Last updated 2025-02-21T09:17:08.278Z
+> Last updated 2025-02-26T10:30:33.234Z
 
 ## Table of Contents
 
@@ -28,7 +28,8 @@ type BezierPathOptionsType = {
 };
 ```
 
-Defined in: [src/types/bezier.ts:29](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L29)
+Defined in:
+[src/types/bezier.ts:29](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L29)
 
 Options for creating a bezier path.
 
@@ -97,7 +98,8 @@ type CoordinatesForBezierObjectType = {
 };
 ```
 
-Defined in: [src/types/bezier.ts:46](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L46)
+Defined in:
+[src/types/bezier.ts:46](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L46)
 
 #### Type declaration
 
@@ -183,7 +185,8 @@ type CreateCoordinatesForCurveCoordParamType = {
 };
 ```
 
-Defined in: [src/types/bezier.ts:56](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L56)
+Defined in:
+[src/types/bezier.ts:56](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L56)
 
 Parameters for creating coordinates for a curve.
 
@@ -287,7 +290,8 @@ type CreateCoordinatesForCurveOptionsParamType = {
 };
 ```
 
-Defined in: [src/types/bezier.ts:81](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L81)
+Defined in:
+[src/types/bezier.ts:81](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L81)
 
 Options for creating coordinates for a curve.
 
@@ -374,7 +378,8 @@ type CurlyBezierPathOptionsType = {
 };
 ```
 
-Defined in: [src/types/bezier.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L4)
+Defined in:
+[src/types/bezier.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/bezier.ts#L4)
 
 Options for creating a curly bezier path.
 
@@ -470,13 +475,20 @@ Options for creating a curly bezier path.
 
 **Contributing**
 
-Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the
+[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
+and
+[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 **Sponsor me**
 
-I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+I'm an Open Source evangelist, creating stuff that does not exist yet to help
+get rid of secondary activities and to enhance systems already in place, be it
+documentation or web sites.
 
-The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+The sponsorship is an unique opportunity to alleviate more hours for me to
+maintain my projects, create new ones and contribute to the large community
+we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
@@ -484,4 +496,5 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ---
 
-This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net)
+is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

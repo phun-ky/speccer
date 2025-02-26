@@ -1,5 +1,20 @@
 # Changelog
 
+## [11.2.11](https://github.com/phun-ky/speccer/compare/v11.2.10...v11.2.11) (2025-02-26)
+
+### Tasks
+
+* 🤖 Add `@eslint/markdown` ([18ab3bd](https://github.com/phun-ky/speccer/commit/18ab3bd8b3e68c956c8b178c68ac520cea05cd78))
+* 🤖 Make sure we can format markdown files on save ([69a2130](https://github.com/phun-ky/speccer/commit/69a2130ae1c7564a43f0c9fbfc5743eeac1a9cb9))
+
+### Documentation
+
+* ✏️ Typos ([4098aa0](https://github.com/phun-ky/speccer/commit/4098aa0cd1fc5047c9d7d41e2616b1250843f6b6))
+
+### Bug
+
+* 🐛 Use correct language code in dev files ([52eacb8](https://github.com/phun-ky/speccer/commit/52eacb877cb136bdd9d851bbfcc36bef1e6e73f8))
+
 ## [11.2.10](https://github.com/phun-ky/speccer/compare/v11.2.9...v11.2.10) (2025-02-21)
 
 ### Tasks

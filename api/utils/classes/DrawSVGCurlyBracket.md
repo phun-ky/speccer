@@ -6,7 +6,7 @@
 
 # utils/classes/DrawSVGCurlyBracket
 
-> Last updated 2025-02-21T09:17:08.299Z
+> Last updated 2025-02-26T10:30:33.256Z
 
 ## Table of Contents
 
@@ -17,7 +17,8 @@
 
 ### DrawSVGCurlyBracket
 
-Defined in: [src/utils/classes/DrawSVGCurlyBracket.ts:10](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L10)
+Defined in:
+[src/utils/classes/DrawSVGCurlyBracket.ts:10](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L10)
 
 Class representing a DrawSVGCurlyBracket instance.
 
@@ -29,7 +30,8 @@ Class representing a DrawSVGCurlyBracket instance.
 new DrawSVGCurlyBracket(startElement, stopElement): DrawSVGCurlyBracket
 ```
 
-Defined in: [src/utils/classes/DrawSVGCurlyBracket.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L23)
+Defined in:
+[src/utils/classes/DrawSVGCurlyBracket.ts:23](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L23)
 
 Creates a new DrawSVGCurlyBracket instance.
 
@@ -61,7 +63,8 @@ Creates a new DrawSVGCurlyBracket instance.
 connect(): void
 ```
 
-Defined in: [src/utils/classes/DrawSVGCurlyBracket.ts:70](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L70)
+Defined in:
+[src/utils/classes/DrawSVGCurlyBracket.ts:70](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L70)
 
 Connects and draws the curly bracket.
 
@@ -75,7 +78,8 @@ Connects and draws the curly bracket.
 draw(path): Promise<void>
 ```
 
-Defined in: [src/utils/classes/DrawSVGCurlyBracket.ts:104](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L104)
+Defined in:
+[src/utils/classes/DrawSVGCurlyBracket.ts:104](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L104)
 
 Draws the curly bracket based on the provided path.
 
@@ -97,13 +101,20 @@ Will throw an error if no path is provided.
 
 **Contributing**
 
-Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the
+[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
+and
+[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 **Sponsor me**
 
-I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+I'm an Open Source evangelist, creating stuff that does not exist yet to help
+get rid of secondary activities and to enhance systems already in place, be it
+documentation or web sites.
 
-The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+The sponsorship is an unique opportunity to alleviate more hours for me to
+maintain my projects, create new ones and contribute to the large community
+we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
@@ -111,4 +122,5 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ---
 
-This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net)
+is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

@@ -6,7 +6,7 @@
 
 # features/a11y/constants
 
-> Last updated 2025-02-21T09:17:08.264Z
+> Last updated 2025-02-26T10:30:33.220Z
 
 ## Table of Contents
 
@@ -24,7 +24,8 @@
 const SPECCER_LANDMARK_ELEMENTS_SELECTOR: '\nheader, footer, section, form, main, nav, aside, [role="section"], [role="banner"],\n[role="complementary"], [role="contentinfo"], [role="form"], [role="main"],\n[role="navigation"], [role="region"], [role="search"]\n';
 ```
 
-Defined in: [src/features/a11y/constants/index.ts:50](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/constants/index.ts#L50)
+Defined in:
+[src/features/a11y/constants/index.ts:50](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/constants/index.ts#L50)
 
 Selector string for landmark elements.
 
@@ -36,7 +37,8 @@ Selector string for landmark elements.
 const SPECCER_MODIFIER_KEYS: string[];
 ```
 
-Defined in: [src/features/a11y/constants/index.ts:5](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/constants/index.ts#L5)
+Defined in:
+[src/features/a11y/constants/index.ts:5](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/constants/index.ts#L5)
 
 Array of keys considered as modifiers in shortcuts.
 
@@ -48,7 +50,8 @@ Array of keys considered as modifiers in shortcuts.
 const SPECCER_PHYSICAL_KEYS: string[];
 ```
 
-Defined in: [src/features/a11y/constants/index.ts:26](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/constants/index.ts#L26)
+Defined in:
+[src/features/a11y/constants/index.ts:26](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/constants/index.ts#L26)
 
 ---
 
@@ -58,7 +61,8 @@ Defined in: [src/features/a11y/constants/index.ts:26](https://github.com/phun-ky
 const SPECCER_TABBABLE_ELEMENTS_SELECTOR: "\n  a[href], area[href], input:not([disabled]):not([tabindex='-1']),\n  button:not([disabled]):not([tabindex='-1']),select:not([disabled]):not([tabindex='-1']),\n  textarea:not([disabled]):not([tabindex='-1']),\n  iframe, object, embed, *[tabindex]:not([tabindex='-1']), *[contenteditable=true]\n";
 ```
 
-Defined in: [src/features/a11y/constants/index.ts:39](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/constants/index.ts#L39)
+Defined in:
+[src/features/a11y/constants/index.ts:39](https://github.com/phun-ky/speccer/blob/main/src/features/a11y/constants/index.ts#L39)
 
 Selector string for tabbable elements.
 
@@ -66,13 +70,20 @@ Selector string for tabbable elements.
 
 **Contributing**
 
-Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the
+[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
+and
+[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 **Sponsor me**
 
-I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+I'm an Open Source evangelist, creating stuff that does not exist yet to help
+get rid of secondary activities and to enhance systems already in place, be it
+documentation or web sites.
 
-The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+The sponsorship is an unique opportunity to alleviate more hours for me to
+maintain my projects, create new ones and contribute to the large community
+we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
@@ -80,4 +91,5 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ---
 
-This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net)
+is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

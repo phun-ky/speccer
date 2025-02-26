@@ -6,7 +6,7 @@
 
 # utils/get-options/utils
 
-> Last updated 2025-02-21T09:17:08.303Z
+> Last updated 2025-02-26T10:30:33.261Z
 
 ## Table of Contents
 
@@ -24,9 +24,11 @@
 function getFeatureBasedOnArea(areaString, targetStyle): SpeccerFeatureType;
 ```
 
-Defined in: [src/utils/get-options/utils/index.ts:32](https://github.com/phun-ky/speccer/blob/main/src/utils/get-options/utils/index.ts#L32)
+Defined in:
+[src/utils/get-options/utils/index.ts:32](https://github.com/phun-ky/speccer/blob/main/src/utils/get-options/utils/index.ts#L32)
 
-Determines the Speccer feature type based on the given area string and target element.
+Determines the Speccer feature type based on the given area string and target
+element.
 
 #### Parameters
 
@@ -59,12 +61,14 @@ console.log(feature); // Output: 'pin'
 function getGridToggleValue(areaString): 'columns' | 'rows' | 'both';
 ```
 
-Defined in: [src/utils/get-options/utils/index.ts:95](https://github.com/phun-ky/speccer/blob/main/src/utils/get-options/utils/index.ts#L95)
+Defined in:
+[src/utils/get-options/utils/index.ts:95](https://github.com/phun-ky/speccer/blob/main/src/utils/get-options/utils/index.ts#L95)
 
 Determines the grid toggle value based on the provided area string.
 
-This function checks whether `'columns'` or `'rows'` are present in the area string
-and returns the respective toggle value. Defaults to `'both'` if neither is found.
+This function checks whether `'columns'` or `'rows'` are present in the area
+string and returns the respective toggle value. Defaults to `'both'` if neither
+is found.
 
 #### Parameters
 
@@ -94,7 +98,8 @@ console.log(getGridToggleValue('grid')); // Output: 'both'
 function getPositionBasedOnArea(areaString): SpeccerPositionType;
 ```
 
-Defined in: [src/utils/get-options/utils/index.ts:67](https://github.com/phun-ky/speccer/blob/main/src/utils/get-options/utils/index.ts#L67)
+Defined in:
+[src/utils/get-options/utils/index.ts:67](https://github.com/phun-ky/speccer/blob/main/src/utils/get-options/utils/index.ts#L67)
 
 Determines the position based on the provided area string.
 
@@ -129,12 +134,14 @@ console.log(getPositionBasedOnArea('unknown-area')); // Output: 'top'
 function getSpacingToggleValue(areaString): 'both' | 'margin' | 'padding';
 ```
 
-Defined in: [src/utils/get-options/utils/index.ts:119](https://github.com/phun-ky/speccer/blob/main/src/utils/get-options/utils/index.ts#L119)
+Defined in:
+[src/utils/get-options/utils/index.ts:119](https://github.com/phun-ky/speccer/blob/main/src/utils/get-options/utils/index.ts#L119)
 
 Determines the spacing toggle value based on the provided area string.
 
-This function checks whether `'margin'` or `'padding'` are present in the area string
-and returns the respective toggle value. Defaults to `'both'` if neither is found.
+This function checks whether `'margin'` or `'padding'` are present in the area
+string and returns the respective toggle value. Defaults to `'both'` if neither
+is found.
 
 #### Parameters
 
@@ -160,13 +167,20 @@ console.log(getSpacingToggleValue('spacing')); // Output: 'both'
 
 **Contributing**
 
-Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the
+[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
+and
+[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 **Sponsor me**
 
-I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+I'm an Open Source evangelist, creating stuff that does not exist yet to help
+get rid of secondary activities and to enhance systems already in place, be it
+documentation or web sites.
 
-The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+The sponsorship is an unique opportunity to alleviate more hours for me to
+maintain my projects, create new ones and contribute to the large community
+we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
@@ -174,4 +188,5 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ---
 
-This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net)
+is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

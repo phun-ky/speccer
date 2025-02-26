@@ -6,7 +6,7 @@
 
 # types/speccer
 
-> Last updated 2025-02-21T09:17:08.293Z
+> Last updated 2025-02-26T10:30:33.248Z
 
 ## Table of Contents
 
@@ -21,7 +21,8 @@
 
 ### SpeccerOptionsInterface
 
-Defined in: [src/types/speccer.ts:13](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L13)
+Defined in:
+[src/types/speccer.ts:13](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L13)
 
 #### Properties
 
@@ -69,7 +70,8 @@ type SpeccerFeatureType =
   | 'spacing';
 ```
 
-Defined in: [src/types/speccer.ts:3](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L3)
+Defined in:
+[src/types/speccer.ts:3](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L3)
 
 ---
 
@@ -79,7 +81,8 @@ Defined in: [src/types/speccer.ts:3](https://github.com/phun-ky/speccer/blob/mai
 type SpeccerFunctionType = () => void;
 ```
 
-Defined in: [src/types/speccer.ts:1](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L1)
+Defined in:
+[src/types/speccer.ts:1](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L1)
 
 #### Returns
 
@@ -93,19 +96,27 @@ Defined in: [src/types/speccer.ts:1](https://github.com/phun-ky/speccer/blob/mai
 type SpeccerPositionType = 'top' | 'left' | 'right' | 'bottom';
 ```
 
-Defined in: [src/types/speccer.ts:11](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L11)
+Defined in:
+[src/types/speccer.ts:11](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L11)
 
 ---
 
 **Contributing**
 
-Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the
+[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
+and
+[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 **Sponsor me**
 
-I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+I'm an Open Source evangelist, creating stuff that does not exist yet to help
+get rid of secondary activities and to enhance systems already in place, be it
+documentation or web sites.
 
-The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+The sponsorship is an unique opportunity to alleviate more hours for me to
+maintain my projects, create new ones and contribute to the large community
+we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
@@ -113,4 +124,5 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ---
 
-This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net)
+is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).

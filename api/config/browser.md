@@ -6,15 +6,16 @@
 
 # config/browser
 
-> Last updated 2025-02-21T09:17:08.260Z
+> Last updated 2025-02-26T10:30:33.216Z
 
-Contains the helper functions to activate SPECCER via a script tag, based on attributes:
+Contains the helper functions to activate SPECCER via a script tag, based on
+attributes:
 
-> \[!NOTE]
-> If the activation method is dom or instant, a resize feature is activated, making sure everything is re-rendered on resize. for manual or lazy loading, you are responsible to handle resize yourself.
+> \[!NOTE] If the activation method is dom or instant, a resize feature is
+> activated, making sure everything is re-rendered on resize. for manual or lazy
+> loading, you are responsible to handle resize yourself.
 
-> \[!NOTE]
-> Remember to add the CSS file!:
+> \[!NOTE] Remember to add the CSS file!:
 
 > ```html
 > <link rel="stylesheet" href="../path/to/speccer.min.css" />
@@ -39,7 +40,8 @@ Contains the helper functions to activate SPECCER via a script tag, based on att
 <script src="../speccer.js"</script>
 ```
 
-If no attribute is applied, it will default to `data-dom`, as in, it will initialize when `DOMContentLoaded` is fired.
+If no attribute is applied, it will default to `data-dom`, as in, it will
+initialize when `DOMContentLoaded` is fired.
 
 ## Manual initiation
 
@@ -81,7 +83,8 @@ Lazy loads `speccer()` per specced element
 function activate(speccer): void;
 ```
 
-Defined in: [src/config/browser.ts:219](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L219)
+Defined in:
+[src/config/browser.ts:219](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L219)
 
 A function to activate speccer based on script attributes.
 
@@ -110,7 +113,8 @@ A function to activate speccer based on script attributes.
 function dom(speccer): void;
 ```
 
-Defined in: [src/config/browser.ts:83](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L83)
+Defined in:
+[src/config/browser.ts:83](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L83)
 
 A function to initialize speccer when the DOM is ready.
 
@@ -139,7 +143,8 @@ A function to initialize speccer when the DOM is ready.
 function lazy(): void;
 ```
 
-Defined in: [src/config/browser.ts:101](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L101)
+Defined in:
+[src/config/browser.ts:101](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L101)
 
 A function to initialize lazy speccer functionality.
 
@@ -162,7 +167,8 @@ A function to initialize lazy speccer functionality.
 function manual(speccer): void;
 ```
 
-Defined in: [src/config/browser.ts:204](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L204)
+Defined in:
+[src/config/browser.ts:204](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L204)
 
 A function to manually activate speccer.
 
@@ -187,13 +193,20 @@ A function to manually activate speccer.
 
 **Contributing**
 
-Want to contribute? Please read the [CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+Want to contribute? Please read the
+[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
+and
+[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
 
 **Sponsor me**
 
-I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+I'm an Open Source evangelist, creating stuff that does not exist yet to help
+get rid of secondary activities and to enhance systems already in place, be it
+documentation or web sites.
 
-The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+The sponsorship is an unique opportunity to alleviate more hours for me to
+maintain my projects, create new ones and contribute to the large community
+we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
@@ -201,4 +214,5 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 ---
 
-This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net) is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
+This project created by [Alexander Vassbotn Røyne-Helgesen](http://phun-ky.net)
+is licensed under a [MIT License](https://choosealicense.com/licenses/mit/).
