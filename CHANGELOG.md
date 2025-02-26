@@ -1,5 +1,26 @@
 # Changelog
 
+## [11.2.10](https://github.com/phun-ky/speccer/compare/v11.2.9...v11.2.10) (2025-02-21)
+
+### Tasks
+
+* 🤖 Add `.markdownlint.json` for config ([14a1847](https://github.com/phun-ky/speccer/commit/14a18478289d28f3c9f69da2e304272e47b9f3c7))
+* 🤖 Add more keywords ([f185a44](https://github.com/phun-ky/speccer/commit/f185a44f8d5cab089d0e0691c373561e4ac0dc71))
+* 🤖 Add prettier to lint and format ([3e62c60](https://github.com/phun-ky/speccer/commit/3e62c608a4fe288214142c23c88026c795d4d046))
+* 🤖 Remove `.stylintrc`, no longer needed ([9da87ac](https://github.com/phun-ky/speccer/commit/9da87ac56859bbb77f10397d8cdf4936026b90f1))
+* 🤖 Remove map files from `files` in `package.json` ([dc69f38](https://github.com/phun-ky/speccer/commit/dc69f385cb290802d883e89e89d95f9e36e3bf31))
+* 🤖 test prettier ([2f60d91](https://github.com/phun-ky/speccer/commit/2f60d91503101733b8cb7eb518f86dc3fb2f5b34))
+* 🤖 Update deps ([0e80a79](https://github.com/phun-ky/speccer/commit/0e80a798648c9d36af0d4e1eeedd32da8efa6c65))
+
+### Documentation
+
+* ✏️ Add missing alt text for if logo ([098684b](https://github.com/phun-ky/speccer/commit/098684b03c7651b62663b4a93c75ef3843f241fb))
+
+### Refactoring
+
+* 💡 Remove sourcemaps, update banner and rename config ([624e13c](https://github.com/phun-ky/speccer/commit/624e13c1efd42af17a09f6670ab7206baa6d1ba1))
+* 💡 Split out interface ([f91b904](https://github.com/phun-ky/speccer/commit/f91b904620d84d96da0d4706714cd1e3fd9a540b))
+
 ## [11.2.9](https://github.com/phun-ky/speccer/compare/v11.2.8...v11.2.9) (2025-02-18)
 
 ### Tasks

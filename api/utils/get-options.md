@@ -6,7 +6,7 @@
 
 # utils/get-options
 
-> Last updated 2025-02-18T12:15:27.210Z
+> Last updated 2025-02-21T09:17:08.303Z
 
 ## Table of Contents
 
@@ -25,7 +25,7 @@ function getOptions(
 ): SpeccerOptionsInterface;
 ```
 
-Defined in: [src/utils/get-options/index.ts:46](https://github.com/phun-ky/speccer/blob/main/src/utils/get-options/index.ts#L46)
+Defined in: [src/utils/get-options/index.ts:50](https://github.com/phun-ky/speccer/blob/main/src/utils/get-options/index.ts#L50)
 
 Generates Speccer options based on the provided area string and target style.
 
