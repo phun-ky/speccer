@@ -6,7 +6,7 @@
 
 # utils/get-coords-pair-from-objects
 
-> Last updated 2025-03-06T09:34:26.624Z
+> Last updated 2025-04-15T06:57:05.327Z
 
 ## Table of Contents
 
@@ -42,8 +42,8 @@ Get the x and y coordinates of two elements and return them as an object.
 | --------- | ----------------------------------------------------------------------- | ------------- | ------------------------------------------- |
 | `el1`     | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | `undefined`   | The first HTML element.                     |
 | `el2`     | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | `undefined`   | The second HTML element.                    |
-| `pos1`?   | `string`                                                                | `'center'`    | The position to use for the first element.  |
-| `pos2`?   | `string`                                                                | `'center'`    | The position to use for the second element. |
+| `pos1?`   | `string`                                                                | `'center'`    | The position to use for the first element.  |
+| `pos2?`   | `string`                                                                | `'center'`    | The position to use for the second element. |
 
 #### Returns
 

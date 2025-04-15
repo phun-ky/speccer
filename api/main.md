@@ -6,7 +6,7 @@
 
 # main
 
-> Last updated 2025-03-06T09:34:26.595Z
+> Last updated 2025-04-15T06:57:05.298Z
 
 ## Table of Contents
 
@@ -68,7 +68,7 @@ Defined in:
   <tbody>
     <tr>
       <td>
-        <a id="create" /> `create`
+        <a id="create" /> `create()`
       </td>
 
       <td>
@@ -76,7 +76,7 @@ Defined in:
       </td>
 
       <td>
-        gridCreate
+        `gridCreate`
       </td>
 
       <td>
@@ -86,15 +86,15 @@ Defined in:
 
     <tr>
       <td>
-        <a id="element" /> `element`
+        <a id="element" /> `element()`
       </td>
 
       <td>
-        (`targetElement`, `options`?) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+        (`targetElement`, `options?`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
       </td>
 
       <td>
-        gridElement
+        `gridElement`
       </td>
 
       <td>
@@ -134,7 +134,7 @@ Defined in:
   <tbody>
     <tr>
       <td>
-        <a id="create-1" /> `create`
+        <a id="create-1" /> `create()`
       </td>
 
       <td>
@@ -142,7 +142,7 @@ Defined in:
       </td>
 
       <td>
-        markCreate
+        `markCreate`
       </td>
 
       <td>
@@ -152,7 +152,7 @@ Defined in:
 
     <tr>
       <td>
-        <a id="element-1" /> `element`
+        <a id="element-1" /> `element()`
       </td>
 
       <td>
@@ -160,7 +160,7 @@ Defined in:
       </td>
 
       <td>
-        markElement
+        `markElement`
       </td>
 
       <td>
@@ -200,7 +200,7 @@ Defined in:
   <tbody>
     <tr>
       <td>
-        <a id="create-2" /> `create`
+        <a id="create-2" /> `create()`
       </td>
 
       <td>
@@ -208,7 +208,7 @@ Defined in:
       </td>
 
       <td>
-        measureCreate
+        `measureCreate`
       </td>
 
       <td>
@@ -218,15 +218,15 @@ Defined in:
 
     <tr>
       <td>
-        <a id="element-2" /> `element`
+        <a id="element-2" /> `element()`
       </td>
 
       <td>
-        (`targetElement`, `options`?) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+        (`targetElement`, `options?`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
       </td>
 
       <td>
-        measureElement
+        `measureElement`
       </td>
 
       <td>
@@ -267,7 +267,7 @@ Defined in:
   <tbody>
     <tr>
       <td>
-        <a id="activate" /> `activate`
+        <a id="activate" /> `activate()`
       </td>
 
       <td>
@@ -281,7 +281,7 @@ Defined in:
 
     <tr>
       <td>
-        <a id="dom" /> `dom`
+        <a id="dom" /> `dom()`
       </td>
 
       <td>
@@ -295,7 +295,7 @@ Defined in:
 
     <tr>
       <td>
-        <a id="lazy" /> `lazy`
+        <a id="lazy" /> `lazy()`
       </td>
 
       <td>
@@ -309,7 +309,7 @@ Defined in:
 
     <tr>
       <td>
-        <a id="manual" /> `manual`
+        <a id="manual" /> `manual()`
       </td>
 
       <td>
@@ -358,7 +358,7 @@ Defined in:
   <tbody>
     <tr>
       <td>
-        <a id="createpinelement" /> `createPinElement`
+        <a id="createpinelement" /> `createPinElement()`
       </td>
 
       <td>
@@ -372,7 +372,7 @@ Defined in:
 
     <tr>
       <td>
-        <a id="pinelement" /> `pinElement`
+        <a id="pinelement" /> `pinElement()`
       </td>
 
       <td>
@@ -386,11 +386,11 @@ Defined in:
 
     <tr>
       <td>
-        <a id="pinelements" /> `pinElements`
+        <a id="pinelements" /> `pinElements()`
       </td>
 
       <td>
-        (`sectionElement`, `options`?) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+        (`sectionElement`, `options?`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
       </td>
 
       <td>
@@ -430,7 +430,7 @@ Defined in:
   <tbody>
     <tr>
       <td>
-        <a id="create-3" /> `create`
+        <a id="create-3" /> `create()`
       </td>
 
       <td>
@@ -438,7 +438,7 @@ Defined in:
       </td>
 
       <td>
-        spacingCreate
+        `spacingCreate`
       </td>
 
       <td>
@@ -448,15 +448,15 @@ Defined in:
 
     <tr>
       <td>
-        <a id="element-3" /> `element`
+        <a id="element-3" /> `element()`
       </td>
 
       <td>
-        (`targetElement`, `options`?) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+        (`targetElement`, `options?`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
       </td>
 
       <td>
-        spacingElement
+        `spacingElement`
       </td>
 
       <td>
@@ -496,7 +496,7 @@ Defined in:
   <tbody>
     <tr>
       <td>
-        <a id="create-4" /> `create`
+        <a id="create-4" /> `create()`
       </td>
 
       <td>
@@ -504,7 +504,7 @@ Defined in:
       </td>
 
       <td>
-        typographyCreate
+        `typographyCreate`
       </td>
 
       <td>
@@ -514,15 +514,15 @@ Defined in:
 
     <tr>
       <td>
-        <a id="element-4" /> `element`
+        <a id="element-4" /> `element()`
       </td>
 
       <td>
-        (`targetElement`, `options`?) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+        (`targetElement`, `options?`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
       </td>
 
       <td>
-        typographyElement
+        `typographyElement`
       </td>
 
       <td>

@@ -6,7 +6,7 @@
 
 # features/pin
 
-> Last updated 2025-03-06T09:34:26.591Z
+> Last updated 2025-04-15T06:57:05.292Z
 
 This feature annotate or highlight the anatomy of an element.
 
@@ -54,7 +54,7 @@ attributes.
 | Parameter        | Type                                                                     | Description                                     |
 | ---------------- | ------------------------------------------------------------------------ | ----------------------------------------------- |
 | `sectionElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)  | The section element containing pinned elements. |
-| `options`?       | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Options.                                        |
+| `options?`       | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Options.                                        |
 
 #### Returns
 
@@ -74,6 +74,8 @@ pinElements(sectionElement);
 ### createPinElement
 
 Re-exports [createPinElement](pin/utils/create-pin-element.md#createpinelement)
+
+---
 
 ### pinElement
 

@@ -6,7 +6,7 @@
 
 # features/spacing/utils/position
 
-> Last updated 2025-03-06T09:34:26.593Z
+> Last updated 2025-04-15T06:57:05.296Z
 
 ## Table of Contents
 
@@ -39,7 +39,7 @@ element.
 | `property`      | `string`                                                                       | The CSS property to set (e.g., 'marginTop', 'marginLeft', etc.). |
 | `value`         | `number`                                                                       | The value of the CSS property.                                   |
 | `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)        | The target element.                                              |
-| `options`?      | [`SpeccerOptionsInterface`](../../../types/speccer.md#specceroptionsinterface) | Options.                                                         |
+| `options?`      | [`SpeccerOptionsInterface`](../../../types/speccer.md#specceroptionsinterface) | Options.                                                         |
 
 #### Returns
 

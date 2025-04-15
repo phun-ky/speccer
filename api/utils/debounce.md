@@ -6,7 +6,7 @@
 
 # utils/debounce
 
-> Last updated 2025-03-06T09:34:26.624Z
+> Last updated 2025-04-15T06:57:05.326Z
 
 ## Table of Contents
 
@@ -34,7 +34,7 @@ was invoked.
 | ------------ | ------------------------------------------------------------------------- | ------------- | ------------------------------------------------------------------------------------ |
 | `func`       | [`DebounceAnyFunctionType`](../types/debounce.md#debounceanyfunctiontype) | `undefined`   | The function to debounce.                                                            |
 | `wait`       | `number`                                                                  | `undefined`   | The number of milliseconds to wait before invoking the function after the last call. |
-| `immediate`? | `boolean`                                                                 | `false`       | If `true`, the function is invoked immediately after the first call.                 |
+| `immediate?` | `boolean`                                                                 | `false`       | If `true`, the function is invoked immediately after the first call.                 |
 
 #### Returns
 

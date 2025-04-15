@@ -6,7 +6,7 @@
 
 # utils/get-options
 
-> Last updated 2025-03-06T09:34:26.625Z
+> Last updated 2025-04-15T06:57:05.328Z
 
 ## Table of Contents
 
@@ -40,7 +40,7 @@ options if provided.
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
 | `areaString`     | `string`                                                                                                                                                                           | The string defining the area type.            |
 | `targetStyle`    | [`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)\<[`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration)> | The computed style of the target element.     |
-| `customOptions`? | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface)                                                                                                           | Optional custom options to override defaults. |
+| `customOptions?` | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface)                                                                                                           | Optional custom options to override defaults. |
 
 #### Returns
 

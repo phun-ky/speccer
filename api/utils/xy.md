@@ -6,7 +6,7 @@
 
 # utils/xy
 
-> Last updated 2025-03-06T09:34:26.629Z
+> Last updated 2025-04-15T06:57:05.332Z
 
 ## Table of Contents
 
@@ -34,7 +34,7 @@ const xy: {
   right-top: (rect) => {
      x: number;
      y: number;
-    };
+  };
   top: (rect) => SpeccerCoordinatesInterface;
   top-center: (rect) => SpeccerCoordinatesInterface;
   top-left: (rect) => SpeccerCoordinatesInterface;
@@ -63,7 +63,7 @@ DOMRect.
   <tbody>
     <tr>
       <td>
-        <a id="bottom" /> `bottom`
+        <a id="bottom" /> `bottom()`
       </td>
 
       <td>
@@ -89,7 +89,7 @@ DOMRect.
 
     <tr>
       <td>
-        <a id="bottom-center" /> `bottom-center`
+        <a id="bottom-center" /> `bottom-center()`
       </td>
 
       <td>
@@ -115,7 +115,7 @@ DOMRect.
 
     <tr>
       <td>
-        <a id="bottom-left" /> `bottom-left`
+        <a id="bottom-left" /> `bottom-left()`
       </td>
 
       <td>
@@ -141,7 +141,7 @@ DOMRect.
 
     <tr>
       <td>
-        <a id="bottom-right" /> `bottom-right`
+        <a id="bottom-right" /> `bottom-right()`
       </td>
 
       <td>
@@ -167,7 +167,7 @@ DOMRect.
 
     <tr>
       <td>
-        <a id="center" /> `center`
+        <a id="center" /> `center()`
       </td>
 
       <td>
@@ -193,7 +193,7 @@ DOMRect.
 
     <tr>
       <td>
-        <a id="left" /> `left`
+        <a id="left" /> `left()`
       </td>
 
       <td>
@@ -219,7 +219,7 @@ DOMRect.
 
     <tr>
       <td>
-        <a id="left-bottom" /> `left-bottom`
+        <a id="left-bottom" /> `left-bottom()`
       </td>
 
       <td>
@@ -245,7 +245,7 @@ DOMRect.
 
     <tr>
       <td>
-        <a id="left-center" /> `left-center`
+        <a id="left-center" /> `left-center()`
       </td>
 
       <td>
@@ -271,7 +271,7 @@ DOMRect.
 
     <tr>
       <td>
-        <a id="left-top" /> `left-top`
+        <a id="left-top" /> `left-top()`
       </td>
 
       <td>
@@ -297,7 +297,7 @@ DOMRect.
 
     <tr>
       <td>
-        <a id="right" /> `right`
+        <a id="right" /> `right()`
       </td>
 
       <td>
@@ -323,7 +323,7 @@ DOMRect.
 
     <tr>
       <td>
-        <a id="right-bottom" /> `right-bottom`
+        <a id="right-bottom" /> `right-bottom()`
       </td>
 
       <td>
@@ -349,7 +349,7 @@ DOMRect.
 
     <tr>
       <td>
-        <a id="right-center" /> `right-center`
+        <a id="right-center" /> `right-center()`
       </td>
 
       <td>
@@ -375,7 +375,7 @@ DOMRect.
 
     <tr>
       <td>
-        <a id="right-top" /> `right-top`
+        <a id="right-top" /> `right-top()`
       </td>
 
       <td>
@@ -396,7 +396,7 @@ DOMRect.
 
     <tr>
       <td>
-        <a id="top" /> `top`
+        <a id="top" /> `top()`
       </td>
 
       <td>
@@ -422,7 +422,7 @@ DOMRect.
 
     <tr>
       <td>
-        <a id="top-center" /> `top-center`
+        <a id="top-center" /> `top-center()`
       </td>
 
       <td>
@@ -448,7 +448,7 @@ DOMRect.
 
     <tr>
       <td>
-        <a id="top-left" /> `top-left`
+        <a id="top-left" /> `top-left()`
       </td>
 
       <td>
@@ -474,7 +474,7 @@ DOMRect.
 
     <tr>
       <td>
-        <a id="top-right" /> `top-right`
+        <a id="top-right" /> `top-right()`
       </td>
 
       <td>

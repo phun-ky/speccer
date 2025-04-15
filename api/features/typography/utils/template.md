@@ -6,7 +6,7 @@
 
 # features/typography/utils/template
 
-> Last updated 2025-03-06T09:34:26.595Z
+> Last updated 2025-04-15T06:57:05.298Z
 
 ## Table of Contents
 
@@ -31,7 +31,7 @@ Generate a HTML string for typography styles of a target element.
 | Parameter          | Type                                                                    | Default value | Description                                                 |
 | ------------------ | ----------------------------------------------------------------------- | ------------- | ----------------------------------------------------------- |
 | `targetElement`    | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | `undefined`   | The target element for which to generate typography styles. |
-| `useHighlighting`? | `boolean`                                                               | `false`       | If we should use highlighting markup                        |
+| `useHighlighting?` | `boolean`                                                               | `false`       | If we should use highlighting markup                        |
 
 #### Returns
 

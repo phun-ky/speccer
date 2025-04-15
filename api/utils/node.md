@@ -6,7 +6,7 @@
 
 # utils/node
 
-> Last updated 2025-03-06T09:34:26.626Z
+> Last updated 2025-04-15T06:57:05.329Z
 
 ## Table of Contents
 
@@ -52,7 +52,7 @@ after(referenceElement, newElement);
 ### isElementHidden()
 
 ```ts
-function isElementHidden(element): boolean
+function isElementHidden(element): boolean;
 ````
 
 Defined in:

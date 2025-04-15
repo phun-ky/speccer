@@ -6,7 +6,7 @@
 
 # utils/classes/DrawCircle
 
-> Last updated 2025-03-06T09:34:26.620Z
+> Last updated 2025-04-15T06:57:05.322Z
 
 ## Table of Contents
 
@@ -24,13 +24,13 @@ Class representing a DrawCircle instance.
 
 #### Constructors
 
-##### new DrawCircle()
+##### Constructor
 
 ```ts
 new DrawCircle(
    el,
    radius,
-   options): DrawCircle
+   options): DrawCircle;
 ```
 
 Defined in:
@@ -48,7 +48,7 @@ Creates a new DrawCircle instance.
 
 ###### Returns
 
-[`DrawCircle`](DrawCircle.md#drawcircle)
+[`DrawCircle`](#drawcircle)
 
 #### Properties
 
@@ -64,7 +64,7 @@ Creates a new DrawCircle instance.
 ##### draw()
 
 ```ts
-draw(): Promise<void>
+draw(): Promise<void>;
 ```
 
 Defined in:

@@ -6,7 +6,7 @@
 
 # types/styles
 
-> Last updated 2025-03-06T09:34:26.615Z
+> Last updated 2025-04-15T06:57:05.317Z
 
 ## Table of Contents
 
@@ -29,76 +29,43 @@ type SpeccerStylesReturnType = {
 Defined in:
 [src/types/styles.ts:1](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L1)
 
-#### Type declaration
+#### Properties
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
+##### height?
 
-  <tbody>
-    <tr>
-      <td>
-        <a id="height" /> `height`?
-      </td>
+```ts
+optional height: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/styles.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L4)
 
-      <td>
-        [src/types/styles.ts:4](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L4)
-      </td>
-    </tr>
+##### left
 
-    <tr>
-      <td>
-        <a id="left" /> `left`
-      </td>
+```ts
+left: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/styles.ts:2](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L2)
 
-      <td>
-        [src/types/styles.ts:2](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L2)
-      </td>
-    </tr>
+##### top
 
-    <tr>
-      <td>
-        <a id="top" /> `top`
-      </td>
+```ts
+top: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/styles.ts:3](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L3)
 
-      <td>
-        [src/types/styles.ts:3](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L3)
-      </td>
-    </tr>
+##### width?
 
-    <tr>
-      <td>
-        <a id="width" /> `width`?
-      </td>
+```ts
+optional width: string;
+```
 
-      <td>
-        `string`
-      </td>
-
-      <td>
-        [src/types/styles.ts:5](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L5)
-      </td>
-    </tr>
-
-  </tbody>
-</table>
+Defined in:
+[src/types/styles.ts:5](https://github.com/phun-ky/speccer/blob/main/src/types/styles.ts#L5)
 
 ---
 

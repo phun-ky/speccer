@@ -6,7 +6,7 @@
 
 # utils/coords
 
-> Last updated 2025-03-06T09:34:26.623Z
+> Last updated 2025-04-15T06:57:05.325Z
 
 ## Table of Contents
 
@@ -48,7 +48,7 @@ A set of functions to retrieve specific coordinates from a DOMRect.
   <tbody>
     <tr>
       <td>
-        <a id="bottom" /> `bottom`
+        <a id="bottom" /> `bottom()`
       </td>
 
       <td>
@@ -73,7 +73,7 @@ A set of functions to retrieve specific coordinates from a DOMRect.
 
     <tr>
       <td>
-        <a id="center_x" /> `center_x`
+        <a id="center_x" /> `center_x()`
       </td>
 
       <td>
@@ -98,7 +98,7 @@ A set of functions to retrieve specific coordinates from a DOMRect.
 
     <tr>
       <td>
-        <a id="center_y" /> `center_y`
+        <a id="center_y" /> `center_y()`
       </td>
 
       <td>
@@ -123,7 +123,7 @@ A set of functions to retrieve specific coordinates from a DOMRect.
 
     <tr>
       <td>
-        <a id="left" /> `left`
+        <a id="left" /> `left()`
       </td>
 
       <td>
@@ -148,7 +148,7 @@ A set of functions to retrieve specific coordinates from a DOMRect.
 
     <tr>
       <td>
-        <a id="right" /> `right`
+        <a id="right" /> `right()`
       </td>
 
       <td>
@@ -173,7 +173,7 @@ A set of functions to retrieve specific coordinates from a DOMRect.
 
     <tr>
       <td>
-        <a id="top" /> `top`
+        <a id="top" /> `top()`
       </td>
 
       <td>

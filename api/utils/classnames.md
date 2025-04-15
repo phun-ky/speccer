@@ -6,7 +6,7 @@
 
 # utils/classnames
 
-> Last updated 2025-03-06T09:34:26.622Z
+> Last updated 2025-04-15T06:57:05.324Z
 
 ## Table of Contents
 
@@ -41,7 +41,7 @@ names.
 | Parameter  | Type                                                                                   | Description                                                                                   |
 | ---------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | `cls`      | [`ClassNamesFirstArgType`](../types/interfaces/classnames.md#classnamesfirstargtype)   | The class names as a string or an object with properties set to true or false.                |
-| `cls_obj`? | [`ClassNamesSecondArgType`](../types/interfaces/classnames.md#classnamessecondargtype) | An optional object with properties set to true or false to conditionally include class names. |
+| `cls_obj?` | [`ClassNamesSecondArgType`](../types/interfaces/classnames.md#classnamessecondargtype) | An optional object with properties set to true or false to conditionally include class names. |
 
 #### Returns
 
@@ -76,7 +76,7 @@ Remove CSS classes from an HTML element.
 | --------- | ----------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |
 | `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | `undefined`   | The HTML element from which classes should be removed. |
 | `cls`     | `string`                                                                | `undefined`   | The CSS classes to remove, separated by spaces.        |
-| `avoid`?  | `string`                                                                | `'noop'`      | Classes to avoid removing.                             |
+| `avoid?`  | `string`                                                                | `'noop'`      | Classes to avoid removing.                             |
 
 #### Returns
 
@@ -109,7 +109,7 @@ Add CSS classes to an HTML element.
 | --------- | ----------------------------------------------------------------------- | ------------- | -------------------------------------------------- |
 | `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | `undefined`   | The HTML element to which classes should be added. |
 | `cls`     | `string`                                                                | `undefined`   | The CSS classes to add, separated by spaces.       |
-| `avoid`?  | `string`                                                                | `'noop'`      | Classes to avoid adding.                           |
+| `avoid?`  | `string`                                                                | `'noop'`      | Classes to avoid adding.                           |
 
 #### Returns
 
@@ -142,7 +142,7 @@ Toggle CSS classes on an HTML element.
 | --------- | ----------------------------------------------------------------------- | ------------- | ---------------------------------------------------- |
 | `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | `undefined`   | The HTML element on which classes should be toggled. |
 | `cls`     | `string`                                                                | `undefined`   | The CSS classes to toggle, separated by spaces.      |
-| `avoid`?  | `string`                                                                | `'noop'`      | Classes to avoid toggling.                           |
+| `avoid?`  | `string`                                                                | `'noop'`      | Classes to avoid toggling.                           |
 
 #### Returns
 

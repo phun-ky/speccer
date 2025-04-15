@@ -6,7 +6,7 @@
 
 # features/measure
 
-> Last updated 2025-03-06T09:34:26.590Z
+> Last updated 2025-04-15T06:57:05.292Z
 
 This feature measures given element
 
@@ -100,7 +100,7 @@ specified target element based on the attribute values from `data-speccer`.
 | Parameter       | Type                                                                     | Description                              |
 | --------------- | ------------------------------------------------------------------------ | ---------------------------------------- |
 | `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)  | The target element to match styles with. |
-| `options`?      | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Options.                                 |
+| `options?`      | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Options.                                 |
 
 #### Returns
 

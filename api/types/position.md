@@ -6,7 +6,7 @@
 
 # types/position
 
-> Last updated 2025-03-06T09:34:26.614Z
+> Last updated 2025-04-15T06:57:05.316Z
 
 ## Table of Contents
 
@@ -46,76 +46,43 @@ Defined in:
 
 Type definition for position properties.
 
-#### Type declaration
+#### Properties
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
+##### height
 
-  <tbody>
-    <tr>
-      <td>
-        <a id="height" /> `height`
-      </td>
+```ts
+height: number;
+```
 
-      <td>
-        `number`
-      </td>
+Defined in:
+[src/types/position.ts:7](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L7)
 
-      <td>
-        [src/types/position.ts:7](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L7)
-      </td>
-    </tr>
+##### left
 
-    <tr>
-      <td>
-        <a id="left" /> `left`
-      </td>
+```ts
+left: number;
+```
 
-      <td>
-        `number`
-      </td>
+Defined in:
+[src/types/position.ts:6](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L6)
 
-      <td>
-        [src/types/position.ts:6](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L6)
-      </td>
-    </tr>
+##### top
 
-    <tr>
-      <td>
-        <a id="top" /> `top`
-      </td>
+```ts
+top: number;
+```
 
-      <td>
-        `number`
-      </td>
+Defined in:
+[src/types/position.ts:5](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L5)
 
-      <td>
-        [src/types/position.ts:5](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L5)
-      </td>
-    </tr>
+##### width
 
-    <tr>
-      <td>
-        <a id="width" /> `width`
-      </td>
+```ts
+width: number;
+```
 
-      <td>
-        `number`
-      </td>
-
-      <td>
-        [src/types/position.ts:8](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L8)
-      </td>
-    </tr>
-
-  </tbody>
-</table>
+Defined in:
+[src/types/position.ts:8](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L8)
 
 ---
 
@@ -135,76 +102,43 @@ Defined in:
 
 Type definition for position properties with units.
 
-#### Type declaration
+#### Properties
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
+##### height
 
-  <tbody>
-    <tr>
-      <td>
-        <a id="height-1" /> `height`
-      </td>
+```ts
+height: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/position.ts:17](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L17)
 
-      <td>
-        [src/types/position.ts:17](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L17)
-      </td>
-    </tr>
+##### left
 
-    <tr>
-      <td>
-        <a id="left-1" /> `left`
-      </td>
+```ts
+left: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/position.ts:16](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L16)
 
-      <td>
-        [src/types/position.ts:16](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L16)
-      </td>
-    </tr>
+##### top
 
-    <tr>
-      <td>
-        <a id="top-1" /> `top`
-      </td>
+```ts
+top: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/position.ts:15](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L15)
 
-      <td>
-        [src/types/position.ts:15](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L15)
-      </td>
-    </tr>
+##### width
 
-    <tr>
-      <td>
-        <a id="width-1" /> `width`
-      </td>
+```ts
+width: string;
+```
 
-      <td>
-        `string`
-      </td>
-
-      <td>
-        [src/types/position.ts:18](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L18)
-      </td>
-    </tr>
-
-  </tbody>
-</table>
+Defined in:
+[src/types/position.ts:18](https://github.com/phun-ky/speccer/blob/main/src/types/position.ts#L18)
 
 ---
 

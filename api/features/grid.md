@@ -6,7 +6,7 @@
 
 # features/grid
 
-> Last updated 2025-03-06T09:34:26.589Z
+> Last updated 2025-04-15T06:57:05.290Z
 
 This feature will highlight the grid spacing in a `display: grid;` element.
 
@@ -97,7 +97,7 @@ attribute and is a grid.
 | Parameter       | Type                                                                     | Description                                    |
 | --------------- | ------------------------------------------------------------------------ | ---------------------------------------------- |
 | `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)  | The target element to add the grid overlay to. |
-| `options`?      | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Options.                                       |
+| `options?`      | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Options.                                       |
 
 #### Returns
 

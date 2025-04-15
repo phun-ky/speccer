@@ -6,7 +6,7 @@
 
 # features/a11y/utils/add-a11y-element
 
-> Last updated 2025-03-06T09:34:26.586Z
+> Last updated 2025-04-15T06:57:05.287Z
 
 ## Table of Contents
 
@@ -35,8 +35,8 @@ and type.
 | Parameter       | Type                                                                    | Description                                               |
 | --------------- | ----------------------------------------------------------------------- | --------------------------------------------------------- |
 | `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | Target HTML element.                                      |
-| `content`?      | `unknown`                                                               | Content to be added to the accessibility element.         |
-| `type`?         | `string`                                                                | Type of accessibility element ('tabstops' or 'landmark'). |
+| `content?`      | `unknown`                                                               | Content to be added to the accessibility element.         |
+| `type?`         | `string`                                                                | Type of accessibility element ('tabstops' or 'landmark'). |
 
 #### Returns
 

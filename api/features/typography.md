@@ -6,7 +6,7 @@
 
 # features/typography
 
-> Last updated 2025-03-06T09:34:26.594Z
+> Last updated 2025-04-15T06:57:05.297Z
 
 This feature presents typography
 
@@ -98,7 +98,7 @@ Create a specced typography element for a given target element.
 | Parameter       | Type                                                                     | Description                                 |
 | --------------- | ------------------------------------------------------------------------ | ------------------------------------------- |
 | `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)  | The target element to specc typography for. |
-| `options`?      | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Custom options                              |
+| `options?`      | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Custom options                              |
 
 #### Returns
 

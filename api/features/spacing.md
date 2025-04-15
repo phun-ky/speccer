@@ -6,7 +6,7 @@
 
 # features/spacing
 
-> Last updated 2025-03-06T09:34:26.593Z
+> Last updated 2025-04-15T06:57:05.296Z
 
 This feature highlights the spacing of an element.
 
@@ -86,7 +86,7 @@ spacing styles.
 | Parameter       | Type                                                                     | Description                                        |
 | --------------- | ------------------------------------------------------------------------ | -------------------------------------------------- |
 | `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)  | The target element to create spacing elements for. |
-| `options`?      | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Options                                            |
+| `options?`      | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Options                                            |
 
 #### Returns
 

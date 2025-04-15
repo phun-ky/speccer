@@ -6,7 +6,7 @@
 
 # utils/bezier
 
-> Last updated 2025-03-06T09:34:26.618Z
+> Last updated 2025-04-15T06:57:05.320Z
 
 ## Table of Contents
 
@@ -131,12 +131,74 @@ direction.
 
 Positions for creating an SVG path for a curved line.
 
-| Name        | Type     | Defined in                                                                                       |
-| ----------- | -------- | ------------------------------------------------------------------------------------------------ |
-| `path1pos1` | `string` | [src/utils/bezier.ts:321](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L321) |
-| `path1pos2` | `string` | [src/utils/bezier.ts:322](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L322) |
-| `path2pos1` | `string` | [src/utils/bezier.ts:323](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L323) |
-| `path2pos2` | `string` | [src/utils/bezier.ts:324](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L324) |
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Defined in</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        `path1pos1`
+      </td>
+
+      <td>
+        `string`
+      </td>
+
+      <td>
+        [src/utils/bezier.ts:321](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L321)
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        `path1pos2`
+      </td>
+
+      <td>
+        `string`
+      </td>
+
+      <td>
+        [src/utils/bezier.ts:322](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L322)
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        `path2pos1`
+      </td>
+
+      <td>
+        `string`
+      </td>
+
+      <td>
+        [src/utils/bezier.ts:323](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L323)
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        `path2pos2`
+      </td>
+
+      <td>
+        `string`
+      </td>
+
+      <td>
+        [src/utils/bezier.ts:324](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L324)
+      </td>
+    </tr>
+
+  </tbody>
+</table>
 
 #### Example
 
@@ -177,10 +239,46 @@ Returns positions for creating an SVG path based on a cardinal direction.
 
 Positions for creating an SVG path.
 
-| Name   | Type     | Defined in                                                                                       |
-| ------ | -------- | ------------------------------------------------------------------------------------------------ |
-| `pos1` | `string` | [src/utils/bezier.ts:270](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L270) |
-| `pos2` | `string` | [src/utils/bezier.ts:270](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L270) |
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Defined in</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        `pos1`
+      </td>
+
+      <td>
+        `string`
+      </td>
+
+      <td>
+        [src/utils/bezier.ts:270](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L270)
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        `pos2`
+      </td>
+
+      <td>
+        `string`
+      </td>
+
+      <td>
+        [src/utils/bezier.ts:270](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L270)
+      </td>
+    </tr>
+
+  </tbody>
+</table>
 
 #### Example
 

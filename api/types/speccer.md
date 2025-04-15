@@ -6,7 +6,7 @@
 
 # types/speccer
 
-> Last updated 2025-03-06T09:34:26.614Z
+> Last updated 2025-04-15T06:57:05.316Z
 
 ## Table of Contents
 
@@ -45,14 +45,14 @@ Defined in:
 | `pin.text`                          | `boolean`                                                                                                                                                             | [src/types/speccer.ts:22](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L22) |
 | `pin.useCurlyBrackets`              | `boolean`                                                                                                                                                             | [src/types/speccer.ts:24](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L24) |
 | `pin.useSVGLine`                    | `boolean`                                                                                                                                                             | [src/types/speccer.ts:23](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L23) |
-| <a id="position" /> `position`      | [`SpeccerPositionType`](speccer.md#speccerpositiontype)                                                                                                               | [src/types/speccer.ts:15](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L15) |
+| <a id="position" /> `position`      | [`SpeccerPositionType`](#speccerpositiontype)                                                                                                                         | [src/types/speccer.ts:15](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L15) |
 | <a id="slug" /> `slug`              | `string`                                                                                                                                                              | [src/types/speccer.ts:14](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L14) |
 | <a id="spacing" /> `spacing?`       | \{ `both`: `boolean`; `bound`: `boolean`; `margin`: `boolean`; `padding`: `boolean`; }                                                                                | [src/types/speccer.ts:34](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L34) |
 | `spacing.both?`                     | `boolean`                                                                                                                                                             | [src/types/speccer.ts:37](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L37) |
 | `spacing.bound?`                    | `boolean`                                                                                                                                                             | [src/types/speccer.ts:38](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L38) |
 | `spacing.margin?`                   | `boolean`                                                                                                                                                             | [src/types/speccer.ts:35](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L35) |
 | `spacing.padding?`                  | `boolean`                                                                                                                                                             | [src/types/speccer.ts:36](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L36) |
-| <a id="type" /> `type`              | [`SpeccerFeatureType`](speccer.md#speccerfeaturetype)                                                                                                                 | [src/types/speccer.ts:16](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L16) |
+| <a id="type" /> `type`              | [`SpeccerFeatureType`](#speccerfeaturetype)                                                                                                                           | [src/types/speccer.ts:16](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L16) |
 | <a id="typography" /> `typography?` | \{ `useSyntaxHighlighting`: `boolean`; }                                                                                                                              | [src/types/speccer.ts:31](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L31) |
 | `typography.useSyntaxHighlighting`  | `boolean`                                                                                                                                                             | [src/types/speccer.ts:32](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L32) |
 

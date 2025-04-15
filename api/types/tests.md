@@ -6,7 +6,7 @@
 
 # types/tests
 
-> Last updated 2025-03-06T09:34:26.615Z
+> Last updated 2025-04-15T06:57:05.317Z
 
 ## Table of Contents
 
@@ -64,7 +64,7 @@ Defined in:
   <tbody>
     <tr>
       <td>
-        `mock`?
+        `mock?`
       </td>
 
       <td>
@@ -97,9 +97,9 @@ Defined in:
 
 #### Type Parameters
 
-| Type Parameter                                      |
-| --------------------------------------------------- |
-| `T` _extends_ [`AnyFunction`](tests.md#anyfunction) |
+| Type Parameter                              |
+| ------------------------------------------- |
+| `T` _extends_ [`AnyFunction`](#anyfunction) |
 
 ---
 

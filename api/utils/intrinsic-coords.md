@@ -6,7 +6,7 @@
 
 # utils/intrinsic-coords
 
-> Last updated 2025-03-06T09:34:26.626Z
+> Last updated 2025-04-15T06:57:05.329Z
 
 ## Table of Contents
 
@@ -37,7 +37,7 @@ Get the intrinsic coordinates of an element based on a specified position.
 | Parameter | Type                                                                    | Default value | Description          |
 | --------- | ----------------------------------------------------------------------- | ------------- | -------------------- |
 | `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | `undefined`   | The HTML element.    |
-| `pos`?    | `string`                                                                | `'center'`    | The position to use. |
+| `pos?`    | `string`                                                                | `'center'`    | The position to use. |
 
 #### Returns
 

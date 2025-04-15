@@ -6,7 +6,7 @@
 
 # utils/classes/DrawSVGLine
 
-> Last updated 2025-03-06T09:34:26.621Z
+> Last updated 2025-04-15T06:57:05.323Z
 
 ## Table of Contents
 
@@ -24,13 +24,13 @@ Class representing a DrawSVGLine instance.
 
 #### Constructors
 
-##### new DrawSVGLine()
+##### Constructor
 
 ```ts
 new DrawSVGLine(
    startElement,
    stopElement,
-   options?): DrawSVGLine
+   options?): DrawSVGLine;
 ```
 
 Defined in:
@@ -44,11 +44,11 @@ Creates a new DrawSVGLine instance.
 | -------------- | --------------------------------------------------------------------------- | ---------------------------------- |
 | `startElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)     | The starting element for the line. |
 | `stopElement`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)     | The ending element for the line.   |
-| `options`?     | [`SpeccerOptionsInterface`](../../types/speccer.md#specceroptionsinterface) | The ending element for the line.   |
+| `options?`     | [`SpeccerOptionsInterface`](../../types/speccer.md#specceroptionsinterface) | The ending element for the line.   |
 
 ###### Returns
 
-[`DrawSVGLine`](DrawSVGLine.md#drawsvgline)
+[`DrawSVGLine`](#drawsvgline)
 
 #### Properties
 
@@ -64,7 +64,7 @@ Creates a new DrawSVGLine instance.
 ##### connect()
 
 ```ts
-connect(): void
+connect(): void;
 ```
 
 Defined in:
@@ -79,7 +79,7 @@ Connects and draws the line.
 ##### draw()
 
 ```ts
-draw(path): Promise<void>
+draw(path): Promise<void>;
 ```
 
 Defined in:

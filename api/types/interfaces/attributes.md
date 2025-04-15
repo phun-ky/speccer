@@ -6,7 +6,7 @@
 
 # types/interfaces/attributes
 
-> Last updated 2025-03-06T09:34:26.601Z
+> Last updated 2025-04-15T06:57:05.304Z
 
 ## Table of Contents
 

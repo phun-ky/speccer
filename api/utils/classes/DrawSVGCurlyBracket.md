@@ -6,7 +6,7 @@
 
 # utils/classes/DrawSVGCurlyBracket
 
-> Last updated 2025-03-06T09:34:26.621Z
+> Last updated 2025-04-15T06:57:05.323Z
 
 ## Table of Contents
 
@@ -24,10 +24,10 @@ Class representing a DrawSVGCurlyBracket instance.
 
 #### Constructors
 
-##### new DrawSVGCurlyBracket()
+##### Constructor
 
 ```ts
-new DrawSVGCurlyBracket(startElement, stopElement): DrawSVGCurlyBracket
+new DrawSVGCurlyBracket(startElement, stopElement): DrawSVGCurlyBracket;
 ```
 
 Defined in:
@@ -44,7 +44,7 @@ Creates a new DrawSVGCurlyBracket instance.
 
 ###### Returns
 
-[`DrawSVGCurlyBracket`](DrawSVGCurlyBracket.md#drawsvgcurlybracket)
+[`DrawSVGCurlyBracket`](#drawsvgcurlybracket)
 
 #### Properties
 
@@ -60,7 +60,7 @@ Creates a new DrawSVGCurlyBracket instance.
 ##### connect()
 
 ```ts
-connect(): void
+connect(): void;
 ```
 
 Defined in:
@@ -75,7 +75,7 @@ Connects and draws the curly bracket.
 ##### draw()
 
 ```ts
-draw(path): Promise<void>
+draw(path): Promise<void>;
 ```
 
 Defined in:

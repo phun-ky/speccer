@@ -6,7 +6,7 @@
 
 # utils/css
 
-> Last updated 2025-03-06T09:34:26.623Z
+> Last updated 2025-04-15T06:57:05.326Z
 
 ## Table of Contents
 
@@ -105,7 +105,7 @@ Extracts spacing-related CSS properties from a style object.
 | Parameter  | Type                                                                     | Description       |
 | ---------- | ------------------------------------------------------------------------ | ----------------- |
 | `style`    | [`SpacingCSSPropertiesType`](../types/css.md#spacingcsspropertiestype)   | The style object. |
-| `options`? | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Options           |
+| `options?` | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | Options           |
 
 #### Returns
 

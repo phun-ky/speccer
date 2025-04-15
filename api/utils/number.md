@@ -6,7 +6,7 @@
 
 # utils/number
 
-> Last updated 2025-03-06T09:34:26.627Z
+> Last updated 2025-04-15T06:57:05.329Z
 
 ## Table of Contents
 

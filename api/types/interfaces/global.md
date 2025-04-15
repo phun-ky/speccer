@@ -6,14 +6,14 @@
 
 # types/interfaces/global
 
-> Last updated 2025-03-06T09:34:26.601Z
+> Last updated 2025-04-15T06:57:05.305Z
 
 ## Table of Contents
 
 - [Interfaces](#interfaces)
   - [Window](#window)
 - [Variables](#variables)
-  - [Window()](#window-1)
+  - [Window](#window-1)
 
 ## Interfaces
 
@@ -54,7 +54,7 @@ document loaded in that window.
 | <a id="event" /> ~~`event`~~                                           | `readonly` | `undefined` \| [`Event`](https://developer.mozilla.org/docs/Web/API/Event)                  | **Deprecated** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/event)                                                                                                                                                                                                                                                                          | -                                                | node_modules/typescript/lib/lib.dom.d.ts:26941                                                                       |
 | <a id="external" /> ~~`external`~~                                     | `readonly` | `External`                                                                                  | **Deprecated** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/external)                                                                                                                                                                                                                                                                       | -                                                | node_modules/typescript/lib/lib.dom.d.ts:26947                                                                       |
 | <a id="frameelement" /> `frameElement`                                 | `readonly` | `null` \| [`Element`](https://developer.mozilla.org/docs/Web/API/Element)                   | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/frameElement)                                                                                                                                                                                                                                                                                  | -                                                | node_modules/typescript/lib/lib.dom.d.ts:26949                                                                       |
-| <a id="frames" /> `frames`                                             | `readonly` | [`Window`](global.md#window)                                                                | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/frames)                                                                                                                                                                                                                                                                                        | -                                                | node_modules/typescript/lib/lib.dom.d.ts:26951                                                                       |
+| <a id="frames" /> `frames`                                             | `readonly` | [`Window`](#window)                                                                         | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/frames)                                                                                                                                                                                                                                                                                        | -                                                | node_modules/typescript/lib/lib.dom.d.ts:26951                                                                       |
 | <a id="history" /> `history`                                           | `readonly` | [`History`](https://developer.mozilla.org/docs/Web/API/History)                             | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/history)                                                                                                                                                                                                                                                                                       | -                                                | node_modules/typescript/lib/lib.dom.d.ts:26953                                                                       |
 | <a id="indexeddb" /> `indexedDB`                                       | `readonly` | [`IDBFactory`](https://developer.mozilla.org/docs/Web/API/IDBFactory)                       | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/indexedDB)                                                                                                                                                                                                                                                                                     | `WindowOrWorkerGlobalScope.indexedDB`            | node_modules/typescript/lib/lib.dom.d.ts:27272                                                                       |
 | <a id="innerheight" /> `innerHeight`                                   | `readonly` | `number`                                                                                    | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/innerHeight)                                                                                                                                                                                                                                                                                   | -                                                | node_modules/typescript/lib/lib.dom.d.ts:26955                                                                       |
@@ -195,7 +195,7 @@ document loaded in that window.
 | <a id="outerwidth" /> `outerWidth`                                     | `readonly` | `number`                                                                                    | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/outerWidth)                                                                                                                                                                                                                                                                                    | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27014                                                                       |
 | <a id="pagexoffset" /> `pageXOffset`                                   | `readonly` | `number`                                                                                    | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/scrollX)                                                                                                                                                                                                                                                                                       | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27016                                                                       |
 | <a id="pageyoffset" /> `pageYOffset`                                   | `readonly` | `number`                                                                                    | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/scrollY)                                                                                                                                                                                                                                                                                       | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27018                                                                       |
-| <a id="parent" /> `parent`                                             | `readonly` | [`Window`](global.md#window)                                                                | Refers to either the parent WindowProxy, or itself. It can rarely be null e.g. for contentWindow of an iframe that is already removed from the parent. [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/parent)                                                                                                                                 | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27026                                                                       |
+| <a id="parent" /> `parent`                                             | `readonly` | [`Window`](#window)                                                                         | Refers to either the parent WindowProxy, or itself. It can rarely be null e.g. for contentWindow of an iframe that is already removed from the parent. [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/parent)                                                                                                                                 | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27026                                                                       |
 | <a id="performance" /> `performance`                                   | `readonly` | [`Performance`](https://developer.mozilla.org/docs/Web/API/Performance)                     | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/performance)                                                                                                                                                                                                                                                                                   | `WindowOrWorkerGlobalScope.performance`          | node_modules/typescript/lib/lib.dom.d.ts:27278                                                                       |
 | <a id="personalbar" /> `personalbar`                                   | `readonly` | [`BarProp`](https://developer.mozilla.org/docs/Web/API/BarProp)                             | Returns true if the personal bar is visible; otherwise, returns false. [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/personalbar)                                                                                                                                                                                                            | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27032                                                                       |
 | <a id="screen" /> `screen`                                             | `readonly` | [`Screen`](https://developer.mozilla.org/docs/Web/API/Screen)                               | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/screen)                                                                                                                                                                                                                                                                                        | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27034                                                                       |
@@ -206,7 +206,7 @@ document loaded in that window.
 | <a id="scrollbars" /> `scrollbars`                                     | `readonly` | [`BarProp`](https://developer.mozilla.org/docs/Web/API/BarProp)                             | Returns true if the scrollbars are visible; otherwise, returns false. [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/scrollbars)                                                                                                                                                                                                              | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27052                                                                       |
 | <a id="scrollx" /> `scrollX`                                           | `readonly` | `number`                                                                                    | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/scrollX)                                                                                                                                                                                                                                                                                       | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27044                                                                       |
 | <a id="scrolly" /> `scrollY`                                           | `readonly` | `number`                                                                                    | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/scrollY)                                                                                                                                                                                                                                                                                       | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27046                                                                       |
-| <a id="self" /> `self`                                                 | `readonly` | [`Window`](global.md#window) & _typeof_ `globalThis`                                        | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/self)                                                                                                                                                                                                                                                                                          | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27054                                                                       |
+| <a id="self" /> `self`                                                 | `readonly` | [`Window`](#window) & _typeof_ `globalThis`                                                 | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/self)                                                                                                                                                                                                                                                                                          | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27054                                                                       |
 | <a id="sessionstorage" /> `sessionStorage`                             | `readonly` | [`Storage`](https://developer.mozilla.org/docs/Web/API/Storage)                             | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)                                                                                                                                                                                                                                                                                | `WindowSessionStorage.sessionStorage`            | node_modules/typescript/lib/lib.dom.d.ts:27306                                                                       |
 | <a id="speccer" /> `speccer`                                           | `public`   | `any`                                                                                       | Represents the speccer object for additional functionality.                                                                                                                                                                                                                                                                                                      | -                                                | [src/types/interfaces/global.ts:26](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/global.ts#L26) |
 | <a id="speccer_literals" /> `SPECCER_LITERALS`                         | `public`   | `string`\[]                                                                                 | Represents the custom literals to be used. ![Screenshot of speccer with custom literals](https://github.com/phun-ky/speccer/blob/main/public/literals.png?raw=true) **Example** `window.SPECCER_LITERALS = [あ,い,う,え,お,か,き,く,け,こ,さ,し,す,せ,そ,た,ち,つ,て,と,な,に,ぬ,ね,の,は,ひ,ふ,へ,ほ,ま,み,む,め,も,や,ゆ,よ,ら,り,る,れ,ろ,わ,を]; speccer();` | -                                                | [src/types/interfaces/global.ts:37](https://github.com/phun-ky/speccer/blob/main/src/types/interfaces/global.ts#L37) |
@@ -214,9 +214,9 @@ document loaded in that window.
 | <a id="status" /> ~~`status`~~                                         | `public`   | `string`                                                                                    | **Deprecated** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/status)                                                                                                                                                                                                                                                                         | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27062                                                                       |
 | <a id="statusbar" /> `statusbar`                                       | `readonly` | [`BarProp`](https://developer.mozilla.org/docs/Web/API/BarProp)                             | Returns true if the status bar is visible; otherwise, returns false. [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/statusbar)                                                                                                                                                                                                                | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27068                                                                       |
 | <a id="toolbar" /> `toolbar`                                           | `readonly` | [`BarProp`](https://developer.mozilla.org/docs/Web/API/BarProp)                             | Returns true if the toolbar is visible; otherwise, returns false. [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/toolbar)                                                                                                                                                                                                                     | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27074                                                                       |
-| <a id="top" /> `top`                                                   | `readonly` | `null` \| [`Window`](global.md#window)                                                      | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/top)                                                                                                                                                                                                                                                                                           | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27076                                                                       |
+| <a id="top" /> `top`                                                   | `readonly` | `null` \| [`Window`](#window)                                                               | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/top)                                                                                                                                                                                                                                                                                           | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27076                                                                       |
 | <a id="visualviewport" /> `visualViewport`                             | `readonly` | \| `null` \| [`VisualViewport`](https://developer.mozilla.org/docs/Web/API/VisualViewport)  | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/visualViewport)                                                                                                                                                                                                                                                                                | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27078                                                                       |
-| <a id="window-1" /> `window`                                           | `readonly` | [`Window`](global.md#window) & _typeof_ `globalThis`                                        | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/window)                                                                                                                                                                                                                                                                                        | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27080                                                                       |
+| <a id="window-1" /> `window`                                           | `readonly` | [`Window`](#window) & _typeof_ `globalThis`                                                 | [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/window)                                                                                                                                                                                                                                                                                        | -                                                | node_modules/typescript/lib/lib.dom.d.ts:27080                                                                       |
 
 #### Accessors
 
@@ -225,7 +225,7 @@ document loaded in that window.
 ###### Get Signature
 
 ```ts
-get location(): Location
+get location(): Location;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:26961
@@ -239,7 +239,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:26961
 ###### Set Signature
 
 ```ts
-set location(href): void
+set location(href): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:26962
@@ -264,7 +264,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:26962
 addEventListener<K>(
    type,
    listener,
-   options?): void
+   options?): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27169
@@ -311,7 +311,7 @@ Reference](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListen
 | ---------- | -------------------------------------- |
 | `type`     | `K`                                    |
 | `listener` | (`this`, `ev`) => `any`                |
-| `options`? | `boolean` \| `AddEventListenerOptions` |
+| `options?` | `boolean` \| `AddEventListenerOptions` |
 
 ###### Returns
 
@@ -329,7 +329,7 @@ EventTarget.addEventListener;
 addEventListener(
    type,
    listener,
-   options?): void
+   options?): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27170
@@ -370,7 +370,7 @@ Reference](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListen
 | ---------- | -------------------------------------- |
 | `type`     | `string`                               |
 | `listener` | `EventListenerOrEventListenerObject`   |
-| `options`? | `boolean` \| `AddEventListenerOptions` |
+| `options?` | `boolean` \| `AddEventListenerOptions` |
 
 ###### Returns
 
@@ -385,7 +385,7 @@ EventTarget.addEventListener;
 ##### alert()
 
 ```ts
-alert(message?): void
+alert(message?): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27082
@@ -396,7 +396,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27082
 
 | Parameter  | Type  |
 | ---------- | ----- |
-| `message`? | `any` |
+| `message?` | `any` |
 
 ###### Returns
 
@@ -405,7 +405,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27082
 ##### atob()
 
 ```ts
-atob(data): string
+atob(data): string;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27280
@@ -431,7 +431,7 @@ WindowOrWorkerGlobalScope.atob;
 ##### ~~blur()~~
 
 ```ts
-blur(): void
+blur(): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27088
@@ -447,7 +447,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27088
 ##### btoa()
 
 ```ts
-btoa(data): string
+btoa(data): string;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27282
@@ -473,7 +473,7 @@ WindowOrWorkerGlobalScope.btoa;
 ##### cancelAnimationFrame()
 
 ```ts
-cancelAnimationFrame(handle): void
+cancelAnimationFrame(handle): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:2806
@@ -500,7 +500,7 @@ AnimationFrameProvider.cancelAnimationFrame;
 ##### cancelIdleCallback()
 
 ```ts
-cancelIdleCallback(handle): void
+cancelIdleCallback(handle): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27090
@@ -521,7 +521,7 @@ Reference](https://developer.mozilla.org/docs/Web/API/Window/cancelIdleCallback)
 ##### ~~captureEvents()~~
 
 ```ts
-captureEvents(): void
+captureEvents(): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27096
@@ -537,7 +537,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27096
 ##### clearInterval()
 
 ```ts
-clearInterval(id): void
+clearInterval(id): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27284
@@ -563,7 +563,7 @@ WindowOrWorkerGlobalScope.clearInterval;
 ##### clearTimeout()
 
 ```ts
-clearTimeout(id): void
+clearTimeout(id): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27286
@@ -589,7 +589,7 @@ WindowOrWorkerGlobalScope.clearTimeout;
 ##### close()
 
 ```ts
-close(): void
+close(): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27102
@@ -605,7 +605,7 @@ Closes the window.
 ##### confirm()
 
 ```ts
-confirm(message?): boolean
+confirm(message?): boolean;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27104
@@ -616,7 +616,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27104
 
 | Parameter  | Type     |
 | ---------- | -------- |
-| `message`? | `string` |
+| `message?` | `string` |
 
 ###### Returns
 
@@ -627,7 +627,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27104
 ###### Call Signature
 
 ```ts
-createImageBitmap(image, options?): Promise<ImageBitmap>
+createImageBitmap(image, options?): Promise<ImageBitmap>;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27288
@@ -640,7 +640,7 @@ Reference](https://developer.mozilla.org/docs/Web/API/Window/createImageBitmap)
 | Parameter  | Type                 |
 | ---------- | -------------------- |
 | `image`    | `ImageBitmapSource`  |
-| `options`? | `ImageBitmapOptions` |
+| `options?` | `ImageBitmapOptions` |
 
 ###### Returns
 
@@ -661,7 +661,7 @@ createImageBitmap(
    sy,
    sw,
    sh,
-options?): Promise<ImageBitmap>
+options?): Promise<ImageBitmap>;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27289
@@ -675,7 +675,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27289
 | `sy`       | `number`             |
 | `sw`       | `number`             |
 | `sh`       | `number`             |
-| `options`? | `ImageBitmapOptions` |
+| `options?` | `ImageBitmapOptions` |
 
 ###### Returns
 
@@ -690,7 +690,7 @@ WindowOrWorkerGlobalScope.createImageBitmap;
 ##### dispatchEvent()
 
 ```ts
-dispatchEvent(event): boolean
+dispatchEvent(event): boolean;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:8882
@@ -721,7 +721,7 @@ EventTarget.dispatchEvent;
 ##### fetch()
 
 ```ts
-fetch(input, init?): Promise<Response>
+fetch(input, init?): Promise<Response>;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27291
@@ -733,7 +733,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27291
 | Parameter | Type                                                                     |
 | --------- | ------------------------------------------------------------------------ |
 | `input`   | [`URL`](https://developer.mozilla.org/docs/Web/API/URL) \| `RequestInfo` |
-| `init`?   | `RequestInit`                                                            |
+| `init?`   | `RequestInit`                                                            |
 
 ###### Returns
 
@@ -748,7 +748,7 @@ WindowOrWorkerGlobalScope.fetch;
 ##### focus()
 
 ```ts
-focus(): void
+focus(): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27110
@@ -764,7 +764,7 @@ Moves the focus to the window's browsing context, if any.
 ##### getComputedStyle()
 
 ```ts
-getComputedStyle(elt, pseudoElt?): CSSStyleDeclaration
+getComputedStyle(elt, pseudoElt?): CSSStyleDeclaration;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27112
@@ -777,7 +777,7 @@ Reference](https://developer.mozilla.org/docs/Web/API/Window/getComputedStyle)
 | Parameter    | Type                                                            |
 | ------------ | --------------------------------------------------------------- |
 | `elt`        | [`Element`](https://developer.mozilla.org/docs/Web/API/Element) |
-| `pseudoElt`? | `null` \| `string`                                              |
+| `pseudoElt?` | `null` \| `string`                                              |
 
 ###### Returns
 
@@ -788,7 +788,7 @@ Reference](https://developer.mozilla.org/docs/Web/API/Window/getComputedStyle)
 ```ts
 getSelection():
   | null
-  | Selection
+  | Selection;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27114
@@ -802,7 +802,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27114
 ##### matchMedia()
 
 ```ts
-matchMedia(query): MediaQueryList
+matchMedia(query): MediaQueryList;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27116
@@ -822,7 +822,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27116
 ##### moveBy()
 
 ```ts
-moveBy(x, y): void
+moveBy(x, y): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27118
@@ -843,7 +843,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27118
 ##### moveTo()
 
 ```ts
-moveTo(x, y): void
+moveTo(x, y): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27120
@@ -867,7 +867,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27120
 open(
    url?,
    target?,
-   features?): null | Window
+   features?): null | Window;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27122
@@ -878,13 +878,13 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27122
 
 | Parameter   | Type                                                                |
 | ----------- | ------------------------------------------------------------------- |
-| `url`?      | `string` \| [`URL`](https://developer.mozilla.org/docs/Web/API/URL) |
-| `target`?   | `string`                                                            |
-| `features`? | `string`                                                            |
+| `url?`      | `string` \| [`URL`](https://developer.mozilla.org/docs/Web/API/URL) |
+| `target?`   | `string`                                                            |
+| `features?` | `string`                                                            |
 
 ###### Returns
 
-`null` | [`Window`](global.md#window)
+`null` | [`Window`](#window)
 
 ##### postMessage()
 
@@ -894,7 +894,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27122
 postMessage(
    message,
    targetOrigin,
-   transfer?): void
+   transfer?): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27136
@@ -926,7 +926,7 @@ objects or if message could not be cloned.
 | -------------- | ----------------- |
 | `message`      | `any`             |
 | `targetOrigin` | `string`          |
-| `transfer`?    | `Transferable`\[] |
+| `transfer?`    | `Transferable`\[] |
 
 ###### Returns
 
@@ -935,7 +935,7 @@ objects or if message could not be cloned.
 ###### Call Signature
 
 ```ts
-postMessage(message, options?): void
+postMessage(message, options?): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27137
@@ -945,7 +945,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27137
 | Parameter  | Type                       |
 | ---------- | -------------------------- |
 | `message`  | `any`                      |
-| `options`? | `WindowPostMessageOptions` |
+| `options?` | `WindowPostMessageOptions` |
 
 ###### Returns
 
@@ -954,7 +954,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27137
 ##### print()
 
 ```ts
-print(): void
+print(): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27139
@@ -968,7 +968,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27139
 ##### prompt()
 
 ```ts
-prompt(message?, _default?): null | string
+prompt(message?, _default?): null | string;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27141
@@ -979,8 +979,8 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27141
 
 | Parameter   | Type     |
 | ----------- | -------- |
-| `message`?  | `string` |
-| `_default`? | `string` |
+| `message?`  | `string` |
+| `_default?` | `string` |
 
 ###### Returns
 
@@ -989,7 +989,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27141
 ##### queueMicrotask()
 
 ```ts
-queueMicrotask(callback): void
+queueMicrotask(callback): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27293
@@ -1016,7 +1016,7 @@ WindowOrWorkerGlobalScope.queueMicrotask;
 ##### ~~releaseEvents()~~
 
 ```ts
-releaseEvents(): void
+releaseEvents(): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27147
@@ -1037,7 +1037,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27147
 removeEventListener<K>(
    type,
    listener,
-   options?): void
+   options?): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27171
@@ -1060,7 +1060,7 @@ Reference](https://developer.mozilla.org/docs/Web/API/EventTarget/removeEventLis
 | ---------- | ----------------------------------- |
 | `type`     | `K`                                 |
 | `listener` | (`this`, `ev`) => `any`             |
-| `options`? | `boolean` \| `EventListenerOptions` |
+| `options?` | `boolean` \| `EventListenerOptions` |
 
 ###### Returns
 
@@ -1078,7 +1078,7 @@ EventTarget.removeEventListener;
 removeEventListener(
    type,
    listener,
-   options?): void
+   options?): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27172
@@ -1095,7 +1095,7 @@ Reference](https://developer.mozilla.org/docs/Web/API/EventTarget/removeEventLis
 | ---------- | ------------------------------------ |
 | `type`     | `string`                             |
 | `listener` | `EventListenerOrEventListenerObject` |
-| `options`? | `boolean` \| `EventListenerOptions`  |
+| `options?` | `boolean` \| `EventListenerOptions`  |
 
 ###### Returns
 
@@ -1110,7 +1110,7 @@ EventTarget.removeEventListener;
 ##### reportError()
 
 ```ts
-reportError(e): void
+reportError(e): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27295
@@ -1136,7 +1136,7 @@ WindowOrWorkerGlobalScope.reportError;
 ##### requestAnimationFrame()
 
 ```ts
-requestAnimationFrame(callback): number
+requestAnimationFrame(callback): number;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:2808
@@ -1163,7 +1163,7 @@ AnimationFrameProvider.requestAnimationFrame;
 ##### requestIdleCallback()
 
 ```ts
-requestIdleCallback(callback, options?): number
+requestIdleCallback(callback, options?): number;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27149
@@ -1176,7 +1176,7 @@ Reference](https://developer.mozilla.org/docs/Web/API/Window/requestIdleCallback
 | Parameter  | Type                  |
 | ---------- | --------------------- |
 | `callback` | `IdleRequestCallback` |
-| `options`? | `IdleRequestOptions`  |
+| `options?` | `IdleRequestOptions`  |
 
 ###### Returns
 
@@ -1185,7 +1185,7 @@ Reference](https://developer.mozilla.org/docs/Web/API/Window/requestIdleCallback
 ##### resizeBy()
 
 ```ts
-resizeBy(x, y): void
+resizeBy(x, y): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27151
@@ -1206,7 +1206,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27151
 ##### resizeTo()
 
 ```ts
-resizeTo(width, height): void
+resizeTo(width, height): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27153
@@ -1229,7 +1229,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27153
 ###### Call Signature
 
 ```ts
-scroll(options?): void
+scroll(options?): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27155
@@ -1240,7 +1240,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27155
 
 | Parameter  | Type              |
 | ---------- | ----------------- |
-| `options`? | `ScrollToOptions` |
+| `options?` | `ScrollToOptions` |
 
 ###### Returns
 
@@ -1249,7 +1249,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27155
 ###### Call Signature
 
 ```ts
-scroll(x, y): void
+scroll(x, y): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27156
@@ -1270,7 +1270,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27156
 ###### Call Signature
 
 ```ts
-scrollBy(options?): void
+scrollBy(options?): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27158
@@ -1281,7 +1281,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27158
 
 | Parameter  | Type              |
 | ---------- | ----------------- |
-| `options`? | `ScrollToOptions` |
+| `options?` | `ScrollToOptions` |
 
 ###### Returns
 
@@ -1290,7 +1290,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27158
 ###### Call Signature
 
 ```ts
-scrollBy(x, y): void
+scrollBy(x, y): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27159
@@ -1311,7 +1311,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27159
 ###### Call Signature
 
 ```ts
-scrollTo(options?): void
+scrollTo(options?): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27161
@@ -1322,7 +1322,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27161
 
 | Parameter  | Type              |
 | ---------- | ----------------- |
-| `options`? | `ScrollToOptions` |
+| `options?` | `ScrollToOptions` |
 
 ###### Returns
 
@@ -1331,7 +1331,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27161
 ###### Call Signature
 
 ```ts
-scrollTo(x, y): void
+scrollTo(x, y): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27162
@@ -1353,7 +1353,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27162
 setInterval(
    handler,
    timeout?, ...
-   arguments?): number
+   arguments?): number;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27297
@@ -1365,8 +1365,8 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27297
 | Parameter       | Type           |
 | --------------- | -------------- |
 | `handler`       | `TimerHandler` |
-| `timeout`?      | `number`       |
-| ...`arguments`? | `any`\[]       |
+| `timeout?`      | `number`       |
+| ...`arguments?` | `any`\[]       |
 
 ###### Returns
 
@@ -1384,7 +1384,7 @@ WindowOrWorkerGlobalScope.setInterval;
 setTimeout(
    handler,
    timeout?, ...
-   arguments?): number
+   arguments?): number;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27299
@@ -1396,8 +1396,8 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:27299
 | Parameter       | Type           |
 | --------------- | -------------- |
 | `handler`       | `TimerHandler` |
-| `timeout`?      | `number`       |
-| ...`arguments`? | `any`\[]       |
+| `timeout?`      | `number`       |
+| ...`arguments?` | `any`\[]       |
 
 ###### Returns
 
@@ -1412,7 +1412,7 @@ WindowOrWorkerGlobalScope.setTimeout;
 ##### stop()
 
 ```ts
-stop(): void
+stop(): void;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27168
@@ -1428,7 +1428,7 @@ Cancels the document load.
 ##### structuredClone()
 
 ```ts
-structuredClone<T>(value, options?): T
+structuredClone<T>(value, options?): T;
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:27301
@@ -1447,7 +1447,7 @@ Reference](https://developer.mozilla.org/docs/Web/API/Window/structuredClone)
 | Parameter  | Type                         |
 | ---------- | ---------------------------- |
 | `value`    | `T`                          |
-| `options`? | `StructuredSerializeOptions` |
+| `options?` | `StructuredSerializeOptions` |
 
 ###### Returns
 
@@ -1461,10 +1461,13 @@ WindowOrWorkerGlobalScope.structuredClone;
 
 ## Variables
 
-### Window()
+### Window
 
 ```ts
-Window: () => Window;
+Window: {
+(): Window;
+  prototype: Window;
+};
 ```
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:26913
@@ -1473,7 +1476,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:26913
 
 #### Returns
 
-[`Window`](global.md#window)
+[`Window`](#window)
 
 <table>
   <thead>
@@ -1491,7 +1494,7 @@ Defined in: node_modules/typescript/lib/lib.dom.d.ts:26913
       </td>
 
       <td>
-        [`Window`](global.md#window)
+        [`Window`](#window)
       </td>
 
       <td>

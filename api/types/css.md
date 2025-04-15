@@ -6,7 +6,7 @@
 
 # types/css
 
-> Last updated 2025-03-06T09:34:26.599Z
+> Last updated 2025-04-15T06:57:05.302Z
 
 ## Table of Contents
 
@@ -36,165 +36,95 @@ Defined in:
 
 CSS properties for spacing.
 
-#### Type declaration
+#### Properties
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
+##### marginBottom?
 
-  <tbody>
-    <tr>
-      <td>
-        <a id="marginbottom" /> `marginBottom`?
-      </td>
+```ts
+optional marginBottom: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/css.ts:13](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L13)
 
-      <td>
-        The margin bottom property.
-      </td>
+The margin bottom property.
 
-      <td>
-        [src/types/css.ts:13](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L13)
-      </td>
-    </tr>
+##### marginLeft?
 
-    <tr>
-      <td>
-        <a id="marginleft" /> `marginLeft`?
-      </td>
+```ts
+optional marginLeft: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/css.ts:18](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L18)
 
-      <td>
-        The margin left property.
-      </td>
+The margin left property.
 
-      <td>
-        [src/types/css.ts:18](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L18)
-      </td>
-    </tr>
+##### marginRight?
 
-    <tr>
-      <td>
-        <a id="marginright" /> `marginRight`?
-      </td>
+```ts
+optional marginRight: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/css.ts:23](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L23)
 
-      <td>
-        The margin right property.
-      </td>
+The margin right property.
 
-      <td>
-        [src/types/css.ts:23](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L23)
-      </td>
-    </tr>
+##### marginTop?
 
-    <tr>
-      <td>
-        <a id="margintop" /> `marginTop`?
-      </td>
+```ts
+optional marginTop: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/css.ts:8](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L8)
 
-      <td>
-        The margin top property.
-      </td>
+The margin top property.
 
-      <td>
-        [src/types/css.ts:8](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L8)
-      </td>
-    </tr>
+##### paddingBottom?
 
-    <tr>
-      <td>
-        <a id="paddingbottom" /> `paddingBottom`?
-      </td>
+```ts
+optional paddingBottom: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/css.ts:33](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L33)
 
-      <td>
-        The padding bottom property.
-      </td>
+The padding bottom property.
 
-      <td>
-        [src/types/css.ts:33](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L33)
-      </td>
-    </tr>
+##### paddingLeft?
 
-    <tr>
-      <td>
-        <a id="paddingleft" /> `paddingLeft`?
-      </td>
+```ts
+optional paddingLeft: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/css.ts:38](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L38)
 
-      <td>
-        The padding left property.
-      </td>
+The padding left property.
 
-      <td>
-        [src/types/css.ts:38](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L38)
-      </td>
-    </tr>
+##### paddingRight?
 
-    <tr>
-      <td>
-        <a id="paddingright" /> `paddingRight`?
-      </td>
+```ts
+optional paddingRight: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/css.ts:43](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L43)
 
-      <td>
-        The padding right property.
-      </td>
+The padding right property.
 
-      <td>
-        [src/types/css.ts:43](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L43)
-      </td>
-    </tr>
+##### paddingTop?
 
-    <tr>
-      <td>
-        <a id="paddingtop" /> `paddingTop`?
-      </td>
+```ts
+optional paddingTop: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/css.ts:28](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L28)
 
-      <td>
-        The padding top property.
-      </td>
-
-      <td>
-        [src/types/css.ts:28](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L28)
-      </td>
-    </tr>
-
-  </tbody>
-</table>
+The padding top property.
 
 ---
 
@@ -217,147 +147,84 @@ Defined in:
 
 CSS properties for typography.
 
-#### Type declaration
+#### Properties
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
+##### fontFamily?
 
-  <tbody>
-    <tr>
-      <td>
-        <a id="fontfamily" /> `fontFamily`?
-      </td>
+```ts
+optional fontFamily: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/css.ts:63](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L63)
 
-      <td>
-        The font family property.
-      </td>
+The font family property.
 
-      <td>
-        [src/types/css.ts:63](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L63)
-      </td>
-    </tr>
+##### fontSize?
 
-    <tr>
-      <td>
-        <a id="fontsize" /> `fontSize`?
-      </td>
+```ts
+optional fontSize: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/css.ts:68](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L68)
 
-      <td>
-        The font size property.
-      </td>
+The font size property.
 
-      <td>
-        [src/types/css.ts:68](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L68)
-      </td>
-    </tr>
+##### fontStyle?
 
-    <tr>
-      <td>
-        <a id="fontstyle" /> `fontStyle`?
-      </td>
+```ts
+optional fontStyle: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/css.ts:73](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L73)
 
-      <td>
-        The font style property.
-      </td>
+The font style property.
 
-      <td>
-        [src/types/css.ts:73](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L73)
-      </td>
-    </tr>
+##### fontVariationSettings?
 
-    <tr>
-      <td>
-        <a id="fontvariationsettings" /> `fontVariationSettings`?
-      </td>
+```ts
+optional fontVariationSettings: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/css.ts:78](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L78)
 
-      <td>
-        The font variation settings property.
-      </td>
+The font variation settings property.
 
-      <td>
-        [src/types/css.ts:78](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L78)
-      </td>
-    </tr>
+##### fontWeight?
 
-    <tr>
-      <td>
-        <a id="fontweight" /> `fontWeight`?
-      </td>
+```ts
+optional fontWeight: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/css.ts:83](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L83)
 
-      <td>
-        The font weight property.
-      </td>
+The font weight property.
 
-      <td>
-        [src/types/css.ts:83](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L83)
-      </td>
-    </tr>
+##### letterSpacing?
 
-    <tr>
-      <td>
-        <a id="letterspacing" /> `letterSpacing`?
-      </td>
+```ts
+optional letterSpacing: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/css.ts:58](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L58)
 
-      <td>
-        The letter spacing property.
-      </td>
+The letter spacing property.
 
-      <td>
-        [src/types/css.ts:58](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L58)
-      </td>
-    </tr>
+##### lineHeight?
 
-    <tr>
-      <td>
-        <a id="lineheight" /> `lineHeight`?
-      </td>
+```ts
+optional lineHeight: string;
+```
 
-      <td>
-        `string`
-      </td>
+Defined in:
+[src/types/css.ts:53](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L53)
 
-      <td>
-        The line height property.
-      </td>
-
-      <td>
-        [src/types/css.ts:53](https://github.com/phun-ky/speccer/blob/main/src/types/css.ts#L53)
-      </td>
-    </tr>
-
-  </tbody>
-</table>
+The line height property.
 
 ---
 

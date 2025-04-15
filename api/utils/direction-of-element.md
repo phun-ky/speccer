@@ -6,7 +6,7 @@
 
 # utils/direction-of-element
 
-> Last updated 2025-03-06T09:34:26.624Z
+> Last updated 2025-04-15T06:57:05.327Z
 
 ## Table of Contents
 
@@ -32,7 +32,7 @@ element.
 | Parameter        | Type                                                                                                                                                                                        | Description                                           |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
 | `options`        | \{ `crude`: `boolean`; `start`: [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement); `stop`: [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement); } | Options for direction calculation.                    |
-| `options.crude`? | `boolean`                                                                                                                                                                                   | If the direction should be calculated crudely (NSEW). |
+| `options.crude?` | `boolean`                                                                                                                                                                                   | If the direction should be calculated crudely (NSEW). |
 | `options.start`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                                                                                                                     | The starting HTML element.                            |
 | `options.stop`   | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                                                                                                                     | The stopping HTML element.                            |
 
