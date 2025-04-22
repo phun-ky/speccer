@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.2.16](https://github.com/phun-ky/speccer/compare/v11.2.15...v11.2.16) (2025-04-22)
+
+### Tasks
+
+* 🤖 bump the major-updates group with 3 updates ([dae352d](https://github.com/phun-ky/speccer/commit/dae352dfa6ec69f06b398e9fff2f476f9ab56839))
+
 ## [11.2.15](https://github.com/phun-ky/speccer/compare/v11.2.14...v11.2.15) (2025-04-22)
 
 ### Tasks
