@@ -7,7 +7,7 @@ features/a11y/utils/add-shortcut-element
 
 # features/a11y/utils/add-shortcut-element
 
-> Last updated 2025-04-15T06:57:05.288Z
+> Last updated 2025-04-22T07:11:40.627Z
 
 ## Table of Contents
 

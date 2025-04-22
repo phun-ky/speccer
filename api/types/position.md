@@ -6,7 +6,7 @@
 
 # types/position
 
-> Last updated 2025-04-15T06:57:05.316Z
+> Last updated 2025-04-22T07:11:40.654Z
 
 ## Table of Contents
 
