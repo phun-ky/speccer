@@ -6,7 +6,7 @@
 
 # types/css
 
-> Last updated 2025-04-22T07:21:49.063Z
+> Last updated 2025-04-29T13:00:25.882Z
 
 ## Table of Contents
 
@@ -20,14 +20,14 @@
 
 ```ts
 type SpacingCSSPropertiesType = {
-  marginBottom: string;
-  marginLeft: string;
-  marginRight: string;
-  marginTop: string;
-  paddingBottom: string;
-  paddingLeft: string;
-  paddingRight: string;
-  paddingTop: string;
+  marginBottom?: string;
+  marginLeft?: string;
+  marginRight?: string;
+  marginTop?: string;
+  paddingBottom?: string;
+  paddingLeft?: string;
+  paddingRight?: string;
+  paddingTop?: string;
 };
 ```
 
@@ -132,13 +132,13 @@ The padding top property.
 
 ```ts
 type TypographyCSSPropertiesType = {
-  fontFamily: string;
-  fontSize: string;
-  fontStyle: string;
-  fontVariationSettings: string;
-  fontWeight: string;
-  letterSpacing: string;
-  lineHeight: string;
+  fontFamily?: string;
+  fontSize?: string;
+  fontStyle?: string;
+  fontVariationSettings?: string;
+  fontWeight?: string;
+  letterSpacing?: string;
+  lineHeight?: string;
 };
 ```
 

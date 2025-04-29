@@ -6,7 +6,7 @@
 
 # types/styles
 
-> Last updated 2025-04-22T07:21:49.078Z
+> Last updated 2025-04-29T13:00:25.896Z
 
 ## Table of Contents
 
@@ -19,10 +19,10 @@
 
 ```ts
 type SpeccerStylesReturnType = {
-  height: string;
+  height?: string;
   left: string;
   top: string;
-  width: string;
+  width?: string;
 };
 ```
 

@@ -6,7 +6,7 @@
 
 # types/bezier
 
-> Last updated 2025-04-22T07:21:49.061Z
+> Last updated 2025-04-29T13:00:25.881Z
 
 ## Table of Contents
 
@@ -181,9 +181,9 @@ The y-coordinate of the second point.
 
 ```ts
 type CreateCoordinatesForCurveOptionsParamType = {
-  direct: boolean;
+  direct?: boolean;
   direction: string;
-  firstSet: boolean;
+  firstSet?: boolean;
 };
 ```
 
@@ -234,7 +234,7 @@ Indicates if this is the first set of coordinates.
 ```ts
 type CurlyBezierPathOptionsType = {
   direction: string;
-  firstSet: boolean;
+  firstSet?: boolean;
   pos1: string;
   pos2: string;
 };

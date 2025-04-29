@@ -6,7 +6,7 @@
 
 # utils/direction-of-element
 
-> Last updated 2025-04-22T07:21:49.089Z
+> Last updated 2025-04-29T13:00:25.910Z
 
 ## Table of Contents
 
@@ -29,12 +29,12 @@ element.
 
 #### Parameters
 
-| Parameter        | Type                                                                                                                                                                                        | Description                                           |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| `options`        | \{ `crude`: `boolean`; `start`: [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement); `stop`: [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement); } | Options for direction calculation.                    |
-| `options.crude?` | `boolean`                                                                                                                                                                                   | If the direction should be calculated crudely (NSEW). |
-| `options.start`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                                                                                                                     | The starting HTML element.                            |
-| `options.stop`   | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                                                                                                                     | The stopping HTML element.                            |
+| Parameter        | Type                                                                                                                                                                                         | Description                                           |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| `options`        | \{ `crude?`: `boolean`; `start`: [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement); `stop`: [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement); } | Options for direction calculation.                    |
+| `options.crude?` | `boolean`                                                                                                                                                                                    | If the direction should be calculated crudely (NSEW). |
+| `options.start`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                                                                                                                      | The starting HTML element.                            |
+| `options.stop`   | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                                                                                                                      | The stopping HTML element.                            |
 
 #### Returns
 

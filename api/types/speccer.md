@@ -6,7 +6,7 @@
 
 # types/speccer
 
-> Last updated 2025-04-22T07:21:49.078Z
+> Last updated 2025-04-29T13:00:25.895Z
 
 ## Table of Contents
 
@@ -28,7 +28,7 @@ Defined in:
 
 | Property                            | Type                                                                                                                                                                  | Defined in                                                                                       |
 | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| <a id="grid" /> `grid?`             | \{ `both`: `boolean`; `columns`: `boolean`; `rows`: `boolean`; `toggle`: `string`; }                                                                                  | [src/types/speccer.ts:40](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L40) |
+| <a id="grid" /> `grid?`             | \{ `both?`: `boolean`; `columns?`: `boolean`; `rows?`: `boolean`; `toggle`: `string`; }                                                                               | [src/types/speccer.ts:40](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L40) |
 | `grid.both?`                        | `boolean`                                                                                                                                                             | [src/types/speccer.ts:42](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L42) |
 | `grid.columns?`                     | `boolean`                                                                                                                                                             | [src/types/speccer.ts:44](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L44) |
 | `grid.rows?`                        | `boolean`                                                                                                                                                             | [src/types/speccer.ts:43](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L43) |
@@ -47,7 +47,7 @@ Defined in:
 | `pin.useSVGLine`                    | `boolean`                                                                                                                                                             | [src/types/speccer.ts:23](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L23) |
 | <a id="position" /> `position`      | [`SpeccerPositionType`](#speccerpositiontype)                                                                                                                         | [src/types/speccer.ts:15](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L15) |
 | <a id="slug" /> `slug`              | `string`                                                                                                                                                              | [src/types/speccer.ts:14](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L14) |
-| <a id="spacing" /> `spacing?`       | \{ `both`: `boolean`; `bound`: `boolean`; `margin`: `boolean`; `padding`: `boolean`; }                                                                                | [src/types/speccer.ts:34](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L34) |
+| <a id="spacing" /> `spacing?`       | \{ `both?`: `boolean`; `bound?`: `boolean`; `margin?`: `boolean`; `padding?`: `boolean`; }                                                                            | [src/types/speccer.ts:34](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L34) |
 | `spacing.both?`                     | `boolean`                                                                                                                                                             | [src/types/speccer.ts:37](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L37) |
 | `spacing.bound?`                    | `boolean`                                                                                                                                                             | [src/types/speccer.ts:38](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L38) |
 | `spacing.margin?`                   | `boolean`                                                                                                                                                             | [src/types/speccer.ts:35](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L35) |

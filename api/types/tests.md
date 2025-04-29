@@ -6,7 +6,7 @@
 
 # types/tests
 
-> Last updated 2025-04-22T07:21:49.079Z
+> Last updated 2025-04-29T13:00:25.897Z
 
 ## Table of Contents
 
@@ -41,7 +41,7 @@ Defined in:
 
 ```ts
 type MockedFunction<T> = T & {
-  mock: {
+  mock?: {
     calls: Call[];
   };
 };
