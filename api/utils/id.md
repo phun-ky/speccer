@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / utils/id
 
 # utils/id
 
-> Last updated 2025-04-29T13:00:25.911Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [uniqueID()](#uniqueid)
+> Last updated 2025-04-29T13:07:02.420Z
 
 ## Functions
 

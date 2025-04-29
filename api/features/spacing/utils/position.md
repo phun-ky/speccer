@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../../../README.md) / features/spacing/utils/position
 
 # features/spacing/utils/position
 
-> Last updated 2025-04-29T13:00:25.876Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [position()](#position)
+> Last updated 2025-04-29T13:07:01.143Z
 
 ## Functions
 
@@ -43,8 +36,8 @@ element.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<
-\| `undefined` \|
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<
+| `undefined` |
 [`PositionUnitPropertiesType`](../../../types/position.md#positionunitpropertiestype)>
 
 - A promise that resolves after setting the position and dimensions.

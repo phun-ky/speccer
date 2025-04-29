@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / utils/number
 
 # utils/number
 
-> Last updated 2025-04-29T13:00:25.912Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [decimal()](#decimal)
+> Last updated 2025-04-29T13:07:02.460Z
 
 ## Functions
 
@@ -28,10 +21,10 @@ Converts a number to a string with a specified number of decimal places.
 
 #### Parameters
 
-| Parameter  | Type                 | Default value | Description                                  |
-| ---------- | -------------------- | ------------- | -------------------------------------------- |
-| `number`   | `string` \| `number` | `undefined`   | The number to convert.                       |
-| `decimals` | `number`             | `3`           | The number of decimal places (default is 3). |
+| Parameter  | Type     | Default value | Description                                  |
+| ---------- | -------- | ------------- | -------------------------------------------- | ---------------------- |
+| `number`   | `string` | `number`      | `undefined`                                  | The number to convert. |
+| `decimals` | `number` | `3`           | The number of decimal places (default is 3). |
 
 #### Returns
 

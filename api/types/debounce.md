@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / types/debounce
 
 # types/debounce
 
-> Last updated 2025-04-29T13:00:25.882Z
-
-## Table of Contents
-
-- [Type Aliases](#type-aliases)
-  - [DebounceAnyFunctionType()](#debounceanyfunctiontype)
+> Last updated 2025-04-29T13:07:01.391Z
 
 ## Type Aliases
 

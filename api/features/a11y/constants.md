@@ -1,20 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../../README.md) / features/a11y/constants
 
 # features/a11y/constants
 
-> Last updated 2025-04-29T13:00:25.867Z
-
-## Table of Contents
-
-- [Variables](#variables)
-  - [SPECCER_LANDMARK_ELEMENTS_SELECTOR](#speccer_landmark_elements_selector)
-  - [SPECCER_MODIFIER_KEYS](#speccer_modifier_keys)
-  - [SPECCER_PHYSICAL_KEYS](#speccer_physical_keys)
-  - [SPECCER_TABBABLE_ELEMENTS_SELECTOR](#speccer_tabbable_elements_selector)
+> Last updated 2025-04-29T13:07:00.738Z
 
 ## Variables
 

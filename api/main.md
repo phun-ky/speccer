@@ -1,28 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](README.md) / main
 
 # main
 
-> Last updated 2025-04-29T13:00:25.877Z
-
-## Table of Contents
-
-- [Examples](#examples)
-- [Variables](#variables)
-  - [grid](#grid)
-  - [mark](#mark)
-  - [measure](#measure)
-  - [modes](#modes)
-  - [pin](#pin)
-  - [spacing](#spacing)
-  - [typography](#typography)
-- [Functions](#functions)
-  - [speccer()](#speccer)
-- [References](#references)
-  - [removeSpeccerElement](#removespeccerelement)
+> Last updated 2025-04-29T13:07:01.223Z
 
 ## Examples
 
@@ -56,53 +38,62 @@ Defined in:
 #### Type declaration
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Default value</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default value</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-  <tbody>
-    <tr>
-      <td>
-        <a id="create" /> `create()`
-      </td>
+<a id="create"></a> `create()`
 
-      <td>
-        (`targetElement`, `styles`, `options`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
-      </td>
+</td>
+<td>
 
-      <td>
-        `gridCreate`
-      </td>
+(`targetElement`, `styles`, `options`) =>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
 
-      <td>
-        [src/main.ts:53](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L53)
-      </td>
-    </tr>
+</td>
+<td>
 
-    <tr>
-      <td>
-        <a id="element" /> `element()`
-      </td>
+`gridCreate`
 
-      <td>
-        (`targetElement`, `options?`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
-      </td>
+</td>
+<td>
 
-      <td>
-        `gridElement`
-      </td>
+[src/main.ts:53](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L53)
 
-      <td>
-        [src/main.ts:54](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L54)
-      </td>
-    </tr>
+</td>
+</tr>
+<tr>
+<td>
 
-  </tbody>
+<a id="element"></a> `element()`
+
+</td>
+<td>
+
+(`targetElement`, `options?`) =>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
+
+</td>
+<td>
+
+`gridElement`
+
+</td>
+<td>
+
+[src/main.ts:54](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L54)
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ---
@@ -122,53 +113,62 @@ Defined in:
 #### Type declaration
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Default value</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default value</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-  <tbody>
-    <tr>
-      <td>
-        <a id="create-1" /> `create()`
-      </td>
+<a id="create-1"></a> `create()`
 
-      <td>
-        (`id`, `n`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
-      </td>
+</td>
+<td>
 
-      <td>
-        `markCreate`
-      </td>
+(`id`, `n`) =>
+[`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
-      <td>
-        [src/main.ts:74](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L74)
-      </td>
-    </tr>
+</td>
+<td>
 
-    <tr>
-      <td>
-        <a id="element-1" /> `element()`
-      </td>
+`markCreate`
 
-      <td>
-        (`targetElement`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
-      </td>
+</td>
+<td>
 
-      <td>
-        `markElement`
-      </td>
+[src/main.ts:74](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L74)
 
-      <td>
-        [src/main.ts:75](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L75)
-      </td>
-    </tr>
+</td>
+</tr>
+<tr>
+<td>
 
-  </tbody>
+<a id="element-1"></a> `element()`
+
+</td>
+<td>
+
+(`targetElement`) =>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
+
+</td>
+<td>
+
+`markElement`
+
+</td>
+<td>
+
+[src/main.ts:75](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L75)
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ---
@@ -188,53 +188,62 @@ Defined in:
 #### Type declaration
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Default value</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default value</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-  <tbody>
-    <tr>
-      <td>
-        <a id="create-2" /> `create()`
-      </td>
+<a id="create-2"></a> `create()`
 
-      <td>
-        (`text`, `options`, `id`, `tag`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
-      </td>
+</td>
+<td>
 
-      <td>
-        `measureCreate`
-      </td>
+(`text`, `options`, `id`, `tag`) =>
+[`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
-      <td>
-        [src/main.ts:69](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L69)
-      </td>
-    </tr>
+</td>
+<td>
 
-    <tr>
-      <td>
-        <a id="element-2" /> `element()`
-      </td>
+`measureCreate`
 
-      <td>
-        (`targetElement`, `options?`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
-      </td>
+</td>
+<td>
 
-      <td>
-        `measureElement`
-      </td>
+[src/main.ts:69](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L69)
 
-      <td>
-        [src/main.ts:70](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L70)
-      </td>
-    </tr>
+</td>
+</tr>
+<tr>
+<td>
 
-  </tbody>
+<a id="element-2"></a> `element()`
+
+</td>
+<td>
+
+(`targetElement`, `options?`) =>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
+
+</td>
+<td>
+
+`measureElement`
+
+</td>
+<td>
+
+[src/main.ts:70](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L70)
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ---
@@ -256,72 +265,83 @@ Defined in:
 #### Type declaration
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-  <tbody>
-    <tr>
-      <td>
-        <a id="activate" /> `activate()`
-      </td>
+<a id="activate"></a> `activate()`
 
-      <td>
-        (`speccer`) => `void`
-      </td>
+</td>
+<td>
 
-      <td>
-        [src/main.ts:87](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L87)
-      </td>
-    </tr>
+(`speccer`) => `void`
 
-    <tr>
-      <td>
-        <a id="dom" /> `dom()`
-      </td>
+</td>
+<td>
 
-      <td>
-        (`speccer`) => `void`
-      </td>
+[src/main.ts:87](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L87)
 
-      <td>
-        [src/main.ts:84](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L84)
-      </td>
-    </tr>
+</td>
+</tr>
+<tr>
+<td>
 
-    <tr>
-      <td>
-        <a id="lazy" /> `lazy()`
-      </td>
+<a id="dom"></a> `dom()`
 
-      <td>
-        () => `void`
-      </td>
+</td>
+<td>
 
-      <td>
-        [src/main.ts:85](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L85)
-      </td>
-    </tr>
+(`speccer`) => `void`
 
-    <tr>
-      <td>
-        <a id="manual" /> `manual()`
-      </td>
+</td>
+<td>
 
-      <td>
-        (`speccer`) => `void`
-      </td>
+[src/main.ts:84](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L84)
 
-      <td>
-        [src/main.ts:86](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L86)
-      </td>
-    </tr>
+</td>
+</tr>
+<tr>
+<td>
 
-  </tbody>
+<a id="lazy"></a> `lazy()`
+
+</td>
+<td>
+
+() => `void`
+
+</td>
+<td>
+
+[src/main.ts:85](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L85)
+
+</td>
+</tr>
+<tr>
+<td>
+
+<a id="manual"></a> `manual()`
+
+</td>
+<td>
+
+(`speccer`) => `void`
+
+</td>
+<td>
+
+[src/main.ts:86](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L86)
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ---
@@ -347,58 +367,70 @@ Defined in:
 #### Type declaration
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-  <tbody>
-    <tr>
-      <td>
-        <a id="createpinelement" /> `createPinElement()`
-      </td>
+<a id="createpinelement"></a> `createPinElement()`
 
-      <td>
-        (`content`, `options`, `id`, `n`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
-      </td>
+</td>
+<td>
 
-      <td>
-        [src/main.ts:63](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L63)
-      </td>
-    </tr>
+(`content`, `options`, `id`, `n`) =>
+[`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
-    <tr>
-      <td>
-        <a id="pinelement" /> `pinElement()`
-      </td>
+</td>
+<td>
 
-      <td>
-        (`targetElement`, `parentElement`, `content`, `options`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string` | `void`>
-      </td>
+[src/main.ts:63](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L63)
 
-      <td>
-        [src/main.ts:64](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L64)
-      </td>
-    </tr>
+</td>
+</tr>
+<tr>
+<td>
 
-    <tr>
-      <td>
-        <a id="pinelements" /> `pinElements()`
-      </td>
+<a id="pinelement"></a> `pinElement()`
 
-      <td>
-        (`sectionElement`, `options?`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
-      </td>
+</td>
+<td>
 
-      <td>
-        [src/main.ts:65](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L65)
-      </td>
-    </tr>
+(`targetElement`, `parentElement`, `content`, `options`) =>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`string`
+| `void`>
 
-  </tbody>
+</td>
+<td>
+
+[src/main.ts:64](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L64)
+
+</td>
+</tr>
+<tr>
+<td>
+
+<a id="pinelements"></a> `pinElements()`
+
+</td>
+<td>
+
+(`sectionElement`, `options?`) =>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
+
+</td>
+<td>
+
+[src/main.ts:65](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L65)
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ---
@@ -418,53 +450,62 @@ Defined in:
 #### Type declaration
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Default value</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default value</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-  <tbody>
-    <tr>
-      <td>
-        <a id="create-3" /> `create()`
-      </td>
+<a id="create-3"></a> `create()`
 
-      <td>
-        (`text`, `tag`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
-      </td>
+</td>
+<td>
 
-      <td>
-        `spacingCreate`
-      </td>
+(`text`, `tag`) =>
+[`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
-      <td>
-        [src/main.ts:58](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L58)
-      </td>
-    </tr>
+</td>
+<td>
 
-    <tr>
-      <td>
-        <a id="element-3" /> `element()`
-      </td>
+`spacingCreate`
 
-      <td>
-        (`targetElement`, `options?`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
-      </td>
+</td>
+<td>
 
-      <td>
-        `spacingElement`
-      </td>
+[src/main.ts:58](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L58)
 
-      <td>
-        [src/main.ts:59](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L59)
-      </td>
-    </tr>
+</td>
+</tr>
+<tr>
+<td>
 
-  </tbody>
+<a id="element-3"></a> `element()`
+
+</td>
+<td>
+
+(`targetElement`, `options?`) =>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
+
+</td>
+<td>
+
+`spacingElement`
+
+</td>
+<td>
+
+[src/main.ts:59](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L59)
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ---
@@ -484,53 +525,62 @@ Defined in:
 #### Type declaration
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Default value</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default value</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-  <tbody>
-    <tr>
-      <td>
-        <a id="create-4" /> `create()`
-      </td>
+<a id="create-4"></a> `create()`
 
-      <td>
-        (`html`, `options`, `id`) => [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
-      </td>
+</td>
+<td>
 
-      <td>
-        `typographyCreate`
-      </td>
+(`html`, `options`, `id`) =>
+[`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
-      <td>
-        [src/main.ts:79](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L79)
-      </td>
-    </tr>
+</td>
+<td>
 
-    <tr>
-      <td>
-        <a id="element-4" /> `element()`
-      </td>
+`typographyCreate`
 
-      <td>
-        (`targetElement`, `options?`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
-      </td>
+</td>
+<td>
 
-      <td>
-        `typographyElement`
-      </td>
+[src/main.ts:79](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L79)
 
-      <td>
-        [src/main.ts:80](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L80)
-      </td>
-    </tr>
+</td>
+</tr>
+<tr>
+<td>
 
-  </tbody>
+<a id="element-4"></a> `element()`
+
+</td>
+<td>
+
+(`targetElement`, `options?`) =>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
+
+</td>
+<td>
+
+`typographyElement`
+
+</td>
+<td>
+
+[src/main.ts:80](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L80)
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ## Functions

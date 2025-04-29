@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / utils/get-options
 
 # utils/get-options
 
-> Last updated 2025-04-29T13:00:25.911Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [getOptions()](#getoptions)
+> Last updated 2025-04-29T13:07:02.374Z
 
 ## Functions
 
@@ -36,11 +29,11 @@ options if provided.
 
 #### Parameters
 
-| Parameter        | Type                                                                                                                                                                               | Description                                   |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| `areaString`     | `string`                                                                                                                                                                           | The string defining the area type.            |
-| `targetStyle`    | [`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)\<[`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration)> | The computed style of the target element.     |
-| `customOptions?` | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface)                                                                                                           | Optional custom options to override defaults. |
+| Parameter        | Type                                                                                                                                                                              | Description                                   |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| `areaString`     | `string`                                                                                                                                                                          | The string defining the area type.            |
+| `targetStyle`    | [`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)<[`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration)> | The computed style of the target element.     |
+| `customOptions?` | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface)                                                                                                          | Optional custom options to override defaults. |
 
 #### Returns
 

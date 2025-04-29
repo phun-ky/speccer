@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / utils/intrinsic-coords
 
 # utils/intrinsic-coords
 
-> Last updated 2025-04-29T13:00:25.912Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [intrinsic_coords()](#intrinsic_coords)
+> Last updated 2025-04-29T13:07:02.428Z
 
 ## Functions
 
@@ -41,7 +34,7 @@ Get the intrinsic coordinates of an element based on a specified position.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<\{
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<{
 `x`: `number`; `y`: `number`; }>
 
 - An object containing the coordinates.

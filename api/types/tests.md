@@ -1,18 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / types/tests
 
 # types/tests
 
-> Last updated 2025-04-29T13:00:25.897Z
-
-## Table of Contents
-
-- [Type Aliases](#type-aliases)
-  - [AnyFunction()](#anyfunction)
-  - [MockedFunction\<T>](#mockedfunctiont)
+> Last updated 2025-04-29T13:07:01.946Z
 
 ## Type Aliases
 
@@ -53,46 +45,49 @@ Defined in:
 #### Type declaration
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-  <tbody>
-    <tr>
-      <td>
-        `mock?`
-      </td>
+`mock?`
 
-      <td>
-        \{
-        `calls`: `Call`\[];
-        }
-      </td>
+</td>
+<td>
 
-      <td>
-        [src/types/tests.ts:12](https://github.com/phun-ky/speccer/blob/main/src/types/tests.ts#L12)
-      </td>
-    </tr>
+{ `calls`: `Call`\[]; }
 
-    <tr>
-      <td>
-        `mock.calls`
-      </td>
+</td>
+<td>
 
-      <td>
-        `Call`\[]
-      </td>
+[src/types/tests.ts:12](https://github.com/phun-ky/speccer/blob/main/src/types/tests.ts#L12)
 
-      <td>
-        [src/types/tests.ts:12](https://github.com/phun-ky/speccer/blob/main/src/types/tests.ts#L12)
-      </td>
-    </tr>
+</td>
+</tr>
+<tr>
+<td>
 
-  </tbody>
+`mock.calls`
+
+</td>
+<td>
+
+`Call`\[]
+
+</td>
+<td>
+
+[src/types/tests.ts:12](https://github.com/phun-ky/speccer/blob/main/src/types/tests.ts#L12)
+
+</td>
+</tr>
+</tbody>
 </table>
 
 #### Type Parameters

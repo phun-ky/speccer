@@ -1,18 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / utils/node
 
 # utils/node
 
-> Last updated 2025-04-29T13:00:25.912Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [after()](#after)
-  - [removeAll()](#removeall)
+> Last updated 2025-04-29T13:07:02.443Z
 
 ## Functions
 
@@ -29,14 +21,14 @@ Inserts an HTML element after another element in the DOM.
 
 #### Parameters
 
-| Parameter    | Type                                                                                 | Description                                                         |
-| ------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
-| `el`         | \| `null` \| [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The reference element after which the new element will be inserted. |
-| `newSibling` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)              | The new element to be inserted.                                     |
+| Parameter    | Type                                                                    | Description                     |
+| ------------ | ----------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `el`         |                                                                         | `null`                          | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The reference element after which the new element will be inserted. |
+| `newSibling` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The new element to be inserted. |
 
 #### Returns
 
-\| `undefined` \| `null` \|
+| `undefined` | `null` |
 [`Element`](https://developer.mozilla.org/docs/Web/API/Element)
 
 #### Example

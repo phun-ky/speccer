@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../../README.md) / utils/classes/DrawCircle
 
 # utils/classes/DrawCircle
 
-> Last updated 2025-04-29T13:00:25.902Z
-
-## Table of Contents
-
-- [Classes](#classes)
-  - [DrawCircle](#drawcircle)
+> Last updated 2025-04-29T13:07:02.143Z
 
 ## Classes
 
@@ -52,12 +45,12 @@ Creates a new DrawCircle instance.
 
 #### Properties
 
-| Property                     | Type                                                                              | Defined in                                                                                                             |
-| ---------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| <a id="circle" /> `circle`   | [`SVGCircleElement`](https://developer.mozilla.org/docs/Web/API/SVGCircleElement) | [src/utils/classes/DrawCircle.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L13) |
-| <a id="el" /> `el`           | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)           | [src/utils/classes/DrawCircle.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L12) |
-| <a id="options" /> `options` | [`SpeccerOptionsInterface`](../../types/speccer.md#specceroptionsinterface)       | [src/utils/classes/DrawCircle.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L15) |
-| <a id="radius" /> `radius`   | `number`                                                                          | [src/utils/classes/DrawCircle.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L14) |
+| Property                       | Type                                                                              | Defined in                                                                                                             |
+| ------------------------------ | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| <a id="circle"></a> `circle`   | [`SVGCircleElement`](https://developer.mozilla.org/docs/Web/API/SVGCircleElement) | [src/utils/classes/DrawCircle.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L13) |
+| <a id="el"></a> `el`           | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)           | [src/utils/classes/DrawCircle.ts:12](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L12) |
+| <a id="options"></a> `options` | [`SpeccerOptionsInterface`](../../types/speccer.md#specceroptionsinterface)       | [src/utils/classes/DrawCircle.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L15) |
+| <a id="radius"></a> `radius`   | `number`                                                                          | [src/utils/classes/DrawCircle.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawCircle.ts#L14) |
 
 #### Methods
 
@@ -74,7 +67,7 @@ Draws the circle based on the provided el and radius.
 
 ###### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
 
 ---
 

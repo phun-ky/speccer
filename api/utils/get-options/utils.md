@@ -1,20 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../../README.md) / utils/get-options/utils
 
 # utils/get-options/utils
 
-> Last updated 2025-04-29T13:00:25.911Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [getFeatureBasedOnArea()](#getfeaturebasedonarea)
-  - [getGridToggleValue()](#getgridtogglevalue)
-  - [getPositionBasedOnArea()](#getpositionbasedonarea)
-  - [getSpacingToggleValue()](#getspacingtogglevalue)
+> Last updated 2025-04-29T13:07:02.387Z
 
 ## Functions
 
@@ -32,10 +22,10 @@ element.
 
 #### Parameters
 
-| Parameter     | Type                                                                                                                                                                               | Description                                   |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| `areaString`  | `string`                                                                                                                                                                           | The string representing different area types. |
-| `targetStyle` | [`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)\<[`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration)> | The target HTML element being evaluated.      |
+| Parameter     | Type                                                                                                                                                                              | Description                                   |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| `areaString`  | `string`                                                                                                                                                                          | The string representing different area types. |
+| `targetStyle` | [`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)<[`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration)> | The target HTML element being evaluated.      |
 
 #### Returns
 

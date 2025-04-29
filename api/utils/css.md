@@ -1,24 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / utils/css
 
 # utils/css
 
-> Last updated 2025-04-29T13:00:25.907Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [getClassNameFromCSSProperty()](#getclassnamefromcssproperty)
-  - [getNumberValue()](#getnumbervalue)
-  - [getSpacing()](#getspacing)
-  - [getTypography()](#gettypography)
-  - [lineWidth()](#linewidth)
-  - [measureSize()](#measuresize)
-  - [normalizeNumberValue()](#normalizenumbervalue)
-  - [pinSpace()](#pinspace)
+> Last updated 2025-04-29T13:07:02.284Z
 
 ## Functions
 
@@ -244,9 +230,9 @@ is within the range \[0, 1] or \[-1, 0), it's normalized to 0.
 
 #### Parameters
 
-| Parameter | Type                 | Description             |
-| --------- | -------------------- | ----------------------- |
-| `value`   | `string` \| `number` | The value to normalize. |
+| Parameter | Type     | Description |
+| --------- | -------- | ----------- | ----------------------- |
+| `value`   | `string` | `number`    | The value to normalize. |
 
 #### Returns
 

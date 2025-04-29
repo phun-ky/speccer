@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / utils/direction-of-element
 
 # utils/direction-of-element
 
-> Last updated 2025-04-29T13:00:25.910Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [direction_of_element()](#direction_of_element)
+> Last updated 2025-04-29T13:07:02.338Z
 
 ## Functions
 
@@ -29,16 +22,16 @@ element.
 
 #### Parameters
 
-| Parameter        | Type                                                                                                                                                                                         | Description                                           |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| `options`        | \{ `crude?`: `boolean`; `start`: [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement); `stop`: [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement); } | Options for direction calculation.                    |
-| `options.crude?` | `boolean`                                                                                                                                                                                    | If the direction should be calculated crudely (NSEW). |
-| `options.start`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                                                                                                                      | The starting HTML element.                            |
-| `options.stop`   | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                                                                                                                      | The stopping HTML element.                            |
+| Parameter        | Type                                                                                                                                                                                        | Description                                           |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| `options`        | { `crude?`: `boolean`; `start`: [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement); `stop`: [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement); } | Options for direction calculation.                    |
+| `options.crude?` | `boolean`                                                                                                                                                                                   | If the direction should be calculated crudely (NSEW). |
+| `options.start`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                                                                                                                     | The starting HTML element.                            |
+| `options.stop`   | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)                                                                                                                     | The stopping HTML element.                            |
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`string`>
 
 - The calculated direction.
 

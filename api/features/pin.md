@@ -1,12 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / features/pin
 
 # features/pin
 
-> Last updated 2025-04-29T13:00:25.873Z
+> Last updated 2025-04-29T13:07:00.990Z
 
 This feature annotate or highlight the anatomy of an element.
 
@@ -14,15 +12,6 @@ This feature annotate or highlight the anatomy of an element.
 
 In your component examples, use the following attribute. Remember to use the
 `data-speccer="pin-area"`-attribute on a parent element to scope the marking.
-
-## Table of Contents
-
-- [Example](#example)
-- [Functions](#functions)
-  - [pinElements()](#pinelements)
-- [References](#references)
-  - [createPinElement](#createpinelement)
-  - [pinElement](#pinelement)
 
 ## Example
 
@@ -58,7 +47,7 @@ attributes.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
 
 - A promise that resolves after creating pinned elements.
 

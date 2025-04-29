@@ -1,23 +1,14 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / features/mark
 
 # features/mark
 
-> Last updated 2025-04-29T13:00:25.872Z
+> Last updated 2025-04-29T13:07:00.928Z
 
 This feature marks given element
 
 ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-pin-mark-light.png?raw=true)
-
-## Table of Contents
-
-- [Example](#example)
-- [Functions](#functions)
-  - [create()](#create)
-  - [mark()](#mark)
 
 ## Example
 
@@ -93,7 +84,7 @@ element.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
 
 - A promise that resolves after creating and styling the marker element.
 

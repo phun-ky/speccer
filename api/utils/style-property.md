@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / utils/style-property
 
 # utils/style-property
 
-> Last updated 2025-04-29T13:00:25.913Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [isSticky()](#issticky)
+> Last updated 2025-04-29T13:07:02.523Z
 
 ## Functions
 
@@ -34,7 +27,7 @@ Checks if an element has 'position: sticky'.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`boolean`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`boolean`>
 
 - A promise that resolves to true if the element has 'position: sticky', false
   otherwise.

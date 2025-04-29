@@ -1,23 +1,14 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / features/typography
 
 # features/typography
 
-> Last updated 2025-04-29T13:00:25.876Z
+> Last updated 2025-04-29T13:07:01.157Z
 
 This feature presents typography
 
 ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-typography-light.png?raw=true)
-
-## Table of Contents
-
-- [Example](#example)
-- [Functions](#functions)
-  - [create()](#create)
-  - [typography()](#typography)
 
 ## Example
 
@@ -102,7 +93,7 @@ Create a specced typography element for a given target element.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
 
 - A promise that resolves once typography element is created and positioned.
 

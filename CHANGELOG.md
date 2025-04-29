@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.2.18](https://github.com/phun-ky/speccer/compare/v11.2.17...v11.2.18) (2025-04-29)
+
+### Tasks
+
+* 🤖 bump typedoc-plugin-remark in the major-updates group ([e87bb96](https://github.com/phun-ky/speccer/commit/e87bb968cc6c7d1ce71a61b9984875f6a2c0e1f2))
+
 ## [11.2.17](https://github.com/phun-ky/speccer/compare/v11.2.16...v11.2.17) (2025-04-29)
 
 ### Tasks

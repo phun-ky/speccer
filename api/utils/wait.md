@@ -1,18 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / utils/wait
 
 # utils/wait
 
-> Last updated 2025-04-29T13:00:25.915Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [waitFor()](#waitfor)
-  - [waitForFrame()](#waitforframe)
+> Last updated 2025-04-29T13:07:02.572Z
 
 ## Functions
 
@@ -35,7 +27,7 @@ Waits for the specified amount of time in milliseconds.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
 
 - A Promise that resolves after the specified time.
 
@@ -61,7 +53,7 @@ Waits for the next animation frame using requestAnimationFrame.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`number`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`number`>
 
 - A Promise that resolves with the timestamp of the next animation frame.
 

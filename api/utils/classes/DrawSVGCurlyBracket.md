@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../../README.md) / utils/classes/DrawSVGCurlyBracket
 
 # utils/classes/DrawSVGCurlyBracket
 
-> Last updated 2025-04-29T13:00:25.902Z
-
-## Table of Contents
-
-- [Classes](#classes)
-  - [DrawSVGCurlyBracket](#drawsvgcurlybracket)
+> Last updated 2025-04-29T13:07:02.162Z
 
 ## Classes
 
@@ -48,12 +41,12 @@ Creates a new DrawSVGCurlyBracket instance.
 
 #### Properties
 
-| Property                                         | Type                                                                          | Defined in                                                                                                                               |
-| ------------------------------------------------ | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| <a id="firstpathelement" /> `firstPathElement`   | [`SVGPathElement`](https://developer.mozilla.org/docs/Web/API/SVGPathElement) | [src/utils/classes/DrawSVGCurlyBracket.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L15) |
-| <a id="secondpathelement" /> `secondPathElement` | [`SVGPathElement`](https://developer.mozilla.org/docs/Web/API/SVGPathElement) | [src/utils/classes/DrawSVGCurlyBracket.ts:16](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L16) |
-| <a id="startelement" /> `startElement`           | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | [src/utils/classes/DrawSVGCurlyBracket.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L13) |
-| <a id="stopelement" /> `stopElement`             | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | [src/utils/classes/DrawSVGCurlyBracket.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L14) |
+| Property                                           | Type                                                                          | Defined in                                                                                                                               |
+| -------------------------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| <a id="firstpathelement"></a> `firstPathElement`   | [`SVGPathElement`](https://developer.mozilla.org/docs/Web/API/SVGPathElement) | [src/utils/classes/DrawSVGCurlyBracket.ts:15](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L15) |
+| <a id="secondpathelement"></a> `secondPathElement` | [`SVGPathElement`](https://developer.mozilla.org/docs/Web/API/SVGPathElement) | [src/utils/classes/DrawSVGCurlyBracket.ts:16](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L16) |
+| <a id="startelement"></a> `startElement`           | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | [src/utils/classes/DrawSVGCurlyBracket.ts:13](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L13) |
+| <a id="stopelement"></a> `stopElement`             | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)       | [src/utils/classes/DrawSVGCurlyBracket.ts:14](https://github.com/phun-ky/speccer/blob/main/src/utils/classes/DrawSVGCurlyBracket.ts#L14) |
 
 #### Methods
 
@@ -91,7 +84,7 @@ Draws the curly bracket based on the provided path.
 
 ###### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
 
 ###### Throws
 

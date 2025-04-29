@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../../../README.md) / features/pin/utils/get-content-for-pin
 
 # features/pin/utils/get-content-for-pin
 
-> Last updated 2025-04-29T13:00:25.874Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [getContentForPin()](#getcontentforpin)
+> Last updated 2025-04-29T13:07:01.050Z
 
 ## Functions
 

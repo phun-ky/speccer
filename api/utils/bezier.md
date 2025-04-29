@@ -1,21 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / utils/bezier
 
 # utils/bezier
 
-> Last updated 2025-04-29T13:00:25.899Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [createBezierCurveCoordinates()](#createbeziercurvecoordinates)
-  - [getCurlySVGPath()](#getcurlysvgpath)
-  - [getPositionsForCurlySVGPath()](#getpositionsforcurlysvgpath)
-  - [getPositionsForSVGPath()](#getpositionsforsvgpath)
-  - [getSVGPath()](#getsvgpath)
+> Last updated 2025-04-29T13:07:02.077Z
 
 ## Functions
 
@@ -78,7 +67,7 @@ Generates an SVG path for a curved line between two HTML elements.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`string`>
 
 The SVG path string for the curved line.
 
@@ -132,72 +121,83 @@ direction.
 Positions for creating an SVG path for a curved line.
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-  <tbody>
-    <tr>
-      <td>
-        `path1pos1`
-      </td>
+`path1pos1`
 
-      <td>
-        `string`
-      </td>
+</td>
+<td>
 
-      <td>
-        [src/utils/bezier.ts:321](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L321)
-      </td>
-    </tr>
+`string`
 
-    <tr>
-      <td>
-        `path1pos2`
-      </td>
+</td>
+<td>
 
-      <td>
-        `string`
-      </td>
+[src/utils/bezier.ts:321](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L321)
 
-      <td>
-        [src/utils/bezier.ts:322](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L322)
-      </td>
-    </tr>
+</td>
+</tr>
+<tr>
+<td>
 
-    <tr>
-      <td>
-        `path2pos1`
-      </td>
+`path1pos2`
 
-      <td>
-        `string`
-      </td>
+</td>
+<td>
 
-      <td>
-        [src/utils/bezier.ts:323](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L323)
-      </td>
-    </tr>
+`string`
 
-    <tr>
-      <td>
-        `path2pos2`
-      </td>
+</td>
+<td>
 
-      <td>
-        `string`
-      </td>
+[src/utils/bezier.ts:322](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L322)
 
-      <td>
-        [src/utils/bezier.ts:324](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L324)
-      </td>
-    </tr>
+</td>
+</tr>
+<tr>
+<td>
 
-  </tbody>
+`path2pos1`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+[src/utils/bezier.ts:323](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L323)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`path2pos2`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+[src/utils/bezier.ts:324](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L324)
+
+</td>
+</tr>
+</tbody>
 </table>
 
 #### Example
@@ -240,44 +240,49 @@ Returns positions for creating an SVG path based on a cardinal direction.
 Positions for creating an SVG path.
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-  <tbody>
-    <tr>
-      <td>
-        `pos1`
-      </td>
+`pos1`
 
-      <td>
-        `string`
-      </td>
+</td>
+<td>
 
-      <td>
-        [src/utils/bezier.ts:270](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L270)
-      </td>
-    </tr>
+`string`
 
-    <tr>
-      <td>
-        `pos2`
-      </td>
+</td>
+<td>
 
-      <td>
-        `string`
-      </td>
+[src/utils/bezier.ts:270](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L270)
 
-      <td>
-        [src/utils/bezier.ts:270](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L270)
-      </td>
-    </tr>
+</td>
+</tr>
+<tr>
+<td>
 
-  </tbody>
+`pos2`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+[src/utils/bezier.ts:270](https://github.com/phun-ky/speccer/blob/main/src/utils/bezier.ts#L270)
+
+</td>
+</tr>
+</tbody>
 </table>
 
 #### Example
@@ -309,7 +314,7 @@ Generates an SVG path for a straight line between two HTML elements.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`string`>
 
 The SVG path string for the straight line.
 

@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / types/xy
 
 # types/xy
 
-> Last updated 2025-04-29T13:00:25.897Z
-
-## Table of Contents
-
-- [Interfaces](#interfaces)
-  - [SpeccerCoordinatesInterface](#speccercoordinatesinterface)
+> Last updated 2025-04-29T13:07:01.964Z
 
 ## Interfaces
 
@@ -22,10 +15,10 @@ Defined in:
 
 #### Properties
 
-| Property         | Type     | Defined in                                                                           |
-| ---------------- | -------- | ------------------------------------------------------------------------------------ |
-| <a id="x" /> `x` | `number` | [src/types/xy.ts:2](https://github.com/phun-ky/speccer/blob/main/src/types/xy.ts#L2) |
-| <a id="y" /> `y` | `number` | [src/types/xy.ts:3](https://github.com/phun-ky/speccer/blob/main/src/types/xy.ts#L3) |
+| Property           | Type     | Defined in                                                                           |
+| ------------------ | -------- | ------------------------------------------------------------------------------------ |
+| <a id="x"></a> `x` | `number` | [src/types/xy.ts:2](https://github.com/phun-ky/speccer/blob/main/src/types/xy.ts#L2) |
+| <a id="y"></a> `y` | `number` | [src/types/xy.ts:3](https://github.com/phun-ky/speccer/blob/main/src/types/xy.ts#L3) |
 
 ---
 

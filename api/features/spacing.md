@@ -1,23 +1,14 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / features/spacing
 
 # features/spacing
 
-> Last updated 2025-04-29T13:00:25.875Z
+> Last updated 2025-04-29T13:07:01.104Z
 
 This feature highlights the spacing of an element.
 
 ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-spacing-dark.png?raw=true) \*
-
-## Table of Contents
-
-- [Example](#example)
-- [Functions](#functions)
-  - [create()](#create)
-  - [spacing()](#spacing)
 
 ## Example
 
@@ -47,10 +38,10 @@ Create a spacing element with optional text content.
 
 #### Parameters
 
-| Parameter | Type                 | Default value | Description                                        |
-| --------- | -------------------- | ------------- | -------------------------------------------------- |
-| `text`    | `string` \| `number` | `''`          | The optional text content for the spacing element. |
-| `tag`     | `string`             | `'span'`      | The HTML tag for the element (default is 'span').  |
+| Parameter | Type     | Default value | Description                                       |
+| --------- | -------- | ------------- | ------------------------------------------------- | -------------------------------------------------- |
+| `text`    | `string` | `number`      | `''`                                              | The optional text content for the spacing element. |
+| `tag`     | `string` | `'span'`      | The HTML tag for the element (default is 'span'). |
 
 #### Returns
 
@@ -90,7 +81,7 @@ spacing styles.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
 
 - A promise that resolves after creating and positioning the spacing elements.
 

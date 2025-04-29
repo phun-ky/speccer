@@ -1,18 +1,11 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../../../README.md) /
 features/a11y/utils/add-shortcut-element
 
 # features/a11y/utils/add-shortcut-element
 
-> Last updated 2025-04-29T13:00:25.869Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [addShortcutElement()](#addshortcutelement)
+> Last updated 2025-04-29T13:07:00.795Z
 
 ## Functions
 
@@ -39,7 +32,7 @@ and shortcut string.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
 
 A Promise resolving when the operation is complete.
 

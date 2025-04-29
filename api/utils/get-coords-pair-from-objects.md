@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / utils/get-coords-pair-from-objects
 
 # utils/get-coords-pair-from-objects
 
-> Last updated 2025-04-29T13:00:25.910Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [getCoordsPairFromObjects()](#getcoordspairfromobjects)
+> Last updated 2025-04-29T13:07:02.353Z
 
 ## Functions
 
@@ -47,7 +40,7 @@ Get the x and y coordinates of two elements and return them as an object.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<\{
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<{
 `x1`: `number`; `x2`: `number`; `y1`: `number`; `y2`: `number`; }>
 
 - An object containing the coordinates.

@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../../../README.md) / features/typography/utils/template
 
 # features/typography/utils/template
 
-> Last updated 2025-04-29T13:00:25.877Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [template()](#template)
+> Last updated 2025-04-29T13:07:01.209Z
 
 ## Functions
 
@@ -35,7 +28,7 @@ Generate a HTML string for typography styles of a target element.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`string`>
 
 - A promise that resolves with the HTML string.
 

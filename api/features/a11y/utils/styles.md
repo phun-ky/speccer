@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../../../README.md) / features/a11y/utils/styles
 
 # features/a11y/utils/styles
 
-> Last updated 2025-04-29T13:00:25.871Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [styles()](#styles)
+> Last updated 2025-04-29T13:07:00.863Z
 
 ## Functions
 
@@ -41,7 +34,7 @@ type.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SpeccerStylesReturnType`](../../../types/styles.md#speccerstylesreturntype)>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[`SpeccerStylesReturnType`](../../../types/styles.md#speccerstylesreturntype)>
 
 A Promise resolving with the calculated styles.
 

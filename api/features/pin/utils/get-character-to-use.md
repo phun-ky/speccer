@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../../../README.md) / features/pin/utils/get-character-to-use
 
 # features/pin/utils/get-character-to-use
 
-> Last updated 2025-04-29T13:00:25.874Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [getCharacterToUse()](#getcharactertouse)
+> Last updated 2025-04-29T13:07:01.037Z
 
 ## Functions
 
@@ -30,10 +23,10 @@ lowercase letters.
 
 #### Parameters
 
-| Parameter       | Type                    | Description                             |
-| --------------- | ----------------------- | --------------------------------------- |
-| `targetIndex`   | `number`                | The index of the character to retrieve. |
-| `literalsToUse` | `string` \| `string`\[] | Literals to use                         |
+| Parameter       | Type     | Description                             |
+| --------------- | -------- | --------------------------------------- | --------------- |
+| `targetIndex`   | `number` | The index of the character to retrieve. |
+| `literalsToUse` | `string` | `string`\[]                             | Literals to use |
 
 #### Returns
 

@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../../../README.md) / features/pin/utils/pin-element
 
 # features/pin/utils/pin-element
 
-> Last updated 2025-04-29T13:00:25.875Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [pinElement()](#pinelement)
+> Last updated 2025-04-29T13:07:01.063Z
 
 ## Functions
 
@@ -46,7 +39,7 @@ styles, such as curly brackets or lines, based on the pin type.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`string`
 | `void`>
 
 A promise that resolves to the id of the pin element when the process is

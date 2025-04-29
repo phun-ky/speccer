@@ -1,38 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / utils/area
 
 # utils/area
 
-> Last updated 2025-04-29T13:00:25.897Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [getAreasFromString()](#getareasfromstring)
-  - [isBottomArea()](#isbottomarea)
-  - [isBracketArea()](#isbracketarea)
-  - [isCurly()](#iscurly)
-  - [isEncloseArea()](#isenclosearea)
-  - [isHeightArea()](#isheightarea)
-  - [isLeftArea()](#isleftarea)
-  - [isParentArea()](#isparentarea)
-  - [isRightArea()](#isrightarea)
-  - [isSlimArea()](#isslimarea)
-  - [isSubtle()](#issubtle)
-  - [isTextArea()](#istextarea)
-  - [isTopArea()](#istoparea)
-  - [isValidGridElement()](#isvalidgridelement)
-  - [isValidMarkElement()](#isvalidmarkelement)
-  - [isValidMeasureElement()](#isvalidmeasureelement)
-  - [isValidPinElement()](#isvalidpinelement)
-  - [isValidSpacingElement()](#isvalidspacingelement)
-  - [isValidTypographyElement()](#isvalidtypographyelement)
-  - [isWidthArea()](#iswidtharea)
-  - [useSVG()](#usesvg)
-  - [useSyntaxHighlighting()](#usesyntaxhighlighting)
+> Last updated 2025-04-29T13:07:01.994Z
 
 ## Functions
 
@@ -81,9 +53,9 @@ Checks if 'bottom' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -106,9 +78,9 @@ Checks if 'bracket' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -131,9 +103,9 @@ Checks if the provided areaString contains 'curly' and 'bracket' areas.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -156,9 +128,9 @@ Checks if 'enclose' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -181,9 +153,9 @@ Checks if 'height' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -206,9 +178,9 @@ Checks if 'left' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -231,9 +203,9 @@ Checks if 'parent' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -256,9 +228,9 @@ Checks if 'right' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -281,9 +253,9 @@ Checks if 'slim' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -306,9 +278,9 @@ Checks if 'subtle' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -331,9 +303,9 @@ Checks if 'text' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -356,9 +328,9 @@ Checks if 'top' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -381,10 +353,10 @@ Checks if the provided areaString contains 'grid'.
 
 #### Parameters
 
-| Parameter    | Type                                                                                                                                                                               | Description                  |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| `areaString` | `null` \| `string`                                                                                                                                                                 | The string containing areas. |
-| `styles`     | [`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)\<[`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration)> | -                            |
+| Parameter    | Type                                                                                                                                                                              | Description |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------- |
+| `areaString` | `null`                                                                                                                                                                            | `string`    | The string containing areas. |
+| `styles`     | [`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)<[`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration)> | -           |
 
 #### Returns
 
@@ -407,9 +379,9 @@ Checks if the provided areaString contains 'mark'.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -432,9 +404,9 @@ Checks if the provided areaString contains 'measure'.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -457,9 +429,9 @@ Checks if the provided areaString contains 'pin'.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -482,9 +454,9 @@ Checks if the provided areaString contains 'spacing'.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -507,9 +479,9 @@ Checks if the provided areaString contains 'typography'.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -532,9 +504,9 @@ Checks if 'width' area is present in the provided areaString.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -557,9 +529,9 @@ Checks if the provided areaString contains SVG-related areas.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 
@@ -582,9 +554,9 @@ Checks if the provided areaString contains 'syntax'.
 
 #### Parameters
 
-| Parameter    | Type               | Description                  |
-| ------------ | ------------------ | ---------------------------- |
-| `areaString` | `null` \| `string` | The string containing areas. |
+| Parameter    | Type   | Description |
+| ------------ | ------ | ----------- | ---------------------------- |
+| `areaString` | `null` | `string`    | The string containing areas. |
 
 #### Returns
 

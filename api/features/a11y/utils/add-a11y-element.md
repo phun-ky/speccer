@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../../../README.md) / features/a11y/utils/add-a11y-element
 
 # features/a11y/utils/add-a11y-element
 
-> Last updated 2025-04-29T13:00:25.868Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [addA11yElement()](#adda11yelement)
+> Last updated 2025-04-29T13:07:00.765Z
 
 ## Functions
 
@@ -40,7 +33,7 @@ and type.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
 
 A Promise resolving when the operation is complete.
 

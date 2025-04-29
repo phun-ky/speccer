@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../../../README.md) / features/a11y/utils/create-a11y-element
 
 # features/a11y/utils/create-a11y-element
 
-> Last updated 2025-04-29T13:00:25.869Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [createA11yElement()](#createa11yelement)
+> Last updated 2025-04-29T13:07:00.816Z
 
 ## Functions
 

@@ -1,12 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / config/browser
 
 # config/browser
 
-> Last updated 2025-04-29T13:00:25.863Z
+> Last updated 2025-04-29T13:07:00.561Z
 
 Contains the helper functions to activate SPECCER via a script tag, based on
 attributes:
@@ -20,19 +18,6 @@ attributes:
 > ```html
 > <link rel="stylesheet" href="../path/to/speccer.min.css" />
 > ```
-
-## Table of Contents
-
-- [Default implementation](#default-implementation)
-- [Manual initiation](#manual-initiation)
-- [Initiate immediately](#initiate-immediately)
-- [Initiate when dom ready](#initiate-when-dom-ready)
-- [Initiate with lazy loading](#initiate-with-lazy-loading)
-- [Functions](#functions)
-  - [activate()](#activate)
-  - [dom()](#dom)
-  - [lazy()](#lazy)
-  - [manual()](#manual)
 
 ## Default implementation
 

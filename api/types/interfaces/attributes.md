@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../../README.md) / types/interfaces/attributes
 
 # types/interfaces/attributes
 
-> Last updated 2025-04-29T13:00:25.883Z
-
-## Table of Contents
-
-- [Interfaces](#interfaces)
-  - [AttributesMapInterface](#attributesmapinterface)
+> Last updated 2025-04-29T13:07:01.427Z
 
 ## Interfaces
 

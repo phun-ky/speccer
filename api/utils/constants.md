@@ -1,30 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / utils/constants
 
 # utils/constants
 
-> Last updated 2025-04-29T13:00:25.905Z
-
-## Table of Contents
-
-- [Variables](#variables)
-  - [SPECCER_DATA_ATTRIBUTE](#speccer_data_attribute)
-  - [SPECCER_DEFAULT_LINE_WIDTH](#speccer_default_line_width)
-  - [SPECCER_DEFAULT_MEASURE_SIZE](#speccer_default_measure_size)
-  - [SPECCER_DEFAULT_MEASURE_SIZE_NEG](#speccer_default_measure_size_neg)
-  - [SPECCER_DEFAULT_PIN_SPACE](#speccer_default_pin_space)
-  - [SPECCER_DEFAULT_PIN_SPACE_NEG](#speccer_default_pin_space_neg)
-  - [SPECCER_FEATURE_GRID](#speccer_feature_grid)
-  - [SPECCER_FEATURE_MARK](#speccer_feature_mark)
-  - [SPECCER_FEATURE_MEASURE](#speccer_feature_measure)
-  - [SPECCER_FEATURE_PIN_AREA](#speccer_feature_pin_area)
-  - [SPECCER_FEATURE_SPACING](#speccer_feature_spacing)
-  - [SPECCER_FEATURE_TYPOGRAPHY](#speccer_feature_typography)
-  - [SPECCER_LITERALS](#speccer_literals)
-  - [SPECCER_TAGS_TO_AVOID](#speccer_tags_to_avoid)
+> Last updated 2025-04-29T13:07:02.222Z
 
 ## Variables
 

@@ -1,17 +1,10 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../../../README.md) / features/typography/utils/position
 
 # features/typography/utils/position
 
-> Last updated 2025-04-29T13:00:25.877Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [position()](#position)
+> Last updated 2025-04-29T13:07:01.188Z
 
 ## Functions
 
@@ -43,7 +36,7 @@ Calculate the position for the speccer element relative to the target element.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<\{
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<{
 `left`: `string`; `top`: `string`; }>
 
 - A promise that resolves with the calculated position.

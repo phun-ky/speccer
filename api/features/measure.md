@@ -1,23 +1,14 @@
-<div>
-  <img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;" />
-</div>
+<div><img alt="SPECCER logo" src="https://raw.githubusercontent.com/phun-ky/speccer/main/public/logo-speccer-horizontal-colored-package.svg?raw=true" style="max-height:32px;"/></div>
 
 [@phun-ky/speccer](../README.md) / features/measure
 
 # features/measure
 
-> Last updated 2025-04-29T13:00:25.873Z
+> Last updated 2025-04-29T13:07:00.954Z
 
 This feature measures given element
 
 ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-pin-measure-height-light.png?raw=true)
-
-## Table of Contents
-
-- [Example](#example)
-- [Functions](#functions)
-  - [create()](#create)
-  - [measure()](#measure)
 
 ## Example
 
@@ -59,12 +50,12 @@ Create a measurement element with optional text, area, and element type.
 
 #### Parameters
 
-| Parameter | Type                                                                     | Default value | Description                         |
-| --------- | ------------------------------------------------------------------------ | ------------- | ----------------------------------- |
-| `text`    | `string` \| `number`                                                     | `''`          | The text to display on the element. |
-| `options` | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | `undefined`   | The options.                        |
-| `id`      | `string`                                                                 | `undefined`   | The element id.                     |
-| `tag`     | `string`                                                                 | `'span'`      | The element type.                   |
+| Parameter | Type                                                                     | Default value | Description       |
+| --------- | ------------------------------------------------------------------------ | ------------- | ----------------- | ----------------------------------- |
+| `text`    | `string`                                                                 | `number`      | `''`              | The text to display on the element. |
+| `options` | [`SpeccerOptionsInterface`](../types/speccer.md#specceroptionsinterface) | `undefined`   | The options.      |
+| `id`      | `string`                                                                 | `undefined`   | The element id.   |
+| `tag`     | `string`                                                                 | `'span'`      | The element type. |
 
 #### Returns
 
@@ -104,7 +95,7 @@ specified target element based on the attribute values from `data-speccer`.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
 
 - A promise that resolves after creating and styling the measurement element.
 
