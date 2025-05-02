@@ -1,5 +1,15 @@
 # Changelog
 
+## [11.2.19](https://github.com/phun-ky/speccer/compare/v11.2.18...v11.2.19) (2025-05-02)
+
+### Tasks
+
+* 🤖 Use external dep for eslintconfig ([a4e029f](https://github.com/phun-ky/speccer/commit/a4e029f5c9a04b64ffbb3c7c700fa6ed0261f028))
+
+### Documentation
+
+* ✏️ Update used by section ([c97274c](https://github.com/phun-ky/speccer/commit/c97274c674110076f8e22cf5fda6dd7f1b6edfd2))
+
 ## [11.2.18](https://github.com/phun-ky/speccer/compare/v11.2.17...v11.2.18) (2025-04-29)
 
 ### Tasks

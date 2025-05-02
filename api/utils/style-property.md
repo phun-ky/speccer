@@ -4,7 +4,7 @@
 
 # utils/style-property
 
-> Last updated 2025-04-29T13:07:02.523Z
+> Last updated 2025-05-02T20:14:13.372Z
 
 ## Functions
 
