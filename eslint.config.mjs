@@ -5,5 +5,12 @@ import { defineConfig } from 'eslint/config';
 export default defineConfig([
   {
     extends: [customConfig]
+  },
+  {
+    files: ['**/*.md'],
+    rules: {
+      'no-irregular-whitespace': 'off',
+      '@stylistic/indent': 'off'
+    }
   }
 ]);
