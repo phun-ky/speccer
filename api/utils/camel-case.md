@@ -4,7 +4,7 @@
 
 # utils/camel-case
 
-> Last updated 2025-05-06T05:47:47.995Z
+> Last updated 2025-05-06T08:55:08.133Z
 
 ## Functions
 

@@ -4,7 +4,7 @@
 
 # utils/area
 
-> Last updated 2025-05-06T05:47:47.873Z
+> Last updated 2025-05-06T08:55:08.015Z
 
 ## Functions
 

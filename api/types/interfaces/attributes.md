@@ -4,7 +4,7 @@
 
 # types/interfaces/attributes
 
-> Last updated 2025-05-06T05:47:47.345Z
+> Last updated 2025-05-06T08:55:07.469Z
 
 ## Interfaces
 

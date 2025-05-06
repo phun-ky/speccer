@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.2.21](https://github.com/phun-ky/speccer/compare/v11.2.20...v11.2.21) (2025-05-06)
+
+### Tasks
+
+* 🤖 Use new package for eslint config ([d1f5d17](https://github.com/phun-ky/speccer/commit/d1f5d172ac1f2b131c5da2449f3de3fd30a38f52))
+
 ## [11.2.20](https://github.com/phun-ky/speccer/compare/v11.2.19...v11.2.20) (2025-05-06)
 
 ### Tasks
