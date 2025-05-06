@@ -1,5 +1,12 @@
 # Changelog
 
+## [11.2.20](https://github.com/phun-ky/speccer/compare/v11.2.19...v11.2.20) (2025-05-06)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 5 updates ([71d823b](https://github.com/phun-ky/speccer/commit/71d823be5d970dfad6fdbfc8089217376ed02331))
+* 🤖 Disable rules for markdown files ([2505523](https://github.com/phun-ky/speccer/commit/25055230e0eb61c69311fe46df75fe061318939e))
+
 ## [11.2.19](https://github.com/phun-ky/speccer/compare/v11.2.18...v11.2.19) (2025-05-02)
 
 ### Tasks

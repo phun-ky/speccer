@@ -4,7 +4,7 @@
 
 # types/enums/area
 
-> Last updated 2025-05-02T20:14:12.345Z
+> Last updated 2025-05-06T05:47:47.315Z
 
 ## Enumerations
 

@@ -4,7 +4,7 @@
 
 # features/a11y/utils/create-a11y-element
 
-> Last updated 2025-05-02T20:14:11.774Z
+> Last updated 2025-05-06T05:47:46.726Z
 
 ## Functions
 
