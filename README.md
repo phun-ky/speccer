@@ -719,8 +719,8 @@ $ npm test
 
 ## Used by
 
-|[![if insurance logo](./public/used-by-if.png)](https://www.if-insurance.com)|[![24seven office logo](./public/used-by-tfso.png)](https://24sevenoffice.com)|
-|-----------|-------------|
+| [![if insurance logo](./public/used-by-if.png)](https://www.if-insurance.com) | [![24seven office logo](./public/used-by-tfso.png)](https://24sevenoffice.com) |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 
 ## Contributing
 
