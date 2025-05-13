@@ -14,6 +14,9 @@ updates:
           - 'major'
     schedule:
       interval: 'weekly'
+    labels:
+      - 'mindless: 📦 dependencies'
+      - 'problems: security'
     commit-message:
       prefix: 'chore: 🤖 '
     open-pull-requests-limit: 2
