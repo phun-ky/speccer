@@ -1,24 +1,24 @@
 XS:
-  name: size: 👕 XS
+  name: 'size: 👕 XS'
   lines: 0
   color: 3CBF00
 S:
-  name: size: 👕 S
+  name: 'size: 👕 S'
   lines: 10
   color: 5D9801
 M:
-  name: size: 👕 M
+  name: 'size: 👕 M'
   lines: 30
   color: 7F7203
 L:
-  name: size: 👕 L
+  name: 'size: 👕 L'
   lines: 100
   color: A14C05
 XL:
-  name: size: 👕 XL
+  name: 'size: 👕 XL'
   lines: 500
   color: C32607
 XXL:
-  name: size: 👕 XXL
+  name: 'size: 👕 XXL'
   lines: 1000
   color: E50009
