@@ -4,7 +4,7 @@
 
 # utils/number
 
-> Last updated 2025-05-06T08:55:08.477Z
+> Last updated 2025-05-13T08:25:03.220Z
 
 ## Functions
 

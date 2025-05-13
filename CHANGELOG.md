@@ -1,5 +1,19 @@
 # Changelog
 
+## [11.2.22](https://github.com/phun-ky/speccer/compare/v11.2.21...v11.2.22) (2025-05-13)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 5 updates ([0d86ff1](https://github.com/phun-ky/speccer/commit/0d86ff1868393bd369b099871234a41248b8726a))
+
+### Bug
+
+* 🐛 Stringy labels for PR size app ([e81c810](https://github.com/phun-ky/speccer/commit/e81c810f0843ce92106a292aa1775b0fadb1f334))
+
+### Refactoring
+
+* 💡 Remove default labels from dependabot ([212a2f3](https://github.com/phun-ky/speccer/commit/212a2f35f97da17c9a997d92a4d4c083678c30a0))
+
 ## [11.2.21](https://github.com/phun-ky/speccer/compare/v11.2.20...v11.2.21) (2025-05-06)
 
 ### Tasks
