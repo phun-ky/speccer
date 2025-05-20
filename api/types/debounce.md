@@ -4,7 +4,7 @@
 
 # types/debounce
 
-> Last updated 2025-05-13T08:25:02.161Z
+> Last updated 2025-05-20T09:52:55.534Z
 
 ## Type Aliases
 
