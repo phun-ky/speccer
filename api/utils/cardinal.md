@@ -4,7 +4,7 @@
 
 # utils/cardinal
 
-> Last updated 2025-05-20T09:52:56.242Z
+> Last updated 2025-05-27T08:07:55.175Z
 
 ## Functions
 
