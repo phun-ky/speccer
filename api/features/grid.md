@@ -4,7 +4,7 @@
 
 # features/grid
 
-> Last updated 2025-06-03T04:29:48.831Z
+> Last updated 2025-06-10T05:34:40.504Z
 
 This feature will highlight the grid spacing in a `display: grid;` element.
 
