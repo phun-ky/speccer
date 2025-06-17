@@ -4,7 +4,7 @@
 
 # features/a11y/utils/get-role
 
-> Last updated 2025-06-17T07:00:21.657Z
+> Last updated 2025-06-17T08:01:00.919Z
 
 ## Functions
 

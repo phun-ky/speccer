@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.2.28](https://github.com/phun-ky/speccer/compare/v11.2.27...v11.2.28) (2025-06-17)
+
+### Tasks
+
+* 🤖 bump @types/node in the major-updates group ([e795fa4](https://github.com/phun-ky/speccer/commit/e795fa4985575b4fc055802f0059374f3fbf5d18))
+
 ## [11.2.27](https://github.com/phun-ky/speccer/compare/v11.2.26...v11.2.27) (2025-06-17)
 
 ### Tasks

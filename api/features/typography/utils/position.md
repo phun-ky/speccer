@@ -4,7 +4,7 @@
 
 # features/typography/utils/position
 
-> Last updated 2025-06-17T07:00:22.007Z
+> Last updated 2025-06-17T08:01:01.273Z
 
 ## Functions
 
