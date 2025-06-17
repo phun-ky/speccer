@@ -4,7 +4,7 @@
 
 # features/a11y/constants
 
-> Last updated 2025-06-10T05:34:40.353Z
+> Last updated 2025-06-17T07:00:21.559Z
 
 ## Variables
 
