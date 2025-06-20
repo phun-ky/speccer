@@ -34,6 +34,9 @@ webpage. If you need to draw attention to elements, **SPECCER** is your tool!
     - [Script](#script)
       - [Advanced usage](#advanced-usage)
     - [React](#react)
+      - [1. Create a hook](#1-create-a-hook)
+      - [2. Use the hook](#2-use-the-hook)
+    - [Storybook](#storybook)
   - [Features](#features)
     - [Element spacing](#element-spacing)
       - [Bound spacing](#bound-spacing)
@@ -41,6 +44,7 @@ webpage. If you need to draw attention to elements, **SPECCER** is your tool!
       - [Slim measure](#slim-measure)
     - [Pin element to annotate or highlight the anatomy](#pin-element-to-annotate-or-highlight-the-anatomy)
       - [Default](#default)
+      - [Bracket](#bracket)
       - [Enclose](#enclose)
       - [Align with parent container](#align-with-parent-container)
       - [Pin with text](#pin-with-text)
@@ -189,7 +193,6 @@ If you use React, you can use an effect like this:
 
 ```javascript
 import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
 
 import debounce from './lib/debounce';
 import '@phun-ky/speccer/dist/speccer.min.css';
@@ -217,6 +220,94 @@ const Component = () => {
 
 export default Component;
 ```
+
+Or a hook like this:
+
+#### 1. Create a hook
+
+```typescript
+// ./hooks/useSpeccer.ts
+import { useEffect } from 'react';
+import '@phun-ky/speccer/dist/speccer.min.css';
+import debounce from './lib/debounce';
+
+const useSpeccer = () => {
+  useEffect(() => {
+    let speccerEventFunc: () => void;
+
+    const loadSpeccer = async () => {
+      const { default: speccer } = await import('@phun-ky/speccer');
+      speccer();
+
+      speccerEventFunc = debounce(() => {
+        speccer();
+      }, 300);
+
+      window.addEventListener('resize', speccerEventFunc);
+    };
+
+    loadSpeccer();
+
+    return () => {
+      if (speccerEventFunc) {
+        window.removeEventListener('resize', speccerEventFunc);
+      }
+    };
+  }, []);
+};
+```
+
+#### 2. Use the hook
+
+```typescript
+import { useSpeccer } from './hooks/useSpeccer';
+
+export const MyComponent = () => {
+  …
+  useSpeccer();
+  …
+  return <div data-speccer="pin bracket top">…</div>;
+};
+```
+
+### Storybook
+
+With the same approach mentioned above, you can add **SPECCER** to your stories!
+
+![Image of the Storybook implementation](./public/storybook.png)
+
+```typescript
+import "@phun-ky/speccer/dist/speccer.min.css";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { MyComponent } from '../path-to-component/MyComponent';
+
+export default {
+    title: 'Components/MyComponent',
+    component: MyComponent,
+    tags: ['autodocs'],
+    …
+
+} as ComponentMeta<typeof MyComponent>
+
+const Template: ComponentStory<typeof MyComponent> = (args) => {
+  useSpeccer();
+  …
+  return (
+    <div data-speccer="pin-area">
+      <MyComponent {...args} />
+    </div>
+  );
+};
+
+export const Basic = Template.bind({});
+Basic.args = {
+  …,
+  "data-speccer": "pin bracket top",
+};
+```
+
+> [!IMPORTANT] Just make sure `MyComponent` passed down the attributes to the
+> DOM element
 
 ## Features
 
@@ -312,6 +403,14 @@ This will place a pin to the outline of the element. Default is `top`.
 ```html
 <div data-speccer="pin-area">
   <div data-speccer="pin" class="…"></div>
+</div>
+```
+
+#### Bracket
+
+```html
+<div data-speccer="pin-area">
+  <div data-speccer="pin bracket" class="…"></div>
 </div>
 ```
 
