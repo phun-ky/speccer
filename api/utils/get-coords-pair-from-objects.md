@@ -4,7 +4,7 @@
 
 # utils/get-coords-pair-from-objects
 
-> Last updated 2025-06-03T04:29:50.247Z
+> Last updated 2025-06-17T08:01:02.380Z
 
 ## Functions
 
