@@ -6,7 +6,7 @@ name: Checks
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: ['main']
     paths:
       - '.github/**'
       - 'src/**'
@@ -16,7 +16,7 @@ on:
       - 'tsconfig.json'
       - '.npmrc'
   pull_request:
-    branches: [ "main" ]
+    branches: ['main']
     types: [opened, synchronize] # Workflow triggering events
     paths:
       - '.github/**'
@@ -69,6 +69,4 @@ jobs:
       - uses: jayqi/failed-build-issue-action@v1.2
         with:
           github-token: ${{ secrets.GH_TOKEN }}
-          label-name: "problems: build failed"
-
-
+          label-name: 'problems: 💔 build failed'

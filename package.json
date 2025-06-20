@@ -29,7 +29,11 @@
     "specifications",
     "specs",
     "typescript",
-    "typography"
+    "typography",
+    "storybook",
+    "stories",
+    "react",
+    "hooks"
   ],
   "homepage": "https://phun-ky.net/projects/speccer",
   "bugs": {
