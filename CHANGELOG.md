@@ -1,5 +1,16 @@
 # Changelog
 
+## [11.2.29](https://github.com/phun-ky/speccer/compare/v11.2.28...v11.2.29) (2025-06-20)
+
+### Tasks
+
+* 🤖 Add better labels ([f0c4d63](https://github.com/phun-ky/speccer/commit/f0c4d630fa3e899cb207c976cf27492bce959080))
+* 🤖 Add more keywords ([7f07390](https://github.com/phun-ky/speccer/commit/7f073902a71c65dcd0d7d1b6264d05327d003021))
+
+### Documentation
+
+* ✏️ Add documentation about the react hook method ([d5642e1](https://github.com/phun-ky/speccer/commit/d5642e167c6fba8b352eedff91cc4acf669366d7))
+
 ## [11.2.28](https://github.com/phun-ky/speccer/compare/v11.2.27...v11.2.28) (2025-06-17)
 
 ### Tasks

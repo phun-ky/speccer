@@ -4,7 +4,7 @@
 
 # types/interfaces/global
 
-> Last updated 2025-06-17T08:01:01.542Z
+> Last updated 2025-06-20T09:04:04.513Z
 
 ## Interfaces
 
