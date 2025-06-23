@@ -27,11 +27,8 @@ export const removeSpeccerElement = (el: HTMLElement): void => {
   if (!_pin_element) return;
 
   if (Object.prototype.isPrototypeOf.call(NodeList.prototype, _pin_element)) {
-    [...(_pin_element as unknown as HTMLElement[])].forEach(
-      (el: HTMLElement) => {
-        el.remove();
-        el.classList.remove('is-specced');
-      }
+    [...(_pin_element as unknown as HTMLElement[])].forEach((el: HTMLElement) =>
+      el.remove()
     );
   } else {
     // We also need to remove the svg paths if it is in use
