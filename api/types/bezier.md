@@ -4,7 +4,7 @@
 
 # types/bezier
 
-> Last updated 2025-06-20T09:04:04.320Z
+> Last updated 2025-06-23T11:23:05.377Z
 
 ## Type Aliases
 

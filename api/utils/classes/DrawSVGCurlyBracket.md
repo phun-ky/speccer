@@ -4,7 +4,7 @@
 
 # utils/classes/DrawSVGCurlyBracket
 
-> Last updated 2025-06-20T09:04:05.197Z
+> Last updated 2025-06-23T11:23:06.232Z
 
 ## Classes
 

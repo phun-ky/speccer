@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.2.30](https://github.com/phun-ky/speccer/compare/v11.2.29...v11.2.30) (2025-06-23)
+
+### Bug
+
+* 🐛 No need to remove class ([bf66005](https://github.com/phun-ky/speccer/commit/bf6600519178b6df5af395bae491b9e653d9e01b))
+
 ## [11.2.29](https://github.com/phun-ky/speccer/compare/v11.2.28...v11.2.29) (2025-06-20)
 
 ### Tasks
