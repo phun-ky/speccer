@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.2.31](https://github.com/phun-ky/speccer/compare/v11.2.30...v11.2.31) (2025-06-23)
+
+### Documentation
+
+* ✏️ Update Storybook example ([7b3f3f3](https://github.com/phun-ky/speccer/commit/7b3f3f337feb32705bdfaa3fa30c61fdbb4ae0e4))
+
 ## [11.2.30](https://github.com/phun-ky/speccer/compare/v11.2.29...v11.2.30) (2025-06-23)
 
 ### Bug
