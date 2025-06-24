@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.2.32](https://github.com/phun-ky/speccer/compare/v11.2.31...v11.2.32) (2025-06-24)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 5 updates ([e4c03c2](https://github.com/phun-ky/speccer/commit/e4c03c2ae6a9189447debf8b27ba36b1ab66107a))
+
 ## [11.2.31](https://github.com/phun-ky/speccer/compare/v11.2.30...v11.2.31) (2025-06-23)
 
 ### Documentation
