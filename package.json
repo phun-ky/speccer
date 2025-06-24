@@ -104,7 +104,7 @@
     "jsdom": "^26.0.0",
     "postcss": "^8.5.2",
     "postcss-cli": "^11.0.0",
-    "prettier": "3.5.3",
+    "prettier": "3.6.0",
     "putout": "^40.0.10",
     "quibble": "^0.9.1",
     "release-it": "^19.0.1",
