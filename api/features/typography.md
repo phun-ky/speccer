@@ -4,7 +4,7 @@
 
 # features/typography
 
-> Last updated 2025-08-05T12:20:31.416Z
+> Last updated 2025-08-12T10:06:51.284Z
 
 This feature presents typography
 
