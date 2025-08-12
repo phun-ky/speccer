@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.2.37](https://github.com/phun-ky/speccer/compare/v11.2.36...v11.2.37) (2025-08-12)
+
+### Tasks
+
+* 🤖 bump the npm_and_yarn group with 2 updates ([fd58372](https://github.com/phun-ky/speccer/commit/fd58372713c0a6f3ecfa7fd1aeff63c1e1e72da6))
+
 ## [11.2.36](https://github.com/phun-ky/speccer/compare/v11.2.35...v11.2.36) (2025-08-12)
 
 ### Tasks

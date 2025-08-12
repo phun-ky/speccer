@@ -4,7 +4,7 @@
 
 # features/pin/utils/create-pin-element
 
-> Last updated 2025-08-12T10:06:51.142Z
+> Last updated 2025-08-12T19:24:44.201Z
 
 ## Functions
 
