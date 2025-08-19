@@ -4,7 +4,7 @@
 
 # types/xy
 
-> Last updated 2025-08-12T19:24:45.285Z
+> Last updated 2025-08-19T11:27:33.107Z
 
 ## Interfaces
 
