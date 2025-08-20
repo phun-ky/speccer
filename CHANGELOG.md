@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.2.39](https://github.com/phun-ky/speccer/compare/v11.2.38...v11.2.39) (2025-08-20)
+
+### Tasks
+
+* 🤖 Update `eslint.config.mjs` ([8218297](https://github.com/phun-ky/speccer/commit/821829786494171020558fb3a3da6c775bfb1b53))
+
 ## [11.2.38](https://github.com/phun-ky/speccer/compare/v11.2.37...v11.2.38) (2025-08-19)
 
 ### Tasks

@@ -4,7 +4,7 @@
 
 # config/browser
 
-> Last updated 2025-08-19T11:27:31.781Z
+> Last updated 2025-08-20T07:24:52.932Z
 
 Contains the helper functions to activate SPECCER via a script tag, based on
 attributes:
