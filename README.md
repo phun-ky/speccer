@@ -105,10 +105,9 @@ If you're importing **SPECCER** instead of with a script tag,
 apply lazy loading:
 
 ```javascript
-import { pin } from "https://esm.sh/@phun-ky/speccer";
+import { pin } from 'https://esm.sh/@phun-ky/speccer';
 
 const { pinElements } = pin;
-
 /**
  * Callback function for IntersectionObserver
  * @param {IntersectionObserverEntry[]} entries - Array of entries being observed
@@ -123,10 +122,8 @@ const intersectionCallback: IntersectionObserverCallback = async (entries, obser
     }
   });
 };
-
 // Creating IntersectionObserver instance with the callback
 const pinElementObserver = new IntersectionObserver(intersectionCallback);
-
 /**
  * Function to observe elements using IntersectionObserver
  * @param {Element} el - The element to be observed
@@ -210,6 +207,7 @@ const Component = () => {
     }, 300);
 
     window.addEventListener('resize', speccerEventFunc);
+
     return () => {
       window.removeEventListener('resize', speccerEventFunc);
     };
@@ -228,6 +226,7 @@ Or a hook like this:
 ```typescript
 // ./hooks/useSpeccer.ts
 import { useEffect } from 'react';
+
 import '@phun-ky/speccer/dist/speccer.min.css';
 import debounce from './lib/debounce';
 
@@ -237,6 +236,7 @@ const useSpeccer = () => {
 
     const loadSpeccer = async () => {
       const { default: speccer } = await import('@phun-ky/speccer');
+
       speccer();
 
       speccerEventFunc = debounce(() => {

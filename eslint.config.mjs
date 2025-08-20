@@ -1,3 +1,4 @@
+import markdown from '@eslint/markdown';
 import { defineConfig } from 'eslint/config';
 import customConfig from 'eslint-config-phun-ky';
 
@@ -8,6 +9,7 @@ export default defineConfig([
   },
   {
     files: ['**/*.md'],
+    processor: markdown.processors.markdown,
     rules: {
       'no-irregular-whitespace': 'off',
       '@stylistic/indent': 'off'
