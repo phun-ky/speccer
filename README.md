@@ -280,8 +280,8 @@ In `preview.tsx`:
 
 ```typescript
 import '@phun-ky/speccer/dist/speccer.min.css';
-import { addons } from '@storybook/preview-api';
 import { debounce } from '@mui/material'; // or any other debounce function
+import { addons } from '@storybook/preview-api';
 
 let speccerEventFunc: (() => void) | undefined;
 
