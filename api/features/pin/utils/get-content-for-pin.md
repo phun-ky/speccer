@@ -4,7 +4,7 @@
 
 # features/pin/utils/get-content-for-pin
 
-> Last updated 2025-06-23T11:23:05.108Z
+> Last updated 2025-08-19T11:27:32.254Z
 
 ## Functions
 

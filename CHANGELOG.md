@@ -1,5 +1,53 @@
 # Changelog
 
+## [11.2.38](https://github.com/phun-ky/speccer/compare/v11.2.37...v11.2.38) (2025-08-19)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 6 updates ([b3bb0ce](https://github.com/phun-ky/speccer/commit/b3bb0ce690d3ccaed6ca5d393a6befee6827c607))
+
+## [11.2.37](https://github.com/phun-ky/speccer/compare/v11.2.36...v11.2.37) (2025-08-12)
+
+### Tasks
+
+* 🤖 bump the npm_and_yarn group with 2 updates ([fd58372](https://github.com/phun-ky/speccer/commit/fd58372713c0a6f3ecfa7fd1aeff63c1e1e72da6))
+
+## [11.2.36](https://github.com/phun-ky/speccer/compare/v11.2.35...v11.2.36) (2025-08-12)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 5 updates ([b55458d](https://github.com/phun-ky/speccer/commit/b55458d8fdd68bc081d30dcab32380be06c0b440))
+
+## [11.2.35](https://github.com/phun-ky/speccer/compare/v11.2.34...v11.2.35) (2025-08-05)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 8 updates ([f15c097](https://github.com/phun-ky/speccer/commit/f15c097640f32b117e16baef80986ba9cd283414))
+
+## [11.2.34](https://github.com/phun-ky/speccer/compare/v11.2.33...v11.2.34) (2025-07-29)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 9 updates ([330721a](https://github.com/phun-ky/speccer/commit/330721ab5a05af2b46e3cff74aeb893e2b9fb679))
+
+## [11.2.33](https://github.com/phun-ky/speccer/compare/v11.2.32...v11.2.33) (2025-07-20)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group across 1 directory with 9 updates ([b7a9285](https://github.com/phun-ky/speccer/commit/b7a9285f632682748ee40da9827de09bd6ffd608))
+
+## [11.2.32](https://github.com/phun-ky/speccer/compare/v11.2.31...v11.2.32) (2025-06-24)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 5 updates ([e4c03c2](https://github.com/phun-ky/speccer/commit/e4c03c2ae6a9189447debf8b27ba36b1ab66107a))
+
+## [11.2.31](https://github.com/phun-ky/speccer/compare/v11.2.30...v11.2.31) (2025-06-23)
+
+### Documentation
+
+* ✏️ Update Storybook example ([7b3f3f3](https://github.com/phun-ky/speccer/commit/7b3f3f337feb32705bdfaa3fa30c61fdbb4ae0e4))
+
 ## [11.2.30](https://github.com/phun-ky/speccer/compare/v11.2.29...v11.2.30) (2025-06-23)
 
 ### Bug

@@ -272,12 +272,48 @@ export const MyComponent = () => {
 
 ### Storybook
 
-With the same approach mentioned above, you can add **SPECCER** to your stories!
+You can add **SPECCER** to your stories!
 
 ![Image of the Storybook implementation](./public/storybook.png)
 
+In `preview.tsx`:
+
 ```typescript
-import "@phun-ky/speccer/dist/speccer.min.css";
+import '@phun-ky/speccer/dist/speccer.min.css';
+import { addons } from '@storybook/preview-api';
+import { debounce } from '@mui/material'; // or any other debounce function
+
+let speccerEventFunc: (() => void) | undefined;
+
+addons.getChannel().on('docsRendered', async () => {
+  const { default: speccer } = await import('@phun-ky/speccer');
+
+  speccer();
+  speccerEventFunc = debounce(() => {
+    speccer();
+  }, 100);
+
+  window.addEventListener('resize', speccerEventFunc);
+});
+
+addons.getChannel().on('storyChanged', () => {
+  if (speccerEventFunc) {
+    window.removeEventListener('resize', speccerEventFunc);
+    speccerEventFunc = undefined;
+  }
+
+  // Remove all pinned elements
+  document.querySelectorAll('.ph-speccer')?.forEach((el) => {
+    if (el instanceof HTMLElement) {
+      el.remove();
+    }
+  });
+});
+```
+
+And then in your `*.stories.tsx`:
+
+```typescript
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { MyComponent } from '../path-to-component/MyComponent';
 
@@ -290,8 +326,9 @@ export default {
 } as ComponentMeta<typeof MyComponent>
 
 const Template: ComponentStory<typeof MyComponent> = (args) => {
-  useSpeccer();
+
   …
+  // you need `data-speccer="pin-area"` on the container of the elements you want to spec
   return (
     <div data-speccer="pin-area">
       <MyComponent {...args} />
@@ -807,7 +844,7 @@ Full API documentation is available
 
 ## Development
 
-```
+```shell-session
 // Build
 $ npm run build
 // Run dev

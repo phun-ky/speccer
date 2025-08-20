@@ -1,6 +1,6 @@
 {
   "name": "@phun-ky/speccer",
-  "version": "11.2.30",
+  "version": "11.2.38",
   "description": "A script to annotate, show spacing specs and to display typography information in documentation/website on HTML elements",
   "keywords": [
     "a11y",
@@ -104,7 +104,7 @@
     "jsdom": "^26.0.0",
     "postcss": "^8.5.2",
     "postcss-cli": "^11.0.0",
-    "prettier": "3.5.3",
+    "prettier": "3.6.2",
     "putout": "^40.0.10",
     "quibble": "^0.9.1",
     "release-it": "^19.0.1",

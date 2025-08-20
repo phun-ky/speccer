@@ -4,7 +4,7 @@
 
 # features/spacing
 
-> Last updated 2025-06-23T11:23:05.172Z
+> Last updated 2025-08-19T11:27:32.309Z
 
 This feature highlights the spacing of an element.
 
