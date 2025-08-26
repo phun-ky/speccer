@@ -4,7 +4,7 @@
 
 # types/tests
 
-> Last updated 2025-08-20T07:24:54.340Z
+> Last updated 2025-08-26T17:21:42.044Z
 
 ## Type Aliases
 
@@ -42,7 +42,7 @@ type MockedFunction<T> = T & {
 Defined in:
 [src/types/tests.ts:11](https://github.com/phun-ky/speccer/blob/main/src/types/tests.ts#L11)
 
-#### Type declaration
+#### Type Declaration
 
 <table>
 <thead>

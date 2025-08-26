@@ -4,7 +4,7 @@
 
 # utils/xy
 
-> Last updated 2025-08-20T07:24:54.983Z
+> Last updated 2025-08-26T17:21:42.654Z
 
 ## Variables
 
@@ -41,7 +41,7 @@ Defined in:
 Object containing functions to retrieve specific x and y coordinates from a
 DOMRect.
 
-#### Type declaration
+#### Type Declaration
 
 <table>
 <thead>

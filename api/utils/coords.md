@@ -4,7 +4,7 @@
 
 # utils/coords
 
-> Last updated 2025-08-20T07:24:54.638Z
+> Last updated 2025-08-26T17:21:42.330Z
 
 ## Variables
 
@@ -26,7 +26,7 @@ Defined in:
 
 A set of functions to retrieve specific coordinates from a DOMRect.
 
-#### Type declaration
+#### Type Declaration
 
 <table>
 <thead>

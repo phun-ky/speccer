@@ -4,7 +4,7 @@
 
 # utils/remove-speccer-element
 
-> Last updated 2025-08-20T07:24:54.902Z
+> Last updated 2025-08-26T17:21:42.569Z
 
 ## Functions
 

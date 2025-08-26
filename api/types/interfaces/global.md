@@ -4,7 +4,7 @@
 
 # types/interfaces/global
 
-> Last updated 2025-08-20T07:24:53.819Z
+> Last updated 2025-08-26T17:21:41.539Z
 
 ## Interfaces
 
@@ -1461,7 +1461,7 @@ Window: {
 
 Defined in: node_modules/typescript/lib/lib.dom.d.ts:36358
 
-#### Type declaration
+#### Type Declaration
 
 #### Returns
 

@@ -4,7 +4,7 @@
 
 # main
 
-> Last updated 2025-08-20T07:24:53.585Z
+> Last updated 2025-08-26T17:21:41.299Z
 
 ## Examples
 
@@ -35,7 +35,7 @@ const grid: {
 Defined in:
 [src/main.ts:52](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L52)
 
-#### Type declaration
+#### Type Declaration
 
 <table>
 <thead>
@@ -110,7 +110,7 @@ const mark: {
 Defined in:
 [src/main.ts:73](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L73)
 
-#### Type declaration
+#### Type Declaration
 
 <table>
 <thead>
@@ -185,7 +185,7 @@ const measure: {
 Defined in:
 [src/main.ts:68](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L68)
 
-#### Type declaration
+#### Type Declaration
 
 <table>
 <thead>
@@ -262,7 +262,7 @@ const modes: {
 Defined in:
 [src/main.ts:83](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L83)
 
-#### Type declaration
+#### Type Declaration
 
 <table>
 <thead>
@@ -364,7 +364,7 @@ const pin: {
 Defined in:
 [src/main.ts:62](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L62)
 
-#### Type declaration
+#### Type Declaration
 
 <table>
 <thead>
@@ -447,7 +447,7 @@ const spacing: {
 Defined in:
 [src/main.ts:57](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L57)
 
-#### Type declaration
+#### Type Declaration
 
 <table>
 <thead>
@@ -522,7 +522,7 @@ const typography: {
 Defined in:
 [src/main.ts:78](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L78)
 
-#### Type declaration
+#### Type Declaration
 
 <table>
 <thead>
