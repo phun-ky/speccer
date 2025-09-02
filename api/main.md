@@ -4,7 +4,7 @@
 
 # main
 
-> Last updated 2025-08-26T17:21:41.299Z
+> Last updated 2025-09-02T16:39:27.316Z
 
 ## Examples
 
@@ -269,6 +269,7 @@ Defined in:
 <tr>
 <th>Name</th>
 <th>Type</th>
+<th>Description</th>
 <th>Defined in</th>
 </tr>
 </thead>
@@ -282,6 +283,18 @@ Defined in:
 <td>
 
 (`speccer`) => `void`
+
+</td>
+<td>
+
+A function to activate speccer based on script attributes.
+
+**Example**
+
+```ts
+// Usage example:
+// activate(mySpeccer);
+```
 
 </td>
 <td>
@@ -303,6 +316,18 @@ Defined in:
 </td>
 <td>
 
+A function to initialize speccer when the DOM is ready.
+
+**Example**
+
+```ts
+// Usage example:
+// dom(mySpeccer);
+```
+
+</td>
+<td>
+
 [src/main.ts:84](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L84)
 
 </td>
@@ -320,6 +345,18 @@ Defined in:
 </td>
 <td>
 
+A function to initialize lazy speccer functionality.
+
+**Example**
+
+```ts
+// Usage example:
+// lazy();
+```
+
+</td>
+<td>
+
 [src/main.ts:85](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L85)
 
 </td>
@@ -333,6 +370,18 @@ Defined in:
 <td>
 
 (`speccer`) => `void`
+
+</td>
+<td>
+
+A function to manually activate speccer.
+
+**Example**
+
+```ts
+// Usage example:
+// manual(mySpeccer);
+```
 
 </td>
 <td>
@@ -371,6 +420,7 @@ Defined in:
 <tr>
 <th>Name</th>
 <th>Type</th>
+<th>Description</th>
 <th>Defined in</th>
 </tr>
 </thead>
@@ -385,6 +435,18 @@ Defined in:
 
 (`content`, `options`, `id`, `n`) =>
 [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
+
+</td>
+<td>
+
+Create a pin element with optional content, area description, and element type.
+
+**Example**
+
+```ts
+const pinElement = createPinElement('A', 'outline top', 'div');
+document.body.appendChild(pinElement);
+```
 
 </td>
 <td>
@@ -408,6 +470,27 @@ Defined in:
 </td>
 <td>
 
+Create and style the pin element as needed.
+
+This function appends a new pin element to the document body based on the
+`data-speccer="pin"` attribute of the target element. It handles different
+styles, such as curly brackets or lines, based on the pin type.
+
+**Example**
+
+```ts
+const targetElement = document.getElementById('target');
+const parentElement = document.getElementById('parent');
+const content = 0;
+const options = { … };
+pinElement(targetElement, parentElement, content, options).then(() => {
+  console.log('process completed');
+});
+```
+
+</td>
+<td>
+
 [src/main.ts:64](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L64)
 
 </td>
@@ -422,6 +505,19 @@ Defined in:
 
 (`sectionElement`, `options?`) =>
 [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
+
+</td>
+<td>
+
+Create pinned elements based on the section element and its data-speccer
+attributes.
+
+**Example**
+
+```ts
+const sectionElement = document.getElementById('section');
+pinElements(sectionElement);
+```
 
 </td>
 <td>
