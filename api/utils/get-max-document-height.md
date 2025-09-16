@@ -4,7 +4,7 @@
 
 # utils/get-max-document-height
 
-> Last updated 2025-09-09T07:55:11.532Z
+> Last updated 2025-09-16T12:35:58.036Z
 
 ## Functions
 

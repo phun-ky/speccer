@@ -4,7 +4,7 @@
 
 # features/pin
 
-> Last updated 2025-09-09T07:55:10.044Z
+> Last updated 2025-09-16T12:35:56.533Z
 
 This feature annotate or highlight the anatomy of an element.
 
