@@ -4,7 +4,7 @@
 
 # types/speccer
 
-> Last updated 2025-09-30T08:25:52.156Z
+> Last updated 2025-09-30T09:01:11.414Z
 
 ## Interfaces
 

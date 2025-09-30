@@ -1,5 +1,13 @@
 # Changelog
 
+## [11.2.45](https://github.com/phun-ky/speccer/compare/v11.2.44...v11.2.45) (2025-09-30)
+
+### Tasks
+
+* 🤖 bump global-jsdom from 26.0.0 to 27.0.0 ([9cbaf18](https://github.com/phun-ky/speccer/commit/9cbaf18ba5f87229aa417a46ed3911153edd3217))
+* 🤖 reinstall ([ec37e8a](https://github.com/phun-ky/speccer/commit/ec37e8a6b1f4b91f2b3ad1c69695619e01f7d07c))
+* 🤖 Upgrade `jsdom` to match `global-jsdom` ([63cfdc9](https://github.com/phun-ky/speccer/commit/63cfdc98e96a856a351b81db4da83a96c9b9f9d6))
+
 ## [11.2.44](https://github.com/phun-ky/speccer/compare/v11.2.43...v11.2.44) (2025-09-30)
 
 ### Tasks
