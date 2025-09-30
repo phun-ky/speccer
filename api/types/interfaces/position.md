@@ -4,7 +4,7 @@
 
 # types/interfaces/position
 
-> Last updated 2025-09-16T12:35:57.548Z
+> Last updated 2025-09-30T08:25:52.100Z
 
 ## Interfaces
 

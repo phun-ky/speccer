@@ -4,7 +4,7 @@
 
 # types/tests
 
-> Last updated 2025-09-16T12:35:57.627Z
+> Last updated 2025-09-30T08:25:52.192Z
 
 ## Type Aliases
 
@@ -29,7 +29,7 @@ Defined in:
 
 ---
 
-### MockedFunction\<T>
+### MockedFunction
 
 ```ts
 type MockedFunction<T> = T & {

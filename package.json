@@ -1,6 +1,6 @@
 {
   "name": "@phun-ky/speccer",
-  "version": "11.2.43",
+  "version": "11.2.44",
   "description": "A script to annotate, show spacing specs and to display typography information in documentation/website on HTML elements",
   "keywords": [
     "a11y",

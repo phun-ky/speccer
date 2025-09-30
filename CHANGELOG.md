@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.2.44](https://github.com/phun-ky/speccer/compare/v11.2.43...v11.2.44) (2025-09-30)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group across 1 directory with 7 updates ([b91b716](https://github.com/phun-ky/speccer/commit/b91b7162f0e9fc34900971bae0beed6b852f3fe6))
+
 ## [11.2.43](https://github.com/phun-ky/speccer/compare/v11.2.42...v11.2.43) (2025-09-16)
 
 ### Tasks
