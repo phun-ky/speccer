@@ -1,5 +1,27 @@
 # Changelog
 
+## [11.3.0](https://github.com/phun-ky/speccer/compare/v11.2.45...v11.3.0) (2025-10-06)
+
+### Tasks
+
+* 🤖 Add deploy script to github pages for docs ([319f4cd](https://github.com/phun-ky/speccer/commit/319f4cd19553727a2ce1d768bc2294f6e7eb6427))
+* 🤖 Try to remove some comments from coverage ([cf6ac43](https://github.com/phun-ky/speccer/commit/cf6ac434d849639add3f8caaf2de8b4030a9c96c))
+* 🤖 Update browsers ([0f83335](https://github.com/phun-ky/speccer/commit/0f83335b138097de097d63843dd31b7caec4f246))
+
+### Documentation
+
+* ✏️ Add separate doc site with `vitepress` ([9191040](https://github.com/phun-ky/speccer/commit/9191040c076f1665e0ca47ac03952c7ba509a9da))
+* ✏️ Update documentation ([3661716](https://github.com/phun-ky/speccer/commit/36617164cf731dbaa631e2911cc72fee6a800a70))
+* ✏️ Update heading hierarchy, update links to api docs ([d4c9b3d](https://github.com/phun-ky/speccer/commit/d4c9b3d7aa9af55602c8f4fe1c635f21517d4f30))
+
+### Feature
+
+* 🎸 Expose `a11y` as a function to be used by consumer ([5c4aebc](https://github.com/phun-ky/speccer/commit/5c4aebc7b9ef23d1d8dde068ad33f847242f13bb))
+
+### Bug
+
+* 🐛 Fix types ([357e965](https://github.com/phun-ky/speccer/commit/357e965abc298104b654a9a5a4c36808a7babf68))
+
 ## [11.2.45](https://github.com/phun-ky/speccer/compare/v11.2.44...v11.2.45) (2025-09-30)
 
 ### Tasks
