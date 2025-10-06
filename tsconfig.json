@@ -16,8 +16,10 @@
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
+  "include": ["src/**/*"],
   "exclude": [
     "node_modules",
+    "docs/.vitepress/**",
     "build",
     "dist",
     "tests/**",
