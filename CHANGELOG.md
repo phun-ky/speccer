@@ -1,5 +1,18 @@
 # Changelog
 
+## [11.3.1](https://github.com/phun-ky/speccer/compare/v11.3.0...v11.3.1) (2025-10-06)
+
+### Tasks
+
+* 🤖 Add used by section to home ([6b8577d](https://github.com/phun-ky/speccer/commit/6b8577de1ed57c6b03c52be1f640dc825d2f1847))
+* 🤖 Move public folder to doc site ([c743080](https://github.com/phun-ky/speccer/commit/c743080a9697ad1fc4aa23f60d316c6be87bf88b))
+* 🤖 Update image paths for JSDoc comments ([606b796](https://github.com/phun-ky/speccer/commit/606b7967bd32bac53fc2f4cd724a16e043f0a479))
+
+### Documentation
+
+* ✏️ Add docs on sponsor and development, link to FAQ ([5ed8216](https://github.com/phun-ky/speccer/commit/5ed8216a8008e5e19b53120c8f12c9d895a96cef))
+* ✏️ Cleanup ([e7daf5c](https://github.com/phun-ky/speccer/commit/e7daf5c7db0996954fdeba9abed45a2bec682d97))
+
 ## [11.3.0](https://github.com/phun-ky/speccer/compare/v11.2.45...v11.3.0) (2025-10-06)
 
 ### Tasks
