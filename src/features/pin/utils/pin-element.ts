@@ -8,6 +8,7 @@ import { add } from '../../../utils/styles';
 import { createPinElement } from './create-pin-element';
 import { styles } from './styles';
 
+/* node:coverage disable */
 /**
  * Create and style the pin element as needed.
  *
@@ -31,6 +32,7 @@ import { styles } from './styles';
  * });
  * ```
  */
+/* node:coverage enable */
 export const pinElement = async (
   targetElement: HTMLElement,
   parentElement: HTMLElement,
