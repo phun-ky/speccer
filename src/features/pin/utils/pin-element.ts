@@ -24,7 +24,7 @@ import { styles } from './styles';
  * ```ts
  * const targetElement = document.getElementById('target');
  * const parentElement = document.getElementById('parent');
- * const content = 0;
+ * const content = '…';
  * const options = { … };
  * pinElement(targetElement, parentElement, content, options).then(() => {
  *   console.log('process completed');

@@ -1,21 +1,4 @@
 /* eslint-disable import/no-unused-modules */
-/**
- *
- * @example
- * ```typescript
- * import '@phun-ky/speccer/dist/speccer.min.css';
- * import speccer from '@phun-ky/speccer';
- *
- * // do stuff
- * speccer();
- * ```
- * @example
- * ```html
- * <link rel="stylesheet" href="../path/to/speccer.min.css" />
- * <script src="../path/to/speccer.js"></script>
- * ```
- * @packageDocumentation
- */
 
 /* eslint no-console:0 */
 import './types/interfaces/global';
@@ -47,39 +30,210 @@ import {
 } from './utils/constants';
 import { removeAll } from './utils/node';
 
+export type {
+  SpeccerOptionsInterface,
+  SpeccerFunctionType
+} from './types/speccer';
+
 export { removeSpeccerElement } from './utils/remove-speccer-element';
 
+/**
+ * This feature will highlight the grid spacing in a `display: grid;` element.
+ *
+ * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-light.png?raw=true)
+ *
+ * @example
+ *
+ * Use the following code, either for html or js:
+ *
+ * ```html
+ * <div
+ *   data-speccer="grid [columns|rows]"
+ *   class="…"
+ * >
+ *   …
+ * </div>
+ * ```
+ *
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * const options = {
+ *   type: 'grid',
+ *   grid: {
+ *     toggle: 'both'
+ *   }
+ * };
+ *
+ * grid(targetElement, options);
+ * ```
+ *
+ */
 export const grid = {
   create: gridCreate,
   element: gridElement
 };
 
+/**
+ * This feature highlights the spacing of an element.
+ *
+ * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-spacing-dark.png?raw=true)
+ * *
+ * @example
+ *
+ * Use the following code, either for html or js:
+ *
+ * ```html
+ * <div
+ *   data-speccer="spacing [padding|margin][bound]"
+ *   class="…"
+ * >
+ * …
+ * </div>
+ * ```
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * element(targetElement);
+ * ```
+ */
 export const spacing = {
   create: spacingCreate,
   element: spacingElement
 };
 
+/**
+ * This feature annotate or highlight the anatomy of an element.
+ *
+ * ![pin](https://github.com/phun-ky/speccer/blob/main/public/anatomy.png?raw=true)
+ *
+ * In your component examples, use the following attribute. Remember to use the `data-speccer="pin-area"`-attribute on a parent element to scope the marking.
+ *
+ * @example
+ * ```html
+ * <div data-speccer="pin-area">
+ *   <div
+ *     data-speccer="pin [bracket [curly] |enclose] [left|right|top|bottom]"
+ *     class="..."
+ *   ></div>
+ * </div>
+ * ```
+ *
+ */
 export const pin = {
   createPinElement,
   pinElement,
   pinElements
 };
 
+/**
+ * This feature measures given element
+ *
+ * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-pin-measure-height-light.png?raw=true)
+ *
+ * @example
+ *
+ * Use the following code, either for html or js:
+ *
+ * ```html
+ * <div
+ *   data-speccer="measure [height left|right] | [width top|bottom]"
+ *   class="..."
+ * >
+ *   …
+ * </div>
+ * ```
+ *
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * const options = {
+ *   position: 'right',
+ *   measure: {
+ *     height: true
+ *   }
+ * };
+ *
+ * measure(targetElement, options);
+ * ```
+ *
+ */
 export const measure = {
   create: measureCreate,
   element: measureElement
 };
 
+/**
+ * This feature marks given element
+ *
+ * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-pin-mark-light.png?raw=true)
+ *
+ * @example
+ *
+ * Use the following code, either for html or js:
+ *
+ * ```html
+ * <div
+ *   data-speccer="mark"
+ *   class="..."
+ * >
+ *   …
+ * </div>
+ * ```
+ *
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * const options = {
+ *   type: 'mark'
+ * };
+ *
+ * mark(targetElement, options);
+ * ```
+ *
+ */
 export const mark = {
   create: markCreate,
   element: markElement
 };
 
+/**
+ * This feature presents typography
+ *
+ * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-typography-light.png?raw=true)
+ *
+ * @example
+ *
+ * Use the following code, either for html or js:
+ *
+ * ```html
+ * <div
+ *   data-speccer="typography [top|right|bottom|left] [syntax]"
+ *   class="..."
+ * >
+ *   …
+ * </div>
+ * ```
+ *
+ * ```ts
+ * const targetElement = document.getElementById('target');
+ * const options = {
+ *   position: 'right',
+ *   type: 'typography',
+ *   typography: {
+ *     useSyntaxHighlighting: false
+ *   }
+ * };
+ *
+ * typography(targetElement, options);
+ * ```
+ *
+ */
 export const typography = {
   create: typographyCreate,
   element: typographyElement
 };
 
+/**
+ * The available modes to run SPECCER with
+ *
+ */
 export const modes = {
   dom,
   lazy,
@@ -87,6 +241,22 @@ export const modes = {
   activate
 };
 
+/**
+ *
+ * @example
+ * ```typescript
+ * import '@phun-ky/speccer/dist/speccer.min.css';
+ * import speccer from '@phun-ky/speccer';
+ *
+ * // do stuff
+ * speccer();
+ * ```
+ * @example
+ * ```html
+ * <link rel="stylesheet" href="../path/to/speccer.min.css" />
+ * <script src="../path/to/speccer.js"></script>
+ * ```
+ */
 const speccer = () => {
   removeAll('.ph-speccer.speccer');
 

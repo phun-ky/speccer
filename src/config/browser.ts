@@ -48,7 +48,6 @@
  *
  * Lazy loads `speccer()` per specced element
  *
- * @packageDocumentation
  */
 /* node:coverage enable */
 import { grid as gridElement } from '../features/grid';
@@ -77,7 +76,7 @@ import { activate as resizeActivate } from '../utils/resize';
  * @example
  * ```ts
  * // Usage example:
- * // dom(mySpeccer);
+ * dom(mySpeccer);
  * ```
  */
 export const dom = (speccer: SpeccerFunctionType): void => {
@@ -95,7 +94,7 @@ export const dom = (speccer: SpeccerFunctionType): void => {
  * @example
  * ```ts
  * // Usage example:
- * // lazy();
+ * lazy();
  * ```
  */
 export const lazy = (): void => {
@@ -198,7 +197,7 @@ export const lazy = (): void => {
  * @example
  * ```ts
  * // Usage example:
- * // manual(mySpeccer);
+ * manual(mySpeccer);
  * ```
  */
 export const manual = (speccer: SpeccerFunctionType): void => {
@@ -213,7 +212,7 @@ export const manual = (speccer: SpeccerFunctionType): void => {
  * @example
  * ```ts
  * // Usage example:
- * // activate(mySpeccer);
+ * activate(mySpeccer);
  * ```
  */
 export const activate = (speccer: SpeccerFunctionType): void => {
