@@ -4,6 +4,7 @@
 import './types/interfaces/global';
 import { dom, lazy, manual, activate } from './config/browser';
 import { a11y as initA11y } from './features/a11y';
+export { a11y } from './features/a11y';
 import { create as gridCreate, grid as gridElement } from './features/grid';
 import { create as markCreate, mark as markElement } from './features/mark';
 import {
