@@ -104,6 +104,7 @@ export default defineConfig({
     },
     nav: [
       { text: 'Guide', link: '/guide/introduction/' },
+      { text: 'Sponsor', link: '/sponsor' },
       { text: 'Reference', link: '/api/' },
       {
         text: pkg.version,
@@ -119,6 +120,10 @@ export default defineConfig({
           {
             text: 'Contributing',
             link: 'https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md'
+          },
+          {
+            text: 'FAQ',
+            link: 'https://github.com/phun-ky/speccer/discussions/categories/q-a'
           }
         ]
       }
@@ -177,6 +182,10 @@ export default defineConfig({
             { text: 'Lazy Loading', link: '/guide/tutorials/lazy-loading' },
             { text: 'Storybook', link: '/guide/tutorials/storybook' }
           ]
+        },
+        {
+          text: 'Development',
+          link: '/guide/development'
         }
       ],
       '/api/': [
