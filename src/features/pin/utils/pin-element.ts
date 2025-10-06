@@ -36,9 +36,7 @@ export const pinElement = async (
   parentElement: HTMLElement,
   content: string,
   options: SpeccerOptionsInterface
-): Promise<string | void> => {
-  if (!targetElement) return;
-
+): Promise<string | undefined> => {
   if (options.type !== 'pin' || !options.pin) return;
 
   const _pin_element_id = `speccer-${options.slug}-${targetElement.getAttribute('id') || uniqueID()}`;
@@ -67,11 +65,11 @@ export const pinElement = async (
     !isText;
 
   if (options.pin.useSVGLine) {
-    new DrawSVGLine(targetElement as HTMLElement, _pin_element, options);
+    new DrawSVGLine(targetElement, _pin_element, options);
 
     if (_should_draw_circle) new DrawCircle(targetElement, 5, options);
   } else if (options.pin.useCurlyBrackets) {
-    new DrawSVGCurlyBracket(targetElement as HTMLElement, _pin_element);
+    new DrawSVGCurlyBracket(targetElement, _pin_element);
   }
 
   return _pin_element_id;
