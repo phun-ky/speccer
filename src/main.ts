@@ -41,7 +41,7 @@ export { removeSpeccerElement } from './utils/remove-speccer-element';
 /**
  * This feature will highlight the grid spacing in a `display: grid;` element.
  *
- * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-light.png?raw=true)
+ * ![pin](/speccer-grid-full-light.png?raw=true)
  *
  * @example
  *
@@ -77,7 +77,7 @@ export const grid = {
 /**
  * This feature highlights the spacing of an element.
  *
- * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-spacing-dark.png?raw=true)
+ * ![pin](/speccer-spacing-dark.png?raw=true)
  * *
  * @example
  *
@@ -104,7 +104,7 @@ export const spacing = {
 /**
  * This feature annotate or highlight the anatomy of an element.
  *
- * ![pin](https://github.com/phun-ky/speccer/blob/main/public/anatomy.png?raw=true)
+ * ![pin](/anatomy.png?raw=true)
  *
  * In your component examples, use the following attribute. Remember to use the `data-speccer="pin-area"`-attribute on a parent element to scope the marking.
  *
@@ -128,7 +128,7 @@ export const pin = {
 /**
  * This feature measures given element
  *
- * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-pin-measure-height-light.png?raw=true)
+ * ![pin](/speccer-pin-measure-height-light.png?raw=true)
  *
  * @example
  *
@@ -164,7 +164,7 @@ export const measure = {
 /**
  * This feature marks given element
  *
- * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-pin-mark-light.png?raw=true)
+ * ![pin](/speccer-pin-mark-light.png?raw=true)
  *
  * @example
  *
@@ -197,7 +197,7 @@ export const mark = {
 /**
  * This feature presents typography
  *
- * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-typography-light.png?raw=true)
+ * ![pin](/speccer-typography-light.png?raw=true)
  *
  * @example
  *

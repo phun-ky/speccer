@@ -8,8 +8,8 @@ import { styles } from './styles';
 /**
  * Adds an accessibility element to the document body based on the target element and type.
  *
- * ![Screenshot of speccer a11y tab stops in use](https://github.com/phun-ky/speccer/blob/main/public/speccer-a11y-tabstops-light.png?raw=true)
- * ![Screenshot of speccer a11y landmark in use](https://github.com/phun-ky/speccer/blob/main/public/speccer-a11y-landmarks-light.png?raw=true)
+ * ![Screenshot of speccer a11y tab stops in use](/speccer-a11y-tabstops-light.png?raw=true)
+ * ![Screenshot of speccer a11y landmark in use](/speccer-a11y-landmarks-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - Target HTML element.
  * @param {unknown} [content] - Content to be added to the accessibility element.

@@ -22,7 +22,7 @@ Defined in:
 
 This feature measures given element
 
-![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-pin-measure-height-light.png?raw=true)
+![pin](/speccer-pin-measure-height-light.png?raw=true)
 
 ## Type Declaration
 
@@ -88,7 +88,7 @@ element: (targetElement: HTMLElement, options?: SpeccerOptionsInterface) =>
 Create a measurement element and add it to the body with styles matching a
 specified target element based on the attribute values from `data-speccer`.
 
-![measure](https://github.com/phun-ky/speccer/blob/main/public/speccer-measure-right-full-light.png?raw=true)
+![measure](/speccer-measure-right-full-light.png?raw=true)
 
 #### Parameters
 
@@ -128,7 +128,7 @@ measure(targetElement, options);
 
 ##### Slim width to the bottom
 
-![measure](https://github.com/phun-ky/speccer/blob/main/public/speccer-measure-bottom-dark.png?raw=true)
+![measure](/speccer-measure-bottom-dark.png?raw=true)
 
 ```ts
 const targetElement = document.getElementById('target');

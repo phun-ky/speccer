@@ -28,7 +28,7 @@ Defined in:
 
 This feature annotate or highlight the anatomy of an element.
 
-![pin](https://github.com/phun-ky/speccer/blob/main/public/anatomy.png?raw=true)
+![pin](/anatomy.png?raw=true)
 
 In your component examples, use the following attribute. Remember to use the
 `data-speccer="pin-area"`-attribute on a parent element to scope the marking.

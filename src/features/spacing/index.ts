@@ -2,7 +2,7 @@
 /**
  * This feature highlights the spacing of an element.
  *
- * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-spacing-dark.png?raw=true)
+ * ![pin](/speccer-spacing-dark.png?raw=true)
  * *
  * @example
  *
@@ -71,7 +71,7 @@ export const create = (
 /**
  * Create and position spacing elements based on the target element's computed spacing styles.
  *
- * ![spacing](https://github.com/phun-ky/speccer/blob/main/public/speccer-spacing-light.png?raw=true)
+ * ![spacing](/speccer-spacing-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to create spacing elements for.
  * @param {SpeccerOptionsInterface|undefined} [options] - Options
@@ -100,7 +100,7 @@ export const create = (
  *
  * ##### Bound style, like the old feature
  *
- * ![spacing](https://github.com/phun-ky/speccer/blob/main/public/speccer-spacing-bound.png?raw=true)
+ * ![spacing](/speccer-spacing-bound.png?raw=true)
  *
  * This option binds the speccer elements to the bounds of the element container.
  *

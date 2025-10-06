@@ -21,7 +21,7 @@ Defined in:
 
 This feature will highlight the grid spacing in a `display: grid;` element.
 
-![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-light.png?raw=true)
+![pin](/speccer-grid-full-light.png?raw=true)
 
 ## Type Declaration
 
@@ -83,7 +83,7 @@ Create a visual overlay to present the column gaps for a grid container
 Adds a visual grid overlay to the target element if it has the appropriate data
 attribute and is a grid.
 
-![grid](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-light.png?raw=true)
+![grid](/speccer-grid-full-light.png?raw=true)
 
 #### Parameters
 
@@ -115,7 +115,7 @@ grid(targetElement);
 
 ##### Only rows
 
-![grid](https://github.com/phun-ky/speccer/blob/main/public/speccer-grid-full-dark.png?raw=true)
+![grid](/speccer-grid-full-dark.png?raw=true)
 
 ```ts
 const targetElement = document.getElementById('target');
