@@ -67,3 +67,7 @@ dist
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+.vitepress/cache
+.vitepress/dist
+/docs/.vitepress/cache
+/docs/.vitepress/dist

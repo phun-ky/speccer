@@ -1,0 +1,67 @@
+# Customization
+
+![Screenshot of speccer in a dark mode example](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-measure-spacing-example-dark.png)
+
+Although the styling works nicely with dark mode, you can use the provided CSS
+variables to customize the look and feel. If more control is needed, you can use
+CSS overrides :)
+
+```css [variables.css]
+.ph-speccer.speccer {
+  --ph-speccer-color-artificialStrawberry: #ff3aa8;
+  --ph-speccer-color-venusSlipperOrchid: #db6fff;
+  --ph-speccer-color-superBanana: #fff76f;
+  --ph-speccer-color-white: #ffffff;
+  --ph-speccer-color-carbon: #333333;
+  --ph-speccer-color-red: #ff0000;
+  --ph-speccer-color-niuZaiSeDenim: #0074e8;
+  --ph-speccer-color-beautifulBlue: #1868b2;
+  --ph-speccer-color-fuchsiaBlue: #7e60c5;
+  --ph-speccer-base-color: var(--ph-speccer-color-artificialStrawberry);
+  --ph-speccer-spacing-color: var(--ph-speccer-base-color);
+  --ph-speccer-spacing-padding-color: var(--ph-speccer-color-carbon);
+  --ph-speccer-spacing-padding-color-background: rgb(
+    from var(--ph-speccer-color-venusSlipperOrchid) r g b /
+      var(--ph-speccer-opacity-40)
+  );
+  --ph-speccer-spacing-margin-color: var(--ph-speccer-color-red);
+  --ph-speccer-spacing-margin-color-background: rgb(
+    from var(--ph-speccer-color-superBanana) r g b /
+      var(--ph-speccer-opacity-40)
+  );
+  --ph-speccer-spacing-line-width: var(--ph-speccer-line-width);
+  --ph-speccer-typography-background-color: var(--ph-speccer-color-white);
+  --ph-speccer-typography-color-property: var(--ph-speccer-color-niuZaiSeDenim);
+  --ph-speccer-typography-color-text: var(--ph-speccer-base-color);
+  --ph-speccer-typography-color-value: var(--ph-speccer-base-color);
+  --ph-speccer-mark-background-color: rgb(
+    from var(--ph-speccer-base-color) r g b / var(--ph-speccer-opacity-20)
+  );
+  --ph-speccer-mark-border-color: var(--ph-speccer-base-color);
+  --ph-speccer-mark-border-width: 1.5px;
+  --ph-speccer-mark-border-style: solid;
+  --ph-speccer-measure-color: var(--ph-speccer-color-red);
+  --ph-speccer-measure-line-width: 1.5px;
+  --ph-speccer-measure-border-style: dotted;
+  --ph-speccer-measure-size: 8px;
+  --ph-speccer-a11y-color-background: var(--ph-speccer-color-beautifulBlue);
+  --ph-speccer-a11y-landmark-color-background: var(
+    --ph-speccer-color-fuchsiaBlue
+  );
+  --ph-speccer-color-text-light: var(--ph-speccer-color-white);
+  --ph-speccer-color-text-dark: var(--ph-speccer-color-carbon);
+  --ph-speccer-pin-color: var(--ph-speccer-base-color);
+  --ph-speccer-pin-size: 24px;
+  --ph-speccer-pin-space: 48px;
+  --ph-speccer-line-height: 12px;
+  --ph-speccer-line-width: 1.5px;
+  --ph-speccer-line-width-negative: -1.5px;
+  --ph-speccer-opacity-20: 0.2;
+  --ph-speccer-opacity-40: 0.4;
+  --ph-speccer-font-family:
+    'Menlo for Powerline', 'Menlo Regular for Powerline', 'DejaVu Sans Mono',
+    Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  --ph-speccer-font-size: 12px;
+  --ph-speccer-transition-default: all 2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+```

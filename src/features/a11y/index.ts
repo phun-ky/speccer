@@ -1,4 +1,15 @@
+import { isElementHidden } from '../../utils/node';
+
+import {
+  SPECCER_LANDMARK_ELEMENTS_SELECTOR,
+  SPECCER_TABBABLE_ELEMENTS_SELECTOR
+} from './constants';
+import { addA11yElement } from './utils/add-a11y-element';
+import { addShortcutElement } from './utils/add-shortcut-element';
+
 /**
+ * Initializes the accessibility elements on the document.
+ *
  * This feature will annotate or highlight accessibility areas like landmarks and region. It can also display tab stops/sequence and any keyboard shortcuts assigned
  *
  * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-a11y-tabstops-light.png?raw=true)
@@ -21,25 +32,7 @@
  * a11y(targetElement);
  * ```
  *
- * @packageDocumentation
- */
-
-import { isElementHidden } from '../../utils/node';
-
-import {
-  SPECCER_LANDMARK_ELEMENTS_SELECTOR,
-  SPECCER_TABBABLE_ELEMENTS_SELECTOR
-} from './constants';
-import { addA11yElement } from './utils/add-a11y-element';
-import { addShortcutElement } from './utils/add-shortcut-element';
-
-/**
- * Initializes the accessibility elements on the document.
  *
- * @example
- * ```ts
- * a11y();
- * ```
  */
 export const a11y = () => {
   const _tab_order_elements = document.querySelectorAll(

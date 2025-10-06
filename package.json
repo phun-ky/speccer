@@ -63,6 +63,10 @@
     "commit": "npx git-cz",
     "dev": "npx browser-sync start --server 'dev' --files 'dist' --ss 'dist'",
     "docs:gen": "node ./node_modules/.bin/typedoc",
+    "predocs:dev": "npm run docs:gen",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
     "postcss": "rm -rf ./dist/speccer.min.css && postcss ./dist/speccer.css -o  ./dist/speccer.min.css",
     "release": "release-it",
     "prerollup:dev": "npm run clean && npm run styles",
@@ -124,8 +128,11 @@
     "typedoc-plugin-no-inherit": "^1.4.0",
     "typedoc-plugin-remark": "^2.0.0",
     "typedoc-plugin-rename-defaults": "^0.7.1",
+    "typedoc-vitepress-theme": "^1.1.2",
     "typescript": "^5.7.3",
-    "unified-prettier": "^2.0.1"
+    "unified-prettier": "^2.0.1",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-group-icons": "^1.6.3"
   },
   "engines": {
     "node": ">=22.9.0",

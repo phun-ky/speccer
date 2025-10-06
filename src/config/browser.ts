@@ -1,5 +1,5 @@
-/* node:coverage disable */
 /* eslint no-console:0 */
+/* node:coverage disable */
 /**
  * Contains the helper functions to activate SPECCER via a script tag, based on attributes:
  *
@@ -48,7 +48,6 @@
  *
  * Lazy loads `speccer()` per specced element
  *
- * @packageDocumentation
  */
 /* node:coverage enable */
 import { grid as gridElement } from '../features/grid';
@@ -69,6 +68,7 @@ import {
 } from '../utils/constants';
 import { activate as resizeActivate } from '../utils/resize';
 
+/* node:coverage disable */
 /**
  * A function to initialize speccer when the DOM is ready.
  *
@@ -77,9 +77,10 @@ import { activate as resizeActivate } from '../utils/resize';
  * @example
  * ```ts
  * // Usage example:
- * // dom(mySpeccer);
+ * dom(mySpeccer);
  * ```
  */
+/* node:coverage enable */
 export const dom = (speccer: SpeccerFunctionType): void => {
   if (document.readyState === 'loading')
     document.addEventListener('DOMContentLoaded', () => {
@@ -89,15 +90,17 @@ export const dom = (speccer: SpeccerFunctionType): void => {
   else speccer();
 };
 
+/* node:coverage disable */
 /**
  * A function to initialize lazy speccer functionality.
  *
  * @example
  * ```ts
  * // Usage example:
- * // lazy();
+ * lazy();
  * ```
  */
+/* node:coverage enable */
 export const lazy = (): void => {
   const _spacing_observer = new IntersectionObserver((els, observer) => {
     for (const el of els) {
@@ -190,6 +193,7 @@ export const lazy = (): void => {
   }
 };
 
+/* node:coverage disable */
 /**
  * A function to manually activate speccer.
  *
@@ -198,13 +202,15 @@ export const lazy = (): void => {
  * @example
  * ```ts
  * // Usage example:
- * // manual(mySpeccer);
+ * manual(mySpeccer);
  * ```
  */
+/* node:coverage enable */
 export const manual = (speccer: SpeccerFunctionType): void => {
   window.speccer = speccer;
 };
 
+/* node:coverage disable */
 /**
  * A function to activate speccer based on script attributes.
  *
@@ -213,9 +219,10 @@ export const manual = (speccer: SpeccerFunctionType): void => {
  * @example
  * ```ts
  * // Usage example:
- * // activate(mySpeccer);
+ * activate(mySpeccer);
  * ```
  */
+/* node:coverage enable */
 export const activate = (speccer: SpeccerFunctionType): void => {
   const _script = document.currentScript;
 
