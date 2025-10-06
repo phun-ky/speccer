@@ -54,8 +54,8 @@ webpage. If you need to draw attention to elements, **SPECCER** is your tool!
       - [Pin programmatically](#pin-programmatically)
     - [Element typography](#element-typography)
       - [Syntax highlighting for typography](#syntax-highlighting-for-typography)
-    - [Grid spacing](#grid-spacing)
-    - [Mark elements](#mark-elements)
+  - [Grid spacing](#grid-spacing)
+  - [Mark elements](#mark-elements)
     - [A11y notation](#a11y-notation)
       - [Tab stops](#tab-stops)
       - [Landmarks and regions](#landmarks-and-regions)
@@ -78,7 +78,7 @@ webpage. If you need to draw attention to elements, **SPECCER** is your tool!
 npm i --save @phun-ky/speccer
 ```
 
-[See a live demo](https://codepen.io/phun-ky/pen/OJejexN).
+[See a live demo](https://codepen.io/phun-ky/full/OJejexN).
 
 ## Usage
 
@@ -679,7 +679,7 @@ Here is an example with these colors and overrides:
 
 ![Screenshot of typography with different syntax theme](./public/speccer-typography-syntax-light.png)
 
-### Grid spacing
+## Grid spacing
 
 ![Screenshot of grid feature](./public/speccer-grid-full-light.png)
 
@@ -700,7 +700,7 @@ In your component examples, use the following attribute on your grid container.
 
 ![Screenshot of grid feature](./public/speccer-grid-full-dark.png)
 
-### Mark elements
+## Mark elements
 
 ![Screenshot of marked elements](./public/speccer-pin-mark-light.png)
 
@@ -840,7 +840,7 @@ CSS overrides :)
 ## API
 
 Full API documentation is available
-[here](https://github.com/phun-ky/speccer/blob/main/api/README.md).
+[here](https://github.com/phun-ky/speccer/blob/main/docs/api/index.md).
 
 ## Development
 
