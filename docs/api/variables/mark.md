@@ -14,7 +14,7 @@ Defined in:
 
 This feature marks given element
 
-![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-pin-mark-light.png?raw=true)
+![pin](/speccer-pin-mark-light.png?raw=true)
 
 ## Type Declaration
 
@@ -62,7 +62,7 @@ element: (targetElement: HTMLElement) => (Promise<void> = markElement);
 Create a marker element and add it to the body with styles matching a specified
 element.
 
-![mark](https://github.com/phun-ky/speccer/blob/main/public/speccer-pin-mark-light.png?raw=true)
+![mark](/speccer-pin-mark-light.png?raw=true)
 
 #### Parameters
 

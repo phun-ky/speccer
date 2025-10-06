@@ -2,7 +2,7 @@
 /**
  * This feature marks given element
  *
- * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-pin-mark-light.png?raw=true)
+ * ![pin](/speccer-pin-mark-light.png?raw=true)
  *
  * @example
  *
@@ -68,7 +68,7 @@ export const create = (id: string, n = 'span'): HTMLElement => {
 /**
  * Create a marker element and add it to the body with styles matching a specified element.
  *
- * ![mark](https://github.com/phun-ky/speccer/blob/main/public/speccer-pin-mark-light.png?raw=true)
+ * ![mark](/speccer-pin-mark-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to match styles with.
  * @returns {Promise<void>} - A promise that resolves after creating and styling the marker element.

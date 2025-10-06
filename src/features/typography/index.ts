@@ -2,7 +2,7 @@
 /**
  * This feature presents typography
  *
- * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-typography-light.png?raw=true)
+ * ![pin](/speccer-typography-light.png?raw=true)
  *
  * @example
  *
@@ -89,7 +89,7 @@ export const create = (
 /**
  * Create a specced typography element for a given target element.
  *
- * ![typography](https://github.com/phun-ky/speccer/blob/main/public/speccer-typography-light.png?raw=true)
+ * ![typography](/speccer-typography-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to specc typography for.
  * @param {SpeccerOptionsInterface|undefined} [options] - Custom options
@@ -108,7 +108,7 @@ export const create = (
  *
  * ##### With syntax highlight feature
  *
- * ![typography](https://github.com/phun-ky/speccer/blob/main/public/speccer-typography-syntax-light.png?raw=true)
+ * ![typography](/speccer-typography-syntax-light.png?raw=true)
  *
  * ```ts
  * const targetElement = document.querySelector('.target');

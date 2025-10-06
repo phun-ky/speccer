@@ -17,7 +17,7 @@ Defined in:
 
 This feature highlights the spacing of an element.
 
-![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-spacing-dark.png?raw=true) \*
+![pin](/speccer-spacing-dark.png?raw=true) \*
 
 ## Type Declaration
 
@@ -66,7 +66,7 @@ element: (targetElement: HTMLElement, options?: SpeccerOptionsInterface) =>
 Create and position spacing elements based on the target element's computed
 spacing styles.
 
-![spacing](https://github.com/phun-ky/speccer/blob/main/public/speccer-spacing-light.png?raw=true)
+![spacing](/speccer-spacing-light.png?raw=true)
 
 #### Parameters
 
@@ -111,7 +111,7 @@ element(targetElement, options);
 
 ##### Bound style, like the old feature
 
-![spacing](https://github.com/phun-ky/speccer/blob/main/public/speccer-spacing-bound.png?raw=true)
+![spacing](/speccer-spacing-bound.png?raw=true)
 
 This option binds the speccer elements to the bounds of the element container.
 

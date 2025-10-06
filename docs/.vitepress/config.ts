@@ -99,11 +99,12 @@ export default defineConfig({
     },
     siteTitle: 'SPECCER',
     logo: {
-      src: 'https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/logo-speccer-symbol-yellow.svg',
+      src: './logo-speccer-symbol-yellow.svg',
       alt: 'SPECCER logo'
     },
     nav: [
       { text: 'Guide', link: '/guide/introduction/' },
+      { text: 'Sponsor', link: '/sponsor' },
       { text: 'Reference', link: '/api/' },
       {
         text: pkg.version,
@@ -119,6 +120,10 @@ export default defineConfig({
           {
             text: 'Contributing',
             link: 'https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md'
+          },
+          {
+            text: 'FAQ',
+            link: 'https://github.com/phun-ky/speccer/discussions/categories/q-a'
           }
         ]
       }
@@ -177,6 +182,10 @@ export default defineConfig({
             { text: 'Lazy Loading', link: '/guide/tutorials/lazy-loading' },
             { text: 'Storybook', link: '/guide/tutorials/storybook' }
           ]
+        },
+        {
+          text: 'Development',
+          link: '/guide/development'
         }
       ],
       '/api/': [

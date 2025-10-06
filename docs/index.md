@@ -11,8 +11,8 @@ hero:
     making it the perfect tool for developers, designers, and content creators
     alike."
   image:
-    light: 'https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/logo-speccer-colored-light.svg'
-    dark: 'https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/logo-speccer-colored-dark.svg'
+    light: './logo-speccer-colored-light.svg'
+    dark: './logo-speccer-colored-dark.svg'
     alt: 'Hero Image Description'
   actions:
     - theme: brand
@@ -74,6 +74,14 @@ features:
       height: 'auto'
 ---
 
+<script setup>
+import UsedBy from './.vitepress/theme/components/UsedBy.vue'
+</script>
+
+## Used By
+
+<UsedBy/>
+
 ## Other features
 
 - Zero dependencies
@@ -95,6 +103,7 @@ Ready to enhance your documentation and web projects? Follow these simple steps
 to get started with SPECCER:
 
 - Install SPECCER via npm: `npm i @phun-ky/speccer`
-- Choose your preferred integration method, whether it's Typescript, ESM,
-  Script, or React.
-- Customize the styling to match your project's design.
+- Choose [your preferred integration method](/guide/introduction/), whether it's
+  Typescript, ESM, Script, or React.
+- [Customize the styling](/guide/tutorials/customization) to match your
+  project's design.

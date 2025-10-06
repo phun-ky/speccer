@@ -2,7 +2,7 @@
 /**
  * This feature measures given element
  *
- * ![pin](https://github.com/phun-ky/speccer/blob/main/public/speccer-pin-measure-height-light.png?raw=true)
+ * ![pin](/speccer-pin-measure-height-light.png?raw=true)
  *
  * @example
  *
@@ -90,7 +90,7 @@ export const create = (
 /**
  * Create a measurement element and add it to the body with styles matching a specified target element based on the attribute values from `data-speccer`.
  *
- * ![measure](https://github.com/phun-ky/speccer/blob/main/public/speccer-measure-right-full-light.png?raw=true)
+ * ![measure](/speccer-measure-right-full-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to match styles with.
  * @param {SpeccerOptionsInterface|undefined} [options] - Options.
@@ -113,7 +113,7 @@ export const create = (
  *
  * ##### Slim width to the bottom
  *
- * ![measure](https://github.com/phun-ky/speccer/blob/main/public/speccer-measure-bottom-dark.png?raw=true)
+ * ![measure](/speccer-measure-bottom-dark.png?raw=true)
  *
  * ```ts
  * const targetElement = document.getElementById('target');

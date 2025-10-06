@@ -8,7 +8,7 @@ import { styles } from './styles';
 /**
  * Adds a shortcut element to the document body based on the provided HTML element and shortcut string.
  *
- * ![Screenshot of speccer a11y shortcuts in use](https://github.com/phun-ky/speccer/blob/main/public/speccer-a11y-shortcuts-light.png?raw=true)
+ * ![Screenshot of speccer a11y shortcuts in use](/speccer-a11y-shortcuts-light.png?raw=true)
  *
  * @param {HTMLElement} el - Target HTML element.
  * @param {string} shortcutString - Shortcut string to be displayed.
