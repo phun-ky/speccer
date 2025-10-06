@@ -11,8 +11,8 @@ hero:
     making it the perfect tool for developers, designers, and content creators
     alike."
   image:
-    light: 'https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/logo-speccer-colored-light.svg'
-    dark: 'https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/logo-speccer-colored-dark.svg'
+    light: './logo-speccer-colored-light.svg'
+    dark: './logo-speccer-colored-dark.svg'
     alt: 'Hero Image Description'
   actions:
     - theme: brand

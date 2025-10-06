@@ -1,6 +1,6 @@
 # Pin
 
-![Image of speccer](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/anatomy.png)
+![Image of speccer](/anatomy.png)
 
 ::: info
 
@@ -87,7 +87,7 @@ await pinElement(element, element.parentElement, 'A', options);
 
 ## Default
 
-![Image of speccer](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-pin-default-light.png)
+![Image of speccer](/speccer-pin-default-light.png)
 
 ::: code-group
 
@@ -134,7 +134,7 @@ await pinElement(element, element.parentElement, 'A', options);
 
 ## Enclose
 
-![Image of speccer](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-pin-enclose-light.png)
+![Image of speccer](/speccer-pin-enclose-light.png)
 
 ::: code-group
 
@@ -160,7 +160,7 @@ await pinElement(element, element.parentElement, 'A', options);
 
 ## Align With Parent Container
 
-![Screenshot of the dissection/anatomy feature where the pins are aligned with the parent container](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-pin-parent-align-default-light.png)
+![Screenshot of the dissection/anatomy feature where the pins are aligned with the parent container](/speccer-pin-parent-align-default-light.png)
 
 You can also align the pins to the parent container.
 
@@ -193,11 +193,11 @@ or `curly`!
 
 :::
 
-![Screenshot of the dissection/anatomy feature where the pins are aligned with the parent container](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-pin-parent-align-light.png)
+![Screenshot of the dissection/anatomy feature where the pins are aligned with the parent container](/speccer-pin-parent-align-light.png)
 
 ## Pin With Text
 
-![Image of text pin option](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-pin-text-light.png)
+![Image of text pin option](/speccer-pin-text-light.png)
 
 If you want _text-in-place_ pinning feature, instead of referencing the pins,
 you can use the `text` feature:
@@ -217,7 +217,7 @@ Per now, this feature has no programmatic equivalent.
 
 ## Custom Literals
 
-![Image of japanese literals instead of latin characters](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-pin-symbols-light.png)
+![Image of japanese literals instead of latin characters](/speccer-pin-symbols-light.png)
 
 You can use custom literals by assigned a global variable with the literals you
 want:
@@ -255,7 +255,7 @@ Or with a data attribute on the `data-speccer="pin-area"`-element:
 
 ## Subtle Anatomy
 
-![Image of subtle option for anatomy](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-pin-default-subtle-light.png)
+![Image of subtle option for anatomy](/speccer-pin-default-subtle-light.png)
 
 You can also give a more subtle touch to the anatomy elements.
 
@@ -267,7 +267,7 @@ You can also give a more subtle touch to the anatomy elements.
 
 This will give a dashed border, and a more subtle pin style.
 
-![Image of speccer](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-pin-enclose-subtle-light.png)
+![Image of speccer](/speccer-pin-enclose-subtle-light.png)
 
 ::: code-group
 
@@ -297,7 +297,7 @@ await pinElement(element, element.parentElement, 'A', options);
 You can use curly brackets with the `curly` tag in `data-speccer` along side
 `pin bracket` to provide a more sleek style.
 
-![Image of curly option for anatomy](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-pin-curly-light.png)
+![Image of curly option for anatomy](/speccer-pin-curly-light.png)
 
 > [!NOTE] Only works with `pin bracket`
 

@@ -1,6 +1,6 @@
 # Spacing
 
-![Image of the spacing feature](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-spacing-light.png)
+![Image of the spacing feature](/speccer-spacing-light.png)
 
 This feature allows you to display the spacing properties of an element or the
 element and all of its children.
@@ -79,11 +79,11 @@ await create(element, options);
 This will display the element _and all of it's children_ padding and margin,
 unless you specify `padding` and `margin`
 
-![Image of the spacing feature in dark mode](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-spacing-dark.png)
+![Image of the spacing feature in dark mode](/speccer-spacing-dark.png)
 
 ## Bound Spacing
 
-![spacing](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-spacing-bound.png)
+![spacing](/speccer-spacing-bound.png)
 
 This option binds the speccer elements to the bounds of the element container.
 Suitable for more dense layouts.

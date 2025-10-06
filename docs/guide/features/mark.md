@@ -1,6 +1,6 @@
 # Mark
 
-![Screenshot of marked elements](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-pin-mark-light.png)
+![Screenshot of marked elements](/speccer-pin-mark-light.png)
 
 This feature allows you to mark specific elements.
 

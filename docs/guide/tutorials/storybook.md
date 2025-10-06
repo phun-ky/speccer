@@ -2,7 +2,7 @@
 
 You can add **SPECCER** to your stories!
 
-![Image of the Storybook implementation](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/storybook.png)
+![Image of the Storybook implementation](/storybook.png)
 
 In `preview.tsx`:
 

@@ -1,6 +1,6 @@
 # Measure
 
-![Image of the measure feature](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-measure-spacing-example-dark.png)
+![Image of the measure feature](/speccer-measure-spacing-example-dark.png)
 
 This feature allows you to display element dimensions.
 
@@ -15,8 +15,8 @@ For more technical documentation, see the relevant documentation
 
 ### In the HTML
 
-![Image of the measure feature](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-measure-right-full-light.png)
-![Image of the measure feature](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-measure-bottom-dark.png)
+![Image of the measure feature](/speccer-measure-right-full-light.png)
+![Image of the measure feature](/speccer-measure-bottom-dark.png)
 
 Display dimensions with:
 
@@ -58,7 +58,7 @@ await create(element, options);
 
 ## Slim Measure
 
-![Image of slim option for measure](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-measure-right-light.png)
+![Image of slim option for measure](/speccer-measure-right-light.png)
 
 Use a slim style:
 

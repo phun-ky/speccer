@@ -1,6 +1,6 @@
 # Grid
 
-![Screenshot of grid feature](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-grid-full-light.png)
+![Screenshot of grid feature](/speccer-grid-full-light.png)
 
 This feature allows you display the grid characteristics, for now only spacing,
 of an element width `display: grid;`.
@@ -83,4 +83,4 @@ await create(element, options);
 
 :::
 
-![Screenshot of grid feature](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-grid-full-dark.png)
+![Screenshot of grid feature](/speccer-grid-full-dark.png)

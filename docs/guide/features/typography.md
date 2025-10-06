@@ -1,6 +1,6 @@
 # Typography
 
-![Image of typography speccer](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-typography-light.png)
+![Image of typography speccer](/speccer-typography-light.png)
 
 ::: info
 
@@ -122,4 +122,4 @@ Here is an example with these colors and overrides:
 }
 ```
 
-![Screenshot of typography with different syntax theme](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-typography-syntax-light.png)
+![Screenshot of typography with different syntax theme](/speccer-typography-syntax-light.png)

@@ -1,6 +1,6 @@
 # Customization
 
-![Screenshot of speccer in a dark mode example](https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/speccer-measure-spacing-example-dark.png)
+![Screenshot of speccer in a dark mode example](/speccer-measure-spacing-example-dark.png)
 
 Although the styling works nicely with dark mode, you can use the provided CSS
 variables to customize the look and feel. If more control is needed, you can use

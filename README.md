@@ -1,6 +1,6 @@
 # @phun-ky/speccer
 
-![Speccer hero, with logo and slogan: A zero dependency package to annotate or highlight elements](./public/speccer-hero.png)
+![Speccer hero, with logo and slogan: A zero dependency package to annotate or highlight elements](./docs/public/speccer-hero.png)
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](http://makeapullrequest.com)
@@ -16,7 +16,7 @@
 
 ## About
 
-![Image of speccer](./public/speccer-pin-parent-align-light.png)
+![Image of speccer](./docs/public/speccer-pin-parent-align-light.png)
 
 **SPECCER** was originally created to simplify documenting components in a
 design system, but it can be used to annotate or highlight any HTML element on a
@@ -855,15 +855,8 @@ $ npm test
 
 ## Used by
 
-| [![if insurance logo](./public/used-by-if.png)](https://www.if-insurance.com) | [![24seven office logo](./public/used-by-tfso.png)](https://24sevenoffice.com) |
-| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-
-## Contributing
-
-Want to contribute? Please read the
-[CONTRIBUTING.md](https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md)
-and
-[CODE_OF_CONDUCT.md](https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md)
+| [![if insurance logo](./docs/public/used-by-if.png)](https://www.if-insurance.com) | [![24seven office logo](./docs/public/used-by-tfso.png)](https://24sevenoffice.com) |
+| ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 
 ## License
 
@@ -895,7 +888,7 @@ we're all part of :)
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
-![Speccer banner, with logo and slogan: A zero dependency package to annotate or highlight elements](./public/speccer-banner.png)
+![Speccer banner, with logo and slogan: A zero dependency package to annotate or highlight elements](./docs/public/speccer-banner.png)
 
 p.s. **Ukraine is still under brutal Russian invasion. A lot of Ukrainian people
 are hurt, without shelter and need help**. You can help in various ways, for

@@ -99,7 +99,7 @@ export default defineConfig({
     },
     siteTitle: 'SPECCER',
     logo: {
-      src: 'https://raw.githubusercontent.com/phun-ky/speccer/refs/heads/main/public/logo-speccer-symbol-yellow.svg',
+      src: './logo-speccer-symbol-yellow.svg',
       alt: 'SPECCER logo'
     },
     nav: [
