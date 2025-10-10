@@ -14,10 +14,7 @@ import { fileURLToPath } from 'node:url';
 export default defineConfig({
   lang: 'en-GB',
   head: [
-    [
-      'meta',
-      { property: 'og:url', content: 'https://phun-ky.net/projects/speccer' }
-    ],
+    ['meta', { property: 'og:url', content: 'https://speccer.dev' }],
     ['meta', { property: 'og:type', content: 'website' }],
     [
       'meta',
@@ -51,12 +48,12 @@ export default defineConfig({
       }
     ],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { property: 'twitter:domain', content: 'phun-ky.net' }],
+    ['meta', { property: 'twitter:domain', content: 'speccer.dev' }],
     [
       'meta',
       {
         property: 'twitter:url',
-        content: 'https://phun-ky.net/projects/speccer'
+        content: 'https://speccer.dev'
       }
     ],
     [
@@ -104,8 +101,8 @@ export default defineConfig({
     },
     nav: [
       { text: 'Guide', link: '/guide/introduction/' },
-      { text: 'Sponsor', link: '/sponsor' },
       { text: 'Reference', link: '/api/' },
+      { text: 'Sponsor', link: '/sponsor' },
       {
         text: pkg.version,
         items: [
