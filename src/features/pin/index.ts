@@ -39,7 +39,7 @@ import { pinElement } from './utils/pin-element';
  * Create pinned elements based on the section element and its data-speccer attributes.
  *
  * @param {HTMLElement} sectionElement - The section element containing pinned elements.
- * @param {SpeccerOptionsInterface|undefined} [options] - Options.
+ * @param {SpeccerOptionsInterface} [options] - Options.
  * @returns {Promise<void>} - A promise that resolves after creating pinned elements.
  *
  * @example
@@ -51,7 +51,7 @@ import { pinElement } from './utils/pin-element';
 /* node:coverage enable */
 export const pinElements = async (
   sectionElement: HTMLElement,
-  options?: SpeccerOptionsInterface | undefined
+  options?: SpeccerOptionsInterface
 ): Promise<void> => {
   if (!sectionElement) return;
 
@@ -80,8 +80,11 @@ export const pinElements = async (
 
         await waitForFrame();
 
-        const _target_style = getComputedStyle(targetElement);
-        const _options = getOptions(_areas_string, _target_style, options);
+        const _options = await getOptions(
+          _areas_string,
+          targetElement,
+          options
+        );
         const _content = getContentForPin(_symbol, targetElement, _options);
 
         await pinElement(targetElement, sectionElement, _content, _options);

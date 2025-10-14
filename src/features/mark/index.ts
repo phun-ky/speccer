@@ -90,7 +90,7 @@ export const mark = async (targetElement: HTMLElement): Promise<void> => {
 
   await waitForFrame();
 
-  const _options = getOptions(_areas_string, getComputedStyle(targetElement));
+  const _options = await getOptions(_areas_string, targetElement);
 
   if (_options.type !== 'mark') return;
 

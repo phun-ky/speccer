@@ -13,14 +13,15 @@ import {
   isValidSpacingElement,
   isValidTypographyElement
 } from '../../area';
+import { waitForFrame } from '../../wait';
 
 /* node:coverage disable */
 /**
  * Determines the Speccer feature type based on the given area string and target element.
  *
  * @param {string} areaString - The string representing different area types.
- * @param {Partial<CSSStyleDeclaration>} targetStyle - The target HTML element being evaluated.
- * @returns {SpeccerFeatureType} The determined Speccer feature type.
+ * @param {HTMLElement} targetElement - The target HTML element being evaluated.
+ * @returns {Promise<SpeccerFeatureType>} The determined Speccer feature type.
  *
  * @example
  * ```ts
@@ -29,10 +30,14 @@ import {
  * ```
  */
 /* node:coverage enable */
-export const getFeatureBasedOnArea = (
+export const getFeatureBasedOnArea = async (
   areaString: string,
-  targetStyle: Partial<CSSStyleDeclaration>
-): SpeccerFeatureType => {
+  targetElement: HTMLElement
+): Promise<SpeccerFeatureType> => {
+  await waitForFrame();
+
+  const targetStyle = getComputedStyle(targetElement);
+
   if (isValidPinElement(areaString)) return 'pin';
 
   if (isValidGridElement(areaString, targetStyle)) return 'grid';

@@ -51,11 +51,7 @@ export const pinElement = async (
 
   await waitForFrame();
 
-  const _options = getOptions(
-    _areas_string,
-    getComputedStyle(targetElement),
-    options
-  );
+  const _options = await getOptions(_areas_string, targetElement, options);
 
   if (_options.type !== 'pin' || !_options.pin) return;
 

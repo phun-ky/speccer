@@ -41,15 +41,13 @@ import { uniqueID } from '../../utils/id';
 import { isElementHidden } from '../../utils/node';
 import { offset } from '../../utils/position';
 import { add as addStyles, get as getStyles } from '../../utils/styles';
-import { waitForFrame } from '../../utils/wait';
 
 /* node:coverage disable */
 /**
  * Creates a visual grid overlay for a given target element.
  *
  * @param {HTMLElement} targetElement - The target element to create the grid overlay for.
- * @param {Partial<CSSStyleDeclaration>} styles - The computed styles of the target element.
- * @param {SpeccerOptionsInterface} options - Options to determine what to draw
+ * @param {SpeccerOptionsInterface} [options] - Options to determine what to draw
  * @returns {Promise<void>}
  *
  * @example
@@ -64,8 +62,7 @@ import { waitForFrame } from '../../utils/wait';
 /* node:coverage enable */
 export const create = async (
   targetElement: HTMLElement,
-  styles: Partial<CSSStyleDeclaration>,
-  options: SpeccerOptionsInterface
+  options?: SpeccerOptionsInterface
 ): Promise<void> => {
   if (!targetElement) return;
 
@@ -76,11 +73,7 @@ export const create = async (
 
   await waitForFrame();
 
-  const _options = getOptions(
-    _areas_string,
-    getComputedStyle(targetElement),
-    options
-  );
+  const _options = await getOptions(_areas_string, targetElement, options);
 
   if (_options.type !== 'grid' || !_options.grid) return;
 
@@ -191,7 +184,7 @@ export const create = async (
  * ![grid](/speccer-grid-full-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to add the grid overlay to.
- * @param {SpeccerOptionsInterface|undefined} [options] - Options.
+ * @param {SpeccerOptionsInterface} [options] - Options.
  * @returns {Promise<void>} A promise that resolves once the overlay has been added.
  *
  * @example
@@ -220,20 +213,11 @@ export const create = async (
 /* node:coverage enable */
 export const grid = async (
   targetElement: HTMLElement,
-  options?: SpeccerOptionsInterface | undefined
+  options?: SpeccerOptionsInterface
 ): Promise<void> => {
   if (!targetElement) return;
 
   if (isElementHidden(targetElement)) return;
 
-  const _areas_string: string =
-    targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || '';
-  const _target_style = await getStyles(targetElement);
-  const _options = getOptions(_areas_string, _target_style, options);
-
-  if (_options.type !== 'grid' || !_options.grid) return;
-
-  await waitForFrame();
-
-  await create(targetElement, _target_style, _options);
+  await create(targetElement, options);
 };

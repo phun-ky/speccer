@@ -92,7 +92,7 @@ export const create = (
  * ![typography](/speccer-typography-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to specc typography for.
- * @param {SpeccerOptionsInterface|undefined} [options] - Custom options
+ * @param {SpeccerOptionsInterface} [options] - Custom options
  * @returns {Promise<void>} - A promise that resolves once typography element is created and positioned.
  *
  * @example
@@ -126,7 +126,7 @@ export const create = (
 /* node:coverage enable */
 export const typography = async (
   targetElement: HTMLElement,
-  options?: SpeccerOptionsInterface | undefined
+  options?: SpeccerOptionsInterface
 ): Promise<void> => {
   if (!targetElement) return;
 
@@ -135,13 +135,7 @@ export const typography = async (
   const _areas_string: string =
     targetElement.getAttribute('data-speccer') || '';
 
-  await waitForFrame();
-
-  const _options = getOptions(
-    _areas_string,
-    getComputedStyle(targetElement),
-    options
-  );
+  const _options = await getOptions(_areas_string, targetElement, options);
 
   if (_options.type !== 'typography' || !_options.typography) return;
 

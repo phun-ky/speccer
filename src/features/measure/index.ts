@@ -93,7 +93,7 @@ export const create = (
  * ![measure](/speccer-measure-right-full-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to match styles with.
- * @param {SpeccerOptionsInterface|undefined} [options] - Options.
+ * @param {SpeccerOptionsInterface} [options] - Options.
  * @returns {Promise<void>} - A promise that resolves after creating and styling the measurement element.
  *
  * @example
@@ -131,7 +131,7 @@ export const create = (
 /* node:coverage enable */
 export const measure = async (
   targetElement: HTMLElement,
-  options?: SpeccerOptionsInterface | undefined
+  options?: SpeccerOptionsInterface
 ): Promise<void> => {
   if (!targetElement) return;
 
@@ -142,11 +142,7 @@ export const measure = async (
 
   await waitForFrame();
 
-  const _options = getOptions(
-    _areas_string,
-    getComputedStyle(targetElement),
-    options
-  );
+  const _options = await getOptions(_areas_string, targetElement, options);
 
   if (_options.type !== 'measure' || !_options.measure) return;
 
