@@ -26,6 +26,7 @@
 /* node:coverage enable */
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { cx, set as setClassNames } from '../../utils/classnames';
+import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import {
   getSpacing,
   getClassNameFromCSSProperty,
@@ -125,7 +126,7 @@ export const spacing = async (
   if (isElementHidden(targetElement)) return;
 
   const _areas_string: string =
-    targetElement.getAttribute('data-speccer') || '';
+    targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || '';
   const _target_styles = await getStyles(targetElement);
   const _options = await getOptions(_areas_string, targetElement, options);
 

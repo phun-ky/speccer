@@ -36,6 +36,7 @@
 import { MeasureAreaEnum } from '../../types/enums/area';
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { cx, set as setClassNames } from '../../utils/classnames';
+import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
 import { isElementHidden } from '../../utils/node';
@@ -138,7 +139,7 @@ export const measure = async (
   if (isElementHidden(targetElement)) return;
 
   const _areas_string: string =
-    targetElement.getAttribute('data-speccer') || 'measure';
+    targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || 'measure';
 
   await waitForFrame();
 

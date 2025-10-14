@@ -36,6 +36,7 @@
 /* node:coverage enable */
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { set as setClassNames, cx } from '../../utils/classnames';
+import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
 import { isElementHidden } from '../../utils/node';
@@ -133,7 +134,7 @@ export const typography = async (
   if (isElementHidden(targetElement)) return;
 
   const _areas_string: string =
-    targetElement.getAttribute('data-speccer') || '';
+    targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || '';
 
   const _options = await getOptions(_areas_string, targetElement, options);
 

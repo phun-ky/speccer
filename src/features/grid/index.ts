@@ -69,9 +69,9 @@ export const create = async (
   if (isElementHidden(targetElement)) return;
 
   const _areas_string: string =
-    targetElement.getAttribute('data-speccer') || 'grid';
+    targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || 'grid';
 
-  await waitForFrame();
+  const targetStyle = await getStyles(targetElement);
 
   const _options = await getOptions(_areas_string, targetElement, options);
 

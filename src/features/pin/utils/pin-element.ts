@@ -2,6 +2,7 @@ import { SpeccerOptionsInterface } from '../../../types/speccer';
 import { DrawCircle } from '../../../utils/classes/DrawCircle';
 import { DrawSVGCurlyBracket } from '../../../utils/classes/DrawSVGCurlyBracket';
 import { DrawSVGLine } from '../../../utils/classes/DrawSVGLine';
+import { SPECCER_DATA_ATTRIBUTE } from '../../../utils/constants';
 import { getOptions } from '../../../utils/get-options';
 import { uniqueID } from '../../../utils/id';
 import { isElementHidden } from '../../../utils/node';
@@ -47,7 +48,7 @@ export const pinElement = async (
   if (isElementHidden(targetElement)) return;
 
   const _areas_string: string =
-    targetElement.getAttribute('data-speccer') || 'pin';
+    targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || 'pin';
 
   await waitForFrame();
 
