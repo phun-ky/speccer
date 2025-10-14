@@ -82,13 +82,13 @@ export const create = async (
   const { toggle } = grid;
   const { height, width } = targetElement.getBoundingClientRect();
   const { top, left } = await offset(targetElement);
-  const { gridTemplateColumns, gridTemplateRows, padding } = styles;
-  const _pin_element_id = `speccer-${options.slug}-${targetElement.getAttribute('id') || uniqueID()}`;
+  const { gridTemplateColumns, gridTemplateRows, padding } = targetStyle;
+  const _pin_element_id = `speccer-${_options.slug}-${targetElement.getAttribute('id') || uniqueID()}`;
 
   targetElement.setAttribute('data-speccer-element-id', _pin_element_id);
 
   if (toggle === 'columns' || toggle === 'both') {
-    const columnGap = parseInt(styles.columnGap || '0');
+    const columnGap = parseInt(targetStyle.columnGap || '0');
     const gridColumnContainer = document.createElement('div');
 
     document.documentElement.style.setProperty(
@@ -130,7 +130,7 @@ export const create = async (
   }
 
   if (toggle === 'rows' || toggle === 'both') {
-    const rowGap = parseInt(styles.rowGap || '0');
+    const rowGap = parseInt(targetStyle.rowGap || '0');
     const gridRowContainer = document.createElement('div');
 
     document.documentElement.style.setProperty(

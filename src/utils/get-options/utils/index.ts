@@ -40,7 +40,9 @@ export const getFeatureBasedOnArea = async (
 
   if (isValidPinElement(areaString)) return 'pin';
 
-  if (isValidGridElement(areaString, targetStyle)) return 'grid';
+  if (isValidGridElement(areaString, targetStyle)) {
+    return 'grid';
+  }
 
   if (isValidMarkElement(areaString)) return 'mark';
 
