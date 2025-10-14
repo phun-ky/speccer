@@ -1,5 +1,15 @@
 # Changelog
 
+## [11.3.3](https://github.com/phun-ky/speccer/compare/v11.3.2...v11.3.3) (2025-10-14)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 6 updates ([e8b1d98](https://github.com/phun-ky/speccer/commit/e8b1d980f4f1417216f1be625c09cfcfa7e30af3))
+
+### Bug
+
+* 🐛 Use correct order of nav links ([78fce0e](https://github.com/phun-ky/speccer/commit/78fce0ee2dbb7201d6f1ba97c10d58e17cc68313))
+
 ## [11.3.2](https://github.com/phun-ky/speccer/compare/v11.3.1...v11.3.2) (2025-10-07)
 
 ### Tasks
