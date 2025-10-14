@@ -51,8 +51,7 @@ import { add as addStyles, get as getStyles } from '../../utils/styles';
  * ```ts
  * const targetElement = document.getElementById('target');
  * if (targetElement) {
- *   const styles = window.getComputedStyle(targetElement);
- *   await create(targetElement, styles);
+ *   await create(targetElement);
  * }
  * ```
  */
