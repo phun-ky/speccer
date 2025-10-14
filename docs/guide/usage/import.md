@@ -22,6 +22,13 @@ speccer();
 
 :::
 
+::: tip
+
+If you want to better control the initialization of **SPECCER**, you do not need
+to add the html attributes!
+
+:::
+
 ## Types
 
 Types can be found in `@phun-ky/speccer/dist/speccer.d.ts`.

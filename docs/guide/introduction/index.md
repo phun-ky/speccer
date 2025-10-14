@@ -68,6 +68,12 @@ initialize when `DOMContentLoaded` is fired.
 
 Mark the elements in the html that you want to use **SPECCER** width, like:
 
+::: tip
+
+The properties in brackets ( `[]` ) means that it is optional!
+
+:::
+
 ::: code-group
 
 ```html [pin]
@@ -137,6 +143,14 @@ import speccer from '@phun-ky/speccer';
 // do stuff
 speccer();
 ```
+
+::: warning
+
+This approach requires the usage of the `data-speccer="*"` attributes. If you
+want more control, follow
+[the approach here](/guide/tutorials/add-pins-on-click).
+
+:::
 
 ## SVG
 
