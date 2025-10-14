@@ -1,3 +1,4 @@
+/* node:coverage disable */
 import {
   SpeccerFeatureType,
   SpeccerPositionType
@@ -15,7 +16,6 @@ import {
 } from '../../area';
 import { waitForFrame } from '../../wait';
 
-/* node:coverage disable */
 /**
  * Determines the Speccer feature type based on the given area string and target element.
  *
