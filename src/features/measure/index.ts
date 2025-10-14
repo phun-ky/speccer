@@ -138,7 +138,7 @@ export const measure = async (
   if (isElementHidden(targetElement)) return;
 
   const _areas_string: string =
-    targetElement.getAttribute('data-speccer') || '';
+    targetElement.getAttribute('data-speccer') || 'measure';
 
   await waitForFrame();
 

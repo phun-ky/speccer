@@ -67,11 +67,24 @@ export const create = async (
   styles: Partial<CSSStyleDeclaration>,
   options: SpeccerOptionsInterface
 ): Promise<void> => {
+  if (!targetElement) return;
+
+  if (isElementHidden(targetElement)) return;
+
+  const _areas_string: string =
+    targetElement.getAttribute('data-speccer') || 'grid';
+
   await waitForFrame();
 
-  const { grid } = options;
+  const _options = getOptions(
+    _areas_string,
+    getComputedStyle(targetElement),
+    options
+  );
 
-  if (!grid) return;
+  if (_options.type !== 'grid' || !_options.grid) return;
+
+  const { grid } = _options;
 
   const { toggle } = grid;
   const { height, width } = targetElement.getBoundingClientRect();

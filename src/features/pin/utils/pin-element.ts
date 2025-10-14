@@ -2,8 +2,11 @@ import { SpeccerOptionsInterface } from '../../../types/speccer';
 import { DrawCircle } from '../../../utils/classes/DrawCircle';
 import { DrawSVGCurlyBracket } from '../../../utils/classes/DrawSVGCurlyBracket';
 import { DrawSVGLine } from '../../../utils/classes/DrawSVGLine';
+import { getOptions } from '../../../utils/get-options';
 import { uniqueID } from '../../../utils/id';
+import { isElementHidden } from '../../../utils/node';
 import { add } from '../../../utils/styles';
+import { waitForFrame } from '../../../utils/wait';
 
 import { createPinElement } from './create-pin-element';
 import { styles } from './styles';
@@ -39,7 +42,22 @@ export const pinElement = async (
   content: string,
   options: SpeccerOptionsInterface
 ): Promise<string | undefined> => {
-  if (options.type !== 'pin' || !options.pin) return;
+  if (!targetElement) return;
+
+  if (isElementHidden(targetElement)) return;
+
+  const _areas_string: string =
+    targetElement.getAttribute('data-speccer') || 'pin';
+
+  await waitForFrame();
+
+  const _options = getOptions(
+    _areas_string,
+    getComputedStyle(targetElement),
+    options
+  );
+
+  if (_options.type !== 'pin' || !_options.pin) return;
 
   const _pin_element_id = `speccer-${options.slug}-${targetElement.getAttribute('id') || uniqueID()}`;
   const _pin_element = createPinElement(content, options, _pin_element_id);
@@ -52,25 +70,25 @@ export const pinElement = async (
     targetElement as HTMLElement,
     _pin_element,
     parentElement,
-    options
+    _options
   );
 
   await add(_pin_element, _pin_styles);
 
   const isText =
-    options.pin.text &&
+    _options.pin.text &&
     targetElement.getAttribute('data-speccer-title') !== null;
   const _should_draw_circle =
-    options.pin.parent &&
-    !options.pin.enclose &&
-    !options.pin.bracket &&
+    _options.pin.parent &&
+    !_options.pin.enclose &&
+    !_options.pin.bracket &&
     !isText;
 
-  if (options.pin.useSVGLine) {
-    new DrawSVGLine(targetElement, _pin_element, options);
+  if (_options.pin.useSVGLine) {
+    new DrawSVGLine(targetElement, _pin_element, _options);
 
-    if (_should_draw_circle) new DrawCircle(targetElement, 5, options);
-  } else if (options.pin.useCurlyBrackets) {
+    if (_should_draw_circle) new DrawCircle(targetElement, 5, _options);
+  } else if (_options.pin.useCurlyBrackets) {
     new DrawSVGCurlyBracket(targetElement, _pin_element);
   }
 
