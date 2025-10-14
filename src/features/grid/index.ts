@@ -74,10 +74,8 @@ export const create = async (
   if (_options.type !== 'grid' || !_options.grid) return;
 
   const { grid } = _options;
-
   const { toggle } = grid;
-  const { height, width } = targetElement.getBoundingClientRect();
-  const { top, left } = await offset(targetElement);
+  const { top, left, height, width } = await offset(targetElement);
   const { gridTemplateColumns, gridTemplateRows, padding } = targetStyle;
   const _pin_element_id = `speccer-${_options.slug}-${targetElement.getAttribute('id') || uniqueID()}`;
 
