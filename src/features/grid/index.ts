@@ -33,7 +33,6 @@
  */
 /* eslint no-console:0 */
 import { SpeccerOptionsInterface } from '../../types/speccer';
-import { set as setClassNames } from '../../utils/classnames';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
@@ -101,10 +100,10 @@ export const create = async (
     if (columnGap < 24) gridColumnContainer.classList.add('speccer-small-grid');
 
     gridColumnContainer.setAttribute('data-speccer-id', _pin_element_id);
-
-    setClassNames(
-      gridColumnContainer,
-      'ph-speccer speccer speccer-grid-container'
+    gridColumnContainer.classList.add(
+      'ph-speccer',
+      'speccer',
+      'speccer-grid-container'
     );
 
     addStyles(gridColumnContainer, {
@@ -121,7 +120,7 @@ export const create = async (
     for (let i = 0; i < numberOfColumnItems; i++) {
       const gridItem = document.createElement('div');
 
-      setClassNames(gridItem, 'ph-speccer speccer speccer-grid-item');
+      gridItem.classList.add('ph-speccer', 'speccer', 'speccer-grid-item');
       gridColumnContainer.appendChild(gridItem);
     }
     document.body.appendChild(gridColumnContainer);
@@ -143,13 +142,10 @@ export const create = async (
     if (rowGap < 24) gridRowContainer.classList.add('speccer-small-grid');
 
     gridRowContainer.setAttribute('data-speccer-id', _pin_element_id);
-    gridRowContainer.classList.add('ph-speccer');
-    gridRowContainer.classList.add('speccer');
-    gridRowContainer.classList.add('speccer-grid-row-container');
-
-    setClassNames(
-      gridRowContainer,
-      'ph-speccer speccer speccer-grid-row-container'
+    gridRowContainer.classList.add(
+      'ph-speccer',
+      'speccer',
+      'speccer-grid-row-container'
     );
 
     addStyles(gridRowContainer, {
@@ -165,8 +161,8 @@ export const create = async (
 
     for (let i = 0; i < numberOfRowItems; i++) {
       const gridItem = document.createElement('div');
+      gridItem.classList.add('ph-speccer', 'speccer', 'speccer-grid-row-item');
 
-      setClassNames(gridItem, 'ph-speccer speccer speccer-grid-row-item');
       gridRowContainer.appendChild(gridItem);
     }
     document.body.appendChild(gridRowContainer);
