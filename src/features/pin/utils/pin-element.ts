@@ -1,3 +1,4 @@
+/* node:coverage disable */
 import { SpeccerOptionsInterface } from '../../../types/speccer';
 import { DrawCircle } from '../../../utils/classes/DrawCircle';
 import { DrawSVGCurlyBracket } from '../../../utils/classes/DrawSVGCurlyBracket';
@@ -12,7 +13,6 @@ import { waitForFrame } from '../../../utils/wait';
 import { createPinElement } from './create-pin-element';
 import { styles } from './styles';
 
-/* node:coverage disable */
 /**
  * Create and style the pin element as needed.
  *

@@ -29,7 +29,6 @@
  * @packageDocumentation
  */
 /* eslint no-console:0 */
-/* node:coverage enable */
 import { set as setClassNames } from '../../utils/classnames';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
@@ -39,7 +38,6 @@ import { getRec } from '../../utils/position';
 import { add as addStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
 
-/* node:coverage disable */
 /**
  * Create a marker element with an optional element type.
  *

@@ -33,7 +33,7 @@
  * @packageDocumentation
  */
 /* eslint no-console:0 */
-/* node:coverage enable */
+
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { set as setClassNames, cx } from '../../utils/classnames';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
@@ -41,12 +41,10 @@ import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
 import { isElementHidden } from '../../utils/node';
 import { add as addStyles } from '../../utils/styles';
-import { waitForFrame } from '../../utils/wait';
 
 import { position } from './utils/position';
 import { template } from './utils/template';
 
-/* node:coverage disable */
 /**
  * Create a DOM element with provided HTML and optional CSS class names.
  *

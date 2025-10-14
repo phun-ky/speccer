@@ -32,7 +32,6 @@
  * @packageDocumentation
  */
 /* eslint no-console:0 */
-/* node:coverage enable */
 import { MeasureAreaEnum } from '../../types/enums/area';
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { cx, set as setClassNames } from '../../utils/classnames';
@@ -44,7 +43,6 @@ import { getRec } from '../../utils/position';
 import { add as addStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
 
-/* node:coverage disable */
 /**
  * Create a measurement element with optional text, area, and element type.
  *

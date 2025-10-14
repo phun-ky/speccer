@@ -32,7 +32,6 @@
  * @packageDocumentation
  */
 /* eslint no-console:0 */
-/* node:coverage enable */
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { set as setClassNames } from '../../utils/classnames';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
@@ -42,7 +41,6 @@ import { isElementHidden } from '../../utils/node';
 import { offset } from '../../utils/position';
 import { add as addStyles, get as getStyles } from '../../utils/styles';
 
-/* node:coverage disable */
 /**
  * Creates a visual grid overlay for a given target element.
  *

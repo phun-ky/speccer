@@ -1,3 +1,4 @@
+/* node:coverage disable */
 import { isNotNumber, isUndefined } from './typeof';
 
 /**
@@ -17,6 +18,7 @@ import { isNotNumber, isUndefined } from './typeof';
  * const angleValue = angle(0, 0, 3, 4);
  * ```
  */
+/* node:coverage enable */
 export const angle = (
   cx: number,
   cy: number,

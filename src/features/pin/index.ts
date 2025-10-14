@@ -19,7 +19,6 @@
  * @packageDocumentation
  */
 
-/* node:coverage enable */
 export { createPinElement } from './utils/create-pin-element';
 
 export { pinElement } from './utils/pin-element';
@@ -37,7 +36,6 @@ import { getCharacterToUse } from './utils/get-character-to-use';
 import { getContentForPin } from './utils/get-content-for-pin';
 import { pinElement } from './utils/pin-element';
 
-/* node:coverage disable */
 /**
  * Create pinned elements based on the section element and its data-speccer attributes.
  *
