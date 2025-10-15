@@ -215,33 +215,26 @@ you can use the `text` feature:
 
 Per now, this feature has no programmatic equivalent.
 
-## Custom Literals
+::: info
 
-![Image of japanese literals instead of latin characters](/speccer-pin-symbols-light.png)
+Headings (h1-h6) automatically get a coloured tag above the title, reflecting
+the tag-name of the heading. You can customize this with
+[the CSS variables](/guide/tutorials/customization).
 
-You can use custom literals by assigned a global variable with the literals you
-want:
+:::
 
-```typescript
-window.SPECCER_LITERALS = [
-  'あ',
-  'い',
-  'う',
-  'え',
-  'お',
-  'か',
-  'き',
-  'く',
+#### Customize
+
+If you want to customize the look and feel of the text UI, you can style these
+CSS classes:
+
+```css
+.ph-speccer.title {
   …
-];
-```
-
-Or with a data attribute on the `data-speccer="pin-area"`-element:
-
-```html [index.html]
-<div data-speccer="pin-area" data-speccer-literals="ऄ|अआइईउऊऋऌऍऎएऐऑऒओऔकखगघङच">
+}
+.ph-speccer.description {
   …
-</div>
+}
 ```
 
 > [!TIP] Try it out with emoticons!
