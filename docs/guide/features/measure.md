@@ -4,6 +4,8 @@
 
 This feature allows you to display element dimensions.
 
+[[toc]]
+
 ::: info
 
 For more technical documentation, see the relevant documentation
@@ -13,14 +15,14 @@ For more technical documentation, see the relevant documentation
 
 ## Usage
 
-### In the HTML
-
 ![Image of the measure feature](/speccer-measure-right-full-light.png)
-![Image of the measure feature](/speccer-measure-bottom-dark.png)
+
+### Via `<script>`-tag
 
 Display dimensions with:
 
 ```html
+<script src="https://unpkg.com/@phun-ky/speccer/dist/speccer.js"></script>
 <div
   data-speccer="measure [height[left|right]][width top|bottom][subtle][slim]"
   class="…"
@@ -33,16 +35,10 @@ Where `height` and `width` comes with placement flags. Default for `height` is
 ### Programmatically
 
 ```typescript
-import { measure } from 'https://esm.sh/@phun-ky/speccer';
-import type {
-  SpeccerOptionsInterface,
-  SpeccerPositionType
-} from 'https://esm.sh/@phun-ky/speccer';
+import { measure } from '@phun-ky/speccer';
 
-const { create } = measure as {
-  create: (target: HTMLElement, options?: SpeccerOptionsInterface) => void;
-};
-const element = document.querySelector('…');
+const { create } = measure;
+const element = document.querySelector('.my-element');
 const options = {
   slug: 'measureTest',
   type: 'measure',
@@ -56,7 +52,7 @@ const options = {
 await create(element, options);
 ```
 
-## Slim Measure
+### Slim Measure
 
 ![Image of slim option for measure](/speccer-measure-right-light.png)
 
@@ -64,21 +60,21 @@ Use a slim style:
 
 ::: code-group
 
-```html [index.html]
+```html [via script-tag]
 <div data-speccer="measure slim height left" class="…"></div>
 ```
 
-```typescript [main.ts]
-import { measure } from 'https://esm.sh/@phun-ky/speccer';
+```typescript [programmatically]
+import { measure } from '@phun-ky/speccer';
 import type {
   SpeccerOptionsInterface,
   SpeccerPositionType
-} from 'https://esm.sh/@phun-ky/speccer';
+} from '@phun-ky/speccer';
 
 const { create } = measure as {
   create: (target: HTMLElement, options?: SpeccerOptionsInterface) => void;
 };
-const element = document.querySelector('…');
+const element = document.querySelector('.my-element');
 const options = {
   slug: 'measureTest',
   type: 'measure',
@@ -95,28 +91,28 @@ await create(element, options);
 
 This will give a slimmer look and feel.
 
-## Subtle Slim Measure
+### Subtle Slim Measure
 
 Use a subtle style for the slim option, uses a dashed line instead of a solid
 line:
 
 ::: code-group
 
-```html [index.html]
+```html [via script-tag]
 <div data-speccer="measure slim height left subtle" class="…"></div>
 ```
 
-```typescript [main.ts]
-import { measure } from 'https://esm.sh/@phun-ky/speccer';
+```typescript [programmatically]
+import { measure } from '@phun-ky/speccer';
 import type {
   SpeccerOptionsInterface,
   SpeccerPositionType
-} from 'https://esm.sh/@phun-ky/speccer';
+} from '@phun-ky/speccer';
 
 const { create } = measure as {
   create: (target: HTMLElement, options?: SpeccerOptionsInterface) => void;
 };
-const element = document.querySelector('…');
+const element = document.querySelector('.my-element');
 const options = {
   slug: 'measureTest',
   position: 'left',
@@ -132,3 +128,5 @@ await create(element, options);
 :::
 
 This will give a dashed border.
+
+![Image of the measure feature](/speccer-measure-bottom-dark.png)

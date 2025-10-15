@@ -4,6 +4,8 @@
 
 This feature allows you to mark specific elements.
 
+[[toc]]
+
 ::: info
 
 For more technical documentation, see the relevant documentation
@@ -13,30 +15,32 @@ For more technical documentation, see the relevant documentation
 
 ## Usage
 
-### In the HTML
+### Via `<script>`-tag
 
 In your component examples, use the following attribute.
 
 ```html
+<script src="https://unpkg.com/@phun-ky/speccer/dist/speccer.js"></script>
 <div data-speccer="mark" …>…</div>
 ```
 
 ### Programmatically
 
 ```typescript
-import { mark } from 'https://esm.sh/@phun-ky/speccer';
-import type {
-  SpeccerOptionsInterface,
-  SpeccerPositionType
-} from 'https://esm.sh/@phun-ky/speccer';
+import { mark } from '@phun-ky/speccer';
 
-const { create } = mark as {
-  create: (target: HTMLElement, options?: SpeccerOptionsInterface) => void;
-};
-const element = document.querySelector('…');
+const { create } = mark;
+const element = document.querySelector('.my-element');
 const options = {
   slug: 'markTest',
   type: 'mark'
 };
 await create(element, options);
 ```
+
+::: tip Feature options
+
+For more control over the feature options, you can view the available
+[settings in the reference section](/api/interfaces/SpeccerOptionsInterface#examples).
+
+:::

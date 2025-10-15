@@ -2,6 +2,8 @@
 
 ![Image of typography speccer](/speccer-typography-light.png)
 
+[[toc]]
+
 ::: info
 
 For more technical documentation, see the relevant documentation
@@ -13,34 +15,36 @@ This feature allows you to display typography details.
 
 ## Usage
 
-::: code-group
+### Via `<script>`-tag
 
 ```html [index.html]
+<script src="https://unpkg.com/@phun-ky/speccer/dist/speccer.js"></script>
 <p data-speccer="typography [left|right|top|bottom]" class="…">Some text</p>
 ```
 
-```typescript [main.ts]
-import { typography } from 'https://esm.sh/@phun-ky/speccer';
-import type {
-  SpeccerOptionsInterface,
-  SpeccerPositionType
-} from 'https://esm.sh/@phun-ky/speccer';
+### Programmatically
 
-const { create } = typography as {
-  create: (target: HTMLElement, options?: SpeccerOptionsInterface) => void;
-};
-const element = document.querySelector('…');
+```typescript [main.ts]
+import { typography } from '@phun-ky/speccer';
+
+const { create } = typography;
+const element = document.querySelector('.my-element');
 const options = {
   slug: 'typographyTest',
-  position: 'left' | 'top' | 'right' | 'bottom',
+  position: 'left', // or top, right or bottom
   type: 'typography'
 };
 await create(element, options);
 ```
 
-:::
-
 This will place a box to display typography information. Default is `left`.
+
+::: tip Feature options
+
+For more control over the feature options, you can view the available
+[settings in the reference section](/api/interfaces/SpeccerOptionsInterface#examples).
+
+:::
 
 ::: warning Important
 
@@ -52,30 +56,29 @@ This will place a box to display typography information. Default is `left`.
 
 ## Syntax Highlighting For Typography
 
+![Screenshot of typography with different syntax theme](/speccer-typography-syntax-light.png)
+
 If you want to produce a box that uses `pre` and `code` tags with support for
 syntax highlighting ([PrismJS](https://prismjs.com/) compatible), add `syntax`
 to the `data-speccer="typography"` attribute.
 
-::: code-group
+### Via `<script>`-tag
 
 ```html [index.html]
+<script src="https://unpkg.com/@phun-ky/speccer/dist/speccer.js"></script>
 <p data-speccer="typography syntax right" class="…">Some text</p>
 ```
 
-```typescript [main.ts]
-import { typography } from 'https://esm.sh/@phun-ky/speccer';
-import type {
-  SpeccerOptionsInterface,
-  SpeccerPositionType
-} from 'https://esm.sh/@phun-ky/speccer';
+### Programmatically
 
-const { create } = typography as {
-  create: (target: HTMLElement, options?: SpeccerOptionsInterface) => void;
-};
-const element = document.querySelector('…');
+```typescript [main.ts]
+import { typography } from '@phun-ky/speccer';
+
+const { create } = typography;
+const element = document.querySelector('.my-element');
 const options = {
   slug: 'typographyTest',
-  position: 'left' | 'top' | 'right' | 'bottom',
+  position: 'left', // or top, right or bottom
   type: 'typography',
   typography: {
     useSyntaxHighlighting: true
@@ -83,6 +86,11 @@ const options = {
 };
 await create(element, options);
 ```
+
+::: tip Feature options
+
+For more control over the feature options, you can view the available
+[settings in the reference section](/api/interfaces/SpeccerOptionsInterface#examples).
 
 :::
 
@@ -121,5 +129,3 @@ Here is an example with these colors and overrides:
   --ph-speccer-color-code-color-8: #ff6666;
 }
 ```
-
-![Screenshot of typography with different syntax theme](/speccer-typography-syntax-light.png)

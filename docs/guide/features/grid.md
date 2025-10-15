@@ -14,23 +14,20 @@ For more technical documentation, see the relevant documentation
 
 ## Usage
 
-::: code-group
+### Via `<script>`-tag
 
 ```html [index.html]
+<script src="https://unpkg.com/@phun-ky/speccer/dist/speccer.js"></script>
 <div data-speccer="grid" …>…</div>
 ```
 
-```typescript [main.ts]
-import { grid } from 'https://esm.sh/@phun-ky/speccer';
-import type {
-  SpeccerOptionsInterface,
-  SpeccerPositionType
-} from 'https://esm.sh/@phun-ky/speccer';
+### Programmatically
 
-const { create } = grid as {
-  create: (target: HTMLElement, options?: SpeccerOptionsInterface) => void;
-};
-const element = document.querySelector('…');
+```typescript [main.ts]
+import { grid } from '@phun-ky/speccer';
+
+const { create } = grid;
+const element = document.querySelector('.my-element');
 const options = {
   slug: 'gridTest',
   type: 'grid',
@@ -44,8 +41,6 @@ const options = {
 await create(element, options);
 ```
 
-:::
-
 ::: tip
 
 If you only want to display `rows` or `columns`, use this syntax (default is
@@ -53,21 +48,15 @@ both with `grid` only):
 
 ::: code-group
 
-```html [index.html]
+```html [via script-tag]
 <div data-speccer="grid [rows|columns]" …>…</div>
 ```
 
-```typescript [main.ts]
-import { grid } from 'https://esm.sh/@phun-ky/speccer';
-import type {
-  SpeccerOptionsInterface,
-  SpeccerPositionType
-} from 'https://esm.sh/@phun-ky/speccer';
+```typescript [programmatically]
+import { grid } from '@phun-ky/speccer';
 
-const { create } = grid as {
-  create: (target: HTMLElement, options?: SpeccerOptionsInterface) => void;
-};
-const element = document.querySelector('…');
+const { create } = grid;
+const element = document.querySelector('.my-element');
 const options = {
   slug: 'gridTest',
   type: 'grid',
@@ -80,6 +69,13 @@ const options = {
 };
 await create(element, options);
 ```
+
+:::
+
+::: tip Feature options
+
+For more control over the feature options, you can view the available
+[settings in the reference section](/api/interfaces/SpeccerOptionsInterface#examples).
 
 :::
 

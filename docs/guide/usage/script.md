@@ -5,8 +5,9 @@
 Place these `script` and `link` tags in your web page:
 
 ```html [index.html]
+<!-- Place this anywhere -->
 <link rel="stylesheet" href="../path/to/speccer.min.css" />
-<script src="../path/to/speccer.js"></script>
+<script data-manual src="../path/to/speccer.js"></script>
 
 <script>
   // exposed by the UMD build when using data-manual
@@ -21,7 +22,10 @@ Place these `script` and `link` tags in your web page:
   rel="stylesheet"
   href="https://unpkg.com/@phun-ky/speccer/dist/speccer.min.css"
 />
-<script src="https://unpkg.com/@phun-ky/speccer/dist/speccer.js"></script>
+<script
+  data-manual
+  src="https://unpkg.com/@phun-ky/speccer/dist/speccer.js"
+></script>
 
 <script>
   // exposed by the UMD build when using data-manual
