@@ -352,7 +352,7 @@ html.ph body {
   }
 }
 .ph .ph.reel {
-  background-image: url('https://phun-ky.net/img/speccer/speccer-showcase.jpeg');
+  background-image: url('/speccer-showcase.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 }
