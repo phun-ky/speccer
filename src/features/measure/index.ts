@@ -32,10 +32,10 @@
  * @packageDocumentation
  */
 /* eslint no-console:0 */
-/* node:coverage enable */
 import { MeasureAreaEnum } from '../../types/enums/area';
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { cx, set as setClassNames } from '../../utils/classnames';
+import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
 import { isElementHidden } from '../../utils/node';
@@ -43,7 +43,6 @@ import { getRec } from '../../utils/position';
 import { add as addStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
 
-/* node:coverage disable */
 /**
  * Create a measurement element with optional text, area, and element type.
  *
@@ -93,7 +92,7 @@ export const create = (
  * ![measure](/speccer-measure-right-full-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to match styles with.
- * @param {SpeccerOptionsInterface|undefined} [options] - Options.
+ * @param {SpeccerOptionsInterface} [options] - Options.
  * @returns {Promise<void>} - A promise that resolves after creating and styling the measurement element.
  *
  * @example
@@ -131,22 +130,18 @@ export const create = (
 /* node:coverage enable */
 export const measure = async (
   targetElement: HTMLElement,
-  options?: SpeccerOptionsInterface | undefined
+  options?: SpeccerOptionsInterface
 ): Promise<void> => {
   if (!targetElement) return;
 
   if (isElementHidden(targetElement)) return;
 
   const _areas_string: string =
-    targetElement.getAttribute('data-speccer') || '';
+    targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || 'measure';
 
   await waitForFrame();
 
-  const _options = getOptions(
-    _areas_string,
-    getComputedStyle(targetElement),
-    options
-  );
+  const _options = await getOptions(_areas_string, targetElement, options);
 
   if (_options.type !== 'measure' || !_options.measure) return;
 

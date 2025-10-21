@@ -6,8 +6,7 @@
 const grid: {
   create: (
     targetElement: HTMLElement,
-    styles: Partial<CSSStyleDeclaration>,
-    options: SpeccerOptionsInterface
+    options?: SpeccerOptionsInterface
   ) => Promise<void>;
   element: (
     targetElement: HTMLElement,
@@ -28,11 +27,8 @@ This feature will highlight the grid spacing in a `display: grid;` element.
 ### create()
 
 ```ts
-create: (
-  targetElement: HTMLElement,
-  styles: Partial<CSSStyleDeclaration>,
-  options: SpeccerOptionsInterface
-) => (Promise<void> = gridCreate);
+create: (targetElement: HTMLElement, options?: SpeccerOptionsInterface) =>
+  (Promise<void> = gridCreate);
 ```
 
 Creates a visual grid overlay for a given target element.
@@ -45,13 +41,7 @@ Creates a visual grid overlay for a given target element.
 
 The target element to create the grid overlay for.
 
-##### styles
-
-[`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)<[`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration)>
-
-The computed styles of the target element.
-
-##### options
+##### options?
 
 [`SpeccerOptionsInterface`](../interfaces/SpeccerOptionsInterface.md)
 
@@ -66,8 +56,7 @@ Options to determine what to draw
 ```ts
 const targetElement = document.getElementById('target');
 if (targetElement) {
-  const styles = window.getComputedStyle(targetElement);
-  await create(targetElement, styles);
+  await create(targetElement);
 }
 ```
 
