@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.6](https://github.com/phun-ky/speccer/compare/v11.3.5...v11.3.6) (2025-10-28)
+
+### Tasks
+
+* 🤖 bump vite in the npm_and_yarn group across 1 directory ([c3c07e6](https://github.com/phun-ky/speccer/commit/c3c07e6dbfd91c13dadeda146a112064df438850))
+
 ## [11.3.5](https://github.com/phun-ky/speccer/compare/v11.3.4...v11.3.5) (2025-10-28)
 
 ### Tasks
