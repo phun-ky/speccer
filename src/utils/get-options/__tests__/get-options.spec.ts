@@ -4,14 +4,15 @@ import { describe, it } from 'node:test';
 import { getOptions } from '..';
 
 describe('getOptions', () => {
-  const mockTargetStyle = {} as CSSStyleDeclaration;
+  const mockTargetElement = document.createElement('div');
+  document.body.appendChild(mockTargetElement);
 
-  it('should return options for a pin type', () => {
+  it('should return options for a pin type', async () => {
     const areaString = 'pin';
-    const options = getOptions(areaString, mockTargetStyle);
+    const options = await getOptions(areaString, mockTargetElement);
 
     assert.deepEqual(options, {
-      slug: 'pin', // Assuming camelCase('pin') returns 'pin'
+      slug: 'pin',
       position: 'top',
       type: 'pin',
       pin: {
@@ -26,12 +27,12 @@ describe('getOptions', () => {
     });
   });
 
-  it('should return options for a measure type', () => {
+  it('should return options for a measure type', async () => {
     const areaString = 'measure';
-    const options = getOptions(areaString, mockTargetStyle);
+    const options = await getOptions(areaString, mockTargetElement);
 
     assert.deepEqual(options, {
-      slug: 'measure', // Assuming camelCase('measure') returns 'measure'
+      slug: 'measure',
       position: 'top',
       type: 'measure',
       measure: {
@@ -42,12 +43,12 @@ describe('getOptions', () => {
     });
   });
 
-  it('should return options for a typography type', () => {
+  it('should return options for a typography type', async () => {
     const areaString = 'typography';
-    const options = getOptions(areaString, mockTargetStyle);
+    const options = await getOptions(areaString, mockTargetElement);
 
     assert.deepEqual(options, {
-      slug: 'typography', // Assuming camelCase('typography') returns 'typography'
+      slug: 'typography',
       position: 'top',
       type: 'typography',
       typography: {
@@ -56,15 +57,14 @@ describe('getOptions', () => {
     });
   });
 
-  it('should return options for a grid type with columns', () => {
+  it('should return options for a grid type with columns', async () => {
     const areaString = 'grid columns';
-    const options = getOptions(areaString, {
-      ...mockTargetStyle,
-      display: 'grid'
-    });
+    mockTargetElement.style.setProperty('display', 'grid');
+    mockTargetElement.style.display = 'grid';
+    const options = await getOptions(areaString, mockTargetElement);
 
     assert.deepEqual(options, {
-      slug: 'gridColumns', // Assuming camelCase('grid columns') returns 'gridColumns'
+      slug: 'gridColumns',
       position: 'top',
       type: 'grid',
       grid: {
@@ -76,15 +76,14 @@ describe('getOptions', () => {
     });
   });
 
-  it('should return options for a grid type with rows', () => {
+  it('should return options for a grid type with rows', async () => {
     const areaString = 'grid rows';
-    const options = getOptions(areaString, {
-      ...mockTargetStyle,
-      display: 'grid'
-    });
+    mockTargetElement.style.setProperty('display', 'grid');
+    mockTargetElement.style.display = 'grid';
+    const options = await getOptions(areaString, mockTargetElement);
 
     assert.deepEqual(options, {
-      slug: 'gridRows', // Assuming camelCase('grid rows') returns 'gridRows'
+      slug: 'gridRows',
       position: 'top',
       type: 'grid',
       grid: {
@@ -96,15 +95,14 @@ describe('getOptions', () => {
     });
   });
 
-  it('should default to toggle both if no specific grid type is provided', () => {
+  it('should default to toggle both if no specific grid type is provided', async () => {
     const areaString = 'grid';
-    const options = getOptions(areaString, {
-      ...mockTargetStyle,
-      display: 'grid'
-    });
+    mockTargetElement.style.setProperty('display', 'grid');
+    mockTargetElement.style.display = 'grid';
+    const options = await getOptions(areaString, mockTargetElement);
 
     assert.deepEqual(options, {
-      slug: 'grid', // Assuming camelCase('grid') returns 'grid'
+      slug: 'grid',
       position: 'top',
       type: 'grid',
       grid: {

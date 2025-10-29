@@ -19,13 +19,15 @@
  * @packageDocumentation
  */
 
-/* node:coverage enable */
 export { createPinElement } from './utils/create-pin-element';
 
 export { pinElement } from './utils/pin-element';
 
 import { SpeccerOptionsInterface } from '../../types/speccer';
-import { SPECCER_LITERALS } from '../../utils/constants';
+import {
+  SPECCER_DATA_ATTRIBUTE,
+  SPECCER_LITERALS
+} from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { isElementHidden } from '../../utils/node';
 import { waitForFrame } from '../../utils/wait';
@@ -34,12 +36,11 @@ import { getCharacterToUse } from './utils/get-character-to-use';
 import { getContentForPin } from './utils/get-content-for-pin';
 import { pinElement } from './utils/pin-element';
 
-/* node:coverage disable */
 /**
  * Create pinned elements based on the section element and its data-speccer attributes.
  *
  * @param {HTMLElement} sectionElement - The section element containing pinned elements.
- * @param {SpeccerOptionsInterface|undefined} [options] - Options.
+ * @param {SpeccerOptionsInterface} [options] - Options.
  * @returns {Promise<void>} - A promise that resolves after creating pinned elements.
  *
  * @example
@@ -51,7 +52,7 @@ import { pinElement } from './utils/pin-element';
 /* node:coverage enable */
 export const pinElements = async (
   sectionElement: HTMLElement,
-  options?: SpeccerOptionsInterface | undefined
+  options?: SpeccerOptionsInterface
 ): Promise<void> => {
   if (!sectionElement) return;
 
@@ -76,12 +77,16 @@ export const pinElements = async (
         targetIndex: number
       ): Promise<void> => {
         const _symbol = getCharacterToUse(targetIndex, _literals_to_use);
-        const _areas_string = targetElement.getAttribute('data-speccer') || '';
+        const _areas_string =
+          targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || '';
 
         await waitForFrame();
 
-        const _target_style = getComputedStyle(targetElement);
-        const _options = getOptions(_areas_string, _target_style, options);
+        const _options = await getOptions(
+          _areas_string,
+          targetElement,
+          options
+        );
         const _content = getContentForPin(_symbol, targetElement, _options);
 
         await pinElement(targetElement, sectionElement, _content, _options);

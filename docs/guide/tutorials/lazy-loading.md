@@ -10,7 +10,7 @@ If you're importing **SPECCER** instead of with a script tag, you can use the
 following approach to apply lazy loading:
 
 ```javascript
-import { pin } from 'https://esm.sh/@phun-ky/speccer';
+import { pin } from '@phun-ky/speccer';
 
 const { pinElements } = pin;
 /**

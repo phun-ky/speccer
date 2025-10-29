@@ -26,6 +26,7 @@
 /* node:coverage enable */
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { cx, set as setClassNames } from '../../utils/classnames';
+import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import {
   getSpacing,
   getClassNameFromCSSProperty,
@@ -74,7 +75,7 @@ export const create = (
  * ![spacing](/speccer-spacing-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to create spacing elements for.
- * @param {SpeccerOptionsInterface|undefined} [options] - Options
+ * @param {SpeccerOptionsInterface} [options] - Options
  * @returns {Promise<void>} - A promise that resolves after creating and positioning the spacing elements.
  *
  * @example
@@ -118,16 +119,16 @@ export const create = (
 /* node:coverage enable */
 export const spacing = async (
   targetElement: HTMLElement,
-  options?: SpeccerOptionsInterface | undefined
+  options?: SpeccerOptionsInterface
 ): Promise<void> => {
   if (!targetElement) return;
 
   if (isElementHidden(targetElement)) return;
 
   const _areas_string: string =
-    targetElement.getAttribute('data-speccer') || '';
+    targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || '';
   const _target_styles = await getStyles(targetElement);
-  const _options = getOptions(_areas_string, _target_styles, options);
+  const _options = await getOptions(_areas_string, targetElement, options);
 
   if (_options.type !== 'spacing' || !_options.spacing) return;
 
