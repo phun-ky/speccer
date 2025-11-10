@@ -1,26 +1,32 @@
 # Getting Started
 
+[[toc]]
+
 ## See it in action online
 
 You can see it in action at [CodePen](https://codepen.io/phun-ky/full/OJejexN).
 
 ## Installation
 
-### Prerequisites for package install
+You do not have to install **SPECCER** to use it, you can use it via
+[UNPKG](https://unpkg.com/) or put it directly in your own files for more
+control. See the
+[example under `script-module.html`](/guide/usage/import#import) or
+[usage with `script`-tag](/guide/usage/script).
 
-- [Node.js](https://nodejs.org/) version 22.9.0 or higher
-- npm version 11.0.0 or higher
-
-::: info
+::: tip
 
 **SPECCER** is both an ESM package and a UMD package. It can be used with
 `import`, `required` and directly in a browser.
 
 :::
 
-You do not have to install **SPECCER** to use it, you can use it via
-[UNPKG](https://unpkg.com/) or put it directly in your own files for more
-control. To use it as a package, install it with:
+### Prerequisites for package install
+
+- [Node.js](https://nodejs.org/) version 22.9.0 or higher
+- npm version 11.0.0 or higher
+
+To use it as a dependency, install it with:
 
 ::: code-group
 
@@ -32,41 +38,25 @@ npm i --save @phun-ky/speccer
 yarn add @phun-ky/speccer
 ```
 
-```html [browser]
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/@phun-ky/speccer/dist/speccer.min.css"
-/>
-<script src="https://unpkg.com/@phun-ky/speccer/dist/speccer.js"></script>
-```
-
 :::
-
-If you're using the script tag and have the marked elements ready (see below),
-you do not need to do anything, but if you want to control **SPECCER** a bit
-more, you have some options. Apply one of these attributes to the script element
-for different types of initialization:
-
-```html [index.html]
-<script
-  src="https://unpkg.com/@phun-ky/speccer/dist/speccer.js"
-  data-[manual|instant|dom|lazy]
-></script>
-```
-
-| Tag            | Description                                                         |
-| -------------- | ------------------------------------------------------------------- |
-| `data-manual`  | Makes `window.speccer()` available to be used when you feel like it |
-| `data-instant` | fires off `speccer()` right away                                    |
-| `data-dom`     | Waits for `DOMContentLoaded`                                        |
-| `data-lazy`    | Lazy loads `speccer()` per specced element                          |
-
-If no attribute is applied, it will default to `data-dom`, as in, it will
-initialize when `DOMContentLoaded` is fired.
 
 ## Quick Usage
 
+::: warning
+
+This approach requires the usage of the `data-speccer="*"` attributes in your
+generated HTML. If you want more control, follow
+[the approach here](/guide/tutorials/add-pins-on-click).
+
+:::
+
 Mark the elements in the html that you want to use **SPECCER** width, like:
+
+::: tip
+
+The properties in brackets ( `[]` ) means that it is optional!
+
+:::
 
 ::: code-group
 

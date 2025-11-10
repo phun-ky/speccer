@@ -20,11 +20,11 @@ pinElement(el, el.parentElement, '🥰', options);
 :::
 
 ```typescript
-import { pin } from 'https://esm.sh/@phun-ky/speccer';
+import { pin } from '@phun-ky/speccer';
 import type {
   SpeccerOptionsInterface,
   SpeccerPositionType
-} from 'https://esm.sh/@phun-ky/speccer';
+} from '@phun-ky/speccer';
 
 const { pinElement } = pin as {
   pinElement: (

@@ -293,7 +293,8 @@ const speccer = () => {
       const _child_spacing_elements = el.querySelectorAll(
         '*:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody):not([data-speccer])'
       );
-      const _areas_string: string = el.getAttribute('data-speccer') || '';
+      const _areas_string: string =
+        el.getAttribute(SPECCER_DATA_ATTRIBUTE) || '';
 
       if (_child_spacing_elements?.length) {
         for (const childEl of _child_spacing_elements) {

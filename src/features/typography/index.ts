@@ -33,19 +33,18 @@
  * @packageDocumentation
  */
 /* eslint no-console:0 */
-/* node:coverage enable */
+
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { set as setClassNames, cx } from '../../utils/classnames';
+import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
 import { isElementHidden } from '../../utils/node';
 import { add as addStyles } from '../../utils/styles';
-import { waitForFrame } from '../../utils/wait';
 
 import { position } from './utils/position';
 import { template } from './utils/template';
 
-/* node:coverage disable */
 /**
  * Create a DOM element with provided HTML and optional CSS class names.
  *
@@ -92,7 +91,7 @@ export const create = (
  * ![typography](/speccer-typography-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to specc typography for.
- * @param {SpeccerOptionsInterface|undefined} [options] - Custom options
+ * @param {SpeccerOptionsInterface} [options] - Custom options
  * @returns {Promise<void>} - A promise that resolves once typography element is created and positioned.
  *
  * @example
@@ -126,22 +125,16 @@ export const create = (
 /* node:coverage enable */
 export const typography = async (
   targetElement: HTMLElement,
-  options?: SpeccerOptionsInterface | undefined
+  options?: SpeccerOptionsInterface
 ): Promise<void> => {
   if (!targetElement) return;
 
   if (isElementHidden(targetElement)) return;
 
   const _areas_string: string =
-    targetElement.getAttribute('data-speccer') || '';
+    targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || '';
 
-  await waitForFrame();
-
-  const _options = getOptions(
-    _areas_string,
-    getComputedStyle(targetElement),
-    options
-  );
+  const _options = await getOptions(_areas_string, targetElement, options);
 
   if (_options.type !== 'typography' || !_options.typography) return;
 
