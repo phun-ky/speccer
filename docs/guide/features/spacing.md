@@ -5,6 +5,8 @@
 This feature allows you to display the spacing properties of an element or the
 element and all of its children.
 
+[[toc]]
+
 ::: info
 
 For more technical documentation, see the relevant documentation
@@ -42,27 +44,22 @@ export const SPECCER_TAGS_TO_AVOID: string[] = [
 
 ## Usage
 
-### In the HTML
+### Via `<script>`-tag
 
 Use the following attribute to display element padding and margin:
 
 ```html
+<script src="https://unpkg.com/@phun-ky/speccer/dist/speccer.js"></script>
 <div data-speccer="spacing [padding|margin] [bound]" class="…"></div>
 ```
 
 ### Programmatically
 
 ```typescript
-import { spacing } from 'https://esm.sh/@phun-ky/speccer';
-import type {
-  SpeccerOptionsInterface,
-  SpeccerPositionType
-} from 'https://esm.sh/@phun-ky/speccer';
+import { spacing } from '@phun-ky/speccer';
 
-const { create } = spacing as {
-  create: (target: HTMLElement, options?: SpeccerOptionsInterface) => void;
-};
-const element = document.querySelector('…');
+const { create } = spacing;
+const element = document.querySelector('.my-element');
 const options = {
   slug: 'spacingTest',
   type: 'spacing',
@@ -77,7 +74,14 @@ await create(element, options);
 ```
 
 This will display the element _and all of it's children_ padding and margin,
-unless you specify `padding` and `margin`
+unless you specify `padding` and `margin`.
+
+::: tip Feature options
+
+For more control over the feature options, you can view the available
+[settings in the reference section](/api/interfaces/SpeccerOptionsInterface#examples).
+
+:::
 
 ![Image of the spacing feature in dark mode](/speccer-spacing-dark.png)
 
@@ -88,23 +92,20 @@ unless you specify `padding` and `margin`
 This option binds the speccer elements to the bounds of the element container.
 Suitable for more dense layouts.
 
-::: code-group
+### Via `<script>`-tag
 
 ```html [index.html]
+<script src="https://unpkg.com/@phun-ky/speccer/dist/speccer.js"></script>
 <div data-speccer="spacing bound" class="…"></div>
 ```
 
-```typescript [main.ts]
-import { spacing } from 'https://esm.sh/@phun-ky/speccer';
-import type {
-  SpeccerOptionsInterface,
-  SpeccerPositionType
-} from 'https://esm.sh/@phun-ky/speccer';
+### Programmatically
 
-const { create } = spacing as {
-  create: (target: HTMLElement, options?: SpeccerOptionsInterface) => void;
-};
-const element = document.querySelector('…');
+```typescript [main.ts]
+import { spacing } from '@phun-ky/speccer';
+
+const { create } = spacing;
+const element = document.querySelector('.my-element');
 const options = {
   slug: 'spacingTest',
   type: 'spacing',
@@ -114,5 +115,3 @@ const options = {
 };
 await create(element, options);
 ```
-
-:::
