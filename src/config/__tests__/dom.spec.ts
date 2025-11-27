@@ -7,7 +7,7 @@ describe('dom', () => {
   const addEventListener = document.addEventListener;
 
   let mockReadySate = 'complete';
-  let eventListenerMock;
+  let eventListenerMock: it.Mock<(event: any, callback: any) => any>;
 
   before(() => {
     Object.defineProperty(document, 'readyState', {

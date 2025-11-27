@@ -29,9 +29,9 @@ import {
  * and assigns the relevant properties accordingly. It merges custom options if provided.
  *
  * @param {string} areaString - The string defining the area type.
- * @param {Partial<CSSStyleDeclaration>} targetStyle - The computed style of the target element.
+ * @param {HTMLElement} [targetElement] - The target element.
  * @param {SpeccerOptionsInterface} [customOptions] - Optional custom options to override defaults.
- * @returns {SpeccerOptionsInterface} The generated Speccer options object.
+ * @returns {Promise<SpeccerOptionsInterface>} The generated Speccer options object.
  *
  * @example
  * ```ts
@@ -47,12 +47,13 @@ import {
  * ```
  */
 /* node:coverage enable */
-export const getOptions = (
+export const getOptions = async (
   areaString: string,
-  targetStyle: Partial<CSSStyleDeclaration>,
-  customOptions?: SpeccerOptionsInterface | undefined
-): SpeccerOptionsInterface => {
-  const type = getFeatureBasedOnArea(areaString, targetStyle);
+  targetElement: HTMLElement,
+  customOptions?: SpeccerOptionsInterface
+): Promise<SpeccerOptionsInterface> => {
+  const type = await getFeatureBasedOnArea(areaString, targetElement);
+
   const options: SpeccerOptionsInterface = {
     slug: camelCase(areaString),
     position: getPositionBasedOnArea(areaString),

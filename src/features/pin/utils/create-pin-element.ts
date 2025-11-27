@@ -1,7 +1,7 @@
+/* node:coverage disable */
 import { SpeccerOptionsInterface } from '../../../types/speccer';
 import { set as setClassNames, cx } from '../../../utils/classnames';
 
-/* node:coverage disable */
 /**
  * Create a pin element with optional content, area description, and element type.
  *
