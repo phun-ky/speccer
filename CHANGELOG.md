@@ -1,5 +1,14 @@
 # Changelog
 
+## [11.3.17](///compare/v11.3.16...v11.3.17) (2025-12-03)
+
+### Bug Fixes
+
+* 🐛 Make sure we can use `checkVisibility` in older envs 89b388c
+* 🐛 Make sure we have default options 246c008, closes #365
+* 🐛 No need to call `getBoundingClientRect` twice 8be077e
+* 🐛 Use correct types defe3ed
+
 ## [11.3.16](///compare/v11.3.15...v11.3.16) (2025-12-02)
 
 ## [11.3.15](///compare/v11.3.14...v11.3.15) (2025-12-02)
