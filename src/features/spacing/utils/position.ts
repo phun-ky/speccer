@@ -9,7 +9,7 @@ import { waitForFrame } from '../../../utils/wait';
  * @param {string} property - The CSS property to set (e.g., 'marginTop', 'marginLeft', etc.).
  * @param {number} value - The value of the CSS property.
  * @param {HTMLElement} targetElement - The target element.
- * @param {SpeccerOptionsInterface|undefined} [options] - Options.
+ * @param {SpeccerOptionsInterface} [options] - Options.
  * @returns {Promise<PositionUnitPropertiesType|undefined>} - A promise that resolves after setting the position and dimensions.
  *
  * @example
@@ -22,7 +22,7 @@ export const position = async (
   property: string,
   value: number,
   targetElement: HTMLElement,
-  options?: SpeccerOptionsInterface | undefined
+  options?: SpeccerOptionsInterface
 ): Promise<PositionUnitPropertiesType | undefined> => {
   await waitForFrame();
 

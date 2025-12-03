@@ -5,6 +5,14 @@ with other libraries or frameworks, like React!
 
 ## useEffect
 
+::: warning
+
+This approach requires the usage of the `data-speccer="*"` attributes. If you
+want more control, follow
+[the approach here](/guide/tutorials/add-pins-on-click).
+
+:::
+
 If you use React, you can use an effect like this:
 
 ```javascript [Component.jsx]

@@ -20,7 +20,11 @@ import { isNotString } from './typeof';
  * set(element, 'class1 class2');
  * ```
  */
-export const set = (el: HTMLElement, cls: string, avoid = 'noop'): void => {
+export const set = (
+  el: HTMLElement,
+  cls: string,
+  avoid: string = 'noop'
+): void => {
   if (!el) return;
 
   if (!cls || (cls && !cls.length)) return;
@@ -49,7 +53,11 @@ export const set = (el: HTMLElement, cls: string, avoid = 'noop'): void => {
  * toggle(element, 'class1 class2');
  * ```
  */
-export const toggle = (el: HTMLElement, cls: string, avoid = 'noop') => {
+export const toggle = (
+  el: HTMLElement,
+  cls: string,
+  avoid: string = 'noop'
+): void => {
   if (!el) return;
 
   if (!cls || (cls && !cls.length)) return;
@@ -76,7 +84,11 @@ export const toggle = (el: HTMLElement, cls: string, avoid = 'noop') => {
  * remove(element, 'class1 class2');
  * ```
  */
-export const remove = (el: HTMLElement, cls: string, avoid = 'noop') => {
+export const remove = (
+  el: HTMLElement,
+  cls: string,
+  avoid: string = 'noop'
+): void => {
   if (!el) return;
 
   if (!cls || (cls && !cls.length)) return;

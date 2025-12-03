@@ -212,7 +212,8 @@ html.ph body {
     background-color: var(--ph-color-background-notice-note);
   }
 
-  &.error {
+  &.error,
+  &.danger {
     background-color: var(--ph-color-background-notice-error);
   }
 
@@ -351,7 +352,7 @@ html.ph body {
   }
 }
 .ph .ph.reel {
-  background-image: url('https://phun-ky.net/img/speccer/speccer-showcase.jpeg');
+  background-image: url('/speccer-showcase.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -387,4 +388,8 @@ html.ph body {
   .ph .vp-doc .vp-code-block-title-bar {
     margin: 16px 0 0;
   }
+}
+
+.ph .vp-code-group {
+  margin-top: 1rem;
 }

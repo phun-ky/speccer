@@ -77,7 +77,7 @@ export const getClassNameFromCSSProperty = (property: string): string => {
  * Extracts spacing-related CSS properties from a style object.
  *
  * @param {SpacingCSSPropertiesType} style - The style object.
- * @param {SpeccerOptionsInterface|undefined} [options] - Options
+ * @param {SpeccerOptionsInterface} [options] - Options
  * @returns {SpacingCSSPropertiesType} - The extracted spacing-related properties.
  *
  * @example
@@ -92,7 +92,7 @@ export const getClassNameFromCSSProperty = (property: string): string => {
  */
 export const getSpacing = (
   style: SpacingCSSPropertiesType,
-  options?: SpeccerOptionsInterface | undefined
+  options?: SpeccerOptionsInterface
 ): SpacingCSSPropertiesType => {
   const {
     marginTop,

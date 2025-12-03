@@ -13,17 +13,18 @@ describe('position', () => {
       '<!DOCTYPE html><body><div id="target"></div></body>'
     );
     const document = window.document;
-    const targetElement = document.getElementById('target');
+    const targetElement = document.getElementById('target') as HTMLElement;
 
     // Mock getBoundingClientRect
-    targetElement.getBoundingClientRect = () => ({
-      width: 100,
-      height: 50,
-      left: 10,
-      top: 20,
-      right: 110,
-      bottom: 70
-    });
+    targetElement.getBoundingClientRect = () =>
+      ({
+        width: 100,
+        height: 50,
+        left: 10,
+        top: 20,
+        right: 110,
+        bottom: 70
+      }) as unknown as DOMRect;
 
     const result = await position('marginTop', 20, targetElement);
 
@@ -40,16 +41,17 @@ describe('position', () => {
       '<!DOCTYPE html><body><div id="target"></div></body>'
     );
     const document = window.document;
-    const targetElement = document.getElementById('target');
+    const targetElement = document.getElementById('target') as HTMLElement;
 
-    targetElement.getBoundingClientRect = () => ({
-      width: 100,
-      height: 50,
-      left: 10,
-      top: 20,
-      right: 110,
-      bottom: 70
-    });
+    targetElement.getBoundingClientRect = () =>
+      ({
+        width: 100,
+        height: 50,
+        left: 10,
+        top: 20,
+        right: 110,
+        bottom: 70
+      }) as unknown as DOMRect;
 
     const result = await position('marginRight', 20, targetElement);
 
@@ -66,16 +68,17 @@ describe('position', () => {
       '<!DOCTYPE html><body><div id="target"></div></body>'
     );
     const document = window.document;
-    const targetElement = document.getElementById('target');
+    const targetElement = document.getElementById('target') as HTMLElement;
 
-    targetElement.getBoundingClientRect = () => ({
-      width: 100,
-      height: 50,
-      left: 10,
-      top: 20,
-      right: 110,
-      bottom: 70
-    });
+    targetElement.getBoundingClientRect = () =>
+      ({
+        width: 100,
+        height: 50,
+        left: 10,
+        top: 20,
+        right: 110,
+        bottom: 70
+      }) as unknown as DOMRect;
 
     const result = await position('marginBottom', 30, targetElement, {
       spacing: { bound: true }
@@ -94,16 +97,17 @@ describe('position', () => {
       '<!DOCTYPE html><body><div id="target"></div></body>'
     );
     const document = window.document;
-    const targetElement = document.getElementById('target');
+    const targetElement = document.getElementById('target') as HTMLElement;
 
-    targetElement.getBoundingClientRect = () => ({
-      width: 100,
-      height: 50,
-      left: 10,
-      top: 20,
-      right: 110,
-      bottom: 70
-    });
+    targetElement.getBoundingClientRect = () =>
+      ({
+        width: 100,
+        height: 50,
+        left: 10,
+        top: 20,
+        right: 110,
+        bottom: 70
+      }) as unknown as DOMRect;
 
     const result = await position('unsupportedProperty', 20, targetElement);
 
@@ -115,16 +119,17 @@ describe('position', () => {
       '<!DOCTYPE html><body><div id="target"></div></body>'
     );
     const document = window.document;
-    const targetElement = document.getElementById('target');
+    const targetElement = document.getElementById('target') as HTMLElement;
 
-    targetElement.getBoundingClientRect = () => ({
-      width: 100,
-      height: 50,
-      left: 10,
-      top: 20,
-      right: 110,
-      bottom: 70
-    });
+    targetElement.getBoundingClientRect = () =>
+      ({
+        width: 100,
+        height: 50,
+        left: 10,
+        top: 20,
+        right: 110,
+        bottom: 70
+      }) as unknown as DOMRect;
 
     const result = await position('marginLeft', 20, targetElement);
 
@@ -141,16 +146,17 @@ describe('position', () => {
       '<!DOCTYPE html><body><div id="target"></div></body>'
     );
     const document = window.document;
-    const targetElement = document.getElementById('target');
+    const targetElement = document.getElementById('target') as HTMLElement;
 
-    targetElement.getBoundingClientRect = () => ({
-      width: 100,
-      height: 50,
-      left: 10,
-      top: 20,
-      right: 110,
-      bottom: 70
-    });
+    targetElement.getBoundingClientRect = () =>
+      ({
+        width: 100,
+        height: 50,
+        left: 10,
+        top: 20,
+        right: 110,
+        bottom: 70
+      }) as DOMRect;
 
     const result = await position('paddingTop', 30, targetElement);
 
@@ -167,16 +173,17 @@ describe('position', () => {
       '<!DOCTYPE html><body><div id="target"></div></body>'
     );
     const document = window.document;
-    const targetElement = document.getElementById('target');
+    const targetElement = document.getElementById('target') as HTMLElement;
 
-    targetElement.getBoundingClientRect = () => ({
-      width: 100,
-      height: 50,
-      left: 10,
-      top: 20,
-      right: 110,
-      bottom: 70
-    });
+    targetElement.getBoundingClientRect = () =>
+      ({
+        width: 100,
+        height: 50,
+        left: 10,
+        top: 20,
+        right: 110,
+        bottom: 70
+      }) as DOMRect;
 
     const result = await position('paddingBottom', 30, targetElement, {
       spacing: { bound: true }
@@ -195,16 +202,17 @@ describe('position', () => {
       '<!DOCTYPE html><body><div id="target"></div></body>'
     );
     const document = window.document;
-    const targetElement = document.getElementById('target');
+    const targetElement = document.getElementById('target') as HTMLElement;
 
-    targetElement.getBoundingClientRect = () => ({
-      width: 100,
-      height: 50,
-      left: 10,
-      top: 20,
-      right: 110,
-      bottom: 70
-    });
+    targetElement.getBoundingClientRect = () =>
+      ({
+        width: 100,
+        height: 50,
+        left: 10,
+        top: 20,
+        right: 110,
+        bottom: 70
+      }) as DOMRect;
 
     const result = await position('paddingRight', 40, targetElement);
 
@@ -221,16 +229,17 @@ describe('position', () => {
       '<!DOCTYPE html><body><div id="target"></div></body>'
     );
     const document = window.document;
-    const targetElement = document.getElementById('target');
+    const targetElement = document.getElementById('target') as HTMLElement;
 
-    targetElement.getBoundingClientRect = () => ({
-      width: 100,
-      height: 50,
-      left: 10,
-      top: 20,
-      right: 110,
-      bottom: 70
-    });
+    targetElement.getBoundingClientRect = () =>
+      ({
+        width: 100,
+        height: 50,
+        left: 10,
+        top: 20,
+        right: 110,
+        bottom: 70
+      }) as DOMRect;
 
     const result = await position('paddingLeft', 40, targetElement);
 
@@ -247,16 +256,17 @@ describe('position', () => {
       '<!DOCTYPE html><body><div id="target"></div></body>'
     );
     const document = window.document;
-    const targetElement = document.getElementById('target');
+    const targetElement = document.getElementById('target') as HTMLElement;
 
-    targetElement.getBoundingClientRect = () => ({
-      width: 100,
-      height: 50,
-      left: 10,
-      top: 20,
-      right: 110,
-      bottom: 70
-    });
+    targetElement.getBoundingClientRect = () =>
+      ({
+        width: 100,
+        height: 50,
+        left: 10,
+        top: 20,
+        right: 110,
+        bottom: 70
+      }) as DOMRect;
 
     const result = await position('paddingTop', 30, targetElement, {
       spacing: { bound: true }

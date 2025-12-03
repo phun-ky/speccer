@@ -15,7 +15,7 @@ const pin: {
     parentElement: HTMLElement,
     content: string,
     options: SpeccerOptionsInterface
-  ) => Promise<string | undefined>;
+  ) => Promise<undefined | string>;
   pinElements: (
     sectionElement: HTMLElement,
     options?: SpeccerOptionsInterface
@@ -95,7 +95,7 @@ pinElement: (
   parentElement: HTMLElement,
   content: string,
   options: SpeccerOptionsInterface
-) => Promise<string | undefined>;
+) => Promise<undefined | string>;
 ```
 
 Create and style the pin element as needed.
@@ -132,8 +132,8 @@ options
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`string`
-| `undefined`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`undefined`
+| `string`>
 
 A promise that resolves to the id of the pin element when the process is
 completed, or `void` if required input is invalid.

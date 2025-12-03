@@ -1,13 +1,16 @@
 /* eslint no-console:0 */
+/* node:coverage disable */
 import { isBoolean, isNumber, isString } from './typeof';
 import { waitForFrame } from './wait';
 
-/* node:coverage disable */
+type InternalStyleKeyType = Exclude<keyof CSSStyleDeclaration, number>;
+type InternalStyleValueType = string | number;
+
 /**
  * Adds CSS styles to an HTMLElement.
  *
  * @param {HTMLElement} el - The HTMLElement to apply styles to.
- * @param {object | { key: string; value: string }[]} styles - An object or an array of objects containing CSS styles to apply.
+ * @param {Partial<CSSStyleDeclaration> | { key: string; value: CSSStyleValue }[]} styles - An object or an array of objects containing CSS styles to apply.
  * @returns {Promise<void>} - A Promise that resolves after styles are applied.
  *
  * @example
@@ -27,7 +30,9 @@ import { waitForFrame } from './wait';
 /* node:coverage enable */
 export const add = async (
   el: HTMLElement,
-  styles: object | { key: string; value: string }[]
+  styles:
+    | Partial<CSSStyleDeclaration>
+    | { key: InternalStyleKeyType; value: InternalStyleValueType }[]
 ): Promise<void> => {
   if (
     !el ||

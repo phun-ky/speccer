@@ -7,7 +7,7 @@ import { MockedFunction } from '../../../../types/tests.js';
 
 describe('template', () => {
   let document: typeof window.document;
-  let targetElement;
+  let targetElement: HTMLElement;
 
   beforeEach(() => {
     const { window } = new JSDOM(
@@ -15,7 +15,7 @@ describe('template', () => {
     );
     global.document = window.document;
     document = window.document;
-    targetElement = document.getElementById('target');
+    targetElement = document.getElementById('target') as HTMLElement;
   });
 
   it('should return correct typography HTML without highlighting', async (test) => {

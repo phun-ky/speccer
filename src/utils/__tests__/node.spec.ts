@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 
-import { after, removeAll } from '../node';
+import { after, isElementHidden, removeAll } from '../node';
 
 describe('node', () => {
   describe('after', () => {
@@ -75,6 +75,205 @@ describe('node', () => {
 
       // Clean up by removing the remaining element
       document.body.removeChild(element2);
+    });
+  });
+
+  describe('isElementHidden', () => {
+    // Helper: create a fake HTMLElement with a fake window + getComputedStyle
+    const createElementWithComputedStyle = (
+      style: Partial<{
+        display: string;
+        visibility: string;
+        opacity: string;
+      }> | null
+    ): HTMLElement => {
+      const fakeWindow = {
+        getComputedStyle: () => style as any
+      };
+
+      const fakeDocument = {
+        defaultView: fakeWindow
+      };
+
+      const element = {
+        ownerDocument: fakeDocument
+      } as any as HTMLElement;
+
+      return element;
+    };
+
+    describe('isElementHidden', () => {
+      it('uses checkVisibility when available and returns the inverse of its value (visible -> false)', () => {
+        let receivedOptions: Record<string, boolean> | undefined;
+
+        const element = {
+          ownerDocument: {
+            defaultView: {
+              getComputedStyle: () => ({
+                display: 'none',
+                visibility: 'hidden',
+                opacity: '0'
+              })
+            }
+          },
+          checkVisibility: (options?: Record<string, boolean>) => {
+            receivedOptions = options;
+            return true; // element is visible according to native API
+          }
+        } as any as HTMLElement;
+
+        const result = isElementHidden(element);
+
+        assert.equal(
+          result,
+          false,
+          'should return false when checkVisibility returns true'
+        );
+        assert.deepEqual(receivedOptions, {
+          opacityProperty: true,
+          checkVisibilityCSS: true
+        });
+      });
+
+      it('uses checkVisibility when available and returns the inverse of its value (hidden -> true)', () => {
+        const element = {
+          ownerDocument: {
+            defaultView: {
+              getComputedStyle: () => ({
+                display: 'block',
+                visibility: 'visible',
+                opacity: '1'
+              })
+            }
+          },
+          checkVisibility: () => false // element is hidden according to native API
+        } as any as HTMLElement;
+
+        const result = isElementHidden(element);
+
+        assert.equal(
+          result,
+          true,
+          'should return true when checkVisibility returns false'
+        );
+      });
+
+      it('falls back to computed styles when checkVisibility is not available', () => {
+        let getComputedStyleCalled = false;
+
+        const element = {
+          ownerDocument: {
+            defaultView: {
+              getComputedStyle: () => {
+                getComputedStyleCalled = true;
+                return {
+                  display: 'none',
+                  visibility: 'visible',
+                  opacity: '1'
+                } as any;
+              }
+            }
+          }
+          // no checkVisibility
+        } as any as HTMLElement;
+
+        const result = isElementHidden(element);
+
+        assert.equal(
+          result,
+          true,
+          'should use fallback and detect display:none as hidden'
+        );
+        assert.equal(
+          getComputedStyleCalled,
+          true,
+          'getComputedStyle should be called in fallback'
+        );
+      });
+
+      it('returns true when display is "none"', () => {
+        const element = createElementWithComputedStyle({
+          display: 'none',
+          visibility: 'visible',
+          opacity: '1'
+        });
+
+        const result = isElementHidden(element);
+        assert.equal(result, true);
+      });
+
+      it('returns true when visibility is "hidden"', () => {
+        const element = createElementWithComputedStyle({
+          display: 'block',
+          visibility: 'hidden',
+          opacity: '1'
+        });
+
+        const result = isElementHidden(element);
+        assert.equal(result, true);
+      });
+
+      it('returns true when visibility is "collapse"', () => {
+        const element = createElementWithComputedStyle({
+          display: 'block',
+          visibility: 'collapse',
+          opacity: '1'
+        });
+
+        const result = isElementHidden(element);
+        assert.equal(result, true);
+      });
+
+      it('returns true when opacity is "0"', () => {
+        const element = createElementWithComputedStyle({
+          display: 'block',
+          visibility: 'visible',
+          opacity: '0'
+        });
+
+        const result = isElementHidden(element);
+        assert.equal(result, true);
+      });
+
+      it('returns false when element appears visible according to computed styles', () => {
+        const element = createElementWithComputedStyle({
+          display: 'block',
+          visibility: 'visible',
+          opacity: '1'
+        });
+
+        const result = isElementHidden(element);
+        assert.equal(result, false);
+      });
+
+      it('returns false when computed style cannot be obtained', () => {
+        // Simulate ownerDocument / defaultView present but getComputedStyle returns null
+        const element = {
+          ownerDocument: {
+            defaultView: {
+              getComputedStyle: () => null
+            }
+          }
+        } as any as HTMLElement;
+
+        const result = isElementHidden(element);
+        assert.equal(
+          result,
+          false,
+          'should default to not hidden when style is unavailable'
+        );
+      });
+
+      it('returns false when ownerDocument or defaultView is missing', () => {
+        const elementWithoutDoc = {} as any as HTMLElement;
+
+        const result = isElementHidden(elementWithoutDoc);
+        assert.equal(
+          result,
+          false,
+          'should default to not hidden when no ownerDocument/defaultView'
+        );
+      });
     });
   });
 });
