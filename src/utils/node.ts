@@ -38,22 +38,64 @@ export const removeAll = (selector: string, el: Document = document): void => {
 };
 
 /**
- * Determines if an HTML element is hidden based on its visibility properties.
+ * Determines whether a given HTML element should be considered hidden.
  *
- * @param {HTMLElement} element - The HTML element to check for visibility.
- * @returns {boolean} True if the element is hidden, false otherwise.
+ * The function prefers the native `HTMLElement.prototype.checkVisibility`
+ * API when available, as it more accurately reflects the browser's idea
+ * of whether an element is visible (including CSS properties, layout,
+ * `content-visibility`, etc).
+ *
+ * When `checkVisibility` is not available (e.g. in older browsers or
+ * test environments like JSDOM), it falls back to a simple heuristic
+ * using `getComputedStyle` to check:
+ *
+ * - `display === "none"`
+ * - `visibility === "hidden"` or `"collapse"`
+ * - `opacity === "0"`
+ *
+ * @param {HTMLElement} element - The element to test for visibility.
+ * @returns {boolean} `true` if the element is considered hidden, `false` otherwise.
  *
  * @example
  * ```ts
- * const element = document.getElementById('my-element');
- * if (element) {
- *   const hidden = isElementHidden(element);
- *   console.log(hidden); // true if the element is hidden, false if visible
+ * const element = document.getElementById('panel') as HTMLElement;
+ *
+ * if (isElementHidden(element)) {
+ *   console.log('The panel is hidden, showing it now...');
+ *   element.style.display = 'block';
  * }
  * ```
  */
-export const isElementHidden = (element: HTMLElement): boolean =>
-  !element.checkVisibility({
-    opacityProperty: true,
-    checkVisibilityCSS: true
-  } as Record<string, boolean>);
+export const isElementHidden = (element: HTMLElement): boolean => {
+  const anyEl = element as HTMLElement & {
+    /**
+     * Optional browser-native visibility check.
+     *
+     * This is not yet universally available, so we treat it as optional
+     * and guard its usage at runtime.
+     */
+    checkVisibility?: (options?: Record<string, boolean>) => boolean;
+  };
+
+  if (typeof anyEl.checkVisibility === 'function') {
+    return !anyEl.checkVisibility({
+      opacityProperty: true,
+      checkVisibilityCSS: true
+    } as Record<string, boolean>);
+  }
+
+  // Fallback for environments without checkVisibility (e.g. jsdom)
+  const win = element.ownerDocument?.defaultView;
+
+  const style = win?.getComputedStyle(element);
+
+  // If we cannot read computed styles, assume "not hidden" to avoid false positives.
+  if (!style) return false;
+
+  if (style.display === 'none') return true;
+  if (style.visibility === 'hidden' || style.visibility === 'collapse')
+    return true;
+  if (style.opacity === '0') return true;
+
+  return false;
+};
