@@ -1,5 +1,51 @@
 # Changelog
 
+## [11.3.16](///compare/v11.3.15...v11.3.16) (2025-12-02)
+
+## [11.3.15](///compare/v11.3.14...v11.3.15) (2025-12-02)
+
+## [11.3.14](///compare/v11.3.13...v11.3.14) (2025-12-02)
+
+## [11.3.13](///compare/v11.3.12...v11.3.13) (2025-11-25)
+
+## [11.3.12](///compare/v11.3.11...v11.3.12) (2025-11-19)
+
+## [11.3.11](///compare/v11.3.10...v11.3.11) (2025-11-18)
+
+## [11.3.10](///compare/v11.3.9...v11.3.10) (2025-11-18)
+
+## [11.3.9](///compare/v11.3.8...v11.3.9) (2025-11-18)
+
+## [11.3.8](https://github.com/phun-ky/speccer/compare/v11.3.7...v11.3.8) (2025-11-13)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 2 updates ([3d7a15a](https://github.com/phun-ky/speccer/commit/3d7a15a751a9dd4497de558ab85ffbaa2e11c39b))
+
+## [11.3.7](https://github.com/phun-ky/speccer/compare/v11.3.6...v11.3.7) (2025-11-04)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 4 updates ([60a70bc](https://github.com/phun-ky/speccer/commit/60a70bc0694dd248d83d6217dee8791cbffbf077))
+
+## [11.3.6](https://github.com/phun-ky/speccer/compare/v11.3.5...v11.3.6) (2025-10-28)
+
+### Tasks
+
+* 🤖 bump vite in the npm_and_yarn group across 1 directory ([c3c07e6](https://github.com/phun-ky/speccer/commit/c3c07e6dbfd91c13dadeda146a112064df438850))
+
+## [11.3.5](https://github.com/phun-ky/speccer/compare/v11.3.4...v11.3.5) (2025-10-28)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 3 updates ([96383d7](https://github.com/phun-ky/speccer/commit/96383d704630d089388732652f589e7e91d23fe2))
+
+## [11.3.4](https://github.com/phun-ky/speccer/compare/v11.3.3...v11.3.4) (2025-10-21)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 7 updates ([bda032c](https://github.com/phun-ky/speccer/commit/bda032caf0ce51ed440b6aeddd15c0217e4d02ba))
+
 ## [11.3.3](https://github.com/phun-ky/speccer/compare/v11.3.2...v11.3.3) (2025-10-14)
 
 ### Tasks

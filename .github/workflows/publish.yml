@@ -45,6 +45,7 @@ jobs:
       - name: Install dependencies
         run: | # Install and link dependencies
           npm i
+          git checkout -- package-lock.json
       - name: 'Release' # Interesting step
         run: |
           git config user.name "${{ github.actor }}"
