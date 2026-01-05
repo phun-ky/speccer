@@ -68,7 +68,7 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "postcss": "rm -rf ./dist/speccer.min.css && postcss ./dist/speccer.css -o  ./dist/speccer.min.css",
-    "release": "release-it",
+    "release": "npx release-it --ci",
     "prerollup:dev": "npm run clean && npm run styles",
     "rollup": "rollup -c",
     "rollup:dev": "rollup -c -w",
