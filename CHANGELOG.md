@@ -1,5 +1,17 @@
 # Changelog
 
+## [11.3.19](https://github.com/phun-ky/speccer/compare/v11.3.18...v11.3.19) (2026-01-05)
+
+### Tasks
+
+* 🤖 bump putout from 40.15.1 to 41.0.2 in the major-updates group ([cfce99f](https://github.com/phun-ky/speccer/commit/cfce99f8c8bdaec5da28fd370283fb6dc3de13ef))
+* 🤖 bump the minor-and-patch group across 1 directory with 5 updates ([244b415](https://github.com/phun-ky/speccer/commit/244b415212aa310916a57c06167570563a06d60e))
+* 🤖 bump the minor-and-patch group across 1 directory with 7 updates ([f345859](https://github.com/phun-ky/speccer/commit/f345859aec6f47015440b8a54a2d58b0b7e4c2e6))
+
+### Bug
+
+* 🐛 Release with trusted publishing ([4307031](https://github.com/phun-ky/speccer/commit/4307031709b509ef8b1bd2021b6314a1bdc3530e))
+
 ## [11.3.18](///compare/v11.3.17...v11.3.18) (2025-12-03)
 
 ## [11.3.17](///compare/v11.3.16...v11.3.17) (2025-12-03)
