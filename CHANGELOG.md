@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.20](https://github.com/phun-ky/speccer/compare/v11.3.19...v11.3.20) (2026-01-05)
+
+### Tasks
+
+* 🤖 bump the major-updates group across 1 directory with 2 updates ([c4cc000](https://github.com/phun-ky/speccer/commit/c4cc000e1b3f28fcef36b6e17811a6fc3d0d5445))
+
 ## [11.3.19](https://github.com/phun-ky/speccer/compare/v11.3.18...v11.3.19) (2026-01-05)
 
 ### Tasks
