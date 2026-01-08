@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.23](https://github.com/phun-ky/speccer/compare/v11.3.22...v11.3.23) (2026-01-08)
+
+### Tasks
+
+* 🤖 bump preact from 10.28.0 to 10.28.2 ([f80551d](https://github.com/phun-ky/speccer/commit/f80551dcabf3718dbc0fece24a12d8a6a8b9f381))
+
 ## [11.3.22](https://github.com/phun-ky/speccer/compare/v11.3.21...v11.3.22) (2026-01-07)
 
 ### Tasks
