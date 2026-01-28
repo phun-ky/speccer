@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.27](https://github.com/phun-ky/speccer/compare/v11.3.26...v11.3.27) (2026-01-28)
+
+### Tasks
+
+* 🤖 bump lodash from 4.17.21 to 4.17.23 ([b50fb7a](https://github.com/phun-ky/speccer/commit/b50fb7a3630d4c6b552aba3c0d6eda1f6628ff25))
+
 ## [11.3.26](https://github.com/phun-ky/speccer/compare/v11.3.25...v11.3.26) (2026-01-27)
 
 ### Tasks
