@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.29](https://github.com/phun-ky/speccer/compare/v11.3.28...v11.3.29) (2026-02-12)
+
+### Tasks
+
+* 🤖 bump the major-updates group with 2 updates ([2e45949](https://github.com/phun-ky/speccer/commit/2e459495ebc9afbd5d1dac7f5c572684a648289d))
+
 ## [11.3.28](https://github.com/phun-ky/speccer/compare/v11.3.27...v11.3.28) (2026-02-05)
 
 ### Tasks
