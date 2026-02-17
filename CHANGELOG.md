@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.31](https://github.com/phun-ky/speccer/compare/v11.3.30...v11.3.31) (2026-02-17)
+
+### Tasks
+
+* 🤖 bump putout from 41.16.0 to 42.0.3 in the major-updates group ([f1b9128](https://github.com/phun-ky/speccer/commit/f1b91288af5361334b84ada3ee5dd44f1b746edf))
+
 ## [11.3.30](https://github.com/phun-ky/speccer/compare/v11.3.29...v11.3.30) (2026-02-17)
 
 ### Tasks
