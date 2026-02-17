@@ -34,7 +34,7 @@ Create a marker element with an optional element type.
 
 The id.
 
-##### n
+##### n?
 
 `string` = `'span'`
 

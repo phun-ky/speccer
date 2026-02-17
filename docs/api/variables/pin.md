@@ -50,7 +50,7 @@ Create a pin element with optional content, area description, and element type.
 
 #### Parameters
 
-##### content
+##### content?
 
 `string` = `''`
 
@@ -62,13 +62,13 @@ The content to add to the element.
 
 The option for styling.
 
-##### id
+##### id?
 
 `string` = `''`
 
 The id of the pinned element
 
-##### n
+##### n?
 
 `string` = `'span'`
 

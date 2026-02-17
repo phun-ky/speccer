@@ -41,7 +41,7 @@ Create a measurement element with optional text, area, and element type.
 
 #### Parameters
 
-##### text
+##### text?
 
 The text to display on the element.
 
@@ -59,7 +59,7 @@ The options.
 
 The element id.
 
-##### tag
+##### tag?
 
 `string` = `'span'`
 

@@ -31,13 +31,13 @@ Create a spacing element with optional text content.
 
 #### Parameters
 
-##### text
+##### text?
 
 The optional text content for the spacing element.
 
 `string` | `number`
 
-##### tag
+##### tag?
 
 `string` = `'span'`
 
