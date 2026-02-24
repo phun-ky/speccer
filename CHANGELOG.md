@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.32](https://github.com/phun-ky/speccer/compare/v11.3.31...v11.3.32) (2026-02-24)
+
+### Tasks
+
+* 🤖 bump @types/jsdom in the major-updates group ([cc805a3](https://github.com/phun-ky/speccer/commit/cc805a3b55d7c062213b878af72b44a6394692ae))
+
 ## [11.3.31](https://github.com/phun-ky/speccer/compare/v11.3.30...v11.3.31) (2026-02-17)
 
 ### Tasks
