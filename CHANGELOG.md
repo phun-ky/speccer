@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.33](https://github.com/phun-ky/speccer/compare/v11.3.32...v11.3.33) (2026-03-02)
+
+### Tasks
+
+* 🤖 bump minimatch from 3.1.2 to 3.1.5 ([cc4c275](https://github.com/phun-ky/speccer/commit/cc4c275bb5122730abbddce6a3fe2a5b441323e9))
+
 ## [11.3.32](https://github.com/phun-ky/speccer/compare/v11.3.31...v11.3.32) (2026-02-24)
 
 ### Tasks
