@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.35](https://github.com/phun-ky/speccer/compare/v11.3.34...v11.3.35) (2026-03-02)
+
+### Tasks
+
+* 🤖 bump basic-ftp from 5.0.5 to 5.2.0 ([9cef9b1](https://github.com/phun-ky/speccer/commit/9cef9b16262618d974bcaed5aa6bc4640cab00ae))
+
 ## [11.3.34](https://github.com/phun-ky/speccer/compare/v11.3.33...v11.3.34) (2026-03-02)
 
 ### Tasks
