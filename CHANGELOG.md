@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.36](https://github.com/phun-ky/speccer/compare/v11.3.35...v11.3.36) (2026-03-03)
+
+### Tasks
+
+* 🤖 bump postcss from 8.5.6 to 8.5.8 in the minor-and-patch group ([c3e4388](https://github.com/phun-ky/speccer/commit/c3e4388c3f671ee2d5eed298569816bd1b05a76a))
+
 ## [11.3.35](https://github.com/phun-ky/speccer/compare/v11.3.34...v11.3.35) (2026-03-02)
 
 ### Tasks
