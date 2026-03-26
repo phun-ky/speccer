@@ -24,7 +24,7 @@ This feature will highlight the grid spacing in a `display: grid;` element.
 
 ## Type Declaration
 
-### create()
+### create
 
 ```ts
 create: (targetElement: HTMLElement, options?: SpeccerOptionsInterface) =>
@@ -60,7 +60,7 @@ if (targetElement) {
 }
 ```
 
-### element()
+### element
 
 ```ts
 element: (targetElement: HTMLElement, options?: SpeccerOptionsInterface) =>

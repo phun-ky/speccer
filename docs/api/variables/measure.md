@@ -26,7 +26,7 @@ This feature measures given element
 
 ## Type Declaration
 
-### create()
+### create
 
 ```ts
 create: (
@@ -43,9 +43,9 @@ Create a measurement element with optional text, area, and element type.
 
 ##### text?
 
-The text to display on the element.
-
 `string` | `number`
+
+The text to display on the element.
 
 ##### options
 
@@ -78,7 +78,7 @@ const measurement = create(100, 'width bottom', 'div');
 document.body.appendChild(measurement);
 ```
 
-### element()
+### element
 
 ```ts
 element: (targetElement: HTMLElement, options?: SpeccerOptionsInterface) =>

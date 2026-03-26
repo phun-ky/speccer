@@ -18,7 +18,7 @@ This feature marks given element
 
 ## Type Declaration
 
-### create()
+### create
 
 ```ts
 create: (id: string, n: string) => (HTMLElement = markCreate);
@@ -53,7 +53,7 @@ const marker = create('div');
 document.body.appendChild(marker);
 ```
 
-### element()
+### element
 
 ```ts
 element: (targetElement: HTMLElement) => (Promise<void> = markElement);

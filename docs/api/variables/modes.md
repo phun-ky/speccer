@@ -18,7 +18,7 @@ The available modes to run SPECCER with
 
 ## Type Declaration
 
-### activate()
+### activate
 
 ```ts
 activate: (speccer: SpeccerFunctionType) => void;
@@ -45,7 +45,7 @@ The speccer function to execute.
 activate(mySpeccer);
 ```
 
-### dom()
+### dom
 
 ```ts
 dom: (speccer: SpeccerFunctionType) => void;
@@ -72,7 +72,7 @@ The speccer function to execute.
 dom(mySpeccer);
 ```
 
-### lazy()
+### lazy
 
 ```ts
 lazy: () => void;
@@ -91,7 +91,7 @@ A function to initialize lazy speccer functionality.
 lazy();
 ```
 
-### manual()
+### manual
 
 ```ts
 manual: (speccer: SpeccerFunctionType) => void;

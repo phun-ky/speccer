@@ -1,6 +1,6 @@
 [@phun-ky/speccer](../index.md) / SpeccerFunctionType
 
-# Type Alias: SpeccerFunctionType()
+# Type Alias: SpeccerFunctionType
 
 ```ts
 type SpeccerFunctionType = () => void;

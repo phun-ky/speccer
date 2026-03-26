@@ -35,7 +35,7 @@ In your component examples, use the following attribute. Remember to use the
 
 ## Type Declaration
 
-### createPinElement()
+### createPinElement
 
 ```ts
 createPinElement: (
@@ -87,7 +87,7 @@ const pinElement = createPinElement('A', 'outline top', 'div');
 document.body.appendChild(pinElement);
 ```
 
-### pinElement()
+### pinElement
 
 ```ts
 pinElement: (
@@ -150,7 +150,7 @@ pinElement(targetElement, parentElement, content, options).then(() => {
 });
 ```
 
-### pinElements()
+### pinElements
 
 ```ts
 pinElements: (sectionElement: HTMLElement, options?: SpeccerOptionsInterface) =>

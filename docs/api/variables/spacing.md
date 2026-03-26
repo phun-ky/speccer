@@ -21,7 +21,7 @@ This feature highlights the spacing of an element.
 
 ## Type Declaration
 
-### create()
+### create
 
 ```ts
 create: (text: string | number, tag: string) => (HTMLElement = spacingCreate);
@@ -33,9 +33,9 @@ Create a spacing element with optional text content.
 
 ##### text?
 
-The optional text content for the spacing element.
-
 `string` | `number`
+
+The optional text content for the spacing element.
 
 ##### tag?
 
@@ -56,7 +56,7 @@ const spacingElement = create(20, 'div');
 document.body.appendChild(spacingElement);
 ```
 
-### element()
+### element
 
 ```ts
 element: (targetElement: HTMLElement, options?: SpeccerOptionsInterface) =>

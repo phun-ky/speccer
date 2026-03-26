@@ -25,7 +25,7 @@ This feature presents typography
 
 ## Type Declaration
 
-### create()
+### create
 
 ```ts
 create: (html: string, options: SpeccerOptionsInterface, id: string) =>
@@ -69,7 +69,7 @@ const createdElement = create(htmlContent, cssClass);
 document.body.appendChild(createdElement);
 ```
 
-### element()
+### element
 
 ```ts
 element: (targetElement: HTMLElement, options?: SpeccerOptionsInterface) =>
