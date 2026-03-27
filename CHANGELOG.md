@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.40](https://github.com/phun-ky/speccer/compare/v11.3.39...v11.3.40) (2026-03-27)
+
+### Tasks
+
+* 🤖 bump flatted from 3.3.3 to 3.4.2 ([4499675](https://github.com/phun-ky/speccer/commit/449967534436937dbad161fc9b2367f2ea321d89))
+
 ## [11.3.39](https://github.com/phun-ky/speccer/compare/v11.3.38...v11.3.39) (2026-03-26)
 
 ### Tasks
