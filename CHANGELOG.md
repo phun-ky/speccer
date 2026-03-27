@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.41](https://github.com/phun-ky/speccer/compare/v11.3.40...v11.3.41) (2026-03-27)
+
+### Tasks
+
+* 🤖 bump handlebars from 4.7.8 to 4.7.9 ([5d31d9b](https://github.com/phun-ky/speccer/commit/5d31d9b2444dd99d8a842a1018e98c8e3c0d0ed7))
+
 ## [11.3.40](https://github.com/phun-ky/speccer/compare/v11.3.39...v11.3.40) (2026-03-27)
 
 ### Tasks
