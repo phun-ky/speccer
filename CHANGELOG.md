@@ -1,5 +1,17 @@
 # Changelog
 
+## [11.3.43](https://github.com/phun-ky/speccer/compare/v11.3.42...v11.3.43) (2026-04-14)
+
+### Tasks
+
+* 🤖 bump basic-ftp from 5.2.0 to 5.2.2 ([0d5588a](https://github.com/phun-ky/speccer/commit/0d5588af009d44a826ec65b8f843877888b4d6d3))
+
+## [11.3.42](https://github.com/phun-ky/speccer/compare/v11.3.41...v11.3.42) (2026-04-01)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 4 updates ([bddb251](https://github.com/phun-ky/speccer/commit/bddb2515bc5a75965866ec2498d3017c2df5bc3d))
+
 ## [11.3.41](https://github.com/phun-ky/speccer/compare/v11.3.40...v11.3.41) (2026-03-27)
 
 ### Tasks
