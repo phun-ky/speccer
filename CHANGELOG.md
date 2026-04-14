@@ -1,5 +1,12 @@
 # Changelog
 
+## [11.3.44](https://github.com/phun-ky/speccer/compare/v11.3.43...v11.3.44) (2026-04-14)
+
+### Tasks
+
+* 🤖 bump picomatch from 2.3.1 to 2.3.2 ([673500d](https://github.com/phun-ky/speccer/commit/673500dccad4d27a8b2341675169c4a60f93def0))
+* 🤖 Update deps ([ee1cea7](https://github.com/phun-ky/speccer/commit/ee1cea7354926357e3db0feacdae2b8e9fcd03a4))
+
 ## [11.3.43](https://github.com/phun-ky/speccer/compare/v11.3.42...v11.3.43) (2026-04-14)
 
 ### Tasks
