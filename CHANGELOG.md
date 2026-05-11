@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.45](https://github.com/phun-ky/speccer/compare/v11.3.44...v11.3.45) (2026-05-11)
+
+### Tasks
+
+* 🤖 bump fast-uri from 3.1.0 to 3.1.2 ([28b2823](https://github.com/phun-ky/speccer/commit/28b2823f6dd9e9275723b7995a9cd4aa81e18366))
+
 ## [11.3.44](https://github.com/phun-ky/speccer/compare/v11.3.43...v11.3.44) (2026-04-14)
 
 ### Tasks
