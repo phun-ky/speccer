@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.48](https://github.com/phun-ky/speccer/compare/v11.3.47...v11.3.48) (2026-05-13)
+
+### Tasks
+
+* 🤖 bump ip-address from 10.1.0 to 10.2.0 ([87a097f](https://github.com/phun-ky/speccer/commit/87a097f94ecf9aa3d2520786db85f9e0b969070b))
+
 ## [11.3.47](https://github.com/phun-ky/speccer/compare/v11.3.46...v11.3.47) (2026-05-13)
 
 ### Tasks
