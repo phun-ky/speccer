@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.47](https://github.com/phun-ky/speccer/compare/v11.3.46...v11.3.47) (2026-05-13)
+
+### Tasks
+
+* 🤖 bump postcss from 8.5.8 to 8.5.14 ([7da6b26](https://github.com/phun-ky/speccer/commit/7da6b26ce4ec64295b6df794d11523d318622c16))
+
 ## [11.3.46](https://github.com/phun-ky/speccer/compare/v11.3.45...v11.3.46) (2026-05-13)
 
 ### Tasks
