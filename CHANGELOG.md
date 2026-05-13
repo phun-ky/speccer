@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.46](https://github.com/phun-ky/speccer/compare/v11.3.45...v11.3.46) (2026-05-13)
+
+### Tasks
+
+* 🤖 bump defu from 6.1.4 to 6.1.7 ([e927bd4](https://github.com/phun-ky/speccer/commit/e927bd4bf7258ccbc3e20fbf4f582e79a3894b8b))
+
 ## [11.3.45](https://github.com/phun-ky/speccer/compare/v11.3.44...v11.3.45) (2026-05-11)
 
 ### Tasks
