@@ -1,5 +1,12 @@
 # Changelog
 
+## [11.3.49](https://github.com/phun-ky/speccer/compare/v11.3.48...v11.3.49) (2026-05-15)
+
+### Tasks
+
+* 🤖 bump lodash from 4.17.23 to 4.18.1 ([855662b](https://github.com/phun-ky/speccer/commit/855662bb7da20db2799e26180fbfaeec110e61a4))
+* 🤖 Update tooling chain ([69c834e](https://github.com/phun-ky/speccer/commit/69c834eac31fedf100ad21c779a5a23c0d46c8f8))
+
 ## [11.3.48](https://github.com/phun-ky/speccer/compare/v11.3.47...v11.3.48) (2026-05-13)
 
 ### Tasks
