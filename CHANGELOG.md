@@ -1,5 +1,12 @@
 # Changelog
 
+## [11.3.51](https://github.com/phun-ky/speccer/compare/v11.3.50...v11.3.51) (2026-05-19)
+
+### Tasks
+
+* 🤖 bump the major-updates group across 1 directory with 5 updates ([982728f](https://github.com/phun-ky/speccer/commit/982728f41f87a940c12fd0a1e3fe6e18e1984bfd))
+* 🤖 Update tsconfig ([a12ea37](https://github.com/phun-ky/speccer/commit/a12ea37ea3eaca74ab576719dd3e425f49ab8b31))
+
 ## [11.3.50](https://github.com/phun-ky/speccer/compare/v11.3.49...v11.3.50) (2026-05-19)
 
 ### Tasks
