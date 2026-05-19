@@ -67,7 +67,7 @@ export const pinElements = async (
     window.SPECCER_LITERALS ||
     SPECCER_LITERALS;
 
-  [..._els_to_be_pinned]
+  ([..._els_to_be_pinned] as HTMLElement[])
     .filter(
       async (targetElement: HTMLElement) => !isElementHidden(targetElement)
     )

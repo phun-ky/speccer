@@ -8,11 +8,11 @@ import { add as addStyle } from '../styles';
  * Class representing a DrawCircle instance.
  */
 export class DrawCircle {
-  #canvas: HTMLElement | SVGElement | null;
-  el: HTMLElement;
-  circle: SVGCircleElement;
-  radius: number;
-  options: SpeccerOptionsInterface;
+  #canvas: HTMLElement | SVGElement | null = null;
+  el!: HTMLElement;
+  circle!: SVGCircleElement;
+  radius!: number;
+  options!: SpeccerOptionsInterface;
 
   /**
    * Creates a new DrawCircle instance.
