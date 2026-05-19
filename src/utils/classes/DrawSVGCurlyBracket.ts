@@ -8,12 +8,12 @@ import { add as addStyle } from '../styles';
  * Class representing a DrawSVGCurlyBracket instance.
  */
 export class DrawSVGCurlyBracket {
-  #canvas: HTMLElement | SVGElement | null;
-  #originalPathElement: HTMLElement | SVGPathElement | null;
-  startElement: HTMLElement;
-  stopElement: HTMLElement;
-  firstPathElement: SVGPathElement;
-  secondPathElement: SVGPathElement;
+  #canvas: HTMLElement | SVGElement | null = null;
+  #originalPathElement: HTMLElement | SVGPathElement | null = null;
+  startElement!: HTMLElement;
+  stopElement!: HTMLElement;
+  firstPathElement!: SVGPathElement;
+  secondPathElement!: SVGPathElement;
 
   /**
    * Creates a new DrawSVGCurlyBracket instance.

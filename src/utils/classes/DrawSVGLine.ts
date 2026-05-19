@@ -9,12 +9,12 @@ import { add as addStyle } from '../styles';
  * Class representing a DrawSVGLine instance.
  */
 export class DrawSVGLine {
-  #canvas: HTMLElement | SVGElement | null;
-  #originalPathElement: HTMLElement | SVGPathElement | null;
-  startElement: HTMLElement;
-  stopElement: HTMLElement;
-  options: SpeccerOptionsInterface;
-  line: SVGPathElement;
+  #canvas: HTMLElement | SVGElement | null = null;
+  #originalPathElement: HTMLElement | SVGPathElement | null = null;
+  startElement!: HTMLElement;
+  stopElement!: HTMLElement;
+  options!: SpeccerOptionsInterface;
+  line!: SVGPathElement;
 
   /**
    * Creates a new DrawSVGLine instance.
