@@ -17,6 +17,8 @@ corresponding nested section (e.g. `pin`, `grid`, `typography`, `measure`,
 
 ## Examples
 
+**Basic "pin" annotation**
+
 ```ts
 import type { SpeccerOptionsInterface } from '@phun-ky/speccer';
 
@@ -36,6 +38,8 @@ const options: SpeccerOptionsInterface = {
 };
 ```
 
+**Measure width, slim style**
+
 ```ts
 const options: SpeccerOptionsInterface = {
   slug: 'measureWidthSlim',
@@ -49,6 +53,8 @@ const options: SpeccerOptionsInterface = {
 };
 ```
 
+**Typography with syntax highlighting**
+
 ```ts
 const options: SpeccerOptionsInterface = {
   slug: 'codeSample',
@@ -59,6 +65,8 @@ const options: SpeccerOptionsInterface = {
   }
 };
 ```
+
+**Spacing overlays (margin vs. padding vs. both)**
 
 ```ts
 const marginOnly: SpeccerOptionsInterface = {
@@ -85,6 +93,8 @@ const bothWithBounds: SpeccerOptionsInterface = {
   }
 };
 ```
+
+**Grid overlays (rows, columns, or both)**
 
 ```ts
 const gridBoth: SpeccerOptionsInterface = {
