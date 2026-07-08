@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.55](https://github.com/phun-ky/speccer/compare/v11.3.54...v11.3.55) (2026-07-08)
+
+### Tasks
+
+* 🤖 bump js-yaml from 4.1.1 to 4.3.0 ([745fa6e](https://github.com/phun-ky/speccer/commit/745fa6ec3e486ead90acb1acca400b5fbc662857))
+
 ## [11.3.54](https://github.com/phun-ky/speccer/compare/v11.3.53...v11.3.54) (2026-07-08)
 
 ### Tasks
