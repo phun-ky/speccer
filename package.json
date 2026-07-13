@@ -97,7 +97,7 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.4.2",
     "@types/jsdom": "^28.0.0",
-    "@types/node": "^25.0.3",
+    "@types/node": "^26.1.1",
     "cobertura": "^1.0.1",
     "cssnano": "^8.0.1",
     "eslint": "^10.0.0",
@@ -130,7 +130,7 @@
     "typedoc-plugin-remark": "^2.0.0",
     "typedoc-plugin-rename-defaults": "^0.7.1",
     "typedoc-vitepress-theme": "^1.1.2",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.2",
     "unified-prettier": "^2.0.1",
     "vitepress": "^1.6.4",
     "vitepress-plugin-group-icons": "^1.6.3"
