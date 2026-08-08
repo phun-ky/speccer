@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.57](https://github.com/phun-ky/speccer/compare/v11.3.56...v11.3.57) (2026-08-08)
+
+### Tasks
+
+* 🤖 bump svgo from 4.0.1 to 4.0.2 ([885a65e](https://github.com/phun-ky/speccer/commit/885a65eddad061863ae900456f1c36a23b8a4fcf))
+
 ## [11.3.56](https://github.com/phun-ky/speccer/compare/v11.3.55...v11.3.56) (2026-08-08)
 
 ### Tasks
