@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.63](https://github.com/phun-ky/speccer/compare/v11.3.62...v11.3.63) (2026-09-03)
+
+### Tasks
+
+* 🤖 bump @humanfs/node from 0.16.7 to 0.16.8 ([64fc5a5](https://github.com/phun-ky/speccer/commit/64fc5a52d5372d038d754262fa2b72a92ae450db))
+
 ## [11.3.62](https://github.com/phun-ky/speccer/compare/v11.3.61...v11.3.62) (2026-09-03)
 
 ### Tasks
