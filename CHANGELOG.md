@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.59](https://github.com/phun-ky/speccer/compare/v11.3.58...v11.3.59) (2026-09-03)
+
+### Tasks
+
+* 🤖 bump browserslist from 4.28.2 to 4.28.8 ([631c5d9](https://github.com/phun-ky/speccer/commit/631c5d90e3690cba79d252921795a3bd6f552308))
+
 ## [11.3.58](https://github.com/phun-ky/speccer/compare/v11.3.57...v11.3.58) (2026-08-19)
 
 ### Tasks
