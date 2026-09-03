@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.3.60](https://github.com/phun-ky/speccer/compare/v11.3.59...v11.3.60) (2026-09-03)
+
+### Tasks
+
+* 🤖 bump brace-expansion from 2.0.2 to 2.1.4 ([ce33c4c](https://github.com/phun-ky/speccer/commit/ce33c4cd8aa59deee8ce650a7c7f1ada85d377d9))
+
 ## [11.3.59](https://github.com/phun-ky/speccer/compare/v11.3.58...v11.3.59) (2026-09-03)
 
 ### Tasks
