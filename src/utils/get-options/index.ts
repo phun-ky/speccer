@@ -53,7 +53,6 @@ export const getOptions = async (
   customOptions?: SpeccerOptionsInterface
 ): Promise<SpeccerOptionsInterface> => {
   const type = await getFeatureBasedOnArea(areaString, targetElement);
-
   const options: SpeccerOptionsInterface = {
     slug: camelCase(areaString),
     position: getPositionBasedOnArea(areaString),

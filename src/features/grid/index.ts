@@ -66,9 +66,7 @@ export const create = async (
 
   const _areas_string: string =
     targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || 'grid';
-
   const targetStyle = await getStyles(targetElement);
-
   const _options = await getOptions(_areas_string, targetElement, options);
 
   if (_options.type !== 'grid' || !_options.grid) return;
@@ -158,6 +156,7 @@ export const create = async (
 
     for (let i = 0; i < numberOfRowItems; i++) {
       const gridItem = document.createElement('div');
+
       gridItem.classList.add('ph-speccer', 'speccer', 'speccer-grid-row-item');
 
       gridRowContainer.appendChild(gridItem);

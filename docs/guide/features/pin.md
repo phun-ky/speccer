@@ -215,7 +215,7 @@ CSS classes:
 }
 ```
 
-## Subtle Anatomy
+### Subtle Anatomy
 
 ![Image of subtle option for anatomy](/speccer-pin-default-subtle-light.png)
 

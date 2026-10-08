@@ -2,8 +2,9 @@ import type { Theme } from 'vitepress';
 import { useData } from 'vitepress';
 import DefaultTheme from 'vitepress/theme-without-fonts';
 import { h, onMounted, watchEffect } from 'vue';
-import HomeBanner from './components/HomeBanner.vue';
+
 import HeroBanner from './components/HeroBanner.vue';
+import HomeBanner from './components/HomeBanner.vue';
 import 'virtual:group-icons.css';
 import './custom.css';
 
@@ -18,6 +19,7 @@ export default {
       'home-features-after': () => h(HomeBanner),
       'doc-top': () => {
         const { frontmatter } = useData();
+
         return frontmatter.value.showHero ? h(HeroBanner) : null;
       }
     });

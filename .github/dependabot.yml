@@ -2,16 +2,14 @@ version: 2
 updates:
   - package-ecosystem: 'npm'
     directory: '/'
+    # Minor and patch updates are grouped into one PR. Major updates are left
+    # ungrouped, so each one gets its own PR that can be tested and merged alone.
     groups:
       minor-and-patch:
         applies-to: version-updates
         update-types:
           - 'minor'
           - 'patch'
-      major-updates:
-        applies-to: version-updates
-        update-types:
-          - 'major'
     schedule:
       interval: 'weekly'
     labels:

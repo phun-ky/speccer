@@ -69,12 +69,13 @@
     "docs:preview": "vitepress preview docs",
     "postcss": "rm -rf ./dist/speccer.min.css && postcss ./dist/speccer.css -o  ./dist/speccer.min.css",
     "release": "npx release-it --ci",
+    "release:dry-run": ".github/scripts/should-release.sh && release-it --ci --dry-run --github.release=false --no-git.requireCleanWorkingDir --no-git.requireUpstream",
     "prerollup:dev": "npm run clean && npm run styles",
     "rollup": "rollup -c",
     "rollup:dev": "rollup -c -w",
     "style:code": "npx putout src",
-    "style:format": "./node_modules/.bin/eslint -c ./eslint.config.mjs src  --fix && ./node_modules/.bin/prettier --write ./eslint.config.mjs src",
-    "style:lint": "./node_modules/.bin/eslint -c ./eslint.config.mjs src && ./node_modules/.bin/prettier --check src",
+    "style:format": "eslint . --fix",
+    "style:lint": "eslint .",
     "styles": "npm run stylus && npm run postcss",
     "stylus": "rm -rf ./dist/speccer.css && stylus ./src/styles/index.styl -o ./dist/speccer.css",
     "pretest:ci": "rm -rf coverage && mkdir -p coverage",
@@ -91,7 +92,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.50.1",
-    "@release-it/conventional-changelog": "^11.0.0",
+    "@release-it/conventional-changelog": "^12.0.2",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-terser": "^1.0.0",
     "@testing-library/dom": "^10.4.0",
@@ -101,7 +102,7 @@
     "cobertura": "^1.0.1",
     "cssnano": "^8.0.1",
     "eslint": "^10.0.0",
-    "eslint-config-phun-ky": "^2.0.0",
+    "eslint-config-phun-ky": "^2.0.10",
     "git-cz": "^4.9.0",
     "glob-bin": "^1.0.0",
     "global-jsdom": "^29.0.0",
@@ -112,7 +113,7 @@
     "prettier": "^3.8.0",
     "putout": "^42.0.3",
     "quibble": "^0.9.1",
-    "release-it": "^20.0.1",
+    "release-it": "^21.1.0",
     "remark-github": "^12.0.0",
     "remark-toc": "^9.0.0",
     "rollup": "^4.12.0",
@@ -136,8 +137,8 @@
     "vitepress-plugin-group-icons": "^1.6.3"
   },
   "engines": {
-    "node": ">=22.9.0",
-    "npm": ">=11.0.0"
+    "node": "^22.13.0 || >=24.0.0",
+    "npm": ">=10.9.0"
   },
   "publishConfig": {
     "access": "public"

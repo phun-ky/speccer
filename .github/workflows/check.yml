@@ -7,25 +7,26 @@ on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: ['main']
-    paths:
+    paths: &check-paths
       - '.github/**'
       - 'src/**'
+      - 'tests/**'
+      - 'docs/**'
+      - '**/*.md'
       - 'package.json'
       - 'package-lock.json'
+      - 'eslint.config.mjs'
+      - '.prettierrc'
       - 'rollup.config.js'
       - 'tsconfig.json'
-      - '.npmrc'
+      - 'tsconfig.test.json'
+      - 'postcss.config.cjs'
+      - '.browserslistrc'
+      - '.release-it.json'
   pull_request:
     branches: ['main']
     types: [opened, synchronize] # Workflow triggering events
-    paths:
-      - '.github/**'
-      - 'src/**'
-      - 'package.json'
-      - 'package-lock.json'
-      - 'rollup.config.js'
-      - 'tsconfig.json'
-      - '.npmrc'
+    paths: *check-paths
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -35,28 +36,33 @@ jobs:
   # This workflow contains a single job called "check"
   check:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0 # Checkout all branches and tags
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: '>=22.8.0'
+          node-version: 24
       - name: Install dependencies
-        run: | # Install and link dependencies
-          npm i
+        run: npm ci
+      - name: Lint
+        run: npx eslint .
       - name: Build # Build all packages
         run: npm run build
       - name: Test
         run: npm run test:ci
+      - name: Import smoke test
+        run: |
+          node --import global-jsdom/register --input-type=module \
+            -e "const m = await import('./dist/speccer.esm.js'); if (typeof m.default !== 'function') throw new Error('default export missing');"
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v4.0.1
+        uses: codecov/codecov-action@v7
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           slug: phun-ky/speccer
@@ -64,9 +70,9 @@ jobs:
     name: Notify failed check
     needs: check
     if: failure()
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: jayqi/failed-build-issue-action@v1.2
+      - uses: drivendataorg/failed-build-issue-action@v1
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           label-name: 'problems: 💔 build failed'

@@ -86,15 +86,16 @@ export const isElementHidden = (element: HTMLElement): boolean => {
 
   // Fallback for environments without checkVisibility (e.g. jsdom)
   const win = element.ownerDocument?.defaultView;
-
   const style = win?.getComputedStyle(element);
 
   // If we cannot read computed styles, assume "not hidden" to avoid false positives.
   if (!style) return false;
 
   if (style.display === 'none') return true;
+
   if (style.visibility === 'hidden' || style.visibility === 'collapse')
     return true;
+
   if (style.opacity === '0') return true;
 
   return false;
