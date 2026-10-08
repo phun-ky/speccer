@@ -1,41 +1,45 @@
-import markdown from '@eslint/markdown';
 import { defineConfig } from 'eslint/config';
 import customConfig from 'eslint-config-phun-ky';
-import tseslint from 'typescript-eslint';
 
-// eslint-disable-next-line import/no-unused-modules
 export default defineConfig([
+  {
+    // Generated files
+    ignores: [
+      'CHANGELOG.md',
+      'docs/api/**',
+      'docs/.vitepress/cache/**',
+      'docs/.vitepress/dist/**',
+      'playwright-report/**',
+      'test-results/**'
+    ]
+  },
   {
     extends: [customConfig]
   },
   {
-    files: ['**/*.md'],
-    processor: markdown.processors.markdown,
+    // VitePress syntax: [[toc]] and GitHub-style alerts
+    files: ['docs/**/*.md'],
     rules: {
-      'no-irregular-whitespace': 'off',
-      '@stylistic/indent': 'off'
+      'markdown/no-missing-label-refs': [
+        'error',
+        {
+          allowLabels: [
+            'toc',
+            '!NOTE',
+            '!TIP',
+            '!IMPORTANT',
+            '!WARNING',
+            '!CAUTION'
+          ]
+        }
+      ]
     }
   },
   {
-    files: ['**/*.md/*.js', '**/*.md/*.jsx', '**/*.md/*.ts', '**/*.md/*.tsx'],
-    languageOptions: {
-      parser: tseslint.parser,
-      parserOptions: {
-        project: false,
-        ecmaFeatures: { jsx: true },
-        sourceType: 'module'
-      },
-      globals: {
-        ...globals.browser
-      }
-    },
+    // Virtual modules provided by VitePress plugins
+    files: ['docs/.vitepress/**/*.ts'],
     rules: {
-      'import/no-unresolved': 'off',
-      '@stylistic/indent': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
-      'no-undef': 'off',
-      '@stylistic/semi': 'off'
+      'import-x/no-unresolved': ['error', { ignore: ['^virtual:'] }]
     }
   }
 ]);

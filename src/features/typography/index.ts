@@ -133,7 +133,6 @@ export const typography = async (
 
   const _areas_string: string =
     targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || '';
-
   const _options = await getOptions(_areas_string, targetElement, options);
 
   if (_options.type !== 'typography' || !_options.typography) return;

@@ -6,10 +6,11 @@ jobs:
   labeler:
     permissions:
       contents: read
+      issues: write
       pull-requests: write
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
     - id: label-the-PR
-      uses: actions/labeler@v5
+      uses: actions/labeler@v7
       with:
         sync-labels: true

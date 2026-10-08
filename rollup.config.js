@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unused-modules */
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 import dts from 'rollup-plugin-dts';

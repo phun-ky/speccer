@@ -13,37 +13,20 @@
       - changed-files:
           - any-glob-to-any-file:
               - '.editorconfig'
-              - '.eslintignore'
               - 'eslint.config.mjs'
-              - '.eslintrc.json'
-              - '.eslintrc.js'
+              - '.prettierrc'
               - '.gitignore'
               - '.release-it.json'
-              - '.renovate.json'
-              - '.npmrc'
 'context: github':
   - any:
       - changed-files:
           - any-glob-to-any-file:
               - .github/**
-'context: docker':
-  - any:
-      - changed-files:
-          - any-glob-to-any-file:
-              - Dockerfile
-'context: npm':
-  - any:
-      - changed-files:
-          - any-glob-to-any-file:
-              - '.npmrc'
 'context: rollup':
   - any:
       - changed-files:
           - any-glob-to-any-file:
               - 'rollup.config.js'
-              - 'rollup.config.mjs'
-              - 'rollup.*.config.js'
-              - 'rollup.*.config.mjs'
 'mindless: ✏️ docs':
   - any:
       - head-branch: ['^docs', 'docs']
@@ -55,7 +38,6 @@
       - changed-files:
           - any-glob-to-any-file:
               - 'package-lock.json'
-              - 'yarn.lock'
 
 # Add '✨ feature' label to any PR where the head branch name starts with `feat` or has a `feat` section in the name
 '✨ feature':

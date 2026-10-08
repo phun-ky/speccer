@@ -1,12 +1,7 @@
 export type SpeccerFunctionType = () => void;
 
 export type SpeccerFeatureType =
-  | 'pin'
-  | 'grid'
-  | 'mark'
-  | 'typography'
-  | 'measure'
-  | 'spacing';
+  'pin' | 'grid' | 'mark' | 'typography' | 'measure' | 'spacing';
 
 export type SpeccerPositionType = 'top' | 'left' | 'right' | 'bottom';
 

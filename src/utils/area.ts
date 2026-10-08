@@ -292,6 +292,7 @@ export const isValidGridElement = (
   areaString.split(' ').includes(GridAreaEnum.Grid) &&
   isString(styles.display) &&
   (styles.display === 'grid' || (styles.display || '').includes('grid'));
+
 /**
  * Checks if the provided areaString contains 'syntax'.
  *

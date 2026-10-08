@@ -22,42 +22,53 @@
         "types": [
           {
             "type": "chore",
-            "section": "Tasks"
+            "section": "Tasks",
+            "effect": "changelog"
           },
           {
             "type": "docs",
-            "section": "Documentation"
+            "section": "Documentation",
+            "effect": "changelog"
           },
           {
             "type": "feat",
-            "section": "Feature"
+            "section": "Feature",
+            "effect": "bump"
           },
           {
             "type": "fix",
-            "section": "Bug"
+            "section": "Bug",
+            "effect": "bump"
           },
           {
             "type": "perf",
-            "section": "Performance change"
+            "section": "Performance change",
+            "effect": "bump"
+          },
+          {
+            "type": "revert",
+            "section": "Reverts",
+            "effect": "bump"
           },
           {
             "type": "refactor",
-            "section": "Refactoring"
+            "section": "Refactoring",
+            "effect": "changelog"
           },
           {
             "type": "release",
             "section": "Create a release commit",
-            "hidden": true
+            "effect": "hidden"
           },
           {
             "type": "style",
             "section": "Markup, white-space, formatting, missing semi-colons...",
-            "hidden": true
+            "effect": "hidden"
           },
           {
             "type": "test",
             "section": "Adding missing tests",
-            "hidden": true
+            "effect": "hidden"
           }
         ]
       },
