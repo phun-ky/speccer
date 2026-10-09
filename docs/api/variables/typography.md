@@ -17,7 +17,7 @@ const typography: {
 ```
 
 Defined in:
-[main.ts:229](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L229)
+[main.ts:228](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L228)
 
 This feature presents typography
 

@@ -18,7 +18,7 @@ const measure: {
 ```
 
 Defined in:
-[main.ts:159](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L159)
+[main.ts:158](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L158)
 
 This feature measures given element
 

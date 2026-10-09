@@ -24,7 +24,7 @@ const pin: {
 ```
 
 Defined in:
-[main.ts:122](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L122)
+[main.ts:121](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L121)
 
 This feature annotate or highlight the anatomy of an element.
 

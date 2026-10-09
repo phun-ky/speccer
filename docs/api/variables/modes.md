@@ -12,7 +12,7 @@ const modes: {
 ```
 
 Defined in:
-[main.ts:238](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L238)
+[main.ts:237](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L237)
 
 The available modes to run SPECCER with
 

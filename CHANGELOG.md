@@ -1,5 +1,15 @@
 # Changelog
 
+## [11.3.64](https://github.com/phun-ky/speccer/compare/v11.3.63...v11.3.64) (2026-10-09)
+
+### Tasks
+
+* 🤖 set LICENSE copyright year to first commit (2018) ([f0033fe](https://github.com/phun-ky/speccer/commit/f0033fed06cd5878974d5f3c18b35510a53789e2))
+
+### Bug
+
+* 🐛 re-render on resize and wait for pins to be drawn ([1228fba](https://github.com/phun-ky/speccer/commit/1228fba1e922d044cf361daf3f38e7cf5b55403d))
+
 ## [11.3.63](https://github.com/phun-ky/speccer/compare/v11.3.62...v11.3.63) (2026-09-03)
 
 ### Tasks

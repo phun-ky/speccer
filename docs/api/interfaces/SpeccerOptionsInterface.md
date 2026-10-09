@@ -3,7 +3,7 @@
 # Interface: SpeccerOptionsInterface
 
 Defined in:
-[types/speccer.ts:122](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L122)
+[types/speccer.ts:117](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L117)
 
 Configuration object that tells Speccer **what** to render and **how** to render
 it.
@@ -136,7 +136,7 @@ optional grid?: {
 ```
 
 Defined in:
-[types/speccer.ts:247](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L247)
+[types/speccer.ts:242](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L242)
 
 Options for the `"grid"` feature.
 
@@ -195,7 +195,7 @@ optional measure?: {
 ```
 
 Defined in:
-[types/speccer.ts:188](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L188)
+[types/speccer.ts:183](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L183)
 
 Options for the `"measure"` feature.
 
@@ -246,7 +246,7 @@ optional pin?: {
 ```
 
 Defined in:
-[types/speccer.ts:157](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L157)
+[types/speccer.ts:152](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L152)
 
 Options for the `"pin"` feature.
 
@@ -320,7 +320,7 @@ position: SpeccerPositionType;
 ```
 
 Defined in:
-[types/speccer.ts:139](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L139)
+[types/speccer.ts:134](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L134)
 
 Preferred anchor side for rendering or label placement.
 
@@ -338,7 +338,7 @@ slug: string;
 ```
 
 Defined in:
-[types/speccer.ts:130](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L130)
+[types/speccer.ts:125](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L125)
 
 Machine-readable identifier for this option set.
 
@@ -361,7 +361,7 @@ optional spacing?: {
 ```
 
 Defined in:
-[types/speccer.ts:219](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L219)
+[types/speccer.ts:214](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L214)
 
 Options for the `"spacing"` feature.
 
@@ -420,7 +420,7 @@ type: SpeccerFeatureType;
 ```
 
 Defined in:
-[types/speccer.ts:148](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L148)
+[types/speccer.ts:143](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L143)
 
 Which Speccer feature this option set activates.
 
@@ -440,7 +440,7 @@ optional typography?: {
 ```
 
 Defined in:
-[types/speccer.ts:206](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L206)
+[types/speccer.ts:201](https://github.com/phun-ky/speccer/blob/main/src/types/speccer.ts#L201)
 
 Options for the `"typography"` feature.
 

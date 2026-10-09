@@ -10,7 +10,7 @@ const mark: {
 ```
 
 Defined in:
-[main.ts:192](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L192)
+[main.ts:191](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L191)
 
 This feature marks given element
 
