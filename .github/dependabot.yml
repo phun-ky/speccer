@@ -21,3 +21,8 @@ updates:
     allow:
       - dependency-type: direct
       - dependency-type: production
+    ignore:
+      # Keep @types/node on the Node major that CI runs (node-version in
+      # .github/workflows). Bump it by hand when CI moves to a new major.
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
