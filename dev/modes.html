@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <title>@phun-ky/speccer | modes</title>
+    <meta charset="utf-8" />
+    <meta name="robots" content="none" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/speccer.css" rel="stylesheet" type="text/css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        line-height: 1.5;
+      }
+
+      header,
+      section {
+        max-width: 40rem;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      nav a[aria-current='page'] {
+        font-weight: 700;
+      }
+
+      .spacer {
+        height: 150vh;
+      }
+
+      .box {
+        display: inline-block;
+        padding: 1rem;
+        margin: 1rem;
+        background-color: #eee;
+      }
+    </style>
+    <script defer src="/dev-nav.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Activation modes</h1>
+      <p>
+        Loads <code>speccer.js</code> with the mode given in
+        <code>?mode=</code>. Without a mode, the default (<code>dom</code>) is
+        used.
+      </p>
+      <nav>
+        <a href="?mode=dom">dom</a> · <a href="?mode=instant">instant</a> ·
+        <a href="?mode=manual">manual</a> · <a href="?mode=lazy">lazy</a>
+      </nav>
+      <p id="manual-controls" hidden>
+        <button type="button" id="run-speccer">Run speccer()</button>
+      </p>
+    </header>
+
+    <section id="above-the-fold">
+      <div class="box" id="mark-above" data-speccer="mark">Mark</div>
+      <div class="box" id="measure-above" data-speccer="measure width bottom">
+        Measure
+      </div>
+    </section>
+
+    <div class="spacer"></div>
+
+    <section id="below-the-fold">
+      <div class="box" id="mark-below" data-speccer="mark">Mark</div>
+      <div class="box" id="spacing-below" data-speccer="spacing">Spacing</div>
+      <div data-speccer="pin-area" id="pin-area-below">
+        <div class="box" id="pin-below" data-speccer="pin top">Pin</div>
+      </div>
+    </section>
+
+    <div class="spacer"></div>
+
+    <script>
+      const modes = ['dom', 'instant', 'manual', 'lazy'];
+      const mode = new URLSearchParams(location.search).get('mode');
+      const script = document.createElement('script');
+
+      script.src = '/speccer.js';
+
+      if (modes.includes(mode)) script.setAttribute(`data-${mode}`, '');
+
+      for (const link of document.querySelectorAll('nav a')) {
+        if (link.search === `?mode=${mode}`) link.ariaCurrent = 'page';
+      }
+
+      if (mode === 'manual') {
+        document.getElementById('manual-controls').hidden = false;
+        document
+          .getElementById('run-speccer')
+          .addEventListener('click', () => window.speccer());
+      }
+
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

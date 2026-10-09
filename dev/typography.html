@@ -63,6 +63,7 @@
         color: #333333;
       }
     </style>
+    <script defer src="/dev-nav.js"></script>
   </head>
   <body class="ph">
     <div class="ph app project" id="app">
@@ -330,12 +331,12 @@
                 </div>
               </div>
               <div class="ph toggle-controls">
-                <input id="id1" type="checkbox" class="ph toggle" value="a" />
-                <label for="id1" class="ph">Touch shortcut</label>
+                <input id="id1-2" type="checkbox" class="ph toggle" value="a" />
+                <label for="id1-2" class="ph">Touch shortcut</label>
               </div>
               <div class="ph toggle-controls">
-                <input id="id1" type="checkbox" class="ph toggle" value="a" />
-                <label for="id1" class="ph">Artboard preview</label>
+                <input id="id1-3" type="checkbox" class="ph toggle" value="a" />
+                <label for="id1-3" class="ph">Artboard preview</label>
               </div>
               <hr class="ph full" />
               <button
@@ -484,9 +485,9 @@
               <hr class="ph full" />
               <h4 class="ph">View settings</h4>
               <div class="ph toggle-controls" style="margin-bottom: 1rem">
-                <input id="id1" type="checkbox" class="ph toggle" value="a" />
+                <input id="id1-4" type="checkbox" class="ph toggle" value="a" />
                 <label
-                  for="id1"
+                  for="id1-4"
                   class="ph"
                   data-speccer="typography syntax left"
                   >Rotation snapping</label
@@ -541,12 +542,12 @@
                 </div>
               </div>
               <div class="ph toggle-controls">
-                <input id="id1" type="checkbox" class="ph toggle" value="a" />
-                <label for="id1" class="ph">Touch shortcut</label>
+                <input id="id1-5" type="checkbox" class="ph toggle" value="a" />
+                <label for="id1-5" class="ph">Touch shortcut</label>
               </div>
               <div class="ph toggle-controls">
-                <input id="id1" type="checkbox" class="ph toggle" value="a" />
-                <label for="id1" class="ph">Artboard preview</label>
+                <input id="id1-6" type="checkbox" class="ph toggle" value="a" />
+                <label for="id1-6" class="ph">Artboard preview</label>
               </div>
               <hr class="ph full" />
               <button
@@ -699,39 +700,9 @@
       </footer>
     </div>
 
-    <script data-manual src="/speccer.js" type="text/javascript"></script>
-    <script>
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', window.speccer);
-      } else {
-        // `DOMContentLoaded` already fired
-        window.speccer();
-      }
-      const debounce = function (func, wait, immediate) {
-        var timeout;
-        return function () {
-          var context = this,
-            args = arguments;
-          var later = function () {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-          };
-          var callNow = immediate && !timeout;
-          clearTimeout(timeout);
-          timeout = setTimeout(later, wait);
-          if (callNow) func.apply(context, args);
-        };
-      };
-      const speccerEventFunc = debounce(() => {
-        window.speccer();
-      }, 100);
-
-      window.removeEventListener('resize', speccerEventFunc);
-      window.addEventListener('resize', speccerEventFunc);
-    </script>
+    <script src="/speccer.js"></script>
     <svg
       class="ph-speccer"
-      viewBox="0 0"
       id="ph-speccer-svg"
       xmlns="http://www.w3.org/2000/svg"
     >

@@ -62,6 +62,7 @@
         --ph-speccer-measure-size: 8px;
       }
     </style>
+    <script defer src="/dev-nav.js"></script>
   </head>
   <body class="ph">
     <div class="ph app frontpage" id="app">
@@ -185,7 +186,7 @@
         class="ph box"
       ></div>
     </div>
-    </div>
+
   </main>
 
     <link async href="/speccer.css" rel="stylesheet" type="text/css" />
@@ -249,35 +250,6 @@
           8px 8px 16px rgba(0, 0, 0, 0.2);
       }
     </style>
-    <script data-manual src="/speccer.js" type="text/javascript"></script>
-    <script>
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', window.speccer);
-      } else {
-        // `DOMContentLoaded` already fired
-        window.speccer();
-      }
-      const debounce = function (func, wait, immediate) {
-        var timeout;
-        return function () {
-          var context = this,
-            args = arguments;
-          var later = function () {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-          };
-          var callNow = immediate && !timeout;
-          clearTimeout(timeout);
-          timeout = setTimeout(later, wait);
-          if (callNow) func.apply(context, args);
-        };
-      };
-      const speccerEventFunc = debounce(() => {
-        window.speccer();
-      }, 100);
-
-      window.removeEventListener('resize', speccerEventFunc);
-      window.addEventListener('resize', speccerEventFunc);
-    </script>
+    <script src="/speccer.js"></script>
   </body>
 </html>

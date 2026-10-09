@@ -114,6 +114,7 @@
         color: var(--ph-speccer-color-text-light);
       }
     </style>
+    <script defer src="/dev-nav.js"></script>
   </head>
   <body class="ph">
     <div class="ph app frontpage" id="app">
@@ -333,35 +334,17 @@
       </footer>
     </div>
 
-    <script data-manual src="/speccer.js" type="text/javascript"></script>
+    <script data-manual src="/speccer.js"></script>
     <script>
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', window.speccer);
-      } else {
-        // `DOMContentLoaded` already fired
-        window.speccer();
-      }
-      const debounce = function (func, wait, immediate) {
-        var timeout;
-        return function () {
-          var context = this,
-            args = arguments;
-          var later = function () {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-          };
-          var callNow = immediate && !timeout;
-          clearTimeout(timeout);
-          timeout = setTimeout(later, wait);
-          if (callNow) func.apply(context, args);
-        };
-      };
-      const speccerEventFunc = debounce(() => {
-        window.speccer();
-      }, 100);
+      // Manual mode, so the toggle buttons below can call window.speccer()
+      document.addEventListener('DOMContentLoaded', () => window.speccer());
 
-      window.removeEventListener('resize', speccerEventFunc);
-      window.addEventListener('resize', speccerEventFunc);
+      let resizeTimeout;
+
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => window.speccer(), 300);
+      });
 
       const toggleColumnsButtonEl = document.getElementById('toggle-columns');
       const toggleRowsButtonEl = document.getElementById('toggle-rows');
@@ -441,7 +424,6 @@
     </script>
     <svg
       class="ph-speccer"
-      viewBox="0 0"
       id="ph-speccer-svg"
       xmlns="http://www.w3.org/2000/svg"
     >
