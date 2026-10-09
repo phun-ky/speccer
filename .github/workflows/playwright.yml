@@ -18,7 +18,8 @@ jobs:
     - name: Build
       run: npm run build
     - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+      # Only the browsers used by the projects in playwright.config.mjs
+      run: npx playwright install --with-deps chromium firefox
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v7

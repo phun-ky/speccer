@@ -134,12 +134,7 @@ If any SVG options are used, you need to add the following svg into your
 document:
 
 ```html
-<svg
-  class="ph-speccer"
-  viewBox="0 0"
-  id="ph-speccer-svg"
-  xmlns="http://www.w3.org/2000/svg"
->
+<svg class="ph-speccer" id="ph-speccer-svg" xmlns="http://www.w3.org/2000/svg">
   <path
     class="ph-speccer path original"
     id="ph-speccer-path"

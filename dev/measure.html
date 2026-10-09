@@ -129,6 +129,7 @@
         margin-bottom: 20px;
       }
     </style>
+    <script defer src="/dev-nav.js"></script>
   </head>
   <body class="ph">
     <div class="ph app frontpage" id="app">
@@ -251,7 +252,7 @@
           >
             <div
               class="ph"
-              id="grid-example"
+              id="grid-example-2"
               style="
                 display: flex;
                 flex-direction: column;
@@ -260,7 +261,7 @@
               "
             >
               <div
-                id="2202a8b8-b259-512308-3670de213cd123"
+                id="2202a8b8-b259-512308-3670de213cd123-2"
                 class="ph box"
                 data-speccer="measure width bottom slim"
               ></div>
@@ -272,7 +273,7 @@
           >
             <div
               class="ph"
-              id="grid-example"
+              id="grid-example-3"
               style="
                 display: flex;
                 flex-direction: column;
@@ -281,7 +282,7 @@
               "
             >
               <div
-                id="2202a8b8-b259-512308-3670de213cd123"
+                id="2202a8b8-b259-512308-3670de213cd123-3"
                 class="ph box"
                 data-speccer="measure height right slim"
               ></div>
@@ -294,7 +295,7 @@
             <h3 class="ph">Subtle slim</h3>
             <div
               class="ph"
-              id="grid-example"
+              id="grid-example-4"
               style="
                 display: flex;
                 flex-direction: column;
@@ -303,7 +304,7 @@
               "
             >
               <div
-                id="2202a8b8-b259-512308-3670de213cd123"
+                id="2202a8b8-b259-512308-3670de213cd123-4"
                 class="ph box"
                 data-speccer="measure height left slim subtle"
               ></div>
@@ -316,7 +317,7 @@
             <h2 class="ph" style="margin-bottom: 7rem">Default</h2>
             <div
               class="ph"
-              id="grid-example"
+              id="grid-example-5"
               style="
                 display: flex;
                 flex-direction: column;
@@ -325,7 +326,7 @@
               "
             >
               <div
-                id="2202a8b8-b259-512308-3670de213cd123"
+                id="2202a8b8-b259-512308-3670de213cd123-5"
                 class="ph box"
                 data-speccer="measure width bottom"
               ></div>
@@ -337,7 +338,7 @@
           >
             <div
               class="ph"
-              id="grid-example"
+              id="grid-example-6"
               style="
                 display: flex;
                 flex-direction: column;
@@ -346,7 +347,7 @@
               "
             >
               <div
-                id="2202a8b8-b259-512308-3670de213cd123"
+                id="2202a8b8-b259-512308-3670de213cd123-6"
                 class="ph box"
                 data-speccer="measure height right"
               ></div>
@@ -358,7 +359,7 @@
           >
             <div
               class="ph"
-              id="grid-example"
+              id="grid-example-7"
               style="
                 display: flex;
                 flex-direction: column;
@@ -383,7 +384,7 @@
             </h2>
             <div
               class="ph"
-              id="grid-example"
+              id="grid-example-8"
               style="
                 display: flex;
                 flex-direction: column;
@@ -548,39 +549,9 @@
       </footer>
     </div>
 
-    <script data-manual src="/speccer.js" type="text/javascript"></script>
-    <script>
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', window.speccer);
-      } else {
-        // `DOMContentLoaded` already fired
-        window.speccer();
-      }
-      const debounce = function (func, wait, immediate) {
-        var timeout;
-        return function () {
-          var context = this,
-            args = arguments;
-          var later = function () {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-          };
-          var callNow = immediate && !timeout;
-          clearTimeout(timeout);
-          timeout = setTimeout(later, wait);
-          if (callNow) func.apply(context, args);
-        };
-      };
-      const speccerEventFunc = debounce(() => {
-        window.speccer();
-      }, 100);
-
-      window.removeEventListener('resize', speccerEventFunc);
-      window.addEventListener('resize', speccerEventFunc);
-    </script>
+    <script src="/speccer.js"></script>
     <svg
       class="ph-speccer"
-      viewBox="0 0"
       id="ph-speccer-svg"
       xmlns="http://www.w3.org/2000/svg"
     >

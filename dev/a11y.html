@@ -60,6 +60,7 @@
         --ph-speccer-color-text-light: white;
       }
     </style>
+    <script defer src="/dev-nav.js"></script>
   </head>
   <body class="ph">
     <div class="ph app project" id="app">
@@ -152,6 +153,7 @@
                   <input
                     type="text"
                     class="ph"
+                    autocomplete="off"
                     data-speccer-description="Document name"
                     value="Camellia by Jinjin Sun"
                     style="
@@ -176,6 +178,7 @@
                   <input
                     type="text"
                     class="ph non-editable"
+                    autocomplete="off"
                     data-speccer-title="Static text"
                     data-speccer-description="Document size [xx] by [yy][units]"
                     style="
@@ -888,11 +891,11 @@
               <h2 class="ph">Form</h2>
               <form class="ph">
                 <div class="ph input-group">
-                  <label class="ph" for="email1">Email</label>
+                  <label class="ph" for="email1-2">Email</label>
                   <input
                     data-lpignore="true"
                     type="email"
-                    id="email1"
+                    id="email1-2"
                     class="ph"
                   />
                 </div>
@@ -1027,39 +1030,9 @@
       </footer>
     </div>
 
-    <script data-manual src="/speccer.js" type="text/javascript"></script>
-    <script>
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', window.speccer);
-      } else {
-        // `DOMContentLoaded` already fired
-        window.speccer();
-      }
-      const debounce = function (func, wait, immediate) {
-        var timeout;
-        return function () {
-          var context = this,
-            args = arguments;
-          var later = function () {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-          };
-          var callNow = immediate && !timeout;
-          clearTimeout(timeout);
-          timeout = setTimeout(later, wait);
-          if (callNow) func.apply(context, args);
-        };
-      };
-      const speccerEventFunc = debounce(() => {
-        window.speccer();
-      }, 100);
-
-      window.removeEventListener('resize', speccerEventFunc);
-      window.addEventListener('resize', speccerEventFunc);
-    </script>
+    <script src="/speccer.js"></script>
     <svg
       class="ph-speccer"
-      viewBox="0 0"
       id="ph-speccer-svg"
       xmlns="http://www.w3.org/2000/svg"
     >

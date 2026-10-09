@@ -114,6 +114,7 @@
         margin-bottom: 20px;
       }
     </style>
+    <script defer src="/dev-nav.js"></script>
   </head>
   <body class="ph">
     <div class="ph app frontpage" id="app">
@@ -493,39 +494,9 @@
       </footer>
     </div>
 
-    <script data-manual src="/speccer.js" type="text/javascript"></script>
-    <script>
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', window.speccer);
-      } else {
-        // `DOMContentLoaded` already fired
-        window.speccer();
-      }
-      const debounce = function (func, wait, immediate) {
-        var timeout;
-        return function () {
-          var context = this,
-            args = arguments;
-          var later = function () {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-          };
-          var callNow = immediate && !timeout;
-          clearTimeout(timeout);
-          timeout = setTimeout(later, wait);
-          if (callNow) func.apply(context, args);
-        };
-      };
-      const speccerEventFunc = debounce(() => {
-        window.speccer();
-      }, 100);
-
-      window.removeEventListener('resize', speccerEventFunc);
-      window.addEventListener('resize', speccerEventFunc);
-    </script>
+    <script src="/speccer.js"></script>
     <svg
       class="ph-speccer"
-      viewBox="0 0"
       id="ph-speccer-svg"
       xmlns="http://www.w3.org/2000/svg"
     >
