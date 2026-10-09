@@ -1,5 +1,15 @@
 # Changelog
 
+## [11.4.0](https://github.com/phun-ky/speccer/compare/v11.3.65...v11.4.0) (2026-10-09)
+
+### Documentation
+
+* ✏️ remove the invalid viewBox from the SVG snippet ([b30a9cb](https://github.com/phun-ky/speccer/commit/b30a9cbda63ded5140c4d67dd7787e075fb86e95))
+
+### Feature
+
+* 🎸 re-render lazy-loaded annotations on resize ([a0acc79](https://github.com/phun-ky/speccer/commit/a0acc793a94f4b053d847a09c61e40bd0285b1e8)), closes [#71](https://github.com/phun-ky/speccer/issues/71)
+
 ## [11.3.65](https://github.com/phun-ky/speccer/compare/v11.3.64...v11.3.65) (2026-10-09)
 
 ### Tasks

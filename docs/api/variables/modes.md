@@ -8,11 +8,12 @@ const modes: {
   dom: (speccer: SpeccerFunctionType) => void;
   lazy: () => void;
   manual: (speccer: SpeccerFunctionType) => void;
+  rerenderLazy: () => void;
 };
 ```
 
 Defined in:
-[main.ts:237](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L237)
+[main.ts:252](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L252)
 
 The available modes to run SPECCER with
 
@@ -116,4 +117,41 @@ The speccer function to execute.
 ```ts
 // Usage example:
 manual(mySpeccer);
+```
+
+### rerenderLazy
+
+```ts
+rerenderLazy: () => void;
+```
+
+Removes all annotations and starts lazy loading again, so annotations in view
+are redrawn right away and the rest when they are scrolled into view. Used to
+re-render on resize when lazy loading.
+
+#### Returns
+
+`void`
+
+#### Example
+
+```ts
+rerenderLazy();
+```
+
+## Example
+
+Lazy loading, re-rendered on resize:
+
+```ts
+import { modes } from '@phun-ky/speccer';
+
+modes.lazy();
+
+let resizeTimeout;
+
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(modes.rerenderLazy, 300);
+});
 ```
