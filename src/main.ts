@@ -1,6 +1,6 @@
 /* eslint no-console:0 */
 import './types/interfaces/global';
-import { dom, lazy, manual, activate } from './config/browser';
+import { dom, lazy, manual, activate, rerenderLazy } from './config/browser';
 import { a11y as initA11y } from './features/a11y';
 import { create as gridCreate, grid as gridElement } from './features/grid';
 import { create as markCreate, mark as markElement } from './features/mark';
@@ -233,10 +233,26 @@ export const typography = {
 /**
  * The available modes to run SPECCER with
  *
+ * @example
+ * Lazy loading, re-rendered on resize:
+ *
+ * ```ts
+ * import { modes } from '@phun-ky/speccer';
+ *
+ * modes.lazy();
+ *
+ * let resizeTimeout;
+ *
+ * window.addEventListener('resize', () => {
+ *   clearTimeout(resizeTimeout);
+ *   resizeTimeout = setTimeout(modes.rerenderLazy, 300);
+ * });
+ * ```
  */
 export const modes = {
   dom,
   lazy,
+  rerenderLazy,
   manual,
   activate
 };

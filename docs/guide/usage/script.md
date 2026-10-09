@@ -67,3 +67,7 @@ for different types of initialization:
 
 If no attribute is applied, it will default to `data-dom`, as in, it will
 initialize when `DOMContentLoaded` is fired.
+
+Except with `data-manual`, annotations are re-rendered when the window is
+resized. With `data-lazy`, the annotations in view are redrawn right away, and
+the rest when they are scrolled into view.
