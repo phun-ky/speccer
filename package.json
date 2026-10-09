@@ -100,7 +100,7 @@
     "@types/jsdom": "^28.0.0",
     "@types/node": "^24.19.1",
     "cobertura": "^1.0.1",
-    "cssnano": "^8.0.1",
+    "cssnano": "^9.3.2",
     "eslint": "^10.0.0",
     "eslint-config-phun-ky": "^2.0.10",
     "git-cz": "^4.9.0",
