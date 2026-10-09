@@ -1,5 +1,17 @@
 # Changelog
 
+## [11.3.65](https://github.com/phun-ky/speccer/compare/v11.3.64...v11.3.65) (2026-10-09)
+
+### Tasks
+
+* 🤖 bump cssnano from 8.0.10 to 9.3.2 ([47e5ad1](https://github.com/phun-ky/speccer/commit/47e5ad17a3d770ee9d18fde62867ba315de37c02))
+* 🤖 match @types/node to the Node version CI runs ([1c6a762](https://github.com/phun-ky/speccer/commit/1c6a762864412ec14e600a1a3e907a465aaebd22))
+* 🤖 type-check tests with node types ([65b05b3](https://github.com/phun-ky/speccer/commit/65b05b38bcec94cedb01db93009bbcd7d567250a))
+
+### Bug
+
+* 🐛 position text pins correctly on scrolled pages ([9c54682](https://github.com/phun-ky/speccer/commit/9c54682befbdad5f16932b97ebc3dea0010ec7e6)), references [#368](https://github.com/phun-ky/speccer/issues/368)
+
 ## [11.3.64](https://github.com/phun-ky/speccer/compare/v11.3.63...v11.3.64) (2026-10-09)
 
 ### Tasks
