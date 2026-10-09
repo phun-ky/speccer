@@ -6,8 +6,26 @@ See a [demo of this here](https://codepen.io/phun-ky/full/VwRRLyY).
 
 :::
 
-If you're importing **SPECCER** instead of with a script tag, you can use the
-following approach to apply lazy loading:
+If you're importing **SPECCER** instead of with a script tag, use
+`modes.lazy()`. It renders each element when it is scrolled into view. To
+re-render on resize, call `modes.rerenderLazy()`: it redraws the annotations in
+view right away, and the rest when they are scrolled into view.
+
+```javascript
+import { modes } from '@phun-ky/speccer';
+
+modes.lazy();
+
+let resizeTimeout;
+
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(modes.rerenderLazy, 300);
+});
+```
+
+To lazy load only some features, you can use your own `IntersectionObserver`
+instead, like this for pins:
 
 ```javascript
 import { pin } from '@phun-ky/speccer';

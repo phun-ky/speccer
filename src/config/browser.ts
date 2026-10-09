@@ -4,7 +4,7 @@
  * Contains the helper functions to activate SPECCER via a script tag, based on attributes:
  *
  * > [!NOTE]
- * > If the activation method is dom or instant, a resize feature is activated, making sure everything is re-rendered on resize. for manual or lazy loading, you are responsible to handle resize yourself.
+ * > With dom, instant or lazy activation, annotations are re-rendered when the window is resized. With lazy loading, only the annotations in view are redrawn right away; the rest follow when they are scrolled into view. With manual activation, you are responsible for handling resize yourself.
  *
  * > [!NOTE]
  * > Remember to add the CSS file!:
@@ -46,7 +46,7 @@
  * <script src="../speccer.js" data-lazy></script>
  * ```
  *
- * Lazy loads `speccer()` per specced element
+ * Lazy loads `speccer()` per specced element, when it is scrolled into view
  *
  */
 /* node:coverage enable */
@@ -66,6 +66,7 @@ import {
   SPECCER_FEATURE_SPACING,
   SPECCER_FEATURE_TYPOGRAPHY
 } from '../utils/constants';
+import { removeAll } from '../utils/node';
 import { activate as resizeActivate } from '../utils/resize';
 
 /* node:coverage disable */
@@ -90,6 +91,37 @@ export const dom = (speccer: SpeccerFunctionType): void => {
   else speccer();
 };
 
+/**
+ * The observers created by the latest call to `lazy()`.
+ */
+let _lazy_observers: IntersectionObserver[] = [];
+
+/**
+ * Renders each element matching the selector the first time it is scrolled
+ * into view.
+ *
+ * @param {string} selector - The elements to observe.
+ * @param {(el: HTMLElement) => unknown} render - Renders the annotations for one element.
+ */
+const observeLazily = (
+  selector: string,
+  render: (el: HTMLElement) => unknown
+): void => {
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.intersectionRatio > 0) {
+        // Before rendering, so a slow render can't be started twice
+        observer.unobserve(entry.target);
+        render(entry.target as HTMLElement);
+      }
+    }
+  });
+
+  for (const el of document.querySelectorAll(selector)) observer.observe(el);
+
+  _lazy_observers.push(observer);
+};
+
 /* node:coverage disable */
 /**
  * A function to initialize lazy speccer functionality.
@@ -102,95 +134,52 @@ export const dom = (speccer: SpeccerFunctionType): void => {
  */
 /* node:coverage enable */
 export const lazy = (): void => {
-  const _spacing_observer = new IntersectionObserver((els, observer) => {
-    for (const el of els) {
-      if (el.intersectionRatio > 0) {
-        spacingElement(el.target as HTMLElement);
-        observer.unobserve(el.target);
-      }
-    }
-  });
+  // Stop the observers from a previous call, so nothing is rendered twice
+  for (const observer of _lazy_observers) observer.disconnect();
 
-  for (const el of document.querySelectorAll(
-    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"],[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)`
-  )) {
-    _spacing_observer.observe(el);
-  }
+  _lazy_observers = [];
 
-  const _measure_observer = new IntersectionObserver((els, observer) => {
-    for (const el of els) {
-      if (el.intersectionRatio > 0) {
-        measureElement(el.target as HTMLElement);
-        observer.unobserve(el.target);
-      }
-    }
-  });
+  observeLazily(
+    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"],[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)`,
+    spacingElement
+  );
+  observeLazily(
+    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_MEASURE}"]`,
+    measureElement
+  );
+  observeLazily(
+    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_MARK}"]`,
+    markElement
+  );
+  observeLazily(
+    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_TYPOGRAPHY}"]`,
+    typographyElement
+  );
+  observeLazily(
+    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_GRID}"]`,
+    gridElement
+  );
+  observeLazily(
+    `[${SPECCER_DATA_ATTRIBUTE}="${SPECCER_FEATURE_PIN_AREA}"]`,
+    pinElements
+  );
+};
 
-  for (const el of document.querySelectorAll(
-    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_MEASURE}"]`
-  )) {
-    _measure_observer.observe(el);
-  }
-
-  const _mark_observer = new IntersectionObserver((els, observer) => {
-    for (const el of els) {
-      if (el.intersectionRatio > 0) {
-        markElement(el.target as HTMLElement);
-        observer.unobserve(el.target);
-      }
-    }
-  });
-
-  for (const el of document.querySelectorAll(
-    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_MARK}"]`
-  )) {
-    _mark_observer.observe(el);
-  }
-
-  const _typography_observer = new IntersectionObserver((els, observer) => {
-    for (const el of els) {
-      if (el.intersectionRatio > 0) {
-        typographyElement(el.target as HTMLElement);
-        observer.unobserve(el.target);
-      }
-    }
-  });
-
-  for (const el of document.querySelectorAll(
-    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_TYPOGRAPHY}"]`
-  )) {
-    _typography_observer.observe(el);
-  }
-
-  const _grid_observer = new IntersectionObserver((els, observer) => {
-    for (const el of els) {
-      if (el.intersectionRatio > 0) {
-        gridElement(el.target as HTMLElement);
-        observer.unobserve(el.target);
-      }
-    }
-  });
-
-  for (const el of document.querySelectorAll(
-    `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_GRID}"]`
-  )) {
-    _grid_observer.observe(el);
-  }
-
-  const _pin_observer = new IntersectionObserver(async (els, observer) => {
-    for (const el of els) {
-      if (el.intersectionRatio > 0) {
-        await pinElements(el.target as HTMLElement);
-        observer.unobserve(el.target);
-      }
-    }
-  });
-
-  for (const el of document.querySelectorAll(
-    `[${SPECCER_DATA_ATTRIBUTE}="${SPECCER_FEATURE_PIN_AREA}"]`
-  )) {
-    _pin_observer.observe(el);
-  }
+/* node:coverage disable */
+/**
+ * Removes all annotations and starts lazy loading again, so annotations in
+ * view are redrawn right away and the rest when they are scrolled into view.
+ * Used to re-render on resize when lazy loading.
+ *
+ * @example
+ * ```ts
+ * rerenderLazy();
+ * ```
+ */
+/* node:coverage enable */
+export const rerenderLazy = (): void => {
+  removeAll('.ph-speccer.speccer');
+  lazy();
 };
 
 /* node:coverage disable */
@@ -230,17 +219,28 @@ export const activate = (speccer: SpeccerFunctionType): void => {
     const _speccer_script_src = _script.getAttribute('src');
 
     if (_speccer_script_src?.includes('speccer.js')) {
-      if (_script.hasAttribute('data-manual')) manual(speccer);
-      else if (_script.hasAttribute('data-instant')) speccer();
-      else if (_script.hasAttribute('data-dom')) dom(speccer);
-      else if (_script.hasAttribute('data-lazy')) lazy();
+      if (_script.hasAttribute('data-manual')) {
+        manual(speccer);
+
+        return;
+      }
+
+      // Lazy loading re-renders lazily on resize, so not everything at once
+      if (
+        _script.hasAttribute('data-lazy') &&
+        !_script.hasAttribute('data-instant') &&
+        !_script.hasAttribute('data-dom')
+      ) {
+        lazy();
+        resizeActivate(rerenderLazy);
+
+        return;
+      }
+
+      if (_script.hasAttribute('data-instant')) speccer();
       else dom(speccer);
 
-      if (
-        !_script.hasAttribute('data-manual') &&
-        !_script.hasAttribute('data-lazy')
-      )
-        resizeActivate(speccer);
+      resizeActivate(speccer);
     }
   }
 };
