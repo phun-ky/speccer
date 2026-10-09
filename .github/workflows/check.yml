@@ -19,7 +19,7 @@ on:
       - '.prettierrc'
       - 'rollup.config.js'
       - 'tsconfig.json'
-      - 'tsconfig.test.json'
+      - 'tsconfig.build.json'
       - 'postcss.config.cjs'
       - '.browserslistrc'
       - '.release-it.json'
@@ -53,6 +53,8 @@ jobs:
         run: npm ci
       - name: Lint
         run: npx eslint .
+      - name: Typecheck # Source and tests, see tsconfig.json
+        run: npx tsc
       - name: Build # Build all packages
         run: npm run build
       - name: Test

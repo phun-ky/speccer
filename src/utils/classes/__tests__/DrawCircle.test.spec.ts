@@ -23,14 +23,19 @@ describe('DrawCircle', () => {
 
   it('throws an error on initialization with el not in the DOM', () => {
     assert.throws(
-      () => new DrawCircle(document.createElement('div'), 12, {}),
+      () =>
+        new DrawCircle(
+          document.createElement('div'),
+          12,
+          {} as SpeccerOptionsInterface
+        ),
       /el is not in the DOM/
     );
   });
 
   it('throws an error on initialization with missing required SVG elements', () => {
     assert.throws(
-      () => new DrawCircle(document.body, 123, {}),
+      () => new DrawCircle(document.body, 123, {} as SpeccerOptionsInterface),
       /Missing required SVG element to draw circles. Please see the documentation/
     );
   });

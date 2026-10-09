@@ -24,7 +24,7 @@
     "compactFolders": false,
     "excludeReferences": true
   },
-  "tsconfig": "tsconfig.json",
+  "tsconfig": "tsconfig.build.json",
   "readme": "none",
   "indexFormat": "list",
   "interfacePropertiesFormat": "list",
