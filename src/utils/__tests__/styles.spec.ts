@@ -28,7 +28,7 @@ describe('add', () => {
   });
 
   it('should apply styles as an array of objects', async () => {
-    const styles = [
+    const styles: Parameters<typeof add>[1] = [
       { key: 'color', value: 'rgb(0, 0, 255)' },
       { key: 'backgroundColor', value: 'rgb(255, 255, 0)' }
     ];

@@ -47,7 +47,7 @@ describe('intrinsic-coords', () => {
       await intrinsic_coords(element, 'invalid-position');
     } catch (error) {
       assert.equal(
-        error.message,
+        (error as Error).message,
         'The position given does not match allowed positions to use! Valid positions are: center, left, right, top, bottom, right-top, right-bottom, left-top, left-bottom, top-left, top-right, bottom-left, bottom-right, top-center, right-center, bottom-center, left-center'
       );
     }

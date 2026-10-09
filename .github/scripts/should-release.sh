@@ -20,7 +20,7 @@ published_files=(
   README.md
   LICENSE
   rollup.config.js
-  tsconfig.json
+  tsconfig.build.json
   postcss.config.cjs
   .browserslistrc
 )
