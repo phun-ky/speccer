@@ -66,12 +66,12 @@ export const pinElements = async (
     (sectionElement.getAttribute('data-speccer-literals') as string | null) ||
     window.SPECCER_LITERALS ||
     SPECCER_LITERALS;
+  const _visible_els = ([..._els_to_be_pinned] as HTMLElement[]).filter(
+    (targetElement: HTMLElement) => !isElementHidden(targetElement)
+  );
 
-  ([..._els_to_be_pinned] as HTMLElement[])
-    .filter(
-      async (targetElement: HTMLElement) => !isElementHidden(targetElement)
-    )
-    .forEach(
+  await Promise.all(
+    _visible_els.map(
       async (
         targetElement: HTMLElement,
         targetIndex: number
@@ -91,5 +91,6 @@ export const pinElements = async (
 
         await pinElement(targetElement, sectionElement, _content, _options);
       }
-    );
+    )
+  );
 };

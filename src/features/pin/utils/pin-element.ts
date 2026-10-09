@@ -56,8 +56,8 @@ export const pinElement = async (
 
   if (_options.type !== 'pin' || !_options.pin) return;
 
-  const _pin_element_id = `speccer-${options.slug}-${targetElement.getAttribute('id') || uniqueID()}`;
-  const _pin_element = createPinElement(content, options, _pin_element_id);
+  const _pin_element_id = `speccer-${_options.slug}-${targetElement.getAttribute('id') || uniqueID()}`;
+  const _pin_element = createPinElement(content, _options, _pin_element_id);
 
   targetElement.setAttribute('data-speccer-element-id', _pin_element_id);
 

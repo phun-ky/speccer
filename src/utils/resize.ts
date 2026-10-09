@@ -1,6 +1,12 @@
+import { DebounceAnyFunctionType } from '../types/debounce';
 import { SpeccerFunctionType } from '../types/speccer';
 
 import debounce from './debounce';
+
+/**
+ * The currently attached resize listener, kept so it can be removed again.
+ */
+let speccerEventFunc: DebounceAnyFunctionType | undefined;
 
 /* node:coverage disable */
 /**
@@ -22,17 +28,12 @@ import debounce from './debounce';
  */
 /* node:coverage enable */
 export const activate = (speccer: SpeccerFunctionType): void => {
-  /**
-   * The debounced event listener function.
-   * @type {Function}
-   */
-  const speccerEventFunc = () =>
-    debounce(() => {
-      speccer();
-    }, 300);
+  // Remove the previous resize event listener to prevent duplicates
+  if (speccerEventFunc) window.removeEventListener('resize', speccerEventFunc);
 
-  // Remove any existing resize event listeners to prevent duplicates
-  window.removeEventListener('resize', speccerEventFunc);
+  speccerEventFunc = debounce(() => {
+    speccer();
+  }, 300);
 
   // Add the debounced resize event listener
   window.addEventListener('resize', speccerEventFunc);
