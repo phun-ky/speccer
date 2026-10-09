@@ -50,6 +50,8 @@ export const styles = async (
     };
   }
 
+  // The parent rect is relative to the viewport, while the pin is positioned
+  // in the document, so the scroll offset has to be added to it
   if ((parent || text) && !bracket && !useCurlyBrackets && !subtle) {
     if (position === PinAreaEnum.Right) {
       const { top } = _positional_styles.fromRight({
@@ -61,7 +63,7 @@ export const styles = async (
       const { left, width } = parentElement.getBoundingClientRect();
 
       return {
-        left: `${left + width + SPECCER_PIN_SPACE}px`,
+        left: `${left + width + window.scrollX + SPECCER_PIN_SPACE}px`,
         top: `${top}px`
       };
     }
@@ -77,7 +79,7 @@ export const styles = async (
 
       return {
         left: `${left}px`,
-        top: `${top + height + SPECCER_PIN_SPACE}px`
+        top: `${top + height + window.scrollY + SPECCER_PIN_SPACE}px`
       };
     }
 
@@ -92,7 +94,7 @@ export const styles = async (
 
       return {
         // If we're pinning with text only, we need to move the element a bit further to the left
-        left: `${left - SPECCER_PIN_SPACE * 1.5 - (text ? 170 : 0)}px`,
+        left: `${left + window.scrollX - SPECCER_PIN_SPACE * 1.5 - (text ? 170 : 0)}px`,
         top: `${top}px`
       };
     }
@@ -107,7 +109,7 @@ export const styles = async (
 
     return {
       left: `${left}px`,
-      top: `${top - SPECCER_PIN_SPACE * 1.5}px`
+      top: `${top + window.scrollY - SPECCER_PIN_SPACE * 1.5}px`
     };
   }
 

@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
-import { describe, it } from 'node:test';
+import { after, before, describe, it } from 'node:test';
 
 import { SpeccerOptionsInterface } from '../../../../types/speccer';
+import { SPECCER_DEFAULT_PIN_SPACE } from '../../../../utils/constants';
 import { styles } from '../styles';
 
 describe('pin styles', () => {
@@ -174,5 +175,70 @@ describe('pin styles', () => {
     assert.ok(result['left'] !== undefined);
     assert.ok(result['top'] !== undefined);
     assert.ok(result['width'] !== undefined);
+  });
+});
+
+describe('pin styles for text pins on a scrolled page', () => {
+  const scroll = { x: 300, y: 600 };
+  // The pin-area as getBoundingClientRect() reports it: relative to the viewport
+  const area = { top: 300, left: 180, width: 840, height: 444 };
+  const space = SPECCER_DEFAULT_PIN_SPACE;
+
+  before(() => {
+    Object.defineProperty(window, 'scrollX', {
+      value: scroll.x,
+      configurable: true
+    });
+    Object.defineProperty(window, 'scrollY', {
+      value: scroll.y,
+      configurable: true
+    });
+  });
+
+  after(() => {
+    Object.defineProperty(window, 'scrollX', { value: 0, configurable: true });
+    Object.defineProperty(window, 'scrollY', { value: 0, configurable: true });
+  });
+
+  const getStyles = (position: string) => {
+    const parentElement = document.createElement('div');
+
+    parentElement.getBoundingClientRect = () =>
+      ({
+        ...area,
+        right: area.left + area.width,
+        bottom: area.top + area.height
+      }) as DOMRect;
+
+    return styles(
+      document.createElement('div'),
+      document.createElement('div'),
+      parentElement,
+      { position, pin: { text: true } } as SpeccerOptionsInterface
+    );
+  };
+
+  it('should place a bottom pin below the pin-area in document coordinates', async () => {
+    const { top } = await getStyles('bottom');
+
+    assert.equal(top, `${area.top + area.height + scroll.y + space}px`);
+  });
+
+  it('should place a top pin above the pin-area in document coordinates', async () => {
+    const { top } = await getStyles('top');
+
+    assert.equal(top, `${area.top + scroll.y - space * 1.5}px`);
+  });
+
+  it('should place a right pin right of the pin-area in document coordinates', async () => {
+    const { left } = await getStyles('right');
+
+    assert.equal(left, `${area.left + area.width + scroll.x + space}px`);
+  });
+
+  it('should place a left pin left of the pin-area in document coordinates', async () => {
+    const { left } = await getStyles('left');
+
+    assert.equal(left, `${area.left + scroll.x - space * 1.5 - 170}px`);
   });
 });
