@@ -12,7 +12,7 @@
 ![npm](https://img.shields.io/npm/dm/%40phun-ky/speccer)
 ![GitHub Repo stars](https://img.shields.io/github/stars/phun-ky/speccer)
 [![codecov](https://codecov.io/gh/phun-ky/speccer/graph/badge.svg?token=VA91DL7ZLZ)](https://codecov.io/gh/phun-ky/speccer)
-[![build](https://github.com/phun-ky/speccer/actions/workflows/check.yml/badge.svg)](https://github.com/phun-ky/speccer/actions/workflows/check.yml)
+[![build](https://github.com/phun-ky/speccer/actions/workflows/ci.yml/badge.svg)](https://github.com/phun-ky/speccer/actions/workflows/ci.yml)
 
 ## About
 

@@ -1,0 +1,132 @@
+name: CI
+
+# No path filters: `check` is a required status check, and a workflow skipped
+# by a path filter never reports it, which would block the pull request.
+on:
+  push:
+    branches: ['main']
+  pull_request:
+    branches: ['main']
+  workflow_dispatch:
+
+# A new push to a pull request cancels the run for the previous one
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint and typecheck
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      # setup-node only caches automatically when package.json has a
+      # packageManager field, so it is set explicitly
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Lint
+        run: npx eslint .
+      - name: Typecheck # Source and tests, see tsconfig.json
+        run: npx tsc
+
+  unit:
+    name: Unit tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Test
+        run: npm run test:ci
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v7
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: phun-ky/speccer
+
+  build:
+    name: Build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Import smoke test
+        run: |
+          node --import global-jsdom/register --input-type=module \
+            -e "const m = await import('./dist/speccer.esm.js'); if (typeof m.default !== 'function') throw new Error('default export missing');"
+      - name: Check package contents
+        run: npm pack --dry-run
+
+  e2e:
+    name: E2E tests (${{ matrix.browser }})
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      # Report both browsers, even if one fails
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps ${{ matrix.browser }}
+      - name: Run Playwright tests
+        run: npx playwright test --project=${{ matrix.browser }}
+      - uses: actions/upload-artifact@v7
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report-${{ matrix.browser }}
+          path: playwright-report/
+          retention-days: 30
+
+  # The required status check for pull requests. Add new jobs to `needs`.
+  check:
+    name: check
+    # Not always(): a run cancelled by a newer push shouldn't report a failure
+    if: ${{ !cancelled() }}
+    needs: [lint, unit, build, e2e]
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check that all jobs passed
+        env:
+          FAILED: ${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') || contains(needs.*.result, 'skipped') }}
+          RESULTS: lint=${{ needs.lint.result }} unit=${{ needs.unit.result }} build=${{ needs.build.result }} e2e=${{ needs.e2e.result }}
+        run: |
+          echo "$RESULTS"
+          [ "$FAILED" = "false" ]
+
+  notify:
+    name: Notify failed check
+    needs: check
+    if: failure()
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: drivendataorg/failed-build-issue-action@v1
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          label-name: 'problems: 💔 build failed'
