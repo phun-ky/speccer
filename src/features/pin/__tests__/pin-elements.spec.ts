@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { beforeEach, describe, it } from 'node:test';
+import { beforeEach, describe, it, mock } from 'node:test';
 
 import { SpeccerOptionsInterface } from '../../../types/speccer';
 import { pinElement, pinElements } from '../index';
@@ -60,5 +60,34 @@ describe('pinElement', () => {
     const pin = document.getElementById(id as string) as HTMLElement;
 
     assert.ok(pin.classList.contains('bracket'));
+  });
+});
+
+describe('pinElements without the SVG element', () => {
+  beforeEach(() => {
+    // Text pins and curly brackets are drawn with SVG, but there is no
+    // #ph-speccer-svg element on this page
+    document.body.innerHTML = `
+      <div data-speccer="pin-area" id="section">
+        <div data-speccer="pin right text" data-speccer-title="One" id="one"></div>
+        <div data-speccer="pin right text" data-speccer-title="Two" id="two"></div>
+        <div data-speccer="pin bracket curly top" id="curly"></div>
+      </div>
+    `;
+  });
+
+  it('still draws the pins, and warns once instead of throwing', async () => {
+    const warn = mock.method(console, 'warn', () => {});
+
+    await pinElements(document.getElementById('section') as HTMLElement);
+
+    assert.equal(getPins().length, 3);
+    assert.equal(warn.mock.calls.length, 1);
+    assert.match(
+      String(warn.mock.calls[0].arguments[0]),
+      /#ph-speccer-svg/
+    );
+
+    warn.mock.restore();
   });
 });

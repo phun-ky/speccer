@@ -176,6 +176,13 @@ await pinElement(element, element.parentElement, 'A', options);
 
 ![Image of text pin option](/speccer-pin-text-light.png)
 
+::: warning Important
+
+Text pins are connected to their target with an SVG line, so remember to add
+[the required `svg` element](/guide/introduction/#svg) to the document.
+
+:::
+
 If you want _text-in-place_ pinning feature, instead of referencing the pins,
 you can use the `text` feature:
 
@@ -261,6 +268,14 @@ await pinElement(element, element.parentElement, 'A', options);
 ![Screenshot of the dissection/anatomy feature where the pins are aligned with the parent container](/speccer-pin-parent-align-default-light.png)
 
 You can also align the pins to the parent container.
+
+::: warning Important
+
+Pins aligned to the parent container are connected to their target with an SVG
+line, so remember to add [the required `svg` element](/guide/introduction/#svg)
+to the document.
+
+:::
 
 ### Via `<script>`-tag
 
