@@ -45,8 +45,8 @@ To see the documentation, go to [speccer.dev](https://speccer.dev).
 
 ## Used by
 
-| [![if insurance logo](./docs/public/used-by-if.png)](https://www.if-insurance.com) | [![24seven office logo](./docs/public/used-by-tfso.png)](https://24sevenoffice.com) |
-| ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [![if insurance logo](./docs/public/used-by-if.png)](https://www.if-insurance.com) | [![24seven office logo](./docs/public/used-by-tfso.png)](https://24sevenoffice.com) | [![24seven office logo](./docs/public/used-by-ferdia.png)](https://ferdia.co) |
+| ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 
 ## License
 
