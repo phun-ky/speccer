@@ -14,6 +14,35 @@ import { createPinElement } from './create-pin-element';
 import { styles } from './styles';
 
 /**
+ * Whether the missing SVG element has been warned about, so it's only done once.
+ */
+let _warned_missing_svg = false;
+
+/**
+ * Checks that the SVG element used to draw lines, circles and curly brackets
+ * is in the document, and warns once if it isn't.
+ *
+ * @returns {boolean} `true` if the SVG element is in the document.
+ */
+const hasSVGElement = (): boolean => {
+  if (
+    document.getElementById('ph-speccer-svg') &&
+    document.getElementById('ph-speccer-path')
+  )
+    return true;
+
+  if (!_warned_missing_svg) {
+    _warned_missing_svg = true;
+    // eslint-disable-next-line no-console
+    console.warn(
+      'SPECCER: pins with lines, like text and parent pins, and curly brackets need the #ph-speccer-svg element in the document. The pins are drawn without lines. See https://speccer.dev/guide/introduction/#svg'
+    );
+  }
+
+  return false;
+};
+
+/**
  * Create and style the pin element as needed.
  *
  * This function appends a new pin element to the document body based on the `data-speccer="pin"` attribute
@@ -80,6 +109,12 @@ export const pinElement = async (
     !_options.pin.enclose &&
     !_options.pin.bracket &&
     !isText;
+
+  if (
+    (_options.pin.useSVGLine || _options.pin.useCurlyBrackets) &&
+    !hasSVGElement()
+  )
+    return _pin_element_id;
 
   if (_options.pin.useSVGLine) {
     new DrawSVGLine(targetElement, _pin_element, _options);
