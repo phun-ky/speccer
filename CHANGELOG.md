@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.4.1](https://github.com/phun-ky/speccer/compare/v11.4.0...v11.4.1) (2026-10-10)
+
+### Bug
+
+* 🐛 warn once instead of throwing when the SVG element is missing ([6b5e2fd](https://github.com/phun-ky/speccer/commit/6b5e2fd05c0a1b751966875539159281788a2364)), closes [#369](https://github.com/phun-ky/speccer/issues/369)
+
 ## [11.4.0](https://github.com/phun-ky/speccer/compare/v11.3.65...v11.4.0) (2026-10-09)
 
 ### Documentation
