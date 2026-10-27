@@ -102,9 +102,9 @@
     "pretest:ci": "rm -rf coverage && mkdir -p coverage",
     "pretest:e2e": "rm -rf test-results && npm run build",
     "test": "npm run test:unit",
-    "test:ci": "glob-bin -c \"node --import tsx --import global-jsdom/register --test --no-warnings --experimental-test-coverage --test-reporter=cobertura --test-reporter-destination=coverage/cobertura-coverage.xml --test-reporter=spec --test-reporter-destination=stdout\" \"./src/**/__tests__/**/*.spec.[jt]s\"",
+    "test:ci": "node --import tsx --import global-jsdom/register --test --no-warnings --enable-source-maps --experimental-test-coverage --test-coverage-include='src/**/*.ts' --test-coverage-exclude='src/**/__tests__/**' --test-coverage-exclude='src/types/**' --test-coverage-lines=82 --test-coverage-functions=88 --test-coverage-branches=85 --test-reporter=cobertura --test-reporter-destination=coverage/cobertura-coverage.xml --test-reporter=spec --test-reporter-destination=stdout 'src/**/__tests__/**/*.spec.ts'",
     "test:e2e": "npx playwright test",
-    "test:unit": "glob-bin -c \"node --import tsx --import global-jsdom/register --test --no-warnings\" \"./src/**/__tests__/**/*.spec.[jt]s\""
+    "test:unit": "node --import tsx --import global-jsdom/register --test --no-warnings 'src/**/__tests__/**/*.spec.ts'"
   },
   "config": {
     "commitizen": {
@@ -124,7 +124,6 @@
     "eslint": "^10.0.0",
     "eslint-config-phun-ky": "^2.0.10",
     "git-cz": "^4.9.0",
-    "glob-bin": "^1.0.0",
     "global-jsdom": "^29.0.0",
     "globals": "^17.0.0",
     "jsdom": "^29.0.0",
@@ -159,5 +158,17 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "overrides": {
+    "get-uri": {
+      "basic-ftp": "^6.2.3"
+    },
+    "micromark-extension-math": {
+      "katex": "^0.18.2"
+    },
+    "release-it": {
+      "undici": "^7.30.1"
+    },
+    "vite": "^6.4.5"
   }
 }
