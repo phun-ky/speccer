@@ -137,4 +137,5 @@ export class DrawSVGLine {
 }
 
 // Exporting the class as a global object (if needed)
-window.DrawSVGLine = DrawSVGLine;
+// Only in a browser, so importing speccer elsewhere (Node, SSR) doesn't throw
+if (typeof window !== 'undefined') window.DrawSVGLine = DrawSVGLine;

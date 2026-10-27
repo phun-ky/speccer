@@ -161,4 +161,6 @@ export class DrawSVGCurlyBracket {
 }
 
 // Exporting the class as a global object (if needed)
-window.DrawSVGCurlyBracket = DrawSVGCurlyBracket;
+// Only in a browser, so importing speccer elsewhere (Node, SSR) doesn't throw
+if (typeof window !== 'undefined')
+  window.DrawSVGCurlyBracket = DrawSVGCurlyBracket;

@@ -213,6 +213,9 @@ export const manual = (speccer: SpeccerFunctionType): void => {
  */
 /* node:coverage enable */
 export const activate = (speccer: SpeccerFunctionType): void => {
+  // Nothing to activate outside a browser (Node, server-side rendering)
+  if (typeof document === 'undefined') return;
+
   const _script = document.currentScript;
 
   if (_script) {
