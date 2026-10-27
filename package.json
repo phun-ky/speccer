@@ -62,6 +62,7 @@
     "clean": "rm -rf dist dts",
     "commit": "npx git-cz",
     "dev": "npx browser-sync start --server 'dev' --files 'dist' --ss 'dist'",
+    "docs:check": "typedoc --emit none --treatWarningsAsErrors",
     "docs:gen": "node ./node_modules/.bin/typedoc",
     "predocs:dev": "npm run docs:gen",
     "docs:dev": "vitepress dev docs",

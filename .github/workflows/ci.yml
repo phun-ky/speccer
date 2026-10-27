@@ -75,6 +75,24 @@ jobs:
       - name: Check package contents
         run: npm pack --dry-run
 
+  docs:
+    name: Docs
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      # The API reference: fails on any TypeDoc warning
+      - name: Check the API docs
+        run: npm run docs:check
+      # A broken site fails the pull request, not the deploy
+      - name: Build the docs site
+        run: npm run docs:build
+
   e2e:
     name: E2E tests (${{ matrix.browser }})
     runs-on: ubuntu-24.04
@@ -109,13 +127,13 @@ jobs:
     name: check
     # Not always(): a run cancelled by a newer push shouldn't report a failure
     if: ${{ !cancelled() }}
-    needs: [lint, unit, build, e2e]
+    needs: [lint, unit, build, docs, e2e]
     runs-on: ubuntu-24.04
     steps:
       - name: Check that all jobs passed
         env:
           FAILED: ${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') || contains(needs.*.result, 'skipped') }}
-          RESULTS: lint=${{ needs.lint.result }} unit=${{ needs.unit.result }} build=${{ needs.build.result }} e2e=${{ needs.e2e.result }}
+          RESULTS: lint=${{ needs.lint.result }} unit=${{ needs.unit.result }} build=${{ needs.build.result }} docs=${{ needs.docs.result }} e2e=${{ needs.e2e.result }}
         run: |
           echo "$RESULTS"
           [ "$FAILED" = "false" ]
