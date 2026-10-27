@@ -93,4 +93,39 @@ describe('template', () => {
       /line-height<\/span><span class="token punctuation">:<\/span> <span class="token number">28/
     );
   });
+  for (const useHighlighting of [false, true]) {
+    it(`should escape markup in the computed styles (highlighting: ${useHighlighting})`, async (test) => {
+      const mockGetComputedStyle = test.mock.method(global, 'getComputedStyle');
+
+      mockGetComputedStyle.mock.mockImplementation(
+        (): unknown & CSSStyleDeclaration => {
+          const styles = {
+            fontFamily: '"<img src=x onerror=alert(1)>", serif',
+            fontSize: '16px',
+            fontWeight: '400',
+            fontVariationSettings: '<b>normal</b>',
+            lineHeight: 'normal',
+            letterSpacing: '<i>1em</i>',
+            fontStyle: '<script>alert(2)</script>'
+          };
+          return styles as CSSStyleDeclaration;
+        }
+      );
+
+      const result = await template(targetElement, useHighlighting);
+      const element = document.createElement('div');
+
+      element.innerHTML = result;
+
+      assert.equal(element.querySelector('img, b, i, script'), null);
+      assert.match(
+        element.textContent as string,
+        /"<img src=x onerror=alert\(1\)>"/
+      );
+      assert.match(
+        element.textContent as string,
+        /<script>alert\(2\)<\/script>/
+      );
+    });
+  }
 });

@@ -114,4 +114,36 @@ describe('getContentForPin', () => {
       symbol
     );
   });
+
+  it('should escape markup in the title and description', () => {
+    const options: SpeccerOptionsInterface = {
+      pin: { text: true }
+    } as SpeccerOptionsInterface;
+
+    targetElement.setAttribute(
+      'data-speccer-title',
+      '<img src=x onerror=alert(1)>'
+    );
+    targetElement.setAttribute(
+      'data-speccer-description',
+      '<b>Bold</b> & more\\n<script>alert(2)</script>'
+    );
+
+    assert.strictEqual(
+      getContentForPin(symbol, targetElement, options),
+      '<span class="ph-speccer title">&lt;img src=x onerror=alert(1)&gt;</span><span class="ph-speccer description">&lt;b&gt;Bold&lt;/b&gt; &amp; more<br/>&lt;script&gt;alert(2)&lt;/script&gt;</span>'
+    );
+  });
+
+  it('should escape markup in the symbol', () => {
+    const options: SpeccerOptionsInterface = {
+      pin: { text: false }
+    } as SpeccerOptionsInterface;
+
+    assert.strictEqual(getContentForPin('<', targetElement, options), '&lt;');
+    assert.strictEqual(
+      getContentForPin('&', targetElement, {} as SpeccerOptionsInterface),
+      '&amp;'
+    );
+  });
 });
