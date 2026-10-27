@@ -3,7 +3,8 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/'
     # Minor and patch updates are grouped into one PR. Major updates are left
-    # ungrouped, so each one gets its own PR that can be tested and merged alone.
+    # ungrouped, so each one gets its own PR that can be tested and merged alone,
+    # and one blocked major doesn't hold back the others.
     groups:
       minor-and-patch:
         applies-to: version-updates
@@ -12,17 +13,41 @@ updates:
           - 'patch'
     schedule:
       interval: 'weekly'
+    # Only propose versions published at least two weeks ago: a compromised
+    # release is usually caught within days. Security updates still open at once.
+    cooldown:
+      default-days: 14
     labels:
       - 'mindless: 📦 dependencies'
-      - 'problems: security'
     commit-message:
       prefix: 'chore: 🤖 '
-    open-pull-requests-limit: 2
+    # Room for the group PR plus each major in its own PR
+    open-pull-requests-limit: 10
     allow:
       - dependency-type: direct
-      - dependency-type: production
     ignore:
       # Keep @types/node on the Node major that CI runs (node-version in
       # .github/workflows). Bump it by hand when CI moves to a new major.
       - dependency-name: '@types/node'
         update-types: ['version-update:semver-major']
+
+  # Keeps the action pins (commit SHAs) and their version comments current
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    # Grouped and split the same way as npm
+    groups:
+      minor-and-patch:
+        applies-to: version-updates
+        update-types:
+          - 'minor'
+          - 'patch'
+    schedule:
+      interval: 'weekly'
+    # Same two-week wait as npm, for the same reason
+    cooldown:
+      default-days: 14
+    labels:
+      - 'mindless: 📦 dependencies'
+    commit-message:
+      prefix: 'ci: 🎡 '
+    open-pull-requests-limit: 10
