@@ -296,6 +296,17 @@ try {
         '-e',
         `${check} check('require', require(${name}));`
       ],
+      // Server-side rendering: loading speccer without a DOM must not throw
+      'ES module import without a DOM': [
+        '--input-type=module',
+        '-e',
+        `${check} check('import without a DOM', await import(${name}));`
+      ],
+      'CommonJS require without a DOM': [
+        '--input-type=commonjs',
+        '-e',
+        `${check} check('require without a DOM', require(${name}));`
+      ],
       // Deep imports worked before exports existed, and must keep working
       'dist path import': [
         '--import',
