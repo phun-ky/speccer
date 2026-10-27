@@ -30,7 +30,9 @@ import { removeAll } from './utils/node';
 
 export type {
   SpeccerOptionsInterface,
-  SpeccerFunctionType
+  SpeccerFunctionType,
+  SpeccerFeatureType,
+  SpeccerPositionType
 } from './types/speccer';
 
 export { a11y } from './features/a11y';
