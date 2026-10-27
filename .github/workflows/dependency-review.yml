@@ -1,0 +1,21 @@
+name: Dependency Review
+
+# Check every pull request's dependency changes against the GitHub Advisory
+# Database, and fail on a high or critical vulnerability
+on:
+  pull_request:
+    branches: ['main']
+
+# Read-only: the action compares dependencies through the API, no checkout
+permissions:
+  contents: read
+
+jobs:
+  dependency-review:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Review dependency changes
+        uses: actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294 # v5.0.0
+        with:
+          fail-on-severity: high
+          fail-on-scopes: runtime, development
