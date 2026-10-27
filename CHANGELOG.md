@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.4.4](https://github.com/phun-ky/speccer/compare/v11.4.3...v11.4.4) (2026-10-27)
+
+### Bug
+
+* 🐛 import speccer without a DOM, for server-side rendering ([c946908](https://github.com/phun-ky/speccer/commit/c9469083106284f0a627031e0172ed97192e4e69)), closes [#484](https://github.com/phun-ky/speccer/issues/484)
+
 ## [11.4.3](https://github.com/phun-ky/speccer/compare/v11.4.2...v11.4.3) (2026-10-27)
 
 ### Bug
