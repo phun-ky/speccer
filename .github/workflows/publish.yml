@@ -20,6 +20,7 @@ on:
       - '.browserslistrc'
       - '.release-it.json'
       - '.github/scripts/should-release.sh'
+      - 'scripts/**'
       - '.github/workflows/publish.yml'
   workflow_dispatch:
 jobs:

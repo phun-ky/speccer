@@ -11,7 +11,7 @@
     "skipChecks": true
   },
   "hooks": {
-    "after:bump": "npm run build && npm run docs:gen",
+    "after:bump": "npm run build && npm run check:pack && npm run docs:gen",
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
   "plugins": {
