@@ -1,54 +1,65 @@
 'section: workflows':
-  - any:
-      - changed-files:
-          - any-glob-to-any-file:
-              - .github/workflows/**
+  - changed-files:
+      - any-glob-to-any-file:
+          - '.github/workflows/**'
+          - '.github/scripts/**'
 'section: repo':
-  - any:
-      - changed-files:
-          - any-glob-to-any-file:
-              - '*'
+  - changed-files:
+      - any-glob-to-any-file:
+          - '*'
+'section: tests':
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'src/**/__tests__/**'
+          - 'tests/**'
+          - 'playwright.config.mjs'
 'experience: developer':
-  - any:
-      - changed-files:
-          - any-glob-to-any-file:
-              - '.editorconfig'
-              - 'eslint.config.mjs'
-              - '.prettierrc'
-              - '.gitignore'
-              - '.release-it.json'
+  - changed-files:
+      - any-glob-to-any-file:
+          - '.browserslistrc'
+          - '.editorconfig'
+          - '.gitignore'
+          - '.prettierrc'
+          - '.putout.json'
+          - '.release-it.json'
+          - 'eslint.config.mjs'
+          - 'postcss.config.cjs'
+          - 'tsconfig.json'
+          - 'tsconfig.build.json'
+          - 'typedoc.json'
+          - 'scripts/**'
+          - 'dev/**'
 'context: github':
-  - any:
-      - changed-files:
-          - any-glob-to-any-file:
-              - .github/**
+  - changed-files:
+      - any-glob-to-any-file:
+          - '.github/**'
+'context: npm':
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'package.json'
+          - 'package-lock.json'
 'context: rollup':
-  - any:
-      - changed-files:
-          - any-glob-to-any-file:
-              - 'rollup.config.js'
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'rollup.config.js'
 'mindless: ✏️ docs':
   - any:
-      - head-branch: ['^docs', 'docs']
+      - head-branch: ['^docs/']
       - changed-files:
           - any-glob-to-any-file:
               - '**/*.md'
-'mindless: dependencies':
-  - any:
-      - changed-files:
-          - any-glob-to-any-file:
-              - 'package-lock.json'
+              - 'docs/**'
+'mindless: 📦 dependencies':
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'package-lock.json'
 
-# Add '✨ feature' label to any PR where the head branch name starts with `feat` or has a `feat` section in the name
+# By branch prefix only, so docs/fix-something is not labelled a bug
 '✨ feature':
-  - head-branch: ['^feat', 'feat']
+  - head-branch: ['^feat/']
 'problems: 🐛 bug':
-  - head-branch: ['^fix', 'fix']
+  - head-branch: ['^fix/']
 'mindless: 🤖 chore':
-  - head-branch: ['^chore', 'chore']
+  - head-branch: ['^chore/']
 'improvements: 💡 enhancement':
-  - head-branch: ['^improvements', 'improvements']
-
-# Add 'release' label to any PR that is opened against the `main` branch
-release:
-  - base-branch: 'main'
+  - head-branch: ['^improvements/']
