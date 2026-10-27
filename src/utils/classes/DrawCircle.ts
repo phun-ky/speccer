@@ -106,4 +106,5 @@ export class DrawCircle {
 }
 
 // Exporting the class as a global object (if needed)
-window.DrawCircle = DrawCircle;
+// Only in a browser, so importing speccer elsewhere (Node, SSR) doesn't throw
+if (typeof window !== 'undefined') window.DrawCircle = DrawCircle;
