@@ -1,5 +1,16 @@
 # Changelog
 
+## [11.4.2](https://github.com/phun-ky/speccer/compare/v11.4.1...v11.4.2) (2026-10-27)
+
+### Documentation
+
+* ✏️ say that pin titles and descriptions are shown as text ([0a0d659](https://github.com/phun-ky/speccer/commit/0a0d659986f6591fc506cac13eda9cc1b7a5e9e3)), references [#487](https://github.com/phun-ky/speccer/issues/487)
+* ✏️ Update README.md for used by ferdia logo ([516cb6e](https://github.com/phun-ky/speccer/commit/516cb6ebaed6a298e9edef49b05db6ad6fc84e1a))
+
+### Bug
+
+* 🐛 insert values read from the page as text, not HTML ([7a7ac15](https://github.com/phun-ky/speccer/commit/7a7ac157f5f0fd2c293db945ef2e361ad0d7ff74)), closes [#487](https://github.com/phun-ky/speccer/issues/487)
+
 ## [11.4.1](https://github.com/phun-ky/speccer/compare/v11.4.0...v11.4.1) (2026-10-10)
 
 ### Bug
