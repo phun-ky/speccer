@@ -68,12 +68,10 @@ jobs:
       - run: npm ci
       - name: Build
         run: npm run build
-      - name: Import smoke test
-        run: |
-          node --import global-jsdom/register --input-type=module \
-            -e "const m = await import('./dist/speccer.esm.js'); if (typeof m.default !== 'function') throw new Error('default export missing');"
-      - name: Check package contents
-        run: npm pack --dry-run
+      # Packs, lints and installs the tarball, then loads it through import,
+      # require, the dist paths, the UMD build and a browser bundle
+      - name: Check the package
+        run: npm run check:pack
 
   e2e:
     name: E2E tests (${{ matrix.browser }})

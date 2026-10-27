@@ -47,18 +47,38 @@
   "license": "MIT",
   "author": "Alexander Vassbotn Røyne-Helgesen <alexander@phun-ky.net>",
   "type": "module",
-  "main": "dist/speccer.js",
-  "module": "dist/speccer.esm.js",
-  "types": "dist/speccer.d.ts",
+  "main": "./dist/speccer.cjs",
+  "module": "./dist/speccer.esm.js",
+  "types": "./dist/speccer.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/speccer.d.ts",
+        "default": "./dist/speccer.esm.js"
+      },
+      "require": {
+        "types": "./dist/speccer.d.cts",
+        "default": "./dist/speccer.cjs"
+      }
+    },
+    "./package.json": "./package.json",
+    "./dist/*": "./dist/*"
+  },
+  "unpkg": "./dist/speccer.js",
+  "jsdelivr": "./dist/speccer.js",
   "files": [
-    "/dist/speccer.css",
-    "/dist/speccer.d.ts",
-    "/dist/speccer.esm.js",
-    "/dist/speccer.js",
-    "/dist/speccer.min.css"
+    "dist/speccer.cjs",
+    "dist/speccer.css",
+    "dist/speccer.d.cts",
+    "dist/speccer.d.ts",
+    "dist/speccer.esm.js",
+    "dist/speccer.js",
+    "dist/speccer.min.css",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "build": "npm run clean && npm run rollup && npm run styles",
+    "check:pack": "node scripts/check-pack.mjs",
     "clean": "rm -rf dist dts",
     "commit": "npx git-cz",
     "dev": "npx browser-sync start --server 'dev' --files 'dist' --ss 'dist'",
@@ -91,6 +111,7 @@
     }
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
     "@playwright/test": "^1.50.1",
     "@release-it/conventional-changelog": "^12.0.2",
     "@rollup/plugin-node-resolve": "^16.0.0",
@@ -111,6 +132,7 @@
     "postcss": "^8.5.2",
     "postcss-cli": "^11.0.0",
     "prettier": "^3.8.0",
+    "publint": "^0.3.25",
     "putout": "^42.0.3",
     "quibble": "^0.9.1",
     "release-it": "^21.1.0",
