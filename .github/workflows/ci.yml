@@ -141,8 +141,12 @@ jobs:
     needs: check
     if: failure()
     runs-on: ubuntu-24.04
+    # GITHUB_TOKEN works on Dependabot PRs too, where secrets are empty
+    permissions:
+      issues: write
     steps:
-      - uses: drivendataorg/failed-build-issue-action@v1
+      - uses: drivendataorg/failed-build-issue-action@940568ce50eeef3f31a920614cefcc6102d2f930 # v1.3.0
         with:
-          github-token: ${{ secrets.GH_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           label-name: 'problems: 💔 build failed'
+          create-label: false
