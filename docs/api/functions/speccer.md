@@ -7,7 +7,7 @@ function speccer(): void;
 ```
 
 Defined in:
-[main.ts:276](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L276)
+[main.ts:278](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L278)
 
 ## Returns
 

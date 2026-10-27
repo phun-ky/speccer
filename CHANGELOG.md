@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.4.5](https://github.com/phun-ky/speccer/compare/v11.4.4...v11.4.5) (2026-10-27)
+
+### Bug
+
+* 🐛 export SpeccerFeatureType and SpeccerPositionType ([ac2c71d](https://github.com/phun-ky/speccer/commit/ac2c71d3ab279071b9f468a69ffa4aaae2b99d47)), references [#500](https://github.com/phun-ky/speccer/issues/500)
+
 ## [11.4.4](https://github.com/phun-ky/speccer/compare/v11.4.3...v11.4.4) (2026-10-27)
 
 ### Bug
