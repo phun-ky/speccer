@@ -1,5 +1,23 @@
 # Changelog
 
+## [11.4.6](https://github.com/phun-ky/speccer/compare/v11.4.5...v11.4.6) (2026-10-27)
+
+### Tasks
+
+* 🤖 bump markdown-it from 14.3.2 to 14.3.3 ([ab63673](https://github.com/phun-ky/speccer/commit/ab6367308edabd6879ce5f77b0ba7a483e6f054c))
+* 🤖 commit new and removed API pages in the release commit ([d52289d](https://github.com/phun-ky/speccer/commit/d52289d2cef9c9ab3f18b53b3ebc1e774d25f46e)), references [#500](https://github.com/phun-ky/speccer/issues/500)
+* 🤖 fix the dev dependency vulnerabilities ([4263013](https://github.com/phun-ky/speccer/commit/4263013c9d4ad47e4466617a9078f3c793a0c9b8)), closes [#503](https://github.com/phun-ky/speccer/issues/503)
+* 🤖 remove stale config and unused devDependencies ([a1a83dc](https://github.com/phun-ky/speccer/commit/a1a83dc58ad6e0206d5fa2e03e6a5129d6d24e01)), references [#505](https://github.com/phun-ky/speccer/issues/505)
+* 🤖 remove the triage workflow ([279e7b5](https://github.com/phun-ky/speccer/commit/279e7b560a9b35e584f82854cbe4950ef5a69496)), references [#499](https://github.com/phun-ky/speccer/issues/499)
+
+### Documentation
+
+* ✏️ add the missing API pages for SpeccerFeatureType and SpeccerPositionType ([f7fef6c](https://github.com/phun-ky/speccer/commit/f7fef6c64cd5a256868b525c6408ec8836a7bf37)), references [#500](https://github.com/phun-ky/speccer/issues/500)
+
+### Bug
+
+* 🐛 point homepage at speccer.dev ([a0eac29](https://github.com/phun-ky/speccer/commit/a0eac29d1a224ac51623a978b3ed5c200f9f2b53)), references [#505](https://github.com/phun-ky/speccer/issues/505)
+
 ## [11.4.5](https://github.com/phun-ky/speccer/compare/v11.4.4...v11.4.5) (2026-10-27)
 
 ### Bug
