@@ -47,15 +47,34 @@
   "license": "MIT",
   "author": "Alexander Vassbotn Røyne-Helgesen <alexander@phun-ky.net>",
   "type": "module",
-  "main": "dist/speccer.js",
-  "module": "dist/speccer.esm.js",
-  "types": "dist/speccer.d.ts",
+  "main": "./dist/speccer.cjs",
+  "module": "./dist/speccer.esm.js",
+  "types": "./dist/speccer.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/speccer.d.ts",
+        "default": "./dist/speccer.esm.js"
+      },
+      "require": {
+        "types": "./dist/speccer.d.cts",
+        "default": "./dist/speccer.cjs"
+      }
+    },
+    "./package.json": "./package.json",
+    "./dist/*": "./dist/*"
+  },
+  "unpkg": "./dist/speccer.js",
+  "jsdelivr": "./dist/speccer.js",
   "files": [
-    "/dist/speccer.css",
-    "/dist/speccer.d.ts",
-    "/dist/speccer.esm.js",
-    "/dist/speccer.js",
-    "/dist/speccer.min.css"
+    "dist/speccer.cjs",
+    "dist/speccer.css",
+    "dist/speccer.d.cts",
+    "dist/speccer.d.ts",
+    "dist/speccer.esm.js",
+    "dist/speccer.js",
+    "dist/speccer.min.css",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "build": "npm run clean && npm run rollup && npm run styles",

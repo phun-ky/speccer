@@ -47,6 +47,14 @@ export default [
         assetFileNames: '[name][extname]'
       },
       {
+        // For require(): Jest and other CommonJS consumers
+        file: './dist/speccer.cjs',
+        format: 'cjs',
+        sourcemap: false,
+        banner,
+        exports: 'named'
+      },
+      {
         name: 'speccer',
         file: './dist/speccer.esm.js',
         format: 'esm',
@@ -69,7 +77,11 @@ export default [
   },
   {
     input: './dts/main.d.ts',
-    output: [{ file: './dist/speccer.d.ts', format: 'es' }],
+    output: [
+      { file: './dist/speccer.d.ts', format: 'es' },
+      // The types of the CommonJS build
+      { file: './dist/speccer.d.cts', format: 'es' }
+    ],
     plugins: [dts()]
   }
 ];
