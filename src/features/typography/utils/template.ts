@@ -1,9 +1,13 @@
 import { getTypography } from '../../../utils/css';
+import { escapeHTML } from '../../../utils/escape-html';
 import { get as getStyles } from '../../../utils/styles';
 
 /* node:coverage disable */
 /**
  * Generate a HTML string for typography styles of a target element.
+ *
+ * The computed style values are escaped, so markup in them (for example in a
+ * quoted font family name) is shown as text.
  *
  * @param {HTMLElement} targetElement - The target element for which to generate typography styles.
  * @param {boolean} [useHighlighting=false] - If we should use highlighting markup
@@ -22,7 +26,12 @@ export const template = async (
   useHighlighting = false
 ): Promise<string> => {
   const _target_styles = await getStyles(targetElement);
-  const _styles = getTypography(_target_styles);
+  const _styles = Object.fromEntries(
+    Object.entries(getTypography(_target_styles)).map(([key, value]) => [
+      key,
+      typeof value === 'string' ? escapeHTML(value) : value
+    ])
+  ) as ReturnType<typeof getTypography>;
 
   if (useHighlighting) {
     const _fontFamily = (_styles.fontFamily || '')
