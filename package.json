@@ -1,6 +1,6 @@
 {
   "name": "@phun-ky/speccer",
-  "version": "11.4.4",
+  "version": "11.4.5",
   "description": "A script to annotate, show spacing specs and to display typography information in documentation/website on HTML elements",
   "keywords": [
     "a11y",
@@ -82,6 +82,7 @@
     "clean": "rm -rf dist dts",
     "commit": "npx git-cz",
     "dev": "npx browser-sync start --server 'dev' --files 'dist' --ss 'dist'",
+    "docs:check": "typedoc --emit none --treatWarningsAsErrors",
     "docs:gen": "node ./node_modules/.bin/typedoc",
     "predocs:dev": "npm run docs:gen",
     "docs:dev": "vitepress dev docs",
