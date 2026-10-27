@@ -198,6 +198,9 @@ you can use the `text` feature:
 />
 ```
 
+The title and description are shown as text: markup in them is not rendered.
+Write `\n` in the description for a line break.
+
 Per now, this feature has no programmatic equivalent.
 
 ::: info

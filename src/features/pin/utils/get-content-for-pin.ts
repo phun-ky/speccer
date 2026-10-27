@@ -1,7 +1,12 @@
 import { SpeccerOptionsInterface } from '../../../types/speccer';
+import { escapeHTML } from '../../../utils/escape-html';
 
 /**
  * Generates the content for a pin element based on the provided symbol, target element, and options.
+ *
+ * The symbol, `data-speccer-title` and `data-speccer-description` are escaped,
+ * so markup in them is shown as text. A `\n` in the description becomes a
+ * line break.
  *
  * @param {string} symbol - The default symbol to use if no text or description is provided.
  * @param {HTMLElement} targetElement - The HTML element for which the content is being generated.
@@ -24,17 +29,22 @@ export const getContentForPin = (
   options: SpeccerOptionsInterface
 ): string => {
   const { pin } = options;
+  const _symbol = escapeHTML(symbol);
 
-  if (!pin) return symbol;
+  if (!pin) return _symbol;
 
   const { text } = pin;
   const _is_text =
     text && targetElement.getAttribute('data-speccer-title') !== null;
 
-  if (!_is_text) return symbol;
+  if (!_is_text) return _symbol;
 
-  const _title = targetElement.getAttribute('data-speccer-title');
-  const _description = targetElement.getAttribute('data-speccer-description');
+  const _title = escapeHTML(
+    targetElement.getAttribute('data-speccer-title') || ''
+  );
+  const _description = escapeHTML(
+    targetElement.getAttribute('data-speccer-description') || ''
+  );
   const _heading =
     targetElement.nodeName.indexOf('H') === 0
       ? `<span class="ph-speccer heading">${targetElement.nodeName}</span>`
@@ -46,5 +56,5 @@ export const getContentForPin = (
   if (_description && _title)
     return `${_heading}<span class="ph-speccer title">${_title}</span><span class="ph-speccer description">${_description.replaceAll('\\n', '<br/>')}</span>`;
 
-  return symbol;
+  return _symbol;
 };

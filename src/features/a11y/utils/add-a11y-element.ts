@@ -8,6 +8,9 @@ import { styles } from './styles';
 /**
  * Adds an accessibility element to the document body based on the target element and type.
  *
+ * Values read from the target element (its role and autocomplete attribute)
+ * are inserted as text, never as HTML.
+ *
  * ![Screenshot of speccer a11y tab stops in use](/speccer-a11y-tabstops-light.png?raw=true)
  * ![Screenshot of speccer a11y landmark in use](/speccer-a11y-landmarks-light.png?raw=true)
  *
@@ -38,17 +41,17 @@ export const addA11yElement = async (
     const _role = getRole(targetElement);
     const _node_name = targetElement.nodeName.toLowerCase();
 
-    _a11y_el.innerHTML = `&lt;${_node_name} role="${_role}"&gt;`;
+    _a11y_el.textContent = `<${_node_name} role="${_role}">`;
   }
 
   if (type === 'autocomplete') {
     const _autocomplete = targetElement.getAttribute('autocomplete') || '';
 
-    _a11y_el.innerHTML = `autocomplete="${_autocomplete}"`;
+    _a11y_el.textContent = `autocomplete="${_autocomplete}"`;
   }
 
   if (type === 'headings') {
-    _a11y_el.innerHTML = targetElement.nodeName;
+    _a11y_el.textContent = targetElement.nodeName;
     _a11y_el.classList.add(targetElement.nodeName.toLowerCase());
   }
 
