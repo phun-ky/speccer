@@ -6,7 +6,9 @@
 
 ## Type Aliases
 
+- [SpeccerFeatureType](type-aliases/SpeccerFeatureType.md)
 - [SpeccerFunctionType](type-aliases/SpeccerFunctionType.md)
+- [SpeccerPositionType](type-aliases/SpeccerPositionType.md)
 
 ## Variables
 

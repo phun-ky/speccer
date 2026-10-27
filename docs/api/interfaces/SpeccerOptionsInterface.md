@@ -344,8 +344,8 @@ Machine-readable identifier for this option set.
 
 #### Remarks
 
-When produced by getOptions, this is derived from the input `areaString` using a
-camel-casing strategy (e.g., `"pin bracket subtle"` → `"pinBracketSubtle"`).
+When produced by `getOptions`, this is derived from the input `areaString` using
+a camel-casing strategy (e.g., `"pin bracket subtle"` → `"pinBracketSubtle"`).
 
 ---
 
