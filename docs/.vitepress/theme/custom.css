@@ -1,4 +1,6 @@
-@import 'https://phun-ky.net/css/ph.css';
+/* phun-ky.net's stylesheet, copied into the theme so the site loads nothing
+   external. It uses system fonts only. */
+@import './ph/ph.css';
 
 :root {
   --vp-font-family-base: var(--ph-font-family);
