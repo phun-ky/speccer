@@ -124,7 +124,7 @@
     "eslint": "^10.0.0",
     "eslint-config-phun-ky": "^2.0.10",
     "git-cz": "^4.9.0",
-    "global-jsdom": "^29.0.0",
+    "global-jsdom": "^30.0.0",
     "globals": "^17.0.0",
     "jsdom": "^29.0.0",
     "postcss": "^8.5.2",
