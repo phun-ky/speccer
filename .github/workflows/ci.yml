@@ -79,6 +79,9 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # The "Last updated" dates come from each page's git history
+          fetch-depth: 0
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 24
@@ -90,6 +93,17 @@ jobs:
       # A broken site fails the pull request, not the deploy
       - name: Build the docs site
         run: npm run docs:build
+      # On main, the site that was just built and checked is what `deploy` publishes
+      - name: Setup Pages
+        if: >-
+          github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - name: Upload the site
+        if: >-
+          github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: docs/.vitepress/dist
 
   e2e:
     name: E2E tests (${{ matrix.browser }})
@@ -136,9 +150,30 @@ jobs:
           echo "$RESULTS"
           [ "$FAILED" = "false" ]
 
+  # Deploys speccer.dev from main, only after every check has passed
+  deploy:
+    name: Deploy
+    needs: check
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    # One deployment at a time; a deployment in progress is never cancelled
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write # Deploy to GitHub Pages
+      id-token: write # Verify the deployment's origin
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+
   notify:
     name: Notify failed check
-    needs: check
+    needs: [check, deploy]
     if: failure()
     runs-on: ubuntu-24.04
     # GITHUB_TOKEN works on Dependabot PRs too, where secrets are empty
