@@ -1,0 +1,11 @@
+# Project coverage moves by a few hundredths of a percent between runs on
+# the same source, so allow a small drop before failing the status.
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 1%
+    patch:
+      default:
+        target: auto
