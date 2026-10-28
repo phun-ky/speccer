@@ -20,7 +20,6 @@
           - '.editorconfig'
           - '.gitignore'
           - '.prettierrc'
-          - '.putout.json'
           - '.release-it.json'
           - 'eslint.config.mjs'
           - 'postcss.config.cjs'
