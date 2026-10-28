@@ -1,0 +1,5 @@
+#!/bin/sh
+# Add a Developer Certificate of Origin sign-off to every commit message,
+# unless it's already there. Enable with: git config core.hooksPath .githooks
+git interpret-trailers --if-exists doNothing --in-place \
+  --trailer "Signed-off-by: $(git config user.name) <$(git config user.email)>" "$1"
