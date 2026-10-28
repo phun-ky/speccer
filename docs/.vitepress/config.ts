@@ -100,7 +100,7 @@ export default defineConfig({
     },
     siteTitle: 'SPECCER',
     logo: {
-      src: './logo-speccer-symbol-yellow.svg',
+      src: '/logo-speccer-symbol-yellow.svg',
       alt: 'SPECCER logo'
     },
     nav: [
