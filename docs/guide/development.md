@@ -47,12 +47,9 @@ repository :)
 
 ## Clean code
 
-[ESLint](https://eslint.org/), [Prettier](https://prettier.io/) and
-[Putout](https://github.com/coderaiser/putout) is used:
+[ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) are used:
 
 ```shell
-// to check for code issues
-npm run style:code
 // to format code with ESLint and Prettier
 npm run style:format
 // to lint code with ESLint and Prettier
