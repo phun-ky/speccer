@@ -16,6 +16,7 @@ import lightTheme from './shiki/accessible-aa-light-shiki.json' with { type: 'js
 export default defineConfig({
   lang: 'en-GB',
   head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     ['meta', { property: 'og:url', content: 'https://speccer.dev' }],
     ['meta', { property: 'og:type', content: 'website' }],
     [
@@ -45,8 +46,7 @@ export default defineConfig({
       'meta',
       {
         property: 'og:image',
-        content:
-          'https://repository-images.githubusercontent.com/146403319/566babcb-abc0-4ce2-96c2-937a1bafbd6f'
+        content: 'https://speccer.dev/og-image.png'
       }
     ],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
@@ -77,12 +77,14 @@ export default defineConfig({
       'meta',
       {
         name: 'twitter:image',
-        content:
-          'https://repository-images.githubusercontent.com/146403319/566babcb-abc0-4ce2-96c2-937a1bafbd6f'
+        content: 'https://speccer.dev/og-image.png'
       }
     ]
   ],
 
+  sitemap: {
+    hostname: 'https://speccer.dev'
+  },
   lastUpdated: true,
   cleanUrls: true,
   metaChunk: true,
@@ -98,7 +100,7 @@ export default defineConfig({
     },
     siteTitle: 'SPECCER',
     logo: {
-      src: './logo-speccer-symbol-yellow.svg',
+      src: '/logo-speccer-symbol-yellow.svg',
       alt: 'SPECCER logo'
     },
     nav: [

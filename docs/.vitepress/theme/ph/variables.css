@@ -1,0 +1,80 @@
+:root {
+  --ph-color-background-invert: #000;
+  --ph-font-family:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+  --ph-font-family-code:
+    'Menlo for Powerline', 'Menlo Regular for Powerline', 'DejaVu Sans Mono',
+    Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  --ph-brand-color: #6ca7f9;
+  --ph-brand-color-invert: #0750b6;
+  --ph-color-link: #6ca7f9;
+  --ph-color-link-hover: #6ca7f9;
+  --ph-color-link-active: #6ca7f9;
+  --ph-color-link-visited: #6ca7f9;
+  --ph-color-text: #9fa8ad;
+  --ph-color-text-accent: #e4e4e7;
+  --ph-color-text-invert: #454444;
+  --ph-color-text-accent-invert: #000;
+  --ph-color-message: var(--ph-color-text);
+  --ph-color-well-background: rgba(159, 168, 173, 0.1);
+  --ph-color-well-background-hover: rgba(159, 168, 173, 0.5);
+  --ph-color-code-block-background: var(--ph-color-well-background);
+  --ph-color-code-block: var(--ph-color-code-color-6);
+  --ph-color-code: var(--ph-color-code-color-6);
+  --ph-color-background: #181a22;
+  --ph-color-background-gradient-2: #262a3b;
+  --ph-color-background-notice-warning: rgba(210, 153, 34, 0.2);
+  --ph-color-background-notice-note: rgba(47, 129, 247, 0.2);
+  --ph-color-background-notice-important: rgba(163, 113, 247, 0.2);
+  --ph-color-background-notice-error: rgba(248, 81, 73, 0.2);
+  --ph-color-background-notice-success: rgba(46, 160, 67, 0.2);
+  --ph-color-background-notice-info: var(--ph-color-well-background);
+  --ph-color-code-color-1: #859ba3;
+  --ph-color-code-color-2: #c79500;
+  --ph-color-code-color-3: #2caaa0;
+  --ph-color-code-color-4: #469edd;
+  --ph-color-code-color-5: #8c9b9b;
+  --ph-color-code-color-6: #e4e4e7;
+  --ph-color-code-color-7: #262831;
+  --ph-color-code-color-8: #f66;
+  --ph-background-radial-1: #262a3b;
+  --ph-background-radial-2: #181a22;
+  --ph-color-chart-gradient-start: rgba(108, 167, 249, 0.2);
+  --ph-color-chart-gradient-stop: rgba(108, 167, 249, 0);
+}
+:root.theme--light {
+  --ph-brand-color: #0750b6;
+  --ph-brand-color-invert: #6ca7f9;
+  --ph-color-background-invert: #e4e4e7;
+  --ph-color-link: #0750b6;
+  --ph-color-link-hover: #0750b6;
+  --ph-color-link-active: #0750b6;
+  --ph-color-link-visited: #0750b6;
+  --ph-color-text: #454444;
+  --ph-color-text-accent: #000;
+  --ph-color-text-invert: #9fa8ad;
+  --ph-color-text-accent-invert: #e4e4e7;
+  --ph-color-message: var(--ph-color-text-accent);
+  --ph-color-well-background: rgba(159, 168, 173, 0.1);
+  --ph-color-code-block-background: var(--ph-color-well-background);
+  --ph-color-background: #fff;
+  --ph-color-background-notice-warning: rgba(210, 153, 34, 0.2);
+  --ph-color-background-notice-note: rgba(47, 129, 247, 0.2);
+  --ph-color-background-notice-important: rgba(163, 113, 247, 0.2);
+  --ph-color-background-notice-error: rgba(248, 81, 73, 0.2);
+  --ph-color-background-notice-success: rgba(46, 160, 67, 0.2);
+  --ph-color-background-notice-info: var(--ph-color-well-background);
+  --ph-color-code-color-1: #566d71;
+  --ph-color-code-color-2: #806200;
+  --ph-color-code-color-3: #1e766d;
+  --ph-color-code-color-4: #1d699f;
+  --ph-color-code-color-5: #5c6a6a;
+  --ph-color-code-color-6: #000;
+  --ph-color-code-color-7: #f5f6f7;
+  --ph-color-code-color-8: #cd0404;
+  --ph-background-radial-1: #f5f6f7;
+  --ph-background-radial-2: #fff;
+  --ph-color-chart-gradient-start: rgba(7, 80, 182, 0.2);
+  --ph-color-chart-gradient-stop: rgba(7, 80, 182, 0);
+}
