@@ -64,6 +64,13 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # check:pack also loads the packed package on the oldest Node engines allows
+      - name: Setup Node.js 22.13.0, the engines floor
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22.13.0
+      - name: Remember the engines floor Node
+        run: echo "CHECK_PACK_NODE=$(command -v node)" >> "$GITHUB_ENV"
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 24
@@ -72,7 +79,8 @@ jobs:
       - name: Build
         run: npm run build
       # Packs, lints and installs the tarball, then loads it through import,
-      # require, the dist paths, the UMD build and a browser bundle
+      # require, the dist paths, the UMD build and a browser bundle, on Node 24
+      # and, without a DOM, on the engines floor
       - name: Check the package
         run: npm run check:pack
 

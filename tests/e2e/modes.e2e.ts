@@ -1,6 +1,6 @@
-import { annotationsFor, box, expect, expectSameBox, test } from './fixtures';
-
 import type { Page } from '@playwright/test';
+
+import { annotationsFor, box, expect, expectSameBox, test } from './fixtures';
 
 /**
  * Tags all current annotations, resizes the viewport, and waits until every

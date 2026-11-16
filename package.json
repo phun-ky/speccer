@@ -119,16 +119,16 @@
     "@release-it/conventional-changelog": "^12.0.2",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-terser": "^1.0.0",
-    "@types/jsdom": "^28.0.0",
+    "@types/jsdom": "^30.0.0",
     "@types/node": "^24.19.1",
     "cobertura": "^1.0.1",
     "cssnano": "^9.3.2",
     "eslint": "^10.0.0",
-    "eslint-config-phun-ky": "^2.0.10",
+    "eslint-config-phun-ky": "^3.0.0",
     "git-cz": "^4.9.0",
-    "global-jsdom": "^29.0.0",
+    "global-jsdom": "^30.0.0",
     "globals": "^17.0.0",
-    "jsdom": "^29.0.0",
+    "jsdom": "^30.1.3",
     "postcss": "^8.5.2",
     "postcss-cli": "^11.0.0",
     "prettier": "^3.8.0",
@@ -162,13 +162,16 @@
   },
   "overrides": {
     "get-uri": {
-      "basic-ftp": "^6.2.3"
+      "basic-ftp": "^6.2.4"
     },
     "micromark-extension-math": {
       "katex": "^0.18.2"
     },
     "release-it": {
       "undici": "^7.30.1"
+    },
+    "stylus": {
+      "glob": "^14.0.6"
     },
     "vite": "^6.4.5"
   }

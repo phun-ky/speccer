@@ -8,6 +8,11 @@
 //
 // speccer needs a DOM when it loads, so Node gets one from global-jsdom, and
 // the UMD build and the browser bundle run in a jsdom window.
+//
+// With CHECK_PACK_NODE set to another Node binary, the loads that need no DOM
+// (import, require, the dist paths and the CSS paths) also run on it, and its
+// version must be the oldest Node engines.node allows. jsdom needs a newer
+// Node than that, so the loads with a DOM run on the current Node only.
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import { JSDOM } from 'jsdom';
 import { rollup } from 'rollup';
@@ -38,6 +43,7 @@ const DOM_REQUIRE = join(
   'commonjs',
   'register.cjs'
 );
+const FLOOR_NODE = process.env.CHECK_PACK_NODE;
 // Exports every entry point must have, next to whatever else `import` gives
 const EXPECTED = [
   'a11y',
@@ -309,11 +315,14 @@ try {
       ],
       // Deep imports worked before exports existed, and must keep working
       'dist path import': [
-        '--import',
-        DOM_IMPORT,
         '--input-type=module',
         '-e',
-        `${check} check('dist path', await import(${JSON.stringify(`${pkg.name}/dist/speccer.esm.js`)}));`
+        `${check} check('dist path import', await import(${JSON.stringify(`${pkg.name}/dist/speccer.esm.js`)}));`
+      ],
+      'dist path require': [
+        '--input-type=commonjs',
+        '-e',
+        `${check} check('dist path require', require(${JSON.stringify(`${pkg.name}/dist/speccer.cjs`)}));`
       ],
       // Stylesheets are imported by path, for example by bundlers
       'CSS paths': [
@@ -328,12 +337,42 @@ try {
          }`
       ]
     };
+    const runtimes = ['node'];
 
-    for (const [how, args] of Object.entries(smokes)) {
-      try {
-        execFileSync('node', args, { cwd: app, stdio: 'inherit' });
-      } catch {
-        problems.push(`${how} of the installed tarball failed`);
+    if (FLOOR_NODE) {
+      // The lowest version in engines.node, such as 22.13.0 in ^22.13.0 || >=24
+      const floor = pkg.engines?.node?.match(/\d+\.\d+\.\d+/)?.[0];
+      const version = execFileSync(FLOOR_NODE, ['--version'], {
+        encoding: 'utf8'
+      }).trim();
+
+      if (version === `v${floor}`) runtimes.push(FLOOR_NODE);
+      else
+        problems.push(
+          `CHECK_PACK_NODE is Node ${version}, but engines.node is ${pkg.engines?.node}`
+        );
+    }
+
+    for (const runtime of runtimes) {
+      const version = execFileSync(runtime, ['--version'], {
+        encoding: 'utf8'
+      }).trim();
+
+      console.log(`Node ${version}:`);
+
+      for (const [how, args] of Object.entries(smokes)) {
+        const needsDom =
+          args.includes(DOM_IMPORT) || args.includes(DOM_REQUIRE);
+
+        if (needsDom && runtime !== 'node') continue;
+
+        try {
+          execFileSync(runtime, args, { cwd: app, stdio: 'inherit' });
+        } catch {
+          problems.push(
+            `${how} of the installed tarball failed on Node ${version}`
+          );
+        }
       }
     }
 

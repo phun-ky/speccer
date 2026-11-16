@@ -7,7 +7,6 @@ import { annotationsFor, expect, test, waitForSpeccer } from './fixtures';
 // load, so its `onerror` runs without a request to the test server.
 const PAYLOAD = '<img src="data:," onerror="window.__xss++">';
 const CSS_PAYLOAD = '<img src=data:, onerror=window.__xss++>';
-
 const PAGE = `<!doctype html>
 <html lang="en">
   <head>

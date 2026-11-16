@@ -1,6 +1,6 @@
-import { annotationsFor, box, expect, expectSameBox, test } from './fixtures';
-
 import type { Page } from '@playwright/test';
+
+import { annotationsFor, box, expect, expectSameBox, test } from './fixtures';
 
 /**
  * Picks an option in the form, through its label like a user would.

@@ -1,9 +1,11 @@
-import { describe, it, beforeEach, mock } from 'node:test';
-import assert from 'node:assert/strict';
 import { JSDOM } from 'jsdom';
-import { template } from '../template.js';
+
+import assert from 'node:assert/strict';
+import { describe, it, beforeEach } from 'node:test';
+
 import { verifyThat } from '../../../../../tests/helpers.js';
 import { MockedFunction } from '../../../../types/tests.js';
+import { template } from '../template.js';
 
 describe('template', () => {
   let document: typeof window.document;
@@ -13,6 +15,7 @@ describe('template', () => {
     const { window } = new JSDOM(
       '<!DOCTYPE html><html><body><div id="target"></div></body></html>'
     );
+
     global.document = window.document;
     document = window.document;
     targetElement = document.getElementById('target') as HTMLElement;
@@ -32,6 +35,7 @@ describe('template', () => {
           letterSpacing: '1px',
           fontStyle: 'normal'
         };
+
         return styles as CSSStyleDeclaration;
       }
     );
@@ -71,27 +75,26 @@ describe('template', () => {
           letterSpacing: '0px',
           fontStyle: 'italic'
         };
+
         return styles as CSSStyleDeclaration;
       }
     );
 
     const result = await template(targetElement, true);
-    assert.match(
-      result,
-      /"Helvetica<span class="token punctuation">, <\/span> Arial"<span class="token punctuation">, <\/span> sans-serif/
+    const punctuation = (text: string) =>
+      `<span class="token punctuation">${text}</span>`;
+    const value = (property: string, number: number) =>
+      `${property}</span>${punctuation(':')} <span class="token number">${number}`;
+
+    assert.ok(
+      result.includes(
+        `"Helvetica${punctuation(', ')} Arial"${punctuation(', ')} sans-serif`
+      ),
+      result
     );
-    assert.match(
-      result,
-      /font-size<\/span><span class="token punctuation">:<\/span> <span class="token number">18/
-    );
-    assert.match(
-      result,
-      /font-weight<\/span><span class="token punctuation">:<\/span> <span class="token number">700/
-    );
-    assert.match(
-      result,
-      /line-height<\/span><span class="token punctuation">:<\/span> <span class="token number">28/
-    );
+    assert.ok(result.includes(value('font-size', 18)), result);
+    assert.ok(result.includes(value('font-weight', 700)), result);
+    assert.ok(result.includes(value('line-height', 28)), result);
   });
   for (const useHighlighting of [false, true]) {
     it(`should escape markup in the computed styles (highlighting: ${useHighlighting})`, async (test) => {
@@ -108,6 +111,7 @@ describe('template', () => {
             letterSpacing: '<i>1em</i>',
             fontStyle: '<script>alert(2)</script>'
           };
+
           return styles as CSSStyleDeclaration;
         }
       );
