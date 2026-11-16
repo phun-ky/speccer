@@ -35,6 +35,9 @@ jobs:
         run: npx eslint .
       - name: Typecheck # Source and tests, see tsconfig.json
         run: npx tsc
+      # Every file, docs page and heading the answers link to must exist
+      - name: Check the OpenSSF Best Practices answers
+        run: npm run check:bestpractices
 
   unit:
     name: Unit tests

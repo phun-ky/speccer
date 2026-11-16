@@ -78,7 +78,9 @@
   ],
   "scripts": {
     "prepare": "git config core.hooksPath .githooks || true",
+    "bestpractices:url": "node scripts/bestpractices-url.mjs",
     "build": "npm run clean && npm run rollup && npm run styles",
+    "check:bestpractices": "node scripts/check-bestpractices.mjs",
     "check:pack": "node scripts/check-pack.mjs",
     "clean": "rm -rf dist dts",
     "commit": "npx git-cz",
