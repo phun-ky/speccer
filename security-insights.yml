@@ -1,0 +1,139 @@
+header:
+  schema-version: 2.2.0
+  last-updated: '2026-11-16'
+  last-reviewed: '2026-11-16'
+  url: https://raw.githubusercontent.com/phun-ky/speccer/main/security-insights.yml
+  comment: |
+    Security information for @phun-ky/speccer, in the OpenSSF Security
+    Insights format. Keep it in step with SECURITY.md.
+
+project:
+  name: speccer
+  homepage: https://speccer.dev/
+  funding: https://github.com/sponsors/phun-ky
+  administrators:
+    - name: Alexander Vassbotn Røyne-Helgesen
+      social: https://github.com/phun-ky
+      primary: true
+  documentation:
+    quickstart-guide: https://speccer.dev/guide/introduction/
+    detailed-guide: https://speccer.dev/api/
+    code-of-conduct: https://github.com/phun-ky/speccer/blob/main/CODE_OF_CONDUCT.md
+    support-policy: https://github.com/phun-ky/speccer/blob/main/SECURITY.md#supported-versions
+    signature-verification: https://github.com/phun-ky/speccer/blob/main/SECURITY.md#verifying-releases
+  repositories:
+    - name: speccer
+      url: https://github.com/phun-ky/speccer
+      comment: |
+        The source of the @phun-ky/speccer npm package and of the
+        speccer.dev documentation site.
+  vulnerability-reporting:
+    reports-accepted: true
+    bug-bounty-available: false
+    policy: https://github.com/phun-ky/speccer/blob/main/SECURITY.md
+    comment: |
+      Report privately with GitHub's private vulnerability reporting
+      (https://github.com/phun-ky/speccer/security/advisories/new) or by
+      email to the contact below.
+    contact:
+      name: speccer security contact
+      email: security@phun-ky.net
+      primary: true
+
+repository:
+  url: https://github.com/phun-ky/speccer
+  status: active
+  accepts-change-request: true
+  accepts-automated-change-request: true
+  no-third-party-packages: false
+  core-team:
+    - name: Alexander Vassbotn Røyne-Helgesen
+      social: https://github.com/phun-ky
+      primary: true
+  documentation:
+    contributing-guide: https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md
+    security-policy: https://github.com/phun-ky/speccer/blob/main/SECURITY.md
+    dependency-management-policy: https://github.com/phun-ky/speccer/blob/main/SECURITY.md#dependencies
+  license:
+    url: https://github.com/phun-ky/speccer/blob/main/LICENSE
+    expression: MIT
+  release:
+    automated-pipeline: true
+    changelog: https://github.com/phun-ky/speccer/blob/main/CHANGELOG.md
+    distribution-points:
+      - uri: pkg:npm/%40phun-ky/speccer
+        comment: npm package
+    attestations:
+      - name: npm provenance
+        predicate-uri: https://slsa.dev/provenance/v1
+        location: https://registry.npmjs.org/-/npm/v1/attestations/@phun-ky%2fspeccer@{version}
+        comment: |
+          Every release is published from GitHub Actions with npm trusted
+          publishing and a Sigstore-signed provenance attestation. Replace
+          {version}, or run npm audit signatures.
+      - name: SBOM
+        predicate-uri: https://cyclonedx.org/bom
+        location: https://github.com/phun-ky/speccer/releases/tag/v{version}
+        comment: |
+          A CycloneDX SBOM, speccer-{version}.cdx.json, is attached to each
+          GitHub release. speccer has no runtime dependencies, so it lists
+          none.
+  security:
+    assessments:
+      self:
+        evidence: https://github.com/phun-ky/speccer/blob/main/SECURITY.md#security-expectations
+        date: '2026-11-16'
+        comment: |
+          What speccer reads and changes in the page, what it never does
+          (network, storage, dynamic code), how values from the page are
+          escaped, and what users can't rely on. There is no separate
+          assurance case yet.
+    tools:
+      - name: CodeQL
+        type: SAST
+        rulesets:
+          - default
+        integration:
+          adhoc: false
+          ci: true
+          release: false
+        results: {}
+        comment: |
+          GitHub default setup, scanning JavaScript/TypeScript and the GitHub
+          Actions workflows on every push to main and every pull request.
+      - name: Dependabot
+        type: SCA
+        rulesets:
+          - default
+        integration:
+          adhoc: true
+          ci: false
+          release: false
+        results: {}
+        comment: |
+          Weekly checks of the npm dependencies and GitHub Actions, with
+          update pull requests, and security updates for new advisories.
+      - name: Dependency Review
+        type: SCA
+        rulesets:
+          - default
+        integration:
+          adhoc: false
+          ci: true
+          release: false
+        results: {}
+        comment: |
+          Fails pull requests that add a dependency with a known high or
+          critical vulnerability. npm audit gates every release the same way.
+      - name: OpenSSF Scorecard
+        type: other
+        rulesets:
+          - default
+        integration:
+          adhoc: false
+          ci: true
+          release: false
+        results: {}
+        comment: |
+          Runs on every push to main; results at
+          https://scorecard.dev/viewer/?uri=github.com/phun-ky/speccer

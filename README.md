@@ -13,6 +13,7 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/phun-ky/speccer)
 [![codecov](https://codecov.io/gh/phun-ky/speccer/graph/badge.svg?token=VA91DL7ZLZ)](https://codecov.io/gh/phun-ky/speccer)
 [![build](https://github.com/phun-ky/speccer/actions/workflows/ci.yml/badge.svg)](https://github.com/phun-ky/speccer/actions/workflows/ci.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/phun-ky/speccer/badge)](https://scorecard.dev/viewer/?uri=github.com/phun-ky/speccer)
 
 ## About
 
