@@ -1,12 +1,15 @@
 // getFeatureBasedOnArea.test.js
-import { test, describe, beforeEach, mock } from 'node:test';
-import assert from 'node:assert/strict';
 import { JSDOM } from 'jsdom';
+
+import assert from 'node:assert/strict';
+import { test, describe, beforeEach } from 'node:test';
+
 import { getFeatureBasedOnArea } from '../index.js';
 
 describe('getFeatureBasedOnArea', () => {
   beforeEach(async () => {
     const { window } = new JSDOM('<!DOCTYPE html><html><body></body></html>');
+
     Object.assign(globalThis, {
       window,
       document: window.document,
@@ -22,6 +25,7 @@ describe('getFeatureBasedOnArea', () => {
     const el = document.createElement('div');
 
     let result = await getFeatureBasedOnArea('left pin ', el);
+
     assert.equal(result, 'pin');
 
     // result = await getFeatureBasedOnArea('grid', el);
@@ -42,8 +46,8 @@ describe('getFeatureBasedOnArea', () => {
 
   test('falls back to "pin" when nothing matches', async () => {
     const el = document.createElement('div');
-
     const result = await getFeatureBasedOnArea('unknown stuff', el);
+
     assert.equal(result, 'pin');
   });
 });

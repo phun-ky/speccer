@@ -1,3 +1,5 @@
+import type { Locator, Page } from '@playwright/test';
+
 import {
   annotationsFor,
   box,
@@ -6,8 +8,6 @@ import {
   test,
   waitForSpeccer
 } from './fixtures';
-
-import type { Locator, Page } from '@playwright/test';
 
 /**
  * The pin-areas whose pins all have the given type, e.g. `bracket curly`.
@@ -19,7 +19,6 @@ const areasWith = (page: Page, type: string): Locator =>
       type ? `[data-speccer^="pin ${type} "]` : '[data-speccer="pin left"]'
     )
   });
-
 /**
  * The visible content of a pin: its text, or the counter shown by brackets
  * and enclosures.
@@ -28,7 +27,6 @@ const literalOf = async (pin: Locator): Promise<string> =>
   (await pin.getAttribute('data-pin-counter')) ??
   (await pin.textContent()) ??
   '';
-
 /**
  * The number of SVG elements drawn for a target. The target gets its id while
  * the SVG is drawn, so it is read again on every poll.
@@ -41,7 +39,6 @@ const svgCountFor = (page: Page, target: Locator, selector: string) =>
       ? page.locator(`#ph-speccer-svg ${selector}`.replace('$id', id)).count()
       : 0;
   });
-
 const sideOf = (area: string) =>
   (['top', 'right', 'bottom', 'left'] as const).find((side) =>
     area.split(' ').includes(side)

@@ -1,7 +1,6 @@
 import { JSDOM } from 'jsdom';
 
 import { strict as assert } from 'assert';
-
 import { test, describe, beforeEach } from 'node:test';
 
 import { create } from '../index.js';
@@ -9,6 +8,7 @@ import { create } from '../index.js';
 describe('create', () => {
   beforeEach(() => {
     const { window } = new JSDOM('<!DOCTYPE html><html><body></body></html>');
+
     Object.assign(globalThis, {
       window,
       document: window.document,
@@ -39,6 +39,7 @@ describe('create', () => {
 
   test('defaults to <span> and empty text -> "px"', async () => {
     const el = create(); // defaults
+
     assert.equal(el.tagName, 'SPAN');
     assert.equal(el.textContent, 'px');
     assert.equal(el.getAttribute('title'), 'px');

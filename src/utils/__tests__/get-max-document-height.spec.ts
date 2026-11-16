@@ -1,6 +1,7 @@
+import { JSDOM } from 'jsdom';
+
 import assert from 'node:assert/strict';
 import { beforeEach, describe, it } from 'node:test';
-import { JSDOM } from 'jsdom';
 
 import { getMaxDocumentHeight } from '../get-max-document-height';
 
@@ -9,6 +10,7 @@ describe('getMaxDocumentHeight', () => {
 
   beforeEach(() => {
     const { window } = new JSDOM('<!DOCTYPE html><html><body></body></html>');
+
     global.document = window.document;
     document = window.document;
   });

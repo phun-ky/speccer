@@ -18,6 +18,7 @@ test.describe('a11y', () => {
     // Split the numbers into runs of 1, 2, 3, … – one run per container
     const runs = numbers.reduce<number[][]>((all, n) => {
       if (n === 1) all.push([]);
+
       all.at(-1)?.push(n);
 
       return all;

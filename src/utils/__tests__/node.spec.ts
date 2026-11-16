@@ -88,16 +88,14 @@ describe('node', () => {
       }> | null
     ): HTMLElement => {
       const fakeWindow = {
-        getComputedStyle: () => style as any
+        getComputedStyle: () => style as unknown as CSSStyleDeclaration
       };
-
       const fakeDocument = {
         defaultView: fakeWindow
       };
-
       const element = {
         ownerDocument: fakeDocument
-      } as any as HTMLElement;
+      } as unknown as HTMLElement;
 
       return element;
     };
@@ -118,10 +116,10 @@ describe('node', () => {
           },
           checkVisibility: (options?: Record<string, boolean>) => {
             receivedOptions = options;
+
             return true; // element is visible according to native API
           }
-        } as any as HTMLElement;
-
+        } as unknown as HTMLElement;
         const result = isElementHidden(element);
 
         assert.equal(
@@ -147,8 +145,7 @@ describe('node', () => {
             }
           },
           checkVisibility: () => false // element is hidden according to native API
-        } as any as HTMLElement;
-
+        } as unknown as HTMLElement;
         const result = isElementHidden(element);
 
         assert.equal(
@@ -166,17 +163,17 @@ describe('node', () => {
             defaultView: {
               getComputedStyle: () => {
                 getComputedStyleCalled = true;
+
                 return {
                   display: 'none',
                   visibility: 'visible',
                   opacity: '1'
-                } as any;
+                } as unknown as CSSStyleDeclaration;
               }
             }
           }
           // no checkVisibility
-        } as any as HTMLElement;
-
+        } as unknown as HTMLElement;
         const result = isElementHidden(element);
 
         assert.equal(
@@ -197,8 +194,8 @@ describe('node', () => {
           visibility: 'visible',
           opacity: '1'
         });
-
         const result = isElementHidden(element);
+
         assert.equal(result, true);
       });
 
@@ -208,8 +205,8 @@ describe('node', () => {
           visibility: 'hidden',
           opacity: '1'
         });
-
         const result = isElementHidden(element);
+
         assert.equal(result, true);
       });
 
@@ -219,8 +216,8 @@ describe('node', () => {
           visibility: 'collapse',
           opacity: '1'
         });
-
         const result = isElementHidden(element);
+
         assert.equal(result, true);
       });
 
@@ -230,8 +227,8 @@ describe('node', () => {
           visibility: 'visible',
           opacity: '0'
         });
-
         const result = isElementHidden(element);
+
         assert.equal(result, true);
       });
 
@@ -241,8 +238,8 @@ describe('node', () => {
           visibility: 'visible',
           opacity: '1'
         });
-
         const result = isElementHidden(element);
+
         assert.equal(result, false);
       });
 
@@ -254,9 +251,9 @@ describe('node', () => {
               getComputedStyle: () => null
             }
           }
-        } as any as HTMLElement;
-
+        } as unknown as HTMLElement;
         const result = isElementHidden(element);
+
         assert.equal(
           result,
           false,
@@ -265,9 +262,9 @@ describe('node', () => {
       });
 
       it('returns false when ownerDocument or defaultView is missing', () => {
-        const elementWithoutDoc = {} as any as HTMLElement;
-
+        const elementWithoutDoc = {} as unknown as HTMLElement;
         const result = isElementHidden(elementWithoutDoc);
+
         assert.equal(
           result,
           false,

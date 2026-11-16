@@ -30,7 +30,6 @@ const TYPES = {
   '.png': 'image/png',
   '.ico': 'image/x-icon'
 };
-
 /**
  * Finds the first file matching the URL path in `dev/`, then `dist/`.
  *

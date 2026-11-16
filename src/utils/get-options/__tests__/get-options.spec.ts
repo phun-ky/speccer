@@ -5,6 +5,7 @@ import { getOptions } from '..';
 
 describe('getOptions', () => {
   const mockTargetElement = document.createElement('div');
+
   document.body.appendChild(mockTargetElement);
 
   it('should return options for a pin type', async () => {
@@ -59,8 +60,10 @@ describe('getOptions', () => {
 
   it('should return options for a grid type with columns', async () => {
     const areaString = 'grid columns';
+
     mockTargetElement.style.setProperty('display', 'grid');
     mockTargetElement.style.display = 'grid';
+
     const options = await getOptions(areaString, mockTargetElement);
 
     assert.deepEqual(options, {
@@ -78,8 +81,10 @@ describe('getOptions', () => {
 
   it('should return options for a grid type with rows', async () => {
     const areaString = 'grid rows';
+
     mockTargetElement.style.setProperty('display', 'grid');
     mockTargetElement.style.display = 'grid';
+
     const options = await getOptions(areaString, mockTargetElement);
 
     assert.deepEqual(options, {
@@ -97,8 +102,10 @@ describe('getOptions', () => {
 
   it('should default to toggle both if no specific grid type is provided', async () => {
     const areaString = 'grid';
+
     mockTargetElement.style.setProperty('display', 'grid');
     mockTargetElement.style.display = 'grid';
+
     const options = await getOptions(areaString, mockTargetElement);
 
     assert.deepEqual(options, {

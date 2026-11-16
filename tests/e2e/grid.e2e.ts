@@ -1,6 +1,6 @@
-import { annotationsFor, expect, test, waitForSpeccer } from './fixtures';
-
 import type { Locator } from '@playwright/test';
+
+import { annotationsFor, expect, test, waitForSpeccer } from './fixtures';
 
 /**
  * The number of tracks in the target's computed grid-template-columns/rows.

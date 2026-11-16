@@ -36,7 +36,7 @@ describe('DrawCircle', () => {
   it('throws an error on initialization with missing required SVG elements', () => {
     assert.throws(
       () => new DrawCircle(document.body, 123, {} as SpeccerOptionsInterface),
-      /Missing required SVG element to draw circles. Please see the documentation/
+      /Missing required SVG element to draw circles/
     );
   });
 });

@@ -18,7 +18,7 @@ export default defineConfig([
     extends: [customConfig]
   },
   {
-    files: ['scripts/**/*.mjs'],
+    files: ['scripts/**/*.mjs', 'tests/e2e/server.mjs'],
     languageOptions: {
       globals: {
         ...globals.node

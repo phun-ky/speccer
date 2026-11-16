@@ -3,7 +3,6 @@ import quibble from 'quibble';
 import assert from 'node:assert/strict';
 import { describe, it, mock, before } from 'node:test';
 
-import { SpeccerAreaEnum } from '../../../../types/enums/area';
 import { SpeccerOptionsInterface } from '../../../../types/speccer';
 import { position } from '../position';
 

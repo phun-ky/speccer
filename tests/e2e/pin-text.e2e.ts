@@ -1,11 +1,10 @@
-import { annotationsFor, box, expect, test, waitForSpeccer } from './fixtures';
-
 import type { Locator, Page } from '@playwright/test';
+
+import { annotationsFor, box, expect, test, waitForSpeccer } from './fixtures';
 
 const TEXT_PINS = ['top', 'right', 'bottom', 'left']
   .map((side) => `[data-speccer="pin ${side} text"]`)
   .join(', ');
-
 /**
  * Checks that the centre of every text pin is outside its pin-area on the
  * requested side, and lined up with its target along that side.
@@ -26,7 +25,6 @@ const expectTextPinsBesideTheirPinArea = async (page: Page) => {
     const a = await box(pinArea);
     const t = await box(target);
     const p = await box(await annotationsFor(target));
-
     const center = { x: p.x + p.width / 2, y: p.y + p.height / 2 };
     const vertical = area.includes('top') || area.includes('bottom');
 

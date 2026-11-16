@@ -1,14 +1,16 @@
 import { JSDOM } from 'jsdom';
+
 import { strict as assert } from 'assert';
 import { test, describe, beforeEach } from 'node:test';
 
-import { create, measure } from '../index.js';
-import { SpeccerOptionsInterface } from '../../../types/speccer.js';
 import { MeasureAreaEnum } from '../../../types/enums/area.js';
+import { SpeccerOptionsInterface } from '../../../types/speccer.js';
+import { create, measure } from '../index.js';
 
 describe('create', () => {
   beforeEach(() => {
     const { window } = new JSDOM('<!DOCTYPE html><html><body></body></html>');
+
     Object.assign(globalThis, {
       window,
       document: window.document,
@@ -43,6 +45,7 @@ describe('create', () => {
 
     // classes
     const classNames = [...el.classList.values()].toString();
+
     assert.ok(classNames.includes('ph-speccer'));
     assert.ok(classNames.includes('speccer'));
     assert.ok(classNames.includes('measure'));
@@ -70,6 +73,7 @@ describe('create', () => {
     assert.equal(el.getAttribute('data-measure'), '10px');
 
     const classNames = [...el.classList.values()].toString();
+
     assert.ok(classNames.includes('ph-speccer'));
     assert.ok(classNames.includes('speccer'));
     assert.ok(classNames.includes('measure'));
@@ -123,8 +127,8 @@ describe('create', () => {
       } as SpeccerOptionsInterface,
       'id-both'
     );
-
     const classNames = [...el.classList.values()].toString();
+
     assert.ok(classNames.includes('measure'));
     assert.ok(classNames.includes('width'));
     assert.ok(classNames.includes('height'));
@@ -136,6 +140,7 @@ describe('create', () => {
 describe('measure', () => {
   beforeEach(() => {
     const { window } = new JSDOM('<!DOCTYPE html><html><body></body></html>');
+
     Object.assign(globalThis, {
       window,
       document: window.document,
@@ -157,6 +162,7 @@ describe('measure', () => {
 
   test('does nothing when targetElement is hidden (display:none)', async () => {
     const target = document.createElement('div');
+
     target.id = 'hidden';
     target.style.display = 'none';
     document.body.appendChild(target);
@@ -181,6 +187,7 @@ describe('measure', () => {
 
   test('sets data-speccer-element-id on visible elements', async () => {
     const target = document.createElement('div');
+
     target.id = 'visible-target';
     target.style.display = 'block';
     document.body.appendChild(target);
@@ -194,6 +201,7 @@ describe('measure', () => {
     );
 
     const elementId = target.getAttribute('data-speccer-element-id');
+
     assert.ok(
       elementId && elementId.startsWith('speccer-'),
       'measure should set a speccer-related id on the target element'

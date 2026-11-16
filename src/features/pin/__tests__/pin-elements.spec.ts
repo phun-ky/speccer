@@ -83,10 +83,7 @@ describe('pinElements without the SVG element', () => {
 
     assert.equal(getPins().length, 3);
     assert.equal(warn.mock.calls.length, 1);
-    assert.match(
-      String(warn.mock.calls[0].arguments[0]),
-      /#ph-speccer-svg/
-    );
+    assert.match(String(warn.mock.calls[0].arguments[0]), /#ph-speccer-svg/);
 
     warn.mock.restore();
   });
