@@ -10,16 +10,7 @@
 import { readFileSync } from 'node:fs';
 import { parseArgs } from 'node:util';
 
-// The project's id on bestpractices.dev, set once the project is registered
-const PROJECT = null;
-
-if (PROJECT === null) {
-  console.error(
-    'speccer is not registered on bestpractices.dev yet: set PROJECT in scripts/bestpractices-url.mjs'
-  );
-  process.exit(1);
-}
-
+const PROJECT = 16759;
 // Well below the length at which the site starts refusing a URL
 const MAX_URL_LENGTH = 6000;
 const { values } = parseArgs({
