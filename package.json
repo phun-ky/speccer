@@ -162,13 +162,16 @@
   },
   "overrides": {
     "get-uri": {
-      "basic-ftp": "^6.2.3"
+      "basic-ftp": "^6.2.4"
     },
     "micromark-extension-math": {
       "katex": "^0.18.2"
     },
     "release-it": {
       "undici": "^7.30.1"
+    },
+    "stylus": {
+      "glob": "^14.0.6"
     },
     "vite": "^6.4.5"
   }
