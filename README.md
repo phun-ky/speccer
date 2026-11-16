@@ -28,12 +28,19 @@ webpage. If you need to draw attention to elements, **SPECCER** is your tool!
 
 - [SPECCER](#speccer)
   - [About](#about)
+  - [Requirements](#requirements)
   - [Installation](#installation)
   - [Documentation](#documentation)
   - [Used by](#used-by)
   - [License](#license)
   - [Changelog](#changelog)
   - [Sponsor me](#sponsor-me)
+
+## Requirements
+
+A browser or bundler that supports ES2022. To load it in Node.js, for example in
+tests or server-side rendering: Node.js 22.13 or a later 22 release, or Node.js
+24 or later. Types are included.
 
 ## Installation
 
