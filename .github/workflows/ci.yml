@@ -24,6 +24,22 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0 # The AI attribution check reads every commit in the PR
+      # Commits made in GitHub's web editor never run the local hook, so CI
+      # runs it over every commit in the pull request
+      - name: Check commit messages for AI attribution
+        if: github.event_name == 'pull_request'
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          status=0
+          for commit in $(git rev-list "$BASE..$HEAD"); do
+            git log -1 --format=%B "$commit" > "$RUNNER_TEMP/message"
+            .githooks/commit-msg "$RUNNER_TEMP/message" || { echo "::error::$commit carries AI attribution"; status=1; }
+          done
+          exit "$status"
       # setup-node only caches automatically when package.json has a
       # packageManager field, so it is set explicitly
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
@@ -33,6 +49,8 @@ jobs:
       - run: npm ci
       - name: Lint
         run: npx eslint .
+      - name: Test the commit-msg hook
+        run: npm run test:hooks
       - name: Typecheck # Source and tests, see tsconfig.json
         run: npx tsc
       # Every file, docs page and heading the answers link to must exist

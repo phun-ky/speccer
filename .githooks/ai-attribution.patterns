@@ -1,0 +1,8 @@
+# AI attribution that commit messages must not carry. One extended regular
+# expression per line, matched case-insensitively against each line of the
+# message. Read by .githooks/commit-msg, which CI also runs on every commit in
+# a pull request. Lines starting with # and blank lines are ignored.
+^co-authored-by:.*(copilot|claude|anthropic|openai|chatgpt|codex|gemini|cursor)
+noreply@anthropic\.com
+generated (with|by) .*(claude|copilot|chatgpt|codex|gemini|cursor)
+(written|authored|created|made) (by|with) (claude|copilot|chatgpt|codex|gemini|cursor|an ai|ai)([^a-z]|$)
