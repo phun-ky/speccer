@@ -106,6 +106,7 @@
     "test": "npm run test:unit",
     "test:ci": "node --import tsx --import global-jsdom/register --test --no-warnings --enable-source-maps --experimental-test-coverage --test-coverage-include='src/**/*.ts' --test-coverage-exclude='src/**/__tests__/**' --test-coverage-exclude='src/types/**' --test-coverage-lines=82 --test-coverage-functions=88 --test-coverage-branches=85 --test-reporter=cobertura --test-reporter-destination=coverage/cobertura-coverage.xml --test-reporter=spec --test-reporter-destination=stdout 'src/**/__tests__/**/*.spec.ts'",
     "test:e2e": "npx playwright test",
+    "test:hooks": "node --test scripts/__tests__/commit-msg.test.mjs",
     "test:unit": "node --import tsx --import global-jsdom/register --test --no-warnings 'src/**/__tests__/**/*.spec.ts'"
   },
   "config": {

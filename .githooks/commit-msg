@@ -1,0 +1,25 @@
+#!/bin/sh
+# Reject a commit message that carries AI attribution, such as a
+# Co-authored-by trailer naming an AI tool. The patterns live in
+# ai-attribution.patterns next to this file. CI runs this same script over
+# every commit in a pull request, because commits made in GitHub's web editor
+# never run local hooks.
+# Usage: commit-msg <message file>
+patterns="$(dirname "$0")/ai-attribution.patterns"
+list=$(mktemp) || exit 1
+trap 'rm -f "$list"' EXIT
+
+if ! grep -v -e '^#' -e '^[[:space:]]*$' "$patterns" > "$list"; then
+  echo "commit-msg: no patterns found in $patterns" >&2
+  exit 1
+fi
+
+# Leave out git's comment lines, and the diff below the scissors line that
+# `git commit -v` adds
+found=$(sed -e '/^# -* >8 -*$/,$d' -e '/^#/d' "$1" | grep -E -i -f "$list")
+
+if [ -n "$found" ]; then
+  echo "commit-msg: AI attribution isn't allowed in commit messages:" >&2
+  printf '%s\n' "$found" | sed 's/^/  /' >&2
+  exit 1
+fi
