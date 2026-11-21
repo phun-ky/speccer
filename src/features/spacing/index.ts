@@ -34,7 +34,7 @@ import {
 } from '../../utils/css';
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
-import { isElementHidden, startDraw } from '../../utils/node';
+import { assertElement, isElementHidden, startDraw } from '../../utils/node';
 import { get as getStyles, add as addStyles } from '../../utils/styles';
 
 import { position } from './utils/position';
@@ -121,6 +121,8 @@ export const spacing = async (
   targetElement: HTMLElement,
   options?: SpeccerOptionsInterface
 ): Promise<void> => {
+  assertElement(targetElement, 'spacing.element');
+
   if (!targetElement) return;
 
   if (isElementHidden(targetElement)) return;

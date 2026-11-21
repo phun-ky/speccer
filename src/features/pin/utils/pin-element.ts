@@ -6,7 +6,7 @@ import { DrawSVGLine } from '../../../utils/classes/DrawSVGLine';
 import { SPECCER_DATA_ATTRIBUTE } from '../../../utils/constants';
 import { getOptions } from '../../../utils/get-options';
 import { uniqueID } from '../../../utils/id';
-import { isElementHidden, startDraw } from '../../../utils/node';
+import { assertElement, isElementHidden, startDraw } from '../../../utils/node';
 import { add } from '../../../utils/styles';
 import { waitForFrame } from '../../../utils/wait';
 
@@ -72,6 +72,9 @@ export const pinElement = async (
   content: string,
   options: SpeccerOptionsInterface
 ): Promise<string | undefined> => {
+  assertElement(targetElement, 'pin.pinElement');
+  assertElement(parentElement, 'pin.pinElement', 'parentElement');
+
   if (!targetElement) return;
 
   if (isElementHidden(targetElement)) return;

@@ -1,8 +1,10 @@
+import { assertElement } from './node';
+
 /**
  * Remove the annotations of an element: every element speccer generated for
  * it, and its SVG lines, curly brackets and circles.
  *
- * @param {HTMLElement} el - The annotated element.
+ * @param {HTMLElement|null} el - The annotated element. `null` does nothing.
  * @returns {void} This function does not return a value.
  *
  * @example
@@ -13,7 +15,11 @@
  * }
  * ```
  */
-export const removeSpeccerElement = (el: HTMLElement): void => {
+export const removeSpeccerElement = (el: HTMLElement | null): void => {
+  assertElement(el, 'removeSpeccerElement', 'el');
+
+  if (!el) return;
+
   const _selector = el.getAttribute('data-speccer-element-id');
 
   if (!_selector) return;

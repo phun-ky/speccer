@@ -33,7 +33,7 @@ import { set as setClassNames } from '../../utils/classnames';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
-import { isElementHidden, startDraw } from '../../utils/node';
+import { assertElement, isElementHidden, startDraw } from '../../utils/node';
 import { getRec } from '../../utils/position';
 import { add as addStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
@@ -79,6 +79,8 @@ export const create = (id: string, n = 'span'): HTMLElement => {
  */
 /* node:coverage enable */
 export const mark = async (targetElement: HTMLElement): Promise<void> => {
+  assertElement(targetElement, 'mark.element');
+
   if (!targetElement) return;
 
   if (isElementHidden(targetElement)) return;
