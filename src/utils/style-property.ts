@@ -24,7 +24,7 @@ const hasStylePropertySet = async (
 
   const _computed_style = getComputedStyle(element);
 
-  return _computed_style[property] === value;
+  return _computed_style.getPropertyValue(property) === value;
 };
 /**
  * Finds the nearest parent element with a specific CSS property set to a certain value.

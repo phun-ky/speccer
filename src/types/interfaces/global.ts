@@ -1,5 +1,7 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-export {};
+import type { DrawCircle } from '../../utils/classes/DrawCircle';
+import type { DrawSVGCurlyBracket } from '../../utils/classes/DrawSVGCurlyBracket';
+import type { DrawSVGLine } from '../../utils/classes/DrawSVGLine';
+import type { SpeccerFunctionType } from '../speccer';
 
 /**
  * Extends the global Window interface to add custom properties.
@@ -9,21 +11,22 @@ declare global {
     /**
      * Represents the DrawSVGCurlyBracket class for drawing curly brackets.
      */
-    DrawSVGCurlyBracket: any;
+    DrawSVGCurlyBracket: typeof DrawSVGCurlyBracket;
     /**
      * Represents the DrawCircle class for drawing circles.
      */
-    DrawCircle: any;
+    DrawCircle: typeof DrawCircle;
 
     /**
      * Represents the DrawSVGLine class for drawing lines.
      */
-    DrawSVGLine: any;
+    DrawSVGLine: typeof DrawSVGLine;
 
     /**
-     * Represents the speccer object for additional functionality.
+     * The speccer function, set by manual mode so you can call
+     * `window.speccer()` yourself.
      */
-    speccer: any;
+    speccer: SpeccerFunctionType;
 
     /**
      * Represents the custom literals to be used.

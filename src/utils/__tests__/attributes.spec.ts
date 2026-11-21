@@ -4,7 +4,7 @@ import { describe, it, beforeEach, afterEach } from 'node:test';
 import { setAttributes, removeAttributes } from '../attributes';
 
 describe('Attribute-related functions', () => {
-  let testElement;
+  let testElement: HTMLElement;
 
   beforeEach(() => {
     // Create a test element for each test case

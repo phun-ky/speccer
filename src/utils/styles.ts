@@ -47,15 +47,12 @@ export const add = async (
 
   await waitForFrame();
 
-  if (Array.isArray(styles)) {
-    styles = styles.reduce((acc, st) => {
-      acc[st.key] = st.value;
-
-      return acc;
-    }, {});
-  }
-
-  Object.assign(el.style, styles);
+  Object.assign(
+    el.style,
+    Array.isArray(styles)
+      ? Object.fromEntries(styles.map(({ key, value }) => [key, value]))
+      : styles
+  );
 };
 
 /* node:coverage disable */

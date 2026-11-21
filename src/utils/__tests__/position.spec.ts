@@ -11,13 +11,19 @@ import {
 
 describe('position', () => {
   // Helper function to create a DOM element
-  const createDivElement = (id) => {
+  const createDivElement = (id: string) => {
     document.body.innerHTML += `<div id="${id}"></div>`;
 
-    return document.querySelector(`#${id}`);
+    return document.querySelector(`#${id}`) as HTMLElement;
   };
   // Helper function to set the position of an element
-  const setElementPosition = (element, top, left, width, height) => {
+  const setElementPosition = (
+    element: HTMLElement,
+    top: number,
+    left: number,
+    width: number,
+    height: number
+  ) => {
     element.style.position = 'fixed';
     element.style.top = `${top}px`;
     element.style.left = `${left}px`;
@@ -32,9 +38,7 @@ describe('position', () => {
     setElementPosition(startEl, 0, 0, 100, 50);
     setElementPosition(stopEl, 0, 0, 200, 30);
 
-    // @ts-expect-error object-possibly-null
     const startRect = startEl.getBoundingClientRect();
-    // @ts-expect-error object-possibly-null
     const stopRect = stopEl.getBoundingClientRect();
     const center = get_horizontal_center_of_els(0, startRect, stopRect);
 
@@ -48,9 +52,7 @@ describe('position', () => {
     setElementPosition(startEl, 0, 0, 50, 100);
     setElementPosition(stopEl, 0, 0, 30, 200);
 
-    // @ts-expect-error object-possibly-null
     const startRect = startEl.getBoundingClientRect();
-    // @ts-expect-error object-possibly-null
     const stopRect = stopEl.getBoundingClientRect();
     const center = get_vertical_center_of_els(0, startRect, stopRect);
 
@@ -58,11 +60,10 @@ describe('position', () => {
   });
 
   it('should calculate the offset', async () => {
-    const targetElement = document.getElementById('target');
+    const targetElement = document.getElementById('target') as HTMLElement;
 
     setElementPosition(targetElement, 100, 200, 50, 30);
 
-    // @ts-expect-error object-possibly-null
     const offsetProperties = await offset(targetElement);
 
     assert.deepEqual(offsetProperties, {
@@ -74,14 +75,13 @@ describe('position', () => {
   });
 
   it('should calculate the offset with center aligned', async () => {
-    const sourceElement = document.getElementById('source');
-    const targetElement = document.getElementById('target');
+    const sourceElement = document.getElementById('source') as HTMLElement;
+    const targetElement = document.getElementById('target') as HTMLElement;
 
     setElementPosition(sourceElement, 0, 0, 100, 50);
     setElementPosition(targetElement, 0, 0, 200, 30);
 
     const offsetProperties = await offsetWithCenter(
-      // @ts-expect-error object-possibly-null
       sourceElement,
       targetElement
     );
@@ -95,13 +95,12 @@ describe('position', () => {
   });
 
   it('should calculate various positioning properties', async () => {
-    const sourceElement = document.getElementById('source');
-    const targetElement = document.getElementById('target');
+    const sourceElement = document.getElementById('source') as HTMLElement;
+    const targetElement = document.getElementById('target') as HTMLElement;
 
     setElementPosition(sourceElement, 100, 200, 50, 30);
     setElementPosition(targetElement, 200, 100, 30, 50);
 
-    // @ts-expect-error object-possibly-null
     const recProps = await getRec(sourceElement, targetElement);
 
     assert.deepEqual(recProps.absolute(), {
