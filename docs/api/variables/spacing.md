@@ -13,7 +13,7 @@ const spacing: {
 ```
 
 Defined in:
-[main.ts:100](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L100)
+[main.ts:102](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L102)
 
 This feature highlights the spacing of an element.
 

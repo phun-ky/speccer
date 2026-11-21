@@ -16,7 +16,7 @@ const grid: {
 ```
 
 Defined in:
-[main.ts:73](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L73)
+[main.ts:75](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L75)
 
 This feature will highlight the grid spacing in a `display: grid;` element.
 

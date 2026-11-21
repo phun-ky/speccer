@@ -23,5 +23,6 @@
 ## Functions
 
 - [a11y](functions/a11y.md)
+- [removeSpeccer](functions/removeSpeccer.md)
 - [removeSpeccerElement](functions/removeSpeccerElement.md)
 - [speccer](functions/speccer.md)
