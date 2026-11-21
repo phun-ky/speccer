@@ -131,7 +131,7 @@
     {
       "name": "Comment",
       "scope": ["comment", "punctuation.definition.comment"],
-      "settings": { "fontStyle": "italic", "foreground": "#99acb2" }
+      "settings": { "fontStyle": "italic", "foreground": "#5f7175" }
     },
     {
       "name": "Variables",

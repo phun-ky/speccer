@@ -143,7 +143,6 @@ export default defineConfig({
       '/guide/': [
         {
           text: 'Getting started',
-          collapsed: false,
           items: [
             { text: 'What is SPECCER?', link: '/guide/introduction/what' },
             { text: 'Introduction', link: '/guide/introduction/' }
@@ -151,7 +150,6 @@ export default defineConfig({
         },
         {
           text: 'Usage',
-          collapsed: false,
           items: [
             { text: 'As an import', link: '/guide/usage/import' },
             { text: 'Script', link: '/guide/usage/script' },
@@ -160,7 +158,6 @@ export default defineConfig({
         },
         {
           text: 'Features',
-          collapsed: false,
           items: [
             { text: 'Pin', link: '/guide/features/pin' },
             { text: 'Spacing', link: '/guide/features/spacing' },
@@ -173,7 +170,6 @@ export default defineConfig({
         },
         {
           text: 'Tutorials',
-          collapsed: false,
           items: [
             { text: 'Customization', link: '/guide/tutorials/customization' },
             {
@@ -192,10 +188,9 @@ export default defineConfig({
       '/api/': [
         {
           text: 'API',
-          items: typedocSidebar.map((s) => ({
-            ...s,
-            collapsed: false
-          }))
+          // Not collapsible: a collapsible group is a button with a
+          // button inside it, which axe reports as nested-interactive
+          items: typedocSidebar.map((s) => ({ ...s, collapsed: undefined }))
         }
       ]
     }

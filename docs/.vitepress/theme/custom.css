@@ -395,3 +395,33 @@ html.ph body {
 .ph .vp-code-group {
   margin-top: 1rem;
 }
+
+/* WCAG 2.2 AA, checked by scripts/check-site.mjs */
+
+/* The code background is translucent, so inside a tinted custom block it would
+   change, and the syntax colours are only AA on the Shiki theme's own one */
+:root.theme--light .vp-doc .custom-block div[class*='language-'] {
+  background-color: #f5f6f7;
+}
+
+:root.theme--dark .vp-doc .custom-block div[class*='language-'] {
+  background-color: #262831;
+}
+
+:root.theme--light {
+  --vp-code-lang-color: #5e6a6e;
+}
+
+:root.theme--dark {
+  --vp-code-lang-color: #a1a1aa;
+}
+
+:root.theme--light .vp-doc .custom-block.warning code {
+  color: #7a5000;
+}
+
+/* axe's label-in-name rule reads the search button as "SearchK" because of
+   the Ctrl K hint; the shortcut still works without it */
+.DocSearch-Button .DocSearch-Button-Keys {
+  display: none !important;
+}
