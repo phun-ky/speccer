@@ -122,6 +122,16 @@ jobs:
       # A broken site fails the pull request, not the deploy
       - name: Build the docs site
         run: npm run docs:build
+      # Network, WCAG 2.2 AA in light and dark, links and anchors, and
+      # horizontal scroll, on every page. Google Chrome is on the runner image.
+      - name: Check the docs site
+        run: npm run check:site
+        env:
+          CHROME: /usr/bin/google-chrome
+      - name: Test the docs site checks
+        run: npm run test:site
+        env:
+          CHROME: /usr/bin/google-chrome
       # On main, the site that was just built and checked is what `deploy` publishes
       - name: Setup Pages
         if: >-
