@@ -1,4 +1,4 @@
-import { isElementHidden } from '../../utils/node';
+import { isElementHidden, removeAll } from '../../utils/node';
 
 import {
   SPECCER_LANDMARK_ELEMENTS_SELECTOR,
@@ -36,6 +36,10 @@ import { addShortcutElement } from './utils/add-shortcut-element';
  */
 export const a11y = async (): Promise<void> => {
   const _drawn: Promise<void>[] = [];
+
+  // Replace the annotations from a previous call instead of adding to them
+  removeAll('.ph-speccer.speccer.a11y');
+
   const _tab_order_elements = document.querySelectorAll(
     '[data-speccer*="a11y tabstops"]'
   );

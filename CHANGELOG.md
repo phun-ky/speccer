@@ -1,5 +1,20 @@
 # Changelog
 
+## [11.5.1](https://github.com/phun-ky/speccer/compare/v11.5.0...v11.5.1) (2026-11-21)
+
+### Documentation
+
+* ✏️ rewrap the pin guide for prettier ([660d9d2](https://github.com/phun-ky/speccer/commit/660d9d27c942cb120bdb0c3906098c6df052cf4a))
+
+### Bug
+
+* 🐛 label every pin, however many there are ([38f5a72](https://github.com/phun-ky/speccer/commit/38f5a72fdf3a220b3d900db76061121e350d2c29)), closes [#562](https://github.com/phun-ky/speccer/issues/562)
+
+### Refactoring
+
+* 💡 enable strict TypeScript ([f7c5f5f](https://github.com/phun-ky/speccer/commit/f7c5f5f26e23b860babc68e698f34a665ad1dc95)), references [#491](https://github.com/phun-ky/speccer/issues/491)
+* 💡 replace any in the global Window types ([5c8ceb4](https://github.com/phun-ky/speccer/commit/5c8ceb45eaeae9b5091be9a320a09ee42e4e7a94)), closes [#491](https://github.com/phun-ky/speccer/issues/491), references [#560](https://github.com/phun-ky/speccer/issues/560)
+
 ## [11.5.0](https://github.com/phun-ky/speccer/compare/v11.4.8...v11.5.0) (2026-11-21)
 
 ### Documentation
