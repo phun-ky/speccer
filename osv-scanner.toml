@@ -1,0 +1,11 @@
+# Read by osv-scanner and the OpenSSF Scorecard Vulnerabilities check.
+# Every entry is a transitive dev dependency with no patched release reachable
+# through its parent's semver range. Drop an entry once the parent catches up.
+
+[[IgnoredVulns]]
+id = "GHSA-fc5q-39xc-vjpf"
+reason = "picomatch: advisory withdrawn by GitHub, not a vulnerability."
+
+[[IgnoredVulns]]
+id = "GHSA-g3hv-75wg-m249"
+reason = "minimatch 10.x: fix only in 11.0.1, parents (typedoc, glob 13) still require ^10. Dev-only, patterns come from our own config, not untrusted input."
