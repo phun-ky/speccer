@@ -1,97 +1,85 @@
 # React
 
-Since **SPECCER** is zero-dependency and made with vanilla, it is easily useable
-with other libraries or frameworks, like React!
+**SPECCER** has no dependencies, so it works in any React app. Run it after the
+component has rendered, run it again when the annotated content changes, and
+remove the annotations when the component unmounts.
 
-## useEffect
+## Component
 
-::: warning
-
-This approach requires the usage of the `data-speccer="*"` attributes. If you
-want more control, follow
-[the approach here](/guide/tutorials/add-pins-on-click).
-
-:::
-
-If you use React, you can use an effect like this:
-
-```javascript [Component.jsx]
-import React, { useEffect } from 'react';
-
-import debounce from './lib/debounce';
-import '@phun-ky/speccer/dist/speccer.min.css';
-
-const Component = () => {
-  let speccerEventFunc;
-
-  useEffect(async () => {
-    const { default: speccer } = await import('@phun-ky/speccer');
-
-    speccer();
-
-    speccerEventFunc = debounce(function () {
-      speccer();
-    }, 300);
-
-    window.addEventListener('resize', speccerEventFunc);
-
-    return () => {
-      window.removeEventListener('resize', speccerEventFunc);
-    };
-  }, []);
-
-  return <div />;
-};
-
-export default Component;
-```
-
-Or a hook like this:
-
-## Custom Hook
-
-```typescript [useSpeccer.ts]
+```jsx [SpeccedButton.jsx]
 import { useEffect } from 'react';
-
+import speccer from '@phun-ky/speccer';
 import '@phun-ky/speccer/dist/speccer.min.css';
-import debounce from './lib/debounce';
 
-const useSpeccer = () => {
+export const SpeccedButton = ({ label = 'Save' }) => {
+  // Runs after the component has rendered, and again after `label` changes
   useEffect(() => {
-    let speccerEventFunc: () => void;
+    // Deferred, so a draw cancelled by the cleanup never starts
+    const timeout = setTimeout(speccer);
 
-    const loadSpeccer = async () => {
-      const { default: speccer } = await import('@phun-ky/speccer');
+    return () => clearTimeout(timeout);
+  }, [label]);
 
-      speccer();
+  // Runs once, after the first render
+  useEffect(() => {
+    let timeout;
 
-      speccerEventFunc = debounce(() => {
-        speccer();
-      }, 300);
-
-      window.addEventListener('resize', speccerEventFunc);
+    // Redraw when the window is resized, at most every 300 ms
+    const onResize = () => {
+      clearTimeout(timeout);
+      timeout = setTimeout(speccer, 300);
     };
 
-    loadSpeccer();
+    window.addEventListener('resize', onResize);
 
     return () => {
-      if (speccerEventFunc) {
-        window.removeEventListener('resize', speccerEventFunc);
+      window.removeEventListener('resize', onResize);
+      clearTimeout(timeout);
+
+      // The annotations are added to <body>, not inside the component
+      for (const el of document.querySelectorAll('.ph-speccer.speccer')) {
+        el.remove();
       }
     };
   }, []);
+
+  return (
+    <div data-speccer="pin-area">
+      <button data-speccer="pin bracket top">{label}</button>
+    </div>
+  );
 };
 ```
 
-### Usage
+- **Import the CSS once**, here or in your app's entry file.
+- **List the props and state that change the annotated content** in the first
+  effect's dependencies, like `label` here.
+- **The draw is deferred** because `speccer()` draws a frame after it is called,
+  and two calls in the same frame both draw. In development, `StrictMode` runs
+  each effect twice, and that would leave two of every annotation.
+- **Don't pass an `async` function to `useEffect`.** It returns a promise, so
+  React never gets the cleanup function, and the listener and the annotations
+  stay after the component unmounts.
+- **`speccer()` draws every annotation on the page**, so call it from one
+  component, or from the layout that holds the annotated components.
+- **Lines and curly brackets** need
+  [the `svg` element](/guide/introduction/#svg), for example in `index.html` or
+  your root layout.
+- **Removing the annotations** on unmount removes every annotation on the page.
+  A function in speccer that does this is planned for 12.0
+  ([#485](https://github.com/phun-ky/speccer/issues/485)).
 
-```typescript [MyComponent.tsx]
-import { useSpeccer } from './hooks/useSpeccer';
+## Server-side rendering
 
-export const MyComponent = () => {
-  …
-  useSpeccer();
-  …
-  return <div data-speccer="pin bracket top">…</div>;
-};
-```
+With Next.js or another server-side renderer, importing speccer is safe, and
+effects only run in the browser, so the component works as it is. In the Next.js
+App Router, add `'use client';` at the top of the file, as for any component
+that uses effects.
+
+## Lazy loading
+
+For long pages, call `modes.lazy()` instead of `speccer()`, and
+`modes.rerenderLazy()` on resize. See
+[lazy loading](/guide/tutorials/lazy-loading).
+
+If something doesn't look right, see [troubleshooting](/guide/troubleshooting).
