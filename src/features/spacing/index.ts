@@ -34,7 +34,7 @@ import {
 } from '../../utils/css';
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
-import { isElementHidden } from '../../utils/node';
+import { isElementHidden, startDraw } from '../../utils/node';
 import { get as getStyles, add as addStyles } from '../../utils/styles';
 
 import { position } from './utils/position';
@@ -125,12 +125,13 @@ export const spacing = async (
 
   if (isElementHidden(targetElement)) return;
 
+  const isStale = startDraw();
   const _areas_string: string =
     targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || '';
   const _target_styles = await getStyles(targetElement);
   const _options = await getOptions(_areas_string, targetElement, options);
 
-  if (_options.type !== 'spacing' || !_options.spacing) return;
+  if (_options.type !== 'spacing' || !_options.spacing || isStale()) return;
 
   const _target_spacing_styles = getSpacing(_target_styles, _options);
   const _target_pruned_spacing_styles = Object.keys(

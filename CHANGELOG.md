@@ -1,5 +1,18 @@
 # Changelog
 
+## [11.4.8](https://github.com/phun-ky/speccer/compare/v11.4.7...v11.4.8) (2026-11-21)
+
+### Documentation
+
+* ✏️ add Vue, Svelte and Angular usage guides ([1c1393f](https://github.com/phun-ky/speccer/commit/1c1393f55906c7a801a06c375beac2e3e2154f56)), closes [#492](https://github.com/phun-ky/speccer/issues/492), references [#ph-speccer-svg](https://github.com/phun-ky/speccer/issues/ph-speccer-svg)
+* ✏️ fix the React guide's cleanup and StrictMode duplicates ([7870fbb](https://github.com/phun-ky/speccer/commit/7870fbb54903d98f2ece6f287cf4e964addbbbc2)), closes [#486](https://github.com/phun-ky/speccer/issues/486)
+* ✏️ fix the WCAG 2.2 AA failures on speccer.dev ([dae67e0](https://github.com/phun-ky/speccer/commit/dae67e0b1155601cd8260f5f8b905c260be1fd93)), references [#99acb2](https://github.com/phun-ky/speccer/issues/99acb2) [#5f7175](https://github.com/phun-ky/speccer/issues/5f7175) [#506](https://github.com/phun-ky/speccer/issues/506)
+* ✏️ take the light syntax colours from vscode-accessible-theme ([1b7244b](https://github.com/phun-ky/speccer/commit/1b7244bb0b8c4b9cb4b632e9ac6019a056af2d4e)), closes [#78698c](https://github.com/phun-ky/speccer/issues/78698c) [#317a75](https://github.com/phun-ky/speccer/issues/317a75) [#72c6c0](https://github.com/phun-ky/speccer/issues/72c6c0)
+
+### Bug
+
+* 🐛 stop overlapping draws from duplicating annotations ([b281e83](https://github.com/phun-ky/speccer/commit/b281e831168c33103bfbbc83be18d30af2dd01d4)), closes [#557](https://github.com/phun-ky/speccer/issues/557)
+
 ## [11.4.7](https://github.com/phun-ky/speccer/compare/v11.4.6...v11.4.7) (2026-11-21)
 
 ### Tasks

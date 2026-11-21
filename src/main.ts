@@ -26,7 +26,7 @@ import {
   SPECCER_FEATURE_SPACING,
   SPECCER_FEATURE_TYPOGRAPHY
 } from './utils/constants';
-import { removeAll } from './utils/node';
+import { removeAnnotations } from './utils/node';
 
 export type {
   SpeccerOptionsInterface,
@@ -276,7 +276,7 @@ export const modes = {
  * ```
  */
 const speccer = () => {
-  removeAll('.ph-speccer.speccer');
+  removeAnnotations();
 
   const spacingElements = document.querySelectorAll(
     `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"]`
