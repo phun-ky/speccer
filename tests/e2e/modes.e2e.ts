@@ -148,7 +148,12 @@ test.describe('activation modes', () => {
       ).toBeAttached();
 
       // The UMD build exposes its exports as window.speccer
-      await page.evaluate(() => window.speccer.removeSpeccer());
+      await page.evaluate(() =>
+        // Typed as the function manual mode sets, so cast to the exports
+        (
+          window.speccer as unknown as { removeSpeccer: () => void }
+        ).removeSpeccer()
+      );
 
       const annotations = page.locator('.ph-speccer.speccer');
 
