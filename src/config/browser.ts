@@ -67,7 +67,10 @@ import {
   SPECCER_FEATURE_TYPOGRAPHY
 } from '../utils/constants';
 import { removeAnnotations } from '../utils/node';
-import { activate as resizeActivate } from '../utils/resize';
+import {
+  activate as resizeActivate,
+  deactivate as resizeDeactivate
+} from '../utils/resize';
 
 /* node:coverage disable */
 /**
@@ -96,6 +99,14 @@ export const dom = (speccer: SpeccerFunctionType): void => {
  */
 let _lazy_observers: IntersectionObserver[] = [];
 
+/**
+ * Disconnects the observers created by `lazy()`.
+ */
+const stopLazy = (): void => {
+  for (const observer of _lazy_observers) observer.disconnect();
+
+  _lazy_observers = [];
+};
 /**
  * Renders each element matching the selector the first time it is scrolled
  * into view.
@@ -135,9 +146,7 @@ const observeLazily = (
 /* node:coverage enable */
 export const lazy = (): void => {
   // Stop the observers from a previous call, so nothing is rendered twice
-  for (const observer of _lazy_observers) observer.disconnect();
-
-  _lazy_observers = [];
+  stopLazy();
 
   observeLazily(
     `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"],[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"] *:not(td):not(tr):not(th):not(tfoot):not(thead):not(tbody)`,
@@ -180,6 +189,33 @@ export const lazy = (): void => {
 export const rerenderLazy = (): void => {
   removeAnnotations();
   lazy();
+};
+
+/* node:coverage disable */
+/**
+ * Removes everything speccer has added to the page, and stops it:
+ *
+ * - removes every annotation, including the SVG lines, circles and curly
+ *   brackets, but keeps the `#ph-speccer-svg` element and its original path
+ * - stops draws that are still in progress from adding annotations
+ * - disconnects the lazy-loading observers
+ * - removes the resize listener speccer added in script mode
+ *
+ * Call it when a component unmounts or the view changes. Call `speccer()`, or
+ * a mode, to draw again.
+ *
+ * @example
+ * ```ts
+ * import { removeSpeccer } from '@phun-ky/speccer';
+ *
+ * removeSpeccer();
+ * ```
+ */
+/* node:coverage enable */
+export const removeSpeccer = (): void => {
+  stopLazy();
+  resizeDeactivate();
+  removeAnnotations();
 };
 
 /* node:coverage disable */

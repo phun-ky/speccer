@@ -8,16 +8,13 @@ remove the annotations when the component unmounts.
 
 ```jsx [SpeccedButton.jsx]
 import { useEffect } from 'react';
-import speccer from '@phun-ky/speccer';
+import speccer, { removeSpeccer } from '@phun-ky/speccer';
 import '@phun-ky/speccer/dist/speccer.min.css';
 
 export const SpeccedButton = ({ label = 'Save' }) => {
   // Runs after the component has rendered, and again after `label` changes
   useEffect(() => {
-    // Deferred, so a draw cancelled by the cleanup never starts
-    const timeout = setTimeout(speccer);
-
-    return () => clearTimeout(timeout);
+    speccer();
   }, [label]);
 
   // Runs once, after the first render
@@ -37,9 +34,7 @@ export const SpeccedButton = ({ label = 'Save' }) => {
       clearTimeout(timeout);
 
       // The annotations are added to <body>, not inside the component
-      for (const el of document.querySelectorAll('.ph-speccer.speccer')) {
-        el.remove();
-      }
+      removeSpeccer();
     };
   }, []);
 
@@ -54,9 +49,6 @@ export const SpeccedButton = ({ label = 'Save' }) => {
 - **Import the CSS once**, here or in your app's entry file.
 - **List the props and state that change the annotated content** in the first
   effect's dependencies, like `label` here.
-- **The draw is deferred** because `speccer()` draws a frame after it is called,
-  and two calls in the same frame both draw. In development, `StrictMode` runs
-  each effect twice, and that would leave two of every annotation.
 - **Don't pass an `async` function to `useEffect`.** It returns a promise, so
   React never gets the cleanup function, and the listener and the annotations
   stay after the component unmounts.
@@ -65,9 +57,9 @@ export const SpeccedButton = ({ label = 'Save' }) => {
 - **Lines and curly brackets** need
   [the `svg` element](/guide/introduction/#svg), for example in `index.html` or
   your root layout.
-- **Removing the annotations** on unmount removes every annotation on the page.
-  A function in speccer that does this is planned for 12.0
-  ([#485](https://github.com/phun-ky/speccer/issues/485)).
+- **`removeSpeccer()`** on unmount removes every annotation on the page, stops
+  draws that are still in progress, and keeps the `svg` element. It needs
+  speccer 11.5.0 or newer.
 
 ## Server-side rendering
 

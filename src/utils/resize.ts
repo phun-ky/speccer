@@ -1,12 +1,13 @@
-import { DebounceAnyFunctionType } from '../types/debounce';
 import { SpeccerFunctionType } from '../types/speccer';
-
-import debounce from './debounce';
 
 /**
  * The currently attached resize listener, kept so it can be removed again.
  */
-let speccerEventFunc: DebounceAnyFunctionType | undefined;
+let _on_resize: (() => void) | undefined;
+/**
+ * The redraw waiting for resizing to stop, kept so it can be cancelled.
+ */
+let _timeout: ReturnType<typeof setTimeout> | undefined;
 
 /* node:coverage disable */
 /**
@@ -29,12 +30,31 @@ let speccerEventFunc: DebounceAnyFunctionType | undefined;
 /* node:coverage enable */
 export const activate = (speccer: SpeccerFunctionType): void => {
   // Remove the previous resize event listener to prevent duplicates
-  if (speccerEventFunc) window.removeEventListener('resize', speccerEventFunc);
+  deactivate();
 
-  speccerEventFunc = debounce(() => {
-    speccer();
-  }, 300);
+  _on_resize = () => {
+    clearTimeout(_timeout);
+    _timeout = setTimeout(() => speccer(), 300);
+  };
 
-  // Add the debounced resize event listener
-  window.addEventListener('resize', speccerEventFunc);
+  window.addEventListener('resize', _on_resize);
+};
+
+/* node:coverage disable */
+/**
+ * Removes the resize listener added by `activate()`, and cancels a redraw that
+ * is waiting for resizing to stop.
+ *
+ * @example
+ * ```ts
+ * deactivate();
+ * ```
+ */
+/* node:coverage enable */
+export const deactivate = (): void => {
+  if (_on_resize) window.removeEventListener('resize', _on_resize);
+
+  clearTimeout(_timeout);
+  _on_resize = undefined;
+  _timeout = undefined;
 };

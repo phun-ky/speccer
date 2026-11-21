@@ -39,6 +39,8 @@ export { a11y } from './features/a11y';
 
 export { removeSpeccerElement } from './utils/remove-speccer-element';
 
+export { removeSpeccer } from './config/browser';
+
 /**
  * This feature will highlight the grid spacing in a `display: grid;` element.
  *

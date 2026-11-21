@@ -33,10 +33,11 @@ const PAGE = `<!doctype html>
         stroke-width="1" stroke="currentColor" />
     </svg>
     <script type="module">
-      import speccer, { modes } from '/speccer.esm.js';
+      import speccer, { modes, removeSpeccer } from '/speccer.esm.js';
 
       window.speccer = speccer;
       window.modes = modes;
+      window.removeSpeccer = removeSpeccer;
     </script>
   </body>
 </html>`;
@@ -44,6 +45,7 @@ const PAGE = `<!doctype html>
 declare global {
   interface Window {
     modes: { lazy: () => void; rerenderLazy: () => void };
+    removeSpeccer: () => void;
   }
 }
 
@@ -114,4 +116,16 @@ test.describe('overlapping draws', () => {
       expect(await countByKind(page)).toEqual(once);
     });
   }
+
+  test('removeSpeccer() while speccer() is drawing leaves nothing', async ({
+    page
+  }) => {
+    await page.evaluate(() => {
+      window.speccer();
+      window.removeSpeccer();
+    });
+    await page.waitForTimeout(800);
+
+    expect(await countByKind(page)).toEqual({});
+  });
 });
