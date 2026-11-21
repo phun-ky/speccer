@@ -137,6 +137,31 @@ test.describe('activation modes', () => {
     );
   });
 
+  // https://github.com/phun-ky/speccer/issues/485
+  for (const mode of ['', 'lazy']) {
+    test(`${mode || 'default'}: removeSpeccer() removes everything and stops`, async ({
+      page
+    }) => {
+      await page.goto(`/modes.html${mode ? `?mode=${mode}` : ''}`);
+      await expect(
+        (await annotationsFor(page.locator('#mark-above'))).first()
+      ).toBeAttached();
+
+      // The UMD build exposes its exports as window.speccer
+      await page.evaluate(() => window.speccer.removeSpeccer());
+
+      const annotations = page.locator('.ph-speccer.speccer');
+
+      await expect(annotations).toHaveCount(0);
+
+      // Neither the resize listener nor the lazy-loading observers draw again
+      await page.setViewportSize({ width: 600, height: 800 });
+      await page.locator('#below-the-fold').scrollIntoViewIfNeeded();
+      await page.waitForTimeout(800);
+      await expect(annotations).toHaveCount(0);
+    });
+  }
+
   test('exposes lazy and rerenderLazy in the ESM build', async ({ page }) => {
     await page.goto('/modes.html?mode=manual');
 
