@@ -12,7 +12,7 @@ rendered, and removes the annotations when you go to another story:
 ```tsx [.storybook/preview.tsx]
 import type { Decorator, Preview } from '@storybook/react-vite';
 import { useEffect } from 'storybook/preview-api';
-import speccer from '@phun-ky/speccer';
+import speccer, { removeSpeccer } from '@phun-ky/speccer';
 import '@phun-ky/speccer/dist/speccer.min.css';
 
 let timeout: ReturnType<typeof setTimeout> | undefined;
@@ -36,11 +36,7 @@ const withSpeccer: Decorator = (Story, { args }) => {
     return () => {
       window.removeEventListener('resize', onResize);
       clearTimeout(timeout);
-
-      // Keeps the svg element, which also has the ph-speccer class
-      for (const el of document.querySelectorAll('.ph-speccer.speccer')) {
-        el.remove();
-      }
+      removeSpeccer();
     };
   }, [args]);
 
@@ -58,13 +54,9 @@ export default preview;
   renderer, so the decorator works the same way with Vue, Svelte, Angular or web
   components. Import `Decorator` and `Preview` from your framework's package,
   and return `Story()` instead of `<Story />` if you don't use React.
-- **On a docs page with several stories**, speccer 11.4.7 and older can draw
-  some annotations twice, when the stories render a few milliseconds apart.
-  Releases with the fix for
-  [#557](https://github.com/phun-ky/speccer/issues/557) don't.
-- **Removing the annotations** when the story changes removes every annotation
-  on the page. A function in speccer that does this is planned for 12.0
-  ([#485](https://github.com/phun-ky/speccer/issues/485)).
+- **`removeSpeccer()`** when the story changes removes every annotation on the
+  page, stops draws that are still in progress, and keeps the `svg` element. It
+  needs speccer 11.5.0 or newer.
 
 ## The svg element
 
