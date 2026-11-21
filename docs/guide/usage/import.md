@@ -52,6 +52,15 @@ speccer();
 
 :::
 
+::: warning CommonJS is deprecated
+
+The CommonJS build (`require('@phun-ky/speccer')`) is removed in 12.0, see
+[#571](https://github.com/phun-ky/speccer/issues/571). Node 22.12 and newer can
+`require()` the ES module instead. Jest in CommonJS mode needs ESM support or a
+transform for speccer.
+
+:::
+
 ## Types
 
 Types can be found in `@phun-ky/speccer/dist/speccer.d.ts`.

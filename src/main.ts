@@ -73,6 +73,9 @@ export { removeSpeccer } from './config/browser';
  *
  */
 export const grid = {
+  /**
+   * @deprecated Use `grid.element`, which does the same. Removed in 12.0, see https://github.com/phun-ky/speccer/issues/567
+   */
   create: gridCreate,
   element: gridElement
 };
@@ -100,6 +103,9 @@ export const grid = {
  * ```
  */
 export const spacing = {
+  /**
+   * @deprecated Internal node builder, removed from the public API in 12.0. Use `spacing.element`, see https://github.com/phun-ky/speccer/issues/567
+   */
   create: spacingCreate,
   element: spacingElement
 };
@@ -123,6 +129,9 @@ export const spacing = {
  *
  */
 export const pin = {
+  /**
+   * @deprecated Internal node builder, removed from the public API in 12.0. Use `pin.pinElement` or `pin.pinElements`, see https://github.com/phun-ky/speccer/issues/567
+   */
   createPinElement,
   pinElement,
   pinElements
@@ -160,6 +169,9 @@ export const pin = {
  *
  */
 export const measure = {
+  /**
+   * @deprecated Internal node builder, removed from the public API in 12.0. Use `measure.element`, see https://github.com/phun-ky/speccer/issues/567
+   */
   create: measureCreate,
   element: measureElement
 };
@@ -193,6 +205,9 @@ export const measure = {
  *
  */
 export const mark = {
+  /**
+   * @deprecated Internal node builder, removed from the public API in 12.0. Use `mark.element`, see https://github.com/phun-ky/speccer/issues/567
+   */
   create: markCreate,
   element: markElement
 };
@@ -230,6 +245,9 @@ export const mark = {
  *
  */
 export const typography = {
+  /**
+   * @deprecated Internal node builder, removed from the public API in 12.0. Use `typography.element`, see https://github.com/phun-ky/speccer/issues/567
+   */
   create: typographyCreate,
   element: typographyElement
 };
@@ -258,6 +276,9 @@ export const modes = {
   lazy,
   rerenderLazy,
   manual,
+  /**
+   * @deprecated Starts the script build (`speccer.js`) from its `<script>` attributes, which it does by itself. Removed from the public API in 12.0, see https://github.com/phun-ky/speccer/issues/570
+   */
   activate
 };
 
