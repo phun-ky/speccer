@@ -52,6 +52,19 @@ speccer();
 
 :::
 
+## Waiting for the draw
+
+`speccer()` draws over a few animation frames. It returns a promise that settles
+when every annotation is drawn, so you can wait for it, for example in a test or
+before taking a screenshot:
+
+```ts
+await speccer();
+```
+
+The promise rejects if a feature fails to draw. Calling `speccer()` without
+`await` works as before. This needs speccer 11.6.0 or newer.
+
 ## Types
 
 Types can be found in `@phun-ky/speccer/dist/speccer.d.ts`.

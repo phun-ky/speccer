@@ -29,12 +29,13 @@ import { addShortcutElement } from './utils/add-shortcut-element';
  *
  * ```ts
  * const targetElement = document.getElementById('target');
- * a11y(targetElement);
+ * await a11y();
  * ```
  *
  *
  */
-export const a11y = () => {
+export const a11y = async (): Promise<void> => {
+  const _drawn: Promise<void>[] = [];
   const _tab_order_elements = document.querySelectorAll(
     '[data-speccer*="a11y tabstops"]'
   );
@@ -62,7 +63,7 @@ export const a11y = () => {
       )
         continue;
 
-      addShortcutElement(el as HTMLElement, _shortcut_string);
+      _drawn.push(addShortcutElement(el as HTMLElement, _shortcut_string));
     }
   }
 
@@ -74,10 +75,12 @@ export const a11y = () => {
 
       for (const [tabstopsIndex, tabstopsEl] of _tabstops_els.entries()) {
         if (!isElementHidden(tabstopsEl as HTMLElement)) {
-          addA11yElement(
-            tabstopsEl as HTMLElement,
-            tabstopsIndex + 1,
-            'tabstops'
+          _drawn.push(
+            addA11yElement(
+              tabstopsEl as HTMLElement,
+              tabstopsIndex + 1,
+              'tabstops'
+            )
           );
           continue;
         }
@@ -95,10 +98,12 @@ export const a11y = () => {
           continue;
 
         // This could be a fake element, like a toggle checkbox, so we use the labelElement
-        addA11yElement(
-          potentialLabelElement as HTMLElement,
-          tabstopsIndex + 1,
-          'tabstops'
+        _drawn.push(
+          addA11yElement(
+            potentialLabelElement as HTMLElement,
+            tabstopsIndex + 1,
+            'tabstops'
+          )
         );
       }
     }
@@ -111,7 +116,9 @@ export const a11y = () => {
       for (const _autocomplete_el of _autocomplete_els) {
         if (isElementHidden(_autocomplete_el as HTMLElement)) continue;
 
-        addA11yElement(_autocomplete_el as HTMLElement, null, 'autocomplete');
+        _drawn.push(
+          addA11yElement(_autocomplete_el as HTMLElement, null, 'autocomplete')
+        );
       }
     }
   }
@@ -125,7 +132,9 @@ export const a11y = () => {
       for (const _headings_el of _headings_els) {
         if (isElementHidden(_headings_el as HTMLElement)) continue;
 
-        addA11yElement(_headings_el as HTMLElement, null, 'headings');
+        _drawn.push(
+          addA11yElement(_headings_el as HTMLElement, null, 'headings')
+        );
       }
     }
   }
@@ -139,13 +148,17 @@ export const a11y = () => {
       for (const [landmarkIndex, landmarkEl] of _landmark_els.entries()) {
         if (isElementHidden(landmarkEl as HTMLElement)) continue;
 
-        addA11yElement(
-          landmarkEl as HTMLElement,
-          landmarkIndex + 1,
-          'landmark'
+        _drawn.push(
+          addA11yElement(
+            landmarkEl as HTMLElement,
+            landmarkIndex + 1,
+            'landmark'
+          )
         );
-        addA11yElement(landmarkEl as HTMLElement, null, 'region');
+        _drawn.push(addA11yElement(landmarkEl as HTMLElement, null, 'region'));
       }
     }
   }
+
+  await Promise.all(_drawn);
 };

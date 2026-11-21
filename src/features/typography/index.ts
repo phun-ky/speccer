@@ -157,5 +157,5 @@ export const typography = async (
 
   const _position = await position(_options, targetElement, _speccer_el);
 
-  addStyles(_speccer_el, _position);
+  await addStyles(_speccer_el, _position);
 };
