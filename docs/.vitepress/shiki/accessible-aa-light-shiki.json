@@ -131,7 +131,7 @@
     {
       "name": "Comment",
       "scope": ["comment", "punctuation.definition.comment"],
-      "settings": { "fontStyle": "italic", "foreground": "#5f7175" }
+      "settings": { "fontStyle": "italic", "foreground": "#78698c" }
     },
     {
       "name": "Variables",
@@ -438,7 +438,7 @@
     {
       "name": "CSS pseudo",
       "scope": ["entity.other.attribute-name.pseudo-element.css"],
-      "settings": { "foreground": "#72c6c0" }
+      "settings": { "foreground": "#317a75" }
     },
     {
       "name": "CSS IDs (Sass control)",
