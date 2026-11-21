@@ -33,7 +33,7 @@ Create a spacing element with optional text content.
 
 ##### text?
 
-`string` | `number`
+`string` | `number` = `''`
 
 The optional text content for the spacing element.
 

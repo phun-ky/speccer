@@ -1,6 +1,6 @@
 {
   "name": "@phun-ky/speccer",
-  "version": "11.4.6",
+  "version": "11.4.7",
   "description": "A script to annotate, show spacing specs and to display typography information in documentation/website on HTML elements",
   "keywords": [
     "a11y",
@@ -129,6 +129,7 @@
     "cssnano": "^9.3.2",
     "eslint": "^10.0.0",
     "eslint-config-phun-ky": "^3.0.0",
+    "fast-check": "^4.10.3",
     "git-cz": "^4.9.0",
     "global-jsdom": "^30.0.0",
     "globals": "^17.0.0",

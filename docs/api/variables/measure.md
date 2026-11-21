@@ -43,7 +43,7 @@ Create a measurement element with optional text, area, and element type.
 
 ##### text?
 
-`string` | `number`
+`string` | `number` = `''`
 
 The text to display on the element.
 

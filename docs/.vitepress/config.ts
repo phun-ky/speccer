@@ -145,7 +145,8 @@ export default defineConfig({
           text: 'Getting started',
           items: [
             { text: 'What is SPECCER?', link: '/guide/introduction/what' },
-            { text: 'Introduction', link: '/guide/introduction/' }
+            { text: 'Introduction', link: '/guide/introduction/' },
+            { text: 'Troubleshooting', link: '/guide/troubleshooting' }
           ]
         },
         {

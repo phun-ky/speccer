@@ -70,4 +70,6 @@ initialize when `DOMContentLoaded` is fired.
 
 Except with `data-manual`, annotations are re-rendered when the window is
 resized. With `data-lazy`, the annotations in view are redrawn right away, and
-the rest when they are scrolled into view.
+the rest when they are scrolled into view. See
+[troubleshooting](/guide/troubleshooting#annotations-are-in-the-wrong-place-after-the-layout-changes)
+for what to do when the layout changes in other ways.
