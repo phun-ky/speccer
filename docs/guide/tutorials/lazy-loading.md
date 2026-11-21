@@ -37,7 +37,7 @@ const { pinElements } = pin;
  * @param {IntersectionObserver} observer - The IntersectionObserver instance
  * @returns {Promise<void>} Promise that resolves when element dissection is complete
  */
-const intersectionCallback: IntersectionObserverCallback = async (entries, observer) => {
+const intersectionCallback = async (entries, observer) => {
   entries.forEach(async (entry) => {
     if (entry.intersectionRatio > 0) {
       await pinElements(entry.target);
@@ -51,7 +51,7 @@ const pinElementObserver = new IntersectionObserver(intersectionCallback);
  * Function to observe elements using IntersectionObserver
  * @param {Element} el - The element to be observed
  */
-const observeElement = (el: Element): void => {
+const observeElement = (el) => {
   pinElementObserver.observe(el);
 };
 

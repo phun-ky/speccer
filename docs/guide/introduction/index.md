@@ -6,6 +6,8 @@
 
 You can see it in action at [CodePen](https://codepen.io/phun-ky/full/OJejexN).
 
+If something doesn't look right, see [troubleshooting](/guide/troubleshooting).
+
 ## Installation
 
 You do not have to install **SPECCER** to use it, you can use it via

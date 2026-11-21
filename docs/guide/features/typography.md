@@ -27,14 +27,17 @@ This feature allows you to display typography details.
 ```typescript [main.ts]
 import { typography } from '@phun-ky/speccer';
 
-const { create } = typography;
+const { element: typographyElement } = typography;
 const element = document.querySelector('.my-element');
 const options = {
   slug: 'typographyTest',
   position: 'left', // or top, right or bottom
-  type: 'typography'
+  type: 'typography',
+  typography: {
+    useSyntaxHighlighting: false
+  }
 };
-await create(element, options);
+await typographyElement(element, options);
 ```
 
 This will place a box to display typography information. Default is `left`.
@@ -74,7 +77,7 @@ to the `data-speccer="typography"` attribute.
 ```typescript [main.ts]
 import { typography } from '@phun-ky/speccer';
 
-const { create } = typography;
+const { element: typographyElement } = typography;
 const element = document.querySelector('.my-element');
 const options = {
   slug: 'typographyTest',
@@ -84,7 +87,7 @@ const options = {
     useSyntaxHighlighting: true
   }
 };
-await create(element, options);
+await typographyElement(element, options);
 ```
 
 ::: tip Feature options

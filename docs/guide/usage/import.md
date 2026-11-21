@@ -12,7 +12,8 @@ import speccer from '@phun-ky/speccer';
 speccer();
 ```
 
-```js [umd.js]
+```js [cjs.js]
+// CSS through your bundler's CSS loader
 require('@phun-ky/speccer/dist/speccer.min.css');
 const mod = require('@phun-ky/speccer');
 const speccer = mod.default || mod;
@@ -42,9 +43,10 @@ speccer();
 <script type="module">
   import { pin } from '@phun-ky/speccer';
 
-  const { pinElement } = pin;
-
-  pinElement();
+  // Pin the elements in each pin-area
+  for (const area of document.querySelectorAll('[data-speccer="pin-area"]')) {
+    pin.pinElements(area);
+  }
 </script>
 ```
 
