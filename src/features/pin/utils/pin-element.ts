@@ -6,7 +6,7 @@ import { DrawSVGLine } from '../../../utils/classes/DrawSVGLine';
 import { SPECCER_DATA_ATTRIBUTE } from '../../../utils/constants';
 import { getOptions } from '../../../utils/get-options';
 import { uniqueID } from '../../../utils/id';
-import { isElementHidden } from '../../../utils/node';
+import { isElementHidden, startDraw } from '../../../utils/node';
 import { add } from '../../../utils/styles';
 import { waitForFrame } from '../../../utils/wait';
 
@@ -76,6 +76,7 @@ export const pinElement = async (
 
   if (isElementHidden(targetElement)) return;
 
+  const isStale = startDraw();
   const _areas_string: string =
     targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || 'pin';
 
@@ -83,7 +84,7 @@ export const pinElement = async (
 
   const _options = await getOptions(_areas_string, targetElement, options);
 
-  if (_options.type !== 'pin' || !_options.pin) return;
+  if (_options.type !== 'pin' || !_options.pin || isStale()) return;
 
   const _pin_element_id = `speccer-${_options.slug}-${targetElement.getAttribute('id') || uniqueID()}`;
   const _pin_element = createPinElement(content, _options, _pin_element_id);
@@ -100,6 +101,9 @@ export const pinElement = async (
   );
 
   await add(_pin_element, _pin_styles);
+
+  // The pin was removed while it was styled, so draw no lines for it
+  if (isStale()) return _pin_element_id;
 
   const isText =
     _options.pin.text &&

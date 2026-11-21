@@ -29,7 +29,7 @@ import {
   SPECCER_LITERALS
 } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
-import { isElementHidden } from '../../utils/node';
+import { isElementHidden, startDraw } from '../../utils/node';
 import { waitForFrame } from '../../utils/wait';
 
 import { getCharacterToUse } from './utils/get-character-to-use';
@@ -56,6 +56,7 @@ export const pinElements = async (
 ): Promise<void> => {
   if (!sectionElement) return;
 
+  const isStale = startDraw();
   const _els_to_be_pinned = sectionElement.querySelectorAll(
     '[data-speccer^="pin"]'
   );
@@ -88,6 +89,8 @@ export const pinElements = async (
           options
         );
         const _content = getContentForPin(_symbol, targetElement, _options);
+
+        if (isStale()) return;
 
         await pinElement(targetElement, sectionElement, _content, _options);
       }
