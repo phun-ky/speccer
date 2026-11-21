@@ -5,7 +5,7 @@ import { coords } from '../coords';
 
 describe('coords', () => {
   // Create a dummy DOMRect for testing
-  let dummyRect;
+  let dummyRect: DOMRect;
 
   beforeEach(() => {
     // Create a dummy DOMRect with specified values for testing
@@ -14,7 +14,7 @@ describe('coords', () => {
       left: 20,
       width: 50,
       height: 30
-    };
+    } as DOMRect;
   });
 
   it('top should return the top coordinate of a DOMRect', () => {

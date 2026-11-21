@@ -5,7 +5,7 @@ import { set, toggle, remove, cx } from '../classnames';
 
 describe('classnames', () => {
   // Create a dummy HTML element for testing
-  let dummyElement;
+  let dummyElement: HTMLElement;
 
   beforeEach(() => {
     // Create a div element for testing
