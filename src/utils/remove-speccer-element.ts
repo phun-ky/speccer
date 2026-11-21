@@ -1,10 +1,8 @@
 /**
- * Remove a speccer element by removing associated elements and SVG paths.
+ * Remove the annotations of an element: every element speccer generated for
+ * it, and its SVG lines, curly brackets and circles.
  *
- * This function removes any speccer elements linked to the specified element and
- * also removes any SVG paths that might be associated with it.
- *
- * @param {HTMLElement} el - The HTML element to unpin.
+ * @param {HTMLElement} el - The annotated element.
  * @returns {void} This function does not return a value.
  *
  * @example
@@ -20,27 +18,24 @@ export const removeSpeccerElement = (el: HTMLElement): void => {
 
   if (!_selector) return;
 
-  const _pin_element =
-    document.getElementById(_selector) ||
-    document.querySelectorAll(`[data-speccer-id="${_selector}"]`);
+  // Compared as values, not put in a selector, so any id works
+  for (const node of document.querySelectorAll('[data-speccer-id]')) {
+    if (node.getAttribute('data-speccer-id') === _selector) node.remove();
+  }
 
-  if (!_pin_element) return;
+  const _el_ID = el.getAttribute('id');
 
-  if (Object.prototype.isPrototypeOf.call(NodeList.prototype, _pin_element)) {
-    [...(_pin_element as unknown as HTMLElement[])].forEach((el: HTMLElement) =>
-      el.remove()
-    );
-  } else {
-    // We also need to remove the svg paths if it is in use
+  if (!_el_ID) return;
+
+  // shortcut: SVG shapes only store the element's id, so elements sharing an
+  // id lose each other's shapes; store the annotation id on them if that matters
+  for (const node of document.querySelectorAll(
+    '#ph-speccer-svg [data-start-el], #ph-speccer-svg [data-el]'
+  )) {
     if (
-      (_pin_element as HTMLElement).classList.contains('curly') ||
-      (_pin_element as HTMLElement).classList.contains('svg')
-    ) {
-      const _el_ID = el.getAttribute('id');
-
-      document
-        .querySelectorAll(`#ph-speccer-svg path[data-start-el="${_el_ID}"]`)
-        .forEach((el) => el.remove());
-    }
+      node.getAttribute('data-start-el') === _el_ID ||
+      node.getAttribute('data-el') === _el_ID
+    )
+      node.remove();
   }
 };
