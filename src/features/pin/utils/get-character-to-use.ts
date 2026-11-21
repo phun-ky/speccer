@@ -1,38 +1,31 @@
-let _index_to_use = 0;
+import { SPECCER_LITERALS } from '../../../utils/constants';
 
 /**
- * Returns the character to use at the specified target index.
- * If the index exceeds the available characters, it generates a new character by pairing uppercase and lowercase letters.
+ * Returns the character to use for the pin at the specified index.
+ * When the index is past the end of the literals, it starts over and adds a
+ * lowercase copy for each round: `A`, `Aa`, `Aaa` and so on.
  *
- * @param {number} targetIndex - The index of the character to retrieve.
- * @param {string|string[]} literalsToUse - Literals to use
+ * @param {number} targetIndex - The index of the pin in its pin-area.
+ * @param {string|string[]} literalsToUse - Literals to use. Empty literals fall back to `SPECCER_LITERALS`.
  * @returns {string} The character to use at the specified index.
  *
  * @example
  * ```ts
- * const character = getCharacterToUse(0); // Returns first character from SPECCER_LITERALS
- * const nextCharacter = getCharacterToUse(25); // Returns next character or a generated pair if index exceeds literals length
+ * getCharacterToUse(0, SPECCER_LITERALS); // 'A'
+ * getCharacterToUse(26, SPECCER_LITERALS); // 'Aa'
+ * getCharacterToUse(53, SPECCER_LITERALS); // 'Bbb'
  * ```
  */
 export const getCharacterToUse = (
   targetIndex: number,
   literalsToUse: string | string[]
 ): string => {
-  let _character_to_use = literalsToUse[targetIndex];
+  // Spread, so a string is split into characters, not the halves of an emoji
+  const _literals = literalsToUse.length
+    ? [...literalsToUse]
+    : SPECCER_LITERALS;
+  const _character = _literals[targetIndex % _literals.length];
+  const _round = Math.floor(targetIndex / _literals.length);
 
-  // Reset index to use when we start new elements
-  if (targetIndex === 0) _index_to_use = 0;
-
-  /**
-   * If we're running out of characters to use,
-   * make a new one with uppercase and lowercase pairs
-   */
-  if (!_character_to_use) {
-    _character_to_use = `${literalsToUse[_index_to_use]}${literalsToUse[
-      _index_to_use
-    ].toLowerCase()}`;
-    _index_to_use++;
-  }
-
-  return _character_to_use;
+  return _character + _character.toLowerCase().repeat(_round);
 };

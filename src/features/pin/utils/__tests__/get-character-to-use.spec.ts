@@ -5,56 +5,34 @@ import { SPECCER_LITERALS } from '../../../../utils/constants';
 import { getCharacterToUse } from '../get-character-to-use';
 
 describe('getCharacterToUse', () => {
-  it('should return the correct character from SPECCER_LITERALS based on the target index', () => {
-    const targetIndex = 0;
-    const character = getCharacterToUse(targetIndex, SPECCER_LITERALS);
-
-    assert.equal(character, SPECCER_LITERALS[targetIndex]);
+  it('returns the literal at the index', () => {
+    assert.equal(getCharacterToUse(0, SPECCER_LITERALS), 'A');
+    assert.equal(getCharacterToUse(25, SPECCER_LITERALS), 'Z');
   });
 
-  it('should return the combined character if the target index exceeds SPECCER_LITERALS length', () => {
-    const targetIndex = SPECCER_LITERALS.length + 1;
-    const expectedCharacter = `${SPECCER_LITERALS[0]}${SPECCER_LITERALS[0].toLowerCase()}`;
-    const character = getCharacterToUse(targetIndex, SPECCER_LITERALS);
-
-    assert.equal(character, expectedCharacter);
+  it('adds a lowercase copy for each round past the end', () => {
+    assert.equal(getCharacterToUse(26, SPECCER_LITERALS), 'Aa');
+    assert.equal(getCharacterToUse(51, SPECCER_LITERALS), 'Zz');
+    // https://github.com/phun-ky/speccer/issues/562
+    assert.equal(getCharacterToUse(52, SPECCER_LITERALS), 'Aaa');
+    assert.equal(getCharacterToUse(53, SPECCER_LITERALS), 'Bbb');
   });
 
-  it('should reset the internal index when targetIndex is 0', () => {
-    const character1 = getCharacterToUse(
-      SPECCER_LITERALS.length + 1,
-      SPECCER_LITERALS
-    ); // Exceeding length to increment internal index
-
-    assert.equal(
-      character1,
-      `${SPECCER_LITERALS[1]}${SPECCER_LITERALS[1].toLowerCase()}`
-    );
-
-    const character2 = getCharacterToUse(0, SPECCER_LITERALS); // Reset internal index
-
-    assert.equal(character2, SPECCER_LITERALS[0]);
+  it('depends only on the index, not on earlier calls', () => {
+    assert.equal(getCharacterToUse(27, SPECCER_LITERALS), 'Bb');
+    assert.equal(getCharacterToUse(27, SPECCER_LITERALS), 'Bb');
   });
 
-  it('should handle multiple calls correctly when exceeding available characters', () => {
-    const firstCharacter = getCharacterToUse(
-      SPECCER_LITERALS.length,
-      SPECCER_LITERALS
-    ); // Exceeds, should use combined characters
-
-    assert.equal(
-      firstCharacter,
-      `${SPECCER_LITERALS[0]}${SPECCER_LITERALS[0].toLowerCase()}`
+  it('splits string literals into characters', () => {
+    assert.deepEqual(
+      [0, 1, 2, 3, 4].map((i) => getCharacterToUse(i, 'AB')),
+      ['A', 'B', 'Aa', 'Bb', 'Aaa']
     );
+    assert.equal(getCharacterToUse(1, '🥰😎'), '😎');
+  });
 
-    const secondCharacter = getCharacterToUse(
-      SPECCER_LITERALS.length + 1,
-      SPECCER_LITERALS
-    ); // Next in line
-
-    assert.equal(
-      secondCharacter,
-      `${SPECCER_LITERALS[1]}${SPECCER_LITERALS[1].toLowerCase()}`
-    );
+  it('falls back to SPECCER_LITERALS for empty literals', () => {
+    assert.equal(getCharacterToUse(1, []), 'B');
+    assert.equal(getCharacterToUse(1, ''), 'B');
   });
 });
