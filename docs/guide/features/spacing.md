@@ -58,19 +58,19 @@ Use the following attribute to display element padding and margin:
 ```typescript
 import { spacing } from '@phun-ky/speccer';
 
-const { create } = spacing;
+const { element: spacingElement } = spacing;
 const element = document.querySelector('.my-element');
 const options = {
   slug: 'spacingTest',
   type: 'spacing',
   spacing: {
-    both: [false | true],
-    padding: [false | true],
-    margin: [false | true],
-    bound: [false | true]
+    both: true, // or set padding or margin to true to show only that
+    padding: false,
+    margin: false,
+    bound: false
   }
 };
-await create(element, options);
+await spacingElement(element, options);
 ```
 
 This will display the element _and all of it's children_ padding and margin,
@@ -104,7 +104,7 @@ Suitable for more dense layouts.
 ```typescript [main.ts]
 import { spacing } from '@phun-ky/speccer';
 
-const { create } = spacing;
+const { element: spacingElement } = spacing;
 const element = document.querySelector('.my-element');
 const options = {
   slug: 'spacingTest',
@@ -113,5 +113,5 @@ const options = {
     bound: true
   }
 };
-await create(element, options);
+await spacingElement(element, options);
 ```

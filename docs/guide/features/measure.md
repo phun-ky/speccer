@@ -37,19 +37,19 @@ Where `height` and `width` comes with placement flags. Default for `height` is
 ```typescript
 import { measure } from '@phun-ky/speccer';
 
-const { create } = measure;
+const { element: measureElement } = measure;
 const element = document.querySelector('.my-element');
 const options = {
   slug: 'measureTest',
   type: 'measure',
-  position: 'left' | 'top' | 'right' | 'bottom',
+  position: 'left', // or 'top', 'right' or 'bottom'
   measure: {
-    slim: [false | true],
-    height: [false | true],
-    width: [false | true]
+    slim: false,
+    height: true, // height, width, or both
+    width: false
   }
 };
-await create(element, options);
+await measureElement(element, options);
 ```
 
 ### Slim Measure
@@ -66,14 +66,8 @@ Use a slim style:
 
 ```typescript [programmatically]
 import { measure } from '@phun-ky/speccer';
-import type {
-  SpeccerOptionsInterface,
-  SpeccerPositionType
-} from '@phun-ky/speccer';
 
-const { create } = measure as {
-  create: (target: HTMLElement, options?: SpeccerOptionsInterface) => void;
-};
+const { element: measureElement } = measure;
 const element = document.querySelector('.my-element');
 const options = {
   slug: 'measureTest',
@@ -84,7 +78,7 @@ const options = {
     height: true
   }
 };
-await create(element, options);
+await measureElement(element, options);
 ```
 
 :::
@@ -104,14 +98,8 @@ line:
 
 ```typescript [programmatically]
 import { measure } from '@phun-ky/speccer';
-import type {
-  SpeccerOptionsInterface,
-  SpeccerPositionType
-} from '@phun-ky/speccer';
 
-const { create } = measure as {
-  create: (target: HTMLElement, options?: SpeccerOptionsInterface) => void;
-};
+const { element: measureElement } = measure;
 const element = document.querySelector('.my-element');
 const options = {
   slug: 'measureTest',
@@ -119,10 +107,11 @@ const options = {
   type: 'measure',
   measure: {
     slim: true,
+    height: true,
     subtle: true
   }
 };
-await create(element, options);
+await measureElement(element, options);
 ```
 
 :::

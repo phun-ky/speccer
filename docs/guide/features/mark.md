@@ -29,13 +29,12 @@ In your component examples, use the following attribute.
 ```typescript
 import { mark } from '@phun-ky/speccer';
 
-const { create } = mark;
+const { element: markElement } = mark;
 const element = document.querySelector('.my-element');
-const options = {
-  slug: 'markTest',
-  type: 'mark'
-};
-await create(element, options);
+
+// mark takes no options, it reads them from the attribute
+element.setAttribute('data-speccer', 'mark');
+await markElement(element);
 ```
 
 ::: tip Feature options
