@@ -127,7 +127,7 @@ const gridRows: SpeccerOptionsInterface = {
 ### grid?
 
 ```ts
-optional grid?: {
+grid?: {
   both?: boolean;
   columns?: boolean;
   rows?: boolean;
@@ -143,7 +143,7 @@ Options for the `"grid"` feature.
 #### both?
 
 ```ts
-optional both?: boolean;
+both?: boolean;
 ```
 
 Convenience flag set when both rows and columns are active.
@@ -151,7 +151,7 @@ Convenience flag set when both rows and columns are active.
 #### columns?
 
 ```ts
-optional columns?: boolean;
+columns?: boolean;
 ```
 
 Convenience flag set when only columns are active.
@@ -159,7 +159,7 @@ Convenience flag set when only columns are active.
 #### rows?
 
 ```ts
-optional rows?: boolean;
+rows?: boolean;
 ```
 
 Convenience flag set when only rows are active.
@@ -187,7 +187,7 @@ selection and should be `"rows" | "columns" | "both"`. The convenience flags
 ### measure?
 
 ```ts
-optional measure?: {
+measure?: {
   height: boolean;
   slim: boolean;
   width: boolean;
@@ -234,7 +234,7 @@ tight layouts.
 ### pin?
 
 ```ts
-optional pin?: {
+pin?: {
   bracket: boolean;
   enclose: boolean;
   parent: boolean;
@@ -352,7 +352,7 @@ a camel-casing strategy (e.g., `"pin bracket subtle"` → `"pinBracketSubtle"`).
 ### spacing?
 
 ```ts
-optional spacing?: {
+spacing?: {
   both?: boolean;
   bound?: boolean;
   margin?: boolean;
@@ -368,7 +368,7 @@ Options for the `"spacing"` feature.
 #### both?
 
 ```ts
-optional both?: boolean;
+both?: boolean;
 ```
 
 Visualize both margin and padding in a combined overlay.
@@ -380,7 +380,7 @@ Mutually exclusive with `margin` and `padding` where applicable.
 #### bound?
 
 ```ts
-optional bound?: boolean;
+bound?: boolean;
 ```
 
 Emphasize the bounding outline of the target in addition to spacing.
@@ -392,7 +392,7 @@ Often used to show the element's overall occupied box.
 #### margin?
 
 ```ts
-optional margin?: boolean;
+margin?: boolean;
 ```
 
 Visualize the element's margins.
@@ -400,7 +400,7 @@ Visualize the element's margins.
 #### padding?
 
 ```ts
-optional padding?: boolean;
+padding?: boolean;
 ```
 
 Visualize the element's padding.
@@ -434,7 +434,7 @@ This field determines which nested section is relevant (`pin`, `grid`, `mark`,
 ### typography?
 
 ```ts
-optional typography?: {
+typography?: {
   useSyntaxHighlighting: boolean;
 };
 ```
