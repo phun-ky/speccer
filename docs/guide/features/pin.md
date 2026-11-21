@@ -48,9 +48,9 @@ used:
 export const SPECCER_LITERALS: string[] = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
 ````
 
-Which means that if you have more pins than the character set, we try one more
-time with double characters, like so: `Aa, Bb, …` until we reach the end of the
-set. If you use the HTML way, and add a `data-speccer="pin-area"` to the parent
+Which means that if you have more pins than the character set, we start over
+with a lowercase copy added, like so: `Aa, Bb, …`, then `Aaa, Bbb, …` and so on.
+If you use the HTML way, and add a `data-speccer="pin-area"` to the parent
 container, the literals will reset for the next `data-speccer="pin-area"`.
 
 ### Programmatically

@@ -61,5 +61,5 @@ export const intrinsic_coords = async (
 
   const _el_rect = el.getBoundingClientRect();
 
-  return xy[pos](_el_rect);
+  return xy[pos as keyof typeof xy](_el_rect);
 };
