@@ -14,9 +14,6 @@ Breaking changes collect in the next major, and land together with release notes
 and an upgrading guide
 ([API review, #509](https://github.com/phun-ky/speccer/issues/509)):
 
-- **A function that removes every annotation and stops speccer**, for single
-  page apps and component previews
-  ([#485](https://github.com/phun-ky/speccer/issues/485)).
 - **Strict TypeScript** ([#491](https://github.com/phun-ky/speccer/issues/491)).
 - **Input checks on every export**, with `TypeError` and `RangeError` for bad
   input, from the API review.

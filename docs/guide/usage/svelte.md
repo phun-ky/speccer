@@ -9,7 +9,7 @@ remove the annotations when the component is destroyed.
 ```svelte [SpeccedButton.svelte]
 <script>
   import { onMount } from 'svelte';
-  import speccer from '@phun-ky/speccer';
+  import speccer, { removeSpeccer } from '@phun-ky/speccer';
   import '@phun-ky/speccer/dist/speccer.min.css';
 
   let { label = 'Save' } = $props();
@@ -36,9 +36,7 @@ remove the annotations when the component is destroyed.
       clearTimeout(timeout);
 
       // The annotations are added to <body>, not inside the component
-      for (const el of document.querySelectorAll('.ph-speccer.speccer')) {
-        el.remove();
-      }
+      removeSpeccer();
     };
   });
 </script>
@@ -56,9 +54,9 @@ remove the annotations when the component is destroyed.
 - **Lines and curly brackets** need
   [the `svg` element](/guide/introduction/#svg), for example in `app.html` or
   your root layout.
-- **Removing the annotations** on destroy removes every annotation on the page.
-  A function in speccer that does this is planned for 12.0
-  ([#485](https://github.com/phun-ky/speccer/issues/485)).
+- **`removeSpeccer()`** on destroy removes every annotation on the page, stops
+  draws that are still in progress, and keeps the `svg` element. It needs
+  speccer 11.5.0 or newer.
 
 ## Server-side rendering
 
