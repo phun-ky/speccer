@@ -154,7 +154,10 @@ export default defineConfig({
           items: [
             { text: 'As an import', link: '/guide/usage/import' },
             { text: 'Script', link: '/guide/usage/script' },
-            { text: 'React', link: '/guide/usage/react' }
+            { text: 'React', link: '/guide/usage/react' },
+            { text: 'Vue', link: '/guide/usage/vue' },
+            { text: 'Svelte', link: '/guide/usage/svelte' },
+            { text: 'Angular', link: '/guide/usage/angular' }
           ]
         },
         {
