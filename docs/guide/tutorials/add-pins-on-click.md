@@ -84,8 +84,7 @@ export const attachSpeccer = (
     target.classList.add('is-specced');
   };
 
-  target.removeEventListener('click', onClick as EventListener);
-  target.addEventListener('click', onClick as EventListener);
+  target.addEventListener('click', onClick);
 };
 ```
 
@@ -95,8 +94,8 @@ export const attachSpeccer = (
 // 1) Pick any element you already have:
 const el = document.getElementById('anything')!;
 
-// 2) Enable pin-on-click with your preferred variant:
-attachSpeccer(el, { variant: 'bracket', subtle: true, curly: true }); // bracket (curly ok)
-attachSpeccer(el, { variant: 'enclose' }); // or enclose
-attachSpeccer(el); // or default (none)
+// 2) Enable pin-on-click once per element, with one of the variants:
+attachSpeccer(el, { variant: 'bracket', subtle: true, curly: true });
+// attachSpeccer(el, { variant: 'enclose' });
+// attachSpeccer(el);
 ```
