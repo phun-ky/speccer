@@ -1,5 +1,17 @@
 # Changelog
 
+## [11.5.0](https://github.com/phun-ky/speccer/compare/v11.4.8...v11.5.0) (2026-11-21)
+
+### Documentation
+
+* ✏️ update the Storybook tutorial to Storybook 10 ([f723671](https://github.com/phun-ky/speccer/commit/f7236712d91542ceb0a48e28d7a9e0980d962347)), closes [#493](https://github.com/phun-ky/speccer/issues/493)
+* ✏️ use removeSpeccer() in the framework guides and troubleshooting ([d1ea5f4](https://github.com/phun-ky/speccer/commit/d1ea5f4e19a095642865043bf0704928782fae5a))
+* ✏️ use removeSpeccer() in the Storybook decorator ([903f34e](https://github.com/phun-ky/speccer/commit/903f34e55dda7fdcf841cc7f809da04268614fdf)), references [#560](https://github.com/phun-ky/speccer/issues/560)
+
+### Feature
+
+* 🎸 add removeSpeccer() to remove every annotation and stop speccer ([21315bf](https://github.com/phun-ky/speccer/commit/21315bfce0943ad873d5abe4094f1a1c6bf3ebf5)), closes [#485](https://github.com/phun-ky/speccer/issues/485) [#557](https://github.com/phun-ky/speccer/issues/557), references [#ph-speccer-svg](https://github.com/phun-ky/speccer/issues/ph-speccer-svg)
+
 ## [11.4.8](https://github.com/phun-ky/speccer/compare/v11.4.7...v11.4.8) (2026-11-21)
 
 ### Documentation
