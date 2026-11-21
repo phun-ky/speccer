@@ -38,7 +38,7 @@ import { cx, set as setClassNames } from '../../utils/classnames';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
-import { isElementHidden } from '../../utils/node';
+import { isElementHidden, startDraw } from '../../utils/node';
 import { getRec } from '../../utils/position';
 import { add as addStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
@@ -136,6 +136,7 @@ export const measure = async (
 
   if (isElementHidden(targetElement)) return;
 
+  const isStale = startDraw();
   const _areas_string: string =
     targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || 'measure';
 
@@ -148,6 +149,8 @@ export const measure = async (
   const { measure, position } = _options;
 
   await waitForFrame();
+
+  if (isStale()) return;
 
   const _target_rect = targetElement.getBoundingClientRect();
   const _width_modifier = !measure.slim ? 48 : 0;

@@ -66,7 +66,7 @@ import {
   SPECCER_FEATURE_SPACING,
   SPECCER_FEATURE_TYPOGRAPHY
 } from '../utils/constants';
-import { removeAll } from '../utils/node';
+import { removeAnnotations } from '../utils/node';
 import { activate as resizeActivate } from '../utils/resize';
 
 /* node:coverage disable */
@@ -178,7 +178,7 @@ export const lazy = (): void => {
  */
 /* node:coverage enable */
 export const rerenderLazy = (): void => {
-  removeAll('.ph-speccer.speccer');
+  removeAnnotations();
   lazy();
 };
 

@@ -1,7 +1,13 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 
-import { after, isElementHidden, removeAll } from '../node';
+import {
+  after,
+  isElementHidden,
+  removeAll,
+  removeAnnotations,
+  startDraw
+} from '../node';
 
 describe('node', () => {
   describe('after', () => {
@@ -271,6 +277,26 @@ describe('node', () => {
           'should default to not hidden when no ownerDocument/defaultView'
         );
       });
+    });
+  });
+
+  describe('removeAnnotations and startDraw', () => {
+    it('removes the annotations and marks draws started before as stale', () => {
+      document.body.innerHTML =
+        '<div class="ph-speccer speccer"></div><div class="ph-speccer"></div>';
+
+      const isStale = startDraw();
+
+      assert.equal(isStale(), false);
+
+      removeAnnotations();
+
+      assert.equal(isStale(), true);
+      assert.equal(document.querySelectorAll('.ph-speccer.speccer').length, 0);
+      assert.equal(document.querySelectorAll('.ph-speccer').length, 1);
+
+      // A draw started after the removal is not stale
+      assert.equal(startDraw()(), false);
     });
   });
 });
