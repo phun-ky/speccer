@@ -141,7 +141,9 @@ Only works with `pin bracket`
 ::: warning Important
 
 If any SVG options are used, remember to add
-[the required `svg` element](/guide/introduction/#svg) to the document.
+[the required `svg` element](/guide/introduction/#svg) to the document. If lines
+are missing, see
+[troubleshooting](/guide/troubleshooting#lines-and-curly-brackets-are-missing).
 
 :::
 
