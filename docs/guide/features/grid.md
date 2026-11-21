@@ -32,10 +32,10 @@ const options = {
   slug: 'gridTest',
   type: 'grid',
   grid: {
-    toggle: 'both' | 'rows' | 'columns',
-    both: false | true,
-    rows: false | true,
-    columns: false | true
+    toggle: 'both', // or 'rows' or 'columns'
+    both: true,
+    rows: false,
+    columns: false
   }
 };
 await create(element, options);
