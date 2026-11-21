@@ -37,6 +37,48 @@ export const removeAll = (selector: string, el: Document = document): void => {
   });
 };
 
+// Bumped by removeAnnotations(), so draws that started before it know they are stale
+let _generation = 0;
+
+/**
+ * Removes every annotation, and stops the draws still in progress from adding
+ * more. Draws wait for animation frames, so without this, a draw started
+ * before the removal would add its annotations after it.
+ *
+ * @example
+ * ```ts
+ * removeAnnotations();
+ * ```
+ */
+export const removeAnnotations = (): void => {
+  _generation++;
+  removeAll('.ph-speccer.speccer');
+};
+
+/**
+ * Call when a draw starts. Returns a function that tells whether
+ * `removeAnnotations()` has been called since, so the draw should stop before
+ * it adds anything.
+ *
+ * @returns {() => boolean} True once the draw is stale.
+ *
+ * @example
+ * ```ts
+ * const isStale = startDraw();
+ *
+ * await waitForFrame();
+ *
+ * if (isStale()) return;
+ *
+ * document.body.appendChild(el);
+ * ```
+ */
+export const startDraw = (): (() => boolean) => {
+  const _started = _generation;
+
+  return () => _started !== _generation;
+};
+
 /**
  * Determines whether a given HTML element should be considered hidden.
  *

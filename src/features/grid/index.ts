@@ -36,7 +36,7 @@ import { SpeccerOptionsInterface } from '../../types/speccer';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
-import { isElementHidden } from '../../utils/node';
+import { isElementHidden, startDraw } from '../../utils/node';
 import { offset } from '../../utils/position';
 import { add as addStyles, get as getStyles } from '../../utils/styles';
 
@@ -64,6 +64,7 @@ export const create = async (
 
   if (isElementHidden(targetElement)) return;
 
+  const isStale = startDraw();
   const _areas_string: string =
     targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || 'grid';
   const targetStyle = await getStyles(targetElement);
@@ -74,6 +75,9 @@ export const create = async (
   const { grid } = _options;
   const { toggle } = grid;
   const { top, left, height, width } = await offset(targetElement);
+
+  if (isStale()) return;
+
   const { gridTemplateColumns, gridTemplateRows, padding } = targetStyle;
   const _pin_element_id = `speccer-${_options.slug}-${targetElement.getAttribute('id') || uniqueID()}`;
 

@@ -39,7 +39,7 @@ import { set as setClassNames, cx } from '../../utils/classnames';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
-import { isElementHidden } from '../../utils/node';
+import { isElementHidden, startDraw } from '../../utils/node';
 import { add as addStyles } from '../../utils/styles';
 
 import { position } from './utils/position';
@@ -131,6 +131,7 @@ export const typography = async (
 
   if (isElementHidden(targetElement)) return;
 
+  const isStale = startDraw();
   const _areas_string: string =
     targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || '';
   const _options = await getOptions(_areas_string, targetElement, options);
@@ -143,6 +144,9 @@ export const typography = async (
     targetElement,
     _options.typography.useSyntaxHighlighting
   );
+
+  if (isStale()) return;
+
   const _pin_element_id = `speccer-${_options.slug}-${targetElement.getAttribute('id') || uniqueID()}`;
 
   targetElement.setAttribute('data-speccer-element-id', _pin_element_id);

@@ -33,7 +33,7 @@ import { set as setClassNames } from '../../utils/classnames';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
-import { isElementHidden } from '../../utils/node';
+import { isElementHidden, startDraw } from '../../utils/node';
 import { getRec } from '../../utils/position';
 import { add as addStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
@@ -83,6 +83,7 @@ export const mark = async (targetElement: HTMLElement): Promise<void> => {
 
   if (isElementHidden(targetElement)) return;
 
+  const isStale = startDraw();
   const _areas_string: string =
     targetElement.getAttribute(SPECCER_DATA_ATTRIBUTE) || '';
 
@@ -90,7 +91,7 @@ export const mark = async (targetElement: HTMLElement): Promise<void> => {
 
   const _options = await getOptions(_areas_string, targetElement);
 
-  if (_options.type !== 'mark') return;
+  if (_options.type !== 'mark' || isStale()) return;
 
   const _pin_element_id = `speccer-${_options.slug}-${targetElement.getAttribute('id') || uniqueID()}`;
 
