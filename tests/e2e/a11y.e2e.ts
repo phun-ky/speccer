@@ -6,6 +6,23 @@ test.describe('a11y', () => {
     await waitForSpeccer(page);
   });
 
+  // https://github.com/phun-ky/speccer/issues/563
+  test('a11y() again replaces its annotations', async ({ page }) => {
+    const annotations = page.locator('.ph-speccer.speccer.a11y');
+    const count = await annotations.count();
+
+    expect(count).toBeGreaterThan(0);
+    await page.evaluate(async () => {
+      const url = '/speccer.esm.js';
+      const { a11y } = await import(url);
+
+      a11y();
+      a11y();
+    });
+    await waitForSpeccer(page);
+    await expect(annotations).toHaveCount(count);
+  });
+
   test('numbers the tab stops in each container from 1', async ({ page }) => {
     const containers = await page
       .locator('[data-speccer="a11y tabstops"]')

@@ -24,6 +24,7 @@
  */
 /* eslint no-console:0 */
 /* node:coverage enable */
+import { SpacingCSSPropertiesType } from '../../types/css';
 import { SpeccerOptionsInterface } from '../../types/speccer';
 import { cx, set as setClassNames } from '../../utils/classnames';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
@@ -136,12 +137,12 @@ export const spacing = async (
   if (_options.type !== 'spacing' || !_options.spacing || isStale()) return;
 
   const _target_spacing_styles = getSpacing(_target_styles, _options);
-  const _target_pruned_spacing_styles = Object.keys(
-    _target_spacing_styles
+  const _target_pruned_spacing_styles = (
+    Object.keys(_target_spacing_styles) as (keyof SpacingCSSPropertiesType)[]
   ).filter((property) => {
     const _value = _target_spacing_styles[property];
 
-    return _value !== '0px';
+    return _value !== undefined && _value !== '0px';
   });
 
   if (!_target_pruned_spacing_styles.length) return;
@@ -153,7 +154,7 @@ export const spacing = async (
   targetElement.setAttribute('data-speccer-element-id', _pin_element_id);
 
   _target_pruned_spacing_styles.forEach(async (property) => {
-    const _value = getNumberValue(_target_spacing_styles[property]);
+    const _value = getNumberValue(_target_spacing_styles[property] as string);
     const _speccer_el = create(_value);
 
     _speccer_el.setAttribute('data-speccer-id', _pin_element_id);
