@@ -1,0 +1,19 @@
+# Read by osv-scanner and the OpenSSF Scorecard Vulnerabilities check.
+# Every entry is a transitive dev dependency with no patched release reachable
+# through its parent's semver range. Drop an entry once the parent catches up.
+
+[[IgnoredVulns]]
+id = "GHSA-fc5q-39xc-vjpf"
+reason = "picomatch: advisory withdrawn by GitHub, not a vulnerability."
+
+[[IgnoredVulns]]
+id = "GHSA-g3hv-75wg-m249"
+reason = "minimatch 10.x: fix only in 11.0.1, parents (typedoc, glob 13) still require ^10. Dev-only, patterns come from our own config, not untrusted input."
+
+[[IgnoredVulns]]
+id = "GHSA-238p-pmpm-9mq7"
+reason = "katex 0.16.x: low severity, needs pre-existing prototype pollution. Pulled in by micromark-extension-math (^0.16) for docs only, renders our own markdown."
+
+[[IgnoredVulns]]
+id = "GHSA-3g3m-2fjr-6pw4"
+reason = "glob 13.x: AbortSignal bypass, fix only in 14.0.2, glob-bin still requires ^13. Dev-only CLI, no AbortSignal used."
