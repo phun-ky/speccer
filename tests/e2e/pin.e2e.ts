@@ -75,6 +75,25 @@ test.describe('pin', () => {
     expect(literals).toEqual(custom.slice(0, literals.length));
   });
 
+  // https://github.com/phun-ky/speccer/issues/562
+  test('labels every pin in a pin-area with more pins than literals', async ({
+    page
+  }) => {
+    await page.evaluate(() =>
+      document.body.insertAdjacentHTML(
+        'beforeend',
+        `<div id="many-pins" data-speccer="pin-area">${'<span data-speccer="pin top">x</span>'.repeat(53)}</div>`
+      )
+    );
+    // speccer redraws on resize, which picks up the new pin-area
+    await page.setViewportSize({ width: 1000, height: 800 });
+
+    const last = page.locator('#many-pins [data-speccer^="pin "]').last();
+
+    // The fixture fails the test on page errors, like the one this threw before
+    expect(await literalOf(await annotationsFor(last))).toBe('Aaa');
+  });
+
   test('places plain and subtle pins on the requested side', async ({
     page
   }) => {
