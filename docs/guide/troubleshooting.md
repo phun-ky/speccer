@@ -67,14 +67,21 @@ remove them.
 Remove them when the component unmounts:
 
 ```ts
+import { removeSpeccer } from '@phun-ky/speccer';
+
+removeSpeccer();
+```
+
+This removes every annotation and SVG line, but keeps the `#ph-speccer-svg`
+element. It also stops draws that are still in progress, the lazy-loading
+observers and the resize listener. It needs speccer 11.5.0 or newer. With older
+versions, remove the annotations yourself, which keeps the `svg` element too:
+
+```ts
 for (const el of document.querySelectorAll('.ph-speccer.speccer')) {
   el.remove();
 }
 ```
-
-This removes every annotation, and SVG lines, but keeps the `#ph-speccer-svg`
-element. A function in speccer that does this is planned for 12.0
-([#485](https://github.com/phun-ky/speccer/issues/485)).
 
 ## `window is not defined` during server-side rendering
 
