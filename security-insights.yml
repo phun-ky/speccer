@@ -1,6 +1,6 @@
 header:
   schema-version: 2.2.0
-  last-updated: '2026-11-16'
+  last-updated: '2026-11-21'
   last-reviewed: '2026-11-16'
   url: https://raw.githubusercontent.com/phun-ky/speccer/main/security-insights.yml
   comment: |
@@ -10,6 +10,7 @@ header:
 project:
   name: speccer
   homepage: https://speccer.dev/
+  roadmap: https://github.com/phun-ky/speccer/blob/main/ROADMAP.md
   funding: https://github.com/sponsors/phun-ky
   administrators:
     - name: Alexander Vassbotn Røyne-Helgesen
@@ -52,8 +53,10 @@ repository:
       primary: true
   documentation:
     contributing-guide: https://github.com/phun-ky/speccer/blob/main/CONTRIBUTING.md
+    review-policy: https://github.com/phun-ky/speccer/blob/main/GOVERNANCE.md#reviews
     security-policy: https://github.com/phun-ky/speccer/blob/main/SECURITY.md
     dependency-management-policy: https://github.com/phun-ky/speccer/blob/main/SECURITY.md#dependencies
+    governance: https://github.com/phun-ky/speccer/blob/main/GOVERNANCE.md
   license:
     url: https://github.com/phun-ky/speccer/blob/main/LICENSE
     expression: MIT
