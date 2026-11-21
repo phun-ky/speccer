@@ -4,7 +4,7 @@ import { describe, it, before, after } from 'node:test';
 import { add, get } from '../styles';
 
 describe('add', () => {
-  let element;
+  let element: HTMLElement;
 
   before(() => {
     // Create a div element for testing
@@ -43,7 +43,7 @@ describe('add', () => {
 });
 
 describe('get', () => {
-  let element;
+  let element: HTMLElement;
 
   before(() => {
     // Create a div element for testing
