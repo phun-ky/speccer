@@ -7,12 +7,10 @@ function removeSpeccerElement(el: HTMLElement): void;
 ```
 
 Defined in:
-[utils/remove-speccer-element.ts:18](https://github.com/phun-ky/speccer/blob/main/src/utils/remove-speccer-element.ts#L18)
+[utils/remove-speccer-element.ts:16](https://github.com/phun-ky/speccer/blob/main/src/utils/remove-speccer-element.ts#L16)
 
-Remove a speccer element by removing associated elements and SVG paths.
-
-This function removes any speccer elements linked to the specified element and
-also removes any SVG paths that might be associated with it.
+Remove the annotations of an element: every element speccer generated for it,
+and its SVG lines, curly brackets and circles.
 
 ## Parameters
 
@@ -20,7 +18,7 @@ also removes any SVG paths that might be associated with it.
 
 [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
-The HTML element to unpin.
+The annotated element.
 
 ## Returns
 

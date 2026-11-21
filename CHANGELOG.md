@@ -1,5 +1,39 @@
 # Changelog
 
+## [11.4.7](https://github.com/phun-ky/speccer/compare/v11.4.6...v11.4.7) (2026-11-21)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group across 1 directory with 8 updates ([9150e46](https://github.com/phun-ky/speccer/commit/9150e464d07394fabc9aba49cd49294e1c11d995))
+* 🤖 bump the minor-and-patch group across 1 directory with 9 updates ([4a56f0d](https://github.com/phun-ky/speccer/commit/4a56f0d3a5d5c2fc2a2d431f6076e204f3f26f22))
+* 🤖 fix the development dependency advisories ([ea8984d](https://github.com/phun-ky/speccer/commit/ea8984d6b95fc92e623f159163bc602ba8147b9c)), closes [#537](https://github.com/phun-ky/speccer/issues/537), references [Minimatch#matchOne](https://github.com/Minimatch/issues/matchOne)
+* 🤖 ignore unfixable dev-dependency advisories in osv-scanner ([1786c03](https://github.com/phun-ky/speccer/commit/1786c0394a9d294ff3eae9c77d08c2c95a8d0ef5))
+* 🤖 move to eslint-config-phun-ky 3 ([9c540dd](https://github.com/phun-ky/speccer/commit/9c540ddf03410ea82707d51865fc3bb0430d7bb1)), closes [#536](https://github.com/phun-ky/speccer/issues/536)
+* 🤖 only ignore advisories present in the lockfile ([55d12aa](https://github.com/phun-ky/speccer/commit/55d12aad867658bec8f4f904a1e049ad840212ff))
+* 🤖 remove putout ([e8bbfb4](https://github.com/phun-ky/speccer/commit/e8bbfb4705271882f5b723984755a55da0ab2601))
+* 🤖 set the bestpractices.dev project id ([0210a17](https://github.com/phun-ky/speccer/commit/0210a17815ed53ee669b5024bc92aa12963c8f4b)), references [#507](https://github.com/phun-ky/speccer/issues/507)
+* 🤖 update jsdom and global-jsdom to 30 together ([77e3277](https://github.com/phun-ky/speccer/commit/77e327735a73b9a55e910a4650a171ac0398bad0)), closes [#535](https://github.com/phun-ky/speccer/issues/535)
+
+### Documentation
+
+* ✏️ add a troubleshooting page ([1e92736](https://github.com/phun-ky/speccer/commit/1e92736efe1c67d6e49c16f32f2bcaf348b08359)), closes [#494](https://github.com/phun-ky/speccer/issues/494)
+* ✏️ add GOVERNANCE.md ([02c1d2c](https://github.com/phun-ky/speccer/commit/02c1d2cc4f698977ff38700d0577a7b84dff1f20)), references [#508](https://github.com/phun-ky/speccer/issues/508)
+* ✏️ add ROADMAP.md ([e94ece0](https://github.com/phun-ky/speccer/commit/e94ece09cea1f8d9f5db667b2ff13852031bf6df)), references [#508](https://github.com/phun-ky/speccer/issues/508)
+* ✏️ add the OpenSSF Best Practices badge to the README ([fed9a7c](https://github.com/phun-ky/speccer/commit/fed9a7c48d902d2d7cd6fc801f48a7cddebf1135)), references [#507](https://github.com/phun-ky/speccer/issues/507)
+* ✏️ add the OpenSSF Scorecard badge to the README ([82989d4](https://github.com/phun-ky/speccer/commit/82989d40a353e155640f975a673a6953213dd1f6)), references [#507](https://github.com/phun-ky/speccer/issues/507)
+* ✏️ add the requirements to the README ([1dae12f](https://github.com/phun-ky/speccer/commit/1dae12f6d59f46560e414bc572a3ea8b1691257d)), closes [#539](https://github.com/phun-ky/speccer/issues/539)
+* ✏️ cover contributing code in CONTRIBUTING.md ([49d3ae5](https://github.com/phun-ky/speccer/commit/49d3ae5bd20eae981f55bebbfac852c3c503288f)), references [#508](https://github.com/phun-ky/speccer/issues/508)
+* ✏️ drop putout from the development guide ([b67b448](https://github.com/phun-ky/speccer/commit/b67b448efb7cf28be6c7bb4aa94a0827c0a716e8))
+* ✏️ fix the guide examples that do nothing or don't run ([03a3f58](https://github.com/phun-ky/speccer/commit/03a3f5807ab51bed7eed33e95c1b0c2550eda265)), references [#506](https://github.com/phun-ky/speccer/issues/506)
+* ✏️ fix the navbar logo on pages below the root ([ba83078](https://github.com/phun-ky/speccer/commit/ba8307811a1d20ea80209633a9d9a63ee310f833)), references [#506](https://github.com/phun-ky/speccer/issues/506)
+* ✏️ link the roadmap, governance and review policy in security-insights.yml ([bcddcb6](https://github.com/phun-ky/speccer/commit/bcddcb6f35c38f6ea03cb808710367330313aeb0)), closes [#508](https://github.com/phun-ky/speccer/issues/508)
+* ✏️ serve the theme stylesheet, favicon and OG image from speccer.dev ([bcd283a](https://github.com/phun-ky/speccer/commit/bcd283a35c07f7b8c7962f5f1c34cb52626685af)), references [#506](https://github.com/phun-ky/speccer/issues/506)
+* ✏️ write the security policy and add security-insights.yml ([6f5d23b](https://github.com/phun-ky/speccer/commit/6f5d23bdd28fe2fd3690dc48307e767fb86e5061)), references [#507](https://github.com/phun-ky/speccer/issues/507)
+
+### Bug
+
+* 🐛 make removeSpeccerElement() remove the annotation ([e48f378](https://github.com/phun-ky/speccer/commit/e48f378a1be492cc11cf4c8c37539acaf4348529)), closes [#548](https://github.com/phun-ky/speccer/issues/548)
+
 ## [11.4.6](https://github.com/phun-ky/speccer/compare/v11.4.5...v11.4.6) (2026-10-27)
 
 ### Tasks
