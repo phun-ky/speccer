@@ -36,7 +36,7 @@ import { SpeccerOptionsInterface } from '../../types/speccer';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
-import { isElementHidden, startDraw } from '../../utils/node';
+import { assertElement, isElementHidden, startDraw } from '../../utils/node';
 import { offset } from '../../utils/position';
 import { add as addStyles, get as getStyles } from '../../utils/styles';
 
@@ -60,6 +60,8 @@ export const create = async (
   targetElement: HTMLElement,
   options?: SpeccerOptionsInterface
 ): Promise<void> => {
+  assertElement(targetElement, 'grid.create');
+
   if (!targetElement) return;
 
   if (isElementHidden(targetElement)) return;
@@ -105,7 +107,7 @@ export const create = async (
       'speccer-grid-container'
     );
 
-    addStyles(gridColumnContainer, {
+    await addStyles(gridColumnContainer, {
       height: `${height + 64}px`,
       width: `${width}px`,
       left: `${left}px`,
@@ -147,7 +149,7 @@ export const create = async (
       'speccer-grid-row-container'
     );
 
-    addStyles(gridRowContainer, {
+    await addStyles(gridRowContainer, {
       width: `${width + 64}px`,
       height: `${height}px`,
       top: `${top}px`,
@@ -209,6 +211,8 @@ export const grid = async (
   targetElement: HTMLElement,
   options?: SpeccerOptionsInterface
 ): Promise<void> => {
+  assertElement(targetElement, 'grid.element');
+
   if (!targetElement) return;
 
   if (isElementHidden(targetElement)) return;

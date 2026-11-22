@@ -29,11 +29,12 @@
  * @packageDocumentation
  */
 /* eslint no-console:0 */
+import { SpeccerOptionsInterface } from '../../types/speccer';
 import { set as setClassNames } from '../../utils/classnames';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
-import { isElementHidden, startDraw } from '../../utils/node';
+import { assertElement, isElementHidden, startDraw } from '../../utils/node';
 import { getRec } from '../../utils/position';
 import { add as addStyles } from '../../utils/styles';
 import { waitForFrame } from '../../utils/wait';
@@ -69,16 +70,25 @@ export const create = (id: string, n = 'span'): HTMLElement => {
  * ![mark](/speccer-pin-mark-light.png?raw=true)
  *
  * @param {HTMLElement} targetElement - The target element to match styles with.
+ * @param {SpeccerOptionsInterface} [options] - Options, merged over the ones from `data-speccer`.
  * @returns {Promise<void>} - A promise that resolves after creating and styling the marker element.
  *
  * @example
  * ```typescript
  * const targetElement = document.getElementById('target');
  * mark(targetElement);
+ *
+ * // Without a data-speccer attribute
+ * mark(targetElement, { type: 'mark' });
  * ```
  */
 /* node:coverage enable */
-export const mark = async (targetElement: HTMLElement): Promise<void> => {
+export const mark = async (
+  targetElement: HTMLElement,
+  options?: SpeccerOptionsInterface
+): Promise<void> => {
+  assertElement(targetElement, 'mark.element');
+
   if (!targetElement) return;
 
   if (isElementHidden(targetElement)) return;
@@ -89,7 +99,7 @@ export const mark = async (targetElement: HTMLElement): Promise<void> => {
 
   await waitForFrame();
 
-  const _options = await getOptions(_areas_string, targetElement);
+  const _options = await getOptions(_areas_string, targetElement, options);
 
   if (_options.type !== 'mark' || isStale()) return;
 

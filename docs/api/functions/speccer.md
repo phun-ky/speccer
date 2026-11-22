@@ -3,15 +3,15 @@
 # Function: speccer()
 
 ```ts
-function speccer(): void;
+function speccer(): Promise<void>;
 ```
 
 Defined in:
-[main.ts:280](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L280)
+[main.ts:283](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L283)
 
 ## Returns
 
-`void`
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
 
 ## Examples
 
@@ -21,6 +21,9 @@ import speccer from '@phun-ky/speccer';
 
 // do stuff
 speccer();
+
+// or wait until everything is drawn
+await speccer();
 ```
 
 ```html

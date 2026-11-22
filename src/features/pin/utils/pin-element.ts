@@ -6,7 +6,7 @@ import { DrawSVGLine } from '../../../utils/classes/DrawSVGLine';
 import { SPECCER_DATA_ATTRIBUTE } from '../../../utils/constants';
 import { getOptions } from '../../../utils/get-options';
 import { uniqueID } from '../../../utils/id';
-import { isElementHidden, startDraw } from '../../../utils/node';
+import { assertElement, isElementHidden, startDraw } from '../../../utils/node';
 import { add } from '../../../utils/styles';
 import { waitForFrame } from '../../../utils/wait';
 
@@ -72,6 +72,9 @@ export const pinElement = async (
   content: string,
   options: SpeccerOptionsInterface
 ): Promise<string | undefined> => {
+  assertElement(targetElement, 'pin.pinElement');
+  assertElement(parentElement, 'pin.pinElement', 'parentElement');
+
   if (!targetElement) return;
 
   if (isElementHidden(targetElement)) return;
@@ -121,11 +124,14 @@ export const pinElement = async (
     return _pin_element_id;
 
   if (_options.pin.useSVGLine) {
-    new DrawSVGLine(targetElement, _pin_element, _options);
+    const _line = new DrawSVGLine(targetElement, _pin_element, _options);
+    const _circle = _should_draw_circle
+      ? new DrawCircle(targetElement, 5, _options)
+      : undefined;
 
-    if (_should_draw_circle) new DrawCircle(targetElement, 5, _options);
+    await Promise.all([_line.drawn, _circle?.drawn]);
   } else if (_options.pin.useCurlyBrackets) {
-    new DrawSVGCurlyBracket(targetElement, _pin_element);
+    await new DrawSVGCurlyBracket(targetElement, _pin_element).drawn;
   }
 
   return _pin_element_id;

@@ -26,7 +26,6 @@ For more technical documentation, see the relevant documentation
 ```typescript [main.ts]
 import { grid } from '@phun-ky/speccer';
 
-const { create } = grid;
 const element = document.querySelector('.my-element');
 const options = {
   slug: 'gridTest',
@@ -38,7 +37,7 @@ const options = {
     columns: false
   }
 };
-await create(element, options);
+await grid.element(element, options);
 ```
 
 ::: tip
@@ -55,7 +54,6 @@ both with `grid` only):
 ```typescript [programmatically]
 import { grid } from '@phun-ky/speccer';
 
-const { create } = grid;
 const element = document.querySelector('.my-element');
 const options = {
   slug: 'gridTest',
@@ -67,7 +65,7 @@ const options = {
     columns: true
   }
 };
-await create(element, options);
+await grid.element(element, options);
 ```
 
 :::
