@@ -83,8 +83,8 @@
   "warnings_justification": "ESLint (typescript-eslint, import and Prettier rules) runs on every file, Markdown included, the TypeScript compiler type-checks the source and the tests, and TypeDoc treats warnings as errors.",
   "warnings_fixed_status": "Met",
   "warnings_fixed_justification": "Lint has no errors and no warnings, TypeScript has no errors, and TypeDoc has no warnings.",
-  "warnings_strict_status": "Unmet",
-  "warnings_strict_justification": "TypeScript runs with strictNullChecks but not in strict mode (noImplicitAny is off), and ESLint warnings do not fail CI. Strict mode is planned for 12.0 in https://github.com/phun-ky/speccer/issues/491.",
+  "warnings_strict_status": "Met",
+  "warnings_strict_justification": "TypeScript runs with strict: true and noImplicitReturns for the source and the tests, ESLint fails CI on any warning (--max-warnings 0), and TypeDoc treats warnings as errors: https://github.com/phun-ky/speccer/blob/main/tsconfig.build.json",
   "know_secure_design_status": "Met",
   "know_secure_design_justification": "The maintainer knows how to design secure software. The principles applied: no runtime dependencies, no network, storage or dynamic code, values read from the page inserted as text, least-privilege CI tokens, pinned Actions, and releases with provenance. What speccer guarantees and does not: https://github.com/phun-ky/speccer/blob/main/SECURITY.md#security-expectations",
   "know_common_errors_status": "Met",
@@ -125,12 +125,12 @@
   "static_analysis_fixed_justification": "CodeQL has no open alerts; the ruleset blocks merging with a high or critical one.",
   "static_analysis_often_status": "Met",
   "static_analysis_often_justification": "On every pull request and every push to main.",
-  "dynamic_analysis_status": "Unmet",
-  "dynamic_analysis_justification": "No fuzzing or other dynamic analysis tool yet. The end-to-end tests run every feature in Chromium and Firefox, including markup and script payloads, but they are tests, not a dynamic analysis tool.",
+  "dynamic_analysis_status": "Met",
+  "dynamic_analysis_justification": "The unit tests are an automated test suite with at least 80% branch coverage: test:ci fails below 85% of branches. They run in the CI workflow on every pull request, and main only accepts pull requests that pass it, so every release has been through them. The end-to-end tests also run every feature in Chromium and Firefox, including markup and script payloads: https://github.com/phun-ky/speccer/blob/main/.github/workflows/ci.yml",
   "dynamic_analysis_unsafe_status": "N/A",
   "dynamic_analysis_unsafe_justification": "All software is TypeScript on JavaScript runtimes, which are memory-safe; there is no C, C++ or other memory-unsafe code.",
   "dynamic_analysis_enable_assertions_status": "Unmet",
-  "dynamic_analysis_enable_assertions_justification": "No run-time assertions; an API review with input validation is planned for 12.0 in https://github.com/phun-ky/speccer/issues/509.",
-  "dynamic_analysis_fixed_status": "N/A",
-  "dynamic_analysis_fixed_justification": "No dynamic analysis is run yet, so it has found nothing to fix."
+  "dynamic_analysis_enable_assertions_justification": "No run-time assertions beyond the argument checks: since 11.6.0 the public functions throw a TypeError when given something that isn't an element, and the tests run with those checks.",
+  "dynamic_analysis_fixed_status": "Met",
+  "dynamic_analysis_fixed_justification": "The test suite has found no medium or higher severity vulnerabilities. One found by it is handled like a report, with a fix aimed for within 30 days: https://github.com/phun-ky/speccer/blob/main/SECURITY.md#how-reports-are-handled"
 }
