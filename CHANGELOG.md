@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.6.0](https://github.com/phun-ky/speccer/compare/v11.5.2...v11.6.0) (2026-11-22)
+
+### Feature
+
+* 🎸 name the function when it's given something that isn't an element ([e33a66d](https://github.com/phun-ky/speccer/commit/e33a66ddbb61294c80736840b9072fd22a2cc9b5)), references [#509](https://github.com/phun-ky/speccer/issues/509)
+
 ## [11.5.2](https://github.com/phun-ky/speccer/compare/v11.5.1...v11.5.2) (2026-11-21)
 
 ### Bug
