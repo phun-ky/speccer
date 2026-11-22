@@ -17,7 +17,7 @@ const typography: {
 ```
 
 Defined in:
-[main.ts:232](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L232)
+[main.ts:247](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L247)
 
 This feature presents typography
 
@@ -25,7 +25,7 @@ This feature presents typography
 
 ## Type Declaration
 
-### create
+### ~~create~~
 
 ```ts
 create: (html: string, options: SpeccerOptionsInterface, id: string) =>
@@ -68,6 +68,11 @@ const cssClass = 'custom-class';
 const createdElement = create(htmlContent, cssClass);
 document.body.appendChild(createdElement);
 ```
+
+#### Deprecated
+
+Internal node builder, removed from the public API in 12.0. Use
+`typography.element`, see https://github.com/phun-ky/speccer/issues/567
 
 ### element
 

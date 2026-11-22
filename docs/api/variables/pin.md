@@ -24,7 +24,7 @@ const pin: {
 ```
 
 Defined in:
-[main.ts:125](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L125)
+[main.ts:131](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L131)
 
 This feature annotate or highlight the anatomy of an element.
 
@@ -35,7 +35,7 @@ In your component examples, use the following attribute. Remember to use the
 
 ## Type Declaration
 
-### createPinElement
+### ~~createPinElement~~
 
 ```ts
 createPinElement: (
@@ -86,6 +86,11 @@ The element type.
 const pinElement = createPinElement('A', 'outline top', 'div');
 document.body.appendChild(pinElement);
 ```
+
+#### Deprecated
+
+Internal node builder, removed from the public API in 12.0. Use `pin.pinElement`
+or `pin.pinElements`, see https://github.com/phun-ky/speccer/issues/567
 
 ### pinElement
 

@@ -7,7 +7,7 @@ function speccer(): Promise<void>;
 ```
 
 Defined in:
-[main.ts:283](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L283)
+[main.ts:304](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L304)
 
 ## Returns
 
