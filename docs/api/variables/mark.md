@@ -5,12 +5,15 @@
 ```ts
 const mark: {
   create: (id: string, n: string) => HTMLElement;
-  element: (targetElement: HTMLElement) => Promise<void>;
+  element: (
+    targetElement: HTMLElement,
+    options?: SpeccerOptionsInterface
+  ) => Promise<void>;
 };
 ```
 
 Defined in:
-[main.ts:195](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L195)
+[main.ts:207](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L207)
 
 This feature marks given element
 
@@ -18,7 +21,7 @@ This feature marks given element
 
 ## Type Declaration
 
-### create
+### ~~create~~
 
 ```ts
 create: (id: string, n: string) => (HTMLElement = markCreate);
@@ -53,10 +56,16 @@ const marker = create('div');
 document.body.appendChild(marker);
 ```
 
+#### Deprecated
+
+Internal node builder, removed from the public API in 12.0. Use `mark.element`,
+see https://github.com/phun-ky/speccer/issues/567
+
 ### element
 
 ```ts
-element: (targetElement: HTMLElement) => (Promise<void> = markElement);
+element: (targetElement: HTMLElement, options?: SpeccerOptionsInterface) =>
+  (Promise<void> = markElement);
 ```
 
 Create a marker element and add it to the body with styles matching a specified
@@ -72,6 +81,12 @@ element.
 
 The target element to match styles with.
 
+##### options?
+
+[`SpeccerOptionsInterface`](../interfaces/SpeccerOptionsInterface.md)
+
+Options, merged over the ones from `data-speccer`.
+
 #### Returns
 
 [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
@@ -83,6 +98,9 @@ The target element to match styles with.
 ```typescript
 const targetElement = document.getElementById('target');
 mark(targetElement);
+
+// Without a data-speccer attribute
+mark(targetElement, { type: 'mark' });
 ```
 
 ## Example

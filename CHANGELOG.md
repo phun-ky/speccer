@@ -1,5 +1,16 @@
 # Changelog
 
+## [11.8.0](https://github.com/phun-ky/speccer/compare/v11.7.0...v11.8.0) (2026-11-22)
+
+### Documentation
+
+* ✏️ deprecate what 12.0 removes ([820b8b4](https://github.com/phun-ky/speccer/commit/820b8b480df722ef47d71c29a15ed82738f6619e)), references [#567](https://github.com/phun-ky/speccer/issues/567) [#569](https://github.com/phun-ky/speccer/issues/569) [#570](https://github.com/phun-ky/speccer/issues/570) [#571](https://github.com/phun-ky/speccer/issues/571)
+* ✏️ the speccer() promise shipped in 11.7.0 ([eb2ba82](https://github.com/phun-ky/speccer/commit/eb2ba820cb035031e230bbb5dd2de5dd418c1f2f))
+
+### Feature
+
+* 🎸 mark.element takes options like the other features ([cb1980f](https://github.com/phun-ky/speccer/commit/cb1980fb20da58c3bec69de26f1c29a197a5f2a0)), references [#568](https://github.com/phun-ky/speccer/issues/568)
+
 ## [11.7.0](https://github.com/phun-ky/speccer/compare/v11.6.0...v11.7.0) (2026-11-22)
 
 ### Feature
