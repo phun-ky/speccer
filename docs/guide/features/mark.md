@@ -32,9 +32,8 @@ import { mark } from '@phun-ky/speccer';
 const { element: markElement } = mark;
 const element = document.querySelector('.my-element');
 
-// mark takes no options, it reads them from the attribute
-element.setAttribute('data-speccer', 'mark');
-await markElement(element);
+// Reads the options from data-speccer="mark", or pass them yourself
+await markElement(element, { type: 'mark' });
 ```
 
 ::: tip Feature options
