@@ -10,6 +10,8 @@ import { add as addStyle } from '../styles';
  */
 export class DrawSVGLine {
   #canvas: HTMLElement | SVGElement | null = null;
+  /** Settles when the shape is drawn. */
+  drawn!: Promise<void>;
   #originalPathElement: HTMLElement | SVGPathElement | null = null;
   startElement!: HTMLElement;
   stopElement!: HTMLElement;
@@ -80,7 +82,7 @@ export class DrawSVGLine {
    * Connects and draws the line.
    */
   connect() {
-    this.draw(this.#originalPathElement as SVGPathElement);
+    this.drawn = this.draw(this.#originalPathElement as SVGPathElement);
   }
 
   /**

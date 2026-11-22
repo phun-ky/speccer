@@ -101,6 +101,30 @@ test.describe('overlapping draws', () => {
     ]
   ];
 
+  test('await speccer() resolves once everything is drawn', async ({
+    page
+  }) => {
+    // Every annotation with its position, and the shape of every SVG path
+    const snapshot = () =>
+      [
+        ...document.querySelectorAll('.ph-speccer.speccer, #ph-speccer-svg *')
+      ].map(
+        (el) =>
+          `${el.getAttribute('class')} ${el.getAttribute('style')} ${el.getAttribute('d')}`
+      );
+    const resolved = await page.evaluate(async (snapshot) => {
+      await window.speccer();
+
+      return new Function(`return (${snapshot})()`)() as string[];
+    }, snapshot.toString());
+
+    expect(resolved.length).toBeGreaterThan(8);
+
+    await waitForSpeccer(page);
+
+    expect(await page.evaluate(snapshot)).toEqual(resolved);
+  });
+
   for (const [name, draw] of cases) {
     test(`${name} draws every annotation once`, async ({ page }) => {
       await page.evaluate(() => window.speccer());

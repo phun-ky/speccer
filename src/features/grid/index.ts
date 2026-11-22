@@ -107,7 +107,7 @@ export const create = async (
       'speccer-grid-container'
     );
 
-    addStyles(gridColumnContainer, {
+    await addStyles(gridColumnContainer, {
       height: `${height + 64}px`,
       width: `${width}px`,
       left: `${left}px`,
@@ -149,7 +149,7 @@ export const create = async (
       'speccer-grid-row-container'
     );
 
-    addStyles(gridRowContainer, {
+    await addStyles(gridRowContainer, {
       width: `${width + 64}px`,
       height: `${height}px`,
       top: `${top}px`,

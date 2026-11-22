@@ -291,6 +291,9 @@ export const modes = {
  *
  * // do stuff
  * speccer();
+ *
+ * // or wait until everything is drawn
+ * await speccer();
  * ```
  * @example
  * ```html
@@ -298,9 +301,10 @@ export const modes = {
  * <script src="../path/to/speccer.js"></script>
  * ```
  */
-const speccer = () => {
+const speccer = async (): Promise<void> => {
   removeAnnotations();
 
+  const _drawn: Promise<unknown>[] = [];
   const spacingElements = document.querySelectorAll(
     `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"]`
   );
@@ -321,13 +325,13 @@ const speccer = () => {
   );
 
   for (const el of markElements) {
-    markElement(el as HTMLElement);
+    _drawn.push(markElement(el as HTMLElement));
   }
   for (const el of gridElements) {
-    gridElement(el as HTMLElement);
+    _drawn.push(gridElement(el as HTMLElement));
   }
   for (const el of spacingElements) {
-    spacingElement(el as HTMLElement);
+    _drawn.push(spacingElement(el as HTMLElement));
 
     if (el.hasChildNodes()) {
       const _child_spacing_elements = el.querySelectorAll(
@@ -339,21 +343,23 @@ const speccer = () => {
       if (_child_spacing_elements?.length) {
         for (const childEl of _child_spacing_elements) {
           childEl.setAttribute('data-speccer', _areas_string);
-          spacingElement(childEl as HTMLElement);
+          _drawn.push(spacingElement(childEl as HTMLElement));
         }
       }
     }
   }
   for (const el of measureElements) {
-    measureElement(el as HTMLElement);
+    _drawn.push(measureElement(el as HTMLElement));
   }
   for (const el of typographyElements) {
-    typographyElement(el as HTMLElement);
+    _drawn.push(typographyElement(el as HTMLElement));
   }
   for (const el of pinSectionElements) {
-    pinElements(el as HTMLElement);
+    _drawn.push(pinElements(el as HTMLElement));
   }
-  initA11y();
+  _drawn.push(initA11y());
+
+  await Promise.all(_drawn);
 };
 
 export default speccer;
