@@ -3,6 +3,7 @@ import { describe, it } from 'node:test';
 
 import {
   after,
+  assertElement,
   isElementHidden,
   removeAll,
   removeAnnotations,
@@ -10,6 +11,36 @@ import {
 } from '../node';
 
 describe('node', () => {
+  describe('assertElement', () => {
+    it('passes elements, null and undefined', () => {
+      assertElement(document.createElement('div'), 'f');
+      assertElement(
+        document.createElementNS('http://www.w3.org/2000/svg', 'g'),
+        'f'
+      );
+      assertElement(null, 'f');
+      assertElement(undefined, 'f');
+    });
+
+    it('throws a TypeError that names the function, the argument and the type', () => {
+      assert.throws(() => assertElement('#t', 'grid.element'), {
+        name: 'TypeError',
+        message:
+          'grid.element: expected targetElement to be an element, got string'
+      });
+      assert.throws(() => assertElement({}, 'f', 'el'), {
+        message: 'f: expected el to be an element, got Object'
+      });
+      assert.throws(() => assertElement([], 'f'), { message: /got Array$/ });
+      assert.throws(() => assertElement(document, 'f'), {
+        message: /got (HTML)?Document$/
+      });
+      assert.throws(() => assertElement(document.createTextNode('x'), 'f'), {
+        message: /got Text$/
+      });
+    });
+  });
+
   describe('after', () => {
     it('should insert an element after the reference element', () => {
       // Create reference and new elements
