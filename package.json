@@ -99,7 +99,7 @@
     "rollup": "rollup -c",
     "rollup:dev": "rollup -c -w",
     "style:format": "eslint . --fix",
-    "style:lint": "eslint .",
+    "style:lint": "eslint . --max-warnings 0",
     "styles": "npm run stylus && npm run postcss",
     "stylus": "rm -rf ./dist/speccer.css && stylus ./src/styles/index.styl -o ./dist/speccer.css",
     "pretest:ci": "rm -rf coverage && mkdir -p coverage",

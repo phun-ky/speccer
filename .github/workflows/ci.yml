@@ -48,7 +48,7 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Lint
-        run: npx eslint .
+        run: npx eslint . --max-warnings 0
       - name: Test the commit-msg hook
         run: npm run test:hooks
       - name: Typecheck # Source and tests, see tsconfig.json
