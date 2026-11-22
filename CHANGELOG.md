@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.9.0](https://github.com/phun-ky/speccer/compare/v11.8.0...v11.9.0) (2026-11-22)
+
+### Feature
+
+* 🎸 modes.dom() and modes.manual() work without the speccer argument ([5684f67](https://github.com/phun-ky/speccer/commit/5684f6704f7e1650faf75f0ca88c4cdd20059fbd)), references [#570](https://github.com/phun-ky/speccer/issues/570)
+
 ## [11.8.0](https://github.com/phun-ky/speccer/compare/v11.7.0...v11.8.0) (2026-11-22)
 
 ### Documentation

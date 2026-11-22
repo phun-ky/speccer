@@ -5,9 +5,9 @@
 ```ts
 const modes: {
   activate: (speccer: SpeccerFunctionType) => void;
-  dom: (speccer: SpeccerFunctionType) => void;
+  dom: (speccer?: SpeccerFunctionType) => void;
   lazy: () => void;
-  manual: (speccer: SpeccerFunctionType) => void;
+  manual: (speccer?: SpeccerFunctionType) => void;
   rerenderLazy: () => void;
 };
 ```
@@ -55,18 +55,19 @@ https://github.com/phun-ky/speccer/issues/570
 ### dom
 
 ```ts
-dom: (speccer: SpeccerFunctionType) => void;
+dom: (speccer?: SpeccerFunctionType) => void;
 ```
 
 A function to initialize speccer when the DOM is ready.
 
 #### Parameters
 
-##### speccer
+##### speccer?
 
-[`SpeccerFunctionType`](../type-aliases/SpeccerFunctionType.md)
+[`SpeccerFunctionType`](../type-aliases/SpeccerFunctionType.md) = `_speccer`
 
-The speccer function to execute.
+The speccer function to run. Defaults to speccer itself; leave it out, the
+argument is removed in 12.0 (https://github.com/phun-ky/speccer/issues/570).
 
 #### Returns
 
@@ -75,8 +76,7 @@ The speccer function to execute.
 #### Example
 
 ```ts
-// Usage example:
-dom(mySpeccer);
+modes.dom();
 ```
 
 ### lazy
@@ -101,18 +101,19 @@ lazy();
 ### manual
 
 ```ts
-manual: (speccer: SpeccerFunctionType) => void;
+manual: (speccer?: SpeccerFunctionType) => void;
 ```
 
 A function to manually activate speccer.
 
 #### Parameters
 
-##### speccer
+##### speccer?
 
-[`SpeccerFunctionType`](../type-aliases/SpeccerFunctionType.md)
+[`SpeccerFunctionType`](../type-aliases/SpeccerFunctionType.md) = `_speccer`
 
-The speccer function to execute.
+The speccer function to run. Defaults to speccer itself; leave it out, the
+argument is removed in 12.0 (https://github.com/phun-ky/speccer/issues/570).
 
 #### Returns
 
@@ -121,8 +122,8 @@ The speccer function to execute.
 #### Example
 
 ```ts
-// Usage example:
-manual(mySpeccer);
+modes.manual();
+window.speccer();
 ```
 
 ### rerenderLazy

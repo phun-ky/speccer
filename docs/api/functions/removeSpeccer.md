@@ -7,7 +7,7 @@ function removeSpeccer(): void;
 ```
 
 Defined in:
-[config/browser.ts:215](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L215)
+[config/browser.ts:218](https://github.com/phun-ky/speccer/blob/main/src/config/browser.ts#L218)
 
 Removes everything speccer has added to the page, and stops it:
 
