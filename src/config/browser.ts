@@ -72,20 +72,23 @@ import {
   deactivate as resizeDeactivate
 } from '../utils/resize';
 
+// The default speccer function, which main.ts passes to activate() on import,
+// so dom() and manual() work without it
+let _speccer: SpeccerFunctionType = () => {};
+
 /* node:coverage disable */
 /**
  * A function to initialize speccer when the DOM is ready.
  *
- * @param {SpeccerFunctionType} speccer - The speccer function to execute.
+ * @param {SpeccerFunctionType} [speccer] - The speccer function to run. Defaults to speccer itself; leave it out, the argument is removed in 12.0 (https://github.com/phun-ky/speccer/issues/570).
  *
  * @example
  * ```ts
- * // Usage example:
- * dom(mySpeccer);
+ * modes.dom();
  * ```
  */
 /* node:coverage enable */
-export const dom = (speccer: SpeccerFunctionType): void => {
+export const dom = (speccer: SpeccerFunctionType = _speccer): void => {
   if (document.readyState === 'loading')
     document.addEventListener('DOMContentLoaded', () => {
       speccer();
@@ -222,16 +225,16 @@ export const removeSpeccer = (): void => {
 /**
  * A function to manually activate speccer.
  *
- * @param {SpeccerFunctionType} speccer - The speccer function to execute.
+ * @param {SpeccerFunctionType} [speccer] - The speccer function to run. Defaults to speccer itself; leave it out, the argument is removed in 12.0 (https://github.com/phun-ky/speccer/issues/570).
  *
  * @example
  * ```ts
- * // Usage example:
- * manual(mySpeccer);
+ * modes.manual();
+ * window.speccer();
  * ```
  */
 /* node:coverage enable */
-export const manual = (speccer: SpeccerFunctionType): void => {
+export const manual = (speccer: SpeccerFunctionType = _speccer): void => {
   window.speccer = speccer;
 };
 
@@ -249,6 +252,8 @@ export const manual = (speccer: SpeccerFunctionType): void => {
  */
 /* node:coverage enable */
 export const activate = (speccer: SpeccerFunctionType): void => {
+  _speccer = speccer;
+
   // Nothing to activate outside a browser (Node, server-side rendering)
   if (typeof document === 'undefined') return;
 
