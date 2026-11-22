@@ -1,0 +1,21 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://github.com/phun-ky/speccer/blob/main/vex.openvex.json",
+  "author": "Alexander Vassbotn Røyne-Helgesen",
+  "role": "Maintainer",
+  "timestamp": "2026-11-22T00:00:00Z",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "@id": "https://github.com/advisories/GHSA-g3hv-75wg-m249",
+        "name": "GHSA-g3hv-75wg-m249"
+      },
+      "timestamp": "2026-11-22T00:00:00Z",
+      "products": [{ "@id": "pkg:npm/%40phun-ky/speccer" }],
+      "status": "not_affected",
+      "justification": "component_not_present",
+      "impact_statement": "minimatch 10 is a development dependency only (typedoc, typescript-eslint and eslint-plugin-import-x) and is not a dependency of the published package, which has no runtime dependencies. In development, it only matches the glob patterns in the repository's own TypeDoc and ESLint configuration, never patterns from outside the project."
+    }
+  ]
+}
