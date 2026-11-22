@@ -39,7 +39,7 @@ import { set as setClassNames, cx } from '../../utils/classnames';
 import { SPECCER_DATA_ATTRIBUTE } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
 import { uniqueID } from '../../utils/id';
-import { isElementHidden, startDraw } from '../../utils/node';
+import { assertElement, isElementHidden, startDraw } from '../../utils/node';
 import { add as addStyles } from '../../utils/styles';
 
 import { position } from './utils/position';
@@ -127,6 +127,8 @@ export const typography = async (
   targetElement: HTMLElement,
   options?: SpeccerOptionsInterface
 ): Promise<void> => {
+  assertElement(targetElement, 'typography.element');
+
   if (!targetElement) return;
 
   if (isElementHidden(targetElement)) return;
@@ -157,5 +159,5 @@ export const typography = async (
 
   const _position = await position(_options, targetElement, _speccer_el);
 
-  addStyles(_speccer_el, _position);
+  await addStyles(_speccer_el, _position);
 };

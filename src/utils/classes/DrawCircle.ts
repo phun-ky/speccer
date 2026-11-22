@@ -9,6 +9,8 @@ import { add as addStyle } from '../styles';
  */
 export class DrawCircle {
   #canvas: HTMLElement | SVGElement | null = null;
+  /** Settles when the shape is drawn. */
+  drawn!: Promise<void>;
   el!: HTMLElement;
   circle!: SVGCircleElement;
   radius!: number;
@@ -62,7 +64,7 @@ export class DrawCircle {
       height: `${height}px`
     });
 
-    this.draw();
+    this.drawn = this.draw();
   }
 
   /**

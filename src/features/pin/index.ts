@@ -29,7 +29,7 @@ import {
   SPECCER_LITERALS
 } from '../../utils/constants';
 import { getOptions } from '../../utils/get-options';
-import { isElementHidden, startDraw } from '../../utils/node';
+import { assertElement, isElementHidden, startDraw } from '../../utils/node';
 import { waitForFrame } from '../../utils/wait';
 
 import { getCharacterToUse } from './utils/get-character-to-use';
@@ -54,6 +54,8 @@ export const pinElements = async (
   sectionElement: HTMLElement,
   options?: SpeccerOptionsInterface
 ): Promise<void> => {
+  assertElement(sectionElement, 'pin.pinElements', 'sectionElement');
+
   if (!sectionElement) return;
 
   const isStale = startDraw();

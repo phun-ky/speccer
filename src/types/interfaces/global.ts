@@ -10,15 +10,21 @@ declare global {
   interface Window {
     /**
      * Represents the DrawSVGCurlyBracket class for drawing curly brackets.
+     *
+     * @deprecated Set on import for no documented use. Removed in 12.0, see https://github.com/phun-ky/speccer/issues/569
      */
     DrawSVGCurlyBracket: typeof DrawSVGCurlyBracket;
     /**
      * Represents the DrawCircle class for drawing circles.
+     *
+     * @deprecated Set on import for no documented use. Removed in 12.0, see https://github.com/phun-ky/speccer/issues/569
      */
     DrawCircle: typeof DrawCircle;
 
     /**
      * Represents the DrawSVGLine class for drawing lines.
+     *
+     * @deprecated Set on import for no documented use. Removed in 12.0, see https://github.com/phun-ky/speccer/issues/569
      */
     DrawSVGLine: typeof DrawSVGLine;
 

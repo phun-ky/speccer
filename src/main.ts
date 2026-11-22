@@ -73,6 +73,9 @@ export { removeSpeccer } from './config/browser';
  *
  */
 export const grid = {
+  /**
+   * @deprecated Use `grid.element`, which does the same. Removed in 12.0, see https://github.com/phun-ky/speccer/issues/567
+   */
   create: gridCreate,
   element: gridElement
 };
@@ -100,6 +103,9 @@ export const grid = {
  * ```
  */
 export const spacing = {
+  /**
+   * @deprecated Internal node builder, removed from the public API in 12.0. Use `spacing.element`, see https://github.com/phun-ky/speccer/issues/567
+   */
   create: spacingCreate,
   element: spacingElement
 };
@@ -123,6 +129,9 @@ export const spacing = {
  *
  */
 export const pin = {
+  /**
+   * @deprecated Internal node builder, removed from the public API in 12.0. Use `pin.pinElement` or `pin.pinElements`, see https://github.com/phun-ky/speccer/issues/567
+   */
   createPinElement,
   pinElement,
   pinElements
@@ -160,6 +169,9 @@ export const pin = {
  *
  */
 export const measure = {
+  /**
+   * @deprecated Internal node builder, removed from the public API in 12.0. Use `measure.element`, see https://github.com/phun-ky/speccer/issues/567
+   */
   create: measureCreate,
   element: measureElement
 };
@@ -193,6 +205,9 @@ export const measure = {
  *
  */
 export const mark = {
+  /**
+   * @deprecated Internal node builder, removed from the public API in 12.0. Use `mark.element`, see https://github.com/phun-ky/speccer/issues/567
+   */
   create: markCreate,
   element: markElement
 };
@@ -230,6 +245,9 @@ export const mark = {
  *
  */
 export const typography = {
+  /**
+   * @deprecated Internal node builder, removed from the public API in 12.0. Use `typography.element`, see https://github.com/phun-ky/speccer/issues/567
+   */
   create: typographyCreate,
   element: typographyElement
 };
@@ -258,6 +276,9 @@ export const modes = {
   lazy,
   rerenderLazy,
   manual,
+  /**
+   * @deprecated Starts the script build (`speccer.js`) from its `<script>` attributes, which it does by itself. Removed from the public API in 12.0, see https://github.com/phun-ky/speccer/issues/570
+   */
   activate
 };
 
@@ -270,6 +291,9 @@ export const modes = {
  *
  * // do stuff
  * speccer();
+ *
+ * // or wait until everything is drawn
+ * await speccer();
  * ```
  * @example
  * ```html
@@ -277,9 +301,10 @@ export const modes = {
  * <script src="../path/to/speccer.js"></script>
  * ```
  */
-const speccer = () => {
+const speccer = async (): Promise<void> => {
   removeAnnotations();
 
+  const _drawn: Promise<unknown>[] = [];
   const spacingElements = document.querySelectorAll(
     `[${SPECCER_DATA_ATTRIBUTE}^="${SPECCER_FEATURE_SPACING}"]`
   );
@@ -300,13 +325,13 @@ const speccer = () => {
   );
 
   for (const el of markElements) {
-    markElement(el as HTMLElement);
+    _drawn.push(markElement(el as HTMLElement));
   }
   for (const el of gridElements) {
-    gridElement(el as HTMLElement);
+    _drawn.push(gridElement(el as HTMLElement));
   }
   for (const el of spacingElements) {
-    spacingElement(el as HTMLElement);
+    _drawn.push(spacingElement(el as HTMLElement));
 
     if (el.hasChildNodes()) {
       const _child_spacing_elements = el.querySelectorAll(
@@ -318,21 +343,23 @@ const speccer = () => {
       if (_child_spacing_elements?.length) {
         for (const childEl of _child_spacing_elements) {
           childEl.setAttribute('data-speccer', _areas_string);
-          spacingElement(childEl as HTMLElement);
+          _drawn.push(spacingElement(childEl as HTMLElement));
         }
       }
     }
   }
   for (const el of measureElements) {
-    measureElement(el as HTMLElement);
+    _drawn.push(measureElement(el as HTMLElement));
   }
   for (const el of typographyElements) {
-    typographyElement(el as HTMLElement);
+    _drawn.push(typographyElement(el as HTMLElement));
   }
   for (const el of pinSectionElements) {
-    pinElements(el as HTMLElement);
+    _drawn.push(pinElements(el as HTMLElement));
   }
-  initA11y();
+  _drawn.push(initA11y());
+
+  await Promise.all(_drawn);
 };
 
 export default speccer;
