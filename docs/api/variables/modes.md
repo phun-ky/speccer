@@ -13,13 +13,13 @@ const modes: {
 ```
 
 Defined in:
-[main.ts:256](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L256)
+[main.ts:274](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L274)
 
 The available modes to run SPECCER with
 
 ## Type Declaration
 
-### activate
+### ~~activate~~
 
 ```ts
 activate: (speccer: SpeccerFunctionType) => void;
@@ -45,6 +45,12 @@ The speccer function to execute.
 // Usage example:
 activate(mySpeccer);
 ```
+
+#### Deprecated
+
+Starts the script build (`speccer.js`) from its `<script>` attributes, which it
+does by itself. Removed from the public API in 12.0, see
+https://github.com/phun-ky/speccer/issues/570
 
 ### dom
 

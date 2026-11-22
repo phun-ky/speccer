@@ -13,7 +13,7 @@ const spacing: {
 ```
 
 Defined in:
-[main.ts:102](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L102)
+[main.ts:105](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L105)
 
 This feature highlights the spacing of an element.
 
@@ -21,7 +21,7 @@ This feature highlights the spacing of an element.
 
 ## Type Declaration
 
-### create
+### ~~create~~
 
 ```ts
 create: (text: string | number, tag: string) => (HTMLElement = spacingCreate);
@@ -55,6 +55,11 @@ The HTML tag for the element (default is 'span').
 const spacingElement = create(20, 'div');
 document.body.appendChild(spacingElement);
 ```
+
+#### Deprecated
+
+Internal node builder, removed from the public API in 12.0. Use
+`spacing.element`, see https://github.com/phun-ky/speccer/issues/567
 
 ### element
 

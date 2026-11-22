@@ -18,7 +18,7 @@ const measure: {
 ```
 
 Defined in:
-[main.ts:162](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L162)
+[main.ts:171](https://github.com/phun-ky/speccer/blob/main/src/main.ts#L171)
 
 This feature measures given element
 
@@ -26,7 +26,7 @@ This feature measures given element
 
 ## Type Declaration
 
-### create
+### ~~create~~
 
 ```ts
 create: (
@@ -77,6 +77,11 @@ The element type.
 const measurement = create(100, 'width bottom', 'div');
 document.body.appendChild(measurement);
 ```
+
+#### Deprecated
+
+Internal node builder, removed from the public API in 12.0. Use
+`measure.element`, see https://github.com/phun-ky/speccer/issues/567
 
 ### element
 
