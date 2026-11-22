@@ -80,6 +80,41 @@ export const startDraw = (): (() => boolean) => {
 };
 
 /**
+ * Throws a `TypeError` when a value is given but isn't an element, so a
+ * public function fails with a message that names it, instead of failing
+ * somewhere inside. `null` and `undefined` pass, because they mean "nothing
+ * to annotate yet", like a ref before the element exists.
+ *
+ * @param {unknown} value - The value to check.
+ * @param {string} name - The public name of the function, like `grid.element`.
+ * @param {string} [argument] - The name of the argument.
+ *
+ * @example
+ * ```ts
+ * assertElement('#t', 'grid.element');
+ * // TypeError: grid.element: expected targetElement to be an element, got string
+ * ```
+ */
+export const assertElement = (
+  value: unknown,
+  name: string,
+  argument = 'targetElement'
+): void => {
+  // nodeType, not instanceof, so elements from other frames pass too
+  if (value === null || value === undefined || (value as Node).nodeType === 1)
+    return;
+
+  const _type =
+    typeof value === 'object'
+      ? Object.prototype.toString.call(value).slice(8, -1)
+      : typeof value;
+
+  throw new TypeError(
+    `${name}: expected ${argument} to be an element, got ${_type}`
+  );
+};
+
+/**
  * Determines whether a given HTML element should be considered hidden.
  *
  * The function prefers the native `HTMLElement.prototype.checkVisibility`
