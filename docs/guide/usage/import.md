@@ -52,6 +52,15 @@ speccer();
 
 :::
 
+::: warning CommonJS is deprecated
+
+The CommonJS build (`require('@phun-ky/speccer')`) is removed in 12.0, see
+[#571](https://github.com/phun-ky/speccer/issues/571). Node 22.12 and newer can
+`require()` the ES module instead. Jest in CommonJS mode needs ESM support or a
+transform for speccer.
+
+:::
+
 ## Waiting for the draw
 
 `speccer()` draws over a few animation frames. It returns a promise that settles
@@ -63,7 +72,7 @@ await speccer();
 ```
 
 The promise rejects if a feature fails to draw. Calling `speccer()` without
-`await` works as before. This needs speccer 11.6.0 or newer.
+`await` works as before. This needs speccer 11.7.0 or newer.
 
 ## Types
 
