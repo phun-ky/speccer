@@ -72,7 +72,7 @@ await speccer();
 ```
 
 The promise rejects if a feature fails to draw. Calling `speccer()` without
-`await` works as before. This needs speccer 11.6.0 or newer.
+`await` works as before. This needs speccer 11.7.0 or newer.
 
 ## Types
 
