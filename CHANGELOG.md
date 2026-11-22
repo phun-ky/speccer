@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.7.0](https://github.com/phun-ky/speccer/compare/v11.6.0...v11.7.0) (2026-11-22)
+
+### Feature
+
+* 🎸 speccer() returns a promise that settles when everything is drawn ([ccfde14](https://github.com/phun-ky/speccer/commit/ccfde14bcd7573775e34c9df715d84f9d88b0c06)), references [#509](https://github.com/phun-ky/speccer/issues/509)
+
 ## [11.6.0](https://github.com/phun-ky/speccer/compare/v11.5.2...v11.6.0) (2026-11-22)
 
 ### Feature
