@@ -78,6 +78,7 @@
   ],
   "scripts": {
     "prepare": "git config core.hooksPath .githooks || true",
+    "banners": "node scripts/banners/render.mjs",
     "bestpractices:url": "node scripts/bestpractices-url.mjs",
     "build": "npm run clean && npm run rollup && npm run styles",
     "check:bestpractices": "node scripts/check-bestpractices.mjs",
