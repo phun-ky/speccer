@@ -26,6 +26,7 @@ export const createA11yElement = (
     landmark: type === 'landmark',
     autocomplete: type === 'autocomplete',
     headings: type === 'headings',
+    contrast: type === 'contrast',
     region: type === 'region'
   });
 

@@ -41,6 +41,10 @@ let _run = 0;
  * await a11y();
  * ```
  *
+ * `a11y contrast` labels each element with text in the container with its
+ * WCAG 2 contrast ratio and the level it meets: AAA, AA or Fail. The label
+ * is `?` when the color behind the text can't be known from styles, like
+ * over a background image or with `opacity` below 1.
  *
  */
 export const a11y = async (): Promise<void> => {
@@ -68,6 +72,9 @@ export const a11y = async (): Promise<void> => {
   );
   const _headings_elements = document.querySelectorAll(
     '[data-speccer*="a11y headings"]'
+  );
+  const _contrast_elements = document.querySelectorAll(
+    '[data-speccer*="a11y contrast"]'
   );
 
   if (_shortcut_elements.length) {
@@ -166,6 +173,27 @@ export const a11y = async (): Promise<void> => {
         );
       }
     }
+  }
+
+  for (const el of _contrast_elements) {
+    // Each element with its own text, once, but not speccer's annotations
+    const _text_els = new Set<HTMLElement>();
+    const _walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+
+    while (_walker.nextNode()) {
+      const _parent = _walker.currentNode.parentElement;
+
+      if (
+        _walker.currentNode.textContent?.trim() &&
+        _parent instanceof HTMLElement &&
+        !_parent.closest('.ph-speccer') &&
+        !isElementHidden(_parent)
+      )
+        _text_els.add(_parent);
+    }
+
+    for (const _text_el of _text_els)
+      _drawn.push(addA11yElement(_text_el, null, 'contrast'));
   }
 
   if (_landmark_elements.length) {
