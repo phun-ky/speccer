@@ -59,6 +59,30 @@ describe('a11y', () => {
       assert.match(el.style.left, /px$/, el.className);
   });
 
+  it('numbers tab stops in tab order without gaps', async () => {
+    document.body.innerHTML = `
+      <div data-speccer="a11y tabstops"><button id="b">b</button><input class="hidden"><button id="a" tabindex="1">a</button><button id="c">c</button></div>
+    `;
+    for (const el of document.querySelectorAll<HTMLElement>('.hidden'))
+      el.checkVisibility = () => false;
+
+    a11y();
+    await settle();
+
+    assert.deepEqual(
+      [...document.querySelectorAll('.speccer.tabstops')].map((el) =>
+        el.getAttribute('data-speccer-a11y-tabstops')
+      ),
+      ['1', '2', '3']
+    );
+    assert.deepEqual(
+      [...document.querySelectorAll('.speccer.tabstops')].map((el) =>
+        el.getAttribute('data-speccer-id')
+      ),
+      ['speccer-a11y-a', 'speccer-a11y-b', 'speccer-a11y-c']
+    );
+  });
+
   it('skips shortcuts without keys', () => {
     document.body.innerHTML =
       '<button data-speccer="a11y shortcut" data-speccer-a11y-shortcut="">b</button>';
