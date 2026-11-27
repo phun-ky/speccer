@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.11.3](https://github.com/phun-ky/speccer/compare/v11.11.2...v11.11.3) (2026-11-27)
+
+### Performance change
+
+* ⚡️ look up a radio group's checked radio once per root ([a992b33](https://github.com/phun-ky/speccer/commit/a992b336bccd359445f190360c29b1cae56bb324))
+
 ## [11.11.2](https://github.com/phun-ky/speccer/compare/v11.11.1...v11.11.2) (2026-11-27)
 
 ### Bug
