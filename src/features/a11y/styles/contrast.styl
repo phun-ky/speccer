@@ -1,0 +1,30 @@
+.ph-speccer.speccer.a11y.contrast
+  --ph-speccer-a11y-contrast-background: var(--ph-speccer-a11y-contrast-color-background)
+  position absolute
+  background-color var(--ph-speccer-a11y-contrast-background)
+  color var(--ph-speccer-color-text-light)
+  font-family var(--ph-speccer-font-family)
+  justify-content center
+  font-size 12px
+  height 28px
+  line-height 28px
+  align-items center
+  padding 0 0.5rem
+  pointer-events auto
+  white-space nowrap
+
+  &.fail
+    --ph-speccer-a11y-contrast-background: var(--ph-speccer-a11y-contrast-fail-color-background)
+
+  &::after
+    border solid transparent
+    content ""
+    height 0
+    width 0
+    position absolute
+    pointer-events none
+    border-width 14.2px
+    top 50%
+    left 100%
+    border-left-color var(--ph-speccer-a11y-contrast-background)
+    transform translateY(-50%)

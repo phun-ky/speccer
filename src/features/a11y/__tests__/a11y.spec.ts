@@ -80,4 +80,33 @@ describe('a11y', () => {
     assert.equal(document.querySelectorAll('.a11y').length, 0);
     assert.equal(document.querySelectorAll('.pin').length, 1);
   });
+
+  it('labels each element with text with its contrast', async () => {
+    document.body.innerHTML = `
+      <div data-speccer="a11y contrast" style="background: #fff; color: #000">
+        Own text
+        <p style="color: #777">grey <b>bold</b></p>
+        <p style="background-image: linear-gradient(red, blue)">image</p>
+        <p class="hidden">hidden</p>
+        <div>   </div>
+      </div>
+      <p>outside</p>
+    `;
+    for (const el of document.querySelectorAll<HTMLElement>('.hidden'))
+      el.checkVisibility = () => false;
+
+    await a11y();
+
+    const badges = [...document.querySelectorAll('.speccer.contrast')];
+
+    // The container, p, b (inherits #777) and the image p, once each
+    assert.deepEqual(
+      badges.map((el) => el.textContent),
+      ['21:1 AAA', '4.47:1 Fail', '4.47:1 Fail', '?']
+    );
+    assert.deepEqual(
+      badges.map((el) => [...el.classList].at(-1)),
+      ['aaa', 'fail', 'fail', 'unknown']
+    );
+  });
 });

@@ -2,14 +2,15 @@ import { uniqueID } from '../../../utils/id';
 import { add } from '../../../utils/styles';
 
 import { createA11yElement } from './create-a11y-element';
+import { getContrast } from './get-contrast';
 import { getRole } from './get-role';
 import { styles } from './styles';
 
 /**
  * Adds an accessibility element to the document body based on the target element and type.
  *
- * Values read from the target element (its role and autocomplete attribute)
- * are inserted as text, never as HTML.
+ * Values read from the target element (its role, autocomplete attribute and
+ * text contrast) are inserted as text, never as HTML.
  *
  * ![Screenshot of speccer a11y tab stops in use](/speccer-a11y-tabstops-light.png?raw=true)
  * ![Screenshot of speccer a11y landmark in use](/speccer-a11y-landmarks-light.png?raw=true)
@@ -57,6 +58,16 @@ export const addA11yElement = async (
 
   if (type === 'tabstops') {
     _a11y_el.setAttribute('data-speccer-a11y-tabstops', content as string);
+  }
+
+  if (type === 'contrast') {
+    const _contrast = getContrast(targetElement);
+
+    // Truncated, not rounded, so 4.499 doesn't show as passing 4.5
+    _a11y_el.textContent = _contrast
+      ? `${Math.floor(_contrast.ratio * 100) / 100}:1 ${_contrast.level}`
+      : '?';
+    _a11y_el.classList.add(_contrast?.level.toLowerCase() ?? 'unknown');
   }
 
   const _pin_element_id = `speccer-a11y-${targetElement.getAttribute('id') || uniqueID()}`;

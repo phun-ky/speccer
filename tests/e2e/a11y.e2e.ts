@@ -97,6 +97,33 @@ test.describe('a11y', () => {
   });
 });
 
+test.describe('a11y contrast', () => {
+  test('labels the text with its contrast ratio and level', async ({
+    page
+  }) => {
+    await page.goto('/a11y.html');
+    await waitForSpeccer(page);
+
+    await expect(page.locator('.ph-speccer.speccer.contrast')).toHaveText([
+      '15.9:1 AAA',
+      '4.47:1 Fail',
+      // The same color passes as large text
+      '4.47:1 AA',
+      // oklch() isn't computed to rgb(), so it's read through a canvas. The
+      // exact sRGB byte may differ between browsers, around 7.45:1.
+      /^7\.\d+:1 AAA$/,
+      // 60% black over white is rgb(102, 102, 102)
+      '5.74:1 AA',
+      // A gradient, so the color behind the text is unknown
+      '?'
+    ]);
+    await expect(page.locator('.ph-speccer.speccer.contrast.fail')).toHaveCSS(
+      'background-color',
+      'rgb(122, 16, 0)'
+    );
+  });
+});
+
 test.describe('a11y landmarks', () => {
   test('labels each landmark with its element and role', async ({ page }) => {
     await page.goto('/demo.html');
