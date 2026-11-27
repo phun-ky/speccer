@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.11.0](https://github.com/phun-ky/speccer/compare/v11.10.0...v11.11.0) (2026-11-27)
+
+### Feature
+
+* 🎸 draw the tab order path with data-speccer="a11y tabstops path" ([3940fc5](https://github.com/phun-ky/speccer/commit/3940fc5baf2a661cbce211eee26640fd9f864991)), references [#ph-speccer-svg](https://github.com/phun-ky/speccer/issues/ph-speccer-svg)
+
 ## [11.10.0](https://github.com/phun-ky/speccer/compare/v11.9.1...v11.10.0) (2026-11-27)
 
 ### Tasks
