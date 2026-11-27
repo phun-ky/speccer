@@ -83,6 +83,46 @@ describe('a11y', () => {
     );
   });
 
+  describe('path', () => {
+    const SVG =
+      '<svg id="ph-speccer-svg"><path class="ph-speccer path original" id="ph-speccer-path"></path></svg>';
+    const STOPS = '<button>a</button><button>b</button><button>c</button>';
+    const lines = () =>
+      document.querySelectorAll('#ph-speccer-svg .a11y.tabstops-path');
+
+    it('draws a line from each tab stop to the next', async () => {
+      document.body.innerHTML = `<div data-speccer="a11y tabstops path">${STOPS}</div>${SVG}`;
+
+      await a11y();
+
+      assert.equal(lines().length, 2);
+
+      for (const line of lines()) assert.match(line.getAttribute('d')!, /^M /);
+
+      // The template stays, so the next call can draw again
+      assert.ok(document.getElementById('ph-speccer-path'));
+    });
+
+    it('draws no lines without path', async () => {
+      document.body.innerHTML = `<div data-speccer="a11y tabstops">${STOPS}</div>${SVG}`;
+
+      await a11y();
+
+      assert.equal(lines().length, 0);
+    });
+
+    it('draws the lines of the last call only', async () => {
+      document.body.innerHTML = `<div data-speccer="a11y tabstops path">${STOPS}</div>${SVG}`;
+
+      const first = a11y();
+
+      await a11y();
+      await first;
+
+      assert.equal(lines().length, 2);
+    });
+  });
+
   it('skips shortcuts without keys', () => {
     document.body.innerHTML =
       '<button data-speccer="a11y shortcut" data-speccer-a11y-shortcut="">b</button>';

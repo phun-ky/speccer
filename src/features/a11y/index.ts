@@ -1,14 +1,23 @@
-import { isElementHidden, removeAll } from '../../utils/node';
+import { isElementHidden, removeAll, startDraw } from '../../utils/node';
 
 import { SPECCER_LANDMARK_ELEMENTS_SELECTOR } from './constants';
 import { addA11yElement } from './utils/add-a11y-element';
 import { addShortcutElement } from './utils/add-shortcut-element';
+import { drawTabstopsPath } from './utils/draw-tabstops-path';
 import { getTabOrder } from './utils/get-tab-order';
+
+// Bumped by each a11y() call, so an earlier call stops before drawing its path
+let _run = 0;
 
 /**
  * Initializes the accessibility elements on the document.
  *
  * This feature will annotate or highlight accessibility areas like landmarks and region. It can also display tab stops/sequence and any keyboard shortcuts assigned
+ *
+ * Tab stops are numbered in the order the Tab key visits them. Add `path` to
+ * draw a line from each tab stop to the next. Lines that go against the
+ * reading order get the `backwards` class. Lines need the `#ph-speccer-svg`
+ * element in the document.
  *
  * ![pin](/speccer-a11y-tabstops-light.png?raw=true)
  *
@@ -23,6 +32,8 @@ import { getTabOrder } from './utils/get-tab-order';
  * >
  *   …
  * </div>
+ *
+ * <div data-speccer="a11y tabstops path">…</div>
  * ```
  *
  * ```ts
@@ -33,7 +44,12 @@ import { getTabOrder } from './utils/get-tab-order';
  *
  */
 export const a11y = async (): Promise<void> => {
-  const _drawn: Promise<void>[] = [];
+  const _drawn: Promise<unknown>[] = [];
+  const _this_run = ++_run;
+  const _is_draw_stale = startDraw();
+  // The path is drawn after the badges, so a later a11y() call or
+  // removeAnnotations() may have removed them by then
+  const isStale = () => _this_run !== _run || _is_draw_stale();
 
   // Replace the annotations from a previous call instead of adding to them
   removeAll('.ph-speccer.speccer.a11y');
@@ -71,12 +87,11 @@ export const a11y = async (): Promise<void> => {
 
   if (_tab_order_elements.length) {
     for (const el of _tab_order_elements) {
-      // Counts drawn stops only, so skipped elements leave no gaps
-      let _tabstop = 0;
+      const _targets: HTMLElement[] = [];
 
       for (const tabstopsEl of getTabOrder(el)) {
         if (!isElementHidden(tabstopsEl)) {
-          _drawn.push(addA11yElement(tabstopsEl, ++_tabstop, 'tabstops'));
+          _targets.push(tabstopsEl);
           continue;
         }
 
@@ -93,14 +108,33 @@ export const a11y = async (): Promise<void> => {
           continue;
 
         // This could be a fake element, like a toggle checkbox, so we use the labelElement
-        _drawn.push(
-          addA11yElement(
-            potentialLabelElement as HTMLElement,
-            ++_tabstop,
-            'tabstops'
-          )
-        );
+        _targets.push(potentialLabelElement as HTMLElement);
       }
+
+      // Numbered after the skipped elements are left out, so there are no gaps
+      const _badges = _targets.map((target, index) =>
+        addA11yElement(target, index + 1, 'tabstops')
+      );
+
+      _drawn.push(..._badges);
+
+      if (!el.getAttribute('data-speccer')?.split(/\s+/).includes('path'))
+        continue;
+
+      _drawn.push(
+        Promise.all(_badges).then((badges) => {
+          if (isStale()) return;
+
+          return drawTabstopsPath(
+            _targets.flatMap((target, index) => {
+              const badge = badges[index];
+
+              return badge ? [{ target, badge }] : [];
+            }),
+            getComputedStyle(el).direction === 'rtl'
+          );
+        })
+      );
     }
   }
 
