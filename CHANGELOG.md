@@ -1,5 +1,19 @@
 # Changelog
 
+## [11.10.0](https://github.com/phun-ky/speccer/compare/v11.9.1...v11.10.0) (2026-11-27)
+
+### Tasks
+
+* 🤖 answer the silver and OSPS Baseline criteria ([4afa7e4](https://github.com/phun-ky/speccer/commit/4afa7e4220e01a256d1d4e134909a674081627b8)), references [#507](https://github.com/phun-ky/speccer/issues/507)
+
+### Documentation
+
+* ✏️ add an assurance case and a VEX document ([ea1bdd8](https://github.com/phun-ky/speccer/commit/ea1bdd85592aad603c68ce37568be09f66c91399))
+
+### Feature
+
+* 🎸 label text contrast with data-speccer="a11y contrast" ([27f5cd2](https://github.com/phun-ky/speccer/commit/27f5cd202ade5bf2fdf12e106f22c98e5540551b))
+
 ## [11.9.1](https://github.com/phun-ky/speccer/compare/v11.9.0...v11.9.1) (2026-11-27)
 
 ### Tasks
