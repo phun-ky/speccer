@@ -135,6 +135,15 @@ try {
 
       if (url.startsWith('data:') || url.startsWith('blob:')) continue;
 
+      // Playwright 1.65 reports prefetches the page cancels as failed; a
+      // missing file still fails on its status or on the real request
+      if (
+        error === 'net::ERR_ABORTED' &&
+        request.headers()['sec-purpose'] === 'prefetch'
+      ) {
+        continue;
+      }
+
       if (new URL(url).origin !== ORIGIN) {
         fail(page, 'network', `${label}: request to another origin: ${url}`);
       } else if (error || status >= 400) {
