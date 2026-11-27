@@ -18,3 +18,12 @@
     position static
     content attr(data-speccer-a11y-tabstops)
     text-align center
+
+svg.ph-speccer .ph-speccer.path.a11y.tabstops-path
+  color var(--ph-speccer-a11y-color-background)
+  stroke-width var(--ph-speccer-line-width)
+
+  // Focus moves against the reading order, see WCAG 2.4.3
+  &.backwards
+    color var(--ph-speccer-a11y-tabstops-backwards-color)
+    stroke-dasharray 4 4

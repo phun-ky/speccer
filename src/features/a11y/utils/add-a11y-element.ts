@@ -18,7 +18,7 @@ import { styles } from './styles';
  * @param {HTMLElement} targetElement - Target HTML element.
  * @param {unknown} [content] - Content to be added to the accessibility element.
  * @param {string} type - Type of accessibility element ('tabstops' or 'landmark').
- * @returns {Promise<void>} A Promise resolving when the operation is complete.
+ * @returns {Promise<HTMLElement | undefined>} The styled annotation, or `undefined` when the target isn't visible.
  *
  * @example
  * ```ts
@@ -33,7 +33,7 @@ export const addA11yElement = async (
   targetElement: HTMLElement,
   content: unknown,
   type: string
-): Promise<void> => {
+): Promise<HTMLElement | undefined> => {
   if (!targetElement || !targetElement.checkVisibility()) return;
 
   const _a11y_el = createA11yElement(type, content);
@@ -83,4 +83,6 @@ export const addA11yElement = async (
   );
 
   await add(_a11y_el, _a11y_styles);
+
+  return _a11y_el;
 };

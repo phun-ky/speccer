@@ -37,6 +37,40 @@ export const removeAll = (selector: string, el: Document = document): void => {
   });
 };
 
+/**
+ * Whether the missing SVG element has been warned about, so it's only done once.
+ */
+let _warned_missing_svg = false;
+
+/**
+ * Checks that the SVG element used to draw lines, circles and curly brackets
+ * is in the document, and warns once if it isn't.
+ *
+ * @returns {boolean} `true` if the SVG element is in the document.
+ *
+ * @example
+ * ```ts
+ * if (hasSVGElement()) new DrawSVGLine(start, stop);
+ * ```
+ */
+export const hasSVGElement = (): boolean => {
+  if (
+    document.getElementById('ph-speccer-svg') &&
+    document.getElementById('ph-speccer-path')
+  )
+    return true;
+
+  if (!_warned_missing_svg) {
+    _warned_missing_svg = true;
+    // eslint-disable-next-line no-console
+    console.warn(
+      'SPECCER: lines and curly brackets, like those of text and parent pins and the a11y tab stop path, need the #ph-speccer-svg element in the document. They are drawn without lines. See https://speccer.dev/guide/introduction/#svg'
+    );
+  }
+
+  return false;
+};
+
 // Bumped by removeAnnotations(), so draws that started before it know they are stale
 let _generation = 0;
 

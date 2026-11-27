@@ -886,6 +886,24 @@
         </section>
         <section class="ph section">
           <div class="ph container">
+            <h2 class="ph">Tab order path</h2>
+            <div class="ph well" data-speccer="a11y tabstops path">
+              <p class="ph">
+                <code>tabindex="1"</code> on Save moves it first, so focus goes
+                back to Cancel: that line is dashed.
+              </p>
+              <div style="display: flex; gap: 2rem; padding-top: 2rem">
+                <button type="button" class="ph button tertiary">Cancel</button>
+                <button type="button" class="ph button secondary" tabindex="1">
+                  Save
+                </button>
+                <button type="button" class="ph button tertiary">Help</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="ph section">
+          <div class="ph container">
             <h2 class="ph">Shortcuts</h2>
             <div class="ph well">
               <h2 class="ph">Form</h2>

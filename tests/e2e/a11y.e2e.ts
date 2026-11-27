@@ -25,7 +25,7 @@ test.describe('a11y', () => {
 
   test('numbers the tab stops in each container from 1', async ({ page }) => {
     const containers = await page
-      .locator('[data-speccer="a11y tabstops"]')
+      .locator('[data-speccer^="a11y tabstops"]')
       .count();
     const numbers = await page
       .locator('.ph-speccer.speccer.tabstops')
@@ -46,6 +46,20 @@ test.describe('a11y', () => {
 
     for (const run of runs)
       expect(run).toEqual(run.map((_, index) => index + 1));
+  });
+
+  test('draws the tab order path, dashed where focus goes backwards', async ({
+    page
+  }) => {
+    const lines = page.locator('#ph-speccer-svg .a11y.tabstops-path');
+    const backwards = lines.and(page.locator('.backwards'));
+
+    // One line between each pair of the 3 stops
+    await expect(lines).toHaveCount(2);
+    // Save has tabindex="1", so the order is Save, Cancel, Help: only the
+    // first line, Save to Cancel, goes back along the row
+    await expect(backwards).toHaveCount(1);
+    await expect(lines.first()).toHaveClass(/backwards/);
   });
 
   test('labels each heading with its level', async ({ page }) => {
