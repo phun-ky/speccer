@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.11.2](https://github.com/phun-ky/speccer/compare/v11.11.1...v11.11.2) (2026-11-27)
+
+### Bug
+
+* 🐛 match browser tab stops for radio groups ([417474e](https://github.com/phun-ky/speccer/commit/417474e41664979f6fee5d731d98ef37fc776ed1))
+
 ## [11.11.1](https://github.com/phun-ky/speccer/compare/v11.11.0...v11.11.1) (2026-11-27)
 
 ### Bug
