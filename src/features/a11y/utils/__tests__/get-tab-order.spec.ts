@@ -32,4 +32,16 @@ describe('getTabOrder', () => {
 
     assert.deepEqual(ids(document.body), ['ok']);
   });
+
+  it('stops once per radio group, on the checked radio or the first', () => {
+    document.body.innerHTML = `
+      <input id="a1" type="radio" name="a"><input id="a2" type="radio" name="a" checked>
+      <input id="b1" type="radio" name="b" disabled><input id="b2" type="radio" name="b"><input id="b3" type="radio" name="b">
+      <input id="n1" type="radio"><input id="n2" type="radio">
+      <form><input id="f1" type="radio" name="a"></form>
+    `;
+
+    // No name means no group, and another form is another group
+    assert.deepEqual(ids(document.body), ['a2', 'b2', 'n1', 'n2', 'f1']);
+  });
 });

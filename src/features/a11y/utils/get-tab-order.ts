@@ -1,5 +1,12 @@
 import { SPECCER_TABBABLE_ELEMENTS_SELECTOR } from '../constants';
 
+// Radios with the same name in the same form share one tab stop
+const isRadioOf = (el: Element, group?: HTMLInputElement) =>
+  el instanceof HTMLInputElement &&
+  el.type === 'radio' &&
+  el.name !== '' &&
+  (!group || (el.name === group.name && el.form === group.form));
+
 /**
  * Returns the focusable elements inside a container in the order the Tab key
  * visits them: positive `tabindex` values first, in ascending order, then the
@@ -8,6 +15,9 @@ import { SPECCER_TABBABLE_ELEMENTS_SELECTOR } from '../constants';
  * Elements that can't take focus are left out: a negative `tabindex`, disabled
  * (also through a disabled `fieldset`) or inside an `inert` subtree. Hidden
  * elements are kept, since the caller may show them on their label.
+ *
+ * A group of radio buttons is one tab stop: the checked radio, or the first
+ * one when none is checked. Arrow keys move within the group.
  *
  * @param {Element} container - The element to look for tab stops in.
  * @returns {HTMLElement[]} The tab stops, in tab order.
@@ -40,4 +50,13 @@ export const getTabOrder = (container: Element): HTMLElement[] =>
         (a.index || Number.MAX_SAFE_INTEGER) -
         (b.index || Number.MAX_SAFE_INTEGER)
     )
-    .map(({ el }) => el);
+    .map(({ el }) => el)
+    .filter((el, _, all) => {
+      if (!isRadioOf(el)) return true;
+
+      const group = all.filter((other) =>
+        isRadioOf(other, el as HTMLInputElement)
+      ) as HTMLInputElement[];
+
+      return el === (group.find((radio) => radio.checked) ?? group[0]);
+    });
