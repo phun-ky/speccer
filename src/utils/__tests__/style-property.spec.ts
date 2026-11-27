@@ -19,6 +19,8 @@ describe('getParentThatIsSticky', () => {
     const element = document.createElement('div');
 
     stickyParent.appendChild(element);
+    // Detached elements have no computed style, as in browsers
+    document.body.replaceChildren(stickyParent);
 
     const result = await getParentThatIsSticky(element);
 
@@ -38,6 +40,7 @@ describe('isSticky', () => {
     const element = document.createElement('div');
 
     element.style.position = 'sticky';
+    document.body.replaceChildren(element);
 
     const result = await isSticky(element);
 
