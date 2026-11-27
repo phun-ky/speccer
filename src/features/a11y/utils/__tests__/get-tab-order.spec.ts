@@ -44,4 +44,33 @@ describe('getTabOrder', () => {
     // No name means no group, and another form is another group
     assert.deepEqual(ids(document.body), ['a2', 'b2', 'n1', 'n2', 'f1']);
   });
+
+  it('gives a group no stop when its checked radio cannot take focus', () => {
+    document.body.innerHTML = `
+      <input id="d1" type="radio" name="d" disabled checked><input id="d2" type="radio" name="d">
+      <input id="t1" type="radio" name="t" tabindex="-1" checked><input id="t2" type="radio" name="t">
+      <input id="o1" type="radio" name="o" checked>
+      <div id="box"><input id="o2" type="radio" name="o"><button id="ok">ok</button></div>
+    `;
+
+    assert.deepEqual(ids(document.body), ['o1', 'ok']);
+    // The checked radio is outside the container, so o2 is still no stop
+    assert.deepEqual(ids(document.getElementById('box')!), ['ok']);
+  });
+
+  it('stops on each run of an unchecked group in tab order', () => {
+    document.body.innerHTML = `
+      <input id="r1" type="radio" name="r"><input id="r2" type="radio" name="r">
+      <button id="b">b</button>
+      <input id="r3" type="radio" name="r">
+      <input id="h1" type="radio" name="h">
+      <input id="r4" type="radio" name="r">
+      <input id="h2" type="radio" name="h" checked>
+      <input id="p1" type="radio" name="p"><input id="p2" type="radio" name="p" tabindex="1">
+    `;
+
+    // h1 is no stop, so r3 and r4 are one run; p2 moves to the front, so
+    // p1 and p2 are two runs
+    assert.deepEqual(ids(document.body), ['p2', 'r1', 'b', 'r3', 'h2', 'p1']);
+  });
 });
