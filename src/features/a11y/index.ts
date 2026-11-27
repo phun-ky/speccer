@@ -1,11 +1,9 @@
 import { isElementHidden, removeAll } from '../../utils/node';
 
-import {
-  SPECCER_LANDMARK_ELEMENTS_SELECTOR,
-  SPECCER_TABBABLE_ELEMENTS_SELECTOR
-} from './constants';
+import { SPECCER_LANDMARK_ELEMENTS_SELECTOR } from './constants';
 import { addA11yElement } from './utils/add-a11y-element';
 import { addShortcutElement } from './utils/add-shortcut-element';
+import { getTabOrder } from './utils/get-tab-order';
 
 /**
  * Initializes the accessibility elements on the document.
@@ -73,19 +71,12 @@ export const a11y = async (): Promise<void> => {
 
   if (_tab_order_elements.length) {
     for (const el of _tab_order_elements) {
-      const _tabstops_els = el.querySelectorAll(
-        SPECCER_TABBABLE_ELEMENTS_SELECTOR
-      );
+      // Counts drawn stops only, so skipped elements leave no gaps
+      let _tabstop = 0;
 
-      for (const [tabstopsIndex, tabstopsEl] of _tabstops_els.entries()) {
-        if (!isElementHidden(tabstopsEl as HTMLElement)) {
-          _drawn.push(
-            addA11yElement(
-              tabstopsEl as HTMLElement,
-              tabstopsIndex + 1,
-              'tabstops'
-            )
-          );
+      for (const tabstopsEl of getTabOrder(el)) {
+        if (!isElementHidden(tabstopsEl)) {
+          _drawn.push(addA11yElement(tabstopsEl, ++_tabstop, 'tabstops'));
           continue;
         }
 
@@ -105,7 +96,7 @@ export const a11y = async (): Promise<void> => {
         _drawn.push(
           addA11yElement(
             potentialLabelElement as HTMLElement,
-            tabstopsIndex + 1,
+            ++_tabstop,
             'tabstops'
           )
         );
