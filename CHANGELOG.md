@@ -1,5 +1,11 @@
 # Changelog
 
+## [11.11.1](https://github.com/phun-ky/speccer/compare/v11.11.0...v11.11.1) (2026-11-27)
+
+### Bug
+
+* 🐛 count a radio group as one a11y tab stop ([0798954](https://github.com/phun-ky/speccer/commit/0798954071e345d5b5ce9ac24a6825492b681605))
+
 ## [11.11.0](https://github.com/phun-ky/speccer/compare/v11.10.0...v11.11.0) (2026-11-27)
 
 ### Feature
