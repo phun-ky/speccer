@@ -1,5 +1,20 @@
 # Changelog
 
+## [11.9.1](https://github.com/phun-ky/speccer/compare/v11.9.0...v11.9.1) (2026-11-27)
+
+### Tasks
+
+* 🤖 render release banners, and add the 11.0 set ([91287c0](https://github.com/phun-ky/speccer/commit/91287c0868a9d83872886d9f3f35e1e2c1b2a699))
+
+### Documentation
+
+* ✏️ README: drop the Ukraine note ([028a74a](https://github.com/phun-ky/speccer/commit/028a74af46af8ee06622bc2a9f4cdb7ced3a1a0e))
+* ✏️ update the OpenSSF Best Practices answers after strict TypeScript and the argument checks ([ca8ed80](https://github.com/phun-ky/speccer/commit/ca8ed80063451930361640ad67cba6ba086ab458))
+
+### Bug
+
+* 🐛 number the a11y tab stops in the order Tab visits them ([f95c944](https://github.com/phun-ky/speccer/commit/f95c9445cd925b0b6cd7e7402607961d51cddbbf))
+
 ## [11.9.0](https://github.com/phun-ky/speccer/compare/v11.8.0...v11.9.0) (2026-11-22)
 
 ### Feature

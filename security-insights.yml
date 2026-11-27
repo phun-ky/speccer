@@ -84,13 +84,12 @@ repository:
   security:
     assessments:
       self:
-        evidence: https://github.com/phun-ky/speccer/blob/main/SECURITY.md#security-expectations
-        date: '2026-11-16'
+        evidence: https://github.com/phun-ky/speccer/blob/main/ASSURANCE.md
+        date: '2026-11-22'
         comment: |
-          What speccer reads and changes in the page, what it never does
-          (network, storage, dynamic code), how values from the page are
-          escaped, and what users can't rely on. There is no separate
-          assurance case yet.
+          The assurance case: what is protected, the threat model, trust
+          boundaries, secure design principles, the weaknesses countered and
+          the known gaps, behind the security expectations in SECURITY.md.
     tools:
       - name: CodeQL
         type: SAST
