@@ -58,6 +58,22 @@ describe('getTabOrder', () => {
     assert.deepEqual(ids(document.getElementById('box')!), ['ok']);
   });
 
+  it('keeps radio groups in a shadow root apart from the document', () => {
+    document.body.innerHTML = `
+      <input id="s1" type="radio" name="s" checked><div id="host"></div>
+    `;
+
+    const shadow = document
+      .getElementById('host')!
+      .attachShadow({ mode: 'open' });
+
+    shadow.innerHTML = `
+      <div id="inner"><input id="s2" type="radio" name="s"><input id="s3" type="radio" name="s" checked></div>
+    `;
+
+    assert.deepEqual(ids(shadow.getElementById('inner')!), ['s3']);
+  });
+
   it('stops on each run of an unchecked group in tab order', () => {
     document.body.innerHTML = `
       <input id="r1" type="radio" name="r"><input id="r2" type="radio" name="r">
