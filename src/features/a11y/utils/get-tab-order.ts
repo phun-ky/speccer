@@ -33,39 +33,64 @@ const isRadioOf = (
  * getTabOrder(form).forEach((el, i) => console.log(i + 1, el));
  * ```
  */
-export const getTabOrder = (container: Element): HTMLElement[] =>
-  [
-    ...container.querySelectorAll<HTMLElement>(
-      SPECCER_TABBABLE_ELEMENTS_SELECTOR
-    )
-  ]
-    .map((el) => ({
-      el,
-      // Without the attribute, the selector only matched natively focusable
-      // elements. With it, `tabIndex` gives the browser's parsed value.
-      index: el.hasAttribute('tabindex') ? el.tabIndex : 0
-    }))
-    .filter(
-      ({ el, index }) =>
-        index >= 0 && !el.matches(':disabled') && !el.closest('[inert]')
-    )
-    // Array#sort is stable, so equal keys keep document order
-    .sort(
-      (a, b) =>
-        (a.index || Number.MAX_SAFE_INTEGER) -
-        (b.index || Number.MAX_SAFE_INTEGER)
-    )
-    .map(({ el }) => el)
-    // Look for the checked radio in the whole group, not just the stops found
-    .filter((el) => {
-      if (!isRadioOf(el)) return true;
+export const getTabOrder = (container: Element): HTMLElement[] => {
+  // Checked radios by group owner (the form, or the root outside a form) and
+  // name, filled once per root so each radio is a lookup, not a page scan
+  const checked = new Map<Node, Map<string, HTMLInputElement>>();
+  const scanned = new Set<Node>();
+  const checkedOf = (radio: HTMLInputElement) => {
+    const root = radio.getRootNode();
 
-      const checked = [
-        ...(el.getRootNode() as ParentNode).querySelectorAll(
-          'input[type="radio"]:checked'
-        )
-      ].find((other) => isRadioOf(other, el));
+    if (!scanned.has(root)) {
+      scanned.add(root);
+      (root as ParentNode)
+        .querySelectorAll('input[type="radio"]:checked')
+        .forEach((other) => {
+          if (!isRadioOf(other)) return;
 
-      return !checked || el === checked;
-    })
-    .filter((el, i, all) => !(isRadioOf(el) && isRadioOf(all[i - 1], el)));
+          const owner = other.form ?? root;
+
+          checked.set(
+            owner,
+            (checked.get(owner) ?? new Map()).set(other.name, other)
+          );
+        });
+    }
+
+    return checked.get(radio.form ?? root)?.get(radio.name);
+  };
+
+  return (
+    [
+      ...container.querySelectorAll<HTMLElement>(
+        SPECCER_TABBABLE_ELEMENTS_SELECTOR
+      )
+    ]
+      .map((el) => ({
+        el,
+        // Without the attribute, the selector only matched natively focusable
+        // elements. With it, `tabIndex` gives the browser's parsed value.
+        index: el.hasAttribute('tabindex') ? el.tabIndex : 0
+      }))
+      .filter(
+        ({ el, index }) =>
+          index >= 0 && !el.matches(':disabled') && !el.closest('[inert]')
+      )
+      // Array#sort is stable, so equal keys keep document order
+      .sort(
+        (a, b) =>
+          (a.index || Number.MAX_SAFE_INTEGER) -
+          (b.index || Number.MAX_SAFE_INTEGER)
+      )
+      .map(({ el }) => el)
+      // Look for the checked radio in the whole group, not just the stops found
+      .filter((el) => {
+        if (!isRadioOf(el)) return true;
+
+        const groupChecked = checkedOf(el);
+
+        return !groupChecked || el === groupChecked;
+      })
+      .filter((el, i, all) => !(isRadioOf(el) && isRadioOf(all[i - 1], el)))
+  );
+};
