@@ -1,7 +1,10 @@
 import { SPECCER_TABBABLE_ELEMENTS_SELECTOR } from '../constants';
 
 // Radios with the same name in the same form share one tab stop
-const isRadioOf = (el: Element, group?: HTMLInputElement) =>
+const isRadioOf = (
+  el: Element | undefined,
+  group?: HTMLInputElement
+): el is HTMLInputElement =>
   el instanceof HTMLInputElement &&
   el.type === 'radio' &&
   el.name !== '' &&
@@ -16,8 +19,10 @@ const isRadioOf = (el: Element, group?: HTMLInputElement) =>
  * (also through a disabled `fieldset`) or inside an `inert` subtree. Hidden
  * elements are kept, since the caller may show them on their label.
  *
- * A group of radio buttons is one tab stop: the checked radio, or the first
- * one when none is checked. Arrow keys move within the group.
+ * When a radio group has a checked radio, that radio is the group's only tab
+ * stop, and the group has none if it can't take focus or sits outside the
+ * container. With nothing checked, Tab skips the rest of the group it leaves,
+ * so each run of the group's radios in tab order is one stop.
  *
  * @param {Element} container - The element to look for tab stops in.
  * @returns {HTMLElement[]} The tab stops, in tab order.
@@ -51,12 +56,16 @@ export const getTabOrder = (container: Element): HTMLElement[] =>
         (b.index || Number.MAX_SAFE_INTEGER)
     )
     .map(({ el }) => el)
-    .filter((el, _, all) => {
+    // Look for the checked radio in the whole group, not just the stops found
+    .filter((el) => {
       if (!isRadioOf(el)) return true;
 
-      const group = all.filter((other) =>
-        isRadioOf(other, el as HTMLInputElement)
-      ) as HTMLInputElement[];
+      const checked = [
+        ...(el.getRootNode() as ParentNode).querySelectorAll(
+          'input[type="radio"]:checked'
+        )
+      ].find((other) => isRadioOf(other, el));
 
-      return el === (group.find((radio) => radio.checked) ?? group[0]);
-    });
+      return !checked || el === checked;
+    })
+    .filter((el, i, all) => !(isRadioOf(el) && isRadioOf(all[i - 1], el)));
