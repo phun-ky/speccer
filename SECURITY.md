@@ -137,12 +137,12 @@ Advisory Database:
 | Licence outside the policy | New runtime or bundled dependency | Not merged                                                                                       |
 
 **Accepted exceptions.** A vulnerability that can't be fixed yet and can't be
-exploited through this project is listed here, and removed as soon as a fix is
-reachable:
+exploited through this project is listed here, and in
+[`vex.openvex.json`](vex.openvex.json), an [OpenVEX](https://openvex.dev/)
+document, and removed as soon as a fix is reachable:
 
 | Advisory                                                                            | Package            | Why it is accepted                                                                                                                                                                                                                                                                                                                                                     | Remove when                                                                          |
 | ----------------------------------------------------------------------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| [GHSA-gcqx-w48m-w2h4](https://github.com/advisories/GHSA-gcqx-w48m-w2h4) (low)      | `deepmerge` 4.3.1  | Development only, through `@rollup/plugin-node-resolve`, which calls it once, at load time, to copy its own default options into an empty object. No input from this project or from outside reaches it. No fixed version exists.                                                                                                                                      | A fixed `deepmerge`, or a plugin release that drops it                               |
 | [GHSA-g3hv-75wg-m249](https://github.com/advisories/GHSA-g3hv-75wg-m249) (moderate) | `minimatch` 10.2.6 | Development only, through `typedoc` and `@typescript-eslint/typescript-estree`, whose latest releases require minimatch 10. The denial of service needs a crafted pattern, and every pattern they match comes from this repository's own TypeDoc and ESLint configuration. minimatch 11 can't be forced on them: TypeDoc calls `Minimatch#matchOne`, which 11 removed. | `typedoc` and `@typescript-eslint/typescript-estree` allow minimatch 11.0.1 or later |
 
 ## Code Scanning
@@ -172,3 +172,8 @@ Publishing to npm needs no secret: it uses short-lived OIDC tokens from GitHub.
   available to workflows run from forks.
 - **Rotation:** at least once a year, and immediately if one may have been
   exposed.
+
+## Assurance Case
+
+Why these expectations hold, where they don't hold yet, and the threat model and
+trust boundaries behind them are set out in the [assurance case](ASSURANCE.md).
